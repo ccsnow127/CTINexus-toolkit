@@ -1,0 +1,144 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'The Iranian Crambus espionage group', 'relation': 'is known as', 'object': 'OilRig'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The Iranian Crambus espionage group', 'relation': 'is known as', 'object': 'APT34'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The Iranian Crambus espionage group', 'relation': 'staged', 'object': 'an eight-month-long intrusion'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The intrusion', 'relation': 'targeted', 'object': 'a government in the Middle East'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'stole', 'object': 'files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'stole', 'object': 'passwords'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'installed', 'object': 'a PowerShell backdoor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The PowerShell backdoor', 'relation': 'is dubbed', 'object': 'PowerExchange'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PowerExchange', 'relation': 'was used to monitor', 'object': 'incoming mails'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PowerExchange', 'relation': 'executed', 'object': 'commands sent by the attackers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PowerExchange', 'relation': 'forwarded', 'object': 'results to the attackers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Malicious activity', 'relation': 'occurred on', 'object': 'at least 12 computers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'deployed', 'object': 'backdoors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'deployed', 'object': 'keyloggers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The attackers', 'relation': 'made use of', 'object': 'Plink'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Plink', 'relation': 'to configure', 'object': 'port-forwarding rules'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'port-forwarding rules', 'relation': 'enable', 'object': 'remote access via RDP'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'modified', 'object': 'Windows firewall rules'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Windows firewall rules', 'relation': 'enable', 'object': 'remote access'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

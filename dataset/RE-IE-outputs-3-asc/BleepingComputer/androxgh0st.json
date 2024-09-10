@@ -1,0 +1,123 @@
+{
+    "CTI": {
+        "text": "CISA and the FBI warned today that threat actors using Androxgh0st malware are building a botnet focused on cloud credential theft and using the stolen information to deliver additional malicious payloads. It scans for websites and servers vulnerable to the following remote code execution (RCE) vulnerabilities: CVE-2017-9841 (PHPUnit unit testing framework), CVE-2021-41773 (Apache HTTP Server), and CVE-2018-15133 (Laravel PHP web framework). Androxgh0st is a Python-scripted malware primarily used to target .env files that contain confidential information, such as credentials for various high profile applications, i.e., Amazon Web Services [AWS], Microsoft Office 365, SendGrid, and Twilio from the Laravel web application framework. Androxgh0st malware also supports numerous functions capable of abusing the Simple Mail Transfer Protocol (SMTP), such as scanning and exploiting exposed credentials and application programming interfaces (APIs), and web shell deployment. Stolen Twilio and SendGrid credentials can be used by the threat actors to conduct spam campaigns impersonating the breached companies.",
+        "link": "https://www.bleepingcomputer.com/news/security/fbi-androxgh0st-malware-botnet-steals-aws-microsoft-credentials/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "CISA and the FBI",
+                "relation": "warned",
+                "object": "that threat actors using Androxgh0st malware"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "building",
+                "object": "a botnet"
+            },
+            {
+                "subject": "botnet",
+                "relation": "focused on",
+                "object": "cloud credential theft"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "using",
+                "object": "stolen information to deliver additional malicious payloads"
+            },
+            {
+                "subject": "Androxgh0st malware",
+                "relation": "scans for",
+                "object": "websites and servers vulnerable to RCE vulnerabilities"
+            },
+            {
+                "subject": "CVE-2017-9841",
+                "relation": "is vulnerable in",
+                "object": "PHPUnit unit testing framework"
+            },
+            {
+                "subject": "CVE-2021-41773",
+                "relation": "is vulnerable in",
+                "object": "Apache HTTP Server"
+            },
+            {
+                "subject": "CVE-2018-15133",
+                "relation": "is vulnerable in",
+                "object": "Laravel PHP web framework"
+            },
+            {
+                "subject": "Androxgh0st",
+                "relation": "is a",
+                "object": "Python-scripted malware"
+            },
+            {
+                "subject": "Androxgh0st",
+                "relation": "targets",
+                "object": ".env files"
+            },
+            {
+                "subject": ".env files",
+                "relation": "contain",
+                "object": "credentials for AWS, Microsoft Office 365, SendGrid, Twilio"
+            },
+            {
+                "subject": "Androxgh0st malware",
+                "relation": "supports",
+                "object": "functions abusing SMTP"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "use",
+                "object": "stolen Twilio and SendGrid credentials"
+            },
+            {
+                "subject": "stolen credentials",
+                "relation": "conduct",
+                "object": "spam campaigns"
+            },
+            {
+                "subject": "spam campaigns",
+                "relation": "impersonating",
+                "object": "the breached companies"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2505,
+                "cost": 0.025050000000000003
+            },
+            "output": {
+                "tokens": 405,
+                "cost": 0.012150000000000001
+            },
+            "total": {
+                "tokens": 2910,
+                "cost": 0.037200000000000004
+            }
+        },
+        "time": 9.636356115341187,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/BleepingComputer/androxgh0st-QD1-5ol.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-CVE-2023-36884.json",
+                    0.09509833415404631
+                ],
+                [
+                    "AVERTIUM-fargo.json",
+                    0.0977853837734817
+                ],
+                [
+                    "AVERTIUM-ragnar.json",
+                    0.11003444961116508
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

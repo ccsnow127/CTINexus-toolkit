@@ -1,0 +1,282 @@
+{
+    "CTI": {
+        "text": "A new Android backdoor has been discovered with potent capabilities to carry out a range of malicious actions on infected devices. Dubbed Xamalicious by the McAfee Mobile Research Team, the malware is so named for the fact that it's developed using an open-source mobile app framework called Xamarin and abuses the operating system's accessibility permissions to fulfill its objectives. It's also capable of gathering metadata about the compromised device and contacting a command-and-control (C2) server to fetch a second-stage payload, but only after determining if it fits the bill. The second stage is dynamically injected as an assembly DLL at runtime level to take full control of the device and potentially perform fraudulent actions such as clicking on ads, installing apps, among other actions financially motivated without user consent. The cybersecurity firm said it identified 25 apps that come with this active threat, some of which were distributed on the official Google Play Store since mid-2020. The apps are estimated to have been installed at least 327,000 times.",
+        "link": "https://thehackernews.com/2023/12/new-sneaky-xamalicious-android-malware.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Xamalicious",
+                "relation": "is named by",
+                "object": "McAfee Mobile Research Team"
+            },
+            {
+                "subject": "Xamalicious",
+                "relation": "is developed using",
+                "object": "Xamarin"
+            },
+            {
+                "subject": "Xamalicious",
+                "relation": "abuses",
+                "object": "operating system's accessibility permissions"
+            },
+            {
+                "subject": "Xamalicious",
+                "relation": "is capable of",
+                "object": "gathering metadata about the compromised device"
+            },
+            {
+                "subject": "Xamalicious",
+                "relation": "contacts",
+                "object": "command-and-control (C2) server"
+            },
+            {
+                "subject": "C2 server",
+                "relation": "fetches",
+                "object": "second-stage payload"
+            },
+            {
+                "subject": "second stage payload",
+                "relation": "is injected as",
+                "object": "assembly DLL at runtime level"
+            },
+            {
+                "subject": "Injected payload",
+                "relation": "takes full control of",
+                "object": "the device"
+            },
+            {
+                "subject": "Malware",
+                "relation": "potentially performs",
+                "object": "fraudulent actions such as clicking on ads or installing apps"
+            },
+            {
+                "subject": "Active threat",
+                "relation": "is distributed through",
+                "object": "25 apps"
+            },
+            {
+                "subject": "Active threat",
+                "relation": "estimated to have been installed",
+                "object": "327,000 times"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1745,
+                "cost": 0.0008725
+            },
+            "output": {
+                "tokens": 375,
+                "cost": 0.0005625000000000001
+            },
+            "total": {
+                "tokens": 2120,
+                "cost": 0.001435
+            }
+        },
+        "time": 5.54242730140686,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/thehackernews/Xamalicious-QD1-Jzb.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "darkreading: SpectralBlur.json",
+                    0.10474514583352194
+                ],
+                [
+                    "securityweek: vultur.json",
+                    0.1103052357067199
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 5,
+                "fn": 9,
+                "precision": 0.5454545454545454,
+                "recall": 0.4,
+                "f1": 0.4615384615384615
+            },
+            "matched_list": [
+                [
+                    [
+                        "Xamalicious",
+                        "is named by",
+                        "McAfee Mobile Research Team"
+                    ],
+                    [
+                        "The cybersecurity firm",
+                        "identified",
+                        "25 apps with Xamalicious"
+                    ],
+                    [
+                        0.6542153617217749,
+                        0.4654966288090654,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "Xamalicious",
+                        "is developed using",
+                        "Xamarin"
+                    ],
+                    [
+                        "Xamalicious",
+                        "is developed using",
+                        "an open-source mobile app framework called Xamarin"
+                    ],
+                    [
+                        1.0,
+                        0.7461259178360539
+                    ]
+                ],
+                [
+                    [
+                        "Xamalicious",
+                        "abuses",
+                        "operating system's accessibility permissions"
+                    ],
+                    [
+                        "Xamalicious",
+                        "abuses",
+                        "the operating system's accessibility permissions"
+                    ],
+                    [
+                        1.0,
+                        0.9505177791707939
+                    ]
+                ],
+                [
+                    [
+                        "Xamalicious",
+                        "is capable of",
+                        "gathering metadata about the compromised device"
+                    ],
+                    [
+                        "Xamalicious",
+                        "is capable of",
+                        "gathering metadata about the compromised device"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Xamalicious",
+                        "contacts",
+                        "command-and-control (C2) server"
+                    ],
+                    [
+                        "Xamalicious",
+                        "contacts",
+                        "a command-and-control (C2) server"
+                    ],
+                    [
+                        1.0,
+                        0.9586098360612719
+                    ]
+                ],
+                [
+                    [
+                        "second stage payload",
+                        "is injected as",
+                        "assembly DLL at runtime level"
+                    ],
+                    [
+                        "The second stage",
+                        "is injected as",
+                        "an assembly DLL at runtime level"
+                    ],
+                    [
+                        0.5977928895491517,
+                        0.9068755224079207
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "C2 server",
+                    "fetches",
+                    "second-stage payload"
+                ],
+                [
+                    "Injected payload",
+                    "takes full control of",
+                    "the device"
+                ],
+                [
+                    "Malware",
+                    "potentially performs",
+                    "fraudulent actions such as clicking on ads or installing apps"
+                ],
+                [
+                    "Active threat",
+                    "is distributed through",
+                    "25 apps"
+                ],
+                [
+                    "Active threat",
+                    "estimated to have been installed",
+                    "327,000 times"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "A new Android backdoor",
+                    "is discovered with",
+                    "potent capabilities to carry out a range of malicious actions"
+                ],
+                [
+                    "The new Android backdoor",
+                    "is dubbed",
+                    "Xamalicious"
+                ],
+                [
+                    "Xamalicious",
+                    "fetches",
+                    "a second-stage payload"
+                ],
+                [
+                    "The second stage",
+                    "takes full control of",
+                    "the device"
+                ],
+                [
+                    "The actions",
+                    "are",
+                    "potentially fraudulent"
+                ],
+                [
+                    "Fraudulent actions",
+                    "include",
+                    "clicking on ads, installing apps"
+                ],
+                [
+                    "Fraudulent actions",
+                    "are without",
+                    "user consent"
+                ],
+                [
+                    "Some apps",
+                    "were distributed on",
+                    "the official Google Play Store since mid-2020"
+                ],
+                [
+                    "The apps",
+                    "are estimated to have been installed",
+                    "at least 327,000 times"
+                ]
+            ]
+        }
+    }
+}

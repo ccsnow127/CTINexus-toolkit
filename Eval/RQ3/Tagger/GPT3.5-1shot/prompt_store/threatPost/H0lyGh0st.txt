@@ -1,0 +1,106 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'an emerging ransomware threat', 'relation': 'compromised', 'object': 'small-to-mid-sized businesses'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'an emerging ransomware threat', 'relation': 'linked to', 'object': 'North Korean state-sponsored actors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'North Korean state-sponsored actors', 'relation': 'have been active since', 'object': 'last year'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a group', 'relation': 'tracked as', 'object': 'DEV-0530'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a group', 'relation': 'calls itself', 'object': 'H0lyGh0st'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'H0lyGh0st', 'relation': 'developing', 'object': 'ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'H0lyGh0st', 'relation': 'using', 'object': 'ransomware in attacks'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'H0lyGh0st\u2019s modus operandi', 'relation': 'is to use', 'object': 'namesake ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'namesake ransomware', 'relation': 'encrypts', 'object': 'all files on the target device'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the file extension', 'relation': 'is', 'object': '.h0lyenc'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'H0lyGh0st', 'relation': 'sends', 'object': 'the victim a sample of the files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'group', 'relation': 'interacts with victims on', 'object': 'a .onion site'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a .onion site', 'relation': 'maintained by', 'object': 'H0lyGh0st'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a .onion site', 'relation': 'provides', 'object': 'a contact form for victims'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

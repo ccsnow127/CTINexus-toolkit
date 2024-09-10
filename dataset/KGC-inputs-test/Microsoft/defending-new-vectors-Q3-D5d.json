@@ -1,0 +1,87 @@
+{
+    "CTI": "Microsoft security researchers recently identified a campaign where attackers attempted to move laterally to a cloud environment through a SQL Server instance. This attack technique demonstrates an approach we've seen in other cloud services such as VMs and Kubernetes cluster, but not in SQL Server. The attackers initially exploited a SQL injection vulnerability in an application within the target's environment. This allowed the attacker to gain access and elevated permissions on a Microsoft SQL Server instance deployed in Azure Virtual Machine (VM). The attackers then used the acquired elevated permission to attempt to move laterally to additional cloud resources by abusing the server's cloud identity. Cloud identities are commonly used in cloud services including SQL Server and may possess elevated permissions to carry out actions in the cloud. This attack highlights the need to properly secure cloud identities to defend SQL Server instances and cloud resources from unauthorized access.",
+    "IE": {
+        "triplets": [
+            {
+                "subject": "attackers",
+                "relation": "attempted to move laterally to",
+                "object": "a cloud environment"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used",
+                "object": "a SQL Server instance"
+            },
+            {
+                "subject": "attack technique",
+                "relation": "demonstrates",
+                "object": "an approach in cloud services"
+            },
+            {
+                "subject": "attackers",
+                "relation": "exploited",
+                "object": "a SQL injection vulnerability"
+            },
+            {
+                "subject": "SQL injection vulnerability",
+                "relation": "in",
+                "object": "an application"
+            },
+            {
+                "subject": "attackers",
+                "relation": "gained access and elevated permissions on",
+                "object": "a Microsoft SQL Server instance"
+            },
+            {
+                "subject": "Microsoft SQL Server instance",
+                "relation": "deployed in",
+                "object": "Azure Virtual Machine (VM)"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used acquired elevated permission to",
+                "object": "move laterally to additional cloud resources"
+            },
+            {
+                "subject": "attackers",
+                "relation": "abused",
+                "object": "the server's cloud identity"
+            },
+            {
+                "subject": "cloud identity",
+                "relation": "used in",
+                "object": "cloud services including SQL Server"
+            },
+            {
+                "subject": "cloud identity",
+                "relation": "may possess",
+                "object": "elevated permissions"
+            },
+            {
+                "subject": "attack",
+                "relation": "highlights the need to",
+                "object": "secure cloud identities"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1190,
+                "cost": 0.0119
+            },
+            "output": {
+                "tokens": 307,
+                "cost": 0.00921
+            },
+            "total": {
+                "tokens": 1497,
+                "cost": 0.02111
+            }
+        },
+        "time": 11.11311388015747,
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/10/03/defending-new-vectors-threat-actors-attempt-sql-server-to-cloud-lateral-movement/",
+        "prompt_file": "dataset/prompt_set/Microsoft/defending-new-vectors-Q3-D5d.jinja",
+        "prompt_template": "Q3.jinja"
+    }
+}

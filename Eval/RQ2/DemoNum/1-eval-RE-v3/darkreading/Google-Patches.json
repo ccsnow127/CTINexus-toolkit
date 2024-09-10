@@ -1,0 +1,190 @@
+{
+    "CTI": {
+        "text": "The latest zero-day, which Google is tracking as CVE-2023-6345, stems from an integer overflow issue in Skia, an open source 2D graphic library in Chrome. The bug is one of seven Chrome vulnerabilities for which Google issued a security update this week. The company's advisory contained sparse details on CVE-2023-6345 beyond mentioning the fact that an exploit for it is publicly available. A brief description on NIST's National Vulnerability Database (NVD) site described the flaw as affecting versions of Chrome prior to 119.0.6045.199 and allowing a remote attacker who has compromised the renderer process to potentially perform a sandbox escape via a malicious file.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/google-patches-another-chrome-zero-day-as-browser-attacks-mount"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Google",
+                "relation": "is tracking",
+                "object": "CVE-2023-6345"
+            },
+            {
+                "subject": "CVE-2023-6345",
+                "relation": "stems from",
+                "object": "an integer overflow issue in Skia"
+            },
+            {
+                "subject": "Skia",
+                "relation": "is",
+                "object": "an open source 2D graphic library in Chrome"
+            },
+            {
+                "subject": "Google",
+                "relation": "issued",
+                "object": "a security update for seven Chrome vulnerabilities"
+            },
+            {
+                "subject": "CVE-2023-6345",
+                "relation": "is one of",
+                "object": "seven Chrome vulnerabilities"
+            },
+            {
+                "subject": "an exploit for CVE-2023-6345",
+                "relation": "is",
+                "object": "publicly available"
+            },
+            {
+                "subject": "CVE-2023-6345",
+                "relation": "affects",
+                "object": "versions of Chrome prior to 119.0.6045.199"
+            },
+            {
+                "subject": "CVE-2023-6345",
+                "relation": "allows",
+                "object": "a remote attacker who has compromised the renderer process to potentially perform a sandbox escape via a malicious file"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 839,
+                "cost": 0.00839
+            },
+            "output": {
+                "tokens": 264,
+                "cost": 0.00792
+            },
+            "total": {
+                "tokens": 1103,
+                "cost": 0.016309999999999998
+            }
+        },
+        "time": 8.569896697998047,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/darkreading/Google-Patches-QD1-9ax.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "thehackernews: chrome-zero-day.json",
+                    0.24341021022725864
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "Google",
+                        "is tracking",
+                        "CVE-2023-6345"
+                    ],
+                    [
+                        "Google",
+                        "is tracking",
+                        "CVE-2023-6345"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-6345",
+                        "stems from",
+                        "an integer overflow issue in Skia"
+                    ],
+                    [
+                        "an integer overflow issue",
+                        "is in",
+                        "Skia"
+                    ]
+                ],
+                [
+                    [
+                        "Skia",
+                        "is",
+                        "an open source 2D graphic library in Chrome"
+                    ],
+                    [
+                        "Skia",
+                        "is",
+                        "an open source 2D graphic library"
+                    ]
+                ],
+                [
+                    [
+                        "Google",
+                        "issued",
+                        "a security update for seven Chrome vulnerabilities"
+                    ],
+                    [
+                        "a security update",
+                        "addresses",
+                        "seven Chrome vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-6345",
+                        "is one of",
+                        "seven Chrome vulnerabilities"
+                    ],
+                    [
+                        "CVE-2023-6345",
+                        "is one of",
+                        "seven Chrome vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "an exploit for CVE-2023-6345",
+                        "is",
+                        "publicly available"
+                    ],
+                    [
+                        "CVE-2023-6345",
+                        "has an exploit",
+                        "publicly available"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-6345",
+                        "affects",
+                        "versions of Chrome prior to 119.0.6045.199"
+                    ],
+                    [
+                        "CVE-2023-6345",
+                        "affects",
+                        "Chrome versions prior to 119.0.6045.199"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-6345",
+                        "allows",
+                        "a remote attacker who has compromised the renderer process to potentially perform a sandbox escape via a malicious file"
+                    ],
+                    [
+                        "A remote attacker",
+                        "has compromised",
+                        "the renderer process"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": []
+        }
+    }
+}

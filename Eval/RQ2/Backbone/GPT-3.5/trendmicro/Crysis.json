@@ -1,0 +1,226 @@
+{
+    "CTI": {
+        "text": "Crysis/Dharma ransomware (detected by Trend Micro as Ransom.Win32.CRYSIS.TIBGGS) has released a hacking toolkit named Toolbox, Sophos reports. Toolbox contains Mimikatz to harvest passwords, NirSoft Remote Desktop PassView to steal remote desktop protocol (RDP) passwords, Hash Suite Tools Free to dump hashes, and other tools to help find target computers and deploy the ransomware payload. With this kit, even rookie hackers can infiltrate networks easily. Crysis operates under a ransomware-as-a-service (RaaS) model, and this hacking tool only makes it easier for affiliates to spread the ransomware to more targets.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/threat-recap-darkside-crysis-negasteal-coinminer"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Crysis/Dharma ransomware",
+                "relation": "has released",
+                "object": "hacking toolkit named Toolbox"
+            },
+            {
+                "subject": "Toolbox",
+                "relation": "contains",
+                "object": "Mimikatz"
+            },
+            {
+                "subject": "Toolbox",
+                "relation": "contains",
+                "object": "NirSoft Remote Desktop PassView"
+            },
+            {
+                "subject": "NirSoft Remote Desktop PassView",
+                "relation": "is used to steal",
+                "object": "remote desktop protocol (RDP) passwords"
+            },
+            {
+                "subject": "Toolbox",
+                "relation": "contains",
+                "object": "Hash Suite Tools Free"
+            },
+            {
+                "subject": "Hash Suite Tools Free",
+                "relation": "is used to dump",
+                "object": "hashes"
+            },
+            {
+                "subject": "Crysis/Dharma ransomware",
+                "relation": "operates under",
+                "object": "ransomware-as-a-service (RaaS) model"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1981,
+                "cost": 0.0009905
+            },
+            "output": {
+                "tokens": 252,
+                "cost": 0.000378
+            },
+            "total": {
+                "tokens": 2233,
+                "cost": 0.0013685000000000001
+            }
+        },
+        "time": 3.676426649093628,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/trendmicro/Crysis-QD1-QG4.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "AVERTIUM: mallox.json",
+                    0.10737885199867499
+                ],
+                [
+                    "AVERTIUM: yanluowang.json",
+                    0.11342559213776812
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 0,
+                "fn": 4,
+                "precision": 1.0,
+                "recall": 0.6363636363636364,
+                "f1": 0.7777777777777778
+            },
+            "matched_list": [
+                [
+                    [
+                        "Crysis/Dharma ransomware",
+                        "has released",
+                        "hacking toolkit named Toolbox"
+                    ],
+                    [
+                        "Crysis/Dharma ransomware",
+                        "released",
+                        "a hacking toolkit named Toolbox"
+                    ],
+                    [
+                        1.0,
+                        0.9708664289219379
+                    ]
+                ],
+                [
+                    [
+                        "Toolbox",
+                        "contains",
+                        "Mimikatz"
+                    ],
+                    [
+                        "Toolbox",
+                        "contains",
+                        "Mimikatz"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Toolbox",
+                        "contains",
+                        "NirSoft Remote Desktop PassView"
+                    ],
+                    [
+                        "Toolbox",
+                        "contains",
+                        "NirSoft Remote Desktop PassView"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "NirSoft Remote Desktop PassView",
+                        "is used to steal",
+                        "remote desktop protocol (RDP) passwords"
+                    ],
+                    [
+                        "NirSoft Remote Desktop PassView",
+                        "is used to",
+                        "steal RDP passwords"
+                    ],
+                    [
+                        1.0,
+                        0.7583330143833984
+                    ]
+                ],
+                [
+                    [
+                        "Toolbox",
+                        "contains",
+                        "Hash Suite Tools Free"
+                    ],
+                    [
+                        "Toolbox",
+                        "contains",
+                        "Hash Suite Tools Free"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Hash Suite Tools Free",
+                        "is used to dump",
+                        "hashes"
+                    ],
+                    [
+                        "Toolbox",
+                        "contains",
+                        "Hash Suite Tools Free"
+                    ],
+                    [
+                        0.4555921104398273,
+                        0.5139529303125194
+                    ]
+                ],
+                [
+                    [
+                        "Crysis/Dharma ransomware",
+                        "operates under",
+                        "ransomware-as-a-service (RaaS) model"
+                    ],
+                    [
+                        "Crysis/Dharma ransomware",
+                        "operates under",
+                        "ransomware-as-a-service (RaaS) model"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Mimikatz",
+                    "is used to",
+                    "harvest passwords"
+                ],
+                [
+                    "Hash Suite Tools Free",
+                    "is used to",
+                    "dump hashes"
+                ],
+                [
+                    "Toolbox",
+                    "helps to",
+                    "find target computers"
+                ],
+                [
+                    "Toolbox",
+                    "helps to",
+                    "deploy the ransomware payload"
+                ]
+            ]
+        }
+    }
+}

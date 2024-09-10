@@ -1,0 +1,224 @@
+{
+    "CTI": {
+        "text": "The latest zero-day, which Google is tracking as CVE-2023-6345, stems from an integer overflow issue in Skia, an open source 2D graphic library in Chrome. The bug is one of seven Chrome vulnerabilities for which Google issued a security update this week. The company's advisory contained sparse details on CVE-2023-6345 beyond mentioning the fact that an exploit for it is publicly available. A brief description on NIST's National Vulnerability Database (NVD) site described the flaw as affecting versions of Chrome prior to 119.0.6045.199 and allowing a remote attacker who has compromised the renderer process to potentially perform a sandbox escape via a malicious file.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/google-patches-another-chrome-zero-day-as-browser-attacks-mount"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "CVE-2023-6345",
+                "relation": "stems from",
+                "object": "an integer overflow issue in Skia"
+            },
+            {
+                "subject": "Skia",
+                "relation": "is",
+                "object": "an open source 2D graphic library in Chrome"
+            },
+            {
+                "subject": "Google",
+                "relation": "is tracking",
+                "object": "CVE-2023-6345"
+            },
+            {
+                "subject": "CVE-2023-6345",
+                "relation": "is one of",
+                "object": "seven Chrome vulnerabilities"
+            },
+            {
+                "subject": "Google",
+                "relation": "issued",
+                "object": "a security update"
+            },
+            {
+                "subject": "an exploit for CVE-2023-6345",
+                "relation": "is",
+                "object": "publicly available"
+            },
+            {
+                "subject": "CVE-2023-6345",
+                "relation": "affects",
+                "object": "versions of Chrome prior to 119.0.6045.199"
+            },
+            {
+                "subject": "CVE-2023-6345",
+                "relation": "allows",
+                "object": "a remote attacker who has compromised the renderer process to potentially perform a sandbox escape via a malicious file"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1787,
+                "cost": 0.01787
+            },
+            "output": {
+                "tokens": 308,
+                "cost": 0.00924
+            },
+            "total": {
+                "tokens": 2095,
+                "cost": 0.027110000000000002
+            }
+        },
+        "time": 15.535268306732178,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/darkreading/Google-Patches-QD1-0HO.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer: chrome.json",
+                    0.15506308934707902
+                ],
+                [
+                    "trendmicro: Earth-Kitsune.json",
+                    0.16226381541850798
+                ],
+                [
+                    "thehackernews: chrome-zero-day.json",
+                    0.24341021022725864
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 0,
+                "fn": 5,
+                "precision": 1.0,
+                "recall": 0.6153846153846154,
+                "f1": 0.761904761904762
+            },
+            "matched_list": [
+                [
+                    [
+                        "CVE-2023-6345",
+                        "stems from",
+                        "an integer overflow issue in Skia"
+                    ],
+                    [
+                        "CVE-2023-6345",
+                        "stems from",
+                        "an integer overflow issue"
+                    ]
+                ],
+                [
+                    [
+                        "Skia",
+                        "is",
+                        "an open source 2D graphic library in Chrome"
+                    ],
+                    [
+                        "an integer overflow issue",
+                        "is in",
+                        "Skia"
+                    ]
+                ],
+                [
+                    [
+                        "Google",
+                        "is tracking",
+                        "CVE-2023-6345"
+                    ],
+                    [
+                        "Google",
+                        "is tracking",
+                        "CVE-2023-6345"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-6345",
+                        "is one of",
+                        "seven Chrome vulnerabilities"
+                    ],
+                    [
+                        "a security update",
+                        "addresses",
+                        "seven Chrome vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "Google",
+                        "issued",
+                        "a security update"
+                    ],
+                    [
+                        "Google",
+                        "issued",
+                        "a security update"
+                    ]
+                ],
+                [
+                    [
+                        "an exploit for CVE-2023-6345",
+                        "is",
+                        "publicly available"
+                    ],
+                    [
+                        "CVE-2023-6345",
+                        "is one of",
+                        "seven Chrome vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-6345",
+                        "affects",
+                        "versions of Chrome prior to 119.0.6045.199"
+                    ],
+                    [
+                        "CVE-2023-6345",
+                        "has an exploit",
+                        "publicly available"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-6345",
+                        "allows",
+                        "a remote attacker who has compromised the renderer process to potentially perform a sandbox escape via a malicious file"
+                    ],
+                    [
+                        "CVE-2023-6345",
+                        "affects",
+                        "Chrome versions prior to 119.0.6045.199"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Skia",
+                    "is",
+                    "an open source 2D graphic library"
+                ],
+                [
+                    "Skia",
+                    "is in",
+                    "Chrome"
+                ],
+                [
+                    "A remote attacker",
+                    "has compromised",
+                    "the renderer process"
+                ],
+                [
+                    "A remote attacker",
+                    "perform",
+                    "a sandbox escape"
+                ],
+                [
+                    "a sandbox escape",
+                    "via",
+                    "a malicious file"
+                ]
+            ]
+        }
+    }
+}

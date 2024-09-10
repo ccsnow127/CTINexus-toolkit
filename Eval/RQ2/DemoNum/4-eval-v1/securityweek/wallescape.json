@@ -1,0 +1,328 @@
+{
+    "CTI": {
+        "text": "Security researchers are documenting a new vulnerability found in the util-linux core utilities package in Linux systems, warnign that it allows attackers to leak user passwords and modify the clipboard. The security defect, tracked as CVE-2024-28085 and dubbed \u2018WallEscape\u2019, impacts the \u2018wall\u2019 command of util-linux that fails to filter escape sequences from command line arguments. An attacker could embed escape sequences into crafted messages and send them via the \u2018wall\u2019 command, allowing them to leak passwords and modify commands, if specific conditions are met. \u201cThis allows unprivileged users to put arbitrary text on other users\u2019 terminals, if mesg is set to y and wall is setgid,\u201d said security researcher Skyler Ferrante.Ferrante, who is credited with discovering the flaw, said the bug can be exploited to leak user passwords on Ubuntu 22.04 with default configurations, where \u2018wall\u2019 is installed with the special setgid permissions and mesg is set to y. Debian Bookworm is also affected, but CentOS and Red Hat products are not. According to Ferrante, the flaw can also leak an unknown command on Ubuntu 22.0 \u201cif a system runs a command when commands are not found, with the unknown command as an argument.\u201d In addition, it can be exploited to change the output of any command.",
+        "link": "https://www.securityweek.com/wallescape-linux-vulnerability-leaks-user-passwords/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Security researchers",
+                "relation": "are documenting",
+                "object": "a new vulnerability in the util-linux core utilities package in Linux systems"
+            },
+            {
+                "subject": "new vulnerability",
+                "relation": "allows",
+                "object": "attackers to leak user passwords and modify the clipboard"
+            },
+            {
+                "subject": "new vulnerability",
+                "relation": "is tracked as",
+                "object": "CVE-2024-28085"
+            },
+            {
+                "subject": "CVE-2024-28085",
+                "relation": "is dubbed",
+                "object": "WallEscape"
+            },
+            {
+                "subject": "WallEscape",
+                "relation": "impacts",
+                "object": "the \u2018wall\u2019 command of util-linux"
+            },
+            {
+                "subject": "the \u2018wall\u2019 command",
+                "relation": "fails to filter",
+                "object": "escape sequences from command line arguments"
+            },
+            {
+                "subject": "An attacker",
+                "relation": "could embed",
+                "object": "escape sequences into crafted messages"
+            },
+            {
+                "subject": "crafted messages",
+                "relation": "are sent via",
+                "object": "the \u2018wall\u2019 command"
+            },
+            {
+                "subject": "crafted messages",
+                "relation": "allow",
+                "object": "to leak passwords and modify commands"
+            },
+            {
+                "subject": "Skyler Ferrante",
+                "relation": "credited with",
+                "object": "discovering the flaw"
+            },
+            {
+                "subject": "the flaw",
+                "relation": "can be exploited to",
+                "object": "leak user passwords on Ubuntu 22.04 with default configurations"
+            },
+            {
+                "subject": "Debian Bookworm",
+                "relation": "is affected",
+                "object": null
+            },
+            {
+                "subject": "CentOS and Red Hat products",
+                "relation": "are not",
+                "object": "affected"
+            },
+            {
+                "subject": "the flaw",
+                "relation": "can also leak",
+                "object": "an unknown command on Ubuntu 22.04"
+            },
+            {
+                "subject": "the flaw",
+                "relation": "can be exploited to",
+                "object": "change the output of any command"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2635,
+                "cost": 0.026350000000000002
+            },
+            "output": {
+                "tokens": 410,
+                "cost": 0.0123
+            },
+            "total": {
+                "tokens": 3045,
+                "cost": 0.038650000000000004
+            }
+        },
+        "time": 20.307499408721924,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/securityweek/wallescape-QD1-cSU.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "BleepingComputer: atlassian.json",
+                    0.0743924513906117
+                ],
+                [
+                    "threatPost: Microsoft.json",
+                    0.08398020598293378
+                ],
+                [
+                    "securityweek: magento.json",
+                    0.08639176397312756
+                ],
+                [
+                    "thehackernews: chrome-zero-day.json",
+                    0.09318396923675344
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9375,
+                "f1": 0.967741935483871
+            },
+            "matched_list": [
+                [
+                    [
+                        "Security researchers",
+                        "are documenting",
+                        "a new vulnerability in the util-linux core utilities package in Linux systems"
+                    ],
+                    [
+                        "vulnerability",
+                        "found in",
+                        "the util-linux core utilities package in Linux systems"
+                    ]
+                ],
+                [
+                    [
+                        "new vulnerability",
+                        "allows",
+                        "attackers to leak user passwords and modify the clipboard"
+                    ],
+                    [
+                        "attackers",
+                        "modify",
+                        "the clipboard"
+                    ]
+                ],
+                [
+                    [
+                        "new vulnerability",
+                        "is tracked as",
+                        "CVE-2024-28085"
+                    ],
+                    [
+                        "The security defect",
+                        "is tracked as",
+                        "CVE-2024-28085"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-28085",
+                        "is dubbed",
+                        "WallEscape"
+                    ],
+                    [
+                        "CVE-2024-28085",
+                        "is dubbed",
+                        "\u2018WallEscape\u2019"
+                    ]
+                ],
+                [
+                    [
+                        "WallEscape",
+                        "impacts",
+                        "the \u2018wall\u2019 command of util-linux"
+                    ],
+                    [
+                        "\u2018wall\u2019 command",
+                        "fails to filter",
+                        "escape sequences from command line arguments"
+                    ]
+                ],
+                [
+                    [
+                        "the \u2018wall\u2019 command",
+                        "fails to filter",
+                        "escape sequences from command line arguments"
+                    ],
+                    [
+                        "\u2018wall\u2019 command",
+                        "fails to filter",
+                        "escape sequences from command line arguments"
+                    ]
+                ],
+                [
+                    [
+                        "An attacker",
+                        "could embed",
+                        "escape sequences into crafted messages"
+                    ],
+                    [
+                        "An attacker",
+                        "embed",
+                        "escape sequences into crafted messages"
+                    ]
+                ],
+                [
+                    [
+                        "crafted messages",
+                        "are sent via",
+                        "the \u2018wall\u2019 command"
+                    ],
+                    [
+                        "crafted messages",
+                        "are sent via",
+                        "the \u2018wall\u2019 command"
+                    ]
+                ],
+                [
+                    [
+                        "crafted messages",
+                        "allow",
+                        "to leak passwords and modify commands"
+                    ],
+                    [
+                        "crafted messages",
+                        "allow to leak",
+                        "passwords"
+                    ]
+                ],
+                [
+                    [
+                        "Skyler Ferrante",
+                        "credited with",
+                        "discovering the flaw"
+                    ],
+                    [
+                        "Skyler Ferrante",
+                        "credited with",
+                        "discovering the flaw"
+                    ]
+                ],
+                [
+                    [
+                        "the flaw",
+                        "can be exploited to",
+                        "leak user passwords on Ubuntu 22.04 with default configurations"
+                    ],
+                    [
+                        "the flaw",
+                        "can be exploited to leak",
+                        "user passwords on Ubuntu 22.04"
+                    ]
+                ],
+                [
+                    [
+                        "Debian Bookworm",
+                        "is affected",
+                        ""
+                    ],
+                    [
+                        "the flaw",
+                        "affects",
+                        "Debian Bookworm"
+                    ]
+                ],
+                [
+                    [
+                        "CentOS and Red Hat products",
+                        "are not",
+                        "affected"
+                    ],
+                    [
+                        "the flaw",
+                        "does not affect",
+                        "CentOS and Red Hat products"
+                    ]
+                ],
+                [
+                    [
+                        "the flaw",
+                        "can also leak",
+                        "an unknown command on Ubuntu 22.04"
+                    ],
+                    [
+                        "the flaw",
+                        "can leak",
+                        "an unknown command on Ubuntu 22.0"
+                    ]
+                ],
+                [
+                    [
+                        "the flaw",
+                        "can be exploited to",
+                        "change the output of any command"
+                    ],
+                    [
+                        "the flaw",
+                        "can be exploited to change",
+                        "the output of any command"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "attackers",
+                    "leak",
+                    "user passwords"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

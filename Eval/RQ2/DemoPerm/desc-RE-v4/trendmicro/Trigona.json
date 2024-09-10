@@ -1,0 +1,215 @@
+{
+    "CTI": {
+        "text": "The Trigona ransomware is also linked to BlackCat (also known as AlphaVM, AlphaV, or ALPHV); however, there are currently no known similarities between the two groups. It is possible that BlackCat only utilized or collaborated with the threat actors deploying Trigona. A report by Arete confirmed that Trigona had been observed exploiting CVE-2021-40539 for initial access.\u202fOnce it takes hold of a victim's system and data, threat actors behind Trigona then provide an authorization key for victims to register to the negotiation portal. Trigona published critical data stolen from victims such as documents and contracts on their leak site. The website featured bidding options to acquire access to the leaked data and contained a countdown timer, which could have served to place more pressure on victims to pay up.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-trigona"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Trigona ransomware",
+                "relation": "linked to",
+                "object": "BlackCat"
+            },
+            {
+                "subject": "BlackCat",
+                "relation": "utilized or collaborated with",
+                "object": "threat actors deploying Trigona"
+            },
+            {
+                "subject": "Trigona",
+                "relation": "exploiting",
+                "object": "CVE-2021-40539 for initial access"
+            },
+            {
+                "subject": "threat actors behind Trigona",
+                "relation": "provide",
+                "object": "an authorization key for victims to register to the negotiation portal"
+            },
+            {
+                "subject": "Trigona",
+                "relation": "published",
+                "object": "critical data stolen from victims"
+            },
+            {
+                "subject": "published data",
+                "relation": "includes",
+                "object": "documents and contracts"
+            },
+            {
+                "subject": "leak site of Trigona",
+                "relation": "featured",
+                "object": "bidding options to acquire access to the leaked data"
+            },
+            {
+                "subject": "leak site of Trigona",
+                "relation": "contained",
+                "object": "a countdown timer"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1659,
+                "cost": 0.01659
+            },
+            "output": {
+                "tokens": 227,
+                "cost": 0.00681
+            },
+            "total": {
+                "tokens": 1886,
+                "cost": 0.0234
+            }
+        },
+        "time": 13.253551244735718,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/trendmicro/Trigona-QD1-GdD.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Unit42: BlackCat.json",
+                    0.1387239481505826
+                ],
+                [
+                    "AVERTIUM: mallox.json",
+                    0.12229243124221721
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 1,
+                "fn": 5,
+                "precision": 0.875,
+                "recall": 0.5833333333333334,
+                "f1": 0.7000000000000001
+            },
+            "matched_list": [
+                [
+                    [
+                        "Trigona ransomware",
+                        "linked to",
+                        "BlackCat"
+                    ],
+                    [
+                        "Trigona ransomware",
+                        "is linked to",
+                        "BlackCat"
+                    ]
+                ],
+                [
+                    [
+                        "BlackCat",
+                        "utilized or collaborated with",
+                        "threat actors deploying Trigona"
+                    ],
+                    [
+                        "BlackCat",
+                        "utilized or collaborated with",
+                        "the threat actors deploying Trigona"
+                    ]
+                ],
+                [
+                    [
+                        "Trigona",
+                        "exploiting",
+                        "CVE-2021-40539 for initial access"
+                    ],
+                    [
+                        "Trigona",
+                        "exploiting",
+                        "CVE-2021-40539"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors behind Trigona",
+                        "provide",
+                        "an authorization key for victims to register to the negotiation portal"
+                    ],
+                    [
+                        "Authorization key",
+                        "for victims to register to",
+                        "the negotiation portal"
+                    ]
+                ],
+                [
+                    [
+                        "Trigona",
+                        "published",
+                        "critical data stolen from victims"
+                    ],
+                    [
+                        "Trigona",
+                        "published",
+                        "critical data stolen from victims"
+                    ]
+                ],
+                [
+                    [
+                        "leak site of Trigona",
+                        "featured",
+                        "bidding options to acquire access to the leaked data"
+                    ],
+                    [
+                        "Their leak site",
+                        "features",
+                        "bidding options"
+                    ]
+                ],
+                [
+                    [
+                        "leak site of Trigona",
+                        "contained",
+                        "a countdown timer"
+                    ],
+                    [
+                        "Their leak site",
+                        "contains",
+                        "a countdown timer"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "published data",
+                    "includes",
+                    "documents and contracts"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "BlackCat",
+                    "is also known as",
+                    "AlphaVM"
+                ],
+                [
+                    "BlackCat",
+                    "is also known as",
+                    "AlphaV"
+                ],
+                [
+                    "BlackCat",
+                    "is also known as",
+                    "ALPHV"
+                ],
+                [
+                    "Trigona",
+                    "provides",
+                    "an authorization key"
+                ],
+                [
+                    "The critical data",
+                    "includes",
+                    "documents and contracts"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

@@ -1,0 +1,349 @@
+{
+    "CTI": {
+        "text": "The notorious North Korean threat group known as Lazarus exploited a Windows zero-day vulnerability for privilege escalation in attacks involving a rootkit named FudModule, according to cybersecurity firm Avast. The vulnerability is tracked as CVE-2024-21338 and it was observed by Avast in Lazarus attacks last year. The security company developed a proof-of-concept (PoC) exploit and sent it to Microsoft in August 2023. The flaw was patched by Microsoft with the company\u2019s February 2024 Patch Tuesday updates, but the initial advisory for CVE-2024-21338 did not list it as a zero-day. The vulnerability impacts the \u2018appid.sys\u2019 driver associated with Microsoft\u2019s AppLocker security feature. By targeting a vulnerability in a driver that is present on many systems \u2014 rather than using a bring your own vulnerable driver (BYOVD) approach \u2014 the attacker benefits from a higher degree of stealth. \u201cBy exploiting such a vulnerability, the attacker is in a sense living off the land with no need to bring, drop, or load any custom drivers, making it possible for a kernel attack to be truly fileless. This not only evades most detection mechanisms but also enables the attack on systems where driver allowlisting is in place,\u201d Avast explained. By exploiting CVE-2024-21338, Lazarus hackers were able to elevate their privileges on the compromised system and establish a kernel read/write primitive. This enabled them to perform direct kernel object manipulation in an updated version of the FudModule rootkit, which came to light in 2022. ",
+        "link": "https://www.securityweek.com/windows-zero-day-exploited-by-north-korean-hackers-in-rootkit-attack/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Lazarus",
+                "relation": "exploited",
+                "object": "a Windows zero-day vulnerability"
+            },
+            {
+                "subject": "Windows zero-day vulnerability",
+                "relation": "used for",
+                "object": "privilege escalation"
+            },
+            {
+                "subject": "attacks",
+                "relation": "involving",
+                "object": "a rootkit named FudModule"
+            },
+            {
+                "subject": "The vulnerability",
+                "relation": "is tracked as",
+                "object": "CVE-2024-21338"
+            },
+            {
+                "subject": "Avast",
+                "relation": "observed",
+                "object": "CVE-2024-21338 in Lazarus attacks"
+            },
+            {
+                "subject": "Avast",
+                "relation": "developed",
+                "object": "a proof-of-concept (PoC) exploit"
+            },
+            {
+                "subject": "Avast",
+                "relation": "sent",
+                "object": "PoC exploit to Microsoft"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "patched",
+                "object": "CVE-2024-21338"
+            },
+            {
+                "subject": "The vulnerability",
+                "relation": "impacts",
+                "object": "the \u2018appid.sys\u2019 driver"
+            },
+            {
+                "subject": "appid.sys driver",
+                "relation": "is associated with",
+                "object": "Microsoft\u2019s AppLocker security feature"
+            },
+            {
+                "subject": "Lazarus hackers",
+                "relation": "were able to elevate",
+                "object": "their privileges on the compromised system"
+            },
+            {
+                "subject": "CVE-2024-21338",
+                "relation": "enabled",
+                "object": "kernel read/write primitive"
+            },
+            {
+                "subject": "kernel read/write primitive",
+                "relation": "enabled",
+                "object": "direct kernel object manipulation"
+            },
+            {
+                "subject": "direct kernel object manipulation",
+                "relation": "in",
+                "object": "an updated version of the FudModule rootkit"
+            }
+        ],
+        "triples_count": 14,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2061,
+                "cost": 0.020610000000000003
+            },
+            "output": {
+                "tokens": 479,
+                "cost": 0.01437
+            },
+            "total": {
+                "tokens": 2540,
+                "cost": 0.034980000000000004
+            }
+        },
+        "time": 24.380228281021118,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/securityweek/rootkit-QD1-goz.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.14718785505945436
+                ],
+                [
+                    "threatPost: Dogwalk.json",
+                    0.15107160241906395
+                ],
+                [
+                    "BleepingComputer: kasseika.json",
+                    0.21749818942568164
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 4,
+                "fn": 7,
+                "precision": 0.7142857142857143,
+                "recall": 0.5882352941176471,
+                "f1": 0.6451612903225806
+            },
+            "matched_list": [
+                [
+                    [
+                        "Lazarus",
+                        "exploited",
+                        "a Windows zero-day vulnerability"
+                    ],
+                    [
+                        "Lazarus",
+                        "exploited",
+                        "a Windows zero-day vulnerability"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Windows zero-day vulnerability",
+                        "used for",
+                        "privilege escalation"
+                    ],
+                    [
+                        "a Windows zero-day vulnerability",
+                        "for",
+                        "privilege escalation"
+                    ],
+                    [
+                        0.8839156215573272,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "attacks",
+                        "involving",
+                        "a rootkit named FudModule"
+                    ],
+                    [
+                        "attacks",
+                        "involving",
+                        "a rootkit named FudModule"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "The vulnerability",
+                        "is tracked as",
+                        "CVE-2024-21338"
+                    ],
+                    [
+                        "a Windows zero-day vulnerability",
+                        "is tracked as",
+                        "CVE-2024-21338"
+                    ],
+                    [
+                        0.5483165068784014,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Avast",
+                        "developed",
+                        "a proof-of-concept (PoC) exploit"
+                    ],
+                    [
+                        "Avast",
+                        "developed",
+                        "a proof-of-concept (PoC) exploit"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Avast",
+                        "sent",
+                        "PoC exploit to Microsoft"
+                    ],
+                    [
+                        "Avast",
+                        "developed",
+                        "a proof-of-concept (PoC) exploit"
+                    ],
+                    [
+                        1.0,
+                        0.7116442955768361
+                    ]
+                ],
+                [
+                    [
+                        "The vulnerability",
+                        "impacts",
+                        "the \u2018appid.sys\u2019 driver"
+                    ],
+                    [
+                        "CVE-2024-21338",
+                        "impacts",
+                        "the 'appid.sys' driver"
+                    ],
+                    [
+                        0.5244292178193191,
+                        0.9721740218569209
+                    ]
+                ],
+                [
+                    [
+                        "appid.sys driver",
+                        "is associated with",
+                        "Microsoft\u2019s AppLocker security feature"
+                    ],
+                    [
+                        "the 'appid.sys' driver",
+                        "is associated with",
+                        "Microsoft\u2019s AppLocker security feature"
+                    ],
+                    [
+                        0.7828907800608597,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Lazarus hackers",
+                        "were able to elevate",
+                        "their privileges on the compromised system"
+                    ],
+                    [
+                        "Lazarus hackers",
+                        "were able to elevate",
+                        "their privileges"
+                    ],
+                    [
+                        1.0,
+                        0.6968126653508728
+                    ]
+                ],
+                [
+                    [
+                        "direct kernel object manipulation",
+                        "in",
+                        "an updated version of the FudModule rootkit"
+                    ],
+                    [
+                        "direct kernel object manipulation",
+                        "in",
+                        "an updated version of the FudModule rootkit"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Avast",
+                    "observed",
+                    "CVE-2024-21338 in Lazarus attacks"
+                ],
+                [
+                    "Microsoft",
+                    "patched",
+                    "CVE-2024-21338"
+                ],
+                [
+                    "CVE-2024-21338",
+                    "enabled",
+                    "kernel read/write primitive"
+                ],
+                [
+                    "kernel read/write primitive",
+                    "enabled",
+                    "direct kernel object manipulation"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "North Korean threat group",
+                    "is known as",
+                    "Lazarus"
+                ],
+                [
+                    "CVE-2024-21338",
+                    "was observed in",
+                    "Lazarus attacks"
+                ],
+                [
+                    "Avast",
+                    "sent",
+                    "a proof-of-concept (PoC) exploit to Microsoft"
+                ],
+                [
+                    "The flaw",
+                    "was patched by",
+                    "Microsoft"
+                ],
+                [
+                    "CVE-2024-21338",
+                    "enables",
+                    "attack on systems with driver allowlisting"
+                ],
+                [
+                    "Lazarus hackers",
+                    "established",
+                    "a kernel read/write primitive"
+                ],
+                [
+                    "They",
+                    "perform",
+                    "direct kernel object manipulation"
+                ]
+            ]
+        }
+    }
+}

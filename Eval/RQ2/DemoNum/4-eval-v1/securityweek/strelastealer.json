@@ -1,0 +1,362 @@
+{
+    "CTI": {
+        "text": "Over 100 organizations in the US and EU have been targeted in recent large-scale phishing campaigns distributing the information stealer malware known as StrelaStealer, Palo Alto Networks reports. First documented in November 2022, StrelaStealer harvests credentials from the well-known email clients and sends them to an attacker-controlled command-and-control (C&C) server specified in the malware\u2019s configuration. Over the past five months, Palo Alto Networks identified multiple large-scale campaigns carrying attachments deploying the infostealer in the form of a malicious DLL.Following an initial wave of emails in November 2023, the attackers launched two more in January and February 2024, mostly targeting the same North American and European regions. Tailored to local languages, the spam messages were mainly sent to organizations in the high-tech sector, with entities across finance, professional and legal services, manufacturing, government, utilities and energy, insurance, and construction targeted as well. Unlike earlier StrelaStealer campaigns that featured ISO attachments containing LNK and HTML files designed to fetch the malware from a remote server, the recent attacks involved a ZIP attachment that contained a JScript file designed to drop the final payload in the form of a DLL.",
+        "link": "https://www.securityweek.com/over-100-organizations-targeted-in-recent-strelastealer-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Over 100 organizations in the US and EU",
+                "relation": "targeted in",
+                "object": "large-scale phishing campaigns"
+            },
+            {
+                "subject": "phishing campaigns",
+                "relation": "distributing",
+                "object": "StrelaStealer"
+            },
+            {
+                "subject": "StrelaStealer",
+                "relation": "harvests",
+                "object": "credentials from email clients"
+            },
+            {
+                "subject": "StrelaStealer",
+                "relation": "sends",
+                "object": "credentials to an attacker-controlled command-and-control (C&C) server"
+            },
+            {
+                "subject": "Palo Alto Networks",
+                "relation": "identified",
+                "object": "multiple large-scale campaigns"
+            },
+            {
+                "subject": "campaigns",
+                "relation": "carrying",
+                "object": "attachments deploying the infostealer"
+            },
+            {
+                "subject": "spam messages",
+                "relation": "targeted at",
+                "object": "organizations in the high-tech sector"
+            },
+            {
+                "subject": "entities",
+                "relation": "targeted",
+                "object": "finance sector"
+            },
+            {
+                "subject": "entities",
+                "relation": "targeted",
+                "object": "professional and legal services"
+            },
+            {
+                "subject": "entities",
+                "relation": "targeted",
+                "object": "manufacturing sector"
+            },
+            {
+                "subject": "entities",
+                "relation": "targeted",
+                "object": "government sector"
+            },
+            {
+                "subject": "entities",
+                "relation": "targeted",
+                "object": "utilities and energy sector"
+            },
+            {
+                "subject": "entities",
+                "relation": "targeted",
+                "object": "insurance sector"
+            },
+            {
+                "subject": "entities",
+                "relation": "targeted",
+                "object": "construction sector"
+            },
+            {
+                "subject": "ISO attachments",
+                "relation": "contained",
+                "object": "LNK and HTML files"
+            },
+            {
+                "subject": "LNK and HTML files",
+                "relation": "designed to fetch",
+                "object": "malware from a remote server"
+            },
+            {
+                "subject": "recent attacks",
+                "relation": "involved",
+                "object": "a ZIP attachment containing a JScript file"
+            },
+            {
+                "subject": "JScript file",
+                "relation": "designed to drop",
+                "object": "the final payload in the form of a DLL"
+            }
+        ],
+        "triples_count": 18,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2878,
+                "cost": 0.028780000000000003
+            },
+            "output": {
+                "tokens": 458,
+                "cost": 0.01374
+            },
+            "total": {
+                "tokens": 3336,
+                "cost": 0.04252
+            }
+        },
+        "time": 19.319782733917236,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/securityweek/strelastealer-QD1-nyT.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "symantec: Crambus.json",
+                    0.09051479152751349
+                ],
+                [
+                    "darkreading: Star-Blizzard.json",
+                    0.09845551573687775
+                ],
+                [
+                    "threatPost: TA558.json",
+                    0.11061976715685343
+                ],
+                [
+                    "thehackernews: UAC-0099.json",
+                    0.12767044366085686
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 14,
+                "fp": 4,
+                "fn": 3,
+                "precision": 0.7777777777777778,
+                "recall": 0.8235294117647058,
+                "f1": 0.7999999999999999
+            },
+            "matched_list": [
+                [
+                    [
+                        "phishing campaigns",
+                        "distributing",
+                        "StrelaStealer"
+                    ],
+                    [
+                        "Palo Alto Networks",
+                        "identified",
+                        "campaigns distributing StrelaStealer"
+                    ]
+                ],
+                [
+                    [
+                        "StrelaStealer",
+                        "harvests",
+                        "credentials from email clients"
+                    ],
+                    [
+                        "StrelaStealer",
+                        "harvests",
+                        "credentials"
+                    ]
+                ],
+                [
+                    [
+                        "StrelaStealer",
+                        "sends",
+                        "credentials to an attacker-controlled command-and-control (C&C) server"
+                    ],
+                    [
+                        "StrelaStealer",
+                        "sends credentials to",
+                        "attacker-controlled C&C server"
+                    ]
+                ],
+                [
+                    [
+                        "Palo Alto Networks",
+                        "identified",
+                        "multiple large-scale campaigns"
+                    ],
+                    [
+                        "Palo Alto Networks",
+                        "identified",
+                        "campaigns distributing StrelaStealer"
+                    ]
+                ],
+                [
+                    [
+                        "campaigns",
+                        "carrying",
+                        "attachments deploying the infostealer"
+                    ],
+                    [
+                        "Campaigns",
+                        "deploy",
+                        "StrelaStealer via malicious DLL"
+                    ]
+                ],
+                [
+                    [
+                        "entities",
+                        "targeted",
+                        "finance sector"
+                    ],
+                    [
+                        "Campaigns",
+                        "target",
+                        "finance sector"
+                    ]
+                ],
+                [
+                    [
+                        "entities",
+                        "targeted",
+                        "professional and legal services"
+                    ],
+                    [
+                        "Campaigns",
+                        "target",
+                        "professional and legal services sector"
+                    ]
+                ],
+                [
+                    [
+                        "entities",
+                        "targeted",
+                        "manufacturing sector"
+                    ],
+                    [
+                        "Campaigns",
+                        "target",
+                        "manufacturing sector"
+                    ]
+                ],
+                [
+                    [
+                        "entities",
+                        "targeted",
+                        "government sector"
+                    ],
+                    [
+                        "Campaigns",
+                        "target",
+                        "government sector"
+                    ]
+                ],
+                [
+                    [
+                        "entities",
+                        "targeted",
+                        "utilities and energy sector"
+                    ],
+                    [
+                        "Campaigns",
+                        "target",
+                        "utilities and energy sector"
+                    ]
+                ],
+                [
+                    [
+                        "entities",
+                        "targeted",
+                        "insurance sector"
+                    ],
+                    [
+                        "Campaigns",
+                        "target",
+                        "insurance sector"
+                    ]
+                ],
+                [
+                    [
+                        "entities",
+                        "targeted",
+                        "construction sector"
+                    ],
+                    [
+                        "Campaigns",
+                        "target",
+                        "construction sector"
+                    ]
+                ],
+                [
+                    [
+                        "recent attacks",
+                        "involved",
+                        "a ZIP attachment containing a JScript file"
+                    ],
+                    [
+                        "Recent attacks",
+                        "involved",
+                        "ZIP attachment containing a JScript file"
+                    ]
+                ],
+                [
+                    [
+                        "JScript file",
+                        "designed to drop",
+                        "the final payload in the form of a DLL"
+                    ],
+                    [
+                        "JScript file",
+                        "designed to drop",
+                        "the final payload in the form of a DLL"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Over 100 organizations in the US and EU",
+                    "targeted in",
+                    "large-scale phishing campaigns"
+                ],
+                [
+                    "spam messages",
+                    "targeted at",
+                    "organizations in the high-tech sector"
+                ],
+                [
+                    "ISO attachments",
+                    "contained",
+                    "LNK and HTML files"
+                ],
+                [
+                    "LNK and HTML files",
+                    "designed to fetch",
+                    "malware from a remote server"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "StrelaStealer",
+                    "targets",
+                    "organizations in the US and EU"
+                ],
+                [
+                    "Campaigns",
+                    "target",
+                    "the high-tech sector"
+                ],
+                [
+                    "Earlier StrelaStealer campaigns",
+                    "featured",
+                    "ISO attachments"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

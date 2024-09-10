@@ -1,0 +1,337 @@
+{
+    "CTI": {
+        "text": "Unknown groups have launched probes against a zero-day vulnerability identified in Apache's OfBiz enterprise resource planning (ERP) framework - an increasingly popular strategy of analyzing patches for ways to bypass software fixes. The 0-day vulnerability (CVE-2023-51467) in Apache OFBiz, disclosed on Dec. 26, allows an attacker to access sensitive information and remotely execute code against applications using the ERP framework, according to an analysis by cybersecurity firm SonicWall. The Apache Software Foundation had originally released a patch for a related issue, CVE-2023-49070, but the fix failed to protect against other variations of the attack.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/apache-erp-0day-underscores-dangers-of-incomplete-patches"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unknown groups",
+                "relation": "launched",
+                "object": "probes"
+            },
+            {
+                "subject": "probes",
+                "relation": "are against",
+                "object": "zero-day vulnerability"
+            },
+            {
+                "subject": "zero-day vulnerability",
+                "relation": "identified in",
+                "object": "Apache's OfBiz ERP framework"
+            },
+            {
+                "subject": "zero-day vulnerability",
+                "relation": "is",
+                "object": "CVE-2023-51467"
+            },
+            {
+                "subject": "CVE-2023-51467",
+                "relation": "allows",
+                "object": "access to sensitive information"
+            },
+            {
+                "subject": "CVE-2023-51467",
+                "relation": "allows",
+                "object": "remote code execution"
+            },
+            {
+                "subject": "remote code execution",
+                "relation": "is against",
+                "object": "applications using the ERP framework"
+            },
+            {
+                "subject": "Apache Software Foundation",
+                "relation": "released",
+                "object": "a patch"
+            },
+            {
+                "subject": "a patch",
+                "relation": "for",
+                "object": "CVE-2023-49070"
+            },
+            {
+                "subject": "CVE-2023-49070",
+                "relation": "failed to protect against",
+                "object": "other variations of the attack"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2197,
+                "cost": 0.021970000000000003
+            },
+            "output": {
+                "tokens": 258,
+                "cost": 0.00774
+            },
+            "total": {
+                "tokens": 2455,
+                "cost": 0.029710000000000004
+            }
+        },
+        "time": 6.38409948348999,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/darkreading/Apache-ERP-QD1-YVm.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-apple.json",
+                    0.10587882266127217
+                ],
+                [
+                    "BleepingComputer-chrome.json",
+                    0.11639740230149544
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.12858494129057188
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Unknown groups",
+                    "class": "Attacker"
+                },
+                "relation": "launched",
+                "object": {
+                    "text": "probes",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "probes",
+                    "class": "Event"
+                },
+                "relation": "are against",
+                "object": {
+                    "text": "zero-day vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "zero-day vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "identified in",
+                "object": {
+                    "text": "Apache's OfBiz ERP framework",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "zero-day vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "CVE-2023-51467",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-51467",
+                    "class": "Vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "access to sensitive information",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-51467",
+                    "class": "Vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "remote code execution",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "remote code execution",
+                    "class": "Malware Characteristic:Capability"
+                },
+                "relation": "is against",
+                "object": {
+                    "text": "applications using the ERP framework",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Apache Software Foundation",
+                    "class": "Organization"
+                },
+                "relation": "released",
+                "object": {
+                    "text": "a patch",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a patch",
+                    "class": "Tool"
+                },
+                "relation": "for",
+                "object": {
+                    "text": "CVE-2023-49070",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-49070",
+                    "class": "Vulnerability"
+                },
+                "relation": "failed to protect against",
+                "object": {
+                    "text": "other variations of the attack",
+                    "class": "Malware Characteristic:Variants"
+                }
+            }
+        ],
+        "response_time": 26.729528427124023,
+        "Demo_num": 1,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-1shot/prompt_store/darkreading/Apache-ERP.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 750,
+                "cost": 0.007500000000000001
+            },
+            "output": {
+                "tokens": 549,
+                "cost": 0.016470000000000002
+            },
+            "total": {
+                "tokens": 1299,
+                "cost": 0.02397
+            }
+        },
+        "Eval": {
+            "correct": 15,
+            "incorrect": 5,
+            "TP": 15,
+            "TN": 0,
+            "FP": 5,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 18,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 1,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 2,
+                    "TN": 15,
+                    "FP": 0,
+                    "FN": 3
+                },
+                "Exploit Target": {
+                    "TP": 2,
+                    "TN": 18,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 1,
+                    "TN": 17,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 17,
+                    "FP": 3,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 1,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 8,
+                    "TN": 12,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 8
+        }
+    }
+}

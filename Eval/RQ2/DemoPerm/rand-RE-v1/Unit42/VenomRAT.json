@@ -1,0 +1,239 @@
+{
+    "CTI": {
+        "text": "Researchers should be aware of threat actors repurposing older proof of concept (PoC) code to quickly craft a fake PoC for a newly released vulnerability. On Aug. 17, 2023, the Zero Day Initiative publicly reported a remote code execution (RCE) vulnerability in WinRAR tracked as CVE-2023-40477. They had disclosed it to the vendor on June 8, 2023. Four days after the public reporting of CVE-2023-40477, an actor using an alias of whalersplonk committed a fake PoC script to their GitHub repository. The fake PoC meant to exploit this WinRAR vulnerability was based on a publicly available PoC script that exploited a SQL injection vulnerability in an application called GeoServer, which is tracked as CVE-2023-25157. We analyzed the fake PoC script and all the links in the infection chain, which ultimately installed a VenomRAT payload.",
+        "link": "https://unit42.paloaltonetworks.com/fake-cve-2023-40477-poc-hides-venomrat/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "threat actors",
+                "relation": "repurposing",
+                "object": "older proof of concept code"
+            },
+            {
+                "subject": "fake PoC",
+                "relation": "crafted for",
+                "object": "a newly released vulnerability"
+            },
+            {
+                "subject": "Zero Day Initiative",
+                "relation": "reported",
+                "object": "a remote code execution vulnerability in WinRAR"
+            },
+            {
+                "subject": "remote code execution vulnerability",
+                "relation": "tracked as",
+                "object": "CVE-2023-40477"
+            },
+            {
+                "subject": "actor",
+                "relation": "used alias",
+                "object": "whalersplonk"
+            },
+            {
+                "subject": "whalersplonk",
+                "relation": "committed",
+                "object": "fake PoC script to GitHub repository"
+            },
+            {
+                "subject": "fake PoC script",
+                "relation": "meant to exploit",
+                "object": "WinRAR vulnerability"
+            },
+            {
+                "subject": "fake PoC script",
+                "relation": "based on",
+                "object": "publicly available PoC script"
+            },
+            {
+                "subject": "publicly available PoC script",
+                "relation": "exploited",
+                "object": "SQL injection vulnerability in GeoServer"
+            },
+            {
+                "subject": "SQL injection vulnerability",
+                "relation": "tracked as",
+                "object": "CVE-2023-25157"
+            },
+            {
+                "subject": "analysis of fake PoC script and links",
+                "relation": "installed",
+                "object": "VenomRAT payload"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1141,
+                "cost": 0.011410000000000002
+            },
+            "output": {
+                "tokens": 314,
+                "cost": 0.00942
+            },
+            "total": {
+                "tokens": 1455,
+                "cost": 0.02083
+            }
+        },
+        "time": 15.160939931869507,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/Unit42/VenomRAT-QD1-sl0.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Windows-Zero-Day.json",
+                    "random"
+                ],
+                [
+                    "Crysis.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.9090909090909091,
+                "recall": 1.0,
+                "f1": 0.9523809523809523
+            },
+            "matched_list": [
+                [
+                    [
+                        "threat actors",
+                        "repurposing",
+                        "older proof of concept code"
+                    ],
+                    [
+                        "threat actors",
+                        "repurpose",
+                        "older proof of concept (PoC) code"
+                    ]
+                ],
+                [
+                    [
+                        "fake PoC",
+                        "crafted for",
+                        "a newly released vulnerability"
+                    ],
+                    [
+                        "threat actors",
+                        "craft",
+                        "a fake PoC for a newly released vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "Zero Day Initiative",
+                        "reported",
+                        "a remote code execution vulnerability in WinRAR"
+                    ],
+                    [
+                        "remote code execution (RCE) vulnerability",
+                        "is in",
+                        "WinRAR"
+                    ]
+                ],
+                [
+                    [
+                        "remote code execution vulnerability",
+                        "tracked as",
+                        "CVE-2023-40477"
+                    ],
+                    [
+                        "RCE vulnerability",
+                        "tracked as",
+                        "CVE-2023-40477"
+                    ]
+                ],
+                [
+                    [
+                        "whalersplonk",
+                        "committed",
+                        "fake PoC script to GitHub repository"
+                    ],
+                    [
+                        "whalersplonk",
+                        "committed",
+                        "a fake PoC script to their GitHub repository"
+                    ]
+                ],
+                [
+                    [
+                        "fake PoC script",
+                        "meant to exploit",
+                        "WinRAR vulnerability"
+                    ],
+                    [
+                        "fake PoC script",
+                        "meant to exploit",
+                        "WinRAR vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "fake PoC script",
+                        "based on",
+                        "publicly available PoC script"
+                    ],
+                    [
+                        "fake PoC script",
+                        "was based on",
+                        "a publicly available PoC script"
+                    ]
+                ],
+                [
+                    [
+                        "publicly available PoC script",
+                        "exploited",
+                        "SQL injection vulnerability in GeoServer"
+                    ],
+                    [
+                        "publicly available PoC script",
+                        "exploited",
+                        "a SQL injection vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "SQL injection vulnerability",
+                        "tracked as",
+                        "CVE-2023-25157"
+                    ],
+                    [
+                        "SQL injection vulnerability",
+                        "tracked as",
+                        "CVE-2023-25157"
+                    ]
+                ],
+                [
+                    [
+                        "analysis of fake PoC script and links",
+                        "installed",
+                        "VenomRAT payload"
+                    ],
+                    [
+                        "VenomRAT payload",
+                        "installed by",
+                        "all the links in the infection chain"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "actor",
+                    "used alias",
+                    "whalersplonk"
+                ]
+            ],
+            "not_recall_list": [],
+            "thresh": 0.7
+        }
+    }
+}

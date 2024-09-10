@@ -1,0 +1,288 @@
+{
+    "CTI": {
+        "text": "Since mid-November 2023, Microsoft Threat Intelligence has observed threat actors, including financially motivated actors like Storm-0569, Storm-1113, Sangria Tempest, and Storm-1674, utilizing the ms-appinstaller URI scheme (App Installer) to distribute malware. In addition to ensuring that customers are protected from observed attacker activity, Microsoft investigated the use of App Installer in these attacks. In response to this activity, Microsoft has disabled the ms-appinstaller protocol handler by default. The observed threat actor activity abuses the current implementation of the ms-appinstaller protocol handler as an access vector for malware that may lead to ransomware distribution. Multiple cybercriminals are also selling a malware kit as a service that abuses the MSIX file format and ms-appinstaller protocol handler. These threat actors distribute signed malicious MSIX application packages using websites accessed through malicious advertisements for legitimate popular software. A second vector of phishing through Microsoft Teams is also in use by Storm-1674.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/12/28/financially-motivated-threat-actors-misusing-app-installer/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Storm-0569",
+                "relation": "is",
+                "object": "a financially motivated actor"
+            },
+            {
+                "subject": "Storm-1113",
+                "relation": "is",
+                "object": "a financially motivated actor"
+            },
+            {
+                "subject": "Sangria Tempest",
+                "relation": "is",
+                "object": "a financially motivated actor"
+            },
+            {
+                "subject": "Storm-1674",
+                "relation": "is",
+                "object": "a financially motivated actor"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "utilizing",
+                "object": "the ms-appinstaller URI scheme to distribute malware"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "investigated",
+                "object": "the use of App Installer in attacks"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "has disabled",
+                "object": "the ms-appinstaller protocol handler by default"
+            },
+            {
+                "subject": "observed threat actor activity",
+                "relation": "abuses",
+                "object": "the current implementation of the ms-appinstaller protocol handler as an access vector for malware"
+            },
+            {
+                "subject": "malware that may lead to ransomware distribution",
+                "relation": "is a consequence of",
+                "object": "abuses of the ms-appinstaller protocol handler"
+            },
+            {
+                "subject": "Multiple cybercriminals",
+                "relation": "selling",
+                "object": "a malware kit as a service that abuses the MSIX file format and ms-appinstaller protocol handler"
+            },
+            {
+                "subject": "These threat actors",
+                "relation": "distribute",
+                "object": "signed malicious MSIX application packages using websites accessed through malicious advertisements for legitimate popular software"
+            },
+            {
+                "subject": "Storm-1674",
+                "relation": "using",
+                "object": "a second vector of phishing through Microsoft Teams"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1442,
+                "cost": 0.01442
+            },
+            "output": {
+                "tokens": 448,
+                "cost": 0.01344
+            },
+            "total": {
+                "tokens": 1890,
+                "cost": 0.027860000000000003
+            }
+        },
+        "time": 20.30686092376709,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/Microsoft/app-installer-QD1-VQ4.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "symantec: Follina.json",
+                    0.17125762592487073
+                ],
+                [
+                    "Microsoft: malware-distributor.json",
+                    0.3527168512943631
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 0,
+                "fn": 5,
+                "precision": 1.0,
+                "recall": 0.7058823529411765,
+                "f1": 0.8275862068965517
+            },
+            "matched_list": [
+                [
+                    [
+                        "Storm-0569",
+                        "is",
+                        "a financially motivated actor"
+                    ],
+                    [
+                        "Storm-0569",
+                        "is a",
+                        "financially motivated actor"
+                    ]
+                ],
+                [
+                    [
+                        "Storm-1113",
+                        "is",
+                        "a financially motivated actor"
+                    ],
+                    [
+                        "Storm-1113",
+                        "is a",
+                        "financially motivated actor"
+                    ]
+                ],
+                [
+                    [
+                        "Sangria Tempest",
+                        "is",
+                        "a financially motivated actor"
+                    ],
+                    [
+                        "Sangria Tempest",
+                        "is a",
+                        "financially motivated actor"
+                    ]
+                ],
+                [
+                    [
+                        "Storm-1674",
+                        "is",
+                        "a financially motivated actor"
+                    ],
+                    [
+                        "Storm-1674",
+                        "is a",
+                        "financially motivated actor"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "utilizing",
+                        "the ms-appinstaller URI scheme to distribute malware"
+                    ],
+                    [
+                        "Threat actors",
+                        "utilize",
+                        "the ms-appinstaller URI scheme"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "investigated",
+                        "the use of App Installer in attacks"
+                    ],
+                    [
+                        "Threat actors",
+                        "utilize",
+                        "App Installer to distribute malware"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "has disabled",
+                        "the ms-appinstaller protocol handler by default"
+                    ],
+                    [
+                        "Microsoft",
+                        "disabled",
+                        "the ms-appinstaller protocol handler"
+                    ]
+                ],
+                [
+                    [
+                        "observed threat actor activity",
+                        "abuses",
+                        "the current implementation of the ms-appinstaller protocol handler as an access vector for malware"
+                    ],
+                    [
+                        "The ms-appinstaller protocol handler",
+                        "is used as",
+                        "an access vector for malware"
+                    ]
+                ],
+                [
+                    [
+                        "malware that may lead to ransomware distribution",
+                        "is a consequence of",
+                        "abuses of the ms-appinstaller protocol handler"
+                    ],
+                    [
+                        "Threat actors",
+                        "abuse",
+                        "the ms-appinstaller protocol handler"
+                    ]
+                ],
+                [
+                    [
+                        "Multiple cybercriminals",
+                        "selling",
+                        "a malware kit as a service that abuses the MSIX file format and ms-appinstaller protocol handler"
+                    ],
+                    [
+                        "Access vector for malware",
+                        "may lead to",
+                        "ransomware distribution"
+                    ]
+                ],
+                [
+                    [
+                        "These threat actors",
+                        "distribute",
+                        "signed malicious MSIX application packages using websites accessed through malicious advertisements for legitimate popular software"
+                    ],
+                    [
+                        "Cybercriminals",
+                        "are selling",
+                        "a malware kit as a service"
+                    ]
+                ],
+                [
+                    [
+                        "Storm-1674",
+                        "using",
+                        "a second vector of phishing through Microsoft Teams"
+                    ],
+                    [
+                        "Storm-1674",
+                        "uses phishing through",
+                        "Microsoft Teams"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Malware kit",
+                    "abuses",
+                    "the MSIX file format"
+                ],
+                [
+                    "Malware kit",
+                    "abuses",
+                    "ms-appinstaller protocol handler"
+                ],
+                [
+                    "Threat actors",
+                    "distribute",
+                    "signed malicious MSIX application packages"
+                ],
+                [
+                    "Signed malicious MSIX application packages",
+                    "accessed through",
+                    "malicious advertisements"
+                ],
+                [
+                    "Signed malicious MSIX application packages",
+                    "for",
+                    "legitimate popular software"
+                ]
+            ]
+        }
+    }
+}

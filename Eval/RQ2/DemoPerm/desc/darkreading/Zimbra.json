@@ -1,0 +1,257 @@
+{
+    "CTI": {
+        "text": "At least four separate cyberattack groups have used a former zero-day security vulnerability in the Zimbra Collaboration Suite (ZCS) to steal email data, user credentials, and authentication tokens from government organizations globally.ZCS is an email server, calendaring, and chat and video platform, used by thousands of companies and hundreds of millions of individuals, according to the Zimbra website. Its client organizations are as diverse as the Japan Advanced Institute of Science and Technology, Germany's Max Planck Institute, and Gunung Sewu, a top business incubator in Southeast Asia. The bug (CVE-2023-37580) is a reflected cross-site scripting (XSS) vulnerability in the Zimbra email server that was patched on July 25, with a hotfix rolling out to its public GitHub repository on July 5. According to a report by Google's Threat Analysis Group (TAG) shared with Dark Reading, the zero-day exploitation started in June, before Zimbra offered remediation.",
+        "link": "https://www.darkreading.com/cyberattacks-data-breaches/apts-swarm-zimbra-zero-day-to-steal-government-info-worldwide"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "cyberattack groups",
+                "relation": "used",
+                "object": "a former zero-day security vulnerability"
+            },
+            {
+                "subject": "a former zero-day security vulnerability",
+                "relation": "in",
+                "object": "the Zimbra Collaboration Suite (ZCS)"
+            },
+            {
+                "subject": "cyberattack groups",
+                "relation": "steal",
+                "object": "email data"
+            },
+            {
+                "subject": "cyberattack groups",
+                "relation": "steal",
+                "object": "user credentials"
+            },
+            {
+                "subject": "cyberattack groups",
+                "relation": "steal",
+                "object": "authentication tokens"
+            },
+            {
+                "subject": "the Zimbra Collaboration Suite (ZCS)",
+                "relation": "is used by",
+                "object": "thousands of companies"
+            },
+            {
+                "subject": "the Zimbra Collaboration Suite (ZCS)",
+                "relation": "is used by",
+                "object": "hundreds of millions of individuals"
+            },
+            {
+                "subject": "CVE-2023-37580",
+                "relation": "is a",
+                "object": "reflected cross-site scripting (XSS) vulnerability"
+            },
+            {
+                "subject": "CVE-2023-37580",
+                "relation": "is in",
+                "object": "the Zimbra email server"
+            },
+            {
+                "subject": "CVE-2023-37580",
+                "relation": "was patched on",
+                "object": "July 25"
+            },
+            {
+                "subject": "a hotfix for CVE-2023-37580",
+                "relation": "rolling out to",
+                "object": "its public GitHub repository on July 5"
+            },
+            {
+                "subject": "Google's Threat Analysis Group (TAG)",
+                "relation": "shared",
+                "object": "a report"
+            },
+            {
+                "subject": "the report",
+                "relation": "mentions",
+                "object": "zero-day exploitation started in June"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1316,
+                "cost": 0.013160000000000002
+            },
+            "output": {
+                "tokens": 376,
+                "cost": 0.01128
+            },
+            "total": {
+                "tokens": 1692,
+                "cost": 0.024440000000000003
+            }
+        },
+        "time": 17.515885591506958,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/darkreading/Zimbra-QD1-u6l.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Google_TAG: zimbra.json",
+                    0.4453872046902282
+                ],
+                [
+                    "darkreading: Google-Patches.json",
+                    0.12738763039067774
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 5,
+                "fn": 2,
+                "precision": 0.6153846153846154,
+                "recall": 0.8,
+                "f1": 0.6956521739130435
+            },
+            "matched_list": [
+                [
+                    [
+                        "a former zero-day security vulnerability",
+                        "in",
+                        "the Zimbra Collaboration Suite (ZCS)"
+                    ],
+                    [
+                        "a former zero-day security vulnerability in the Zimbra Collaboration Suite (ZCS)",
+                        "to steal",
+                        "user credentials"
+                    ]
+                ],
+                [
+                    [
+                        "the Zimbra Collaboration Suite (ZCS)",
+                        "is used by",
+                        "thousands of companies"
+                    ],
+                    [
+                        "ZCS",
+                        "used by",
+                        "thousands of companies"
+                    ]
+                ],
+                [
+                    [
+                        "the Zimbra Collaboration Suite (ZCS)",
+                        "is used by",
+                        "hundreds of millions of individuals"
+                    ],
+                    [
+                        "ZCS",
+                        "used by",
+                        "hundreds of millions of individuals"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-37580",
+                        "is a",
+                        "reflected cross-site scripting (XSS) vulnerability"
+                    ],
+                    [
+                        "CVE-2023-37580",
+                        "is a",
+                        "reflected cross-site scripting (XSS) vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-37580",
+                        "is in",
+                        "the Zimbra email server"
+                    ],
+                    [
+                        "CVE-2023-37580",
+                        "in",
+                        "the Zimbra email server"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-37580",
+                        "was patched on",
+                        "July 25"
+                    ],
+                    [
+                        "CVE-2023-37580",
+                        "was patched on",
+                        "July 25"
+                    ]
+                ],
+                [
+                    [
+                        "a hotfix for CVE-2023-37580",
+                        "rolling out to",
+                        "its public GitHub repository on July 5"
+                    ],
+                    [
+                        "a hotfix for CVE-2023-37580",
+                        "rolling out to",
+                        "its public GitHub repository on July 5"
+                    ]
+                ],
+                [
+                    [
+                        "the report",
+                        "mentions",
+                        "zero-day exploitation started in June"
+                    ],
+                    [
+                        "The zero-day exploitation",
+                        "started in",
+                        "June"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "cyberattack groups",
+                    "used",
+                    "a former zero-day security vulnerability"
+                ],
+                [
+                    "cyberattack groups",
+                    "steal",
+                    "email data"
+                ],
+                [
+                    "cyberattack groups",
+                    "steal",
+                    "user credentials"
+                ],
+                [
+                    "cyberattack groups",
+                    "steal",
+                    "authentication tokens"
+                ],
+                [
+                    "Google's Threat Analysis Group (TAG)",
+                    "shared",
+                    "a report"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "authentication tokens",
+                    "from",
+                    "government organizations globally"
+                ],
+                [
+                    "ZCS",
+                    "is an",
+                    "email server, calendaring, and chat and video platform"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

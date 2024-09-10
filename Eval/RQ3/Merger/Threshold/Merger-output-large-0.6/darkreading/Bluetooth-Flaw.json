@@ -1,0 +1,450 @@
+{
+    "CTI": {
+        "text": "Attackers can exploit a critical Bluetooth security vulnerability that's been lurking largely unnoticed for years on macOS, iOS, Android, and Linux device platforms. The keystroke injection vulnerability allows an attacker to control the targeted device as if they were attached by a Bluetooth keyboard, performing various functions remotely depending on the endpoint. Tracked as CVE-2023-45866, the flaw exists in how in the Bluetooth protocol is implemented on various platforms. It works by tricking the Bluetooth host state-machine into pairing with a fake keyboard without user confirmation. The vulnerability enables an attacker to pair an emulated Bluetooth keyboard with a victim's phone or computer, implementing the keyboard as a Python script that runs on a Linux computer. The attacker can then inject keystrokes, typing on the target device as if they were a Bluetooth keyboard legitimately attached to the target.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/critical-bluetooth-flaw-exposes-android-apple-and-linux-devices-to-keystroke-injection-attack"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "attackers",
+                "relation": "exploit",
+                "object": "a critical Bluetooth security vulnerability"
+            },
+            {
+                "subject": "The critical Bluetooth security vulnerability",
+                "relation": "is on",
+                "object": "macOS, iOS, Android, and Linux device platforms"
+            },
+            {
+                "subject": "The critical Bluetooth security vulnerability",
+                "relation": "allows",
+                "object": "keystroke injection"
+            },
+            {
+                "subject": "keystroke injection vulnerability",
+                "relation": "allows",
+                "object": "an attacker to control the targeted device"
+            },
+            {
+                "subject": "CVE-2023-45866",
+                "relation": "exists in",
+                "object": "how the Bluetooth protocol is implemented"
+            },
+            {
+                "subject": "The flaw",
+                "relation": "works by",
+                "object": "tricking the Bluetooth host state-machine"
+            },
+            {
+                "subject": "The attacker",
+                "relation": "pair",
+                "object": "an emulated Bluetooth keyboard with a victim's phone or computer"
+            },
+            {
+                "subject": "The emulated Bluetooth keyboard",
+                "relation": "is implemented as",
+                "object": "a Python script that runs on a Linux computer"
+            },
+            {
+                "subject": "The attacker",
+                "relation": "inject keystrokes",
+                "object": "typing on the target device"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1740,
+                "cost": 0.017400000000000002
+            },
+            "output": {
+                "tokens": 261,
+                "cost": 0.00783
+            },
+            "total": {
+                "tokens": 2001,
+                "cost": 0.025230000000000002
+            }
+        },
+        "time": 7.084382057189941,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/darkreading/Bluetooth-Flaw-QD1-QXK.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-mastodon.json",
+                    0.059481264311729606
+                ],
+                [
+                    "BleepingComputer-github.json",
+                    0.06366865079727135
+                ],
+                [
+                    "BleepingComputer-apple.json",
+                    0.06492595991787939
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "exploit",
+                "object": {
+                    "text": "a critical Bluetooth security vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The critical Bluetooth security vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is on",
+                "object": {
+                    "text": "macOS, iOS, Android, and Linux device platforms",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The critical Bluetooth security vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "keystroke injection",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "keystroke injection vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "an attacker to control the targeted device",
+                    "class": "Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-45866",
+                    "class": "Vulnerability"
+                },
+                "relation": "exists in",
+                "object": {
+                    "text": "how the Bluetooth protocol is implemented",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The flaw",
+                    "class": "Vulnerability"
+                },
+                "relation": "works by",
+                "object": {
+                    "text": "tricking the Bluetooth host state-machine",
+                    "class": "Method"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The attacker",
+                    "class": "Attacker"
+                },
+                "relation": "pair",
+                "object": {
+                    "text": "an emulated Bluetooth keyboard with a victim's phone or computer",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The emulated Bluetooth keyboard",
+                    "class": "Tool"
+                },
+                "relation": "is implemented as",
+                "object": {
+                    "text": "a Python script that runs on a Linux computer",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The attacker",
+                    "class": "Attacker"
+                },
+                "relation": "inject keystrokes",
+                "object": {
+                    "text": "typing on the target device",
+                    "class": "Capability"
+                }
+            }
+        ],
+        "response_time": 19.923086643218994,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/darkreading/Bluetooth-Flaw.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1361,
+                "cost": 0.01361
+            },
+            "output": {
+                "tokens": 597,
+                "cost": 0.01791
+            },
+            "total": {
+                "tokens": 1958,
+                "cost": 0.03152
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "attackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "attackers",
+                        "The attacker",
+                        "The attacker"
+                    ],
+                    "entity_text": "The attacker"
+                },
+                "relation": "exploit",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a critical Bluetooth security vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a critical Bluetooth security vulnerability",
+                        "The critical Bluetooth security vulnerability",
+                        "The critical Bluetooth security vulnerability"
+                    ],
+                    "entity_text": "The critical Bluetooth security vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "The critical Bluetooth security vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a critical Bluetooth security vulnerability",
+                        "The critical Bluetooth security vulnerability",
+                        "The critical Bluetooth security vulnerability"
+                    ],
+                    "entity_text": "The critical Bluetooth security vulnerability"
+                },
+                "relation": "is on",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "macOS, iOS, Android, and Linux device platforms",
+                    "mention_class": "Information",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "macOS, iOS, Android, and Linux device platforms"
+                    ],
+                    "entity_text": "macOS, iOS, Android, and Linux device platforms"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "The critical Bluetooth security vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a critical Bluetooth security vulnerability",
+                        "The critical Bluetooth security vulnerability",
+                        "The critical Bluetooth security vulnerability"
+                    ],
+                    "entity_text": "The critical Bluetooth security vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "keystroke injection",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "keystroke injection"
+                    ],
+                    "entity_text": "keystroke injection"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "keystroke injection vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "keystroke injection vulnerability"
+                    ],
+                    "entity_text": "keystroke injection vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "an attacker to control the targeted device",
+                    "mention_class": "Capability",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "an attacker to control the targeted device"
+                    ],
+                    "entity_text": "an attacker to control the targeted device"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "CVE-2023-45866",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "CVE-2023-45866"
+                    ],
+                    "entity_text": "CVE-2023-45866"
+                },
+                "relation": "exists in",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "how the Bluetooth protocol is implemented",
+                    "mention_class": "Information",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "how the Bluetooth protocol is implemented"
+                    ],
+                    "entity_text": "how the Bluetooth protocol is implemented"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "The flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "The flaw"
+                    ],
+                    "entity_text": "The flaw"
+                },
+                "relation": "works by",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "tricking the Bluetooth host state-machine",
+                    "mention_class": "Method",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "tricking the Bluetooth host state-machine"
+                    ],
+                    "entity_text": "tricking the Bluetooth host state-machine"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "The attacker",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "attackers",
+                        "The attacker",
+                        "The attacker"
+                    ],
+                    "entity_text": "The attacker"
+                },
+                "relation": "pair",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "an emulated Bluetooth keyboard with a victim's phone or computer",
+                    "mention_class": "Tool",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "an emulated Bluetooth keyboard with a victim's phone or computer",
+                        "The emulated Bluetooth keyboard"
+                    ],
+                    "entity_text": "The emulated Bluetooth keyboard"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "The emulated Bluetooth keyboard",
+                    "mention_class": "Tool",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "an emulated Bluetooth keyboard with a victim's phone or computer",
+                        "The emulated Bluetooth keyboard"
+                    ],
+                    "entity_text": "The emulated Bluetooth keyboard"
+                },
+                "relation": "is implemented as",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "a Python script that runs on a Linux computer",
+                    "mention_class": "Tool",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "a Python script that runs on a Linux computer"
+                    ],
+                    "entity_text": "a Python script that runs on a Linux computer"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "The attacker",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "attackers",
+                        "The attacker",
+                        "The attacker"
+                    ],
+                    "entity_text": "The attacker"
+                },
+                "relation": "inject keystrokes",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "typing on the target device",
+                    "mention_class": "Capability",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "typing on the target device"
+                    ],
+                    "entity_text": "typing on the target device"
+                }
+            }
+        ],
+        "mentions_num": 18,
+        "response_time": 3.553048610687256,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 13,
+        "threshold": 0.6,
+        "Eval": {
+            "TP": 8,
+            "FP": 0,
+            "FN": 0,
+            "TN": 10
+        }
+    }
+}

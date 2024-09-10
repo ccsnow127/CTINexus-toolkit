@@ -1,0 +1,127 @@
+{
+    "CTI": {
+        "text": "The CL0P ransomware group recently began using torrents to distribute victim data after a successful campaign stealing data from thousands of companies. We'll cover the reason for this shift in methodology and what this means for visibility to the outside world. CL0P has been one of the ransomware groups most actively posting data about their victims on leak sites tracked by Unit 42 (second only to LockBit in 2023). Unit 42 consultants have recently observed CL0P in about 10 incident response cases.",
+        "link": "https://unit42.paloaltonetworks.com/cl0p-group-distributes-ransomware-data-with-torrents/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "CL0P ransomware group",
+                "relation": "began using",
+                "object": "torrents to distribute victim data"
+            },
+            {
+                "subject": "CL0P ransomware group",
+                "relation": "successfully stole data from",
+                "object": "thousands of companies"
+            },
+            {
+                "subject": "Unit 42",
+                "relation": "tracked",
+                "object": "leak sites"
+            },
+            {
+                "subject": "Unit 42",
+                "relation": "observed",
+                "object": "CL0P in about 10 incident response cases"
+            }
+        ],
+        "triples_count": 4,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1808,
+                "cost": 0.000904
+            },
+            "output": {
+                "tokens": 149,
+                "cost": 0.0002235
+            },
+            "total": {
+                "tokens": 1957,
+                "cost": 0.0011275
+            }
+        },
+        "time": 3.2772228717803955,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/Unit42/CL0P-Seeds-QD1-GQC.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "AVERTIUM: akira.json",
+                    0.09607576260304614
+                ],
+                [
+                    "AVERTIUM: mallox.json",
+                    0.1596234859880811
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 4,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "CL0P ransomware group",
+                        "began using",
+                        "torrents to distribute victim data"
+                    ],
+                    [
+                        "The CL0P ransomware group",
+                        "began using",
+                        "torrents to distribute victim data"
+                    ]
+                ],
+                [
+                    [
+                        "CL0P ransomware group",
+                        "successfully stole data from",
+                        "thousands of companies"
+                    ],
+                    [
+                        "The CL0P ransomware group",
+                        "stealing data from",
+                        "thousands of companies"
+                    ]
+                ],
+                [
+                    [
+                        "Unit 42",
+                        "tracked",
+                        "leak sites"
+                    ],
+                    [
+                        "Unit 42",
+                        "tracked",
+                        "leak sites"
+                    ]
+                ],
+                [
+                    [
+                        "Unit 42",
+                        "observed",
+                        "CL0P in about 10 incident response cases"
+                    ],
+                    [
+                        "Unit 42",
+                        "observed CL0P in",
+                        "incident response cases"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [],
+            "thresh": 0.7
+        }
+    }
+}

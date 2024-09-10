@@ -1,0 +1,662 @@
+{
+    "CTI": {
+        "text": "Microsoft Threat Intelligence has uncovered a supply chain attack by the North Korea-based threat actor Diamond Sleet (ZINC) involving a malicious variant of an application developed by CyberLink Corp., a software company that develops multimedia software products. This malicious file is a legitimate CyberLink application installer that has been modified to include malicious code that downloads, decrypts, and loads a second-stage payload. The file, which was signed using a valid certificate issued to CyberLink Corp., is hosted on legitimate update infrastructure owned by CyberLink and includes checks to limit the time window for execution and evade detection by security products. Thus far, the malicious activity has impacted over 100 devices in multiple countries, including Japan, Taiwan, Canada, and the United States.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/11/22/diamond-sleet-supply-chain-compromise-distributes-a-modified-cyberlink-installer/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft Threat Intelligence",
+                "relation": "has uncovered",
+                "object": "a supply chain attack"
+            },
+            {
+                "subject": "the threat actor Diamond Sleet (ZINC)",
+                "relation": "is based in",
+                "object": "North Korea"
+            },
+            {
+                "subject": "Diamond Sleet (ZINC)",
+                "relation": "involves in",
+                "object": "a supply chain attack"
+            },
+            {
+                "subject": "a malicious variant",
+                "relation": "is of",
+                "object": "an application developed by CyberLink Corp."
+            },
+            {
+                "subject": "CyberLink Corp.",
+                "relation": "develops",
+                "object": "multimedia software products"
+            },
+            {
+                "subject": "the malicious file",
+                "relation": "is",
+                "object": "a legitimate CyberLink application installer"
+            },
+            {
+                "subject": "the malicious file",
+                "relation": "has been modified to",
+                "object": "include malicious code"
+            },
+            {
+                "subject": "the malicious code",
+                "relation": "downloads, decrypts, and loads",
+                "object": "a second-stage payload"
+            },
+            {
+                "subject": "the file",
+                "relation": "is signed using",
+                "object": "a valid certificate issued to CyberLink Corp."
+            },
+            {
+                "subject": "the file",
+                "relation": "is hosted on",
+                "object": "legitimate update infrastructure owned by CyberLink"
+            },
+            {
+                "subject": "the file",
+                "relation": "includes checks to",
+                "object": "limit the time window for execution"
+            },
+            {
+                "subject": "the file",
+                "relation": "evades",
+                "object": "detection by security products"
+            },
+            {
+                "subject": "the malicious activity",
+                "relation": "has impacted",
+                "object": "over 100 devices in multiple countries"
+            },
+            {
+                "subject": "the countries impacted",
+                "relation": "include",
+                "object": "Japan, Taiwan, Canada, and the United States"
+            }
+        ],
+        "triples_count": 14,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2433,
+                "cost": 0.02433
+            },
+            "output": {
+                "tokens": 383,
+                "cost": 0.01149
+            },
+            "total": {
+                "tokens": 2816,
+                "cost": 0.035820000000000005
+            }
+        },
+        "time": 9.434313297271729,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Microsoft/diamond-sleet-QD1-kZ5.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-cactus.json",
+                    0.08387474594497471
+                ],
+                [
+                    "BleepingComputer-kasseika.json",
+                    0.08454708001391896
+                ],
+                [
+                    "BleepingComputer-apple.json",
+                    0.0913329673646251
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Microsoft Threat Intelligence",
+                    "class": "Organization"
+                },
+                "relation": "has uncovered",
+                "object": {
+                    "text": "a supply chain attack",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the threat actor Diamond Sleet (ZINC)",
+                    "class": "Attacker"
+                },
+                "relation": "is based in",
+                "object": {
+                    "text": "North Korea",
+                    "class": "Location"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Diamond Sleet (ZINC)",
+                    "class": "Attacker"
+                },
+                "relation": "involves in",
+                "object": {
+                    "text": "a supply chain attack",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a malicious variant",
+                    "class": "Malware"
+                },
+                "relation": "is of",
+                "object": {
+                    "text": "an application developed by CyberLink Corp.",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CyberLink Corp.",
+                    "class": "Organization"
+                },
+                "relation": "develops",
+                "object": {
+                    "text": "multimedia software products",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the malicious file",
+                    "class": "Indicator:File"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "a legitimate CyberLink application installer",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the malicious file",
+                    "class": "Indicator:File"
+                },
+                "relation": "has been modified to",
+                "object": {
+                    "text": "include malicious code",
+                    "class": "Malware Characteristic:Payload"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the malicious code",
+                    "class": "Malware Characteristic:Payload"
+                },
+                "relation": "downloads, decrypts, and loads",
+                "object": {
+                    "text": "a second-stage payload",
+                    "class": "Malware Characteristic:Payload"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the file",
+                    "class": "Indicator:File"
+                },
+                "relation": "is signed using",
+                "object": {
+                    "text": "a valid certificate issued to CyberLink Corp.",
+                    "class": "Indicator:SSL Certificate"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the file",
+                    "class": "Indicator:File"
+                },
+                "relation": "is hosted on",
+                "object": {
+                    "text": "legitimate update infrastructure owned by CyberLink",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the file",
+                    "class": "Indicator:File"
+                },
+                "relation": "includes checks to",
+                "object": {
+                    "text": "limit the time window for execution",
+                    "class": "Malware Characteristic:Feature"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the file",
+                    "class": "Indicator:File"
+                },
+                "relation": "evades",
+                "object": {
+                    "text": "detection by security products",
+                    "class": "Malware Characteristic:Feature"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the malicious activity",
+                    "class": "Event"
+                },
+                "relation": "has impacted",
+                "object": {
+                    "text": "over 100 devices in multiple countries",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the countries impacted",
+                    "class": "Information"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "Japan, Taiwan, Canada, and the United States",
+                    "class": "Location"
+                }
+            }
+        ],
+        "response_time": 29.94478750228882,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/Microsoft/diamond-sleet.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1580,
+                "cost": 0.0158
+            },
+            "output": {
+                "tokens": 780,
+                "cost": 0.0234
+            },
+            "total": {
+                "tokens": 2360,
+                "cost": 0.0392
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "Microsoft Threat Intelligence",
+                    "mention_class": "Organization",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Microsoft Threat Intelligence"
+                    ],
+                    "entity_text": "Microsoft Threat Intelligence"
+                },
+                "relation": "has uncovered",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a supply chain attack",
+                    "mention_class": "Event",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a supply chain attack",
+                        "a supply chain attack"
+                    ],
+                    "entity_text": "a supply chain attack"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "the threat actor Diamond Sleet (ZINC)",
+                    "mention_class": "Attacker",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "the threat actor Diamond Sleet (ZINC)",
+                        "Diamond Sleet (ZINC)"
+                    ],
+                    "entity_text": "Diamond Sleet (ZINC)"
+                },
+                "relation": "is based in",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "North Korea",
+                    "mention_class": "Location",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "North Korea"
+                    ],
+                    "entity_text": "North Korea"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "Diamond Sleet (ZINC)",
+                    "mention_class": "Attacker",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "the threat actor Diamond Sleet (ZINC)",
+                        "Diamond Sleet (ZINC)"
+                    ],
+                    "entity_text": "Diamond Sleet (ZINC)"
+                },
+                "relation": "involves in",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "a supply chain attack",
+                    "mention_class": "Event",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a supply chain attack",
+                        "a supply chain attack"
+                    ],
+                    "entity_text": "a supply chain attack"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "a malicious variant",
+                    "mention_class": "Malware",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "a malicious variant"
+                    ],
+                    "entity_text": "a malicious variant"
+                },
+                "relation": "is of",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "an application developed by CyberLink Corp.",
+                    "mention_class": "Information",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "a legitimate CyberLink application installer",
+                        "an application developed by CyberLink Corp."
+                    ],
+                    "entity_text": "an application developed by CyberLink Corp."
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "CyberLink Corp.",
+                    "mention_class": "Organization",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "CyberLink Corp."
+                    ],
+                    "entity_text": "CyberLink Corp."
+                },
+                "relation": "develops",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "multimedia software products",
+                    "mention_class": "Information",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "multimedia software products"
+                    ],
+                    "entity_text": "multimedia software products"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "the malicious file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "the malicious file",
+                        "the malicious file",
+                        "the file",
+                        "the file",
+                        "the file",
+                        "the file"
+                    ],
+                    "entity_text": "the file"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "a legitimate CyberLink application installer",
+                    "mention_class": "Information",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "a legitimate CyberLink application installer",
+                        "an application developed by CyberLink Corp."
+                    ],
+                    "entity_text": "an application developed by CyberLink Corp."
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "the malicious file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "the malicious file",
+                        "the malicious file",
+                        "the file",
+                        "the file",
+                        "the file",
+                        "the file"
+                    ],
+                    "entity_text": "the file"
+                },
+                "relation": "has been modified to",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "include malicious code",
+                    "mention_class": "Malware Characteristic:Payload",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "include malicious code",
+                        "the malicious code"
+                    ],
+                    "entity_text": "the malicious code"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "the malicious code",
+                    "mention_class": "Malware Characteristic:Payload",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "include malicious code",
+                        "the malicious code"
+                    ],
+                    "entity_text": "the malicious code"
+                },
+                "relation": "downloads, decrypts, and loads",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "a second-stage payload",
+                    "mention_class": "Malware Characteristic:Payload",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "a second-stage payload"
+                    ],
+                    "entity_text": "a second-stage payload"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "the file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "the malicious file",
+                        "the malicious file",
+                        "the file",
+                        "the file",
+                        "the file",
+                        "the file"
+                    ],
+                    "entity_text": "the file"
+                },
+                "relation": "is signed using",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "a valid certificate issued to CyberLink Corp.",
+                    "mention_class": "Indicator:SSL Certificate",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "a valid certificate issued to CyberLink Corp."
+                    ],
+                    "entity_text": "a valid certificate issued to CyberLink Corp."
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "the file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "the malicious file",
+                        "the malicious file",
+                        "the file",
+                        "the file",
+                        "the file",
+                        "the file"
+                    ],
+                    "entity_text": "the file"
+                },
+                "relation": "is hosted on",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "legitimate update infrastructure owned by CyberLink",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "legitimate update infrastructure owned by CyberLink"
+                    ],
+                    "entity_text": "legitimate update infrastructure owned by CyberLink"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "the file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "the malicious file",
+                        "the malicious file",
+                        "the file",
+                        "the file",
+                        "the file",
+                        "the file"
+                    ],
+                    "entity_text": "the file"
+                },
+                "relation": "includes checks to",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "limit the time window for execution",
+                    "mention_class": "Malware Characteristic:Feature",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "limit the time window for execution"
+                    ],
+                    "entity_text": "limit the time window for execution"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "the file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "the malicious file",
+                        "the malicious file",
+                        "the file",
+                        "the file",
+                        "the file",
+                        "the file"
+                    ],
+                    "entity_text": "the file"
+                },
+                "relation": "evades",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "detection by security products",
+                    "mention_class": "Malware Characteristic:Feature",
+                    "entity_id": 18,
+                    "mentions_merged": [
+                        "detection by security products"
+                    ],
+                    "entity_text": "detection by security products"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "the malicious activity",
+                    "mention_class": "Event",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "the malicious activity"
+                    ],
+                    "entity_text": "the malicious activity"
+                },
+                "relation": "has impacted",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "over 100 devices in multiple countries",
+                    "mention_class": "Event",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "over 100 devices in multiple countries"
+                    ],
+                    "entity_text": "over 100 devices in multiple countries"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 26,
+                    "mention_text": "the countries impacted",
+                    "mention_class": "Information",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "the countries impacted"
+                    ],
+                    "entity_text": "the countries impacted"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 27,
+                    "mention_text": "Japan, Taiwan, Canada, and the United States",
+                    "mention_class": "Location",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Japan, Taiwan, Canada, and the United States"
+                    ],
+                    "entity_text": "Japan, Taiwan, Canada, and the United States"
+                }
+            }
+        ],
+        "mentions_num": 28,
+        "response_time": 5.583386659622192,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 19
+    }
+}

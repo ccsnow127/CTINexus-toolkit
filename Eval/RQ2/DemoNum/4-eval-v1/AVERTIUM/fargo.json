@@ -1,0 +1,387 @@
+{
+    "CTI": {
+        "text": "Vulnerable Microsoft SQL servers are currently being targeted by threat actors and infected with FARGO ransomware (also known as Mallox and TargetCompany). Microsoft's SQL servers hold data for internet services and apps. A disruption  to these databases by FARGO could cause severe issues for businesses. In February 2022, the threat actors behind FARGO attacks dropped Cobalt Strike beacons, and by July 2022, they were hijacking vulnerable Microsoft SQL servers to steal bandwidth for their own proxy services. The latest FARGO attacks blackmail database owners into paying the demanded ransom. If the owners refuse to pay the ransom, the threat actors threaten to expose their stolen files on Telegram. FARGO is one of the most popular ransomware strains that focuses on Microsoft SQL servers. The ransomware infection starts by using powershell.exe and cmd.exe to download a .NET file to a compromised machine. After the payload fetches additional malware, a .BAT file terminates certain processes and services. To ensure that businesses can't recover their data, FARGO executes the recovery deactivation command and kills processes prior to initiating encryption. Once encryption is complete, FARGO renames locked files using the '.Fargo3' extension and generates a ransom note titled 'RECOVERY FILES.txt'. The threat actors expect the demanded ransom to be paid in Bitcoin. Database servers are often compromised via brute-force, and if a threat actor is able to use brute-force in their attack, it's likely due to their target having weak credentials. The threat actor may also try to attack a database server by exploiting well-known and unpatched vulnerabilities. It's important that organizations keep their devices updated with the latest security patches and maintain strong passwords.",
+        "link": "https://explore.avertium.com/resource/fargo-ransomware-attacking-microsoft-sql-servers"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "threat actors",
+                "relation": "targeting",
+                "object": "Vulnerable Microsoft SQL servers"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "infected with",
+                "object": "FARGO ransomware"
+            },
+            {
+                "subject": "FARGO ransomware",
+                "relation": "also known as",
+                "object": "Mallox and TargetCompany"
+            },
+            {
+                "subject": "FARGO ransomware",
+                "relation": "could cause",
+                "object": "severe issues for businesses"
+            },
+            {
+                "subject": "threat actors behind FARGO attacks",
+                "relation": "dropped",
+                "object": "Cobalt Strike beacons"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "were hijacking",
+                "object": "vulnerable Microsoft SQL servers"
+            },
+            {
+                "subject": "FARGO attacks",
+                "relation": "blackmail",
+                "object": "database owners"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "threaten to expose",
+                "object": "stolen files on Telegram"
+            },
+            {
+                "subject": "FARGO ransomware",
+                "relation": "focuses on",
+                "object": "Microsoft SQL servers"
+            },
+            {
+                "subject": "ransomware infection",
+                "relation": "starts by using",
+                "object": "powershell.exe and cmd.exe"
+            },
+            {
+                "subject": "payload",
+                "relation": "fetches",
+                "object": "additional malware"
+            },
+            {
+                "subject": "FARGO",
+                "relation": "executes",
+                "object": "the recovery deactivation command"
+            },
+            {
+                "subject": "FARGO",
+                "relation": "kills",
+                "object": "processes prior to initiating encryption"
+            },
+            {
+                "subject": "FARGO",
+                "relation": "renames",
+                "object": "locked files using the '.Fargo3' extension"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "expect the demanded ransom to be paid in",
+                "object": "Bitcoin"
+            },
+            {
+                "subject": "Database servers",
+                "relation": "are often compromised via",
+                "object": "brute-force"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "may try to attack",
+                "object": "by exploiting well-known and unpatched vulnerabilities"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3193,
+                "cost": 0.03193
+            },
+            "output": {
+                "tokens": 469,
+                "cost": 0.014070000000000001
+            },
+            "total": {
+                "tokens": 3662,
+                "cost": 0.046
+            }
+        },
+        "time": 21.287455558776855,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/AVERTIUM/fargo-QD1-oIj.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "AVERTIUM: ragnar.json",
+                    0.13887705481458837
+                ],
+                [
+                    "Microsoft: defending-new-vectors.json",
+                    0.14427222206357407
+                ],
+                [
+                    "trendmicro: TargetCompany.json",
+                    0.19176154176328886
+                ],
+                [
+                    "AVERTIUM: mallox.json",
+                    0.21508796858816678
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 17,
+                "fp": 0,
+                "fn": 6,
+                "precision": 1.0,
+                "recall": 0.7391304347826086,
+                "f1": 0.85
+            },
+            "matched_list": [
+                [
+                    [
+                        "threat actors",
+                        "targeting",
+                        "Vulnerable Microsoft SQL servers"
+                    ],
+                    [
+                        "threat actors",
+                        "hijacking",
+                        "vulnerable Microsoft SQL servers"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "infected with",
+                        "FARGO ransomware"
+                    ],
+                    [
+                        "threat actors",
+                        "infected with",
+                        "FARGO ransomware"
+                    ]
+                ],
+                [
+                    [
+                        "FARGO ransomware",
+                        "also known as",
+                        "Mallox and TargetCompany"
+                    ],
+                    [
+                        "FARGO ransomware",
+                        "also known as",
+                        "Mallox and TargetCompany"
+                    ]
+                ],
+                [
+                    [
+                        "FARGO ransomware",
+                        "could cause",
+                        "severe issues for businesses"
+                    ],
+                    [
+                        "FARGO",
+                        "could cause issues for",
+                        "businesses"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors behind FARGO attacks",
+                        "dropped",
+                        "Cobalt Strike beacons"
+                    ],
+                    [
+                        "FARGO attacks",
+                        "dropped",
+                        "Cobalt Strike beacons"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "were hijacking",
+                        "vulnerable Microsoft SQL servers"
+                    ],
+                    [
+                        "threat actors",
+                        "hijacking",
+                        "vulnerable Microsoft SQL servers"
+                    ]
+                ],
+                [
+                    [
+                        "FARGO attacks",
+                        "blackmail",
+                        "database owners"
+                    ],
+                    [
+                        "FARGO attacks",
+                        "blackmail",
+                        "database owners"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "threaten to expose",
+                        "stolen files on Telegram"
+                    ],
+                    [
+                        "threat actors",
+                        "threaten to expose stolen files on",
+                        "Telegram"
+                    ]
+                ],
+                [
+                    [
+                        "FARGO ransomware",
+                        "focuses on",
+                        "Microsoft SQL servers"
+                    ],
+                    [
+                        "FARGO",
+                        "focuses on",
+                        "Microsoft SQL servers"
+                    ]
+                ],
+                [
+                    [
+                        "ransomware infection",
+                        "starts by using",
+                        "powershell.exe and cmd.exe"
+                    ],
+                    [
+                        "ransomware infection",
+                        "starts by using",
+                        "powershell.exe and cmd.exe"
+                    ]
+                ],
+                [
+                    [
+                        "payload",
+                        "fetches",
+                        "additional malware"
+                    ],
+                    [
+                        "payload",
+                        "fetches",
+                        "additional malware"
+                    ]
+                ],
+                [
+                    [
+                        "FARGO",
+                        "executes",
+                        "the recovery deactivation command"
+                    ],
+                    [
+                        "FARGO",
+                        "executes the recovery deactivation command",
+                        "prior to initiating encryption"
+                    ]
+                ],
+                [
+                    [
+                        "FARGO",
+                        "kills",
+                        "processes prior to initiating encryption"
+                    ],
+                    [
+                        "FARGO",
+                        "executes the recovery deactivation command",
+                        "prior to initiating encryption"
+                    ]
+                ],
+                [
+                    [
+                        "FARGO",
+                        "renames",
+                        "locked files using the '.Fargo3' extension"
+                    ],
+                    [
+                        "FARGO",
+                        "renames locked files with",
+                        "'.Fargo3' extension"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "expect the demanded ransom to be paid in",
+                        "Bitcoin"
+                    ],
+                    [
+                        "threat actors",
+                        "expect ransom to be paid in",
+                        "Bitcoin"
+                    ]
+                ],
+                [
+                    [
+                        "Database servers",
+                        "are often compromised via",
+                        "brute-force"
+                    ],
+                    [
+                        "Database servers",
+                        "compromised via",
+                        "brute-force"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor",
+                        "may try to attack",
+                        "by exploiting well-known and unpatched vulnerabilities"
+                    ],
+                    [
+                        "threat actor",
+                        "may attack database server by exploiting",
+                        "well-known and unpatched vulnerabilities"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Microsoft's SQL servers",
+                    "hold data for",
+                    "internet services and apps"
+                ],
+                [
+                    "ransomware infection",
+                    "downloads",
+                    ".NET file"
+                ],
+                [
+                    ".BAT file",
+                    "terminates",
+                    "certain processes and services"
+                ],
+                [
+                    "FARGO",
+                    "generates",
+                    "ransom note titled 'RECOVERY FILES.txt'"
+                ],
+                [
+                    "organizations",
+                    "keep devices updated with",
+                    "the latest security patches"
+                ],
+                [
+                    "organizations",
+                    "maintain",
+                    "strong passwords"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

@@ -1,0 +1,17 @@
+"Example:
+
+"Context": "CVE-2023-36884 is a remote code execution vulnerability that was previously patched. The vulnerability allowed attackers to craft Microsoft Office documents in a way that circumvented the Mark of the Web (MoTW) security feature. This allowed the files to be opened without triggering a security warning, ultimately enabling remote code execution. To counteract a previously mitigated but actively exploited CVE-2023-36884 flaw, Microsoft has introduced an Office Defense in Depth update. The Russian threat actor Storm-0978/RomCom is responsible for actively exploiting this vulnerability. This group, previously recognized for deploying the Industrial Spy ransomware in their attacks, has now rebranded as 'Underground' and extorts victims through their ransomware operations."
+
+"Question": What do you think is the relationship between entity "Storm-0978/RomCom" and entity "CVE-2023-36884"
+
+"predicted_triple": {"subject": "Storm-0978/RomCom", "relation": "actively exploited", "object": "CVE-2023-36884"}
+---------------------
+Target task:
+
+"Context": A recently uncovered ransomware operation named 'Kasseika' has joined the club of threat actors that employs Bring Your Own Vulnerable Driver (BYOVD) tactics to disable antivirus software before encrypting files. Kasseika abuses the Martini driver (Martini.sys/viragt64.sys), part of TG Soft's VirtIT Agent System, to disable antivirus products protecting the targeted system. Kasseika attacks start with a phishing email sent to employees of the targeted organization, attempting to steal their account credentials, which will then be used for initial access to the corporate network. Next, Kasseika operators abuse the Windows PsExec tool to execute malicious .bat files on the infected system and others they have accessed through lateral movement. The batch file checks for the presence of a process named 'Martini.exe' and terminates it to avoid interference. Next, it downloads the vulnerable 'Martini.sys' driver on the machine. By using BYOVD attacks, aka exploiting flaws in the loaded driver, the malware gains the privileges to terminate 991 processes from a hardcoded list, many of which correspond to antivirus products, security tools, analysis tools, and system utilities.
+
+"Question": What do you think is the relationship between entity "Terminated processes" and entity "The Martini driver"?
+
+"predicted_triple": """insert your answer here"""
+
+Your response must be JSON and nothing else. predicted_subject and predicted_object should be chosen from entity "Terminated processes" and entity "The Martini driver", do not come up with new entity."

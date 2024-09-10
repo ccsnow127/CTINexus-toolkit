@@ -1,0 +1,102 @@
+{
+    "CTI": "The threat actor known as UAC-0099 has been linked to continued attacks aimed at Ukraine, some of which leverage a high-severity flaw in the WinRAR software to deliver a malware strain called LONEPAGE. The threat actor targets Ukrainian employees working for companies outside of Ukraine. UAC-0099 was first documented by the Computer Emergency Response Team of Ukraine (CERT-UA) in June 2023, detailing its attacks against state organizations and media entities for espionage motives. The attack chains leveraged phishing messages containing HTA, RAR, and LNK file attachments that led to the deployment of LONEPAGE, a Visual Basic Script (VBS) malware that's capable of contacting a command-and-control (C2) server to retrieve additional payloads such as keyloggers, stealers, and screenshot malware. The latest analysis from Deep Instinct reveals that the use of HTA attachments is just one of three different infection chains, the other two of which leverage self-extracting (SFX) archives and booby-trapped ZIP files. The ZIP files exploit the WinRAR vulnerability (CVE-2023-38831, CVSS score: 7.8) to distribute LONEPAGE.",
+    "IE": {
+        "triplets": [
+            {
+                "subject": "UAC-0099",
+                "relation": "has been linked to",
+                "object": "continued attacks aimed at Ukraine"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "leverage",
+                "object": "a high-severity flaw in the WinRAR software"
+            },
+            {
+                "subject": "a high-severity flaw in the WinRAR software",
+                "relation": "to deliver",
+                "object": "LONEPAGE"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "targets",
+                "object": "Ukrainian employees working for companies outside of Ukraine"
+            },
+            {
+                "subject": "Computer Emergency Response Team of Ukraine (CERT-UA)",
+                "relation": "documented",
+                "object": "UAC-0099"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "attacks",
+                "object": "state organizations and media entities for espionage motives"
+            },
+            {
+                "subject": "attacks",
+                "relation": "leveraged",
+                "object": "phishing messages containing HTA, RAR, and LNK file attachments"
+            },
+            {
+                "subject": "phishing messages containing HTA, RAR, and LNK file attachments",
+                "relation": "led to",
+                "object": "the deployment of LONEPAGE"
+            },
+            {
+                "subject": "LONEPAGE",
+                "relation": "is",
+                "object": "a Visual Basic Script (VBS) malware"
+            },
+            {
+                "subject": "LONEPAGE",
+                "relation": "capable of",
+                "object": "contacting a command-and-control (C2) server"
+            },
+            {
+                "subject": "LONEPAGE",
+                "relation": "retrieves",
+                "object": "additional payloads such as keyloggers, stealers, and screenshot malware"
+            },
+            {
+                "subject": "Deep Instinct",
+                "relation": "reveals",
+                "object": "the use of HTA attachments is just one of three different infection chains"
+            },
+            {
+                "subject": "other infection chains",
+                "relation": "leverage",
+                "object": "self-extracting (SFX) archives and booby-trapped ZIP files"
+            },
+            {
+                "subject": "ZIP files",
+                "relation": "exploit",
+                "object": "the WinRAR vulnerability (CVE-2023-38831, CVSS score: 7.8)"
+            },
+            {
+                "subject": "the WinRAR vulnerability (CVE-2023-38831, CVSS score: 7.8)",
+                "relation": "to distribute",
+                "object": "LONEPAGE"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1270,
+                "cost": 0.012700000000000001
+            },
+            "output": {
+                "tokens": 508,
+                "cost": 0.01524
+            },
+            "total": {
+                "tokens": 1778,
+                "cost": 0.02794
+            }
+        },
+        "time": 14.800731182098389,
+        "link": "https://thehackernews.com/2023/12/uac-0099-using-winrar-exploit-to-target.html",
+        "prompt_file": "dataset/prompt_set/thehackernews/UAC-0099-Q3-0gE.jinja",
+        "prompt_template": "Q3.jinja"
+    }
+}

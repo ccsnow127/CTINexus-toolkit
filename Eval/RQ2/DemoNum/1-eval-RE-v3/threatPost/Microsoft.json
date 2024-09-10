@@ -1,0 +1,190 @@
+{
+    "CTI": {
+        "text": "Microsoft has released a workaround for a zero-day flaw that was initially flagged in April and that attackers already have used to target organizations in Russia and Tibet, researchers said. The remote control execution (RCE) flaw, tracked as CVE-2022-3019, is associated with the Microsoft Support Diagnostic Tool (MSDT), which, ironically, itself collects information about bugs in the company\u2019s products and reports to Microsoft Support. If successfully exploited, attackers can install programs, view, change or delete data, or create new accounts in the context allowed by the user\u2019s rights, the company said. A remote code execution vulnerability exists when MSDT is called using the URL protocol from a calling application such as Word,\u201d Microsoft explained in its guidance on the Microsoft Security Response Center. \u201cAn attacker who successfully exploits this vulnerability can run arbitrary code with the privileges of the calling application.",
+        "link": "https://threatpost.com/microsoft-workaround-0day-attack/179776/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft",
+                "relation": "has released",
+                "object": "a workaround for a zero-day flaw"
+            },
+            {
+                "subject": "zero-day flaw",
+                "relation": "was targeted",
+                "object": "in Russia and Tibet"
+            },
+            {
+                "subject": "The remote control execution (RCE) flaw",
+                "relation": "tracked as",
+                "object": "CVE-2022-3019"
+            },
+            {
+                "subject": "CVE-2022-3019",
+                "relation": "is associated with",
+                "object": "the Microsoft Support Diagnostic Tool (MSDT)"
+            },
+            {
+                "subject": "MSDT",
+                "relation": "collects information about",
+                "object": "bugs in the company\u2019s products"
+            },
+            {
+                "subject": "attackers",
+                "relation": "can install programs, view, change or delete data, or create new accounts",
+                "object": "if successfully exploited"
+            },
+            {
+                "subject": "A remote code execution vulnerability",
+                "relation": "exists when",
+                "object": "MSDT is called using the URL protocol from a calling application such as Word"
+            },
+            {
+                "subject": "An attacker",
+                "relation": "who successfully exploits this vulnerability",
+                "object": "can run arbitrary code with the privileges of the calling application"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 715,
+                "cost": 0.007150000000000001
+            },
+            "output": {
+                "tokens": 255,
+                "cost": 0.0076500000000000005
+            },
+            "total": {
+                "tokens": 970,
+                "cost": 0.0148
+            }
+        },
+        "time": 6.9793174266815186,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/threatPost/Microsoft-QD1-60X.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "symantec: Follina.json",
+                    0.25739728463033823
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "Microsoft",
+                        "has released",
+                        "a workaround for a zero-day flaw"
+                    ],
+                    [
+                        "Microsoft",
+                        "released",
+                        "a workaround for a zero-day flaw"
+                    ]
+                ],
+                [
+                    [
+                        "zero-day flaw",
+                        "was targeted",
+                        "in Russia and Tibet"
+                    ],
+                    [
+                        "zero-day flaw",
+                        "was targeted at",
+                        "organizations in Russia and Tibet"
+                    ]
+                ],
+                [
+                    [
+                        "The remote control execution (RCE) flaw",
+                        "tracked as",
+                        "CVE-2022-3019"
+                    ],
+                    [
+                        "CVE-2022-3019",
+                        "is a",
+                        "remote control execution (RCE) flaw"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-3019",
+                        "is associated with",
+                        "the Microsoft Support Diagnostic Tool (MSDT)"
+                    ],
+                    [
+                        "CVE-2022-3019",
+                        "is associated with",
+                        "the Microsoft Support Diagnostic Tool (MSDT)"
+                    ]
+                ],
+                [
+                    [
+                        "MSDT",
+                        "collects information about",
+                        "bugs in the company\u2019s products"
+                    ],
+                    [
+                        "Microsoft Support Diagnostic Tool (MSDT)",
+                        "collects information about",
+                        "bugs in Microsoft\u2019s products"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "can install programs, view, change or delete data, or create new accounts",
+                        "if successfully exploited"
+                    ],
+                    [
+                        "attackers",
+                        "install programs, view, change or delete data, or create new accounts",
+                        "in the context allowed by the user\u2019s rights"
+                    ]
+                ],
+                [
+                    [
+                        "A remote code execution vulnerability",
+                        "exists when",
+                        "MSDT is called using the URL protocol from a calling application such as Word"
+                    ],
+                    [
+                        "A remote code execution vulnerability",
+                        "exists when",
+                        "MSDT is called using the URL protocol from a calling application such as Word"
+                    ]
+                ],
+                [
+                    [
+                        "An attacker",
+                        "who successfully exploits this vulnerability",
+                        "can run arbitrary code with the privileges of the calling application"
+                    ],
+                    [
+                        "An attacker",
+                        "can run",
+                        "arbitrary code with the privileges of the calling application"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": []
+        }
+    }
+}

@@ -1,0 +1,402 @@
+{
+    "CTI": {
+        "text": "Attackers are weaponizing an old Microsoft Office vulnerability as part of phishing campaigns to distribute a strain of malware called Agent Tesla. The infection chains leverage decoy Excel documents attached in invoice-themed messages to trick potential targets into opening them and activate the exploitation of CVE-2017-11882 (CVSS score: 7.8), a memory corruption vulnerability in Office's Equation Editor that could result in code execution with the privileges of the user. The findings, which come from Zscaler ThreatLabz, build on prior reports from Fortinet FortiGuard Labs, which detailed a similar phishing campaign that exploited the security flaw to deliver the malware. Once a user downloads a malicious attachment and opens it, if their version of Microsoft Excel is vulnerable, the Excel file initiates communication with a malicious destination and proceeds to download additional files without requiring any further user interaction. The first payload is an obfuscated Visual Basic Script, which initiates the download of a malicious JPG file that comes embedded with a Base64-encoded DLL file.",
+        "link": "https://thehackernews.com/2023/12/hackers-exploiting-old-ms-excel.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Attackers",
+                "relation": "weaponizing",
+                "object": "an old Microsoft Office vulnerability"
+            },
+            {
+                "subject": "phishing campaigns",
+                "relation": "used to distribute",
+                "object": "a strain of malware called Agent Tesla"
+            },
+            {
+                "subject": "infection chains",
+                "relation": "leverage",
+                "object": "decoy Excel documents"
+            },
+            {
+                "subject": "decoy Excel documents",
+                "relation": "attached in",
+                "object": "invoice-themed messages"
+            },
+            {
+                "subject": "Zscaler ThreatLabz",
+                "relation": "findings reveal",
+                "object": "exploitation of CVE-2017-11882"
+            },
+            {
+                "subject": "CVE-2017-11882",
+                "relation": "is",
+                "object": "a memory corruption vulnerability in Office's Equation Editor"
+            },
+            {
+                "subject": "CVE-2017-11882",
+                "relation": "could result in",
+                "object": "code execution with the privileges of the user"
+            },
+            {
+                "subject": "Fortinet FortiGuard Labs",
+                "relation": "reported",
+                "object": "a similar phishing campaign"
+            },
+            {
+                "subject": "phishing campaign",
+                "relation": "exploited",
+                "object": "the security flaw"
+            },
+            {
+                "subject": "malicious attachment",
+                "relation": "initiates",
+                "object": "communication with a malicious destination"
+            },
+            {
+                "subject": "malicious attachment",
+                "relation": "proceeds to download",
+                "object": "additional files"
+            },
+            {
+                "subject": "first payload",
+                "relation": "is",
+                "object": "an obfuscated Visual Basic Script"
+            },
+            {
+                "subject": "Visual Basic Script",
+                "relation": "initiates the download of",
+                "object": "a malicious JPG file"
+            },
+            {
+                "subject": "malicious JPG file",
+                "relation": "comes embedded with",
+                "object": "a Base64-encoded DLL file"
+            }
+        ],
+        "triples_count": 14,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1706,
+                "cost": 0.0008529999999999999
+            },
+            "output": {
+                "tokens": 557,
+                "cost": 0.0008355
+            },
+            "total": {
+                "tokens": 2263,
+                "cost": 0.0016885
+            }
+        },
+        "time": 9.406572818756104,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/thehackernews/Agent-Tesla-QD1-50N.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "thehackernews: UAC-0099.json",
+                    0.16179006118690545
+                ],
+                [
+                    "darkreading: Microsoft-Office-Bug.json",
+                    0.19722037643026166
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 14,
+                "fp": 2,
+                "fn": 7,
+                "precision": 0.875,
+                "recall": 0.6666666666666666,
+                "f1": 0.7567567567567567
+            },
+            "matched_list": [
+                [
+                    [
+                        "Attackers",
+                        "weaponizing",
+                        "an old Microsoft Office vulnerability"
+                    ],
+                    [
+                        "Attackers",
+                        "are weaponizing",
+                        "an old Microsoft Office vulnerability"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "phishing campaigns",
+                        "used to distribute",
+                        "a strain of malware called Agent Tesla"
+                    ],
+                    [
+                        "phishing campaigns",
+                        "to distribute",
+                        "Agent Tesla"
+                    ],
+                    [
+                        1.0,
+                        0.49169760305446664
+                    ]
+                ],
+                [
+                    [
+                        "infection chains",
+                        "leverage",
+                        "decoy Excel documents"
+                    ],
+                    [
+                        "infection chains",
+                        "leverage",
+                        "decoy Excel documents"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "decoy Excel documents",
+                        "attached in",
+                        "invoice-themed messages"
+                    ],
+                    [
+                        "decoy Excel documents",
+                        "attached in",
+                        "invoice-themed messages"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2017-11882",
+                        "is",
+                        "a memory corruption vulnerability in Office's Equation Editor"
+                    ],
+                    [
+                        "CVE-2017-11882",
+                        "is a",
+                        "memory corruption vulnerability"
+                    ],
+                    [
+                        1.0,
+                        0.6540928831641862
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2017-11882",
+                        "could result in",
+                        "code execution with the privileges of the user"
+                    ],
+                    [
+                        "CVE-2017-11882",
+                        "could result in",
+                        "code execution"
+                    ],
+                    [
+                        1.0,
+                        0.6171872662450352
+                    ]
+                ],
+                [
+                    [
+                        "Fortinet FortiGuard Labs",
+                        "reported",
+                        "a similar phishing campaign"
+                    ],
+                    [
+                        "Fortinet FortiGuard Labs",
+                        "detailed",
+                        "a similar phishing campaign"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "phishing campaign",
+                        "exploited",
+                        "the security flaw"
+                    ],
+                    [
+                        "Microsoft Office vulnerability",
+                        "used in",
+                        "phishing campaigns"
+                    ],
+                    [
+                        0.9181181986550082,
+                        0.5109283833197122,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "phishing campaign",
+                        "exploited",
+                        "the security flaw"
+                    ],
+                    [
+                        "a similar phishing campaign",
+                        "exploited",
+                        "the security flaw"
+                    ],
+                    [
+                        0.836531385608257,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "malicious attachment",
+                        "proceeds to download",
+                        "additional files"
+                    ],
+                    [
+                        "Excel file",
+                        "initiates communication with",
+                        "a malicious destination"
+                    ],
+                    [
+                        0.6568614853792328,
+                        0.45604334528461654,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "first payload",
+                        "is",
+                        "an obfuscated Visual Basic Script"
+                    ],
+                    [
+                        "first payload",
+                        "is",
+                        "an obfuscated Visual Basic Script"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Visual Basic Script",
+                        "initiates the download of",
+                        "a malicious JPG file"
+                    ],
+                    [
+                        "an obfuscated Visual Basic Script",
+                        "initiates the download of",
+                        "a malicious JPG file"
+                    ],
+                    [
+                        0.7621868339828964,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "malicious JPG file",
+                        "comes embedded with",
+                        "a Base64-encoded DLL file"
+                    ],
+                    [
+                        "an obfuscated Visual Basic Script",
+                        "initiates the download of",
+                        "a malicious JPG file"
+                    ],
+                    [
+                        0.9572884797799318,
+                        0.48886424058088274,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "malicious JPG file",
+                        "comes embedded with",
+                        "a Base64-encoded DLL file"
+                    ],
+                    [
+                        "a malicious JPG file",
+                        "comes embedded with",
+                        "a Base64-encoded DLL file"
+                    ],
+                    [
+                        0.9572884797799318,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Zscaler ThreatLabz",
+                    "findings reveal",
+                    "exploitation of CVE-2017-11882"
+                ],
+                [
+                    "malicious attachment",
+                    "initiates",
+                    "communication with a malicious destination"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Agent Tesla",
+                    "is a",
+                    "strain of malware"
+                ],
+                [
+                    "CVE-2017-11882",
+                    "is exploited by",
+                    "infection chains"
+                ],
+                [
+                    "memory corruption vulnerability",
+                    "in",
+                    "Office's Equation Editor"
+                ],
+                [
+                    "Zscaler ThreatLabz",
+                    "builds on",
+                    "prior reports"
+                ],
+                [
+                    "the security flaw",
+                    "to deliver",
+                    "the malware"
+                ],
+                [
+                    "user",
+                    "downloads and opens",
+                    "a malicious attachment"
+                ],
+                [
+                    "Excel file",
+                    "downloads",
+                    "additional files"
+                ]
+            ]
+        }
+    }
+}

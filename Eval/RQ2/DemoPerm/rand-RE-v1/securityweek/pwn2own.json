@@ -1,0 +1,330 @@
+{
+    "CTI": {
+        "text": "The most severe of the externally reported flaws is a use-after-free bug in ANGLE, the open source cross-platform graphics engine used in Chrome and other popular browsers. The issue is tracked as CVE-2024-2883 and Google notes in its advisory that the researcher who discovered the bug has received a $10,000 bug bounty reward. According to the advisory, the three other defects reported by external researchers are all high-severity vulnerabilities. The first is CVE-2024-2885, a use-after-free issue in Dawn. The remaining two flaws, tracked as CVE-2024-2886 and CVE-2024-2887, are zero-day vulnerabilities that were exploited and reported last week at the Pwn2Own Vancouver 2024 hacking contest. No additional bounty rewards, aside from those earned at the competition, were handed out for these issues. CVE-2024-2886, a use-after-free in WebCodecs, was demonstrated by Seunghyun Lee of KAIST Hacking Lab, who exploited two such issues in the browser at the hacking contest and earned a total of $145,000 in rewards. CVE-2024-2887 is a Type Confusion bug in WebAssembly, exploited on the first day of Pwn2Own by security researcher Manfred Paul, who earned a $42,500 reward for it.Paul also demonstrated Safari and Firefox vulnerabilities at the hacking contest, earning a total of over $200,000 in rewards and winning the competition. Mozilla was first to release patches for the zero-day demonstrated at Pwn2Own.",
+        "link": "https://www.securityweek.com/chrome-update-patches-zero-day-vulnerabilities-exploited-at-pwn2own/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "use-after-free bug in ANGLE",
+                "relation": "is tracked as",
+                "object": "CVE-2024-2883"
+            },
+            {
+                "subject": "CVE-2024-2883",
+                "relation": "is a",
+                "object": "use-after-free bug"
+            },
+            {
+                "subject": "CVE-2024-2883",
+                "relation": "in",
+                "object": "ANGLE"
+            },
+            {
+                "subject": "the researcher",
+                "relation": "received",
+                "object": "a $10,000 bug bounty reward"
+            },
+            {
+                "subject": "CVE-2024-2885",
+                "relation": "is a",
+                "object": "use-after-free issue"
+            },
+            {
+                "subject": "CVE-2024-2885",
+                "relation": "in",
+                "object": "Dawn"
+            },
+            {
+                "subject": "CVE-2024-2886",
+                "relation": "is a",
+                "object": "use-after-free in WebCodecs"
+            },
+            {
+                "subject": "CVE-2024-2886",
+                "relation": "is a",
+                "object": "zero-day vulnerability"
+            },
+            {
+                "subject": "CVE-2024-2887",
+                "relation": "is a",
+                "object": "Type Confusion bug in WebAssembly"
+            },
+            {
+                "subject": "CVE-2024-2887",
+                "relation": "is a",
+                "object": "zero-day vulnerability"
+            },
+            {
+                "subject": "Seunghyun Lee of KAIST Hacking Lab",
+                "relation": "exploited",
+                "object": "CVE-2024-2886"
+            },
+            {
+                "subject": "Seunghyun Lee of KAIST Hacking Lab",
+                "relation": "earned",
+                "object": "$145,000 in rewards"
+            },
+            {
+                "subject": "Manfred Paul",
+                "relation": "exploited",
+                "object": "CVE-2024-2887"
+            },
+            {
+                "subject": "Manfred Paul",
+                "relation": "earned",
+                "object": "$42,500 reward"
+            },
+            {
+                "subject": "Manfred Paul",
+                "relation": "demonstrated",
+                "object": "Safari and Firefox vulnerabilities"
+            },
+            {
+                "subject": "Mozilla",
+                "relation": "released patches for",
+                "object": "the zero-day demonstrated at Pwn2Own"
+            }
+        ],
+        "triples_count": 16,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1968,
+                "cost": 0.019680000000000003
+            },
+            "output": {
+                "tokens": 477,
+                "cost": 0.01431
+            },
+            "total": {
+                "tokens": 2445,
+                "cost": 0.033990000000000006
+            }
+        },
+        "time": 19.98735022544861,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/securityweek/pwn2own-QD1-YOV.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "magento.json",
+                    "random"
+                ],
+                [
+                    "kasseika.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 16,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "use-after-free bug in ANGLE",
+                        "is tracked as",
+                        "CVE-2024-2883"
+                    ],
+                    [
+                        "use-after-free bug",
+                        "is in",
+                        "ANGLE"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2883",
+                        "is a",
+                        "use-after-free bug"
+                    ],
+                    [
+                        "use-after-free bug",
+                        "is tracked as",
+                        "CVE-2024-2883"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2883",
+                        "in",
+                        "ANGLE"
+                    ],
+                    [
+                        "use-after-free bug",
+                        "is in",
+                        "ANGLE"
+                    ]
+                ],
+                [
+                    [
+                        "the researcher",
+                        "received",
+                        "a $10,000 bug bounty reward"
+                    ],
+                    [
+                        "CVE-2024-2883",
+                        "researcher received",
+                        "$10,000 bug bounty reward"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2885",
+                        "is a",
+                        "use-after-free issue"
+                    ],
+                    [
+                        "use-after-free bug",
+                        "is tracked as",
+                        "CVE-2024-2883"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2885",
+                        "in",
+                        "Dawn"
+                    ],
+                    [
+                        "CVE-2024-2885",
+                        "is",
+                        "a use-after-free issue in Dawn"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2886",
+                        "is a",
+                        "use-after-free in WebCodecs"
+                    ],
+                    [
+                        "CVE-2024-2886",
+                        "is a use-after-free in",
+                        "WebCodecs"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2886",
+                        "is a",
+                        "zero-day vulnerability"
+                    ],
+                    [
+                        "CVE-2024-2886",
+                        "is",
+                        "a zero-day vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2887",
+                        "is a",
+                        "Type Confusion bug in WebAssembly"
+                    ],
+                    [
+                        "CVE-2024-2887",
+                        "is a Type Confusion bug in",
+                        "WebAssembly"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2887",
+                        "is a",
+                        "zero-day vulnerability"
+                    ],
+                    [
+                        "CVE-2024-2887",
+                        "is",
+                        "a zero-day vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "Seunghyun Lee of KAIST Hacking Lab",
+                        "exploited",
+                        "CVE-2024-2886"
+                    ],
+                    [
+                        "Seunghyun Lee",
+                        "exploited",
+                        "CVE-2024-2886"
+                    ]
+                ],
+                [
+                    [
+                        "Seunghyun Lee of KAIST Hacking Lab",
+                        "earned",
+                        "$145,000 in rewards"
+                    ],
+                    [
+                        "Seunghyun Lee",
+                        "earned",
+                        "$145,000 at Pwn2Own"
+                    ]
+                ],
+                [
+                    [
+                        "Manfred Paul",
+                        "exploited",
+                        "CVE-2024-2887"
+                    ],
+                    [
+                        "Manfred Paul",
+                        "exploited",
+                        "CVE-2024-2887"
+                    ]
+                ],
+                [
+                    [
+                        "Manfred Paul",
+                        "earned",
+                        "$42,500 reward"
+                    ],
+                    [
+                        "Manfred Paul",
+                        "earned",
+                        "$42,500 for CVE-2024-2887"
+                    ]
+                ],
+                [
+                    [
+                        "Manfred Paul",
+                        "demonstrated",
+                        "Safari and Firefox vulnerabilities"
+                    ],
+                    [
+                        "Manfred Paul",
+                        "demonstrated vulnerabilities at",
+                        "Pwn2Own"
+                    ]
+                ],
+                [
+                    [
+                        "Mozilla",
+                        "released patches for",
+                        "the zero-day demonstrated at Pwn2Own"
+                    ],
+                    [
+                        "Mozilla",
+                        "released patches for",
+                        "the zero-day demonstrated at Pwn2Own"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [],
+            "thresh": 0.7
+        }
+    }
+}

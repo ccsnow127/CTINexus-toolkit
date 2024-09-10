@@ -1,0 +1,367 @@
+{
+    "CTI": {
+        "text": "Rhysida ransomware came to public attention in May 2023. The group has been associated with several significant breaches, including an attack on the Chilean Army where they leaked stolen documents on their data leak site. The threat actor was also linked to an attack on Prospect Medical Holdings, impacting 17 hospitals and 166 clinics across the U.S. Following this attack, the U.S. Department of Health and Human Services (HC3) classified Rhysida as a substantial threat to the healthcare sector. Rhysida typically gains access to a victim's system through phishing tactics, followed by the use of Cobalt Strike for lateral movement within the system. Additionally, the threat actors use PsExec to deploy both PowerShell scripts and the Rhysida ransomware payload. The PowerShell script, known as g.ps1 and identified as Trojan.PS1.SILENTKILL.A, serves various purposes for the threat actors, including terminating antivirus processes and services, erasing shadow copies, altering remote desktop protocol (RDP) configurations, and modifying the active directory (AD) password. Notably, during the execution of the script (g.ps1), it appears that the threat actors updated it, ultimately leading to a PowerShell version of Rhysida ransomware. Rhysida uses a 4096-bit RSA key and AES-CTR for file encryption. After successfully encrypting files, it appends the .rhysida extension to them and deposits a ransom note named CriticalBreachDetected.pdf.",
+        "link": "https://explore.avertium.com/resource/an-in-depth-look-at-rhysida-ransomware"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Rhysida ransomware",
+                "relation": "came to public attention in",
+                "object": "May 2023"
+            },
+            {
+                "subject": "Rhysida ransomware",
+                "relation": "associated with",
+                "object": "several significant breaches"
+            },
+            {
+                "subject": "Rhysida ransomware",
+                "relation": "linked to attack on",
+                "object": "the Chilean Army"
+            },
+            {
+                "subject": "Rhysida ransomware",
+                "relation": "leaked",
+                "object": "stolen documents on their data leak site"
+            },
+            {
+                "subject": "Rhysida ransomware",
+                "relation": "linked to an attack on",
+                "object": "Prospect Medical Holdings"
+            },
+            {
+                "subject": "Rhysida ransomware",
+                "relation": "impacting",
+                "object": "17 hospitals and 166 clinics across the U.S."
+            },
+            {
+                "subject": "Rhysida ransomware",
+                "relation": "classified as",
+                "object": "a substantial threat to the healthcare sector"
+            },
+            {
+                "subject": "Rhysida ransomware",
+                "relation": "gains access through",
+                "object": "phishing tactics"
+            },
+            {
+                "subject": "Rhysida threat actors",
+                "relation": "use",
+                "object": "Cobalt Strike for lateral movement"
+            },
+            {
+                "subject": "Rhysida threat actors",
+                "relation": "use",
+                "object": "PsExec to deploy PowerShell scripts"
+            },
+            {
+                "subject": "Rhysida ransomware payload",
+                "relation": "deployed via",
+                "object": "PsExec"
+            },
+            {
+                "subject": "PowerShell script",
+                "relation": "known as",
+                "object": "g.ps1"
+            },
+            {
+                "subject": "PowerShell script g.ps1",
+                "relation": "identified as",
+                "object": "Trojan.PS1.SILENTKILL.A"
+            },
+            {
+                "subject": "PowerShell script g.ps1",
+                "relation": "serves for",
+                "object": "terminating antivirus processes, erasing shadow copies, altering RDP configurations, modifying AD password"
+            },
+            {
+                "subject": "Rhysida ransomware",
+                "relation": "uses a 4096-bit RSA key and AES-CTR for",
+                "object": "file encryption"
+            },
+            {
+                "subject": "Encrypted files",
+                "relation": "appended with",
+                "object": ".rhysida extension"
+            },
+            {
+                "subject": "Rhysida ransomware",
+                "relation": "deposits ransom note named",
+                "object": "CriticalBreachDetected.pdf"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3818,
+                "cost": 0.038180000000000006
+            },
+            "output": {
+                "tokens": 529,
+                "cost": 0.01587
+            },
+            "total": {
+                "tokens": 4347,
+                "cost": 0.05405
+            }
+        },
+        "time": 24.920835733413696,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/AVERTIUM/rhysida-QD1-Qb7.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "AVERTIUM: cactus.json",
+                    0.11190327922491919
+                ],
+                [
+                    "AVERTIUM: yanluowang.json",
+                    0.11705406007346446
+                ],
+                [
+                    "AVERTIUM: mallox.json",
+                    0.12111520363258155
+                ],
+                [
+                    "AVERTIUM: fargo.json",
+                    0.13110035929584454
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 17,
+                "fp": 0,
+                "fn": 2,
+                "precision": 1.0,
+                "recall": 0.8947368421052632,
+                "f1": 0.9444444444444444
+            },
+            "matched_list": [
+                [
+                    [
+                        "Rhysida ransomware",
+                        "came to public attention in",
+                        "May 2023"
+                    ],
+                    [
+                        "Rhysida ransomware",
+                        "came to public attention in",
+                        "May 2023"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida ransomware",
+                        "associated with",
+                        "several significant breaches"
+                    ],
+                    [
+                        "Rhysida ransomware",
+                        "leaked",
+                        "stolen documents"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida ransomware",
+                        "linked to attack on",
+                        "the Chilean Army"
+                    ],
+                    [
+                        "Rhysida ransomware",
+                        "linked to an attack on",
+                        "the Chilean Army"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida ransomware",
+                        "leaked",
+                        "stolen documents on their data leak site"
+                    ],
+                    [
+                        "Rhysida ransomware",
+                        "leaked",
+                        "stolen documents"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida ransomware",
+                        "linked to an attack on",
+                        "Prospect Medical Holdings"
+                    ],
+                    [
+                        "Rhysida ransomware",
+                        "linked to an attack on",
+                        "Prospect Medical Holdings"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida ransomware",
+                        "impacting",
+                        "17 hospitals and 166 clinics across the U.S."
+                    ],
+                    [
+                        "Rhysida ransomware",
+                        "linked to an attack on",
+                        "Prospect Medical Holdings"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida ransomware",
+                        "classified as",
+                        "a substantial threat to the healthcare sector"
+                    ],
+                    [
+                        "Rhysida ransomware",
+                        "linked to an attack on",
+                        "Prospect Medical Holdings"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida ransomware",
+                        "gains access through",
+                        "phishing tactics"
+                    ],
+                    [
+                        "Rhysida",
+                        "gains access through",
+                        "phishing tactics"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida threat actors",
+                        "use",
+                        "Cobalt Strike for lateral movement"
+                    ],
+                    [
+                        "Rhysida",
+                        "uses",
+                        "Cobalt Strike"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida threat actors",
+                        "use",
+                        "PsExec to deploy PowerShell scripts"
+                    ],
+                    [
+                        "Rhysida",
+                        "uses",
+                        "PsExec"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida ransomware payload",
+                        "deployed via",
+                        "PsExec"
+                    ],
+                    [
+                        "Rhysida",
+                        "deploys",
+                        "Rhysida ransomware payload"
+                    ]
+                ],
+                [
+                    [
+                        "PowerShell script",
+                        "known as",
+                        "g.ps1"
+                    ],
+                    [
+                        "PowerShell script (g.ps1)",
+                        "alters",
+                        "RDP configurations"
+                    ]
+                ],
+                [
+                    [
+                        "PowerShell script g.ps1",
+                        "identified as",
+                        "Trojan.PS1.SILENTKILL.A"
+                    ],
+                    [
+                        "PowerShell script",
+                        "identified as",
+                        "Trojan.PS1.SILENTKILL.A"
+                    ]
+                ],
+                [
+                    [
+                        "PowerShell script g.ps1",
+                        "serves for",
+                        "terminating antivirus processes, erasing shadow copies, altering RDP configurations, modifying AD password"
+                    ],
+                    [
+                        "PowerShell script (g.ps1)",
+                        "serves for",
+                        "terminating antivirus processes"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida ransomware",
+                        "uses a 4096-bit RSA key and AES-CTR for",
+                        "file encryption"
+                    ],
+                    [
+                        "Rhysida ransomware",
+                        "uses for file encryption",
+                        "4096-bit RSA key and AES-CTR"
+                    ]
+                ],
+                [
+                    [
+                        "Encrypted files",
+                        "appended with",
+                        ".rhysida extension"
+                    ],
+                    [
+                        "Rhysida ransomware",
+                        "appends",
+                        ".rhysida extension to encrypted files"
+                    ]
+                ],
+                [
+                    [
+                        "Rhysida ransomware",
+                        "deposits ransom note named",
+                        "CriticalBreachDetected.pdf"
+                    ],
+                    [
+                        "Rhysida ransomware",
+                        "deposits a ransom note named",
+                        "CriticalBreachDetected.pdf"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Prospect Medical Holdings",
+                    "impacted",
+                    "17 hospitals and 166 clinics across the U.S."
+                ],
+                [
+                    "PowerShell script (g.ps1)",
+                    "erases",
+                    "shadow copies"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

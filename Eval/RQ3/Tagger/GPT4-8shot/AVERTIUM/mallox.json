@@ -1,0 +1,449 @@
+{
+    "CTI": {
+        "text": "Mallox ransomware specifically targets computers running Microsoft Windows. This ransomware was first observed in June 2021 and is known for exploiting unsecured MS-SQL servers as a penetration vector to compromise victims' networks. The ransomware's targeted industries are manufacturing, professional and legal services, and wholesale and retail. The ransomware operators claim that their victims include worldwide organizations. According to Lior Rochberger, a senior security researcher at Palo Alto Networks, Mallox's sudden increase in activity is attributed to the deliberate actions taken by the group's leaders to expand Mallox's operations. Rochberger stated that group appeared to focus more on recruiting affiliates at the beginning of 2023. This shift in strategy explains the significant increase observed this year. Recently, researchers from Unit 42 have noticed a significant increase in Mallox ransomware activity, with a surge of almost 174% compared to 2022. This increase is primarily due to Mallox using vulnerable MS-SQL (CVE-2020-0618 and CVE-2019-1068) servers to spread the ransomware. Unit 42 also observed Mallox using tactics such as brute force, data exfiltration, and the use of network scanning tools. Researchers have also reported that the group has attempted to distribute Mallox via phishing emails - suggesting affiliates may be involved. Once the threat actors gain access, they use the command line and PowerShell to download the Mallox ransomware payload from a remote server. Like other ransomware groups, the initial payload tries to deactivate any services that might hinder data encryption on the targeted system. Also, it tries to erase shadow copies, making data recovery more challenging after encryption. The malware also attempts to eliminate all event logs, utilizing a commonly used Microsoft command utility to try and complicate forensic analysis. Like CryptNet, the threat actors behind Mallox use the double extortion method - stealing data before encrypting it. They also have a data leak site where they leak the data of victims that refuse to pay or negotiate its ransom demands. Victims negotiate with the threat actors by using a private key to authenticate themselves. As previously stated, the ransomware operators claim to have breached hundreds of organizations worldwide. Unit 42 stated that their telemetry indicates at least dozens of potential Mallox victims. In 2022, Mallox ransomware was discovered to be a variant of the TargetCompany ransomware strain.",
+        "link": "https://explore.avertium.com/resource/new-ransomware-strains-cryptnet-mallox-and-xollam"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Mallox ransomware",
+                "relation": "targets",
+                "object": "computers running Microsoft Windows"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "exploits",
+                "object": "unsecured MS-SQL servers"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "targeted industries include",
+                "object": "manufacturing, professional and legal services, and wholesale and retail"
+            },
+            {
+                "subject": "Mallox ransomware operators",
+                "relation": "claim victims include",
+                "object": "worldwide organizations"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "uses",
+                "object": "vulnerable MS-SQL servers"
+            },
+            {
+                "subject": "Mallox ransomware vulnerability",
+                "relation": "is",
+                "object": "CVE-2020-0618"
+            },
+            {
+                "subject": "Mallox ransomware vulnerability",
+                "relation": "is",
+                "object": "CVE-2019-1068"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "uses tactics such as",
+                "object": "brute force, data exfiltration, and network scanning tools"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "is distributed via",
+                "object": "phishing emails"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "downloads payload from",
+                "object": "a remote server"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "deactivates",
+                "object": "services hindering data encryption"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "erases",
+                "object": "shadow copies"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "attempts to eliminate",
+                "object": "all event logs"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "uses",
+                "object": "double extortion method"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "has",
+                "object": "a data leak site"
+            },
+            {
+                "subject": "Victims",
+                "relation": "negotiate with",
+                "object": "Mallox ransomware using a private key"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "is a variant of",
+                "object": "TargetCompany ransomware strain"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3105,
+                "cost": 0.03105
+            },
+            "output": {
+                "tokens": 488,
+                "cost": 0.01464
+            },
+            "total": {
+                "tokens": 3593,
+                "cost": 0.04569
+            }
+        },
+        "time": 16.823115348815918,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/AVERTIUM/mallox-QD1-SvZ.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-yanluowang.json",
+                    0.16906297099801873
+                ],
+                [
+                    "AVERTIUM-royal-ransomware.json",
+                    0.19967819048151253
+                ],
+                [
+                    "AVERTIUM-fargo.json",
+                    0.21918282746519893
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "targets",
+                "object": {
+                    "text": "computers running Microsoft Windows",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "exploits",
+                "object": {
+                    "text": "unsecured MS-SQL servers",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "targeted industries include",
+                "object": {
+                    "text": "manufacturing, professional and legal services, and wholesale and retail",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware operators",
+                    "class": "Attacker"
+                },
+                "relation": "claim victims include",
+                "object": {
+                    "text": "worldwide organizations",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "uses",
+                "object": {
+                    "text": "vulnerable MS-SQL servers",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware vulnerability",
+                    "class": "Malware Characteristic:Feature"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "CVE-2020-0618",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware vulnerability",
+                    "class": "Malware Characteristic:Feature"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "CVE-2019-1068",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "uses tactics such as",
+                "object": {
+                    "text": "brute force, data exfiltration, and network scanning tools",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "is distributed via",
+                "object": {
+                    "text": "phishing emails",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "downloads payload from",
+                "object": {
+                    "text": "a remote server",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "deactivates",
+                "object": {
+                    "text": "services hindering data encryption",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "erases",
+                "object": {
+                    "text": "shadow copies",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "attempts to eliminate",
+                "object": {
+                    "text": "all event logs",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "uses",
+                "object": {
+                    "text": "double extortion method",
+                    "class": "Malware Characteristic:Tactic"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "has",
+                "object": {
+                    "text": "a data leak site",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Victims",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "negotiate with",
+                "object": {
+                    "text": "Mallox ransomware using a private key",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "is a variant of",
+                "object": {
+                    "text": "TargetCompany ransomware strain",
+                    "class": "Malware"
+                }
+            }
+        ],
+        "response_time": 43.21233820915222,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-8shot/prompt_store/AVERTIUM/mallox.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1721,
+                "cost": 0.017210000000000003
+            },
+            "output": {
+                "tokens": 1138,
+                "cost": 0.034140000000000004
+            },
+            "total": {
+                "tokens": 2859,
+                "cost": 0.05135000000000001
+            }
+        },
+        "Eval": {
+            "correct": 22,
+            "incorrect": 12,
+            "TP": 22,
+            "TN": 0,
+            "FP": 11,
+            "FN": 1,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 31,
+                    "FP": 2,
+                    "FN": 1
+                },
+                "Attacker": {
+                    "TP": 1,
+                    "TN": 33,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 0,
+                    "TN": 30,
+                    "FP": 1,
+                    "FN": 3
+                },
+                "Exploit Target": {
+                    "TP": 2,
+                    "TN": 29,
+                    "FP": 1,
+                    "FN": 2
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 33,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Information": {
+                    "TP": 1,
+                    "TN": 32,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 14,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Malware Characteristic": {
+                    "TP": 1,
+                    "TN": 27,
+                    "FP": 6,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 33,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Infrastructure": {
+                    "TP": 1,
+                    "TN": 32,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 2,
+                    "TN": 30,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 33,
+                    "FP": 1,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 10
+        }
+    }
+}

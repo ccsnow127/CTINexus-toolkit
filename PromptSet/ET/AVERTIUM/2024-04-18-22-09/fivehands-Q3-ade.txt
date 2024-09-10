@@ -1,0 +1,133 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Action",
+    "Attacker",
+    "Campaign",
+    "Event",
+    "Exploit Target Object",
+    "Host",
+    {
+        "Indicator":[
+            "Adress",
+            "Email",
+            "File",
+            "Hash"
+        ]
+    },
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic",
+    "Malware Family",
+    "Organization",
+    "Software",
+    "System",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "is", "object": "a relatively new player in the ransomware market"} 
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "is", "object": {"text": "a relatively new player in the ransomware market", "class": "This entity cannot be classified into any of the existing types"}} 
+---------------------
+Example 2:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "claimed responsibility for", "object": "three recent attacks"}
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "claimed responsibility for", "object": {"text": "three recent attacks", "class": "Event"}} 
+---------------------
+Example 3:
+
+"triple": {"subject": "The victims", "relation": "include", "object": "4LEAF"}
+
+"tagged_triple": {"subject": {"text": "The victims", "class": "Exploit Target Object"}, "relation": "include", "object": {"text": "4LEAF", "class": "Exploit Target Object"}} 
+---------------------
+
+
+"triple":: {'subject': 'FiveHands Ransomware variant', 'relation': 'attacked', 'object': 'an organization'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'variant', 'relation': 'used', 'object': 'publicly-available pen test and exploitation tools'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'variant', 'relation': 'used', 'object': 'FiveHands ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'variant', 'relation': 'used', 'object': 'SombRAT remote access trojan (RAT)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'variant', 'relation': 'used', 'object': 'SoftPerfect Network Scanner'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'variant', 'relation': 'used', 'object': 'PsExec.exe'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'variant', 'relation': 'used', 'object': 'ServeManager.exe'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'variant', 'relation': 'used', 'object': 'RouterScan.exe'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'variant', 'relation': 'used', 'object': 'grabff.exe'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'variant', 'relation': 'used', 'object': 'rclone.exe'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'variant', 'relation': 'used', 'object': 's3browser-9-5-3.exe'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The initial access vector', 'relation': 'was', 'object': 'a zero-day vulnerability in a VPN product'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'bad actor', 'relation': 'used', 'object': 'SoftPerfect Network Scanner'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PsExec', 'relation': 'used to execute', 'object': 'ServeManager.exe'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ServeManager.exe', 'relation': 'is called', 'object': 'FiveHands ransomware by CISA'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FiveHands', 'relation': 'uses', 'object': 'NTRUEncrypt public key encryption scheme'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'NTRUEncrypt', 'relation': 'is', 'object': 'a lattice-based alternative to RSA and ECC'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FiveHands', 'relation': 'uses WMI to', 'object': 'enumerate then delete Volume Shadow copies'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The malware', 'relation': 'encrypts', 'object': 'files in the recovery folder'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The program', 'relation': 'writes', 'object': 'a ransom note to each folder and directory on the system'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

@@ -1,0 +1,106 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Microsoft Threat Intelligence', 'relation': 'has uncovered', 'object': 'a supply chain attack'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the threat actor Diamond Sleet (ZINC)', 'relation': 'is based in', 'object': 'North Korea'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Diamond Sleet (ZINC)', 'relation': 'involves in', 'object': 'a supply chain attack'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a malicious variant', 'relation': 'is of', 'object': 'an application developed by CyberLink Corp.'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CyberLink Corp.', 'relation': 'develops', 'object': 'multimedia software products'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the malicious file', 'relation': 'is', 'object': 'a legitimate CyberLink application installer'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the malicious file', 'relation': 'has been modified to', 'object': 'include malicious code'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the malicious code', 'relation': 'downloads, decrypts, and loads', 'object': 'a second-stage payload'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the file', 'relation': 'is signed using', 'object': 'a valid certificate issued to CyberLink Corp.'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the file', 'relation': 'is hosted on', 'object': 'legitimate update infrastructure owned by CyberLink'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the file', 'relation': 'includes checks to', 'object': 'limit the time window for execution'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the file', 'relation': 'evades', 'object': 'detection by security products'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the malicious activity', 'relation': 'has impacted', 'object': 'over 100 devices in multiple countries'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the countries impacted', 'relation': 'include', 'object': 'Japan, Taiwan, Canada, and the United States'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

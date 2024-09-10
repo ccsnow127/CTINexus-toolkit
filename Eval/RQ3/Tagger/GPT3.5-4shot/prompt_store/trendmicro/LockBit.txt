@@ -1,0 +1,120 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'LockBit', 'relation': 'uses', 'object': 'ransomware-as-a-service (RaaS) model'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LockBit', 'relation': 'uses', 'object': 'double extortion methods'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LockBit', 'relation': 'created and used', 'object': 'StealBit'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'StealBit', 'relation': 'automates', 'object': 'data exfiltration'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LockBit 2.0', 'relation': 'is touted for', 'object': 'the fastest and most efficient encryption'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LockBit', 'relation': 'expanded to', 'object': 'Linux hosts'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Linux-ESXI Locker version 1.0', 'relation': 'targets', 'object': 'Linux hosts'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LockBit', 'relation': 'recruits', 'object': 'network access brokers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LockBit', 'relation': 'cooperates with', 'object': 'other criminal groups'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LockBit', 'relation': 'cooperated with', 'object': 'Maze'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LockBit', 'relation': 'recruits', 'object': 'company insiders'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LockBit', 'relation': 'sponsors', 'object': 'underground technical writing contests'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LockBit', 'relation': 'built into', 'object': 'one of the most professional organized criminal gangs'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

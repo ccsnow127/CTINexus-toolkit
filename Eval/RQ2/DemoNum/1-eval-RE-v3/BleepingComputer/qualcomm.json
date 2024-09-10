@@ -1,0 +1,309 @@
+{
+    "CTI": {
+        "text": "A new vulnerability dubbed 'LeftoverLocals' affecting graphics processing units from AMD, Apple, Qualcomm, and Imagination Technologies allows retrieving data from the local memory space. Tracked as CVE-2023-4969, the security issue enables data recovery from vulnerable GPUs, especially in the context of large language models (LLMs) and machine learning (ML) processes. LeftoverLocals lets attackers launch a 'listener' - a GPU kernel that reads from uninitialized local memory and can dump the data in a persistent location, such as the global memory. If the local memory is not cleared, the attacker can use the listener to read values left behind by the 'writer' - a program that stores values to local memory. The recovered data can reveal sensitive information about the victim's computations, including model inputs, outputs, weights, and intermediate computations.",
+        "link": "https://www.bleepingcomputer.com/news/security/amd-apple-qualcomm-gpus-leak-ai-data-in-leftoverlocals-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "new vulnerability",
+                "relation": "dubbed",
+                "object": "LeftoverLocals"
+            },
+            {
+                "subject": "LeftoverLocals",
+                "relation": "affecting",
+                "object": "graphics processing units"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "AMD, Apple, Qualcomm, and Imagination Technologies"
+            },
+            {
+                "subject": "LeftoverLocals",
+                "relation": "allows",
+                "object": "retrieving data from the local memory space"
+            },
+            {
+                "subject": "CVE-2023-4969",
+                "relation": "tracked as",
+                "object": "the security issue"
+            },
+            {
+                "subject": "the security issue",
+                "relation": "enables",
+                "object": "data recovery from vulnerable GPUs"
+            },
+            {
+                "subject": "vulnerable GPUs",
+                "relation": "especially in",
+                "object": "the context of LLMs and ML processes"
+            },
+            {
+                "subject": "LeftoverLocals",
+                "relation": "lets attackers launch",
+                "object": "'listener'"
+            },
+            {
+                "subject": "'listener'",
+                "relation": "reads from",
+                "object": "uninitialized local memory"
+            },
+            {
+                "subject": "'listener'",
+                "relation": "can dump the data in",
+                "object": "a persistent location, such as the global memory"
+            },
+            {
+                "subject": "the attacker",
+                "relation": "can use",
+                "object": "the listener"
+            },
+            {
+                "subject": "the listener",
+                "relation": "to read",
+                "object": "values left behind by the 'writer'"
+            },
+            {
+                "subject": "'writer'",
+                "relation": "stores values to",
+                "object": "local memory"
+            },
+            {
+                "subject": "the recovered data",
+                "relation": "can reveal",
+                "object": "sensitive information about the victim's computations"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "model inputs, outputs, weights, and intermediate computations"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 869,
+                "cost": 0.008690000000000002
+            },
+            "output": {
+                "tokens": 415,
+                "cost": 0.012450000000000001
+            },
+            "total": {
+                "tokens": 1284,
+                "cost": 0.021140000000000003
+            }
+        },
+        "time": 13.079284906387329,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/BleepingComputer/qualcomm-QD1-Ngi.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "BleepingComputer: chrome.json",
+                    0.1774117489956562
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "new vulnerability",
+                        "dubbed",
+                        "LeftoverLocals"
+                    ],
+                    [
+                        "LeftoverLocals",
+                        "allows",
+                        "retrieving data from local memory space"
+                    ]
+                ],
+                [
+                    [
+                        "LeftoverLocals",
+                        "affecting",
+                        "graphics processing units"
+                    ],
+                    [
+                        "LeftoverLocals",
+                        "affects",
+                        "graphics processing units"
+                    ]
+                ],
+                [
+                    [
+                        "graphics processing units",
+                        "from",
+                        "AMD, Apple, Qualcomm, and Imagination Technologies"
+                    ],
+                    [
+                        "graphics processing units",
+                        "from",
+                        "Imagination Technologies"
+                    ]
+                ],
+                [
+                    [
+                        "LeftoverLocals",
+                        "allows",
+                        "retrieving data from the local memory space"
+                    ],
+                    [
+                        "LeftoverLocals",
+                        "allows",
+                        "retrieving data from local memory space"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-4969",
+                        "tracked as",
+                        "the security issue"
+                    ],
+                    [
+                        "The vulnerability",
+                        "is tracked as",
+                        "CVE-2023-4969"
+                    ]
+                ],
+                [
+                    [
+                        "the security issue",
+                        "enables",
+                        "data recovery from vulnerable GPUs"
+                    ],
+                    [
+                        "The vulnerability",
+                        "enables",
+                        "data recovery from vulnerable GPUs"
+                    ]
+                ],
+                [
+                    [
+                        "vulnerable GPUs",
+                        "especially in",
+                        "the context of LLMs and ML processes"
+                    ],
+                    [
+                        "vulnerable GPUs",
+                        "especially in context of",
+                        "machine learning processes"
+                    ]
+                ],
+                [
+                    [
+                        "LeftoverLocals",
+                        "lets attackers launch",
+                        "'listener'"
+                    ],
+                    [
+                        "attackers",
+                        "launch",
+                        "'listener'"
+                    ]
+                ],
+                [
+                    [
+                        "'listener'",
+                        "reads from",
+                        "uninitialized local memory"
+                    ],
+                    [
+                        "'listener'",
+                        "is a",
+                        "GPU kernel that reads from uninitialized local memory"
+                    ]
+                ],
+                [
+                    [
+                        "'listener'",
+                        "can dump the data in",
+                        "a persistent location, such as the global memory"
+                    ],
+                    [
+                        "'listener'",
+                        "can dump data in",
+                        "persistent location"
+                    ]
+                ],
+                [
+                    [
+                        "the attacker",
+                        "can use",
+                        "the listener"
+                    ],
+                    [
+                        "attacker",
+                        "use",
+                        "listener to read values"
+                    ]
+                ],
+                [
+                    [
+                        "the listener",
+                        "to read",
+                        "values left behind by the 'writer'"
+                    ],
+                    [
+                        "values",
+                        "left behind by",
+                        "'writer'"
+                    ]
+                ],
+                [
+                    [
+                        "'writer'",
+                        "stores values to",
+                        "local memory"
+                    ],
+                    [
+                        "'writer'",
+                        "is a",
+                        "program that stores values to local memory"
+                    ]
+                ],
+                [
+                    [
+                        "the recovered data",
+                        "can reveal",
+                        "sensitive information about the victim's computations"
+                    ],
+                    [
+                        "recovered data",
+                        "can reveal",
+                        "sensitive information about victim's computations"
+                    ]
+                ],
+                [
+                    [
+                        "sensitive information",
+                        "includes",
+                        "model inputs, outputs, weights, and intermediate computations"
+                    ],
+                    [
+                        "sensitive information",
+                        "includes",
+                        "model inputs"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": []
+        }
+    }
+}

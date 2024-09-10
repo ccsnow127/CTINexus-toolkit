@@ -1,0 +1,238 @@
+{
+    "CTI": {
+        "text": "The threat actor known as UAC-0050 is leveraging phishing attacks to distribute Remcos RAT using new strategies to evade detection from security software. The group's weapon of choice is Remcos RAT, a notorious malware for remote surveillance and control, which has been at the forefront of its espionage arsenal. However, in their latest operational twist, the UAC-0050 group has integrated a pipe method for interprocess communication, showcasing their advanced adaptability. UAC-0050, active since 2020, has a history of targeting Ukrainian and Polish entities via social engineering campaigns that impersonate legitimate organizations to trick recipients into opening malicious attachments. In February 2023, the Computer Emergency Response Team of Ukraine (CERT-UA) attributed the adversary to a phishing campaign designed to deliver Remcos RAT.",
+        "link": "https://thehackernews.com/2024/01/uac-0050-group-using-new-phishing.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "UAC-0050",
+                "relation": "leveraging",
+                "object": "phishing attacks"
+            },
+            {
+                "subject": "UAC-0050",
+                "relation": "distribute",
+                "object": "Remcos RAT"
+            },
+            {
+                "subject": "Remcos RAT",
+                "relation": "used for",
+                "object": "remote surveillance and control"
+            },
+            {
+                "subject": "UAC-0050",
+                "relation": "integrated",
+                "object": "a pipe method for interprocess communication"
+            },
+            {
+                "subject": "UAC-0050",
+                "relation": "targets",
+                "object": "Ukrainian and Polish entities"
+            },
+            {
+                "subject": "UAC-0050",
+                "relation": "impersonate",
+                "object": "legitimate organizations"
+            },
+            {
+                "subject": "legitimate organizations",
+                "relation": "to trick recipients into",
+                "object": "opening malicious attachments"
+            },
+            {
+                "subject": "CERT-UA",
+                "relation": "attributed",
+                "object": "UAC-0050 to a phishing campaign"
+            },
+            {
+                "subject": "phishing campaign",
+                "relation": "designed to deliver",
+                "object": "Remcos RAT"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1156,
+                "cost": 0.01156
+            },
+            "output": {
+                "tokens": 254,
+                "cost": 0.00762
+            },
+            "total": {
+                "tokens": 1410,
+                "cost": 0.019180000000000003
+            }
+        },
+        "time": 6.283358812332153,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/thehackernews/UAC-0050-QD1-lfz.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "thehackernews: UAC-0099.json",
+                    0.22722179077017868
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 2,
+                "precision": 0.7777777777777778,
+                "recall": 0.7,
+                "f1": 0.7368421052631577,
+                "fn": 3
+            },
+            "matched_list": [
+                [
+                    [
+                        "UAC-0050",
+                        "leveraging",
+                        "phishing attacks"
+                    ],
+                    [
+                        "UAC-0050",
+                        "is leveraging",
+                        "phishing attacks"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "UAC-0050",
+                        "distribute",
+                        "Remcos RAT"
+                    ],
+                    [
+                        "UAC-0050",
+                        "uses",
+                        "Remcos RAT"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Remcos RAT",
+                        "used for",
+                        "remote surveillance and control"
+                    ],
+                    [
+                        "Remcos RAT",
+                        "is for",
+                        "remote surveillance and control"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "UAC-0050",
+                        "integrated",
+                        "a pipe method for interprocess communication"
+                    ],
+                    [
+                        "UAC-0050",
+                        "integrated",
+                        "a pipe method for interprocess communication"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "UAC-0050",
+                        "targets",
+                        "Ukrainian and Polish entities"
+                    ],
+                    [
+                        "UAC-0050",
+                        "targets",
+                        "Ukrainian entities"
+                    ],
+                    [
+                        1.0,
+                        0.8472425092282213
+                    ]
+                ],
+                [
+                    [
+                        "CERT-UA",
+                        "attributed",
+                        "UAC-0050 to a phishing campaign"
+                    ],
+                    [
+                        "CERT-UA",
+                        "attributed",
+                        "UAC-0050 to a phishing campaign"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "phishing campaign",
+                        "designed to deliver",
+                        "Remcos RAT"
+                    ],
+                    [
+                        "phishing campaign",
+                        "designed to deliver",
+                        "Remcos RAT"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "UAC-0050",
+                    "impersonate",
+                    "legitimate organizations"
+                ],
+                [
+                    "legitimate organizations",
+                    "to trick recipients into",
+                    "opening malicious attachments"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "UAC-0050",
+                    "targets",
+                    "Polish entities"
+                ],
+                [
+                    "UAC-0050",
+                    "uses",
+                    "social engineering campaigns"
+                ],
+                [
+                    "social engineering campaigns",
+                    "impersonate",
+                    "legitimate organizations"
+                ]
+            ]
+        }
+    }
+}

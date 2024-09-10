@@ -1,0 +1,608 @@
+{
+    "CTI": {
+        "text": "Unknown groups have launched probes against a zero-day vulnerability identified in Apache's OfBiz enterprise resource planning (ERP) framework - an increasingly popular strategy of analyzing patches for ways to bypass software fixes. The 0-day vulnerability (CVE-2023-51467) in Apache OFBiz, disclosed on Dec. 26, allows an attacker to access sensitive information and remotely execute code against applications using the ERP framework, according to an analysis by cybersecurity firm SonicWall. The Apache Software Foundation had originally released a patch for a related issue, CVE-2023-49070, but the fix failed to protect against other variations of the attack.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/apache-erp-0day-underscores-dangers-of-incomplete-patches"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unknown groups",
+                "relation": "launched",
+                "object": "probes"
+            },
+            {
+                "subject": "probes",
+                "relation": "are against",
+                "object": "zero-day vulnerability"
+            },
+            {
+                "subject": "zero-day vulnerability",
+                "relation": "identified in",
+                "object": "Apache's OfBiz ERP framework"
+            },
+            {
+                "subject": "zero-day vulnerability",
+                "relation": "is",
+                "object": "CVE-2023-51467"
+            },
+            {
+                "subject": "CVE-2023-51467",
+                "relation": "allows",
+                "object": "access to sensitive information"
+            },
+            {
+                "subject": "CVE-2023-51467",
+                "relation": "allows",
+                "object": "remote code execution"
+            },
+            {
+                "subject": "remote code execution",
+                "relation": "is against",
+                "object": "applications using the ERP framework"
+            },
+            {
+                "subject": "Apache Software Foundation",
+                "relation": "released",
+                "object": "a patch"
+            },
+            {
+                "subject": "a patch",
+                "relation": "for",
+                "object": "CVE-2023-49070"
+            },
+            {
+                "subject": "CVE-2023-49070",
+                "relation": "failed to protect against",
+                "object": "other variations of the attack"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2197,
+                "cost": 0.021970000000000003
+            },
+            "output": {
+                "tokens": 258,
+                "cost": 0.00774
+            },
+            "total": {
+                "tokens": 2455,
+                "cost": 0.029710000000000004
+            }
+        },
+        "time": 6.38409948348999,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/darkreading/Apache-ERP-QD1-YVm.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-apple.json",
+                    0.10587882266127217
+                ],
+                [
+                    "BleepingComputer-chrome.json",
+                    0.11639740230149544
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.12858494129057188
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Unknown groups",
+                    "class": "Attacker"
+                },
+                "relation": "launched",
+                "object": {
+                    "text": "probes",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "probes",
+                    "class": "Event"
+                },
+                "relation": "are against",
+                "object": {
+                    "text": "zero-day vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "zero-day vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "identified in",
+                "object": {
+                    "text": "Apache's OfBiz ERP framework",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "zero-day vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "CVE-2023-51467",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-51467",
+                    "class": "Vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "access to sensitive information",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-51467",
+                    "class": "Vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "remote code execution",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "remote code execution",
+                    "class": "Event"
+                },
+                "relation": "is against",
+                "object": {
+                    "text": "applications using the ERP framework",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Apache Software Foundation",
+                    "class": "Organization"
+                },
+                "relation": "released",
+                "object": {
+                    "text": "a patch",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a patch",
+                    "class": "Information"
+                },
+                "relation": "for",
+                "object": {
+                    "text": "CVE-2023-49070",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-49070",
+                    "class": "Vulnerability"
+                },
+                "relation": "failed to protect against",
+                "object": {
+                    "text": "other variations of the attack",
+                    "class": "Event"
+                }
+            }
+        ],
+        "response_time": 19.8994083404541,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/darkreading/Apache-ERP.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1377,
+                "cost": 0.013770000000000001
+            },
+            "output": {
+                "tokens": 533,
+                "cost": 0.01599
+            },
+            "total": {
+                "tokens": 1910,
+                "cost": 0.02976
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "Unknown groups",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Unknown groups"
+                    ],
+                    "entity_text": "Unknown groups"
+                },
+                "relation": "launched",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "probes",
+                    "mention_class": "Event",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "probes",
+                        "probes"
+                    ],
+                    "entity_text": "probes"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "probes",
+                    "mention_class": "Event",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "probes",
+                        "probes"
+                    ],
+                    "entity_text": "probes"
+                },
+                "relation": "are against",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "zero-day vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "zero-day vulnerability",
+                        "zero-day vulnerability",
+                        "zero-day vulnerability"
+                    ],
+                    "entity_text": "zero-day vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "zero-day vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "zero-day vulnerability",
+                        "zero-day vulnerability",
+                        "zero-day vulnerability"
+                    ],
+                    "entity_text": "zero-day vulnerability"
+                },
+                "relation": "identified in",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "Apache's OfBiz ERP framework",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "Apache's OfBiz ERP framework"
+                    ],
+                    "entity_text": "Apache's OfBiz ERP framework"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "zero-day vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "zero-day vulnerability",
+                        "zero-day vulnerability",
+                        "zero-day vulnerability"
+                    ],
+                    "entity_text": "zero-day vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "CVE-2023-51467",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "CVE-2023-51467",
+                        "CVE-2023-51467",
+                        "CVE-2023-51467"
+                    ],
+                    "entity_text": "CVE-2023-51467"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "CVE-2023-51467",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "CVE-2023-51467",
+                        "CVE-2023-51467",
+                        "CVE-2023-51467"
+                    ],
+                    "entity_text": "CVE-2023-51467"
+                },
+                "relation": "allows",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "access to sensitive information",
+                    "mention_class": "Information",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "access to sensitive information"
+                    ],
+                    "entity_text": "access to sensitive information"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "CVE-2023-51467",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "CVE-2023-51467",
+                        "CVE-2023-51467",
+                        "CVE-2023-51467"
+                    ],
+                    "entity_text": "CVE-2023-51467"
+                },
+                "relation": "allows",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "remote code execution",
+                    "mention_class": "Event",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "remote code execution",
+                        "remote code execution"
+                    ],
+                    "entity_text": "remote code execution"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "remote code execution",
+                    "mention_class": "Event",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "remote code execution",
+                        "remote code execution"
+                    ],
+                    "entity_text": "remote code execution"
+                },
+                "relation": "is against",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "applications using the ERP framework",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "applications using the ERP framework"
+                    ],
+                    "entity_text": "applications using the ERP framework"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "Apache Software Foundation",
+                    "mention_class": "Organization",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "Apache Software Foundation"
+                    ],
+                    "entity_text": "Apache Software Foundation"
+                },
+                "relation": "released",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "a patch",
+                    "mention_class": "Information",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "a patch",
+                        "a patch"
+                    ],
+                    "entity_text": "a patch"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "a patch",
+                    "mention_class": "Information",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "a patch",
+                        "a patch"
+                    ],
+                    "entity_text": "a patch"
+                },
+                "relation": "for",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "CVE-2023-49070",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "CVE-2023-49070",
+                        "CVE-2023-49070"
+                    ],
+                    "entity_text": "CVE-2023-49070"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "CVE-2023-49070",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "CVE-2023-49070",
+                        "CVE-2023-49070"
+                    ],
+                    "entity_text": "CVE-2023-49070"
+                },
+                "relation": "failed to protect against",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "other variations of the attack",
+                    "mention_class": "Event",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "other variations of the attack"
+                    ],
+                    "entity_text": "other variations of the attack"
+                }
+            }
+        ],
+        "mentions_num": 20,
+        "response_time": 4.6757872104644775,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 12
+    },
+    "LP": {
+        "predicted_links": [
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "CVE-2023-51467",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "CVE-2023-51467",
+                        "CVE-2023-51467",
+                        "CVE-2023-51467"
+                    ],
+                    "entity_text": "CVE-2023-51467"
+                },
+                "relation": "is an identifier of",
+                "object": {
+                    "entity_id": 4,
+                    "mention_text": "zero-day vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "CVE-2023-51467",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "CVE-2023-51467",
+                        "CVE-2023-51467",
+                        "CVE-2023-51467"
+                    ],
+                    "entity_text": "CVE-2023-51467"
+                },
+                "relation": "is a variant not protected against by the patch for",
+                "object": {
+                    "entity_id": 3,
+                    "mention_text": "other variations of the attack"
+                }
+            }
+        ],
+        "response_time": 14.215462923049927,
+        "model": "gpt-4-0125-preview",
+        "usage": {
+            "input": {
+                "tokens": 564,
+                "cost": 0.005640000000000001
+            },
+            "output": {
+                "tokens": 80,
+                "cost": 0.0024000000000000002
+            },
+            "total": {
+                "tokens": 644,
+                "cost": 0.008040000000000002
+            }
+        },
+        "topic_node": {
+            "mention_id": 8,
+            "mention_text": "CVE-2023-51467",
+            "mention_class": "Vulnerability",
+            "entity_id": 12,
+            "mentions_merged": [
+                "CVE-2023-51467",
+                "CVE-2023-51467",
+                "CVE-2023-51467"
+            ],
+            "entity_text": "CVE-2023-51467"
+        },
+        "main_nodes": [
+            {
+                "mention_id": 3,
+                "mention_text": "zero-day vulnerability",
+                "mention_class": "Vulnerability",
+                "entity_id": 4,
+                "mentions_merged": [
+                    "zero-day vulnerability",
+                    "zero-day vulnerability",
+                    "zero-day vulnerability"
+                ],
+                "entity_text": "zero-day vulnerability"
+            },
+            {
+                "mention_id": 19,
+                "mention_text": "other variations of the attack",
+                "mention_class": "Event",
+                "entity_id": 3,
+                "mentions_merged": [
+                    "other variations of the attack"
+                ],
+                "entity_text": "other variations of the attack"
+            }
+        ],
+        "subgraphs": [
+            [
+                0,
+                1,
+                4,
+                6,
+                11
+            ],
+            [
+                2,
+                7,
+                8,
+                9,
+                10,
+                12
+            ],
+            [
+                3,
+                13
+            ]
+        ],
+        "subgraph_num": 3,
+        "Eval": {
+            "correct": 2,
+            "incorrect": 0
+        }
+    }
+}

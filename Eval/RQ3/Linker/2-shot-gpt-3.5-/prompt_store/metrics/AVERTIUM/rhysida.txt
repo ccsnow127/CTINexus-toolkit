@@ -1,0 +1,25 @@
+"Example 1:
+
+"Context": "Cuba ransomware first appeared in 2019 but remained relatively unnoticed until November 2021, when they reportedly targeted a minimum of 49 organizations across various sectors. The sectors included government, healthcare, information technology, manufacturing, and finance. During this time, Cuba ransomware operators were infiltrating networks by encrypting files using the '.cuba' extension. Over the years, the ransom demands from Cuba totals at least $145 million, and the group has successfully collected at least $60 million in ransom payments. By 2022, the threat actors had expanded their tactics, techniques, and procedures (TTPs), leading security researchers to suggest a potential connection between Cuba ransomware actors, RomCom Remote Access Trojan (RAT) actors, and Industrial Spy ransomware actors. This month, Cuba garnered attention when they took responsibility for a cyberattack on The Philadelphia Inquirer."
+
+"Question": What do you think is the relationship between entity "Cuba ransomware actors" and entity "Cuba ransomware"?
+
+"predicted_triple": {"subject": "Cuba ransomware actors", "relation": "are associated with", "object": "Cuba ransomware"}
+---------------------
+Example 2:
+
+"Context": "CVE-2023-36884 is a remote code execution vulnerability that was previously patched. The vulnerability allowed attackers to craft Microsoft Office documents in a way that circumvented the Mark of the Web (MoTW) security feature. This allowed the files to be opened without triggering a security warning, ultimately enabling remote code execution. To counteract a previously mitigated but actively exploited CVE-2023-36884 flaw, Microsoft has introduced an Office Defense in Depth update. The Russian threat actor Storm-0978/RomCom is responsible for actively exploiting this vulnerability. This group, previously recognized for deploying the Industrial Spy ransomware in their attacks, has now rebranded as 'Underground' and extorts victims through their ransomware operations."
+
+"Question": What do you think is the relationship between entity "Storm-0978/RomCom" and entity "CVE-2023-36884"
+
+"predicted_triple": {"subject": "Storm-0978/RomCom", "relation": "actively exploited", "object": "CVE-2023-36884"}
+---------------------
+Target task:
+
+"Context": Rhysida ransomware came to public attention in May 2023. The group has been associated with several significant breaches, including an attack on the Chilean Army where they leaked stolen documents on their data leak site. The threat actor was also linked to an attack on Prospect Medical Holdings, impacting 17 hospitals and 166 clinics across the U.S. Following this attack, the U.S. Department of Health and Human Services (HC3) classified Rhysida as a substantial threat to the healthcare sector. Rhysida typically gains access to a victim's system through phishing tactics, followed by the use of Cobalt Strike for lateral movement within the system. Additionally, the threat actors use PsExec to deploy both PowerShell scripts and the Rhysida ransomware payload. The PowerShell script, known as g.ps1 and identified as Trojan.PS1.SILENTKILL.A, serves various purposes for the threat actors, including terminating antivirus processes and services, erasing shadow copies, altering remote desktop protocol (RDP) configurations, and modifying the active directory (AD) password. Notably, during the execution of the script (g.ps1), it appears that the threat actors updated it, ultimately leading to a PowerShell version of Rhysida ransomware. Rhysida uses a 4096-bit RSA key and AES-CTR for file encryption. After successfully encrypting files, it appends the .rhysida extension to them and deposits a ransom note named CriticalBreachDetected.pdf.
+
+"Question": What do you think is the relationship between entity "PowerShell script (g.ps1)" and entity "Rhysida ransomware"?
+
+"predicted_triple": """insert your answer here"""
+
+Your response must be JSON and nothing else. predicted_subject and predicted_object should be chosen from entity "PowerShell script (g.ps1)" and entity "Rhysida ransomware", do not come up with new entity."

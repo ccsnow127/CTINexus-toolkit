@@ -1,0 +1,446 @@
+{
+    "CTI": {
+        "text": "A new malware loader is being used by threat actors to deliver a wide range of information stealers such as Lumma Stealer (aka LummaC2), Vidar, RecordBreaker (aka Raccoon Stealer V2), and Rescoms. Cybersecurity firm ESET is tracking the trojan under the name Win/TrojanDownloader.Rugmi. This malware is a loader with three types of components: a downloader that downloads an encrypted payload, a loader that runs the payload from internal resources, and another loader that runs the payload from an external file on the disk. Telemetry data gathered by the company shows that detections for the Rugmi loader spiked in October and November 2023, surging from single digit daily numbers to hundreds per day. Stealer malware is typically sold under a malware-as-a-service (MaaS) model to other threat actors on a subscription basis. Lumma Stealer, for instance, is advertised in underground forums for $250 a month. The most expensive plan costs $20,000, but it also gives the customers access to the source code and the right to sell it.",
+        "link": "https://thehackernews.com/2023/12/new-rugmi-malware-loader-surges-with.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "malware loader",
+                "relation": "is being used by",
+                "object": "threat actors"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "deliver",
+                "object": "information stealers"
+            },
+            {
+                "subject": "information stealers",
+                "relation": "include",
+                "object": "Lumma Stealer"
+            },
+            {
+                "subject": "Lumma Stealer",
+                "relation": "is also referred to as",
+                "object": "LummaC2"
+            },
+            {
+                "subject": "information stealers",
+                "relation": "include",
+                "object": "Vidar"
+            },
+            {
+                "subject": "information stealers",
+                "relation": "include",
+                "object": "RecordBreaker"
+            },
+            {
+                "subject": "RecordBreaker",
+                "relation": "is also referred to as",
+                "object": "Raccoon Stealer V2"
+            },
+            {
+                "subject": "information stealers",
+                "relation": "include",
+                "object": "Rescoms"
+            },
+            {
+                "subject": "ESET",
+                "relation": "is tracking",
+                "object": "Win/TrojanDownloader.Rugmi"
+            },
+            {
+                "subject": "Win/TrojanDownloader.Rugmi",
+                "relation": "is a",
+                "object": "loader"
+            },
+            {
+                "subject": "Win/TrojanDownloader.Rugmi",
+                "relation": "has a component",
+                "object": "downloader"
+            },
+            {
+                "subject": "downloader",
+                "relation": "downloads",
+                "object": "an encrypted payload"
+            },
+            {
+                "subject": "Win/TrojanDownloader.Rugmi",
+                "relation": "has a component",
+                "object": "loader"
+            },
+            {
+                "subject": "loader",
+                "relation": "runs the payload from",
+                "object": "internal resources"
+            },
+            {
+                "subject": "Win/TrojanDownloader.Rugmi",
+                "relation": "has a component",
+                "object": "loader"
+            },
+            {
+                "subject": "loader",
+                "relation": "runs the payload from",
+                "object": "an external file on the disk"
+            },
+            {
+                "subject": "Rugmi loader",
+                "relation": "detections spiked in",
+                "object": "October and November 2023"
+            },
+            {
+                "subject": "Stealer malware",
+                "relation": "sold under",
+                "object": "malware-as-a-service model"
+            },
+            {
+                "subject": "malware-as-a-service",
+                "relation": "used by",
+                "object": "other threat actors"
+            },
+            {
+                "subject": "Lumma Stealer",
+                "relation": "advertised in",
+                "object": "underground forums"
+            },
+            {
+                "subject": "Lumma Stealer",
+                "relation": "advertised for",
+                "object": "$250 a month"
+            },
+            {
+                "subject": "Lumma Stealer",
+                "relation": "most expensive plan costs",
+                "object": "$20,000"
+            },
+            {
+                "subject": "most expensive plan",
+                "relation": "gives access to",
+                "object": "the source code"
+            },
+            {
+                "subject": "most expensive plan",
+                "relation": "gives right to sell",
+                "object": "it"
+            }
+        ],
+        "triples_count": 24,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2046,
+                "cost": 0.020460000000000002
+            },
+            "output": {
+                "tokens": 614,
+                "cost": 0.01842
+            },
+            "total": {
+                "tokens": 2660,
+                "cost": 0.03888
+            }
+        },
+        "time": 29.878263235092163,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/thehackernews/Rugmi-QD1-r8y.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "darkreading: Jupyter-Infostealer.json",
+                    0.1130079957348192
+                ],
+                [
+                    "thehackernews: JinxLoader.json",
+                    0.20132946717773142
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 21,
+                "fp": 3,
+                "fn": 0,
+                "precision": 0.875,
+                "recall": 1.0,
+                "f1": 0.9333333333333333
+            },
+            "matched_list": [
+                [
+                    [
+                        "malware loader",
+                        "is being used by",
+                        "threat actors"
+                    ],
+                    [
+                        "threat actors",
+                        "use",
+                        "a new malware loader"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "deliver",
+                        "information stealers"
+                    ],
+                    [
+                        "threat actors",
+                        "use",
+                        "a new malware loader"
+                    ]
+                ],
+                [
+                    [
+                        "information stealers",
+                        "include",
+                        "Lumma Stealer"
+                    ],
+                    [
+                        "new malware loader",
+                        "delivers",
+                        "Lumma Stealer"
+                    ]
+                ],
+                [
+                    [
+                        "Lumma Stealer",
+                        "is also referred to as",
+                        "LummaC2"
+                    ],
+                    [
+                        "Lumma Stealer",
+                        "is advertised in",
+                        "underground forums"
+                    ]
+                ],
+                [
+                    [
+                        "information stealers",
+                        "include",
+                        "Vidar"
+                    ],
+                    [
+                        "new malware loader",
+                        "delivers",
+                        "Vidar"
+                    ]
+                ],
+                [
+                    [
+                        "information stealers",
+                        "include",
+                        "Rescoms"
+                    ],
+                    [
+                        "new malware loader",
+                        "delivers",
+                        "Rescoms"
+                    ]
+                ],
+                [
+                    [
+                        "ESET",
+                        "is tracking",
+                        "Win/TrojanDownloader.Rugmi"
+                    ],
+                    [
+                        "ESET",
+                        "is tracking",
+                        "Win/TrojanDownloader.Rugmi"
+                    ]
+                ],
+                [
+                    [
+                        "Win/TrojanDownloader.Rugmi",
+                        "is a",
+                        "loader"
+                    ],
+                    [
+                        "Win/TrojanDownloader.Rugmi",
+                        "is a",
+                        "malware loader"
+                    ]
+                ],
+                [
+                    [
+                        "Win/TrojanDownloader.Rugmi",
+                        "has a component",
+                        "downloader"
+                    ],
+                    [
+                        "Win/TrojanDownloader.Rugmi",
+                        "is a",
+                        "malware loader"
+                    ]
+                ],
+                [
+                    [
+                        "downloader",
+                        "downloads",
+                        "an encrypted payload"
+                    ],
+                    [
+                        "Rugmi loader",
+                        "downloads",
+                        "an encrypted payload"
+                    ]
+                ],
+                [
+                    [
+                        "Win/TrojanDownloader.Rugmi",
+                        "has a component",
+                        "loader"
+                    ],
+                    [
+                        "Win/TrojanDownloader.Rugmi",
+                        "is a",
+                        "malware loader"
+                    ]
+                ],
+                [
+                    [
+                        "loader",
+                        "runs the payload from",
+                        "internal resources"
+                    ],
+                    [
+                        "malware loader",
+                        "consists of",
+                        "a loader that runs payload from internal resources"
+                    ]
+                ],
+                [
+                    [
+                        "Win/TrojanDownloader.Rugmi",
+                        "has a component",
+                        "loader"
+                    ],
+                    [
+                        "Win/TrojanDownloader.Rugmi",
+                        "is a",
+                        "malware loader"
+                    ]
+                ],
+                [
+                    [
+                        "loader",
+                        "runs the payload from",
+                        "an external file on the disk"
+                    ],
+                    [
+                        "malware loader",
+                        "consists of",
+                        "a loader that runs payload from external file on the disk"
+                    ]
+                ],
+                [
+                    [
+                        "Stealer malware",
+                        "sold under",
+                        "malware-as-a-service model"
+                    ],
+                    [
+                        "Stealer malware",
+                        "is sold under",
+                        "malware-as-a-service (MaaS) model"
+                    ]
+                ],
+                [
+                    [
+                        "malware-as-a-service",
+                        "used by",
+                        "other threat actors"
+                    ],
+                    [
+                        "threat actors",
+                        "use",
+                        "a new malware loader"
+                    ]
+                ],
+                [
+                    [
+                        "Lumma Stealer",
+                        "advertised in",
+                        "underground forums"
+                    ],
+                    [
+                        "Lumma Stealer",
+                        "is advertised in",
+                        "underground forums"
+                    ]
+                ],
+                [
+                    [
+                        "Lumma Stealer",
+                        "advertised for",
+                        "$250 a month"
+                    ],
+                    [
+                        "Lumma Stealer",
+                        "costs",
+                        "$250 a month"
+                    ]
+                ],
+                [
+                    [
+                        "Lumma Stealer",
+                        "most expensive plan costs",
+                        "$20,000"
+                    ],
+                    [
+                        "Lumma Stealer",
+                        "costs",
+                        "$250 a month"
+                    ]
+                ],
+                [
+                    [
+                        "most expensive plan",
+                        "gives access to",
+                        "the source code"
+                    ],
+                    [
+                        "the most expensive plan",
+                        "gives customers access to",
+                        "the source code"
+                    ]
+                ],
+                [
+                    [
+                        "most expensive plan",
+                        "gives right to sell",
+                        "it"
+                    ],
+                    [
+                        "the most expensive plan",
+                        "gives the right to",
+                        "sell the malware"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "information stealers",
+                    "include",
+                    "RecordBreaker"
+                ],
+                [
+                    "RecordBreaker",
+                    "is also referred to as",
+                    "Raccoon Stealer V2"
+                ],
+                [
+                    "Rugmi loader",
+                    "detections spiked in",
+                    "October and November 2023"
+                ]
+            ],
+            "not_recall_list": []
+        }
+    }
+}

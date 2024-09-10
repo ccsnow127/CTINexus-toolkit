@@ -1,0 +1,128 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Ragnar Locker', 'relation': 'was discovered by', 'object': 'the FBI'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Ragnar Locker', 'relation': 'is', 'object': 'a ransomware group'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Ragnar Locker', 'relation': 'is', 'object': 'the name of the ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The gang', 'relation': 'works as', 'object': 'a part of a ransomware family'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Ragnar Locker', 'relation': 'uses', 'object': 'the double extortion tactic'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat actors', 'relation': 'exfiltrating and triggering', 'object': 'encryption attack'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat actor', 'relation': 'changes', 'object': 'their obfuscation techniques'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Ragnar Locker', 'relation': 'initiates attacks by', 'object': 'compromising networks through RDP service'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The threat actor', 'relation': 'uses', 'object': 'brute force'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The threat actor', 'relation': 'purchases', 'object': 'stolen credentials on the dark web'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The threat actor', 'relation': 'elevates', 'object': 'their privileges'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The threat actor', 'relation': 'exploits', 'object': 'CVE-2017-0213'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2017-0213', 'relation': 'is an elevation of privilege in', 'object': 'Windows COM Aggregate Marshaler'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2017-0213', 'relation': 'allows attackers to', 'object': 'run arbitrary code with elevated privileges'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The attacker', 'relation': 'runs', 'object': 'a specially crafted application'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

@@ -1,0 +1,98 @@
+{
+    "CTI": {
+        "text": "Microsoft has released a workaround for a zero-day flaw that was initially flagged in April and that attackers already have used to target organizations in Russia and Tibet, researchers said. The remote control execution (RCE) flaw, tracked as CVE-2022-3019, is associated with the Microsoft Support Diagnostic Tool (MSDT), which, ironically, itself collects information about bugs in the company\u2019s products and reports to Microsoft Support. If successfully exploited, attackers can install programs, view, change or delete data, or create new accounts in the context allowed by the user\u2019s rights, the company said. A remote code execution vulnerability exists when MSDT is called using the URL protocol from a calling application such as Word,\u201d Microsoft explained in its guidance on the Microsoft Security Response Center. \u201cAn attacker who successfully exploits this vulnerability can run arbitrary code with the privileges of the calling application.",
+        "link": "https://threatpost.com/microsoft-workaround-0day-attack/179776/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft",
+                "relation": "released",
+                "object": "a workaround for a zero-day flaw"
+            },
+            {
+                "subject": "zero-day flaw",
+                "relation": "was targeted at",
+                "object": "organizations in Russia and Tibet"
+            },
+            {
+                "subject": "CVE-2022-3019",
+                "relation": "is a",
+                "object": "remote control execution (RCE) flaw"
+            },
+            {
+                "subject": "CVE-2022-3019",
+                "relation": "is associated with",
+                "object": "the Microsoft Support Diagnostic Tool (MSDT)"
+            },
+            {
+                "subject": "Microsoft Support Diagnostic Tool (MSDT)",
+                "relation": "collects information about",
+                "object": "bugs in Microsoft\u2019s products"
+            },
+            {
+                "subject": "attackers",
+                "relation": "exploit",
+                "object": "CVE-2022-3019"
+            },
+            {
+                "subject": "attackers",
+                "relation": "install programs, view, change or delete data, or create new accounts",
+                "object": "in the context allowed by the user\u2019s rights"
+            },
+            {
+                "subject": "A remote code execution vulnerability",
+                "relation": "exists when",
+                "object": "MSDT is called using the URL protocol from a calling application such as Word"
+            },
+            {
+                "subject": "An attacker",
+                "relation": "exploits",
+                "object": "CVE-2022-3019"
+            },
+            {
+                "subject": "An attacker",
+                "relation": "can run",
+                "object": "arbitrary code with the privileges of the calling application"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1588,
+                "cost": 0.015880000000000002
+            },
+            "output": {
+                "tokens": 312,
+                "cost": 0.00936
+            },
+            "total": {
+                "tokens": 1900,
+                "cost": 0.025240000000000002
+            }
+        },
+        "time": 7.7705395221710205,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/threatPost/Microsoft-QD1-8yo.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-microsoft.json",
+                    0.13514497452307858
+                ],
+                [
+                    "BleepingComputer-atlassian.json",
+                    0.13917502562689787
+                ],
+                [
+                    "AVERTIUM-CVE-2023-36884.json",
+                    0.17246720976684343
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

@@ -1,0 +1,401 @@
+{
+    "CTI": {
+        "text": "Microsoft Threat Intelligence has uncovered a supply chain attack by the North Korea-based threat actor Diamond Sleet (ZINC) involving a malicious variant of an application developed by CyberLink Corp., a software company that develops multimedia software products. This malicious file is a legitimate CyberLink application installer that has been modified to include malicious code that downloads, decrypts, and loads a second-stage payload. The file, which was signed using a valid certificate issued to CyberLink Corp., is hosted on legitimate update infrastructure owned by CyberLink and includes checks to limit the time window for execution and evade detection by security products. Thus far, the malicious activity has impacted over 100 devices in multiple countries, including Japan, Taiwan, Canada, and the United States.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/11/22/diamond-sleet-supply-chain-compromise-distributes-a-modified-cyberlink-installer/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft Threat Intelligence",
+                "relation": "has uncovered",
+                "object": "a supply chain attack"
+            },
+            {
+                "subject": "the threat actor Diamond Sleet (ZINC)",
+                "relation": "is based in",
+                "object": "North Korea"
+            },
+            {
+                "subject": "Diamond Sleet (ZINC)",
+                "relation": "involves in",
+                "object": "a supply chain attack"
+            },
+            {
+                "subject": "a malicious variant",
+                "relation": "is of",
+                "object": "an application developed by CyberLink Corp."
+            },
+            {
+                "subject": "CyberLink Corp.",
+                "relation": "develops",
+                "object": "multimedia software products"
+            },
+            {
+                "subject": "the malicious file",
+                "relation": "is",
+                "object": "a legitimate CyberLink application installer"
+            },
+            {
+                "subject": "the malicious file",
+                "relation": "has been modified to",
+                "object": "include malicious code"
+            },
+            {
+                "subject": "the malicious code",
+                "relation": "downloads, decrypts, and loads",
+                "object": "a second-stage payload"
+            },
+            {
+                "subject": "the file",
+                "relation": "is signed using",
+                "object": "a valid certificate issued to CyberLink Corp."
+            },
+            {
+                "subject": "the file",
+                "relation": "is hosted on",
+                "object": "legitimate update infrastructure owned by CyberLink"
+            },
+            {
+                "subject": "the file",
+                "relation": "includes checks to",
+                "object": "limit the time window for execution"
+            },
+            {
+                "subject": "the file",
+                "relation": "evades",
+                "object": "detection by security products"
+            },
+            {
+                "subject": "the malicious activity",
+                "relation": "has impacted",
+                "object": "over 100 devices in multiple countries"
+            },
+            {
+                "subject": "the countries impacted",
+                "relation": "include",
+                "object": "Japan, Taiwan, Canada, and the United States"
+            }
+        ],
+        "triples_count": 14,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2433,
+                "cost": 0.02433
+            },
+            "output": {
+                "tokens": 383,
+                "cost": 0.01149
+            },
+            "total": {
+                "tokens": 2816,
+                "cost": 0.035820000000000005
+            }
+        },
+        "time": 9.434313297271729,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Microsoft/diamond-sleet-QD1-kZ5.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-cactus.json",
+                    0.08387474594497471
+                ],
+                [
+                    "BleepingComputer-kasseika.json",
+                    0.08454708001391896
+                ],
+                [
+                    "BleepingComputer-apple.json",
+                    0.0913329673646251
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Microsoft Threat Intelligence",
+                    "class": "Organization"
+                },
+                "relation": "has uncovered",
+                "object": {
+                    "text": "a supply chain attack",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the threat actor Diamond Sleet (ZINC)",
+                    "class": "Attacker"
+                },
+                "relation": "is based in",
+                "object": {
+                    "text": "North Korea",
+                    "class": "Location"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Diamond Sleet (ZINC)",
+                    "class": "Attacker"
+                },
+                "relation": "involves in",
+                "object": {
+                    "text": "a supply chain attack",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a malicious variant",
+                    "class": "Malware"
+                },
+                "relation": "is of",
+                "object": {
+                    "text": "an application developed by CyberLink Corp.",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CyberLink Corp.",
+                    "class": "Organization"
+                },
+                "relation": "develops",
+                "object": {
+                    "text": "multimedia software products",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the malicious file",
+                    "class": "Indicator:File"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "a legitimate CyberLink application installer",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the malicious file",
+                    "class": "Indicator:File"
+                },
+                "relation": "has been modified to",
+                "object": {
+                    "text": "include malicious code",
+                    "class": "Malware Characteristic:Feature"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the malicious code",
+                    "class": "Malware Characteristic:Feature"
+                },
+                "relation": "downloads, decrypts, and loads",
+                "object": {
+                    "text": "a second-stage payload",
+                    "class": "Malware Characteristic:Payload"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the file",
+                    "class": "Indicator:File"
+                },
+                "relation": "is signed using",
+                "object": {
+                    "text": "a valid certificate issued to CyberLink Corp.",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the file",
+                    "class": "Indicator:File"
+                },
+                "relation": "is hosted on",
+                "object": {
+                    "text": "legitimate update infrastructure owned by CyberLink",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the file",
+                    "class": "Indicator:File"
+                },
+                "relation": "includes checks to",
+                "object": {
+                    "text": "limit the time window for execution",
+                    "class": "Malware Characteristic:Feature"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the file",
+                    "class": "Indicator:File"
+                },
+                "relation": "evades",
+                "object": {
+                    "text": "detection by security products",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the malicious activity",
+                    "class": "Event"
+                },
+                "relation": "has impacted",
+                "object": {
+                    "text": "over 100 devices in multiple countries",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the countries impacted",
+                    "class": "Location"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "Japan, Taiwan, Canada, and the United States",
+                    "class": "Location"
+                }
+            }
+        ],
+        "response_time": 23.284997701644897,
+        "Demo_num": 12,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-12shot/prompt_store/Microsoft/diamond-sleet.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1932,
+                "cost": 0.01932
+            },
+            "output": {
+                "tokens": 777,
+                "cost": 0.02331
+            },
+            "total": {
+                "tokens": 2709,
+                "cost": 0.04263
+            }
+        },
+        "Eval": {
+            "correct": 26,
+            "incorrect": 2,
+            "TP": 26,
+            "TN": 0,
+            "FP": 2,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 28,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 27,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 28,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 2,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 4,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 28,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 6,
+                    "TN": 21,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Information": {
+                    "TP": 3,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Location": {
+                    "TP": 2,
+                    "TN": 25,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 1,
+                    "TN": 27,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 5,
+                    "TN": 23,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 2,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 1,
+                    "TN": 27,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 28,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 28,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 28,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 10
+        }
+    }
+}

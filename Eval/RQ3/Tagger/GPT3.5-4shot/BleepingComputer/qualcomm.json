@@ -1,0 +1,529 @@
+{
+    "CTI": {
+        "text": "A new vulnerability dubbed 'LeftoverLocals' affecting graphics processing units from AMD, Apple, Qualcomm, and Imagination Technologies allows retrieving data from the local memory space. Tracked as CVE-2023-4969, the security issue enables data recovery from vulnerable GPUs, especially in the context of large language models (LLMs) and machine learning (ML) processes. LeftoverLocals lets attackers launch a 'listener' - a GPU kernel that reads from uninitialized local memory and can dump the data in a persistent location, such as the global memory. If the local memory is not cleared, the attacker can use the listener to read values left behind by the 'writer' - a program that stores values to local memory. The recovered data can reveal sensitive information about the victim's computations, including model inputs, outputs, weights, and intermediate computations.",
+        "link": "https://www.bleepingcomputer.com/news/security/amd-apple-qualcomm-gpus-leak-ai-data-in-leftoverlocals-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "LeftoverLocals",
+                "relation": "affects",
+                "object": "graphics processing units"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "AMD"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Apple"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Qualcomm"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Imagination Technologies"
+            },
+            {
+                "subject": "LeftoverLocals",
+                "relation": "allows",
+                "object": "retrieving data from local memory space"
+            },
+            {
+                "subject": "The vulnerability",
+                "relation": "is tracked as",
+                "object": "CVE-2023-4969"
+            },
+            {
+                "subject": "The vulnerability",
+                "relation": "enables",
+                "object": "data recovery from vulnerable GPUs"
+            },
+            {
+                "subject": "vulnerable GPUs",
+                "relation": "especially in context of",
+                "object": "large language models processes"
+            },
+            {
+                "subject": "vulnerable GPUs",
+                "relation": "especially in context of",
+                "object": "machine learning processes"
+            },
+            {
+                "subject": "attackers",
+                "relation": "launch",
+                "object": "'listener'"
+            },
+            {
+                "subject": "'listener'",
+                "relation": "is a",
+                "object": "GPU kernel that reads from uninitialized local memory"
+            },
+            {
+                "subject": "'listener'",
+                "relation": "can dump data in",
+                "object": "persistent location"
+            },
+            {
+                "subject": "persistent location",
+                "relation": "such as",
+                "object": "the global memory"
+            },
+            {
+                "subject": "attacker",
+                "relation": "use",
+                "object": "listener to read values"
+            },
+            {
+                "subject": "values",
+                "relation": "left behind by",
+                "object": "'writer'"
+            },
+            {
+                "subject": "'writer'",
+                "relation": "is a",
+                "object": "program that stores values to local memory"
+            },
+            {
+                "subject": "recovered data",
+                "relation": "can reveal",
+                "object": "sensitive information about victim's computations"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "model inputs"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "outputs"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "weights"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "intermediate computations"
+            }
+        ],
+        "triples_count": 22,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1784,
+                "cost": 0.01784
+            },
+            "output": {
+                "tokens": 513,
+                "cost": 0.015390000000000001
+            },
+            "total": {
+                "tokens": 2297,
+                "cost": 0.03323
+            }
+        },
+        "time": 13.038778305053711,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/BleepingComputer/qualcomm-QD1-tnP.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-mastodon.json",
+                    0.05243586691932423
+                ],
+                [
+                    "BleepingComputer-apple.json",
+                    0.07493194462094664
+                ],
+                [
+                    "BleepingComputer-chrome.json",
+                    0.17536710205677786
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "LeftoverLocals",
+                    "class": "Tool"
+                },
+                "relation": "affects",
+                "object": {
+                    "text": "graphics processing units",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "graphics processing units",
+                    "class": "Tool"
+                },
+                "relation": "from",
+                "object": {
+                    "text": "AMD",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "graphics processing units",
+                    "class": "Tool"
+                },
+                "relation": "from",
+                "object": {
+                    "text": "Apple",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "graphics processing units",
+                    "class": "Tool"
+                },
+                "relation": "from",
+                "object": {
+                    "text": "Qualcomm",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "graphics processing units",
+                    "class": "Tool"
+                },
+                "relation": "from",
+                "object": {
+                    "text": "Imagination Technologies",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "LeftoverLocals",
+                    "class": "Tool"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "retrieving data from local memory space",
+                    "class": "Action"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is tracked as",
+                "object": {
+                    "text": "CVE-2023-4969",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "enables",
+                "object": {
+                    "text": "data recovery from vulnerable GPUs",
+                    "class": "Action"
+                }
+            },
+            {
+                "subject": {
+                    "text": "vulnerable GPUs",
+                    "class": "Tool"
+                },
+                "relation": "especially in context of",
+                "object": {
+                    "text": "large language models processes",
+                    "class": "Activity"
+                }
+            },
+            {
+                "subject": {
+                    "text": "vulnerable GPUs",
+                    "class": "Tool"
+                },
+                "relation": "especially in context of",
+                "object": {
+                    "text": "machine learning processes",
+                    "class": "Activity"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "launch",
+                "object": {
+                    "text": "'listener'",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "'listener'",
+                    "class": "Tool"
+                },
+                "relation": "is a",
+                "object": {
+                    "text": "GPU kernel that reads from uninitialized local memory",
+                    "class": "Malware Characteristic:Payload"
+                }
+            },
+            {
+                "subject": {
+                    "text": "'listener'",
+                    "class": "Tool"
+                },
+                "relation": "can dump data in",
+                "object": {
+                    "text": "persistent location",
+                    "class": "Location"
+                }
+            },
+            {
+                "subject": {
+                    "text": "persistent location",
+                    "class": "Location"
+                },
+                "relation": "such as",
+                "object": {
+                    "text": "the global memory",
+                    "class": "Location"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attacker",
+                    "class": "Attacker"
+                },
+                "relation": "use",
+                "object": {
+                    "text": "listener to read values",
+                    "class": "Action"
+                }
+            },
+            {
+                "subject": {
+                    "text": "values",
+                    "class": "Information"
+                },
+                "relation": "left behind by",
+                "object": {
+                    "text": "'writer'",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "'writer'",
+                    "class": "Tool"
+                },
+                "relation": "is a",
+                "object": {
+                    "text": "program that stores values to local memory",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "recovered data",
+                    "class": "Information"
+                },
+                "relation": "can reveal",
+                "object": {
+                    "text": "sensitive information about victim's computations",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "sensitive information",
+                    "class": "Information"
+                },
+                "relation": "includes",
+                "object": {
+                    "text": "model inputs",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "sensitive information",
+                    "class": "Information"
+                },
+                "relation": "includes",
+                "object": {
+                    "text": "outputs",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "sensitive information",
+                    "class": "Information"
+                },
+                "relation": "includes",
+                "object": {
+                    "text": "weights",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "sensitive information",
+                    "class": "Information"
+                },
+                "relation": "includes",
+                "object": {
+                    "text": "intermediate computations",
+                    "class": "Information"
+                }
+            }
+        ],
+        "response_time": 15.171441078186035,
+        "Demo_num": 4,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT3.5-4shot/prompt_store/BleepingComputer/qualcomm.txt",
+        "model_usage": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1496,
+                "cost": 0.000748
+            },
+            "output": {
+                "tokens": 947,
+                "cost": 0.0014205
+            },
+            "total": {
+                "tokens": 2443,
+                "cost": 0.0021685000000000003
+            }
+        },
+        "Eval": {
+            "correct": 28,
+            "incorrect": 16,
+            "TP": 28,
+            "TN": 0,
+            "FP": 11,
+            "FN": 5,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 44,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 44,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 5,
+                    "TN": 29,
+                    "FP": 9,
+                    "FN": 1
+                },
+                "Attacker": {
+                    "TP": 2,
+                    "TN": 42,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 0,
+                    "TN": 43,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 35,
+                    "FP": 0,
+                    "FN": 9
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 44,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 11,
+                    "TN": 30,
+                    "FP": 0,
+                    "FN": 3
+                },
+                "Location": {
+                    "TP": 3,
+                    "TN": 41,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 0,
+                    "TN": 43,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 43,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 4,
+                    "TN": 40,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 44,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 44,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 3,
+                    "TN": 39,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 39,
+                    "FP": 5,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 9
+        }
+    }
+}

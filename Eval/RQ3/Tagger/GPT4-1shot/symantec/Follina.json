@@ -1,0 +1,337 @@
+{
+    "CTI": {
+        "text": "Follina (CVE-2022-30190) is a vulnerability in the Microsoft Support Diagnostic Tool (MSDT) that allows remote code execution on vulnerable systems through the ms-msdt protocol handler scheme. The bug is present in all supported versions of Windows. The vulnerability can be easily exploited by a specially crafted Word document that downloads and loads a malicious HTML file through Word's remote template feature. The HTML file ultimately allows the attacker to load and execute PowerShell code within Windows. The vulnerability can also be exploited through the RTF file format.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/follina-msdt-exploit-malware"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Follina",
+                "relation": "is a",
+                "object": "vulnerability"
+            },
+            {
+                "subject": "Follina",
+                "relation": "is in",
+                "object": "the Microsoft Support Diagnostic Tool (MSDT)"
+            },
+            {
+                "subject": "Follina",
+                "relation": "allows",
+                "object": "remote code execution on vulnerable systems"
+            },
+            {
+                "subject": "vulnerable systems",
+                "relation": "through",
+                "object": "the ms-msdt protocol handler scheme"
+            },
+            {
+                "subject": "The bug",
+                "relation": "is present in",
+                "object": "all supported versions of Windows"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "can be exploited by",
+                "object": "a specially crafted Word document"
+            },
+            {
+                "subject": "a specially crafted Word document",
+                "relation": "downloads and loads",
+                "object": "a malicious HTML file"
+            },
+            {
+                "subject": "a malicious HTML file",
+                "relation": "through",
+                "object": "Word's remote template feature"
+            },
+            {
+                "subject": "The HTML file",
+                "relation": "allows",
+                "object": "the attacker to load and execute PowerShell code within Windows"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "can also be exploited through",
+                "object": "the RTF file format"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1562,
+                "cost": 0.015620000000000002
+            },
+            "output": {
+                "tokens": 271,
+                "cost": 0.00813
+            },
+            "total": {
+                "tokens": 1833,
+                "cost": 0.02375
+            }
+        },
+        "time": 6.7688775062561035,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/symantec/Follina-QD1-FOo.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-chrome.json",
+                    0.11698890474066682
+                ],
+                [
+                    "BleepingComputer-atlassian.json",
+                    0.13455400450733862
+                ],
+                [
+                    "AVERTIUM-CVE-2023-36884.json",
+                    0.148602380264633
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Follina",
+                    "class": "Vulnerability"
+                },
+                "relation": "is a",
+                "object": {
+                    "text": "vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Follina",
+                    "class": "Vulnerability"
+                },
+                "relation": "is in",
+                "object": {
+                    "text": "the Microsoft Support Diagnostic Tool (MSDT)",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Follina",
+                    "class": "Vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "remote code execution on vulnerable systems",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "vulnerable systems",
+                    "class": "Exploit Target"
+                },
+                "relation": "through",
+                "object": {
+                    "text": "the ms-msdt protocol handler scheme",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The bug",
+                    "class": "Vulnerability"
+                },
+                "relation": "is present in",
+                "object": {
+                    "text": "all supported versions of Windows",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "can be exploited by",
+                "object": {
+                    "text": "a specially crafted Word document",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a specially crafted Word document",
+                    "class": "Tool"
+                },
+                "relation": "downloads and loads",
+                "object": {
+                    "text": "a malicious HTML file",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a malicious HTML file",
+                    "class": "Malware"
+                },
+                "relation": "through",
+                "object": {
+                    "text": "Word's remote template feature",
+                    "class": "Malware Characteristic:Feature"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The HTML file",
+                    "class": "Malware"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "the attacker to load and execute PowerShell code within Windows",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "can also be exploited through",
+                "object": {
+                    "text": "the RTF file format",
+                    "class": "Tool"
+                }
+            }
+        ],
+        "response_time": 30.829979181289673,
+        "Demo_num": 1,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-1shot/prompt_store/symantec/Follina.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 764,
+                "cost": 0.007640000000000001
+            },
+            "output": {
+                "tokens": 566,
+                "cost": 0.016980000000000002
+            },
+            "total": {
+                "tokens": 1330,
+                "cost": 0.024620000000000003
+            }
+        },
+        "Eval": {
+            "correct": 10,
+            "incorrect": 10,
+            "TP": 10,
+            "TN": 0,
+            "FP": 9,
+            "FN": 1,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 17,
+                    "FP": 3,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 2,
+                    "TN": 18,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Exploit Target": {
+                    "TP": 1,
+                    "TN": 18,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 6
+                },
+                "Information": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 4
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 0,
+                    "TN": 17,
+                    "FP": 3,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 18,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 7,
+                    "TN": 13,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 19,
+                    "FP": 1,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 7
+        }
+    }
+}

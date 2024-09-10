@@ -1,0 +1,248 @@
+{
+    "CTI": {
+        "text": "A zero-day vulnerability (CVE-2023-36884) affecting Microsoft Windows and Office products is being exploited by attackers in the wild. To date, the exploit has been used in highly targeted attacks against organizations in the government and defense sectors in Europe and North America. The vulnerability was disclosed yesterday (July 11) by Microsoft, which said that an attacker could create a specially crafted Microsoft Office document that enables remote code execution on the target's computer. In order for the exploit to succeed, the victim needs to open the malicious file. No patch has been released yet for the vulnerability. ",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/microsoft-zeroday-exploit"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "CVE-2023-36884",
+                "relation": "is a",
+                "object": "zero-day vulnerability"
+            },
+            {
+                "subject": "CVE-2023-36884",
+                "relation": "affects",
+                "object": "Microsoft Windows and Office products"
+            },
+            {
+                "subject": "attackers",
+                "relation": "exploit",
+                "object": "CVE-2023-36884"
+            },
+            {
+                "subject": "exploit",
+                "relation": "has been used in",
+                "object": "highly targeted attacks against organizations in the government and defense sectors in Europe and North America"
+            },
+            {
+                "subject": "exploit",
+                "relation": "enables",
+                "object": "remote code execution on the target's computer"
+            },
+            {
+                "subject": "victim",
+                "relation": "needs to",
+                "object": "open the malicious file"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "disclosed",
+                "object": "the vulnerability yesterday (July 11)"
+            },
+            {
+                "subject": "patch",
+                "relation": "has not been released yet for",
+                "object": "the vulnerability"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1154,
+                "cost": 0.0005769999999999999
+            },
+            "output": {
+                "tokens": 236,
+                "cost": 0.000354
+            },
+            "total": {
+                "tokens": 1390,
+                "cost": 0.000931
+            }
+        },
+        "time": 3.5918378829956055,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/symantec/Windows-Zero-Day-QD1-2ZT.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "symantec: Follina.json",
+                    0.22378047187080805
+                ],
+                [
+                    "threatPost: Microsoft.json",
+                    0.23378595045051215
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 2,
+                "fn": 5,
+                "precision": 0.7777777777777778,
+                "recall": 0.5833333333333334,
+                "f1": 0.6666666666666666
+            },
+            "matched_list": [
+                [
+                    [
+                        "CVE-2023-36884",
+                        "affects",
+                        "Microsoft Windows and Office products"
+                    ],
+                    [
+                        "zero-day vulnerability",
+                        "affects",
+                        "Microsoft Windows and Office products"
+                    ],
+                    [
+                        0.5048695537236367,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "exploit",
+                        "CVE-2023-36884"
+                    ],
+                    [
+                        "attackers",
+                        "exploit",
+                        "zero-day vulnerability"
+                    ],
+                    [
+                        1.0,
+                        0.5048695537236367
+                    ]
+                ],
+                [
+                    [
+                        "exploit",
+                        "has been used in",
+                        "highly targeted attacks against organizations in the government and defense sectors in Europe and North America"
+                    ],
+                    [
+                        "exploit",
+                        "used in",
+                        "highly targeted attacks"
+                    ],
+                    [
+                        1.0,
+                        0.7153259031956786
+                    ]
+                ],
+                [
+                    [
+                        "victim",
+                        "needs to",
+                        "open the malicious file"
+                    ],
+                    [
+                        "victim",
+                        "needs to open",
+                        "the malicious file"
+                    ],
+                    [
+                        1.0,
+                        0.7733655459728292
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "disclosed",
+                        "the vulnerability yesterday (July 11)"
+                    ],
+                    [
+                        "zero-day vulnerability",
+                        "affects",
+                        "Microsoft Windows and Office products"
+                    ],
+                    [
+                        0.5611321930118253,
+                        0.5796638940256393,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "disclosed",
+                        "the vulnerability yesterday (July 11)"
+                    ],
+                    [
+                        "Microsoft",
+                        "disclosed",
+                        "zero-day vulnerability"
+                    ],
+                    [
+                        1.0,
+                        0.5796638940256393
+                    ]
+                ],
+                [
+                    [
+                        "patch",
+                        "has not been released yet for",
+                        "the vulnerability"
+                    ],
+                    [
+                        "No patch",
+                        "has been released for",
+                        "the vulnerability"
+                    ],
+                    [
+                        0.6451104518633481,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "CVE-2023-36884",
+                    "is a",
+                    "zero-day vulnerability"
+                ],
+                [
+                    "exploit",
+                    "enables",
+                    "remote code execution on the target's computer"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "highly targeted attacks",
+                    "against",
+                    "organizations in the government and defense sectors"
+                ],
+                [
+                    "organizations",
+                    "are in",
+                    "Europe"
+                ],
+                [
+                    "organizations",
+                    "are in",
+                    "North America"
+                ],
+                [
+                    "attacker",
+                    "could create",
+                    "a specially crafted Microsoft Office document"
+                ],
+                [
+                    "a specially crafted Microsoft Office document",
+                    "enables",
+                    "remote code execution"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,110 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'At least four separate cyberattack groups', 'relation': 'have used', 'object': 'a former zero-day security vulnerability in the Zimbra Collaboration Suite (ZCS)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a former zero-day security vulnerability in the Zimbra Collaboration Suite (ZCS)', 'relation': 'to steal', 'object': 'email data'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a former zero-day security vulnerability in the Zimbra Collaboration Suite (ZCS)', 'relation': 'to steal', 'object': 'user credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a former zero-day security vulnerability in the Zimbra Collaboration Suite (ZCS)', 'relation': 'to steal', 'object': 'authentication tokens'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'authentication tokens', 'relation': 'from', 'object': 'government organizations globally'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ZCS', 'relation': 'is an', 'object': 'email server, calendaring, and chat and video platform'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ZCS', 'relation': 'used by', 'object': 'thousands of companies'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ZCS', 'relation': 'used by', 'object': 'hundreds of millions of individuals'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The bug', 'relation': 'is', 'object': 'CVE-2023-37580'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-37580', 'relation': 'is a', 'object': 'reflected cross-site scripting (XSS) vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-37580', 'relation': 'in', 'object': 'the Zimbra email server'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-37580', 'relation': 'was patched on', 'object': 'July 25'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a hotfix for CVE-2023-37580', 'relation': 'rolling out to', 'object': 'its public GitHub repository on July 5'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The zero-day exploitation', 'relation': 'started in', 'object': 'June'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The zero-day exploitation', 'relation': 'before', 'object': 'Zimbra offered remediation'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

@@ -1,0 +1,300 @@
+{
+    "CTI": {
+        "text": "More than 3,000 Internet-accessible Apache ActiveMQ Servers are exposed to a critical remote code execution vulnerability that an attacker has begun actively targeting to drop ransomware. The Apache Software Foundation (ASF) disclosed the vulnerability, tracked as CVE-2023-46604, on Oct. 27. The bug allows a remote attacker with access to an ActiveMQ message broker to execute arbitrary commands on affected systems. Proof-of-concept exploit code and full details of the vulnerability are publicly available, meaning that threat actors have both the means and the information to launch attacks against the vulnerability. Researchers at Rapid7 reported observing exploit activity targeting the flaw at two customer locations, starting the same day that ASF disclosed the threat. In both instances, the adversary attempted to deploy ransomware binaries on target systems in an effort to ransom the victim organizations. They described both targeted organizations as running outdated versions of Apache ActiveMQ. The researchers attributed the malicious activity to the HelloKitty ransomware family, based on the ransom note and other attack attributes. HelloKitty ransomware has been percolating in the wild since at least 2020. Its operators have tended to favor double-extortion attacks in which they have not just encrypted the data but also stolen it as additional leverage for extracting a ransom from victims. The HelloKitty ransomware attacks leveraging the ActiveMQ flaw appeared somewhat rudimentary. In one of the attacks, the threat actor made more than a half dozen attempts to encrypt the data, prompting the researchers to label to threat actor as 'clumsy' in their report.",
+        "link": "https://www.darkreading.com/cyberattacks-data-breaches/attackers-target-max-severity-apache-activemq-bug-to-drop-ransomware"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "More than 3,000 Internet-accessible Apache ActiveMQ Servers",
+                "relation": "are exposed to",
+                "object": "critical remote code execution vulnerability"
+            },
+            {
+                "subject": "an attacker",
+                "relation": "has begun actively targeting",
+                "object": "to drop ransomware"
+            },
+            {
+                "subject": "The Apache Software Foundation (ASF)",
+                "relation": "disclosed",
+                "object": "the vulnerability"
+            },
+            {
+                "subject": "the vulnerability",
+                "relation": "tracked as",
+                "object": "CVE-2023-46604"
+            },
+            {
+                "subject": "the bug",
+                "relation": "allows",
+                "object": "a remote attacker with access to an ActiveMQ message broker to execute arbitrary commands on affected systems"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "have",
+                "object": "both the means and the information to launch attacks against the vulnerability"
+            },
+            {
+                "subject": "Researchers at Rapid7",
+                "relation": "reported observing",
+                "object": "exploit activity targeting the flaw"
+            },
+            {
+                "subject": "the adversary",
+                "relation": "attempted to deploy",
+                "object": "ransomware binaries on target systems"
+            },
+            {
+                "subject": "targeted organizations",
+                "relation": "running",
+                "object": "outdated versions of Apache ActiveMQ"
+            },
+            {
+                "subject": "the malicious activity",
+                "relation": "attributed to",
+                "object": "the HelloKitty ransomware family"
+            },
+            {
+                "subject": "HelloKitty ransomware",
+                "relation": "has been percolating in",
+                "object": "the wild since at least 2020"
+            },
+            {
+                "subject": "Its operators",
+                "relation": "have tended to favor",
+                "object": "double-extortion attacks"
+            },
+            {
+                "subject": "double-extortion attacks",
+                "relation": "not just",
+                "object": "encrypted the data but also stolen it"
+            },
+            {
+                "subject": "the attacks",
+                "relation": "leveraging",
+                "object": "the ActiveMQ flaw"
+            }
+        ],
+        "triples_count": 14,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1429,
+                "cost": 0.01429
+            },
+            "output": {
+                "tokens": 421,
+                "cost": 0.01263
+            },
+            "total": {
+                "tokens": 1850,
+                "cost": 0.02692
+            }
+        },
+        "time": 26.208444356918335,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/darkreading/apache-activemq-QD1-duN.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "threatPost: Atlassian.json",
+                    0.17207592732463362
+                ],
+                [
+                    "darkreading: Apache-ERP.json",
+                    0.17147263191323167
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 2,
+                "fn": 3,
+                "precision": 0.8571428571428571,
+                "recall": 0.8,
+                "f1": 0.8275862068965518
+            },
+            "matched_list": [
+                [
+                    [
+                        "More than 3,000 Internet-accessible Apache ActiveMQ Servers",
+                        "are exposed to",
+                        "critical remote code execution vulnerability"
+                    ],
+                    [
+                        "Internet-accessible Apache ActiveMQ Servers",
+                        "are exposed to",
+                        "a critical remote code execution vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "an attacker",
+                        "has begun actively targeting",
+                        "to drop ransomware"
+                    ],
+                    [
+                        "An attacker",
+                        "has begun actively targeting",
+                        "to drop ransomware"
+                    ]
+                ],
+                [
+                    [
+                        "The Apache Software Foundation (ASF)",
+                        "disclosed",
+                        "the vulnerability"
+                    ],
+                    [
+                        "The Apache Software Foundation",
+                        "disclosed",
+                        "CVE-2023-46604"
+                    ]
+                ],
+                [
+                    [
+                        "the vulnerability",
+                        "tracked as",
+                        "CVE-2023-46604"
+                    ],
+                    [
+                        "The Apache Software Foundation",
+                        "disclosed",
+                        "CVE-2023-46604"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "have",
+                        "both the means and the information to launch attacks against the vulnerability"
+                    ],
+                    [
+                        "Threat actors",
+                        "have",
+                        "the means and the information to launch attacks"
+                    ]
+                ],
+                [
+                    [
+                        "Researchers at Rapid7",
+                        "reported observing",
+                        "exploit activity targeting the flaw"
+                    ],
+                    [
+                        "Researchers at Rapid7",
+                        "reported observing exploit activity",
+                        "targeting the flaw"
+                    ]
+                ],
+                [
+                    [
+                        "the adversary",
+                        "attempted to deploy",
+                        "ransomware binaries on target systems"
+                    ],
+                    [
+                        "The adversary",
+                        "attempted to deploy",
+                        "ransomware binaries"
+                    ]
+                ],
+                [
+                    [
+                        "targeted organizations",
+                        "running",
+                        "outdated versions of Apache ActiveMQ"
+                    ],
+                    [
+                        "Targeted organizations",
+                        "were running",
+                        "outdated versions of Apache ActiveMQ"
+                    ]
+                ],
+                [
+                    [
+                        "the malicious activity",
+                        "attributed to",
+                        "the HelloKitty ransomware family"
+                    ],
+                    [
+                        "The malicious activity",
+                        "is attributed to",
+                        "the HelloKitty ransomware family"
+                    ]
+                ],
+                [
+                    [
+                        "HelloKitty ransomware",
+                        "has been percolating in",
+                        "the wild since at least 2020"
+                    ],
+                    [
+                        "HelloKitty ransomware",
+                        "has been percolating in the wild since",
+                        "at least 2020"
+                    ]
+                ],
+                [
+                    [
+                        "Its operators",
+                        "have tended to favor",
+                        "double-extortion attacks"
+                    ],
+                    [
+                        "Double-extortion attacks",
+                        "involve",
+                        "stealing the data"
+                    ]
+                ],
+                [
+                    [
+                        "double-extortion attacks",
+                        "not just",
+                        "encrypted the data but also stolen it"
+                    ],
+                    [
+                        "Double-extortion attacks",
+                        "involve",
+                        "stealing the data"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "the bug",
+                    "allows",
+                    "a remote attacker with access to an ActiveMQ message broker to execute arbitrary commands on affected systems"
+                ],
+                [
+                    "the attacks",
+                    "leveraging",
+                    "the ActiveMQ flaw"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "CVE-2023-46604",
+                    "allows",
+                    "a remote attacker with access to execute arbitrary commands"
+                ],
+                [
+                    "The threat actor",
+                    "made attempts",
+                    "to encrypt the data"
+                ],
+                [
+                    "Researchers",
+                    "label the threat actor as",
+                    "'clumsy'"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

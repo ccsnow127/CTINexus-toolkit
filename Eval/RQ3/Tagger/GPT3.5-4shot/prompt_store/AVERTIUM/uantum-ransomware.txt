@@ -1,0 +1,120 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Quantum ransomware', 'relation': 'is linked to', 'object': 'Quantum Locker operation'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Quantum Locker', 'relation': 'has rebrands', 'object': 'AstroLocker, MountLocker, and XingLocker'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Quantum', 'relation': 'is a splinter group from', 'object': 'Conti'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Quantum operation', 'relation': 'was taken over by', 'object': 'Conti Team Two'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Quantum', 'relation': 'employs', 'object': 'version of BazarCall, called Jormungandr'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Quantum', 'relation': 'hires people specialized in', 'object': 'OSINT, spamming, design, and call center operations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'BazarCall', 'relation': 'is also known as', 'object': 'call-back phishing'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'BazarCall', 'relation': 'is used by', 'object': 'Ryuk ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'BazarCall', 'relation': 'is used for', 'object': "gaining initial access into a victim's network"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat actor', 'relation': 'convinces victim to start', 'object': 'a remote access session'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Network intruder', 'relation': 'tries to compromise', 'object': "the victim's network"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': "Quantum's BazarCall campaigns", 'relation': 'have grown more sophisticated', 'object': "in just two months' time"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Quantum', 'relation': 'impersonated brands', 'object': 'Gobble, Luchechko Mortgage Team, CrowdStrike, HelloFresh, Oracle, Ginyard International US Equal Opportunity Employment Commission'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

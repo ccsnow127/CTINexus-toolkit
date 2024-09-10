@@ -1,0 +1,325 @@
+{
+    "CTI": {
+        "text": "Microsoft Threat Intelligence has uncovered a supply chain attack by the North Korea-based threat actor Diamond Sleet (ZINC) involving a malicious variant of an application developed by CyberLink Corp., a software company that develops multimedia software products. This malicious file is a legitimate CyberLink application installer that has been modified to include malicious code that downloads, decrypts, and loads a second-stage payload. The file, which was signed using a valid certificate issued to CyberLink Corp., is hosted on legitimate update infrastructure owned by CyberLink and includes checks to limit the time window for execution and evade detection by security products. Thus far, the malicious activity has impacted over 100 devices in multiple countries, including Japan, Taiwan, Canada, and the United States.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/11/22/diamond-sleet-supply-chain-compromise-distributes-a-modified-cyberlink-installer/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft Threat Intelligence",
+                "relation": "has uncovered",
+                "object": "a supply chain attack"
+            },
+            {
+                "subject": "a supply chain attack",
+                "relation": "by",
+                "object": "Diamond Sleet (ZINC)"
+            },
+            {
+                "subject": "Diamond Sleet (ZINC)",
+                "relation": "is based in",
+                "object": "North Korea"
+            },
+            {
+                "subject": "Diamond Sleet (ZINC)",
+                "relation": "involving",
+                "object": "a malicious variant of an application developed by CyberLink Corp."
+            },
+            {
+                "subject": "CyberLink Corp.",
+                "relation": "is a",
+                "object": "software company that develops multimedia software products"
+            },
+            {
+                "subject": "malicious file",
+                "relation": "is",
+                "object": "a legitimate CyberLink application installer modified to include malicious code"
+            },
+            {
+                "subject": "malicious code",
+                "relation": "downloads, decrypts, and loads",
+                "object": "a second-stage payload"
+            },
+            {
+                "subject": "The file",
+                "relation": "was signed using",
+                "object": "a valid certificate issued to CyberLink Corp."
+            },
+            {
+                "subject": "The file",
+                "relation": "is hosted on",
+                "object": "legitimate update infrastructure owned by CyberLink"
+            },
+            {
+                "subject": "The file",
+                "relation": "includes checks to",
+                "object": "limit the time window for execution and evade detection by security products"
+            },
+            {
+                "subject": "The malicious activity",
+                "relation": "has impacted",
+                "object": "over 100 devices in multiple countries"
+            },
+            {
+                "subject": "impacted countries",
+                "relation": "include",
+                "object": "Japan"
+            },
+            {
+                "subject": "impacted countries",
+                "relation": "include",
+                "object": "Taiwan"
+            },
+            {
+                "subject": "impacted countries",
+                "relation": "include",
+                "object": "Canada"
+            },
+            {
+                "subject": "impacted countries",
+                "relation": "include",
+                "object": "the United States"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1264,
+                "cost": 0.01264
+            },
+            "output": {
+                "tokens": 511,
+                "cost": 0.01533
+            },
+            "total": {
+                "tokens": 1775,
+                "cost": 0.027970000000000002
+            }
+        },
+        "time": 25.287646532058716,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/Microsoft/diamond-sleet-QD1-YbL.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Microsoft: teamcity-cve.json",
+                    0.12371439124374012
+                ],
+                [
+                    "Microsoft: north-korean.json",
+                    0.12356489440043357
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 0,
+                "fn": 2,
+                "precision": 1.0,
+                "recall": 0.8823529411764706,
+                "f1": 0.9375
+            },
+            "matched_list": [
+                [
+                    [
+                        "Microsoft Threat Intelligence",
+                        "has uncovered",
+                        "a supply chain attack"
+                    ],
+                    [
+                        "Microsoft Threat Intelligence",
+                        "has uncovered",
+                        "a supply chain attack"
+                    ]
+                ],
+                [
+                    [
+                        "a supply chain attack",
+                        "by",
+                        "Diamond Sleet (ZINC)"
+                    ],
+                    [
+                        "Diamond Sleet (ZINC)",
+                        "involves in",
+                        "a supply chain attack"
+                    ]
+                ],
+                [
+                    [
+                        "Diamond Sleet (ZINC)",
+                        "is based in",
+                        "North Korea"
+                    ],
+                    [
+                        "the threat actor Diamond Sleet (ZINC)",
+                        "is based in",
+                        "North Korea"
+                    ]
+                ],
+                [
+                    [
+                        "Diamond Sleet (ZINC)",
+                        "involving",
+                        "a malicious variant of an application developed by CyberLink Corp."
+                    ],
+                    [
+                        "a malicious variant",
+                        "is of",
+                        "an application developed by CyberLink Corp."
+                    ]
+                ],
+                [
+                    [
+                        "CyberLink Corp.",
+                        "is a",
+                        "software company that develops multimedia software products"
+                    ],
+                    [
+                        "CyberLink Corp.",
+                        "develops",
+                        "multimedia software products"
+                    ]
+                ],
+                [
+                    [
+                        "malicious file",
+                        "is",
+                        "a legitimate CyberLink application installer modified to include malicious code"
+                    ],
+                    [
+                        "the malicious file",
+                        "is",
+                        "a legitimate CyberLink application installer"
+                    ]
+                ],
+                [
+                    [
+                        "malicious code",
+                        "downloads, decrypts, and loads",
+                        "a second-stage payload"
+                    ],
+                    [
+                        "the malicious code",
+                        "downloads, decrypts, and loads",
+                        "a second-stage payload"
+                    ]
+                ],
+                [
+                    [
+                        "The file",
+                        "was signed using",
+                        "a valid certificate issued to CyberLink Corp."
+                    ],
+                    [
+                        "the file",
+                        "is signed using",
+                        "a valid certificate issued to CyberLink Corp."
+                    ]
+                ],
+                [
+                    [
+                        "The file",
+                        "is hosted on",
+                        "legitimate update infrastructure owned by CyberLink"
+                    ],
+                    [
+                        "the file",
+                        "is hosted on",
+                        "legitimate update infrastructure owned by CyberLink"
+                    ]
+                ],
+                [
+                    [
+                        "The file",
+                        "includes checks to",
+                        "limit the time window for execution and evade detection by security products"
+                    ],
+                    [
+                        "the file",
+                        "includes checks to",
+                        "limit the time window for execution"
+                    ]
+                ],
+                [
+                    [
+                        "The malicious activity",
+                        "has impacted",
+                        "over 100 devices in multiple countries"
+                    ],
+                    [
+                        "the malicious activity",
+                        "has impacted",
+                        "over 100 devices in multiple countries"
+                    ]
+                ],
+                [
+                    [
+                        "impacted countries",
+                        "include",
+                        "Japan"
+                    ],
+                    [
+                        "the countries impacted",
+                        "include",
+                        "Japan, Taiwan, Canada, and the United States"
+                    ]
+                ],
+                [
+                    [
+                        "impacted countries",
+                        "include",
+                        "Taiwan"
+                    ],
+                    [
+                        "the countries impacted",
+                        "include",
+                        "Japan, Taiwan, Canada, and the United States"
+                    ]
+                ],
+                [
+                    [
+                        "impacted countries",
+                        "include",
+                        "Canada"
+                    ],
+                    [
+                        "the countries impacted",
+                        "include",
+                        "Japan, Taiwan, Canada, and the United States"
+                    ]
+                ],
+                [
+                    [
+                        "impacted countries",
+                        "include",
+                        "the United States"
+                    ],
+                    [
+                        "the countries impacted",
+                        "include",
+                        "Japan, Taiwan, Canada, and the United States"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "the malicious file",
+                    "has been modified to",
+                    "include malicious code"
+                ],
+                [
+                    "the file",
+                    "evades",
+                    "detection by security products"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

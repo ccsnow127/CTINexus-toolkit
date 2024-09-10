@@ -1,0 +1,107 @@
+{
+    "CTI": "Conti can arrive in the system through BazarLoader, which is delivered via phishing emails containing a Google Drive link that downloads the malware.Alternatively, the ransomware can arrive via exploiting the the FortiGate firewall vulnerabilities CVE-2018-13379 and CVE-2018-13374. After successfully exploiting the application, the ransomware deploys Cobalt Strike to gain a foothold on the system. Conti can also arrive as a result of the exploitation of the ProxyShell Microsoft Exchange vulnerabilities. The Conti group uses tools such as Whoami, Nltest, and Net. These tools give the operators information about where they are in the system, and what rights and permissions they have. Since the operators employ double extortion tactics, they actively look for files to exfiltrate in the discovery stage. The threat actors use tools such as ShareFinder to identify the shares needed for exfiltration and ransomware deployment. Although the group mostly relies on finding the domain admin credentials to gain full access to the domain, they may also use a couple of exploits like Zerologon (CVE-2020-1472) and PrintNightmare (CVE-2021-1675), to elevate their privilege and further strengthen their foothold in the network.",
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Conti",
+                "relation": "can arrive through",
+                "object": "BazarLoader"
+            },
+            {
+                "subject": "BazarLoader",
+                "relation": "is delivered via",
+                "object": "phishing emails"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "contain",
+                "object": "a Google Drive link"
+            },
+            {
+                "subject": "a Google Drive link",
+                "relation": "downloads",
+                "object": "the malware"
+            },
+            {
+                "subject": "the ransomware",
+                "relation": "can arrive via exploiting",
+                "object": "the FortiGate firewall vulnerabilities CVE-2018-13379 and CVE-2018-13374"
+            },
+            {
+                "subject": "the ransomware",
+                "relation": "deploys",
+                "object": "Cobalt Strike"
+            },
+            {
+                "subject": "Cobalt Strike",
+                "relation": "is used to",
+                "object": "gain a foothold on the system"
+            },
+            {
+                "subject": "Conti",
+                "relation": "can also arrive as a result of the exploitation of",
+                "object": "the ProxyShell Microsoft Exchange vulnerabilities"
+            },
+            {
+                "subject": "The Conti group",
+                "relation": "uses tools such as",
+                "object": "Whoami, Nltest, and Net"
+            },
+            {
+                "subject": "These tools",
+                "relation": "give information about",
+                "object": "where they are in the system, and what rights and permissions they have"
+            },
+            {
+                "subject": "The operators",
+                "relation": "employ",
+                "object": "double extortion tactics"
+            },
+            {
+                "subject": "The threat actors",
+                "relation": "use tools such as",
+                "object": "ShareFinder"
+            },
+            {
+                "subject": "ShareFinder",
+                "relation": "is used to identify",
+                "object": "the shares needed for exfiltration and ransomware deployment"
+            },
+            {
+                "subject": "The group",
+                "relation": "relies on",
+                "object": "finding the domain admin credentials"
+            },
+            {
+                "subject": "The group",
+                "relation": "may also use",
+                "object": "exploits like Zerologon (CVE-2020-1472) and PrintNightmare (CVE-2021-1675)"
+            },
+            {
+                "subject": "Zerologon (CVE-2020-1472) and PrintNightmare (CVE-2021-1675)",
+                "relation": "are used to",
+                "object": "elevate their privilege"
+            }
+        ],
+        "triples_count": 16,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1282,
+                "cost": 0.012820000000000002
+            },
+            "output": {
+                "tokens": 509,
+                "cost": 0.01527
+            },
+            "total": {
+                "tokens": 1791,
+                "cost": 0.028090000000000004
+            }
+        },
+        "time": 15.76972770690918,
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-conti",
+        "prompt_file": "dataset/prompt_set/trendmicro/Conti-Q3-7Nb.jinja",
+        "prompt_template": "Q3.jinja"
+    }
+}

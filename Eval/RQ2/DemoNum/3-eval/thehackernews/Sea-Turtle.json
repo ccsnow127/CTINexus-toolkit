@@ -1,0 +1,325 @@
+{
+    "CTI": {
+        "text": "Sea Turtle, also known by the names Cosmic Wolf, Marbled Dust (formerly Silicon), Teal Kurma, and UNC1326, was first documented by Cisco Talos in April 2019, detailing state-sponsored attacks targeting public and private entities in the Middle East and North Africa. Activities associated with the group are believed to have been ongoing since January 2017, primarily leveraging DNS hijacking to redirect prospective targets attempting to query a specific domain to an actor-controlled server capable of harvesting their credentials. Then last month, the adversary was revealed to be using a simple reverse TCP shell for Linux (and Unix) systems called SnappyTCP in attacks carried out between 2021 and 2023, according to the PricewaterhouseCoopers (PwC) Threat Intelligence team. The web shell is a simple reverse TCP shell for Linux/Unix that has basic [command-and-control] capabilities, and is also likely used for establishing persistence",
+        "link": "https://thehackernews.com/2024/01/sea-turtle-cyber-espionage-campaign.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Sea Turtle",
+                "relation": "also known by",
+                "object": "Cosmic Wolf"
+            },
+            {
+                "subject": "Sea Turtle",
+                "relation": "also known by",
+                "object": "Marbled Dust"
+            },
+            {
+                "subject": "Sea Turtle",
+                "relation": "also known by",
+                "object": "Teal Kurma"
+            },
+            {
+                "subject": "Sea Turtle",
+                "relation": "also known by",
+                "object": "UNC1326"
+            },
+            {
+                "subject": "Sea Turtle",
+                "relation": "targeting",
+                "object": "public and private entities in the Middle East and North Africa"
+            },
+            {
+                "subject": "Sea Turtle",
+                "relation": "primarily leveraging",
+                "object": "DNS hijacking"
+            },
+            {
+                "subject": "Sea Turtle",
+                "relation": "redirect",
+                "object": "prospective targets to an actor-controlled server"
+            },
+            {
+                "subject": "an actor-controlled server",
+                "relation": "capable of",
+                "object": "harvesting their credentials"
+            },
+            {
+                "subject": "Sea Turtle",
+                "relation": "using",
+                "object": "SnappyTCP"
+            },
+            {
+                "subject": "SnappyTCP",
+                "relation": "is a",
+                "object": "simple reverse TCP shell for Linux/Unix"
+            },
+            {
+                "subject": "SnappyTCP",
+                "relation": "has",
+                "object": "basic command-and-control capabilities"
+            },
+            {
+                "subject": "SnappyTCP",
+                "relation": "used for",
+                "object": "establishing persistence"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1757,
+                "cost": 0.017570000000000002
+            },
+            "output": {
+                "tokens": 304,
+                "cost": 0.00912
+            },
+            "total": {
+                "tokens": 2061,
+                "cost": 0.026690000000000002
+            }
+        },
+        "time": 16.862786531448364,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/thehackernews/Sea-Turtle-QD1-eEq.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "darkreading: RemcosRAT.json",
+                    0.10034432360339703
+                ],
+                [
+                    "darkreading: SpectralBlur.json",
+                    0.10212992929257603
+                ],
+                [
+                    "threatPost: zuorat.json",
+                    0.11145411180700306
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 11,
+                "fp": 1,
+                "fn": 4,
+                "precision": 0.9166666666666666,
+                "recall": 0.7333333333333333,
+                "f1": 0.8148148148148148
+            },
+            "matched_list": [
+                [
+                    [
+                        "Sea Turtle",
+                        "also known by",
+                        "Cosmic Wolf"
+                    ],
+                    [
+                        "Sea Turtle",
+                        "is also known as",
+                        "Cosmic Wolf"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Sea Turtle",
+                        "also known by",
+                        "Marbled Dust"
+                    ],
+                    [
+                        "Sea Turtle",
+                        "is also known as",
+                        "Marbled Dust"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Sea Turtle",
+                        "also known by",
+                        "Teal Kurma"
+                    ],
+                    [
+                        "Sea Turtle",
+                        "is also known as",
+                        "Teal Kurma"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Sea Turtle",
+                        "also known by",
+                        "UNC1326"
+                    ],
+                    [
+                        "Sea Turtle",
+                        "is also known as",
+                        "UNC1326"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Sea Turtle",
+                        "targeting",
+                        "public and private entities in the Middle East and North Africa"
+                    ],
+                    [
+                        "Sea Turtle",
+                        "targeted",
+                        "public entities"
+                    ],
+                    [
+                        1.0,
+                        0.5062924792432482
+                    ]
+                ],
+                [
+                    [
+                        "Sea Turtle",
+                        "primarily leveraging",
+                        "DNS hijacking"
+                    ],
+                    [
+                        "Sea Turtle",
+                        "used",
+                        "DNS hijacking"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "an actor-controlled server",
+                        "capable of",
+                        "harvesting their credentials"
+                    ],
+                    [
+                        "actor-controlled server",
+                        "is capable of",
+                        "harvesting credentials"
+                    ],
+                    [
+                        0.819082523122457,
+                        0.9269750861888277
+                    ]
+                ],
+                [
+                    [
+                        "Sea Turtle",
+                        "using",
+                        "SnappyTCP"
+                    ],
+                    [
+                        "Sea Turtle",
+                        "used",
+                        "SnappyTCP"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "SnappyTCP",
+                        "is a",
+                        "simple reverse TCP shell for Linux/Unix"
+                    ],
+                    [
+                        "SnappyTCP",
+                        "is",
+                        "a simple reverse TCP shell for Linux/Unix"
+                    ],
+                    [
+                        1.0,
+                        0.9606182107174707
+                    ]
+                ],
+                [
+                    [
+                        "SnappyTCP",
+                        "has",
+                        "basic command-and-control capabilities"
+                    ],
+                    [
+                        "SnappyTCP",
+                        "has",
+                        "[command-and-control] capabilities"
+                    ],
+                    [
+                        1.0,
+                        0.8583881035367534
+                    ]
+                ],
+                [
+                    [
+                        "SnappyTCP",
+                        "used for",
+                        "establishing persistence"
+                    ],
+                    [
+                        "SnappyTCP",
+                        "is used for",
+                        "establishing persistence"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Sea Turtle",
+                    "redirect",
+                    "prospective targets to an actor-controlled server"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Sea Turtle",
+                    "is also known as",
+                    "formerly Silicon"
+                ],
+                [
+                    "Sea Turtle",
+                    "targeted",
+                    "private entities"
+                ],
+                [
+                    "targeted entities",
+                    "locate in",
+                    "the Middle East and North Africa"
+                ],
+                [
+                    "DNS hijacking",
+                    "redirects",
+                    "to actor-controlled server"
+                ]
+            ]
+        }
+    }
+}

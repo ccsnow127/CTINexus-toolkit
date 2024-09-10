@@ -1,0 +1,77 @@
+{
+    "CTI": "We discovered a recent WhatsApp phishing campaign through our telemetry that led to banking trojan activity. In this campaign, the attacker shares a malicious APK file through WhatsApp with a message asking users to enter sensitive information in the app. The widely circulated fake banking message states \u201cYour [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You.\u201d and includes a APK file named [redacted]-BANK[.]apk. Upon investigation, we discovered that the APK file was malicious and interacting with it installs a fraudulent application on the victim device. The installed app impersonates a legitimate bank located in India and disguises itself as the bank's official Know Your Customer (KYC) application to trick users into submitting their sensitive information, despite this particular banking organization not being affiliated with an official KYC-related app. This information is then sent to a command and control (C2) server, as well as to the attacker's hard-coded phone number used in SMS functionality.",
+    "IE": {
+        "triplets": [
+            {
+                "subject": "attacker",
+                "relation": "shares",
+                "object": "a malicious APK file through WhatsApp"
+            },
+            {
+                "subject": "malicious APK file",
+                "relation": "asks users to enter",
+                "object": "sensitive information in the app"
+            },
+            {
+                "subject": "fake banking message",
+                "relation": "states",
+                "object": "Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You."
+            },
+            {
+                "subject": "APK file",
+                "relation": "was discovered to be",
+                "object": "malicious"
+            },
+            {
+                "subject": "interacting with APK file",
+                "relation": "installs",
+                "object": "a fraudulent application on the victim device"
+            },
+            {
+                "subject": "installed app",
+                "relation": "impersonates",
+                "object": "a legitimate bank located in India"
+            },
+            {
+                "subject": "installed app",
+                "relation": "disguises itself as",
+                "object": "the bank's official Know Your Customer (KYC) application"
+            },
+            {
+                "subject": "users",
+                "relation": "submit",
+                "object": "their sensitive information"
+            },
+            {
+                "subject": "information",
+                "relation": "is sent to",
+                "object": "a command and control (C2) server"
+            },
+            {
+                "subject": "information",
+                "relation": "is sent to",
+                "object": "the attacker's hard-coded phone number used in SMS functionality"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1239,
+                "cost": 0.012390000000000002
+            },
+            "output": {
+                "tokens": 306,
+                "cost": 0.00918
+            },
+            "total": {
+                "tokens": 1545,
+                "cost": 0.021570000000000002
+            }
+        },
+        "time": 10.783240556716919,
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/11/20/social-engineering-attacks-lure-indian-users-to-install-android-banking-trojans/",
+        "prompt_file": "dataset/prompt_set/Microsoft/lure-indian-users-Q3-IRP.jinja",
+        "prompt_template": "Q3.jinja"
+    }
+}

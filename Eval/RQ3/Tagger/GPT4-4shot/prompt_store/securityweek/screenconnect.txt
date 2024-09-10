@@ -1,0 +1,132 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'threat actors', 'relation': 'have started exploiting', 'object': 'recently resolved vulnerabilities in ConnectWise ScreenConnect'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-1709', 'relation': 'is a', 'object': 'an authentication bypass flaw'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-1708', 'relation': 'is a', 'object': 'a path traversal bug'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-1709', 'relation': 'has', 'object': 'CVSS score of 10'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-1708', 'relation': 'has', 'object': 'CVSS score of 8.4'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ConnectWise', 'relation': 'disclosed', 'object': 'the security defects'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a PoC exploit targeting the flaws', 'relation': 'was made public', 'object': 'last week'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'threat actors', 'relation': 'started exploiting', 'object': 'them for malware delivery'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'cybercrime groups', 'relation': 'have started exploiting', 'object': 'the flaws'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Black Basta', 'relation': 'is exploiting', 'object': 'the flaws'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Bl00dy ransomware groups', 'relation': 'is exploiting', 'object': 'the flaws'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Black Basta', 'relation': 'performed', 'object': 'reconnaissance, discovery, and elevation of privilege activities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Black Basta', 'relation': 'deployed', 'object': 'Cobalt Strike payloads'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'searched for', 'object': "members of the 'domain admin' group"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'added', 'object': 'new accounts to the administrator group'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'deployed scripts to identify', 'object': 'machines that recently connected to the Active Directory environment'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

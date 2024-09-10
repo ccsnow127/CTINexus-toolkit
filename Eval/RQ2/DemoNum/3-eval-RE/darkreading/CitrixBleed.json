@@ -1,0 +1,192 @@
+{
+    "CTI": {
+        "text": "Since at least August, attackers have been exploiting CVE-2023-4966 (aka CitrixBleed), a 7.5 high-severity vulnerability affecting Citrix Systems' NetScaler ADC and Gateway networking products. Even after it was brought to light in October, many organizations have struggled to comprehensively shore up their systems. One such organization appears to be Comcast Xfinity. On Monday, the cable giant disclosed a CitrixBleed-enabled breach of its customer data, including usernames and hashed passwords, and, for some, names, contact information, last four digits of Social Security numbers, dates of birth, and security questions and answers.",
+        "link": "https://www.darkreading.com/cyberattacks-data-breaches/comcast-xfinity-breached-citrix-bleed-35m-customers"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "attackers",
+                "relation": "have been exploiting",
+                "object": "CVE-2023-4966"
+            },
+            {
+                "subject": "CVE-2023-4966",
+                "relation": "also known as",
+                "object": "CitrixBleed"
+            },
+            {
+                "subject": "CVE-2023-4966",
+                "relation": "is a vulnerability affecting",
+                "object": "Citrix Systems' NetScaler ADC and Gateway networking products"
+            },
+            {
+                "subject": "CVE-2023-4966",
+                "relation": "has a severity of",
+                "object": "7.5 high-severity"
+            },
+            {
+                "subject": "organizations",
+                "relation": "struggled to",
+                "object": "shore up their systems"
+            },
+            {
+                "subject": "Comcast Xfinity",
+                "relation": "disclosed",
+                "object": "a CitrixBleed-enabled breach of its customer data"
+            },
+            {
+                "subject": "the breach",
+                "relation": "includes",
+                "object": "usernames and hashed passwords"
+            },
+            {
+                "subject": "the breach",
+                "relation": "includes for some",
+                "object": "names, contact information, last four digits of Social Security numbers, dates of birth, and security questions and answers"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1780,
+                "cost": 0.0178
+            },
+            "output": {
+                "tokens": 314,
+                "cost": 0.00942
+            },
+            "total": {
+                "tokens": 2094,
+                "cost": 0.02722
+            }
+        },
+        "time": 14.312052249908447,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/darkreading/CitrixBleed-QD1-5Ej.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "symantec: Clop.json",
+                    0.08915563108239999
+                ],
+                [
+                    "Unit42: Citrix-Bleed.json",
+                    0.1809072876228259
+                ],
+                [
+                    "BleepingComputer: citrix.json",
+                    0.19869290266871037
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.875,
+                "recall": 1.0,
+                "f1": 0.9333333333333333
+            },
+            "matched_list": [
+                [
+                    [
+                        "attackers",
+                        "have been exploiting",
+                        "CVE-2023-4966"
+                    ],
+                    [
+                        "attackers",
+                        "have been exploiting",
+                        "CVE-2023-4966"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-4966",
+                        "also known as",
+                        "CitrixBleed"
+                    ],
+                    [
+                        "CVE-2023-4966",
+                        "affects",
+                        "Citrix Systems' NetScaler ADC and Gateway networking products"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-4966",
+                        "is a vulnerability affecting",
+                        "Citrix Systems' NetScaler ADC and Gateway networking products"
+                    ],
+                    [
+                        "CVE-2023-4966",
+                        "is also known as",
+                        "CitrixBleed"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-4966",
+                        "has a severity of",
+                        "7.5 high-severity"
+                    ],
+                    [
+                        "CVE-2023-4966",
+                        "is",
+                        "a 7.5 high-severity vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "Comcast Xfinity",
+                        "disclosed",
+                        "a CitrixBleed-enabled breach of its customer data"
+                    ],
+                    [
+                        "Comcast Xfinity",
+                        "disclosed",
+                        "a CitrixBleed-enabled breach of its customer data"
+                    ]
+                ],
+                [
+                    [
+                        "the breach",
+                        "includes",
+                        "usernames and hashed passwords"
+                    ],
+                    [
+                        "the breach",
+                        "includes",
+                        "usernames and hashed passwords"
+                    ]
+                ],
+                [
+                    [
+                        "the breach",
+                        "includes for some",
+                        "names, contact information, last four digits of Social Security numbers, dates of birth, and security questions and answers"
+                    ],
+                    [
+                        "the breach",
+                        "includes",
+                        "names, contact information, last four digits of Social Security numbers, dates of birth, and security questions and answers"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "organizations",
+                    "struggled to",
+                    "shore up their systems"
+                ]
+            ],
+            "not_recall_list": []
+        }
+    }
+}

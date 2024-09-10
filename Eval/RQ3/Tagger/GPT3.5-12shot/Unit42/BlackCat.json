@@ -1,0 +1,305 @@
+{
+    "CTI": {
+        "text": "BlackCat operators recently announced new updates to their tooling, including a utility called Munchkin that allows attackers to propagate the BlackCat payload to remote machines and shares on a victim organization network. For the past two years, the BlackCat ransomware operators have continued to evolve and iterate their tooling as part of their ransomware-as-a-service (RaaS) business model. As part of a recent investigation, Unit 42 researchers have acquired an instance of Munchkin that is unique, in that it is loaded in a customized Alpine virtual machine (VM). This new tactic of leveraging a customized VM to deploy malware has been gaining traction in recent months, allowing ransomware threat actors to use VMs to circumvent security solutions in deploying their malware payloads.",
+        "link": "https://unit42.paloaltonetworks.com/blackcat-ransomware-releases-new-utility-munchkin/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "BlackCat operators",
+                "relation": "announced updates to",
+                "object": "their tooling"
+            },
+            {
+                "subject": "Munchkin",
+                "relation": "allows attackers to propagate",
+                "object": "the BlackCat payload"
+            },
+            {
+                "subject": "Munchkin",
+                "relation": "targets",
+                "object": "remote machines and shares"
+            },
+            {
+                "subject": "Munchkin",
+                "relation": "is loaded in",
+                "object": "a customized Alpine virtual machine (VM)"
+            },
+            {
+                "subject": "BlackCat ransomware operators",
+                "relation": "evolve and iterate",
+                "object": "their tooling"
+            },
+            {
+                "subject": "BlackCat ransomware operators",
+                "relation": "use",
+                "object": "ransomware-as-a-service (RaaS) business model"
+            },
+            {
+                "subject": "customized VM",
+                "relation": "to deploy",
+                "object": "malware"
+            },
+            {
+                "subject": "ransomware threat actors",
+                "relation": "use VMs to",
+                "object": "circumvent security solutions"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2909,
+                "cost": 0.02909
+            },
+            "output": {
+                "tokens": 221,
+                "cost": 0.0066300000000000005
+            },
+            "total": {
+                "tokens": 3130,
+                "cost": 0.03572
+            }
+        },
+        "time": 6.3591132164001465,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Unit42/BlackCat-QD1-cmt.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-yanluowang.json",
+                    0.10992403259928639
+                ],
+                [
+                    "AVERTIUM-mallox.json",
+                    0.1115105093394784
+                ],
+                [
+                    "AVERTIUM-royal-ransomware.json",
+                    0.11999072408914674
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "BlackCat operators",
+                    "class": "Attacker"
+                },
+                "relation": "announced updates to",
+                "object": {
+                    "text": "their tooling",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Munchkin",
+                    "class": "Malware"
+                },
+                "relation": "allows attackers to propagate",
+                "object": {
+                    "text": "the BlackCat payload",
+                    "class": "Malware Characteristic:Payload"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Munchkin",
+                    "class": "Malware"
+                },
+                "relation": "targets",
+                "object": {
+                    "text": "remote machines and shares",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Munchkin",
+                    "class": "Malware"
+                },
+                "relation": "is loaded in",
+                "object": {
+                    "text": "a customized Alpine virtual machine (VM)",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "BlackCat ransomware operators",
+                    "class": "Attacker"
+                },
+                "relation": "evolve and iterate",
+                "object": {
+                    "text": "their tooling",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "BlackCat ransomware operators",
+                    "class": "Attacker"
+                },
+                "relation": "use",
+                "object": {
+                    "text": "ransomware-as-a-service (RaaS) business model",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "customized VM",
+                    "class": "Tool"
+                },
+                "relation": "to deploy",
+                "object": {
+                    "text": "malware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "ransomware threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "use VMs to",
+                "object": {
+                    "text": "circumvent security solutions",
+                    "class": "Capability"
+                }
+            }
+        ],
+        "response_time": 8.771728038787842,
+        "Demo_num": 12,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT3.5-12shot/prompt_store/Unit42/BlackCat.txt",
+        "model_usage": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1655,
+                "cost": 0.0008275
+            },
+            "output": {
+                "tokens": 390,
+                "cost": 0.000585
+            },
+            "total": {
+                "tokens": 2045,
+                "cost": 0.0014125000000000001
+            }
+        },
+        "Eval": {
+            "correct": 13,
+            "incorrect": 3,
+            "TP": 13,
+            "TN": 0,
+            "FP": 2,
+            "FN": 1,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 5,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Attacker": {
+                    "TP": 4,
+                    "TN": 12,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 15,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 4,
+                    "TN": 11,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 15,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 15,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 15,
+                    "FP": 1,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 6
+        }
+    }
+}

@@ -1,0 +1,90 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Unit 42 researchers', 'relation': 'discovered', 'object': 'campaigns targeting job-seeking activities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'campaigns', 'relation': 'linked to', 'object': 'state-sponsored threat actors associated with DPRK'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Contagious Interview', 'relation': 'posed by threat actors as', 'object': 'employers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Contagious Interview', 'relation': 'lures software developers into installing', 'object': 'malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malware', 'relation': 'creates potential for', 'object': 'various types of theft'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Contagious Interview', 'relation': 'is run by', 'object': 'a North Korea state-sponsored threat actor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Wagemole', 'relation': 'seeks unauthorized employment in', 'object': 'organizations based in the US and other parts of the world'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Wagemole', 'relation': 'has potential for', 'object': 'financial gain and espionage'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Wagemole', 'relation': 'is a', 'object': 'North Korea state-sponsored threat'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Activity from both campaigns', 'relation': 'remains', 'object': 'an ongoing active threat'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

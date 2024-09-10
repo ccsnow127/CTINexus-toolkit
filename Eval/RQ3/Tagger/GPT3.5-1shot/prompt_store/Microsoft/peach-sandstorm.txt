@@ -1,0 +1,118 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'is tracked as', 'object': 'HOLMIUM'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'is', 'object': 'an Iranian nation-state threat actor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'pursued organizations in', 'object': 'the satellite sector'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'pursued organizations in', 'object': 'the defense sector'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'pursued organizations in', 'object': 'the pharmaceutical sector'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'used', 'object': 'password spray activity'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'password spray activity', 'relation': 'targeted', 'object': 'thousands of organizations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Microsoft', 'relation': 'observes', 'object': 'follow-on intrusion activity'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'initial access campaign', 'relation': 'facilitates', 'object': 'intelligence collection'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'intelligence collection', 'relation': 'supports', 'object': 'Iranian state interests'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'successfully authenticated to', 'object': 'an account'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'used', 'object': 'publicly available tools'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'used', 'object': 'custom tools'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'executed', 'object': 'discovery'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'executed', 'object': 'persistence'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'executed', 'object': 'lateral movement'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Peach Sandstorm', 'relation': 'observed exfiltrating data from', 'object': 'the compromised environment'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

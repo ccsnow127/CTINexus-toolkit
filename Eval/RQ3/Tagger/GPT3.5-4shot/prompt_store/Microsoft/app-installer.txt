@@ -1,0 +1,136 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Storm-0569', 'relation': 'is a', 'object': 'financially motivated actor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Storm-1113', 'relation': 'is a', 'object': 'financially motivated actor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Sangria Tempest', 'relation': 'is a', 'object': 'financially motivated actor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Storm-1674', 'relation': 'is a', 'object': 'financially motivated actor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat actors', 'relation': 'utilize', 'object': 'the ms-appinstaller URI scheme'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat actors', 'relation': 'utilize', 'object': 'App Installer to distribute malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Microsoft', 'relation': 'disabled', 'object': 'the ms-appinstaller protocol handler'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The ms-appinstaller protocol handler', 'relation': 'is used as', 'object': 'an access vector for malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat actors', 'relation': 'abuse', 'object': 'the ms-appinstaller protocol handler'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Access vector for malware', 'relation': 'may lead to', 'object': 'ransomware distribution'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cybercriminals', 'relation': 'are selling', 'object': 'a malware kit as a service'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Malware kit', 'relation': 'abuses', 'object': 'the MSIX file format'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Malware kit', 'relation': 'abuses', 'object': 'ms-appinstaller protocol handler'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat actors', 'relation': 'distribute', 'object': 'signed malicious MSIX application packages'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Signed malicious MSIX application packages', 'relation': 'accessed through', 'object': 'malicious advertisements'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Signed malicious MSIX application packages', 'relation': 'for', 'object': 'legitimate popular software'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Storm-1674', 'relation': 'uses phishing through', 'object': 'Microsoft Teams'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

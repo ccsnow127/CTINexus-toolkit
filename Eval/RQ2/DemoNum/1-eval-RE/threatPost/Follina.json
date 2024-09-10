@@ -1,0 +1,218 @@
+{
+    "CTI": {
+        "text": "Researchers have added state-sponsored hackers to the list of adversaries attempting to exploit Microsoft\u2019s now-patched Follina vulnerability. According to researchers at Proofpoint, state-sponsored hackers have attempted to abuse the Follina vulnerability in Microsoft Office, aiming an email-based exploit at U.S. and E.U. government targets via phishing campaigns. Proofpoint researchers spotted the attacks and believe the adversaries have ties to a government, which it did not identify. Attacks consist of campaigns targeting victims U.S. and E.U. government workers. Malicious emails contain fake recruitment pitches promising a 20 percent boost in salaries and entice recipients to download an accompanying attachment. The malicious attachment targets the remote code execution bug CVE-2022-30190, dubbed Follina.",
+        "link": "https://threatpost.com/follina-exploited-by-state-sponsored-hackers/179890/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "state-sponsored hackers",
+                "relation": "added to",
+                "object": "list of adversaries attempting to exploit Microsoft\u2019s Follina vulnerability"
+            },
+            {
+                "subject": "state-sponsored hackers",
+                "relation": "attempt to abuse",
+                "object": "Follina vulnerability in Microsoft Office"
+            },
+            {
+                "subject": "Follina vulnerability",
+                "relation": "aimed at",
+                "object": "U.S. and E.U. government targets"
+            },
+            {
+                "subject": "state-sponsored hackers",
+                "relation": "use",
+                "object": "email-based exploit"
+            },
+            {
+                "subject": "attacks",
+                "relation": "consist of",
+                "object": "campaigns targeting U.S. and E.U. government workers"
+            },
+            {
+                "subject": "malicious emails",
+                "relation": "contain",
+                "object": "fake recruitment pitches"
+            },
+            {
+                "subject": "fake recruitment pitches",
+                "relation": "promise",
+                "object": "20 percent boost in salaries"
+            },
+            {
+                "subject": "recipients",
+                "relation": "enticed to download",
+                "object": "an accompanying attachment"
+            },
+            {
+                "subject": "the malicious attachment",
+                "relation": "targets",
+                "object": "remote code execution bug CVE-2022-30190, dubbed Follina"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 691,
+                "cost": 0.00691
+            },
+            "output": {
+                "tokens": 268,
+                "cost": 0.00804
+            },
+            "total": {
+                "tokens": 959,
+                "cost": 0.014950000000000001
+            }
+        },
+        "time": 7.324010372161865,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/threatPost/Follina-QD1-PWE.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.159133992947919
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 0,
+                "fn": 2,
+                "precision": 1.0,
+                "recall": 0.8181818181818182,
+                "f1": 0.9
+            },
+            "matched_list": [
+                [
+                    [
+                        "state-sponsored hackers",
+                        "added to",
+                        "list of adversaries attempting to exploit Microsoft\u2019s Follina vulnerability"
+                    ],
+                    [
+                        "state-sponsored hackers",
+                        "added to",
+                        "list of adversaries attempting to exploit Follina vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "state-sponsored hackers",
+                        "attempt to abuse",
+                        "Follina vulnerability in Microsoft Office"
+                    ],
+                    [
+                        "state-sponsored hackers",
+                        "attempted to abuse",
+                        "the Follina vulnerability in Microsoft Office"
+                    ]
+                ],
+                [
+                    [
+                        "Follina vulnerability",
+                        "aimed at",
+                        "U.S. and E.U. government targets"
+                    ],
+                    [
+                        "state-sponsored hackers",
+                        "aimed exploit at",
+                        "U.S. and E.U. government targets"
+                    ]
+                ],
+                [
+                    [
+                        "state-sponsored hackers",
+                        "use",
+                        "email-based exploit"
+                    ],
+                    [
+                        "the attacks",
+                        "used",
+                        "email-based exploit"
+                    ]
+                ],
+                [
+                    [
+                        "attacks",
+                        "consist of",
+                        "campaigns targeting U.S. and E.U. government workers"
+                    ],
+                    [
+                        "Proofpoint researchers",
+                        "spotted",
+                        "the attacks"
+                    ]
+                ],
+                [
+                    [
+                        "malicious emails",
+                        "contain",
+                        "fake recruitment pitches"
+                    ],
+                    [
+                        "Malicious emails",
+                        "contain",
+                        "fake recruitment pitches"
+                    ]
+                ],
+                [
+                    [
+                        "fake recruitment pitches",
+                        "promise",
+                        "20 percent boost in salaries"
+                    ],
+                    [
+                        "Fake recruitment pitches",
+                        "promise",
+                        "a 20 percent boost in salaries"
+                    ]
+                ],
+                [
+                    [
+                        "recipients",
+                        "enticed to download",
+                        "an accompanying attachment"
+                    ],
+                    [
+                        "recipients",
+                        "enticed to download",
+                        "an accompanying attachment"
+                    ]
+                ],
+                [
+                    [
+                        "the malicious attachment",
+                        "targets",
+                        "remote code execution bug CVE-2022-30190, dubbed Follina"
+                    ],
+                    [
+                        "The malicious attachment",
+                        "targets",
+                        "the remote code execution bug CVE-2022-30190, dubbed Follina"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "adversaries",
+                    "have ties to",
+                    "a government"
+                ],
+                [
+                    "attacks",
+                    "consist of",
+                    "campaigns targeting U.S. and E.U. government workers"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,349 @@
+{
+    "CTI": {
+        "text": "Cybersecurity researchers have discovered a new Apple macOS backdoor called SpectralBlur that overlaps with a known malware family that has been attributed to North Korean threat actors. SpectralBlur is a moderately capable backdoor that can upload/download files, run a shell, update its configuration, delete files, hibernate, or sleep, based on commands issued from the [command-and-control server]. The malware shares similarities with KANDYKORN (aka SockRacket), an advanced implant that functions as a remote access trojan capable of taking control of a compromised host. It's worth noting that the KANDYKORN activity also intersects with another campaign orchestrated by the Lazarus sub-group known as BlueNoroff (aka TA444) which culminates in the deployment of a backdoor referred to as RustBucket and a late-stage payload dubbed ObjCShellz. In recent months, the threat actor has been observed combining disparate pieces of these two infection chains, leveraging RustBucket droppers to deliver KANDYKORN.The latest findings are another sign that North Korean threat actors are increasingly setting their sights on macOS to infiltrate high-value targets, particularly those within the cryptocurrency and the blockchain industries.",
+        "link": "https://thehackernews.com/2024/01/spectralblur-new-macos-backdoor-threat.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Cybersecurity researchers",
+                "relation": "discovered",
+                "object": "a new Apple macOS backdoor called SpectralBlur"
+            },
+            {
+                "subject": "SpectralBlur",
+                "relation": "overlaps with",
+                "object": "a known malware family"
+            },
+            {
+                "subject": "malware family",
+                "relation": "attributed to",
+                "object": "North Korean threat actors"
+            },
+            {
+                "subject": "SpectralBlur",
+                "relation": "is",
+                "object": "a moderately capable backdoor"
+            },
+            {
+                "subject": "SpectralBlur",
+                "relation": "can",
+                "object": "upload/download files, run a shell, update configuration, delete files, hibernate, or sleep"
+            },
+            {
+                "subject": "commands",
+                "relation": "issued from",
+                "object": "[command-and-control server]"
+            },
+            {
+                "subject": "KANDYKORN",
+                "relation": "is",
+                "object": "an advanced implant"
+            },
+            {
+                "subject": "KANDYKORN",
+                "relation": "functions as",
+                "object": "a remote access trojan"
+            },
+            {
+                "subject": "KANDYKORN",
+                "relation": "capable of",
+                "object": "taking control of a compromised host"
+            },
+            {
+                "subject": "KANDYKORN",
+                "relation": "delivered by",
+                "object": "RustBucket droppers"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "observed",
+                "object": "combining disparate pieces of these two infection chains"
+            },
+            {
+                "subject": "North Korean threat actors",
+                "relation": "setting sights on",
+                "object": "macOS to infiltrate high-value targets"
+            },
+            {
+                "subject": "high-value targets",
+                "relation": "particularly within",
+                "object": "the cryptocurrency and the blockchain industries"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1646,
+                "cost": 0.000823
+            },
+            "output": {
+                "tokens": 520,
+                "cost": 0.00078
+            },
+            "total": {
+                "tokens": 2166,
+                "cost": 0.0016029999999999998
+            }
+        },
+        "time": 8.196763753890991,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/thehackernews/SpectralBlur-QD1-tgR.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "thehackernews: UAC-0099.json",
+                    0.1118954837247902
+                ],
+                [
+                    "trendmicro: Earth-Berberoka.json",
+                    0.11517604160779223
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 4,
+                "fn": 12,
+                "precision": 0.6923076923076923,
+                "recall": 0.42857142857142855,
+                "f1": 0.5294117647058824
+            },
+            "matched_list": [
+                [
+                    [
+                        "SpectralBlur",
+                        "overlaps with",
+                        "a known malware family"
+                    ],
+                    [
+                        "SpectralBlur",
+                        "overlaps with",
+                        "a known malware family"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "malware family",
+                        "attributed to",
+                        "North Korean threat actors"
+                    ],
+                    [
+                        "A known malware family",
+                        "attributed to",
+                        "North Korean threat actors"
+                    ],
+                    [
+                        0.8334051206105156,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "SpectralBlur",
+                        "is",
+                        "a moderately capable backdoor"
+                    ],
+                    [
+                        "SpectralBlur",
+                        "is a",
+                        "new Apple macOS backdoor"
+                    ],
+                    [
+                        1.0,
+                        0.5410929751263449
+                    ]
+                ],
+                [
+                    [
+                        "SpectralBlur",
+                        "can",
+                        "upload/download files, run a shell, update configuration, delete files, hibernate, or sleep"
+                    ],
+                    [
+                        "SpectralBlur",
+                        "can",
+                        "upload/download files"
+                    ],
+                    [
+                        1.0,
+                        0.5595832013866989
+                    ]
+                ],
+                [
+                    [
+                        "KANDYKORN",
+                        "functions as",
+                        "a remote access trojan"
+                    ],
+                    [
+                        "KANDYKORN",
+                        "functions as",
+                        "a remote access trojan"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "KANDYKORN",
+                        "capable of",
+                        "taking control of a compromised host"
+                    ],
+                    [
+                        "KANDYKORN",
+                        "functions as",
+                        "a remote access trojan"
+                    ],
+                    [
+                        1.0,
+                        0.47007522342708685
+                    ]
+                ],
+                [
+                    [
+                        "threat actor",
+                        "observed",
+                        "combining disparate pieces of these two infection chains"
+                    ],
+                    [
+                        "Threat actor",
+                        "combining",
+                        "disparate pieces of infection chains"
+                    ],
+                    [
+                        0.7891639651885416,
+                        0.8343516457109916
+                    ]
+                ],
+                [
+                    [
+                        "North Korean threat actors",
+                        "setting sights on",
+                        "macOS to infiltrate high-value targets"
+                    ],
+                    [
+                        "North Korean threat actors",
+                        "setting sights on",
+                        "macOS"
+                    ],
+                    [
+                        1.0,
+                        0.6397172010013122
+                    ]
+                ],
+                [
+                    [
+                        "high-value targets",
+                        "particularly within",
+                        "the cryptocurrency and the blockchain industries"
+                    ],
+                    [
+                        "Targets",
+                        "within",
+                        "cryptocurrency and the blockchain industries"
+                    ],
+                    [
+                        0.5171528857364285,
+                        0.9683574014851856
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Cybersecurity researchers",
+                    "discovered",
+                    "a new Apple macOS backdoor called SpectralBlur"
+                ],
+                [
+                    "commands",
+                    "issued from",
+                    "[command-and-control server]"
+                ],
+                [
+                    "KANDYKORN",
+                    "is",
+                    "an advanced implant"
+                ],
+                [
+                    "KANDYKORN",
+                    "delivered by",
+                    "RustBucket droppers"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "SpectralBlur",
+                    "can",
+                    "run a shell"
+                ],
+                [
+                    "SpectralBlur",
+                    "can",
+                    "update its configuration"
+                ],
+                [
+                    "SpectralBlur",
+                    "can",
+                    "delete files"
+                ],
+                [
+                    "SpectralBlur",
+                    "can",
+                    "hibernate or sleep"
+                ],
+                [
+                    "SpectralBlur",
+                    "issued commands from",
+                    "command-and-control server"
+                ],
+                [
+                    "SpectralBlur",
+                    "shares similarities with",
+                    "KANDYKORN (aka SockRacket)"
+                ],
+                [
+                    "KANDYKORN",
+                    "capable of",
+                    "taking control of a compromised host"
+                ],
+                [
+                    "KANDYKORN activity",
+                    "intersects with",
+                    "BlueNoroff (aka TA444) campaign"
+                ],
+                [
+                    "BlueNoroff",
+                    "known as",
+                    "TA444"
+                ],
+                [
+                    "BlueNoroff",
+                    "culminates in the deployment of",
+                    "RustBucket backdoor"
+                ],
+                [
+                    "RustBucket backdoor",
+                    "deployment culminates in",
+                    "ObjCShellz payload"
+                ],
+                [
+                    "Leverage",
+                    "uses",
+                    "RustBucket droppers to deliver KANDYKORN"
+                ]
+            ]
+        }
+    }
+}

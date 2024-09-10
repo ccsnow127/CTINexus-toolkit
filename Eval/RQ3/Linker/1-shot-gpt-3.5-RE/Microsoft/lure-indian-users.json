@@ -1,0 +1,686 @@
+{
+    "CTI": {
+        "text": "We discovered a recent WhatsApp phishing campaign through our telemetry that led to banking trojan activity. In this campaign, the attacker shares a malicious APK file through WhatsApp with a message asking users to enter sensitive information in the app. The widely circulated fake banking message states \u201cYour [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You.\u201d and includes a APK file named [redacted]-BANK[.]apk. Upon investigation, we discovered that the APK file was malicious and interacting with it installs a fraudulent application on the victim device. The installed app impersonates a legitimate bank located in India and disguises itself as the bank's official Know Your Customer (KYC) application to trick users into submitting their sensitive information, despite this particular banking organization not being affiliated with an official KYC-related app. This information is then sent to a command and control (C2) server, as well as to the attacker's hard-coded phone number used in SMS functionality.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/11/20/social-engineering-attacks-lure-indian-users-to-install-android-banking-trojans/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "the attacker",
+                "relation": "shares",
+                "object": "a malicious APK file through WhatsApp"
+            },
+            {
+                "subject": "the attacker",
+                "relation": "asks",
+                "object": "users to enter sensitive information in the app"
+            },
+            {
+                "subject": "the malicious APK file",
+                "relation": "leads to",
+                "object": "banking trojan activity"
+            },
+            {
+                "subject": "the fake banking message",
+                "relation": "states",
+                "object": "Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You."
+            },
+            {
+                "subject": "[redacted]-BANK[.]apk",
+                "relation": "is",
+                "object": "malicious"
+            },
+            {
+                "subject": "the fraudulent application",
+                "relation": "impersonates",
+                "object": "a legitimate bank located in India"
+            },
+            {
+                "subject": "the fraudulent application",
+                "relation": "disguises itself as",
+                "object": "the bank's official Know Your Customer (KYC) application"
+            },
+            {
+                "subject": "users",
+                "relation": "submit",
+                "object": "their sensitive information"
+            },
+            {
+                "subject": "the information",
+                "relation": "is sent to",
+                "object": "a command and control (C2) server"
+            },
+            {
+                "subject": "the information",
+                "relation": "is sent to",
+                "object": "the attacker's hard-coded phone number"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2587,
+                "cost": 0.02587
+            },
+            "output": {
+                "tokens": 303,
+                "cost": 0.00909
+            },
+            "total": {
+                "tokens": 2890,
+                "cost": 0.034960000000000005
+            }
+        },
+        "time": 9.222443103790283,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Microsoft/lure-indian-users-QD1-m88.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.049848395510178105
+                ],
+                [
+                    "BleepingComputer-purplefox.json",
+                    0.0502164571787873
+                ],
+                [
+                    "BleepingComputer-goanywhere.json",
+                    0.05052360854683935
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "the attacker",
+                    "class": "Attacker"
+                },
+                "relation": "shares",
+                "object": {
+                    "text": "a malicious APK file through WhatsApp",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the attacker",
+                    "class": "Attacker"
+                },
+                "relation": "asks",
+                "object": {
+                    "text": "users to enter sensitive information in the app",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the malicious APK file",
+                    "class": "Indicator:File"
+                },
+                "relation": "leads to",
+                "object": {
+                    "text": "banking trojan activity",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the fake banking message",
+                    "class": "Information"
+                },
+                "relation": "states",
+                "object": {
+                    "text": "Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You.",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "[redacted]-BANK[.]apk",
+                    "class": "Indicator:File"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "malicious",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the fraudulent application",
+                    "class": "Malware"
+                },
+                "relation": "impersonates",
+                "object": {
+                    "text": "a legitimate bank located in India",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the fraudulent application",
+                    "class": "Malware"
+                },
+                "relation": "disguises itself as",
+                "object": {
+                    "text": "the bank's official Know Your Customer (KYC) application",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "users",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "submit",
+                "object": {
+                    "text": "their sensitive information",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the information",
+                    "class": "Information"
+                },
+                "relation": "is sent to",
+                "object": {
+                    "text": "a command and control (C2) server",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the information",
+                    "class": "Information"
+                },
+                "relation": "is sent to",
+                "object": {
+                    "text": "the attacker's hard-coded phone number",
+                    "class": "Information"
+                }
+            }
+        ],
+        "response_time": 19.56135320663452,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/Microsoft/lure-indian-users.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1423,
+                "cost": 0.014230000000000001
+            },
+            "output": {
+                "tokens": 523,
+                "cost": 0.01569
+            },
+            "total": {
+                "tokens": 1946,
+                "cost": 0.029920000000000002
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "the attacker",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "the attacker",
+                        "the attacker"
+                    ],
+                    "entity_text": "the attacker"
+                },
+                "relation": "shares",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a malicious APK file through WhatsApp",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a malicious APK file through WhatsApp",
+                        "the malicious APK file"
+                    ],
+                    "entity_text": "the malicious APK file"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "the attacker",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "the attacker",
+                        "the attacker"
+                    ],
+                    "entity_text": "the attacker"
+                },
+                "relation": "asks",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "users to enter sensitive information in the app",
+                    "mention_class": "Event",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "users to enter sensitive information in the app"
+                    ],
+                    "entity_text": "users to enter sensitive information in the app"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "the malicious APK file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a malicious APK file through WhatsApp",
+                        "the malicious APK file"
+                    ],
+                    "entity_text": "the malicious APK file"
+                },
+                "relation": "leads to",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "banking trojan activity",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "banking trojan activity"
+                    ],
+                    "entity_text": "banking trojan activity"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "the fake banking message",
+                    "mention_class": "Information",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "the fake banking message"
+                    ],
+                    "entity_text": "the fake banking message"
+                },
+                "relation": "states",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You.",
+                    "mention_class": "Information",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You."
+                    ],
+                    "entity_text": "Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You."
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "[redacted]-BANK[.]apk",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "[redacted]-BANK[.]apk"
+                    ],
+                    "entity_text": "[redacted]-BANK[.]apk"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "malicious",
+                    "mention_class": "Malware",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "malicious"
+                    ],
+                    "entity_text": "malicious"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "the fraudulent application",
+                    "mention_class": "Malware",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "the fraudulent application",
+                        "the fraudulent application"
+                    ],
+                    "entity_text": "the fraudulent application"
+                },
+                "relation": "impersonates",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "a legitimate bank located in India",
+                    "mention_class": "Organization",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "a legitimate bank located in India"
+                    ],
+                    "entity_text": "a legitimate bank located in India"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "the fraudulent application",
+                    "mention_class": "Malware",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "the fraudulent application",
+                        "the fraudulent application"
+                    ],
+                    "entity_text": "the fraudulent application"
+                },
+                "relation": "disguises itself as",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "the bank's official Know Your Customer (KYC) application",
+                    "mention_class": "Tool",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "the bank's official Know Your Customer (KYC) application"
+                    ],
+                    "entity_text": "the bank's official Know Your Customer (KYC) application"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "users",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "users"
+                    ],
+                    "entity_text": "users"
+                },
+                "relation": "submit",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "their sensitive information",
+                    "mention_class": "Information",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "their sensitive information"
+                    ],
+                    "entity_text": "their sensitive information"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "the information",
+                    "mention_class": "Information",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "the information",
+                        "the information"
+                    ],
+                    "entity_text": "the information"
+                },
+                "relation": "is sent to",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "a command and control (C2) server",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "a command and control (C2) server"
+                    ],
+                    "entity_text": "a command and control (C2) server"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "the information",
+                    "mention_class": "Information",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "the information",
+                        "the information"
+                    ],
+                    "entity_text": "the information"
+                },
+                "relation": "is sent to",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "the attacker's hard-coded phone number",
+                    "mention_class": "Information",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "the attacker's hard-coded phone number"
+                    ],
+                    "entity_text": "the attacker's hard-coded phone number"
+                }
+            }
+        ],
+        "mentions_num": 20,
+        "response_time": 4.030247211456299,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 16
+    },
+    "LP": {
+        "predicted_links": [
+            {
+                "subject": {
+                    "entity_id": 6,
+                    "mention_text": "the fake banking message"
+                },
+                "relation": "used in",
+                "object": {
+                    "mention_id": 0,
+                    "mention_text": "the attacker",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "the attacker",
+                        "the attacker"
+                    ],
+                    "entity_text": "the attacker"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 2,
+                    "mention_text": "[redacted]-BANK[.]apk"
+                },
+                "relation": "used by",
+                "object": {
+                    "mention_id": 0,
+                    "mention_text": "the attacker",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "the attacker",
+                        "the attacker"
+                    ],
+                    "entity_text": "the attacker"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 10,
+                    "mention_text": "the fraudulent application"
+                },
+                "relation": "installed by",
+                "object": {
+                    "mention_id": 0,
+                    "mention_text": "the attacker",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "the attacker",
+                        "the attacker"
+                    ],
+                    "entity_text": "the attacker"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 8,
+                    "mention_text": "their sensitive information"
+                },
+                "relation": "submitted by",
+                "object": {
+                    "mention_id": 0,
+                    "mention_text": "the attacker",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "the attacker",
+                        "the attacker"
+                    ],
+                    "entity_text": "the attacker"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 5,
+                    "mention_text": "the information"
+                },
+                "relation": "sent to",
+                "object": {
+                    "mention_id": 0,
+                    "mention_text": "the attacker",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "the attacker",
+                        "the attacker"
+                    ],
+                    "entity_text": "the attacker"
+                }
+            }
+        ],
+        "response_time": 5.512027263641357,
+        "model": "gpt-3.5-turbo-0125",
+        "usage": {
+            "input": {
+                "tokens": 2620,
+                "cost": 0.00131
+            },
+            "output": {
+                "tokens": 170,
+                "cost": 0.000255
+            },
+            "total": {
+                "tokens": 2790,
+                "cost": 0.001565
+            }
+        },
+        "topic_node": {
+            "mention_id": 0,
+            "mention_text": "the attacker",
+            "mention_class": "Attacker",
+            "entity_id": 0,
+            "mentions_merged": [
+                "the attacker",
+                "the attacker"
+            ],
+            "entity_text": "the attacker"
+        },
+        "main_nodes": [
+            {
+                "mention_id": 6,
+                "mention_text": "the fake banking message",
+                "mention_class": "Information",
+                "entity_id": 6,
+                "mentions_merged": [
+                    "the fake banking message"
+                ],
+                "entity_text": "the fake banking message"
+            },
+            {
+                "mention_id": 8,
+                "mention_text": "[redacted]-BANK[.]apk",
+                "mention_class": "Indicator:File",
+                "entity_id": 2,
+                "mentions_merged": [
+                    "[redacted]-BANK[.]apk"
+                ],
+                "entity_text": "[redacted]-BANK[.]apk"
+            },
+            {
+                "mention_id": 10,
+                "mention_text": "the fraudulent application",
+                "mention_class": "Malware",
+                "entity_id": 10,
+                "mentions_merged": [
+                    "the fraudulent application",
+                    "the fraudulent application"
+                ],
+                "entity_text": "the fraudulent application"
+            },
+            {
+                "mention_id": 15,
+                "mention_text": "their sensitive information",
+                "mention_class": "Information",
+                "entity_id": 8,
+                "mentions_merged": [
+                    "their sensitive information"
+                ],
+                "entity_text": "their sensitive information"
+            },
+            {
+                "mention_id": 16,
+                "mention_text": "the information",
+                "mention_class": "Information",
+                "entity_id": 5,
+                "mentions_merged": [
+                    "the information",
+                    "the information"
+                ],
+                "entity_text": "the information"
+            }
+        ],
+        "subgraphs": [
+            [
+                0,
+                1,
+                3,
+                4
+            ],
+            [
+                6,
+                7
+            ],
+            [
+                2,
+                11
+            ],
+            [
+                10,
+                12,
+                13
+            ],
+            [
+                8,
+                14
+            ],
+            [
+                9,
+                5,
+                15
+            ]
+        ],
+        "subgraph_num": 6,
+        "Eval": {
+            "correct": 4,
+            "incorrect": 1
+        }
+    }
+}

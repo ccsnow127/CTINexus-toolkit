@@ -1,0 +1,231 @@
+{
+    "CTI": {
+        "text": "Starting this year, Ryuk began using another dropper called BazarLoader (also known as BazarBackdoor). Like Trickbot, BazarLoader is also primarily distributed via phishing emails that contain either malicious attachments or links to websites (typically free, online file-hosting solutions) that host malware. These phishing emails use normal social engineering techniques: For example, they are usually disguised as business correspondence or other important messages. Once the payload is distributed, a command-and-control (C&C) server is used to deploy and install the backdoor. According to the advisory, the threat actor behind TrickBot is also connected to BazarLoader.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/ryuk-2020-distributing-ransomware-via-trickbot-and-bazarloader"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Ryuk",
+                "relation": "began using",
+                "object": "BazarLoader"
+            },
+            {
+                "subject": "BazarLoader",
+                "relation": "is also known as",
+                "object": "BazarBackdoor"
+            },
+            {
+                "subject": "BazarLoader",
+                "relation": "is primarily distributed via",
+                "object": "phishing emails"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "contain",
+                "object": "malicious attachments or links to websites"
+            },
+            {
+                "subject": "websites",
+                "relation": "host",
+                "object": "malware"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "use",
+                "object": "social engineering techniques"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "disguised as",
+                "object": "business correspondence or other important messages"
+            },
+            {
+                "subject": "payload",
+                "relation": "is distributed",
+                "object": ""
+            },
+            {
+                "subject": "command-and-control server",
+                "relation": "used to deploy and install",
+                "object": "the backdoor"
+            },
+            {
+                "subject": "threat actor behind TrickBot",
+                "relation": "is also connected to",
+                "object": "BazarLoader"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2911,
+                "cost": 0.029110000000000004
+            },
+            "output": {
+                "tokens": 250,
+                "cost": 0.007500000000000001
+            },
+            "total": {
+                "tokens": 3161,
+                "cost": 0.036610000000000004
+            }
+        },
+        "time": 12.006832599639893,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/trendmicro/Ryuk-QD1-0KC.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "thehackernews: JinxLoader.json",
+                    0.09084468780143765
+                ],
+                [
+                    "darkreading: SpectralBlur.json",
+                    0.09311586296088446
+                ],
+                [
+                    "trendmicro: Conti.json",
+                    0.10507443504245148
+                ],
+                [
+                    "trendmicro: Comm-Apps.json",
+                    0.13932311086193927
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.9,
+                "recall": 1.0,
+                "f1": 0.9473684210526316
+            },
+            "matched_list": [
+                [
+                    [
+                        "Ryuk",
+                        "began using",
+                        "BazarLoader"
+                    ],
+                    [
+                        "Ryuk",
+                        "began using",
+                        "BazarLoader"
+                    ]
+                ],
+                [
+                    [
+                        "BazarLoader",
+                        "is also known as",
+                        "BazarBackdoor"
+                    ],
+                    [
+                        "BazarLoader",
+                        "is known as",
+                        "BazarBackdoor"
+                    ]
+                ],
+                [
+                    [
+                        "BazarLoader",
+                        "is primarily distributed via",
+                        "phishing emails"
+                    ],
+                    [
+                        "BazarLoader",
+                        "is primarily distributed via",
+                        "phishing emails"
+                    ]
+                ],
+                [
+                    [
+                        "phishing emails",
+                        "contain",
+                        "malicious attachments or links to websites"
+                    ],
+                    [
+                        "phishing emails",
+                        "contain",
+                        "malicious attachments"
+                    ]
+                ],
+                [
+                    [
+                        "websites",
+                        "host",
+                        "malware"
+                    ],
+                    [
+                        "websites",
+                        "host",
+                        "malware"
+                    ]
+                ],
+                [
+                    [
+                        "phishing emails",
+                        "use",
+                        "social engineering techniques"
+                    ],
+                    [
+                        "phishing emails",
+                        "use",
+                        "social engineering techniques"
+                    ]
+                ],
+                [
+                    [
+                        "phishing emails",
+                        "disguised as",
+                        "business correspondence or other important messages"
+                    ],
+                    [
+                        "phishing emails",
+                        "disguised as",
+                        "business correspondence"
+                    ]
+                ],
+                [
+                    [
+                        "command-and-control server",
+                        "used to deploy and install",
+                        "the backdoor"
+                    ],
+                    [
+                        "payload",
+                        "is distributed, a command-and-control (C&C) server is used to",
+                        "deploy and install the backdoor"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor behind TrickBot",
+                        "is also connected to",
+                        "BazarLoader"
+                    ],
+                    [
+                        "Trickbot",
+                        "connected to",
+                        "BazarLoader"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "payload",
+                    "is distributed",
+                    ""
+                ]
+            ],
+            "not_recall_list": [],
+            "thresh": 0.7
+        }
+    }
+}

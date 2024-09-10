@@ -1,0 +1,204 @@
+{
+    "CTI": {
+        "text": "First observed in mid-November 2021 by researchers from the MalwareHunterTeam, BlackCat (aka AlphaVM, AlphaV, or ALPHV) swiftly gained notoriety for being the first major professional ransomware family to be written in Rust, a cross-platform language that enables malicious actors to customize malware with ease for different operating systems like Windows and Linux, thus affording a wide range of enterprise environments. Since then, BlackCat ransomware has frequently made the headlines for its successive attacks on high-profile targets and its use of triple extortion which has endowed the group with a distinct competitive edge over other RaaS operators. Aside from exposing exfiltrated data, ransomware actors that use triple extortion threaten to launch distributed denial-of-service (DDoS) attacks on their victims' infrastructure to coerce them to pay the ransom.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-blackcat"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "BlackCat",
+                "relation": "also known as",
+                "object": "AlphaVM, AlphaV, or ALPHV"
+            },
+            {
+                "subject": "BlackCat",
+                "relation": "written in",
+                "object": "Rust"
+            },
+            {
+                "subject": "BlackCat",
+                "relation": "targets",
+                "object": "Windows and Linux"
+            },
+            {
+                "subject": "BlackCat ransomware",
+                "relation": "attacks",
+                "object": "high-profile targets"
+            },
+            {
+                "subject": "BlackCat ransomware",
+                "relation": "uses",
+                "object": "triple extortion"
+            },
+            {
+                "subject": "BlackCat ransomware",
+                "relation": "exposes",
+                "object": "exfiltrated data"
+            },
+            {
+                "subject": "Triple extortion",
+                "relation": "threatens to launch",
+                "object": "DDoS attacks"
+            },
+            {
+                "subject": "Triple extortion",
+                "relation": "coerces",
+                "object": "victims to pay the ransom"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 980,
+                "cost": 0.009800000000000001
+            },
+            "output": {
+                "tokens": 202,
+                "cost": 0.00606
+            },
+            "total": {
+                "tokens": 1182,
+                "cost": 0.015860000000000003
+            }
+        },
+        "time": 8.527225971221924,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/trendmicro/BlackCat-QD1-0be.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "RemcosRAT.json",
+                    "random"
+                ],
+                [
+                    "CL0P-Seeds.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 1,
+                "fn": 3,
+                "precision": 0.875,
+                "recall": 0.7,
+                "f1": 0.7777777777777777
+            },
+            "matched_list": [
+                [
+                    [
+                        "BlackCat",
+                        "also known as",
+                        "AlphaVM, AlphaV, or ALPHV"
+                    ],
+                    [
+                        "BlackCat",
+                        "is also known as",
+                        "AlphaVM"
+                    ]
+                ],
+                [
+                    [
+                        "BlackCat",
+                        "written in",
+                        "Rust"
+                    ],
+                    [
+                        "BlackCat",
+                        "is written in",
+                        "Rust"
+                    ]
+                ],
+                [
+                    [
+                        "BlackCat",
+                        "targets",
+                        "Windows and Linux"
+                    ],
+                    [
+                        "BlackCat ransomware",
+                        "targets",
+                        "Windows"
+                    ]
+                ],
+                [
+                    [
+                        "BlackCat ransomware",
+                        "attacks",
+                        "high-profile targets"
+                    ],
+                    [
+                        "BlackCat ransomware",
+                        "targets",
+                        "Windows"
+                    ]
+                ],
+                [
+                    [
+                        "BlackCat ransomware",
+                        "uses",
+                        "triple extortion"
+                    ],
+                    [
+                        "BlackCat",
+                        "uses",
+                        "triple extortion"
+                    ]
+                ],
+                [
+                    [
+                        "BlackCat ransomware",
+                        "exposes",
+                        "exfiltrated data"
+                    ],
+                    [
+                        "BlackCat ransomware",
+                        "targets",
+                        "Linux"
+                    ]
+                ],
+                [
+                    [
+                        "Triple extortion",
+                        "threatens to launch",
+                        "DDoS attacks"
+                    ],
+                    [
+                        "triple extortion",
+                        "includes",
+                        "threatening DDoS attacks"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Triple extortion",
+                    "coerces",
+                    "victims to pay the ransom"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "triple extortion",
+                    "includes",
+                    "exposing exfiltrated data"
+                ],
+                [
+                    "Ransomware actors",
+                    "threaten",
+                    "DDoS attacks"
+                ],
+                [
+                    "DDoS attacks",
+                    "target",
+                    "victims' infrastructure"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

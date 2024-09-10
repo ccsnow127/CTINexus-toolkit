@@ -1,0 +1,8 @@
+""Context": A new vulnerability dubbed 'LeftoverLocals' affecting graphics processing units from AMD, Apple, Qualcomm, and Imagination Technologies allows retrieving data from the local memory space. Tracked as CVE-2023-4969, the security issue enables data recovery from vulnerable GPUs, especially in the context of large language models (LLMs) and machine learning (ML) processes. LeftoverLocals lets attackers launch a 'listener' - a GPU kernel that reads from uninitialized local memory and can dump the data in a persistent location, such as the global memory. If the local memory is not cleared, the attacker can use the listener to read values left behind by the 'writer' - a program that stores values to local memory. The recovered data can reveal sensitive information about the victim's computations, including model inputs, outputs, weights, and intermediate computations.
+
+"Question": What do you think is the relationship between entity "sensitive information" and entity "graphics processing units"
+---------------------
+Your response should follow the format:
+"predicted_triple": { "subject": predicted_subject, "relation": predicted_relation, "object": predicted_object }
+Return JSON object and nothing else, predicted_subject and predicted_object should be chosen from entity "sensitive information" and entity "graphics processing units", do not come up with new entity. Predicted relation doesn't need to be one word, it can be a phrase. For example, "is attacked by" is a valid relation.
+"predicted_triple": """ insert your answer here """"

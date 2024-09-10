@@ -1,0 +1,198 @@
+{
+    "CTI": {
+        "text": "A longtime threat group identified as TA558 has ramped up efforts to target the travel and hospitality industries. After a lull in activity, believed tied to COVID-related travel restrictions, the threat group has ramped up campaigns to exploit an uptick in travel and related airline and hotel bookings. Warnings come from security researchers who say TA558 cybercriminals have revamped their 2018 campaigns with fake reservation emails that contain links \u2013 that if clicked \u2013 deliver a malicious malware payload containing a potpourri of malware variants. What makes this most recent campaign unique, according to a report by Proofpoint, is the use of RAR and ISO file attachments linked to messages. ISO and RAR are single compressed files, that if executed, decompress the file and folder data inside of them.",
+        "link": "https://threatpost.com/reservation-links-prey-on-travelers/180462/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "TA558",
+                "relation": "targets",
+                "object": "the travel and hospitality industries"
+            },
+            {
+                "subject": "TA558",
+                "relation": "has ramped up campaigns to exploit",
+                "object": "an uptick in travel and related airline and hotel bookings"
+            },
+            {
+                "subject": "TA558",
+                "relation": "revamped",
+                "object": "their 2018 campaigns"
+            },
+            {
+                "subject": "Fake reservation emails",
+                "relation": "contain links that deliver",
+                "object": "a malicious malware payload"
+            },
+            {
+                "subject": "Malicious malware payload",
+                "relation": "contains",
+                "object": "a potpourri of malware variants"
+            },
+            {
+                "subject": "Campaign",
+                "relation": "uses",
+                "object": "RAR and ISO file attachments"
+            },
+            {
+                "subject": "RAR and ISO file attachments",
+                "relation": "linked to",
+                "object": "messages"
+            },
+            {
+                "subject": "RAR and ISO file attachments",
+                "relation": "if executed, decompress",
+                "object": "the file and folder data inside of them"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1925,
+                "cost": 0.019250000000000003
+            },
+            "output": {
+                "tokens": 231,
+                "cost": 0.00693
+            },
+            "total": {
+                "tokens": 2156,
+                "cost": 0.026180000000000002
+            }
+        },
+        "time": 10.318790912628174,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/threatPost/TA558-QD1-uts.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "darkreading: SpectralBlur.json",
+                    0.09506240573516572
+                ],
+                [
+                    "symantec: Follina.json",
+                    0.09904786037824806
+                ],
+                [
+                    "securityweek: strelastealer.json",
+                    0.11061976715685343
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "TA558",
+                        "targets",
+                        "the travel and hospitality industries"
+                    ],
+                    [
+                        "TA558",
+                        "targets",
+                        "travel and hospitality industries"
+                    ]
+                ],
+                [
+                    [
+                        "TA558",
+                        "has ramped up campaigns to exploit",
+                        "an uptick in travel and related airline and hotel bookings"
+                    ],
+                    [
+                        "TA558",
+                        "exploits",
+                        "uptick in travel and related airline and hotel bookings"
+                    ]
+                ],
+                [
+                    [
+                        "TA558",
+                        "revamped",
+                        "their 2018 campaigns"
+                    ],
+                    [
+                        "TA558 cybercriminals",
+                        "revamped",
+                        "their 2018 campaigns"
+                    ]
+                ],
+                [
+                    [
+                        "Fake reservation emails",
+                        "contain links that deliver",
+                        "a malicious malware payload"
+                    ],
+                    [
+                        "fake reservation emails",
+                        "contain",
+                        "links"
+                    ]
+                ],
+                [
+                    [
+                        "Malicious malware payload",
+                        "contains",
+                        "a potpourri of malware variants"
+                    ],
+                    [
+                        "malicious malware payload",
+                        "contains",
+                        "a potpourri of malware variants"
+                    ]
+                ],
+                [
+                    [
+                        "Campaign",
+                        "uses",
+                        "RAR and ISO file attachments"
+                    ],
+                    [
+                        "RAR and ISO file attachments",
+                        "linked to",
+                        "messages"
+                    ]
+                ],
+                [
+                    [
+                        "RAR and ISO file attachments",
+                        "linked to",
+                        "messages"
+                    ],
+                    [
+                        "RAR and ISO file attachments",
+                        "linked to",
+                        "messages"
+                    ]
+                ],
+                [
+                    [
+                        "RAR and ISO file attachments",
+                        "if executed, decompress",
+                        "the file and folder data inside of them"
+                    ],
+                    [
+                        "RAR and ISO file attachments",
+                        "if executed",
+                        "decompress the file and folder data inside of them"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": []
+        }
+    }
+}

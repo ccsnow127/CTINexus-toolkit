@@ -1,0 +1,97 @@
+{
+    "CTI": {
+        "text": "A zero-day vulnerability (CVE-2023-36884) affecting Microsoft Windows and Office products is being exploited by attackers in the wild. To date, the exploit has been used in highly targeted attacks against organizations in the government and defense sectors in Europe and North America. The vulnerability was disclosed yesterday (July 11) by Microsoft, which said that an attacker could create a specially crafted Microsoft Office document that enables remote code execution on the target's computer. In order for the exploit to succeed, the victim needs to open the malicious file. No patch has been released yet for the vulnerability. ",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/microsoft-zeroday-exploit"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "CVE-2023-36884",
+                "relation": "affecting",
+                "object": "Microsoft Windows and Office products"
+            },
+            {
+                "subject": "CVE-2023-36884",
+                "relation": "is being exploited by",
+                "object": "attackers in the wild"
+            },
+            {
+                "subject": "CVE-2023-36884",
+                "relation": "used in",
+                "object": "highly targeted attacks"
+            },
+            {
+                "subject": "highly targeted attacks",
+                "relation": "against",
+                "object": "organizations in the government and defense sectors in Europe and North America"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "disclosed",
+                "object": "CVE-2023-36884"
+            },
+            {
+                "subject": "An attacker",
+                "relation": "could create",
+                "object": "a specially crafted Microsoft Office document"
+            },
+            {
+                "subject": "a specially crafted Microsoft Office document",
+                "relation": "enables",
+                "object": "remote code execution on the target's computer"
+            },
+            {
+                "subject": "The exploit",
+                "relation": "succeeds if",
+                "object": "the victim opens the malicious file"
+            },
+            {
+                "subject": "CVE-2023-36884",
+                "relation": "has no",
+                "object": "patch released yet"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2127,
+                "cost": 0.02127
+            },
+            "output": {
+                "tokens": 264,
+                "cost": 0.00792
+            },
+            "total": {
+                "tokens": 2391,
+                "cost": 0.02919
+            }
+        },
+        "time": 10.744654655456543,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/symantec/Windows-Zero-Day-QD1-bCM.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "AVERTIUM: CVE-2023-36884.json",
+                    0.20700674410670233
+                ],
+                [
+                    "threatPost: Dogwalk.json",
+                    0.21894771602647117
+                ],
+                [
+                    "symantec: Follina.json",
+                    0.22378047187080805
+                ],
+                [
+                    "threatPost: Microsoft.json",
+                    0.23378595045051215
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

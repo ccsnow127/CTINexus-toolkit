@@ -1,0 +1,337 @@
+{
+    "CTI": {
+        "text": "A new ransomware family calling itself 3AM has emerged. To date, the ransomware has only been used in a limited fashion. Symantec's Threat Hunter Team, part of Broadcom, has seen it used in a single attack by a ransomware affiliate that attempted to deploy LockBit on a target's network and then switched to 3AM when LockBit was blocked. 3AM is written in Rust and appears to be a completely new malware family. The ransomware attempts to stop multiple services on the infected computer before it begins encrypting files. Once encryption is complete, it attempts to delete Volume Shadow (VSS) copies. It is still unclear whether its authors have any links to known cybercrime organizations. ",
+        "link": ""
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "3AM",
+                "relation": "is",
+                "object": "a ransomware family"
+            },
+            {
+                "subject": "3AM",
+                "relation": "was used in",
+                "object": "a single attack"
+            },
+            {
+                "subject": "ransomware affiliate",
+                "relation": "attempted to deploy",
+                "object": "LockBit"
+            },
+            {
+                "subject": "ransomware affiliate",
+                "relation": "switched to",
+                "object": "3AM"
+            },
+            {
+                "subject": "3AM",
+                "relation": "is written in",
+                "object": "Rust"
+            },
+            {
+                "subject": "3AM",
+                "relation": "is",
+                "object": "a completely new malware family"
+            },
+            {
+                "subject": "3AM",
+                "relation": "attempts to stop",
+                "object": "multiple services"
+            },
+            {
+                "subject": "3AM",
+                "relation": "begins encrypting",
+                "object": "files"
+            },
+            {
+                "subject": "3AM",
+                "relation": "attempts to delete",
+                "object": "Volume Shadow (VSS) copies"
+            },
+            {
+                "subject": "its authors",
+                "relation": "have links to",
+                "object": "unknown cybercrime organizations"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2622,
+                "cost": 0.026220000000000004
+            },
+            "output": {
+                "tokens": 316,
+                "cost": 0.00948
+            },
+            "total": {
+                "tokens": 2938,
+                "cost": 0.0357
+            }
+        },
+        "time": 8.657272577285767,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/symantec/3AM-QD1-GuG.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-royal-ransomware.json",
+                    0.12444348312298721
+                ],
+                [
+                    "AVERTIUM-fivehands.json",
+                    0.1254541758363017
+                ],
+                [
+                    "AVERTIUM-yanluowang.json",
+                    0.18405370864925538
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "3AM",
+                    "class": "Malware"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "a ransomware family",
+                    "class": "Malware Characteristic:Variants"
+                }
+            },
+            {
+                "subject": {
+                    "text": "3AM",
+                    "class": "Malware"
+                },
+                "relation": "was used in",
+                "object": {
+                    "text": "a single attack",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "ransomware affiliate",
+                    "class": "Organization"
+                },
+                "relation": "attempted to deploy",
+                "object": {
+                    "text": "LockBit",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "ransomware affiliate",
+                    "class": "Organization"
+                },
+                "relation": "switched to",
+                "object": {
+                    "text": "3AM",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "3AM",
+                    "class": "Malware"
+                },
+                "relation": "is written in",
+                "object": {
+                    "text": "Rust",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "3AM",
+                    "class": "Malware"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "a completely new malware family",
+                    "class": "Malware Characteristic:Variants"
+                }
+            },
+            {
+                "subject": {
+                    "text": "3AM",
+                    "class": "Malware"
+                },
+                "relation": "attempts to stop",
+                "object": {
+                    "text": "multiple services",
+                    "class": "Attack"
+                }
+            },
+            {
+                "subject": {
+                    "text": "3AM",
+                    "class": "Malware"
+                },
+                "relation": "begins encrypting",
+                "object": {
+                    "text": "files",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "3AM",
+                    "class": "Malware"
+                },
+                "relation": "attempts to delete",
+                "object": {
+                    "text": "Volume Shadow (VSS) copies",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "its authors",
+                    "class": "Organization"
+                },
+                "relation": "have links to",
+                "object": {
+                    "text": "unknown cybercrime organizations",
+                    "class": "Organization"
+                }
+            }
+        ],
+        "response_time": 6.872404098510742,
+        "Demo_num": 1,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT3.5-1shot/prompt_store/symantec/3AM.txt",
+        "model_usage": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 736,
+                "cost": 0.000368
+            },
+            "output": {
+                "tokens": 455,
+                "cost": 0.0006825000000000001
+            },
+            "total": {
+                "tokens": 1191,
+                "cost": 0.0010505
+            }
+        },
+        "Eval": {
+            "correct": 12,
+            "incorrect": 8,
+            "TP": 12,
+            "TN": 0,
+            "FP": 7,
+            "FN": 1,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 0,
+                    "TN": 17,
+                    "FP": 0,
+                    "FN": 3
+                },
+                "Event": {
+                    "TP": 1,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 3
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 1,
+                    "TN": 17,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 9,
+                    "TN": 9,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 18,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 1,
+                    "TN": 16,
+                    "FP": 3,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 19,
+                    "FP": 1,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 6
+        }
+    }
+}

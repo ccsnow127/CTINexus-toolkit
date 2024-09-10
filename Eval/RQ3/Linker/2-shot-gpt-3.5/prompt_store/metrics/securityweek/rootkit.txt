@@ -1,0 +1,25 @@
+"Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"Context": "Cuba ransomware first appeared in 2019 but remained relatively unnoticed until November 2021, when they reportedly targeted a minimum of 49 organizations across various sectors. The sectors included government, healthcare, information technology, manufacturing, and finance. During this time, Cuba ransomware operators were infiltrating networks by encrypting files using the '.cuba' extension. Over the years, the ransom demands from Cuba totals at least $145 million, and the group has successfully collected at least $60 million in ransom payments. By 2022, the threat actors had expanded their tactics, techniques, and procedures (TTPs), leading security researchers to suggest a potential connection between Cuba ransomware actors, RomCom Remote Access Trojan (RAT) actors, and Industrial Spy ransomware actors. This month, Cuba garnered attention when they took responsibility for a cyberattack on The Philadelphia Inquirer."
+
+"Question": What do you think is the relationship between entity "Cuba ransomware actors" and entity "Cuba ransomware"?
+
+"predicted_triple": {"subject": "Cuba ransomware actors", "relation": "are associated with", "object": "Cuba ransomware"}
+---------------------
+Example 2:
+
+"Context": "CVE-2023-36884 is a remote code execution vulnerability that was previously patched. The vulnerability allowed attackers to craft Microsoft Office documents in a way that circumvented the Mark of the Web (MoTW) security feature. This allowed the files to be opened without triggering a security warning, ultimately enabling remote code execution. To counteract a previously mitigated but actively exploited CVE-2023-36884 flaw, Microsoft has introduced an Office Defense in Depth update. The Russian threat actor Storm-0978/RomCom is responsible for actively exploiting this vulnerability. This group, previously recognized for deploying the Industrial Spy ransomware in their attacks, has now rebranded as 'Underground' and extorts victims through their ransomware operations."
+
+"Question": What do you think is the relationship between entity "Storm-0978/RomCom" and entity "CVE-2023-36884"
+
+"predicted_triple": {"subject": "Storm-0978/RomCom", "relation": "actively exploited", "object": "CVE-2023-36884"}
+---------------------
+Target task:
+
+"Context": The notorious North Korean threat group known as Lazarus exploited a Windows zero-day vulnerability for privilege escalation in attacks involving a rootkit named FudModule, according to cybersecurity firm Avast. The vulnerability is tracked as CVE-2024-21338 and it was observed by Avast in Lazarus attacks last year. The security company developed a proof-of-concept (PoC) exploit and sent it to Microsoft in August 2023. The flaw was patched by Microsoft with the company\u2019s February 2024 Patch Tuesday updates, but the initial advisory for CVE-2024-21338 did not list it as a zero-day. The vulnerability impacts the \u2018appid.sys\u2019 driver associated with Microsoft\u2019s AppLocker security feature. By targeting a vulnerability in a driver that is present on many systems \u2014 rather than using a bring your own vulnerable driver (BYOVD) approach \u2014 the attacker benefits from a higher degree of stealth. \u201cBy exploiting such a vulnerability, the attacker is in a sense living off the land with no need to bring, drop, or load any custom drivers, making it possible for a kernel attack to be truly fileless. This not only evades most detection mechanisms but also enables the attack on systems where driver allowlisting is in place,\u201d Avast explained. By exploiting CVE-2024-21338, Lazarus hackers were able to elevate their privileges on the compromised system and establish a kernel read/write primitive. This enabled them to perform direct kernel object manipulation in an updated version of the FudModule rootkit, which came to light in 2022. 
+
+"Question": What do you think is the relationship between entity "The flaw" and entity "Lazarus hackers"?
+
+"predicted_triple": """insert your answer here""""

@@ -1,0 +1,163 @@
+{
+    "CTI": {
+        "text": "This report is an overview of the FiveHands Ransomware variant that successfully attacked an organization (CISA release date May 6, 2021). CISA reports that the variant used publicly-available pen test and exploitation tools, plus FiveHands ransomware and SombRAT remote access trojan (RAT), to steal information, obfuscate files, accomplish network discovery, accomplish credential access, and demand ransom from the victim. Tools used include SoftPerfect Network Scanner, FiveHands ransomware, PsExec.exe, ServeManager.exe, SombRAT, RouterScan.exe, grabff.exe, rclone.exe, and s3browser-9-5-3.exe. The initial access vector was a zero-day vulnerability in a VPN product. What followed is that the bad actor used SoftPerfect Network Scanner for the discovery of hostnames and network services. PsExec was then used to execute ServeManager.exe (what CISA calls FiveHands ransomware). FiveHands is a novel ransomware variant that uses a public key encryption scheme called NTRUEncrypt. Note: the NTRUEncrypt public key cryptosystem encryption algorithm (NTRU), is a lattice-based alternative to Rivest-Shamir-Adleman, known as RSA, and Elliptic-curve cryptography, or ECC, and is based on the shortest vector problem in a lattice. To prevent data recovery, FiveHands uses WMI to first enumerate then delete Volume Shadow copies. The malware also encrypts files in the recovery folder. After the files are encrypted, the program will write a ransom note to each folder and directory on the system.",
+        "link": "https://explore.avertium.com/resource/fivehands-ransomware-overview"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "FiveHands Ransomware variant",
+                "relation": "attacked",
+                "object": "an organization"
+            },
+            {
+                "subject": "Variant",
+                "relation": "used",
+                "object": "publicly-available pen test and exploitation tools"
+            },
+            {
+                "subject": "Variant",
+                "relation": "used",
+                "object": "FiveHands ransomware"
+            },
+            {
+                "subject": "Variant",
+                "relation": "used",
+                "object": "SombRAT"
+            },
+            {
+                "subject": "SombRAT",
+                "relation": "is a",
+                "object": "remote access trojan (RAT)"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "SoftPerfect Network Scanner"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "PsExec.exe"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "ServeManager.exe"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "RouterScan.exe"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "grabff.exe"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "rclone.exe"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "s3browser-9-5-3.exe"
+            },
+            {
+                "subject": "Initial access vector",
+                "relation": "was",
+                "object": "a zero-day vulnerability in a VPN product"
+            },
+            {
+                "subject": "Bad actor",
+                "relation": "used",
+                "object": "SoftPerfect Network Scanner"
+            },
+            {
+                "subject": "PsExec",
+                "relation": "used to execute",
+                "object": "ServeManager.exe"
+            },
+            {
+                "subject": "ServeManager.exe",
+                "relation": "is called",
+                "object": "FiveHands ransomware"
+            },
+            {
+                "subject": "FiveHands",
+                "relation": "uses",
+                "object": "NTRUEncrypt"
+            },
+            {
+                "subject": "NTRUEncrypt",
+                "relation": "is",
+                "object": "a public key encryption scheme"
+            },
+            {
+                "subject": "NTRUEncrypt",
+                "relation": "is an alternative to",
+                "object": "RSA"
+            },
+            {
+                "subject": "NTRUEncrypt",
+                "relation": "is based on",
+                "object": "the shortest vector problem in a lattice"
+            },
+            {
+                "subject": "FiveHands",
+                "relation": "uses WMI to",
+                "object": "enumerate then delete Volume Shadow copies"
+            },
+            {
+                "subject": "Malware",
+                "relation": "encrypts files in",
+                "object": "the recovery folder"
+            },
+            {
+                "subject": "Program",
+                "relation": "writes a ransom note to",
+                "object": "each folder and directory on the system"
+            }
+        ],
+        "triples_count": 23,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3058,
+                "cost": 0.030580000000000003
+            },
+            "output": {
+                "tokens": 583,
+                "cost": 0.017490000000000002
+            },
+            "total": {
+                "tokens": 3641,
+                "cost": 0.04807
+            }
+        },
+        "time": 16.400739669799805,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/AVERTIUM/fivehands-QD1-q50.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-fargo.json",
+                    0.12003770464085234
+                ],
+                [
+                    "AVERTIUM-cactus.json",
+                    0.12334574998886129
+                ],
+                [
+                    "AVERTIUM-yanluowang.json",
+                    0.14328542415762013
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

@@ -1,0 +1,346 @@
+{
+    "CTI": {
+        "text": "Apple released security updates to address this year's first zero-day vulnerability exploited in attacks that could impact iPhones, Macs, and Apple TVs. The zero-day fixed today is tracked as CVE-2024-23222 and is a WebKit confusion issue that attackers could exploit to gain code execution on targeted devices. Successful exploitation enables threat actors to execute arbitrary malicious code on devices running vulnerable iOS, macOS, and tvOS versions after opening a malicious web page.",
+        "link": "https://www.bleepingcomputer.com/news/apple/apple-fixes-first-zero-day-bug-exploited-in-attacks-this-year/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Apple",
+                "relation": "released",
+                "object": "security updates"
+            },
+            {
+                "subject": "security updates",
+                "relation": "address",
+                "object": "this year's first zero-day vulnerability"
+            },
+            {
+                "subject": "this year's first zero-day vulnerability",
+                "relation": "exploited in",
+                "object": "attacks"
+            },
+            {
+                "subject": "attacks",
+                "relation": "could impact",
+                "object": "iPhones, Macs, and Apple TVs"
+            },
+            {
+                "subject": "The zero-day",
+                "relation": "fixed today is tracked as",
+                "object": "CVE-2024-23222"
+            },
+            {
+                "subject": "CVE-2024-23222",
+                "relation": "is",
+                "object": "a WebKit confusion issue"
+            },
+            {
+                "subject": "a WebKit confusion issue",
+                "relation": "could be exploited by",
+                "object": "attackers"
+            },
+            {
+                "subject": "attackers",
+                "relation": "gain",
+                "object": "code execution on targeted devices"
+            },
+            {
+                "subject": "Successful exploitation",
+                "relation": "enables",
+                "object": "threat actors to execute arbitrary malicious code"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "execute",
+                "object": "arbitrary malicious code"
+            },
+            {
+                "subject": "arbitrary malicious code",
+                "relation": "on",
+                "object": "devices running vulnerable iOS, macOS, and tvOS versions"
+            },
+            {
+                "subject": "devices running vulnerable iOS, macOS, and tvOS versions",
+                "relation": "after opening",
+                "object": "a malicious web page"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1277,
+                "cost": 0.012770000000000002
+            },
+            "output": {
+                "tokens": 323,
+                "cost": 0.00969
+            },
+            "total": {
+                "tokens": 1600,
+                "cost": 0.02246
+            }
+        },
+        "time": 21.604166984558105,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/BleepingComputer/apple-QD1-VsM.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Microsoft: migraine-could.json",
+                    0.21106880881240087
+                ],
+                [
+                    "threatPost: iPhone-Users.json",
+                    0.3598200735347914
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 2,
+                "fn": 4,
+                "precision": 0.8571428571428571,
+                "recall": 0.75,
+                "f1": 0.7999999999999999
+            },
+            "matched_list": [
+                [
+                    [
+                        "Apple",
+                        "released",
+                        "security updates"
+                    ],
+                    [
+                        "Apple",
+                        "released",
+                        "security updates"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "security updates",
+                        "address",
+                        "this year's first zero-day vulnerability"
+                    ],
+                    [
+                        "security updates",
+                        "address",
+                        "zero-day vulnerability"
+                    ],
+                    [
+                        1.0,
+                        0.7551456580561443
+                    ]
+                ],
+                [
+                    [
+                        "this year's first zero-day vulnerability",
+                        "exploited in",
+                        "attacks"
+                    ],
+                    [
+                        "zero-day vulnerability",
+                        "is exploited in",
+                        "attacks"
+                    ],
+                    [
+                        0.7551456580561443,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "attacks",
+                        "could impact",
+                        "iPhones, Macs, and Apple TVs"
+                    ],
+                    [
+                        "attacks",
+                        "could impact",
+                        "iPhones"
+                    ],
+                    [
+                        1.0,
+                        0.6887017454856643
+                    ]
+                ],
+                [
+                    [
+                        "The zero-day",
+                        "fixed today is tracked as",
+                        "CVE-2024-23222"
+                    ],
+                    [
+                        "zero-day",
+                        "is tracked as",
+                        "CVE-2024-23222"
+                    ],
+                    [
+                        0.8386370112927597,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-23222",
+                        "is",
+                        "a WebKit confusion issue"
+                    ],
+                    [
+                        "CVE-2024-23222",
+                        "is a",
+                        "WebKit confusion issue"
+                    ],
+                    [
+                        1.0,
+                        0.613039574416808
+                    ]
+                ],
+                [
+                    [
+                        "Successful exploitation",
+                        "enables",
+                        "threat actors to execute arbitrary malicious code"
+                    ],
+                    [
+                        "attackers",
+                        "could exploit",
+                        "CVE-2024-23222"
+                    ],
+                    [
+                        0.46615783259669974,
+                        0.5053230229457407,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "execute",
+                        "arbitrary malicious code"
+                    ],
+                    [
+                        "threat actors",
+                        "execute",
+                        "arbitrary malicious code"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "arbitrary malicious code",
+                        "on",
+                        "devices running vulnerable iOS, macOS, and tvOS versions"
+                    ],
+                    [
+                        "arbitrary malicious code",
+                        "runs on",
+                        "devices running vulnerable iOS"
+                    ],
+                    [
+                        1.0,
+                        0.8620189557128785
+                    ]
+                ],
+                [
+                    [
+                        "devices running vulnerable iOS, macOS, and tvOS versions",
+                        "after opening",
+                        "a malicious web page"
+                    ],
+                    [
+                        "arbitrary malicious code",
+                        "runs on",
+                        "devices running vulnerable iOS"
+                    ],
+                    [
+                        0.8620189557128785,
+                        0.5892437074686208,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "devices running vulnerable iOS, macOS, and tvOS versions",
+                        "after opening",
+                        "a malicious web page"
+                    ],
+                    [
+                        "arbitrary malicious code",
+                        "runs on",
+                        "devices running vulnerable macOS"
+                    ],
+                    [
+                        0.8495284947524328,
+                        0.5892437074686208,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "devices running vulnerable iOS, macOS, and tvOS versions",
+                        "after opening",
+                        "a malicious web page"
+                    ],
+                    [
+                        "arbitrary malicious code",
+                        "runs on",
+                        "devices running vulnerable tvOS"
+                    ],
+                    [
+                        0.8590278098149681,
+                        0.5892437074686208,
+                        "passive form"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "a WebKit confusion issue",
+                    "could be exploited by",
+                    "attackers"
+                ],
+                [
+                    "attackers",
+                    "gain",
+                    "code execution on targeted devices"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "attacks",
+                    "could impact",
+                    "Macs"
+                ],
+                [
+                    "attacks",
+                    "could impact",
+                    "Apple TVs"
+                ],
+                [
+                    "CVE-2024-23222",
+                    "enables",
+                    "code execution on targeted devices"
+                ],
+                [
+                    "arbitrary malicious code",
+                    "after opening",
+                    "a malicious web page"
+                ]
+            ]
+        }
+    }
+}

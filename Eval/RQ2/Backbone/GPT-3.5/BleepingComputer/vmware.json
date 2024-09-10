@@ -1,0 +1,335 @@
+{
+    "CTI": {
+        "text": "A Chinese hacking group has been exploiting a critical vCenter Server vulnerability (CVE-2023-34048) as a zero-day since at least late 2021. The flaw was patched in October, with VMware confirming this Wednesday that it's aware of CVE-2023-34048 in-the-wild exploitation, although it didn't share any other details on the attacks. However, as security firm Mandiant revealed today, the vulnerability was used by the UNC3886 Chinese cyber espionage group as part of a previously reported campaign, exposed in June 2023. The cyberspies used it to breach their targets' vCenter servers and compromised credentials to deploy VirtualPita and VirtualPie backdoors on ESXi hosts via maliciously crafted vSphere Installation Bundles (VIBs). In the next stage, they exploited the CVE-2023-20867 VMware Tools authentication bypass flaw to escalate privileges, harvest files, and exfiltrate them from guest VMs.",
+        "link": "https://www.bleepingcomputer.com/news/security/chinese-hackers-exploit-vmware-bug-as-zero-day-for-two-years/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Chinese hacking group",
+                "relation": "exploiting",
+                "object": "a critical vCenter Server vulnerability"
+            },
+            {
+                "subject": "vCenter Server vulnerability",
+                "relation": "is known as",
+                "object": "CVE-2023-34048"
+            },
+            {
+                "subject": "CVE-2023-34048",
+                "relation": "was patched in",
+                "object": "October"
+            },
+            {
+                "subject": "CVE-2023-34048",
+                "relation": "is exploited as",
+                "object": "a zero-day since at least late 2021"
+            },
+            {
+                "subject": "security firm Mandiant",
+                "relation": "revealed",
+                "object": "the vulnerability was used by the UNC3886 Chinese cyber espionage group"
+            },
+            {
+                "subject": "UNC3886 Chinese cyber espionage group",
+                "relation": "used",
+                "object": "the vulnerability as part of a previously reported campaign"
+            },
+            {
+                "subject": "campaign",
+                "relation": "was exposed in",
+                "object": "June 2023"
+            },
+            {
+                "subject": "cyberspies",
+                "relation": "used",
+                "object": "the vulnerability to breach their targets' vCenter servers"
+            },
+            {
+                "subject": "cyberspies",
+                "relation": "compromised",
+                "object": "credentials to deploy VirtualPita and VirtualPie backdoors on ESXi hosts"
+            },
+            {
+                "subject": "cyberspies",
+                "relation": "exploited",
+                "object": "the CVE-2023-20867 VMware Tools authentication bypass flaw"
+            },
+            {
+                "subject": "CVE-2023-20867 VMware Tools authentication bypass flaw",
+                "relation": "used to",
+                "object": "escalate privileges, harvest files, and exfiltrate them from guest VMs"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1414,
+                "cost": 0.000707
+            },
+            "output": {
+                "tokens": 369,
+                "cost": 0.0005535000000000001
+            },
+            "total": {
+                "tokens": 1783,
+                "cost": 0.0012605
+            }
+        },
+        "time": 5.965834140777588,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/BleepingComputer/vmware-QD1-GQK.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Google_TAG: zimbra.json",
+                    0.12024726734499973
+                ],
+                [
+                    "thehackernews: ESG.json",
+                    0.1474849807830478
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 1,
+                "fn": 11,
+                "precision": 0.9090909090909091,
+                "recall": 0.47619047619047616,
+                "f1": 0.6249999999999999
+            },
+            "matched_list": [
+                [
+                    [
+                        "Chinese hacking group",
+                        "exploiting",
+                        "a critical vCenter Server vulnerability"
+                    ],
+                    [
+                        "A Chinese hacking group",
+                        "has been exploiting",
+                        "a critical vCenter Server vulnerability"
+                    ],
+                    [
+                        0.8920066130607589,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "vCenter Server vulnerability",
+                        "is known as",
+                        "CVE-2023-34048"
+                    ],
+                    [
+                        "a critical vCenter Server vulnerability",
+                        "is",
+                        "CVE-2023-34048"
+                    ],
+                    [
+                        0.9026402634313243,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-34048",
+                        "was patched in",
+                        "October"
+                    ],
+                    [
+                        "CVE-2023-34048",
+                        "was patched in",
+                        "October"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-34048",
+                        "is exploited as",
+                        "a zero-day since at least late 2021"
+                    ],
+                    [
+                        "a critical vCenter Server vulnerability",
+                        "is",
+                        "CVE-2023-34048"
+                    ],
+                    [
+                        0.5150829097795373,
+                        0.47553251662587326
+                    ]
+                ],
+                [
+                    [
+                        "security firm Mandiant",
+                        "revealed",
+                        "the vulnerability was used by the UNC3886 Chinese cyber espionage group"
+                    ],
+                    [
+                        "A Chinese hacking group",
+                        "has been exploiting",
+                        "a critical vCenter Server vulnerability"
+                    ],
+                    [
+                        0.5017453300420996,
+                        0.4870269934891318
+                    ]
+                ],
+                [
+                    [
+                        "UNC3886 Chinese cyber espionage group",
+                        "used",
+                        "the vulnerability as part of a previously reported campaign"
+                    ],
+                    [
+                        "A Chinese hacking group",
+                        "has been exploiting",
+                        "a critical vCenter Server vulnerability"
+                    ],
+                    [
+                        0.7078390997125914,
+                        0.5417480492061526
+                    ]
+                ],
+                [
+                    [
+                        "cyberspies",
+                        "used",
+                        "the vulnerability to breach their targets' vCenter servers"
+                    ],
+                    [
+                        "A Chinese hacking group",
+                        "has been exploiting",
+                        "a critical vCenter Server vulnerability"
+                    ],
+                    [
+                        0.47074544572574095,
+                        0.7792311249810324
+                    ]
+                ],
+                [
+                    [
+                        "cyberspies",
+                        "compromised",
+                        "credentials to deploy VirtualPita and VirtualPie backdoors on ESXi hosts"
+                    ],
+                    [
+                        "A Chinese hacking group",
+                        "has been exploiting",
+                        "a critical vCenter Server vulnerability"
+                    ],
+                    [
+                        0.47074544572574095,
+                        0.5404594332384212
+                    ]
+                ],
+                [
+                    [
+                        "cyberspies",
+                        "exploited",
+                        "the CVE-2023-20867 VMware Tools authentication bypass flaw"
+                    ],
+                    [
+                        "A Chinese hacking group",
+                        "has been exploiting",
+                        "a critical vCenter Server vulnerability"
+                    ],
+                    [
+                        0.47074544572574095,
+                        0.6651888721392397
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-20867 VMware Tools authentication bypass flaw",
+                        "used to",
+                        "escalate privileges, harvest files, and exfiltrate them from guest VMs"
+                    ],
+                    [
+                        "CVE-2023-20867",
+                        "to exfiltrate",
+                        "files from guest VMs"
+                    ],
+                    [
+                        0.6426673525743387,
+                        0.6212354150653794
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "campaign",
+                    "was exposed in",
+                    "June 2023"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "VMware",
+                    "confirming",
+                    "CVE-2023-34048 exploitation in-the-wild"
+                ],
+                [
+                    "UNC3886",
+                    "is",
+                    "Chinese cyber espionage group"
+                ],
+                [
+                    "UNC3886",
+                    "used",
+                    "CVE-2023-34048"
+                ],
+                [
+                    "UNC3886",
+                    "breach",
+                    "vCenter servers"
+                ],
+                [
+                    "UNC3886",
+                    "compromised",
+                    "credentials"
+                ],
+                [
+                    "credentials",
+                    "deploy",
+                    "VirtualPita and VirtualPie backdoors"
+                ],
+                [
+                    "VirtualPita and VirtualPie backdoors",
+                    "are on",
+                    "ESXi hosts"
+                ],
+                [
+                    "backdoors",
+                    "deployed via",
+                    "maliciously crafted vSphere Installation Bundles"
+                ],
+                [
+                    "UNC3886",
+                    "exploited",
+                    "CVE-2023-20867 VMware Tools authentication bypass flaw"
+                ],
+                [
+                    "CVE-2023-20867",
+                    "to escalate",
+                    "privileges"
+                ],
+                [
+                    "CVE-2023-20867",
+                    "to harvest",
+                    "files"
+                ]
+            ]
+        }
+    }
+}

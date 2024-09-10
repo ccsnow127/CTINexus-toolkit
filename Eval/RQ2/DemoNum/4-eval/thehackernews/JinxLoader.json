@@ -1,0 +1,353 @@
+{
+    "CTI": {
+        "text": "A new Go-based malware loader called JinxLoader is being used by threat actors to deliver next-stage payloads such as Formbook and its successor XLoader. The malware pays homage to League of Legends character Jinx, featuring the character on its ad poster and [command-and-control] login panel. The attacks begin with phishing emails impersonating Abu Dhabi National Oil Company (ADNOC), urging recipients to open password-protected RAR archive attachments that, upon opening, drop the JinxLoader executable, which subsequently acts as a gateway for Formbook or XLoader. It also comes amid a surge in campaigns distributing DarkGate and PikaBot, along with a threat actor known as TA544 (aka Narwal Spider) leveraging new variants of loader malware called IDAT Loader to deploy Remcos RAT or SystemBC malware. What's more, the threat actors behind the Meduza Stealer have released an updated version of the malware (version 2.2) on the dark web with expanded support for browser-based cryptocurrency wallets and an improved credit card (CC) grabber.",
+        "link": "https://thehackernews.com/2024/01/new-jinxloader-targeting-users-with.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "JinxLoader",
+                "relation": "is a",
+                "object": "Go-based malware loader"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "use",
+                "object": "JinxLoader"
+            },
+            {
+                "subject": "JinxLoader",
+                "relation": "delivers",
+                "object": "Formbook"
+            },
+            {
+                "subject": "JinxLoader",
+                "relation": "delivers",
+                "object": "XLoader"
+            },
+            {
+                "subject": "JinxLoader",
+                "relation": "features",
+                "object": "League of Legends character Jinx"
+            },
+            {
+                "subject": "attacks",
+                "relation": "begin with",
+                "object": "phishing emails"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "impersonate",
+                "object": "Abu Dhabi National Oil Company (ADNOC)"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "urge recipients to open",
+                "object": "password-protected RAR archive attachments"
+            },
+            {
+                "subject": "JinxLoader executable",
+                "relation": "acts as",
+                "object": "a gateway for Formbook or XLoader"
+            },
+            {
+                "subject": "TA544 (aka Narwal Spider)",
+                "relation": "leveraging",
+                "object": "IDAT Loader"
+            },
+            {
+                "subject": "IDAT Loader",
+                "relation": "deploys",
+                "object": "Remcos RAT"
+            },
+            {
+                "subject": "IDAT Loader",
+                "relation": "deploys",
+                "object": "SystemBC malware"
+            },
+            {
+                "subject": "Meduza Stealer",
+                "relation": "has released",
+                "object": "an updated version on the dark web"
+            },
+            {
+                "subject": "Meduza Stealer version 2.2",
+                "relation": "supports",
+                "object": "browser-based cryptocurrency wallets"
+            },
+            {
+                "subject": "Meduza Stealer version 2.2",
+                "relation": "includes",
+                "object": "an improved credit card (CC) grabber"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2967,
+                "cost": 0.029670000000000002
+            },
+            "output": {
+                "tokens": 397,
+                "cost": 0.01191
+            },
+            "total": {
+                "tokens": 3364,
+                "cost": 0.041580000000000006
+            }
+        },
+        "time": 16.26685357093811,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/thehackernews/JinxLoader-QD1-xRB.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "Unit42: CryptoClippy.json",
+                    0.11184597914587155
+                ],
+                [
+                    "darkreading: Jupyter-Infostealer.json",
+                    0.12453916212660286
+                ],
+                [
+                    "thehackernews: UAC-0050.json",
+                    0.13444266632632218
+                ],
+                [
+                    "thehackernews: Rugmi.json",
+                    0.20132946717773142
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 0,
+                "fn": 6,
+                "precision": 1.0,
+                "recall": 0.7142857142857143,
+                "f1": 0.8333333333333333
+            },
+            "matched_list": [
+                [
+                    [
+                        "JinxLoader",
+                        "is a",
+                        "Go-based malware loader"
+                    ],
+                    [
+                        "JinxLoader",
+                        "is a",
+                        "Go-based malware loader"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "use",
+                        "JinxLoader"
+                    ],
+                    [
+                        "threat actors",
+                        "use",
+                        "JinxLoader"
+                    ]
+                ],
+                [
+                    [
+                        "JinxLoader",
+                        "delivers",
+                        "Formbook"
+                    ],
+                    [
+                        "JinxLoader executable",
+                        "acts as",
+                        "a gateway for Formbook or XLoader"
+                    ]
+                ],
+                [
+                    [
+                        "JinxLoader",
+                        "delivers",
+                        "XLoader"
+                    ],
+                    [
+                        "JinxLoader",
+                        "delivers",
+                        "next-stage payloads"
+                    ]
+                ],
+                [
+                    [
+                        "JinxLoader",
+                        "features",
+                        "League of Legends character Jinx"
+                    ],
+                    [
+                        "JinxLoader",
+                        "pays homage to",
+                        "League of Legends character Jinx"
+                    ]
+                ],
+                [
+                    [
+                        "attacks",
+                        "begin with",
+                        "phishing emails"
+                    ],
+                    [
+                        "attacks",
+                        "begin with",
+                        "phishing emails"
+                    ]
+                ],
+                [
+                    [
+                        "phishing emails",
+                        "impersonate",
+                        "Abu Dhabi National Oil Company (ADNOC)"
+                    ],
+                    [
+                        "phishing emails",
+                        "impersonate",
+                        "Abu Dhabi National Oil Company"
+                    ]
+                ],
+                [
+                    [
+                        "phishing emails",
+                        "urge recipients to open",
+                        "password-protected RAR archive attachments"
+                    ],
+                    [
+                        "recipients",
+                        "urged to open",
+                        "password-protected RAR archive attachments"
+                    ]
+                ],
+                [
+                    [
+                        "JinxLoader executable",
+                        "acts as",
+                        "a gateway for Formbook or XLoader"
+                    ],
+                    [
+                        "JinxLoader executable",
+                        "acts as",
+                        "a gateway for Formbook or XLoader"
+                    ]
+                ],
+                [
+                    [
+                        "TA544 (aka Narwal Spider)",
+                        "leveraging",
+                        "IDAT Loader"
+                    ],
+                    [
+                        "TA544",
+                        "leveraging",
+                        "IDAT Loader"
+                    ]
+                ],
+                [
+                    [
+                        "IDAT Loader",
+                        "deploys",
+                        "Remcos RAT"
+                    ],
+                    [
+                        "IDAT Loader",
+                        "to deploy",
+                        "Remcos RAT"
+                    ]
+                ],
+                [
+                    [
+                        "IDAT Loader",
+                        "deploys",
+                        "SystemBC malware"
+                    ],
+                    [
+                        "IDAT Loader",
+                        "to deploy",
+                        "SystemBC malware"
+                    ]
+                ],
+                [
+                    [
+                        "Meduza Stealer",
+                        "has released",
+                        "an updated version on the dark web"
+                    ],
+                    [
+                        "Meduza Stealer",
+                        "released an updated version on",
+                        "the dark web"
+                    ]
+                ],
+                [
+                    [
+                        "Meduza Stealer version 2.2",
+                        "supports",
+                        "browser-based cryptocurrency wallets"
+                    ],
+                    [
+                        "Meduza Stealer version 2.2",
+                        "supports",
+                        "browser-based cryptocurrency wallets"
+                    ]
+                ],
+                [
+                    [
+                        "Meduza Stealer version 2.2",
+                        "includes",
+                        "an improved credit card (CC) grabber"
+                    ],
+                    [
+                        "Meduza Stealer version 2.2",
+                        "has",
+                        "an improved credit card grabber"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "next-stage payloads",
+                    "include",
+                    "Formbook"
+                ],
+                [
+                    "next-stage payloads",
+                    "include",
+                    "XLoader"
+                ],
+                [
+                    "RAR archive attachments",
+                    "drop",
+                    "JinxLoader executable"
+                ],
+                [
+                    "DarkGate",
+                    "is distributing in",
+                    "campaigns"
+                ],
+                [
+                    "PikaBot",
+                    "is distributing in",
+                    "campaigns"
+                ],
+                [
+                    "TA544",
+                    "is known as",
+                    "Narwal Spider"
+                ]
+            ],
+            "thresh": 0.8
+        }
+    }
+}

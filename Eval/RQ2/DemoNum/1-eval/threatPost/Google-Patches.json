@@ -1,0 +1,201 @@
+{
+    "CTI": {
+        "text": "Google has patched the fifth actively exploited zero-day vulnerability discovered in Chrome this year as one in a series of fixes included in a stable channel update released Wednesday. The bug, tracked as CVE-2022-2856 and rated as high on the Common Vulnerability Scoring System (CVSS), is associated with \u201cinsufficient validation of untrusted input in Intents,\u201d according to the advisory posted by Google. Google credits Ashley Shen and Christian Resell of its Google Threat Analysis Group (TAG) for reporting the zero-day bug, which could allow for arbitrary code execution, on July 19. The advisory also unveiled 10 other patches for various other Chrome issues.",
+        "link": "https://threatpost.com/google-patches-chromes-fifth-zero-day-of-the-year/180432/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Google",
+                "relation": "has patched",
+                "object": "the fifth actively exploited zero-day vulnerability discovered in Chrome this year"
+            },
+            {
+                "subject": "CVE-2022-2856",
+                "relation": "is rated as",
+                "object": "high on the Common Vulnerability Scoring System (CVSS)"
+            },
+            {
+                "subject": "CVE-2022-2856",
+                "relation": "is associated with",
+                "object": "insufficient validation of untrusted input in Intents"
+            },
+            {
+                "subject": "Google",
+                "relation": "credits",
+                "object": "Ashley Shen and Christian Resell of its Google Threat Analysis Group (TAG)"
+            },
+            {
+                "subject": "the zero-day bug",
+                "relation": "could allow for",
+                "object": "arbitrary code execution"
+            },
+            {
+                "subject": "the advisory",
+                "relation": "unveiled",
+                "object": "10 other patches for various other Chrome issues"
+            }
+        ],
+        "triples_count": 6,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 830,
+                "cost": 0.0083
+            },
+            "output": {
+                "tokens": 196,
+                "cost": 0.00588
+            },
+            "total": {
+                "tokens": 1026,
+                "cost": 0.01418
+            }
+        },
+        "time": 6.198575019836426,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/threatPost/Google-Patches-QD1-YJS.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "thehackernews: chrome-zero-day.json",
+                    0.25877626806933307
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 0,
+                "precision": 1.0,
+                "recall": 0.6,
+                "f1": 0.7499999999999999,
+                "fn": 4
+            },
+            "matched_list": [
+                [
+                    [
+                        "Google",
+                        "has patched",
+                        "the fifth actively exploited zero-day vulnerability discovered in Chrome this year"
+                    ],
+                    [
+                        "Google",
+                        "has patched",
+                        "the fifth actively exploited zero-day vulnerability"
+                    ],
+                    [
+                        1.0,
+                        0.813301300853805
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-2856",
+                        "is rated as",
+                        "high on the Common Vulnerability Scoring System (CVSS)"
+                    ],
+                    [
+                        "zero-day vulnerability",
+                        "is tracked as",
+                        "CVE-2022-2856"
+                    ],
+                    [
+                        0.4982709596715589,
+                        0.49248079312001236
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-2856",
+                        "is associated with",
+                        "insufficient validation of untrusted input in Intents"
+                    ],
+                    [
+                        "CVE-2022-2856",
+                        "is associated with",
+                        "insufficient validation of untrusted input in Intents"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Google",
+                        "credits",
+                        "Ashley Shen and Christian Resell of its Google Threat Analysis Group (TAG)"
+                    ],
+                    [
+                        "Google",
+                        "credits",
+                        "Ashley Shen and Christian Resell"
+                    ],
+                    [
+                        1.0,
+                        0.6196381129149563
+                    ]
+                ],
+                [
+                    [
+                        "the zero-day bug",
+                        "could allow for",
+                        "arbitrary code execution"
+                    ],
+                    [
+                        "zero-day bug",
+                        "could allow for",
+                        "arbitrary code execution"
+                    ],
+                    [
+                        0.915779033392585,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "the advisory",
+                        "unveiled",
+                        "10 other patches for various other Chrome issues"
+                    ],
+                    [
+                        "advisory",
+                        "unveiled",
+                        "10 other patches"
+                    ],
+                    [
+                        0.8853279140195196,
+                        0.7251906309900648
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "zero-day vulnerability",
+                    "discovered in",
+                    "Chrome"
+                ],
+                [
+                    "CVE-2022-2856",
+                    "rated as",
+                    "high on the Common Vulnerability Scoring System (CVSS)"
+                ],
+                [
+                    "Ashley Shen and Christian Resell",
+                    "are of",
+                    "Google Threat Analysis Group (TAG)"
+                ],
+                [
+                    "patches",
+                    "for",
+                    "various other Chrome issues"
+                ]
+            ]
+        }
+    }
+}

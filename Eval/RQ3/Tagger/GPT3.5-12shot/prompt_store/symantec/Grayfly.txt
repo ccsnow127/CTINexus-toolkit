@@ -1,0 +1,228 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": {"subject": "Akira ransomware group", "relation": "claimed responsibility for", "object": "three recent attacks"}
+
+"tagged_triple": {"subject": {"text": "Akira ransomware group", "class": "Attacker"}, "relation": "claimed responsibility for", "object": {"text": "three recent attacks", "class": "Event"}} 
+---------------------
+Example 2:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "APT35", "relation": "used", "object": "a new strain of malware for intelligence collection"}
+
+"tagged_triple": {"subject": {"text": "APT35", "class": "Attacker"}, "relation": "drops", "object": {"text": "a new strain of malware for intelligence collection", "class": "Malware"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Cuba ransomware actors", "relation": "potentially connected with", "object": "RomCom Remote Access Trojan (RAT) actors"}
+
+"tagged_triple": {"subject": {"text": "Cuba ransomware actors", "class": "Attacker"},"relation": "potentially connected with", "object": {"text": "RomCom Remote Access Trojan (RAT) actors", "class": "Attacker"}}
+---------------------
+Example 5:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 6:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 7:
+
+"triple": {"subject": "Microsoft's SQL servers", "relation": "hold data for", "object": "internet services and apps"}
+
+"tagged_triple": {"subject": {"text": "Microsoft's SQL servers", "class": "Infrastructure"}, "relation": "hold data for", "object": {"text": "internet services and apps","class": "Infrastructure"}}
+---------------------
+Example 8:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Example 9:
+
+"triple": {"subject": "Internet-accessible Apache ActiveMQ Servers", "relation": "are exposed to", "object": "a critical remote code execution vulnerability"}
+
+"tagged_triple": {"subject": {"text": "Internet-accessible Apache ActiveMQ Servers", "class": "Infrastructure"}, "relation": "are exposed to", "object": {"text": "a critical remote code execution vulnerability", "class": "Vulnerability"}}
+---------------------
+Example 10:
+
+"triple": {"subject": "CVE-2023-51467", "relation": "allows", "object": "access to sensitive information"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-51467", "class": "Vulnerability"}, "relation": "allows", "object": {"text": "access to sensitive information", "class": "Malware Characteristic:Behavior"}}
+---------------------
+Example 11:
+
+"triple": {"subject": "Volt Typhoon", "relation": "extracts", "object": "credentials"}
+
+"tagged_triple": {"subject": {"text": "Volt Typhoon", "class": "Attacker"}, "relation": "extracts", "object": {"text": "credentials", "class": "Credential"}}
+---------------------
+Example 12:
+
+"triple": {"subject": "A financially motivated threat actor", "relation": "deploy", "object": "Linux backdoors"}
+
+"tagged_triple": {"subject": {"text": "A financially motivated threat actor", "class": ""}, "relation": "deploy", "object": {"text": "Linux backdoors", "class": "Malware"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Grayfly', 'relation': 'also known as', 'object': 'GREF'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'also known as', 'object': 'Wicked Panda'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'uses', 'object': 'Backdoor.Motnug'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'uses', 'object': 'Trojan.Chattak'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'uses', 'object': 'Cobalt Strike'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'uses', 'object': 'ancillary tools'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Backdoor.Motnug', 'relation': 'is also known as', 'object': 'TOMMYGUN/CROSSWALK'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cobalt Strike', 'relation': 'is also known as', 'object': 'Trojan.Agentemis'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'targeted', 'object': 'Asia'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'targeted', 'object': 'Europe'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'targeted', 'object': 'North America'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'targeted industries', 'relation': 'include', 'object': 'food'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'targeted industries', 'relation': 'include', 'object': 'financial'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'targeted industries', 'relation': 'include', 'object': 'healthcare'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'targeted industries', 'relation': 'include', 'object': 'hospitality'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'targeted industries', 'relation': 'include', 'object': 'manufacturing'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'targeted industries', 'relation': 'include', 'object': 'telecommunications'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'recent activity focus', 'relation': 'includes', 'object': 'telecommunications'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'recent activity focus', 'relation': 'includes', 'object': 'media'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'recent activity focus', 'relation': 'includes', 'object': 'finance'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'recent activity focus', 'relation': 'includes', 'object': 'IT service provider sectors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'targets', 'object': 'publicly facing web servers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'installs', 'object': 'web shells'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'installs', 'object': 'custom backdoors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'allows', 'object': 'comprehensive remote access'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'allows', 'object': 'proxy connections'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Grayfly', 'relation': 'considered', 'object': 'the espionage arm of APT41'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'APT41', 'relation': 'has sub-group', 'object': 'Blackfly'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

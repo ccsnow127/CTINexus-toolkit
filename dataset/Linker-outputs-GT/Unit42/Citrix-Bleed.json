@@ -1,0 +1,732 @@
+{
+    "CTI": {
+        "text": "On Oct. 10, 2023, Citrix published a patch for their Netscaler ADC and Netscaler Gateway products. One particular vulnerability that this patch is meant to mitigate has come to be known as Citrix Bleed (CVE-2023-4966).This nickname was given because the vulnerability can leak sensitive information from the device's memory, which can include session tokens. Attackers can then use these credentials to gain a foothold into systems via session hijacking. At the time of the patch, Citrix was unaware of ongoing attacks using this vulnerability but has since stated that they have observed threat actors using it. The Unit 42 Incident Response and Managed Threat Hunting teams have observed ransomware groups exploiting Citrix Bleed. The Managed Threat Hunting team has also observed what appeared to be remote executions from Netscaler gateways in association with exploitation of this vulnerability.",
+        "link": "https://unit42.paloaltonetworks.com/threat-brief-cve-2023-4966-netscaler-citrix-bleed/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Citrix",
+                "relation": "published",
+                "object": "a patch"
+            },
+            {
+                "subject": "the patch",
+                "relation": "is for",
+                "object": "Netscaler ADC and Netscaler Gateway products"
+            },
+            {
+                "subject": "Citrix Bleed",
+                "relation": "is tracked as",
+                "object": "CVE-2023-4966"
+            },
+            {
+                "subject": "Citrix Bleed",
+                "relation": "can leak",
+                "object": "sensitive information"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "can include",
+                "object": "session tokens"
+            },
+            {
+                "subject": "attackers",
+                "relation": "use",
+                "object": "credentials"
+            },
+            {
+                "subject": "credentials",
+                "relation": "to gain",
+                "object": "a foothold into systems"
+            },
+            {
+                "subject": "systems",
+                "relation": "are accessed via",
+                "object": "session hijacking"
+            },
+            {
+                "subject": "Citrix",
+                "relation": "was unaware of",
+                "object": "ongoing attacks"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "using",
+                "object": "Citrix Bleed"
+            },
+            {
+                "subject": "Unit 42 Incident Response and Managed Threat Hunting teams",
+                "relation": "observed",
+                "object": "ransomware groups exploiting Citrix Bleed"
+            },
+            {
+                "subject": "Managed Threat Hunting team",
+                "relation": "observed",
+                "object": "remote executions from Netscaler gateways"
+            },
+            {
+                "subject": "remote executions from Netscaler gateways",
+                "relation": "in association with",
+                "object": "exploitation of Citrix Bleed"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2698,
+                "cost": 0.02698
+            },
+            "output": {
+                "tokens": 336,
+                "cost": 0.01008
+            },
+            "total": {
+                "tokens": 3034,
+                "cost": 0.03706
+            }
+        },
+        "time": 8.126796245574951,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Unit42/Citrix-Bleed-QD1-j8g.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-github.json",
+                    0.0962363283674411
+                ],
+                [
+                    "AVERTIUM-mallox.json",
+                    0.11637122993132508
+                ],
+                [
+                    "BleepingComputer-citrix.json",
+                    0.3273224104129149
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Citrix",
+                    "class": "Organization"
+                },
+                "relation": "published",
+                "object": {
+                    "text": "a patch",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the patch",
+                    "class": "Tool"
+                },
+                "relation": "is for",
+                "object": {
+                    "text": "Netscaler ADC and Netscaler Gateway products",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Citrix Bleed",
+                    "class": "Vulnerability"
+                },
+                "relation": "is tracked as",
+                "object": {
+                    "text": "CVE-2023-4966",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Citrix Bleed",
+                    "class": "Vulnerability"
+                },
+                "relation": "can leak",
+                "object": {
+                    "text": "sensitive information",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "sensitive information",
+                    "class": "Information"
+                },
+                "relation": "can include",
+                "object": {
+                    "text": "session tokens",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "use",
+                "object": {
+                    "text": "credentials",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "credentials",
+                    "class": "Credential"
+                },
+                "relation": "to gain",
+                "object": {
+                    "text": "a foothold into systems",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "systems",
+                    "class": "Information"
+                },
+                "relation": "are accessed via",
+                "object": {
+                    "text": "session hijacking",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Citrix",
+                    "class": "Organization"
+                },
+                "relation": "was unaware of",
+                "object": {
+                    "text": "ongoing attacks",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "using",
+                "object": {
+                    "text": "Citrix Bleed",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Unit 42 Incident Response and Managed Threat Hunting teams",
+                    "class": "Organization"
+                },
+                "relation": "observed",
+                "object": {
+                    "text": "ransomware groups exploiting Citrix Bleed",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Managed Threat Hunting team",
+                    "class": "Organization"
+                },
+                "relation": "observed",
+                "object": {
+                    "text": "remote executions from Netscaler gateways",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "remote executions from Netscaler gateways",
+                    "class": "Event"
+                },
+                "relation": "in association with",
+                "object": {
+                    "text": "exploitation of Citrix Bleed",
+                    "class": "Vulnerability"
+                }
+            }
+        ],
+        "response_time": 30.54660129547119,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/Unit42/Citrix-Bleed.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1512,
+                "cost": 0.015120000000000001
+            },
+            "output": {
+                "tokens": 677,
+                "cost": 0.02031
+            },
+            "total": {
+                "tokens": 2189,
+                "cost": 0.03543
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "Citrix",
+                    "mention_class": "Organization",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Citrix",
+                        "Citrix"
+                    ],
+                    "entity_text": "Citrix"
+                },
+                "relation": "published",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a patch",
+                    "mention_class": "Tool",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a patch",
+                        "the patch"
+                    ],
+                    "entity_text": "a patch"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "the patch",
+                    "mention_class": "Tool",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a patch",
+                        "the patch"
+                    ],
+                    "entity_text": "a patch"
+                },
+                "relation": "is for",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "Netscaler ADC and Netscaler Gateway products",
+                    "mention_class": "Information",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Netscaler ADC and Netscaler Gateway products"
+                    ],
+                    "entity_text": "Netscaler ADC and Netscaler Gateway products"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "Citrix Bleed",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "exploitation of Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed"
+                    ],
+                    "entity_text": "Citrix Bleed"
+                },
+                "relation": "is tracked as",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "CVE-2023-4966",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "CVE-2023-4966"
+                    ],
+                    "entity_text": "CVE-2023-4966"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "Citrix Bleed",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "exploitation of Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed"
+                    ],
+                    "entity_text": "Citrix Bleed"
+                },
+                "relation": "can leak",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "sensitive information",
+                    "mention_class": "Information",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "sensitive information",
+                        "sensitive information"
+                    ],
+                    "entity_text": "sensitive information"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "sensitive information",
+                    "mention_class": "Information",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "sensitive information",
+                        "sensitive information"
+                    ],
+                    "entity_text": "sensitive information"
+                },
+                "relation": "can include",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "session tokens",
+                    "mention_class": "Credential",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "session tokens"
+                    ],
+                    "entity_text": "session tokens"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "attackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "attackers",
+                        "threat actors"
+                    ],
+                    "entity_text": "attackers"
+                },
+                "relation": "use",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "credentials",
+                    "mention_class": "Credential",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "credentials",
+                        "credentials"
+                    ],
+                    "entity_text": "credentials"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "credentials",
+                    "mention_class": "Credential",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "credentials",
+                        "credentials"
+                    ],
+                    "entity_text": "credentials"
+                },
+                "relation": "to gain",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "a foothold into systems",
+                    "mention_class": "Information",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "a foothold into systems"
+                    ],
+                    "entity_text": "a foothold into systems"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "systems",
+                    "mention_class": "Information",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "systems"
+                    ],
+                    "entity_text": "systems"
+                },
+                "relation": "are accessed via",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "session hijacking",
+                    "mention_class": "Event",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "session hijacking"
+                    ],
+                    "entity_text": "session hijacking"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "Citrix",
+                    "mention_class": "Organization",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Citrix",
+                        "Citrix"
+                    ],
+                    "entity_text": "Citrix"
+                },
+                "relation": "was unaware of",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "ongoing attacks",
+                    "mention_class": "Event",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "ongoing attacks"
+                    ],
+                    "entity_text": "ongoing attacks"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "threat actors",
+                    "mention_class": "Attacker",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "attackers",
+                        "threat actors"
+                    ],
+                    "entity_text": "attackers"
+                },
+                "relation": "using",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "Citrix Bleed",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "exploitation of Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed"
+                    ],
+                    "entity_text": "Citrix Bleed"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "Unit 42 Incident Response and Managed Threat Hunting teams",
+                    "mention_class": "Organization",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "Unit 42 Incident Response and Managed Threat Hunting teams",
+                        "Managed Threat Hunting team"
+                    ],
+                    "entity_text": "Managed Threat Hunting team"
+                },
+                "relation": "observed",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "ransomware groups exploiting Citrix Bleed",
+                    "mention_class": "Event",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "ransomware groups exploiting Citrix Bleed"
+                    ],
+                    "entity_text": "ransomware groups exploiting Citrix Bleed"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "Managed Threat Hunting team",
+                    "mention_class": "Organization",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "Unit 42 Incident Response and Managed Threat Hunting teams",
+                        "Managed Threat Hunting team"
+                    ],
+                    "entity_text": "Managed Threat Hunting team"
+                },
+                "relation": "observed",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "remote executions from Netscaler gateways",
+                    "mention_class": "Event",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "remote executions from Netscaler gateways",
+                        "remote executions from Netscaler gateways"
+                    ],
+                    "entity_text": "remote executions from Netscaler gateways"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "remote executions from Netscaler gateways",
+                    "mention_class": "Event",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "remote executions from Netscaler gateways",
+                        "remote executions from Netscaler gateways"
+                    ],
+                    "entity_text": "remote executions from Netscaler gateways"
+                },
+                "relation": "in association with",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "exploitation of Citrix Bleed",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "exploitation of Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed"
+                    ],
+                    "entity_text": "Citrix Bleed"
+                }
+            }
+        ],
+        "mentions_num": 26,
+        "response_time": 5.253012180328369,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 16
+    },
+    "LP": {
+        "predicted_links": [
+            {
+                "subject": {
+                    "entity_id": 0,
+                    "mention_text": "Citrix"
+                },
+                "relation": "published patch for",
+                "object": {
+                    "mention_id": 4,
+                    "mention_text": "Citrix Bleed",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "exploitation of Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed"
+                    ],
+                    "entity_text": "Citrix Bleed"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 13,
+                    "mention_text": "session hijacking"
+                },
+                "relation": "is facilitated by",
+                "object": {
+                    "mention_id": 4,
+                    "mention_text": "Citrix Bleed",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "exploitation of Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed",
+                        "Citrix Bleed"
+                    ],
+                    "entity_text": "Citrix Bleed"
+                }
+            }
+        ],
+        "response_time": 4.691379070281982,
+        "model": "gpt-4-0125-preview",
+        "usage": {
+            "input": {
+                "tokens": 2193,
+                "cost": 0.02193
+            },
+            "output": {
+                "tokens": 77,
+                "cost": 0.00231
+            },
+            "total": {
+                "tokens": 2270,
+                "cost": 0.024240000000000005
+            }
+        },
+        "topic_node": {
+            "mention_id": 4,
+            "mention_text": "Citrix Bleed",
+            "mention_class": "Vulnerability",
+            "entity_id": 7,
+            "mentions_merged": [
+                "exploitation of Citrix Bleed",
+                "Citrix Bleed",
+                "Citrix Bleed",
+                "Citrix Bleed"
+            ],
+            "entity_text": "Citrix Bleed"
+        },
+        "main_nodes": [
+            {
+                "mention_id": 0,
+                "mention_text": "Citrix",
+                "mention_class": "Organization",
+                "entity_id": 0,
+                "mentions_merged": [
+                    "Citrix",
+                    "Citrix"
+                ],
+                "entity_text": "Citrix"
+            },
+            {
+                "mention_id": 15,
+                "mention_text": "session hijacking",
+                "mention_class": "Event",
+                "entity_id": 13,
+                "mentions_merged": [
+                    "session hijacking"
+                ],
+                "entity_text": "session hijacking"
+            }
+        ],
+        "subgraphs": [
+            [
+                0,
+                2,
+                4,
+                14
+            ],
+            [
+                1,
+                3,
+                5,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                15
+            ],
+            [
+                13,
+                6
+            ]
+        ],
+        "subgraph_num": 3
+    }
+}

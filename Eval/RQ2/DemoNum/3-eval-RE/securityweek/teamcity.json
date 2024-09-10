@@ -1,0 +1,287 @@
+{
+    "CTI": {
+        "text": "A TeamCity vulnerability disclosed recently in controversial circumstances is being exploited in ransomware attacks, according to the product\u2019s developer and cybersecurity companies. On March 4, JetBrains, the developer of the TeamCity build management and continuous integration server, announced fixes for CVE-2024-27198 and CVE-2024-27199, two serious authentication bypass vulnerabilities. CVE-2024-27198, which has been rated critical, can be exploited by remote, unauthenticated attackers to take complete control of a server by creating a new admin user account or by generating an admin access token. Rapid7, whose researchers discovered the vulnerabilities, made public details of CVE-2024-27198 and CVE-2024-27199 a few hours after JetBrains announced fixes. Full disclosure seems to have occurred due to miscommunication between the two companies. Rapid7 was concerned that JetBrains would try to silently patch the vulnerabilities and the vendor was concerned that Rapid7 would disclose details too quickly. JetBrains informed customers about patches without notifying Rapid7, which decided to immediately This led to threat actors beginning to target CVE-2024-27198 shortly after disclosure on March 4. By March 6, LeakIX, a project that scans the web for vulnerable and misconfigured systems, started seeing mass exploitation, with signs of rogue user creation seen in 1,400 instances. GuidePoint Security reported on Friday that a ransomware group named BianLian, which has been known to target critical infrastructure, may have exploited CVE-2024-27198 for initial access. ",
+        "link": "https://www.securityweek.com/recent-teamcity-vulnerability-exploited-in-ransomware-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "TeamCity vulnerability",
+                "relation": "is being exploited in",
+                "object": "ransomware attacks"
+            },
+            {
+                "subject": "CVE-2024-27198",
+                "relation": "is a",
+                "object": "critical authentication bypass vulnerability"
+            },
+            {
+                "subject": "CVE-2024-27199",
+                "relation": "is a",
+                "object": "serious authentication bypass vulnerability"
+            },
+            {
+                "subject": "CVE-2024-27198",
+                "relation": "allows",
+                "object": "remote, unauthenticated attackers to take complete control of a server"
+            },
+            {
+                "subject": "CVE-2024-27198",
+                "relation": "can be exploited by creating",
+                "object": "a new admin user account or by generating an admin access token"
+            },
+            {
+                "subject": "Rapid7",
+                "relation": "discovered",
+                "object": "the vulnerabilities"
+            },
+            {
+                "subject": "Rapid7",
+                "relation": "made public details of",
+                "object": "CVE-2024-27198 and CVE-2024-27199"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "began to target",
+                "object": "CVE-2024-27198 shortly after disclosure"
+            },
+            {
+                "subject": "LeakIX",
+                "relation": "started seeing",
+                "object": "mass exploitation"
+            },
+            {
+                "subject": "LeakIX",
+                "relation": "seen in",
+                "object": "1,400 instances"
+            },
+            {
+                "subject": "BianLian",
+                "relation": "may have exploited",
+                "object": "CVE-2024-27198 for initial access"
+            },
+            {
+                "subject": "BianLian",
+                "relation": "is known to target",
+                "object": "critical infrastructure"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2058,
+                "cost": 0.02058
+            },
+            "output": {
+                "tokens": 443,
+                "cost": 0.01329
+            },
+            "total": {
+                "tokens": 2501,
+                "cost": 0.03387
+            }
+        },
+        "time": 22.843082189559937,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/securityweek/teamcity-QD1-ZMN.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "securityweek: screenconnect.json",
+                    0.16671861357869044
+                ],
+                [
+                    "Microsoft: teamcity-cve.json",
+                    0.18852263909481404
+                ],
+                [
+                    "darkreading: SolarWinds-Style.json",
+                    0.19641684554664254
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 0,
+                "fn": 4,
+                "precision": 1.0,
+                "recall": 0.75,
+                "f1": 0.8571428571428571
+            },
+            "matched_list": [
+                [
+                    [
+                        "TeamCity vulnerability",
+                        "is being exploited in",
+                        "ransomware attacks"
+                    ],
+                    [
+                        "A TeamCity vulnerability",
+                        "disclosed",
+                        "recently"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-27198",
+                        "is a",
+                        "critical authentication bypass vulnerability"
+                    ],
+                    [
+                        "JetBrains",
+                        "announced fixes for",
+                        "CVE-2024-27198 and CVE-2024-27199"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-27199",
+                        "is a",
+                        "serious authentication bypass vulnerability"
+                    ],
+                    [
+                        "CVE-2024-27198",
+                        "is rated",
+                        "critical"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-27198",
+                        "allows",
+                        "remote, unauthenticated attackers to take complete control of a server"
+                    ],
+                    [
+                        "The TeamCity vulnerability",
+                        "is being exploited in",
+                        "ransomware attacks"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-27198",
+                        "can be exploited by creating",
+                        "a new admin user account or by generating an admin access token"
+                    ],
+                    [
+                        "CVE-2024-27198",
+                        "can be exploited by",
+                        "remote, unauthenticated attackers"
+                    ]
+                ],
+                [
+                    [
+                        "Rapid7",
+                        "discovered",
+                        "the vulnerabilities"
+                    ],
+                    [
+                        "CVE-2024-27199",
+                        "is",
+                        "a serious authentication bypass vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "Rapid7",
+                        "made public details of",
+                        "CVE-2024-27198 and CVE-2024-27199"
+                    ],
+                    [
+                        "Rapid7",
+                        "discovered",
+                        "the vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "began to target",
+                        "CVE-2024-27198 shortly after disclosure"
+                    ],
+                    [
+                        "remote, unauthenticated attackers",
+                        "take complete control of",
+                        "a server"
+                    ]
+                ],
+                [
+                    [
+                        "LeakIX",
+                        "started seeing",
+                        "mass exploitation"
+                    ],
+                    [
+                        "Rapid7",
+                        "made public details of",
+                        "CVE-2024-27198 and CVE-2024-27199"
+                    ]
+                ],
+                [
+                    [
+                        "LeakIX",
+                        "seen in",
+                        "1,400 instances"
+                    ],
+                    [
+                        "LeakIX",
+                        "started seeing",
+                        "mass exploitation"
+                    ]
+                ],
+                [
+                    [
+                        "BianLian",
+                        "may have exploited",
+                        "CVE-2024-27198 for initial access"
+                    ],
+                    [
+                        "threat actors",
+                        "begin to target",
+                        "CVE-2024-27198"
+                    ]
+                ],
+                [
+                    [
+                        "BianLian",
+                        "is known to target",
+                        "critical infrastructure"
+                    ],
+                    [
+                        "BianLian",
+                        "may have exploited",
+                        "CVE-2024-27198"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "exploitation",
+                    "signs of",
+                    "rogue user creation"
+                ],
+                [
+                    "rogue user creation",
+                    "seen in",
+                    "1,400 instances"
+                ],
+                [
+                    "BianLian",
+                    "is a",
+                    "ransomware group"
+                ],
+                [
+                    "BianLian",
+                    "target",
+                    "critical infrastructure"
+                ]
+            ]
+        }
+    }
+}

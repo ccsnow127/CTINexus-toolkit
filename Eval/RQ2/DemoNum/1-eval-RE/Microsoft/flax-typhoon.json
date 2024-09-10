@@ -1,0 +1,316 @@
+{
+    "CTI": {
+        "text": "Flax Typhoon has been active since mid-2021 and has targeted government agencies and education, critical manufacturing, and information technology organizations in Taiwan. Some victims have also been observed elsewhere in Southeast Asia, as well as in North America and Africa. Flax Typhoon focuses on persistence, lateral movement, and credential access. As with any observed nation-state actor activity, Microsoft has directly notified targeted or compromised customers, providing them with important information needed to secure their environments. Flax Typhoon is known to use the China Chopper web shell, Metasploit, Juicy Potato privilege escalation tool, Mimikatz, and SoftEther virtual private network (VPN) client. However, Flax Typhoon primarily relies on living-off-the-land techniques and hands-on-keyboard activity. Flax Typhoon achieves initial access by exploiting known vulnerabilities in public-facing servers and deploying web shells like China Chopper. Following initial access, Flax Typhoon uses command-line tools to first establish persistent access over the remote desktop protocol, then deploy a VPN connection to actor-controlled network infrastructure, and finally collect credentials from compromised systems. Flax Typhoon further uses this VPN access to scan for vulnerabilities on targeted systems and organizations from the compromised systems.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/08/24/flax-typhoon-using-legitimate-software-to-quietly-access-taiwanese-organizations/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Flax Typhoon",
+                "relation": "has been active since",
+                "object": "mid-2021"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "has targeted",
+                "object": "government agencies and education, critical manufacturing, and information technology organizations in Taiwan"
+            },
+            {
+                "subject": "Some victims",
+                "relation": "have also been observed in",
+                "object": "Southeast Asia, North America and Africa"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "focuses on",
+                "object": "persistence, lateral movement, and credential access"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "has directly notified",
+                "object": "targeted or compromised customers"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "is known to use",
+                "object": "the China Chopper web shell, Metasploit, Juicy Potato privilege escalation tool, Mimikatz, SoftEther VPN client"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "relies on",
+                "object": "living-off-the-land techniques and hands-on-keyboard activity"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "achieves initial access by",
+                "object": "exploiting known vulnerabilities in public-facing servers and deploying web shells like China Chopper"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "uses command-line tools to",
+                "object": "first establish persistent access over the remote desktop protocol"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "then deploy",
+                "object": "a VPN connection to actor-controlled network infrastructure"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "finally collect",
+                "object": "credentials from compromised systems"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "uses this VPN access to",
+                "object": "scan for vulnerabilities on targeted systems and organizations from the compromised systems"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 738,
+                "cost": 0.00738
+            },
+            "output": {
+                "tokens": 401,
+                "cost": 0.01203
+            },
+            "total": {
+                "tokens": 1139,
+                "cost": 0.01941
+            }
+        },
+        "time": 10.575044870376587,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/Microsoft/flax-typhoon-QD1-3cA.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "Microsoft: taiwanese.json",
+                    0.4675926325392116
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 2,
+                "fn": 14,
+                "precision": 0.8333333333333334,
+                "recall": 0.4166666666666667,
+                "f1": 0.5555555555555556
+            },
+            "matched_list": [
+                [
+                    [
+                        "Flax Typhoon",
+                        "has been active since",
+                        "mid-2021"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "has been active since",
+                        "mid-2021"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "has targeted",
+                        "government agencies and education, critical manufacturing, and information technology organizations in Taiwan"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "targeted",
+                        "government agencies"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "focuses on",
+                        "persistence, lateral movement, and credential access"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "targeted",
+                        "education organizations"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "is known to use",
+                        "the China Chopper web shell, Metasploit, Juicy Potato privilege escalation tool, Mimikatz, SoftEther VPN client"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "targeted",
+                        "critical manufacturing organizations"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "relies on",
+                        "living-off-the-land techniques and hands-on-keyboard activity"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "targeted",
+                        "information technology organizations"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "achieves initial access by",
+                        "exploiting known vulnerabilities in public-facing servers and deploying web shells like China Chopper"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "targets include",
+                        "Taiwan"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "uses command-line tools to",
+                        "first establish persistent access over the remote desktop protocol"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "targets include",
+                        "North America"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "then deploy",
+                        "a VPN connection to actor-controlled network infrastructure"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "targets include",
+                        "Southeast Asia"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "finally collect",
+                        "credentials from compromised systems"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "targets include",
+                        "Africa"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "uses this VPN access to",
+                        "scan for vulnerabilities on targeted systems and organizations from the compromised systems"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "focuses on",
+                        "persistence"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Some victims",
+                    "have also been observed in",
+                    "Southeast Asia, North America and Africa"
+                ],
+                [
+                    "Microsoft",
+                    "has directly notified",
+                    "targeted or compromised customers"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Flax Typhoon",
+                    "focuses on",
+                    "lateral movement"
+                ],
+                [
+                    "Flax Typhoon",
+                    "focuses on",
+                    "credential access"
+                ],
+                [
+                    "Flax Typhoon",
+                    "uses",
+                    "China Chopper web shell"
+                ],
+                [
+                    "Flax Typhoon",
+                    "uses",
+                    "Metasploit"
+                ],
+                [
+                    "Flax Typhoon",
+                    "uses",
+                    "Juicy Potato"
+                ],
+                [
+                    "Flax Typhoon",
+                    "uses",
+                    "Mimikatz"
+                ],
+                [
+                    "Flax Typhoon",
+                    "uses",
+                    "SoftEther VPN client"
+                ],
+                [
+                    "Flax Typhoon",
+                    "relies on",
+                    "living-off-the-land techniques"
+                ],
+                [
+                    "Flax Typhoon",
+                    "relies on",
+                    "hands-on-keyboard activity"
+                ],
+                [
+                    "Flax Typhoon",
+                    "achieves initial access by",
+                    "exploiting known vulnerabilities"
+                ],
+                [
+                    "Flax Typhoon",
+                    "deploys",
+                    "web shells like China Chopper"
+                ],
+                [
+                    "Flax Typhoon",
+                    "uses command-line tools to",
+                    "establish persistent access"
+                ],
+                [
+                    "Flax Typhoon",
+                    "deploys",
+                    "a VPN connection"
+                ],
+                [
+                    "Flax Typhoon",
+                    "uses VPN access to",
+                    "scan for vulnerabilities"
+                ]
+            ]
+        }
+    }
+}

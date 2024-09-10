@@ -1,0 +1,156 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'LeftoverLocals', 'relation': 'affects', 'object': 'graphics processing units'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'graphics processing units', 'relation': 'from', 'object': 'AMD'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'graphics processing units', 'relation': 'from', 'object': 'Apple'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'graphics processing units', 'relation': 'from', 'object': 'Qualcomm'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'graphics processing units', 'relation': 'from', 'object': 'Imagination Technologies'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LeftoverLocals', 'relation': 'allows', 'object': 'retrieving data from local memory space'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The vulnerability', 'relation': 'is tracked as', 'object': 'CVE-2023-4969'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The vulnerability', 'relation': 'enables', 'object': 'data recovery from vulnerable GPUs'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'vulnerable GPUs', 'relation': 'especially in context of', 'object': 'large language models processes'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'vulnerable GPUs', 'relation': 'especially in context of', 'object': 'machine learning processes'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'launch', 'object': "'listener'"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': "'listener'", 'relation': 'is a', 'object': 'GPU kernel that reads from uninitialized local memory'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': "'listener'", 'relation': 'can dump data in', 'object': 'persistent location'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'persistent location', 'relation': 'such as', 'object': 'the global memory'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attacker', 'relation': 'use', 'object': 'listener to read values'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'values', 'relation': 'left behind by', 'object': "'writer'"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': "'writer'", 'relation': 'is a', 'object': 'program that stores values to local memory'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'recovered data', 'relation': 'can reveal', 'object': "sensitive information about victim's computations"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'sensitive information', 'relation': 'includes', 'object': 'model inputs'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'sensitive information', 'relation': 'includes', 'object': 'outputs'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'sensitive information', 'relation': 'includes', 'object': 'weights'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'sensitive information', 'relation': 'includes', 'object': 'intermediate computations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

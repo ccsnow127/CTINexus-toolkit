@@ -1,0 +1,218 @@
+{
+    "CTI": {
+        "text": "Google has released security updates to fix the first Chrome zero-day vulnerability exploited in the wild since the start of the year. \u200bThe high-severity zero-day vulnerability (CVE-2024-0519) is due to a high-severity out-of-bounds memory access weakness in the Chrome V8 JavaScript engine, which remote attackers can exploit via a crafted HTML page to gain access to data beyond the memory buffer through heap corruption, providing them access to sensitive information or triggering a crash. Besides unauthorized access to out-of-bounds memory, CVE-2024-0519 could also be exploited to bypass protection mechanisms such as ASLR to make it easier to achieve code execution via another weakness.",
+        "link": "https://www.bleepingcomputer.com/news/security/google-fixes-first-actively-exploited-chrome-zero-day-of-2024/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Google",
+                "relation": "has released",
+                "object": "security updates"
+            },
+            {
+                "subject": "security updates",
+                "relation": "fix",
+                "object": "the first Chrome zero-day vulnerability"
+            },
+            {
+                "subject": "the first Chrome zero-day vulnerability",
+                "relation": "is",
+                "object": "CVE-2024-0519"
+            },
+            {
+                "subject": "CVE-2024-0519",
+                "relation": "is due to",
+                "object": "a high-severity out-of-bounds memory access weakness in the Chrome V8 JavaScript engine"
+            },
+            {
+                "subject": "remote attackers",
+                "relation": "can exploit",
+                "object": "CVE-2024-0519 via a crafted HTML page"
+            },
+            {
+                "subject": "remote attackers",
+                "relation": "can gain access to",
+                "object": "data beyond the memory buffer through heap corruption"
+            },
+            {
+                "subject": "data beyond the memory buffer",
+                "relation": "provides access to",
+                "object": "sensitive information or triggers a crash"
+            },
+            {
+                "subject": "CVE-2024-0519",
+                "relation": "could also be exploited to bypass",
+                "object": "protection mechanisms such as ASLR"
+            },
+            {
+                "subject": "bypassing protection mechanisms",
+                "relation": "makes it easier to achieve",
+                "object": "code execution via another weakness"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1295,
+                "cost": 0.0006475
+            },
+            "output": {
+                "tokens": 300,
+                "cost": 0.00045
+            },
+            "total": {
+                "tokens": 1595,
+                "cost": 0.0010975
+            }
+        },
+        "time": 5.857807874679565,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/BleepingComputer/chrome-QD1-VO7.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "BleepingComputer: apple.json",
+                    0.18419811252473955
+                ],
+                [
+                    "thehackernews: chrome-zero-day.json",
+                    0.23245930935029666
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9,
+                "f1": 0.9473684210526316
+            },
+            "matched_list": [
+                [
+                    [
+                        "Google",
+                        "has released",
+                        "security updates"
+                    ],
+                    [
+                        "Google",
+                        "has released",
+                        "security updates"
+                    ]
+                ],
+                [
+                    [
+                        "security updates",
+                        "fix",
+                        "the first Chrome zero-day vulnerability"
+                    ],
+                    [
+                        "security updates",
+                        "fix",
+                        "Chrome zero-day vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "the first Chrome zero-day vulnerability",
+                        "is",
+                        "CVE-2024-0519"
+                    ],
+                    [
+                        "Chrome zero-day vulnerability",
+                        "is tracked as",
+                        "CVE-2024-0519"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-0519",
+                        "is due to",
+                        "a high-severity out-of-bounds memory access weakness in the Chrome V8 JavaScript engine"
+                    ],
+                    [
+                        "CVE-2024-0519",
+                        "is in",
+                        "the Chrome V8 JavaScript engine"
+                    ]
+                ],
+                [
+                    [
+                        "remote attackers",
+                        "can exploit",
+                        "CVE-2024-0519 via a crafted HTML page"
+                    ],
+                    [
+                        "remote attackers",
+                        "exploit via",
+                        "a crafted HTML page"
+                    ]
+                ],
+                [
+                    [
+                        "remote attackers",
+                        "can gain access to",
+                        "data beyond the memory buffer through heap corruption"
+                    ],
+                    [
+                        "remote attackers",
+                        "gain access to",
+                        "data beyond the memory buffer"
+                    ]
+                ],
+                [
+                    [
+                        "data beyond the memory buffer",
+                        "provides access to",
+                        "sensitive information or triggers a crash"
+                    ],
+                    [
+                        "remote attackers",
+                        "gain access to",
+                        "data beyond the memory buffer"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-0519",
+                        "could also be exploited to bypass",
+                        "protection mechanisms such as ASLR"
+                    ],
+                    [
+                        "CVE-2024-0519",
+                        "could be exploited to",
+                        "bypass protection mechanisms"
+                    ]
+                ],
+                [
+                    [
+                        "bypassing protection mechanisms",
+                        "makes it easier to achieve",
+                        "code execution via another weakness"
+                    ],
+                    [
+                        "CVE-2024-0519",
+                        "makes it easier to",
+                        "achieve code execution via another weakness"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Chrome zero-day vulnerability",
+                    "exploited in",
+                    "the wild"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

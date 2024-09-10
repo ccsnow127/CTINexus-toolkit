@@ -1,0 +1,882 @@
+{
+    "CTI": {
+        "text": "Threat actors are exploiting a critical vulnerability in Magento to inject a persistent backdoor into ecommerce websites, cybersecurity firm Sansec reports. The issue, tracked as CVE-2024-20720 (CVSS score of 9.1), is described as an OS command injection flaw leading to arbitrary code execution without user interaction. Adobe resolved the critical vulnerability in February 2024 in both Adobe Commerce and Magento, as part of its Tuesday Patch updates. However, it appears that there are websites that have yet to be updated and remain vulnerable to exploitation. According to Sansec, threat actors have discovered a clever way to exploit CVE-2024-20720, using a crafted layout template in the database to inject XML code that can reinfect Magento servers even after a manual fix. Attackers combine the Magento layout parser with the beberlei/assert package (installed by default) to execute system commands. Because the layout block is tied to the checkout cart, this command is executed whenever <store>/checkout/cart is requested. As part of the observed attacks, the backdoor is added to the automatically generated content management system (CMS) controller, ensuring the backdoor is periodically reinjected and providing persistent remote code execution via POST commands. The threat actors have employed the mechanism to inject a fake Stripe payment skimmer and steal payment data from the compromised web stores.",
+        "link": "https://www.securityweek.com/magento-vulnerability-exploited-to-deploy-persistent-backdoor/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "threat actors",
+                "relation": "are exploiting",
+                "object": "a critical vulnerability in Magento"
+            },
+            {
+                "subject": "the critical vulnerability in Magento",
+                "relation": "is tracked as",
+                "object": "CVE-2024-20720"
+            },
+            {
+                "subject": "CVE-2024-20720",
+                "relation": "has a CVSS score of",
+                "object": "9.1"
+            },
+            {
+                "subject": "CVE-2024-20720",
+                "relation": "is described as",
+                "object": "an OS command injection flaw"
+            },
+            {
+                "subject": "OS command injection flaw",
+                "relation": "leads to",
+                "object": "arbitrary code execution without user interaction"
+            },
+            {
+                "subject": "Adobe",
+                "relation": "resolved",
+                "object": "the critical vulnerability"
+            },
+            {
+                "subject": "the critical vulnerability",
+                "relation": "in",
+                "object": "Adobe Commerce and Magento"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "exploit",
+                "object": "CVE-2024-20720"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "use",
+                "object": "a crafted layout template in the database"
+            },
+            {
+                "subject": "a crafted layout template in the database",
+                "relation": "to inject",
+                "object": "XML code"
+            },
+            {
+                "subject": "XML code",
+                "relation": "can reinfect",
+                "object": "Magento servers"
+            },
+            {
+                "subject": "attackers",
+                "relation": "combine",
+                "object": "the Magento layout parser with the beberlei/assert package"
+            },
+            {
+                "subject": "the beberlei/assert package",
+                "relation": "is installed by default",
+                "object": "to execute system commands"
+            },
+            {
+                "subject": "the layout block",
+                "relation": "is tied to",
+                "object": "the checkout cart"
+            },
+            {
+                "subject": "command",
+                "relation": "is executed",
+                "object": "whenever <store>/checkout/cart is requested"
+            },
+            {
+                "subject": "the backdoor",
+                "relation": "is added to",
+                "object": "the automatically generated CMS controller"
+            },
+            {
+                "subject": "the backdoor",
+                "relation": "ensures",
+                "object": "persistent remote code execution via POST commands"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "have employed",
+                "object": "the mechanism to inject a fake Stripe payment skimmer"
+            },
+            {
+                "subject": "a fake Stripe payment skimmer",
+                "relation": "to steal",
+                "object": "payment data from compromised web stores"
+            }
+        ],
+        "triples_count": 19,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1717,
+                "cost": 0.01717
+            },
+            "output": {
+                "tokens": 534,
+                "cost": 0.01602
+            },
+            "total": {
+                "tokens": 2251,
+                "cost": 0.03319
+            }
+        },
+        "time": 12.4681875705719,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/securityweek/magento-QD1-Lmk.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-github.json",
+                    0.1037449825629638
+                ],
+                [
+                    "BleepingComputer-apple.json",
+                    0.11704403384607868
+                ],
+                [
+                    "BleepingComputer-atlassian.json",
+                    0.15157075150691143
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "are exploiting",
+                "object": {
+                    "text": "a critical vulnerability in Magento",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the critical vulnerability in Magento",
+                    "class": "Vulnerability"
+                },
+                "relation": "is tracked as",
+                "object": {
+                    "text": "CVE-2024-20720",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2024-20720",
+                    "class": "Vulnerability"
+                },
+                "relation": "has a CVSS score of",
+                "object": {
+                    "text": "9.1",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2024-20720",
+                    "class": "Vulnerability"
+                },
+                "relation": "is described as",
+                "object": {
+                    "text": "an OS command injection flaw",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "OS command injection flaw",
+                    "class": "Vulnerability"
+                },
+                "relation": "leads to",
+                "object": {
+                    "text": "arbitrary code execution without user interaction",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Adobe",
+                    "class": "Organization"
+                },
+                "relation": "resolved",
+                "object": {
+                    "text": "the critical vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the critical vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "in",
+                "object": {
+                    "text": "Adobe Commerce and Magento",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "exploit",
+                "object": {
+                    "text": "CVE-2024-20720",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "use",
+                "object": {
+                    "text": "a crafted layout template in the database",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a crafted layout template in the database",
+                    "class": "Exploit Target"
+                },
+                "relation": "to inject",
+                "object": {
+                    "text": "XML code",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "XML code",
+                    "class": "Indicator:File"
+                },
+                "relation": "can reinfect",
+                "object": {
+                    "text": "Magento servers",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "combine",
+                "object": {
+                    "text": "the Magento layout parser with the beberlei/assert package",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the beberlei/assert package",
+                    "class": "Tool"
+                },
+                "relation": "is installed by default",
+                "object": {
+                    "text": "to execute system commands",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the layout block",
+                    "class": "Information"
+                },
+                "relation": "is tied to",
+                "object": {
+                    "text": "the checkout cart",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "command",
+                    "class": "Information"
+                },
+                "relation": "is executed",
+                "object": {
+                    "text": "whenever <store>/checkout/cart is requested",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the backdoor",
+                    "class": "Malware"
+                },
+                "relation": "is added to",
+                "object": {
+                    "text": "the automatically generated CMS controller",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the backdoor",
+                    "class": "Malware"
+                },
+                "relation": "ensures",
+                "object": {
+                    "text": "persistent remote code execution via POST commands",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "have employed",
+                "object": {
+                    "text": "the mechanism to inject a fake Stripe payment skimmer",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a fake Stripe payment skimmer",
+                    "class": "Tool"
+                },
+                "relation": "to steal",
+                "object": {
+                    "text": "payment data from compromised web stores",
+                    "class": "Event"
+                }
+            }
+        ],
+        "response_time": 40.87615084648132,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/securityweek/magento.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1803,
+                "cost": 0.01803
+            },
+            "output": {
+                "tokens": 1042,
+                "cost": 0.03126
+            },
+            "total": {
+                "tokens": 2845,
+                "cost": 0.04929
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "threat actors",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "threat actors",
+                        "threat actors",
+                        "threat actors",
+                        "threat actors",
+                        "attackers"
+                    ],
+                    "entity_text": "threat actors"
+                },
+                "relation": "are exploiting",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a critical vulnerability in Magento",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a critical vulnerability in Magento",
+                        "the critical vulnerability in Magento",
+                        "the critical vulnerability",
+                        "the critical vulnerability"
+                    ],
+                    "entity_text": "the critical vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "the critical vulnerability in Magento",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a critical vulnerability in Magento",
+                        "the critical vulnerability in Magento",
+                        "the critical vulnerability",
+                        "the critical vulnerability"
+                    ],
+                    "entity_text": "the critical vulnerability"
+                },
+                "relation": "is tracked as",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "CVE-2024-20720",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "CVE-2024-20720",
+                        "CVE-2024-20720",
+                        "CVE-2024-20720",
+                        "CVE-2024-20720"
+                    ],
+                    "entity_text": "CVE-2024-20720"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "CVE-2024-20720",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "CVE-2024-20720",
+                        "CVE-2024-20720",
+                        "CVE-2024-20720",
+                        "CVE-2024-20720"
+                    ],
+                    "entity_text": "CVE-2024-20720"
+                },
+                "relation": "has a CVSS score of",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "9.1",
+                    "mention_class": "Information",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "9.1"
+                    ],
+                    "entity_text": "9.1"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "CVE-2024-20720",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "CVE-2024-20720",
+                        "CVE-2024-20720",
+                        "CVE-2024-20720",
+                        "CVE-2024-20720"
+                    ],
+                    "entity_text": "CVE-2024-20720"
+                },
+                "relation": "is described as",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "an OS command injection flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "OS command injection flaw",
+                        "an OS command injection flaw"
+                    ],
+                    "entity_text": "OS command injection flaw"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "OS command injection flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "OS command injection flaw",
+                        "an OS command injection flaw"
+                    ],
+                    "entity_text": "OS command injection flaw"
+                },
+                "relation": "leads to",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "arbitrary code execution without user interaction",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "arbitrary code execution without user interaction"
+                    ],
+                    "entity_text": "arbitrary code execution without user interaction"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "Adobe",
+                    "mention_class": "Organization",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "Adobe"
+                    ],
+                    "entity_text": "Adobe"
+                },
+                "relation": "resolved",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "the critical vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a critical vulnerability in Magento",
+                        "the critical vulnerability in Magento",
+                        "the critical vulnerability",
+                        "the critical vulnerability"
+                    ],
+                    "entity_text": "the critical vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "the critical vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a critical vulnerability in Magento",
+                        "the critical vulnerability in Magento",
+                        "the critical vulnerability",
+                        "the critical vulnerability"
+                    ],
+                    "entity_text": "the critical vulnerability"
+                },
+                "relation": "in",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "Adobe Commerce and Magento",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "Adobe Commerce and Magento"
+                    ],
+                    "entity_text": "Adobe Commerce and Magento"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "threat actors",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "threat actors",
+                        "threat actors",
+                        "threat actors",
+                        "threat actors",
+                        "attackers"
+                    ],
+                    "entity_text": "threat actors"
+                },
+                "relation": "exploit",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "CVE-2024-20720",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "CVE-2024-20720",
+                        "CVE-2024-20720",
+                        "CVE-2024-20720",
+                        "CVE-2024-20720"
+                    ],
+                    "entity_text": "CVE-2024-20720"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "threat actors",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "threat actors",
+                        "threat actors",
+                        "threat actors",
+                        "threat actors",
+                        "attackers"
+                    ],
+                    "entity_text": "threat actors"
+                },
+                "relation": "use",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "a crafted layout template in the database",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "a crafted layout template in the database",
+                        "a crafted layout template in the database"
+                    ],
+                    "entity_text": "a crafted layout template in the database"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "a crafted layout template in the database",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "a crafted layout template in the database",
+                        "a crafted layout template in the database"
+                    ],
+                    "entity_text": "a crafted layout template in the database"
+                },
+                "relation": "to inject",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "XML code",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "XML code",
+                        "XML code"
+                    ],
+                    "entity_text": "XML code"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "XML code",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "XML code",
+                        "XML code"
+                    ],
+                    "entity_text": "XML code"
+                },
+                "relation": "can reinfect",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "Magento servers",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "Magento servers"
+                    ],
+                    "entity_text": "Magento servers"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "attackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "threat actors",
+                        "threat actors",
+                        "threat actors",
+                        "threat actors",
+                        "attackers"
+                    ],
+                    "entity_text": "threat actors"
+                },
+                "relation": "combine",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "the Magento layout parser with the beberlei/assert package",
+                    "mention_class": "Tool",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "the beberlei/assert package",
+                        "the Magento layout parser with the beberlei/assert package"
+                    ],
+                    "entity_text": "the beberlei/assert package"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "the beberlei/assert package",
+                    "mention_class": "Tool",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "the beberlei/assert package",
+                        "the Magento layout parser with the beberlei/assert package"
+                    ],
+                    "entity_text": "the beberlei/assert package"
+                },
+                "relation": "is installed by default",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "to execute system commands",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "to execute system commands"
+                    ],
+                    "entity_text": "to execute system commands"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 26,
+                    "mention_text": "the layout block",
+                    "mention_class": "Information",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "the layout block"
+                    ],
+                    "entity_text": "the layout block"
+                },
+                "relation": "is tied to",
+                "object": {
+                    "mention_id": 27,
+                    "mention_text": "the checkout cart",
+                    "mention_class": "Information",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "the checkout cart"
+                    ],
+                    "entity_text": "the checkout cart"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 28,
+                    "mention_text": "command",
+                    "mention_class": "Information",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "command"
+                    ],
+                    "entity_text": "command"
+                },
+                "relation": "is executed",
+                "object": {
+                    "mention_id": 29,
+                    "mention_text": "whenever <store>/checkout/cart is requested",
+                    "mention_class": "Event",
+                    "entity_id": 19,
+                    "mentions_merged": [
+                        "whenever <store>/checkout/cart is requested"
+                    ],
+                    "entity_text": "whenever <store>/checkout/cart is requested"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 30,
+                    "mention_text": "the backdoor",
+                    "mention_class": "Malware",
+                    "entity_id": 21,
+                    "mentions_merged": [
+                        "the backdoor",
+                        "the backdoor"
+                    ],
+                    "entity_text": "the backdoor"
+                },
+                "relation": "is added to",
+                "object": {
+                    "mention_id": 31,
+                    "mention_text": "the automatically generated CMS controller",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "the automatically generated CMS controller"
+                    ],
+                    "entity_text": "the automatically generated CMS controller"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 32,
+                    "mention_text": "the backdoor",
+                    "mention_class": "Malware",
+                    "entity_id": 21,
+                    "mentions_merged": [
+                        "the backdoor",
+                        "the backdoor"
+                    ],
+                    "entity_text": "the backdoor"
+                },
+                "relation": "ensures",
+                "object": {
+                    "mention_id": 33,
+                    "mention_text": "persistent remote code execution via POST commands",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "persistent remote code execution via POST commands"
+                    ],
+                    "entity_text": "persistent remote code execution via POST commands"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 34,
+                    "mention_text": "threat actors",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "threat actors",
+                        "threat actors",
+                        "threat actors",
+                        "threat actors",
+                        "attackers"
+                    ],
+                    "entity_text": "threat actors"
+                },
+                "relation": "have employed",
+                "object": {
+                    "mention_id": 35,
+                    "mention_text": "the mechanism to inject a fake Stripe payment skimmer",
+                    "mention_class": "Tool",
+                    "entity_id": 18,
+                    "mentions_merged": [
+                        "the mechanism to inject a fake Stripe payment skimmer",
+                        "a fake Stripe payment skimmer"
+                    ],
+                    "entity_text": "a fake Stripe payment skimmer"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 36,
+                    "mention_text": "a fake Stripe payment skimmer",
+                    "mention_class": "Tool",
+                    "entity_id": 18,
+                    "mentions_merged": [
+                        "the mechanism to inject a fake Stripe payment skimmer",
+                        "a fake Stripe payment skimmer"
+                    ],
+                    "entity_text": "a fake Stripe payment skimmer"
+                },
+                "relation": "to steal",
+                "object": {
+                    "mention_id": 37,
+                    "mention_text": "payment data from compromised web stores",
+                    "mention_class": "Event",
+                    "entity_id": 20,
+                    "mentions_merged": [
+                        "payment data from compromised web stores"
+                    ],
+                    "entity_text": "payment data from compromised web stores"
+                }
+            }
+        ],
+        "mentions_num": 38,
+        "response_time": 7.000532388687134,
+        "embedding_model": "text-embedding-3-small",
+        "entity_num": 22,
+        "threshold": 0.6,
+        "Eval": {
+            "TP": 25,
+            "FP": 0,
+            "FN": 0,
+            "TN": 13
+        }
+    }
+}

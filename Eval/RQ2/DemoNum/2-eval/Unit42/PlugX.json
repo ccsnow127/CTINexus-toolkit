@@ -1,0 +1,407 @@
+{
+    "CTI": {
+        "text": "Recently, our Unit 42 incident response team was engaged in a Black Basta breach response that uncovered several tools and malware samples on the victim's machines, including GootLoader malware, Brute Ratel C4 red-teaming tool and an older PlugX malware sample. The PlugX malware stood out to us as this variant infects any attached removable USB media devices such as floppy, thumb or flash drives and any additional systems the USB is later plugged into. This PlugX malware also hides actor files in a USB device using a novel technique that works even on the most recent Windows operating systems (OS) at the time of writing this post. This means the malicious files can only be viewed on a Unix-like (*nix) OS or by mounting the USB device in a forensic tool. We also discovered a similar variant of PlugX in VirusTotal that infects USB devices and copies all Adobe PDF and Microsoft Word files from the host. It places these copies in a hidden folder on the USB device that is created by the malware. PlugX is a second-stage implant used not only by multiple groups with a Chinese nexus but also by several cybercrime groups. It has been around for over a decade and has been observed in some high-profile cyberattacks, including the U.S. Government Office of Personnel Management (OPM) breach in 2015. It is a modular malware framework, supporting an evolving set of capabilities throughout the years.",
+        "link": "https://unit42.paloaltonetworks.com/plugx-variants-in-usbs/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unit 42 incident response team",
+                "relation": "was engaged in",
+                "object": "a Black Basta breach response"
+            },
+            {
+                "subject": "The engagement",
+                "relation": "uncovered",
+                "object": "several tools and malware samples"
+            },
+            {
+                "subject": "Tools and malware samples",
+                "relation": "include",
+                "object": "GootLoader malware"
+            },
+            {
+                "subject": "Tools and malware samples",
+                "relation": "include",
+                "object": "Brute Ratel C4 red-teaming tool"
+            },
+            {
+                "subject": "Tools and malware samples",
+                "relation": "include",
+                "object": "an older PlugX malware sample"
+            },
+            {
+                "subject": "The PlugX malware variant",
+                "relation": "infects",
+                "object": "any attached removable USB media devices"
+            },
+            {
+                "subject": "The PlugX malware variant",
+                "relation": "hides",
+                "object": "actor files in a USB device using a novel technique"
+            },
+            {
+                "subject": "The malicious files",
+                "relation": "can only be viewed on",
+                "object": "a Unix-like (*nix) OS or by mounting the USB device in a forensic tool"
+            },
+            {
+                "subject": "A similar variant of PlugX",
+                "relation": "infects",
+                "object": "USB devices and copies all Adobe PDF and Microsoft Word files"
+            },
+            {
+                "subject": "The copies",
+                "relation": "are placed in",
+                "object": "a hidden folder on the USB device"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "is used by",
+                "object": "multiple groups with a Chinese nexus"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "is also used by",
+                "object": "several cybercrime groups"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "has been around for",
+                "object": "over a decade"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "was observed in",
+                "object": "the U.S. Government Office of Personnel Management (OPM) breach in 2015"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "is",
+                "object": "a modular malware framework"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "supports",
+                "object": "an evolving set of capabilities"
+            }
+        ],
+        "triples_count": 16,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1506,
+                "cost": 0.01506
+            },
+            "output": {
+                "tokens": 466,
+                "cost": 0.013980000000000001
+            },
+            "total": {
+                "tokens": 1972,
+                "cost": 0.029040000000000003
+            }
+        },
+        "time": 29.599374055862427,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/Unit42/PlugX-QD1-gH3.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "BleepingComputer: purplefox.json",
+                    0.10171411322549828
+                ],
+                [
+                    "trendmicro: Earth-Berberoka.json",
+                    0.14216480384546598
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 11,
+                "fp": 5,
+                "fn": 13,
+                "precision": 0.6875,
+                "recall": 0.4583333333333333,
+                "f1": 0.5499999999999999
+            },
+            "matched_list": [
+                [
+                    [
+                        "Unit 42 incident response team",
+                        "was engaged in",
+                        "a Black Basta breach response"
+                    ],
+                    [
+                        "Unit 42 incident response team",
+                        "engaged in",
+                        "a Black Basta breach response"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Tools and malware samples",
+                        "include",
+                        "an older PlugX malware sample"
+                    ],
+                    [
+                        "PlugX",
+                        "is a",
+                        "modular malware framework"
+                    ],
+                    [
+                        0.577027468858487,
+                        0.619366201944612,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "The PlugX malware variant",
+                        "infects",
+                        "any attached removable USB media devices"
+                    ],
+                    [
+                        "PlugX malware",
+                        "infects",
+                        "removable USB media devices"
+                    ],
+                    [
+                        0.8045500586457092,
+                        0.8412650525356282
+                    ]
+                ],
+                [
+                    [
+                        "The PlugX malware variant",
+                        "hides",
+                        "actor files in a USB device using a novel technique"
+                    ],
+                    [
+                        "PlugX malware",
+                        "infects",
+                        "removable USB media devices"
+                    ],
+                    [
+                        0.8045500586457092,
+                        0.4796906053526093
+                    ]
+                ],
+                [
+                    [
+                        "The malicious files",
+                        "can only be viewed on",
+                        "a Unix-like (*nix) OS or by mounting the USB device in a forensic tool"
+                    ],
+                    [
+                        "PlugX malware",
+                        "infects",
+                        "removable USB media devices"
+                    ],
+                    [
+                        0.5078782153755148,
+                        0.4506050095618668
+                    ]
+                ],
+                [
+                    [
+                        "A similar variant of PlugX",
+                        "infects",
+                        "USB devices and copies all Adobe PDF and Microsoft Word files"
+                    ],
+                    [
+                        "PlugX malware",
+                        "infects",
+                        "removable USB media devices"
+                    ],
+                    [
+                        0.6792350694939484,
+                        0.48305537183247604
+                    ]
+                ],
+                [
+                    [
+                        "The copies",
+                        "are placed in",
+                        "a hidden folder on the USB device"
+                    ],
+                    [
+                        "Copies",
+                        "are placed in",
+                        "a hidden folder on the USB device"
+                    ],
+                    [
+                        0.8632059864023188,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "PlugX",
+                        "is used by",
+                        "multiple groups with a Chinese nexus"
+                    ],
+                    [
+                        "PlugX",
+                        "is used by",
+                        "multiple groups with a Chinese nexus"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "PlugX",
+                        "is also used by",
+                        "several cybercrime groups"
+                    ],
+                    [
+                        "PlugX",
+                        "is used by",
+                        "multiple groups with a Chinese nexus"
+                    ],
+                    [
+                        1.0,
+                        0.5356088775071897
+                    ]
+                ],
+                [
+                    [
+                        "PlugX",
+                        "was observed in",
+                        "the U.S. Government Office of Personnel Management (OPM) breach in 2015"
+                    ],
+                    [
+                        "PlugX",
+                        "has been observed in",
+                        "high-profile cyberattacks"
+                    ],
+                    [
+                        1.0,
+                        0.4599870094256563
+                    ]
+                ],
+                [
+                    [
+                        "PlugX",
+                        "is",
+                        "a modular malware framework"
+                    ],
+                    [
+                        "PlugX",
+                        "is a",
+                        "modular malware framework"
+                    ],
+                    [
+                        1.0,
+                        0.9654092073786359
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "The engagement",
+                    "uncovered",
+                    "several tools and malware samples"
+                ],
+                [
+                    "Tools and malware samples",
+                    "include",
+                    "GootLoader malware"
+                ],
+                [
+                    "Tools and malware samples",
+                    "include",
+                    "Brute Ratel C4 red-teaming tool"
+                ],
+                [
+                    "PlugX",
+                    "has been around for",
+                    "over a decade"
+                ],
+                [
+                    "PlugX",
+                    "supports",
+                    "an evolving set of capabilities"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "the response",
+                    "uncovered",
+                    "GootLoader malware"
+                ],
+                [
+                    "the response",
+                    "uncovered",
+                    "Brute Ratel C4 red-teaming tool"
+                ],
+                [
+                    "the response",
+                    "uncovered",
+                    "PlugX malware sample"
+                ],
+                [
+                    "PlugX malware",
+                    "hides actor files in",
+                    "a USB device"
+                ],
+                [
+                    "hiding technique",
+                    "works on",
+                    "Windows operating systems"
+                ],
+                [
+                    "malicious files",
+                    "can be viewed on",
+                    "Unix-like OS"
+                ],
+                [
+                    "malicious files",
+                    "can be viewed by",
+                    "mounting the USB device in a forensic tool"
+                ],
+                [
+                    "A similar variant of PlugX",
+                    "infects",
+                    "USB devices"
+                ],
+                [
+                    "The variant",
+                    "copies",
+                    "Adobe PDF and Microsoft Word files"
+                ],
+                [
+                    "The hidden folder",
+                    "is created by",
+                    "the malware"
+                ],
+                [
+                    "PlugX",
+                    "is used by",
+                    "several cybercrime groups"
+                ],
+                [
+                    "high-profile cyberattacks",
+                    "include",
+                    "the U.S. Government Office of Personnel Management (OPM) breach"
+                ],
+                [
+                    "modular malware framework",
+                    "supports",
+                    "an evolving set of capabilities"
+                ]
+            ]
+        }
+    }
+}

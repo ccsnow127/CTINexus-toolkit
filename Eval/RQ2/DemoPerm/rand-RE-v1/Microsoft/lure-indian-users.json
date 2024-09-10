@@ -1,0 +1,226 @@
+{
+    "CTI": {
+        "text": "We discovered a recent WhatsApp phishing campaign through our telemetry that led to banking trojan activity. In this campaign, the attacker shares a malicious APK file through WhatsApp with a message asking users to enter sensitive information in the app. The widely circulated fake banking message states \u201cYour [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You.\u201d and includes a APK file named [redacted]-BANK[.]apk. Upon investigation, we discovered that the APK file was malicious and interacting with it installs a fraudulent application on the victim device. The installed app impersonates a legitimate bank located in India and disguises itself as the bank's official Know Your Customer (KYC) application to trick users into submitting their sensitive information, despite this particular banking organization not being affiliated with an official KYC-related app. This information is then sent to a command and control (C2) server, as well as to the attacker's hard-coded phone number used in SMS functionality.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/11/20/social-engineering-attacks-lure-indian-users-to-install-android-banking-trojans/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "a recent WhatsApp phishing campaign",
+                "relation": "led to",
+                "object": "banking trojan activity"
+            },
+            {
+                "subject": "attacker",
+                "relation": "shares",
+                "object": "a malicious APK file through WhatsApp"
+            },
+            {
+                "subject": "fake banking message",
+                "relation": "states",
+                "object": "\"Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You.\""
+            },
+            {
+                "subject": "APK file",
+                "relation": "was",
+                "object": "malicious"
+            },
+            {
+                "subject": "interacting with APK file",
+                "relation": "installs",
+                "object": "a fraudulent application on the victim device"
+            },
+            {
+                "subject": "installed app",
+                "relation": "impersonates",
+                "object": "a legitimate bank located in India"
+            },
+            {
+                "subject": "installed app",
+                "relation": "disguises itself as",
+                "object": "the bank's official Know Your Customer (KYC) application"
+            },
+            {
+                "subject": "users",
+                "relation": "tricked into submitting",
+                "object": "their sensitive information"
+            },
+            {
+                "subject": "this information",
+                "relation": "is sent to",
+                "object": "a command and control (C2) server"
+            },
+            {
+                "subject": "this information",
+                "relation": "is sent to",
+                "object": "the attacker's hard-coded phone number used in SMS functionality"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1335,
+                "cost": 0.01335
+            },
+            "output": {
+                "tokens": 379,
+                "cost": 0.01137
+            },
+            "total": {
+                "tokens": 1714,
+                "cost": 0.02472
+            }
+        },
+        "time": 18.04732632637024,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/Microsoft/lure-indian-users-QD1-Hfm.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Earth-Kitsune.json",
+                    "random"
+                ],
+                [
+                    "H0lyGh0st.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 2,
+                "fn": 2,
+                "precision": 0.8,
+                "recall": 0.8,
+                "f1": 0.8000000000000002
+            },
+            "matched_list": [
+                [
+                    [
+                        "a recent WhatsApp phishing campaign",
+                        "led to",
+                        "banking trojan activity"
+                    ],
+                    [
+                        "the malicious APK file",
+                        "leads to",
+                        "banking trojan activity"
+                    ]
+                ],
+                [
+                    [
+                        "attacker",
+                        "shares",
+                        "a malicious APK file through WhatsApp"
+                    ],
+                    [
+                        "the attacker",
+                        "shares",
+                        "a malicious APK file through WhatsApp"
+                    ]
+                ],
+                [
+                    [
+                        "fake banking message",
+                        "states",
+                        "\"Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You.\""
+                    ],
+                    [
+                        "the fake banking message",
+                        "states",
+                        "Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You."
+                    ]
+                ],
+                [
+                    [
+                        "installed app",
+                        "impersonates",
+                        "a legitimate bank located in India"
+                    ],
+                    [
+                        "the fraudulent application",
+                        "impersonates",
+                        "a legitimate bank located in India"
+                    ]
+                ],
+                [
+                    [
+                        "installed app",
+                        "disguises itself as",
+                        "the bank's official Know Your Customer (KYC) application"
+                    ],
+                    [
+                        "the fraudulent application",
+                        "disguises itself as",
+                        "the bank's official Know Your Customer (KYC) application"
+                    ]
+                ],
+                [
+                    [
+                        "users",
+                        "tricked into submitting",
+                        "their sensitive information"
+                    ],
+                    [
+                        "users",
+                        "submit",
+                        "their sensitive information"
+                    ]
+                ],
+                [
+                    [
+                        "this information",
+                        "is sent to",
+                        "a command and control (C2) server"
+                    ],
+                    [
+                        "the information",
+                        "is sent to",
+                        "a command and control (C2) server"
+                    ]
+                ],
+                [
+                    [
+                        "this information",
+                        "is sent to",
+                        "the attacker's hard-coded phone number used in SMS functionality"
+                    ],
+                    [
+                        "the information",
+                        "is sent to",
+                        "the attacker's hard-coded phone number"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "APK file",
+                    "was",
+                    "malicious"
+                ],
+                [
+                    "interacting with APK file",
+                    "installs",
+                    "a fraudulent application on the victim device"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "the attacker",
+                    "asks",
+                    "users to enter sensitive information in the app"
+                ],
+                [
+                    "[redacted]-BANK[.]apk",
+                    "is",
+                    "malicious"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

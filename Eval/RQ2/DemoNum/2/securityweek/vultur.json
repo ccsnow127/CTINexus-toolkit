@@ -1,0 +1,270 @@
+{
+    "CTI": {
+        "text": "The Android banking malware known as Vultur has been updated with new capabilities, allowing operators to interact with the infected devices and modify files, according to a report from security consulting outfit NCC Group. Vultur was first documented in March 2021, when it stood out for the abuse of the legitimate applications AlphaVNC and ngrok for remotely accessing the VNC server on the victim device, and for automating screen recording and key-logging for credential harvesting. The most recent version of the banking malware, however, packs significantly more capabilities, allowing attackers to control the infected device, prevent applications from running, display custom notifications, bypass lock-screen protections, and download, upload, install, search for, and delete files. The infection chain starts with a SMS message instructing the victim to call a phone number to resolve a large transaction that they did not authorize. During the call, a second SMS message that includes a link to a modified McAfee Security package is received. The modified application contains the functionality of the legitimate McAfee Security software, along with the dropper-framework called Brunhilda, which deploys Vultur via three payloads, the last two designed to invoke each other\u2019s functionality. \u201cThe message sent by the malware operator through FCM can contain a command, which, upon receipt, triggers the execution of corresponding functionality within the malware. This eliminates the need for an ongoing connection with the device,\u201d NCC Group explains. The latest version of Vultur can also prevent the user from interacting with applications on the device, which are defined in a list provided by the attacker.",
+        "link": ""
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "The Android banking malware known as Vultur",
+                "relation": "has been updated with",
+                "object": "new capabilities"
+            },
+            {
+                "subject": "operators",
+                "relation": "interact with",
+                "object": "the infected devices and modify files"
+            },
+            {
+                "subject": "Vultur",
+                "relation": "was first documented in",
+                "object": "March 2021"
+            },
+            {
+                "subject": "Vultur",
+                "relation": "stood out for the abuse of",
+                "object": "the legitimate applications AlphaVNC and ngrok"
+            },
+            {
+                "subject": "Vultur",
+                "relation": "allows",
+                "object": "attackers to control the infected device, prevent applications from running, display custom notifications, bypass lock-screen protections, and download, upload, install, search for, and delete files"
+            },
+            {
+                "subject": "The infection chain",
+                "relation": "starts with",
+                "object": "a SMS message instructing the victim to call a phone number"
+            },
+            {
+                "subject": "The second SMS message",
+                "relation": "includes",
+                "object": "a link to a modified McAfee Security package"
+            },
+            {
+                "subject": "The modified application",
+                "relation": "contains",
+                "object": "the functionality of the legitimate McAfee Security software, along with the dropper-framework called Brunhilda"
+            },
+            {
+                "subject": "Brunhilda",
+                "relation": "deploys",
+                "object": "Vultur via three payloads"
+            },
+            {
+                "subject": "The message sent by the malware operator through FCM",
+                "relation": "can contain",
+                "object": "a command"
+            },
+            {
+                "subject": "This command",
+                "relation": "triggers",
+                "object": "the execution of corresponding functionality within the malware"
+            },
+            {
+                "subject": "Vultur",
+                "relation": "can also prevent",
+                "object": "the user from interacting with applications on the device, which are defined in a list provided by the attacker"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1620,
+                "cost": 0.016200000000000003
+            },
+            "output": {
+                "tokens": 390,
+                "cost": 0.0117
+            },
+            "total": {
+                "tokens": 2010,
+                "cost": 0.0279
+            }
+        },
+        "time": 26.804361820220947,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/securityweek/vultur-QD1-gpE.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "thehackernews: Xamalicious.json",
+                    0.1103052357067199
+                ],
+                [
+                    "Microsoft: lure-indian-users.json",
+                    0.14725181501075407
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 2,
+                "fn": 4,
+                "precision": 0.8333333333333334,
+                "recall": 0.7142857142857143,
+                "f1": 0.7692307692307692
+            },
+            "matched_list": [
+                [
+                    [
+                        "The Android banking malware known as Vultur",
+                        "has been updated with",
+                        "new capabilities"
+                    ],
+                    [
+                        "Vultur",
+                        "is known as",
+                        "Android banking malware"
+                    ]
+                ],
+                [
+                    [
+                        "operators",
+                        "interact with",
+                        "the infected devices and modify files"
+                    ],
+                    [
+                        "operators",
+                        "interact with",
+                        "infected devices"
+                    ]
+                ],
+                [
+                    [
+                        "Vultur",
+                        "was first documented in",
+                        "March 2021"
+                    ],
+                    [
+                        "Vultur",
+                        "updated with",
+                        "new capabilities"
+                    ]
+                ],
+                [
+                    [
+                        "Vultur",
+                        "stood out for the abuse of",
+                        "the legitimate applications AlphaVNC and ngrok"
+                    ],
+                    [
+                        "Vultur",
+                        "abused",
+                        "AlphaVNC"
+                    ]
+                ],
+                [
+                    [
+                        "Vultur",
+                        "allows",
+                        "attackers to control the infected device, prevent applications from running, display custom notifications, bypass lock-screen protections, and download, upload, install, search for, and delete files"
+                    ],
+                    [
+                        "Vultur",
+                        "allows attackers to",
+                        "control the infected device"
+                    ]
+                ],
+                [
+                    [
+                        "The infection chain",
+                        "starts with",
+                        "a SMS message instructing the victim to call a phone number"
+                    ],
+                    [
+                        "The infection chain",
+                        "starts with",
+                        "a SMS message"
+                    ]
+                ],
+                [
+                    [
+                        "The second SMS message",
+                        "includes",
+                        "a link to a modified McAfee Security package"
+                    ],
+                    [
+                        "second SMS message",
+                        "includes a link to",
+                        "a modified McAfee Security package"
+                    ]
+                ],
+                [
+                    [
+                        "The modified application",
+                        "contains",
+                        "the functionality of the legitimate McAfee Security software, along with the dropper-framework called Brunhilda"
+                    ],
+                    [
+                        "modified McAfee Security package",
+                        "contains",
+                        "the functionality of legitimate McAfee Security software"
+                    ]
+                ],
+                [
+                    [
+                        "Brunhilda",
+                        "deploys",
+                        "Vultur via three payloads"
+                    ],
+                    [
+                        "Brunhilda",
+                        "deploys",
+                        "Vultur via three payloads"
+                    ]
+                ],
+                [
+                    [
+                        "Vultur",
+                        "can also prevent",
+                        "the user from interacting with applications on the device, which are defined in a list provided by the attacker"
+                    ],
+                    [
+                        "Vultur",
+                        "can prevent",
+                        "the user from interacting with applications"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "The message sent by the malware operator through FCM",
+                    "can contain",
+                    "a command"
+                ],
+                [
+                    "This command",
+                    "triggers",
+                    "the execution of corresponding functionality within the malware"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Vultur",
+                    "for",
+                    "remotely accessing the VNC server"
+                ],
+                [
+                    "Vultur",
+                    "for",
+                    "automating screen recording and key-logging"
+                ],
+                [
+                    "Vultur",
+                    "displays",
+                    "custom notifications"
+                ],
+                [
+                    "applications",
+                    "are defined in",
+                    "a list provided by the attacker"
+                ]
+            ]
+        }
+    }
+}

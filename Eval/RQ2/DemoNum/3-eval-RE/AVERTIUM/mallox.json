@@ -1,0 +1,351 @@
+{
+    "CTI": {
+        "text": "Mallox ransomware specifically targets computers running Microsoft Windows. This ransomware was first observed in June 2021 and is known for exploiting unsecured MS-SQL servers as a penetration vector to compromise victims' networks. The ransomware's targeted industries are manufacturing, professional and legal services, and wholesale and retail. The ransomware operators claim that their victims include worldwide organizations. According to Lior Rochberger, a senior security researcher at Palo Alto Networks, Mallox's sudden increase in activity is attributed to the deliberate actions taken by the group's leaders to expand Mallox's operations. Rochberger stated that group appeared to focus more on recruiting affiliates at the beginning of 2023. This shift in strategy explains the significant increase observed this year. Recently, researchers from Unit 42 have noticed a significant increase in Mallox ransomware activity, with a surge of almost 174% compared to 2022. This increase is primarily due to Mallox using vulnerable MS-SQL (CVE-2020-0618 and CVE-2019-1068) servers to spread the ransomware. Unit 42 also observed Mallox using tactics such as brute force, data exfiltration, and the use of network scanning tools. Researchers have also reported that the group has attempted to distribute Mallox via phishing emails - suggesting affiliates may be involved. Once the threat actors gain access, they use the command line and PowerShell to download the Mallox ransomware payload from a remote server. Like other ransomware groups, the initial payload tries to deactivate any services that might hinder data encryption on the targeted system. Also, it tries to erase shadow copies, making data recovery more challenging after encryption. The malware also attempts to eliminate all event logs, utilizing a commonly used Microsoft command utility to try and complicate forensic analysis. Like CryptNet, the threat actors behind Mallox use the double extortion method - stealing data before encrypting it. They also have a data leak site where they leak the data of victims that refuse to pay or negotiate its ransom demands. Victims negotiate with the threat actors by using a private key to authenticate themselves. As previously stated, the ransomware operators claim to have breached hundreds of organizations worldwide. Unit 42 stated that their telemetry indicates at least dozens of potential Mallox victims. In 2022, Mallox ransomware was discovered to be a variant of the TargetCompany ransomware strain.",
+        "link": "https://explore.avertium.com/resource/new-ransomware-strains-cryptnet-mallox-and-xollam"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Mallox ransomware",
+                "relation": "targets",
+                "object": "computers running Microsoft Windows"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "exploiting",
+                "object": "unsecured MS-SQL servers"
+            },
+            {
+                "subject": "Mallox ransomware's targeted industries",
+                "relation": "include",
+                "object": "manufacturing, professional and legal services, and wholesale and retail"
+            },
+            {
+                "subject": "Mallox ransomware operators",
+                "relation": "claim",
+                "object": "their victims include worldwide organizations"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "observed increase in activity due to",
+                "object": "deliberate actions by group's leaders"
+            },
+            {
+                "subject": "group's leaders",
+                "relation": "focus on",
+                "object": "recruiting affiliates"
+            },
+            {
+                "subject": "Mallox using vulnerable MS-SQL servers",
+                "relation": "exploits",
+                "object": "CVE-2020-0618 and CVE-2019-1068"
+            },
+            {
+                "subject": "Mallox",
+                "relation": "using tactics",
+                "object": "such as brute force, data exfiltration, and network scanning tools"
+            },
+            {
+                "subject": "group",
+                "relation": "attempted to distribute",
+                "object": "Mallox via phishing emails"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "download",
+                "object": "the Mallox ransomware payload from a remote server"
+            },
+            {
+                "subject": "initial payload",
+                "relation": "tries to deactivate",
+                "object": "services hindering data encryption"
+            },
+            {
+                "subject": "malware",
+                "relation": "tries to erase",
+                "object": "shadow copies"
+            },
+            {
+                "subject": "malware",
+                "relation": "attempts to eliminate",
+                "object": "all event logs"
+            },
+            {
+                "subject": "threat actors behind Mallox",
+                "relation": "use",
+                "object": "the double extortion method"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "have",
+                "object": "a data leak site"
+            },
+            {
+                "subject": "victims",
+                "relation": "negotiate with",
+                "object": "a private key"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "is a variant of",
+                "object": "the TargetCompany ransomware strain"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2758,
+                "cost": 0.027580000000000004
+            },
+            "output": {
+                "tokens": 496,
+                "cost": 0.01488
+            },
+            "total": {
+                "tokens": 3254,
+                "cost": 0.042460000000000005
+            }
+        },
+        "time": 28.810269117355347,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/AVERTIUM/mallox-QD1-agL.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM: royal-ransomware.json",
+                    0.18846511150139084
+                ],
+                [
+                    "AVERTIUM: fargo.json",
+                    0.21508796858816678
+                ],
+                [
+                    "trendmicro: TargetCompany.json",
+                    0.22542608852131804
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 16,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.9411764705882353,
+                "recall": 0.9411764705882353,
+                "f1": 0.9411764705882353
+            },
+            "matched_list": [
+                [
+                    [
+                        "Mallox ransomware",
+                        "targets",
+                        "computers running Microsoft Windows"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "targets",
+                        "computers running Microsoft Windows"
+                    ]
+                ],
+                [
+                    [
+                        "Mallox ransomware",
+                        "exploiting",
+                        "unsecured MS-SQL servers"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "exploits",
+                        "unsecured MS-SQL servers"
+                    ]
+                ],
+                [
+                    [
+                        "Mallox ransomware's targeted industries",
+                        "include",
+                        "manufacturing, professional and legal services, and wholesale and retail"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "targeted industries include",
+                        "manufacturing, professional and legal services, and wholesale and retail"
+                    ]
+                ],
+                [
+                    [
+                        "Mallox ransomware operators",
+                        "claim",
+                        "their victims include worldwide organizations"
+                    ],
+                    [
+                        "Mallox ransomware operators",
+                        "claim victims include",
+                        "worldwide organizations"
+                    ]
+                ],
+                [
+                    [
+                        "Mallox ransomware",
+                        "observed increase in activity due to",
+                        "deliberate actions by group's leaders"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "uses",
+                        "vulnerable MS-SQL servers"
+                    ]
+                ],
+                [
+                    [
+                        "Mallox using vulnerable MS-SQL servers",
+                        "exploits",
+                        "CVE-2020-0618 and CVE-2019-1068"
+                    ],
+                    [
+                        "Mallox ransomware vulnerability",
+                        "is",
+                        "CVE-2020-0618"
+                    ]
+                ],
+                [
+                    [
+                        "Mallox",
+                        "using tactics",
+                        "such as brute force, data exfiltration, and network scanning tools"
+                    ],
+                    [
+                        "Mallox ransomware vulnerability",
+                        "is",
+                        "CVE-2019-1068"
+                    ]
+                ],
+                [
+                    [
+                        "group",
+                        "attempted to distribute",
+                        "Mallox via phishing emails"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "uses tactics such as",
+                        "brute force, data exfiltration, and network scanning tools"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "download",
+                        "the Mallox ransomware payload from a remote server"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "is distributed via",
+                        "phishing emails"
+                    ]
+                ],
+                [
+                    [
+                        "initial payload",
+                        "tries to deactivate",
+                        "services hindering data encryption"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "downloads payload from",
+                        "a remote server"
+                    ]
+                ],
+                [
+                    [
+                        "malware",
+                        "tries to erase",
+                        "shadow copies"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "deactivates",
+                        "services hindering data encryption"
+                    ]
+                ],
+                [
+                    [
+                        "malware",
+                        "attempts to eliminate",
+                        "all event logs"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "erases",
+                        "shadow copies"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors behind Mallox",
+                        "use",
+                        "the double extortion method"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "attempts to eliminate",
+                        "all event logs"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "have",
+                        "a data leak site"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "has",
+                        "a data leak site"
+                    ]
+                ],
+                [
+                    [
+                        "victims",
+                        "negotiate with",
+                        "a private key"
+                    ],
+                    [
+                        "Victims",
+                        "negotiate with",
+                        "Mallox ransomware using a private key"
+                    ]
+                ],
+                [
+                    [
+                        "Mallox ransomware",
+                        "is a variant of",
+                        "the TargetCompany ransomware strain"
+                    ],
+                    [
+                        "Mallox ransomware",
+                        "uses",
+                        "double extortion method"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "group's leaders",
+                    "focus on",
+                    "recruiting affiliates"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Mallox ransomware",
+                    "is a variant of",
+                    "TargetCompany ransomware strain"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,936 @@
+{
+    "CTI": {
+        "text": "Mallox ransomware specifically targets computers running Microsoft Windows. This ransomware was first observed in June 2021 and is known for exploiting unsecured MS-SQL servers as a penetration vector to compromise victims' networks. The ransomware's targeted industries are manufacturing, professional and legal services, and wholesale and retail. The ransomware operators claim that their victims include worldwide organizations. According to Lior Rochberger, a senior security researcher at Palo Alto Networks, Mallox's sudden increase in activity is attributed to the deliberate actions taken by the group's leaders to expand Mallox's operations. Rochberger stated that group appeared to focus more on recruiting affiliates at the beginning of 2023. This shift in strategy explains the significant increase observed this year. Recently, researchers from Unit 42 have noticed a significant increase in Mallox ransomware activity, with a surge of almost 174% compared to 2022. This increase is primarily due to Mallox using vulnerable MS-SQL (CVE-2020-0618 and CVE-2019-1068) servers to spread the ransomware. Unit 42 also observed Mallox using tactics such as brute force, data exfiltration, and the use of network scanning tools. Researchers have also reported that the group has attempted to distribute Mallox via phishing emails - suggesting affiliates may be involved. Once the threat actors gain access, they use the command line and PowerShell to download the Mallox ransomware payload from a remote server. Like other ransomware groups, the initial payload tries to deactivate any services that might hinder data encryption on the targeted system. Also, it tries to erase shadow copies, making data recovery more challenging after encryption. The malware also attempts to eliminate all event logs, utilizing a commonly used Microsoft command utility to try and complicate forensic analysis. Like CryptNet, the threat actors behind Mallox use the double extortion method - stealing data before encrypting it. They also have a data leak site where they leak the data of victims that refuse to pay or negotiate its ransom demands. Victims negotiate with the threat actors by using a private key to authenticate themselves. As previously stated, the ransomware operators claim to have breached hundreds of organizations worldwide. Unit 42 stated that their telemetry indicates at least dozens of potential Mallox victims. In 2022, Mallox ransomware was discovered to be a variant of the TargetCompany ransomware strain.",
+        "link": "https://explore.avertium.com/resource/new-ransomware-strains-cryptnet-mallox-and-xollam"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Mallox ransomware",
+                "relation": "targets",
+                "object": "computers running Microsoft Windows"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "exploits",
+                "object": "unsecured MS-SQL servers"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "targeted industries include",
+                "object": "manufacturing, professional and legal services, and wholesale and retail"
+            },
+            {
+                "subject": "Mallox ransomware operators",
+                "relation": "claim victims include",
+                "object": "worldwide organizations"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "uses",
+                "object": "vulnerable MS-SQL servers"
+            },
+            {
+                "subject": "Mallox ransomware vulnerability",
+                "relation": "is",
+                "object": "CVE-2020-0618"
+            },
+            {
+                "subject": "Mallox ransomware vulnerability",
+                "relation": "is",
+                "object": "CVE-2019-1068"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "uses tactics such as",
+                "object": "brute force, data exfiltration, and network scanning tools"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "is distributed via",
+                "object": "phishing emails"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "downloads payload from",
+                "object": "a remote server"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "deactivates",
+                "object": "services hindering data encryption"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "erases",
+                "object": "shadow copies"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "attempts to eliminate",
+                "object": "all event logs"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "uses",
+                "object": "double extortion method"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "has",
+                "object": "a data leak site"
+            },
+            {
+                "subject": "Victims",
+                "relation": "negotiate with",
+                "object": "Mallox ransomware using a private key"
+            },
+            {
+                "subject": "Mallox ransomware",
+                "relation": "is a variant of",
+                "object": "TargetCompany ransomware strain"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3105,
+                "cost": 0.03105
+            },
+            "output": {
+                "tokens": 488,
+                "cost": 0.01464
+            },
+            "total": {
+                "tokens": 3593,
+                "cost": 0.04569
+            }
+        },
+        "time": 16.823115348815918,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/AVERTIUM/mallox-QD1-SvZ.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-yanluowang.json",
+                    0.16906297099801873
+                ],
+                [
+                    "AVERTIUM-royal-ransomware.json",
+                    0.19967819048151253
+                ],
+                [
+                    "AVERTIUM-fargo.json",
+                    0.21918282746519893
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "targets",
+                "object": {
+                    "text": "computers running Microsoft Windows",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "exploits",
+                "object": {
+                    "text": "unsecured MS-SQL servers",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "targeted industries include",
+                "object": {
+                    "text": "manufacturing, professional and legal services, and wholesale and retail",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware operators",
+                    "class": "Attacker"
+                },
+                "relation": "claim victims include",
+                "object": {
+                    "text": "worldwide organizations",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "uses",
+                "object": {
+                    "text": "vulnerable MS-SQL servers",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "CVE-2020-0618",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "CVE-2019-1068",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "uses tactics such as",
+                "object": {
+                    "text": "brute force, data exfiltration, and network scanning tools",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "is distributed via",
+                "object": {
+                    "text": "phishing emails",
+                    "class": "Indicator:Email"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "downloads payload from",
+                "object": {
+                    "text": "a remote server",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "deactivates",
+                "object": {
+                    "text": "services hindering data encryption",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "erases",
+                "object": {
+                    "text": "shadow copies",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "attempts to eliminate",
+                "object": {
+                    "text": "all event logs",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "uses",
+                "object": {
+                    "text": "double extortion method",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "has",
+                "object": {
+                    "text": "a data leak site",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Victims",
+                    "class": "Exploit Target"
+                },
+                "relation": "negotiate with",
+                "object": {
+                    "text": "Mallox ransomware using a private key",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mallox ransomware",
+                    "class": "Malware"
+                },
+                "relation": "is a variant of",
+                "object": {
+                    "text": "TargetCompany ransomware strain",
+                    "class": "Malware"
+                }
+            }
+        ],
+        "response_time": 40.82120633125305,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/AVERTIUM/mallox.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1721,
+                "cost": 0.017210000000000003
+            },
+            "output": {
+                "tokens": 937,
+                "cost": 0.02811
+            },
+            "total": {
+                "tokens": 2658,
+                "cost": 0.04532
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "targets",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "computers running Microsoft Windows",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "computers running Microsoft Windows"
+                    ],
+                    "entity_text": "computers running Microsoft Windows"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "exploits",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "unsecured MS-SQL servers",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "vulnerable MS-SQL servers",
+                        "unsecured MS-SQL servers"
+                    ],
+                    "entity_text": "unsecured MS-SQL servers"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "targeted industries include",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "manufacturing, professional and legal services, and wholesale and retail",
+                    "mention_class": "Information",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "manufacturing, professional and legal services, and wholesale and retail"
+                    ],
+                    "entity_text": "manufacturing, professional and legal services, and wholesale and retail"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "Mallox ransomware operators",
+                    "mention_class": "Attacker",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "Mallox ransomware operators"
+                    ],
+                    "entity_text": "Mallox ransomware operators"
+                },
+                "relation": "claim victims include",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "worldwide organizations",
+                    "mention_class": "Organization",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "worldwide organizations"
+                    ],
+                    "entity_text": "worldwide organizations"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "uses",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "vulnerable MS-SQL servers",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "vulnerable MS-SQL servers",
+                        "unsecured MS-SQL servers"
+                    ],
+                    "entity_text": "unsecured MS-SQL servers"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "Mallox ransomware vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "Mallox ransomware vulnerability",
+                        "Mallox ransomware vulnerability"
+                    ],
+                    "entity_text": "Mallox ransomware vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "CVE-2020-0618",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "CVE-2020-0618",
+                        "CVE-2019-1068"
+                    ],
+                    "entity_text": "CVE-2020-0618"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "Mallox ransomware vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "Mallox ransomware vulnerability",
+                        "Mallox ransomware vulnerability"
+                    ],
+                    "entity_text": "Mallox ransomware vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "CVE-2019-1068",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "CVE-2020-0618",
+                        "CVE-2019-1068"
+                    ],
+                    "entity_text": "CVE-2020-0618"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "uses tactics such as",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "brute force, data exfiltration, and network scanning tools",
+                    "mention_class": "Tool",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "brute force, data exfiltration, and network scanning tools"
+                    ],
+                    "entity_text": "brute force, data exfiltration, and network scanning tools"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "is distributed via",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "phishing emails",
+                    "mention_class": "Indicator:Email",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "phishing emails"
+                    ],
+                    "entity_text": "phishing emails"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "downloads payload from",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "a remote server",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "a remote server"
+                    ],
+                    "entity_text": "a remote server"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "deactivates",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "services hindering data encryption",
+                    "mention_class": "Event",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "services hindering data encryption"
+                    ],
+                    "entity_text": "services hindering data encryption"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "erases",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "shadow copies",
+                    "mention_class": "Event",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "shadow copies"
+                    ],
+                    "entity_text": "shadow copies"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "attempts to eliminate",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "all event logs",
+                    "mention_class": "Event",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "all event logs"
+                    ],
+                    "entity_text": "all event logs"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 26,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "uses",
+                "object": {
+                    "mention_id": 27,
+                    "mention_text": "double extortion method",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "double extortion method"
+                    ],
+                    "entity_text": "double extortion method"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 28,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "has",
+                "object": {
+                    "mention_id": 29,
+                    "mention_text": "a data leak site",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "a data leak site"
+                    ],
+                    "entity_text": "a data leak site"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 30,
+                    "mention_text": "Victims",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Victims"
+                    ],
+                    "entity_text": "Victims"
+                },
+                "relation": "negotiate with",
+                "object": {
+                    "mention_id": 31,
+                    "mention_text": "Mallox ransomware using a private key",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 32,
+                    "mention_text": "Mallox ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware",
+                        "Mallox ransomware using a private key"
+                    ],
+                    "entity_text": "Mallox ransomware"
+                },
+                "relation": "is a variant of",
+                "object": {
+                    "mention_id": 33,
+                    "mention_text": "TargetCompany ransomware strain",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "TargetCompany ransomware strain"
+                    ],
+                    "entity_text": "TargetCompany ransomware strain"
+                }
+            }
+        ],
+        "mentions_num": 34,
+        "response_time": 10.134127616882324,
+        "embedding_model": "text-embedding-3-small",
+        "entity_num": 18,
+        "threshold": 0.6,
+        "Eval": {
+            "TP": 20,
+            "FP": 0,
+            "FN": 0,
+            "TN": 14
+        }
+    }
+}

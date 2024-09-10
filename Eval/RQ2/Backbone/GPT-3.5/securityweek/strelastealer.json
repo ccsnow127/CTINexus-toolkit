@@ -1,0 +1,321 @@
+{
+    "CTI": {
+        "text": "Over 100 organizations in the US and EU have been targeted in recent large-scale phishing campaigns distributing the information stealer malware known as StrelaStealer, Palo Alto Networks reports. First documented in November 2022, StrelaStealer harvests credentials from the well-known email clients and sends them to an attacker-controlled command-and-control (C&C) server specified in the malware\u2019s configuration. Over the past five months, Palo Alto Networks identified multiple large-scale campaigns carrying attachments deploying the infostealer in the form of a malicious DLL.Following an initial wave of emails in November 2023, the attackers launched two more in January and February 2024, mostly targeting the same North American and European regions. Tailored to local languages, the spam messages were mainly sent to organizations in the high-tech sector, with entities across finance, professional and legal services, manufacturing, government, utilities and energy, insurance, and construction targeted as well. Unlike earlier StrelaStealer campaigns that featured ISO attachments containing LNK and HTML files designed to fetch the malware from a remote server, the recent attacks involved a ZIP attachment that contained a JScript file designed to drop the final payload in the form of a DLL.",
+        "link": "https://www.securityweek.com/over-100-organizations-targeted-in-recent-strelastealer-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "over 100 organizations",
+                "relation": "have been targeted in",
+                "object": "large-scale phishing campaigns"
+            },
+            {
+                "subject": "large-scale phishing campaigns",
+                "relation": "distributing",
+                "object": "StrelaStealer malware"
+            },
+            {
+                "subject": "Palo Alto Networks",
+                "relation": "reports",
+                "object": "StrelaStealer malware"
+            },
+            {
+                "subject": "StrelaStealer",
+                "relation": "harvests",
+                "object": "credentials from email clients"
+            },
+            {
+                "subject": "StrelaStealer",
+                "relation": "sends",
+                "object": "credentials to attacker-controlled C&C server"
+            },
+            {
+                "subject": "Palo Alto Networks",
+                "relation": "identified",
+                "object": "multiple large-scale campaigns carrying infostealer attachments"
+            },
+            {
+                "subject": "attachments",
+                "relation": "deploying",
+                "object": "infostealer in the form of a malicious DLL"
+            },
+            {
+                "subject": "attackers",
+                "relation": "launched",
+                "object": "emails in January and February 2024"
+            },
+            {
+                "subject": "spam messages",
+                "relation": "were sent to",
+                "object": "organizations in high-tech sector"
+            },
+            {
+                "subject": "spam messages",
+                "relation": "were sent to",
+                "object": "organizations across various sectors"
+            },
+            {
+                "subject": "recent attacks",
+                "relation": "involved",
+                "object": "ZIP attachment"
+            },
+            {
+                "subject": "ZIP attachment",
+                "relation": "contained",
+                "object": "JScript file"
+            },
+            {
+                "subject": "JScript file",
+                "relation": "designed to drop",
+                "object": "final payload in the form of a DLL"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1618,
+                "cost": 0.0008089999999999999
+            },
+            "output": {
+                "tokens": 365,
+                "cost": 0.0005475
+            },
+            "total": {
+                "tokens": 1983,
+                "cost": 0.0013565
+            }
+        },
+        "time": 5.956262826919556,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/securityweek/strelastealer-QD1-7am.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "threatPost: TA558.json",
+                    0.11061976715685343
+                ],
+                [
+                    "thehackernews: UAC-0099.json",
+                    0.12767044366085686
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 7,
+                "fn": 13,
+                "precision": 0.46153846153846156,
+                "recall": 0.3157894736842105,
+                "f1": 0.37499999999999994
+            },
+            "matched_list": [
+                [
+                    [
+                        "Palo Alto Networks",
+                        "reports",
+                        "StrelaStealer malware"
+                    ],
+                    [
+                        "Palo Alto Networks",
+                        "identified",
+                        "campaigns distributing StrelaStealer"
+                    ],
+                    [
+                        1.0,
+                        0.706455637209945
+                    ]
+                ],
+                [
+                    [
+                        "StrelaStealer",
+                        "harvests",
+                        "credentials from email clients"
+                    ],
+                    [
+                        "StrelaStealer",
+                        "harvests",
+                        "credentials"
+                    ],
+                    [
+                        1.0,
+                        0.5667396654360627
+                    ]
+                ],
+                [
+                    [
+                        "StrelaStealer",
+                        "sends",
+                        "credentials to attacker-controlled C&C server"
+                    ],
+                    [
+                        "StrelaStealer",
+                        "harvests",
+                        "credentials"
+                    ],
+                    [
+                        1.0,
+                        0.49741772071364687
+                    ]
+                ],
+                [
+                    [
+                        "Palo Alto Networks",
+                        "identified",
+                        "multiple large-scale campaigns carrying infostealer attachments"
+                    ],
+                    [
+                        "Palo Alto Networks",
+                        "identified",
+                        "campaigns distributing StrelaStealer"
+                    ],
+                    [
+                        1.0,
+                        0.7072884958687934
+                    ]
+                ],
+                [
+                    [
+                        "recent attacks",
+                        "involved",
+                        "ZIP attachment"
+                    ],
+                    [
+                        "Earlier StrelaStealer campaigns",
+                        "featured",
+                        "ISO attachments"
+                    ],
+                    [
+                        0.4620891627014101,
+                        0.6184128356211933
+                    ]
+                ],
+                [
+                    [
+                        "JScript file",
+                        "designed to drop",
+                        "final payload in the form of a DLL"
+                    ],
+                    [
+                        "JScript file",
+                        "designed to drop",
+                        "the final payload in the form of a DLL"
+                    ],
+                    [
+                        1.0,
+                        0.9570665382631817
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "over 100 organizations",
+                    "have been targeted in",
+                    "large-scale phishing campaigns"
+                ],
+                [
+                    "large-scale phishing campaigns",
+                    "distributing",
+                    "StrelaStealer malware"
+                ],
+                [
+                    "attachments",
+                    "deploying",
+                    "infostealer in the form of a malicious DLL"
+                ],
+                [
+                    "attackers",
+                    "launched",
+                    "emails in January and February 2024"
+                ],
+                [
+                    "spam messages",
+                    "were sent to",
+                    "organizations in high-tech sector"
+                ],
+                [
+                    "spam messages",
+                    "were sent to",
+                    "organizations across various sectors"
+                ],
+                [
+                    "ZIP attachment",
+                    "contained",
+                    "JScript file"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "StrelaStealer",
+                    "targets",
+                    "organizations in the US and EU"
+                ],
+                [
+                    "StrelaStealer",
+                    "is",
+                    "information stealer malware"
+                ],
+                [
+                    "StrelaStealer",
+                    "sends credentials to",
+                    "attacker-controlled C&C server"
+                ],
+                [
+                    "Campaigns",
+                    "deploy",
+                    "StrelaStealer via malicious DLL"
+                ],
+                [
+                    "Campaigns",
+                    "target",
+                    "the high-tech sector"
+                ],
+                [
+                    "Campaigns",
+                    "target",
+                    "finance sector"
+                ],
+                [
+                    "Campaigns",
+                    "target",
+                    "professional and legal services sector"
+                ],
+                [
+                    "Campaigns",
+                    "target",
+                    "manufacturing sector"
+                ],
+                [
+                    "Campaigns",
+                    "target",
+                    "government sector"
+                ],
+                [
+                    "Campaigns",
+                    "target",
+                    "utilities and energy sector"
+                ],
+                [
+                    "Campaigns",
+                    "target",
+                    "insurance sector"
+                ],
+                [
+                    "Campaigns",
+                    "target",
+                    "construction sector"
+                ],
+                [
+                    "Recent attacks",
+                    "involved",
+                    "ZIP attachment containing a JScript file"
+                ]
+            ]
+        }
+    }
+}

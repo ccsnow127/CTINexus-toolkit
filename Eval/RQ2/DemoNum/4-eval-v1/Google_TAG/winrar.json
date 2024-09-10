@@ -1,0 +1,259 @@
+{
+    "CTI": {
+        "text": "In August 2023, RARLabs released an updated version of WinRAR that included fixes for several security-related bugs. One of those bugs, later assigned CVE-2023-38831, is a logical vulnerability within WinRAR causing extraneous temporary file expansion when processing crafted archives, combined with a quirk in the implementation of Windows\u2019 ShellExecute when attempting to open a file with an extension containing spaces. The vulnerability allows attackers to execute arbitrary code when a user attempts to view a benign file (such as an ordinary PNG file) within a ZIP archive. As detailed in a blog post from Group-IB, the vulnerability had been exploited as 0-day by cybercrime actors in-the-wild since at least April 2023 for campaigns targeting financial traders to deliver various commodity malware families. Hours after the blog post was released, proof of concepts and exploit generators were uploaded to public GitHub repositories. ",
+        "link": "https://blog.google/threat-analysis-group/government-backed-actors-exploiting-winrar-vulnerability/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "RARLabs",
+                "relation": "released",
+                "object": "an updated version of WinRAR"
+            },
+            {
+                "subject": "WinRAR",
+                "relation": "included fixes for",
+                "object": "several security-related bugs"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "is a",
+                "object": "logical vulnerability within WinRAR"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "causes",
+                "object": "extraneous temporary file expansion"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "utilizes",
+                "object": "quirk in the implementation of Windows\u2019 ShellExecute"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "allows",
+                "object": "attackers to execute arbitrary code"
+            },
+            {
+                "subject": "the vulnerability",
+                "relation": "exploited as",
+                "object": "0-day by cybercrime actors"
+            },
+            {
+                "subject": "0-day",
+                "relation": "used for",
+                "object": "campaigns targeting financial traders"
+            },
+            {
+                "subject": "campaigns",
+                "relation": "deliver",
+                "object": "various commodity malware families"
+            },
+            {
+                "subject": "Group-IB",
+                "relation": "detailed in a blog post",
+                "object": "the exploitation of the vulnerability"
+            },
+            {
+                "subject": "proof of concepts and exploit generators",
+                "relation": "uploaded to",
+                "object": "public GitHub repositories"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2096,
+                "cost": 0.020960000000000003
+            },
+            "output": {
+                "tokens": 307,
+                "cost": 0.00921
+            },
+            "total": {
+                "tokens": 2403,
+                "cost": 0.030170000000000002
+            }
+        },
+        "time": 13.409372568130493,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/Google_TAG/winrar-QD1-LLm.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "Unit42: VenomRAT.json",
+                    0.1215880029648068
+                ],
+                [
+                    "Google_TAG: zimbra.json",
+                    0.12423842235742553
+                ],
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.14453002323757944
+                ],
+                [
+                    "symantec: Follina.json",
+                    0.16801457428136113
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 1,
+                "fn": 2,
+                "precision": 0.9090909090909091,
+                "recall": 0.8333333333333334,
+                "f1": 0.8695652173913043
+            },
+            "matched_list": [
+                [
+                    [
+                        "RARLabs",
+                        "released",
+                        "an updated version of WinRAR"
+                    ],
+                    [
+                        "RARLabs",
+                        "released",
+                        "an updated version of WinRAR"
+                    ]
+                ],
+                [
+                    [
+                        "WinRAR",
+                        "included fixes for",
+                        "several security-related bugs"
+                    ],
+                    [
+                        "an updated version of WinRAR",
+                        "included",
+                        "fixes for security-related bugs"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-38831",
+                        "is a",
+                        "logical vulnerability within WinRAR"
+                    ],
+                    [
+                        "CVE-2023-38831",
+                        "is a",
+                        "logical vulnerability within WinRAR"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-38831",
+                        "causes",
+                        "extraneous temporary file expansion"
+                    ],
+                    [
+                        "logical vulnerability within WinRAR",
+                        "causing",
+                        "extraneous temporary file expansion"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-38831",
+                        "allows",
+                        "attackers to execute arbitrary code"
+                    ],
+                    [
+                        "The vulnerability",
+                        "allows attackers to execute",
+                        "arbitrary code"
+                    ]
+                ],
+                [
+                    [
+                        "the vulnerability",
+                        "exploited as",
+                        "0-day by cybercrime actors"
+                    ],
+                    [
+                        "cybercrime actors",
+                        "exploited",
+                        "The vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "0-day",
+                        "used for",
+                        "campaigns targeting financial traders"
+                    ],
+                    [
+                        "campaigns",
+                        "targeting",
+                        "financial traders"
+                    ]
+                ],
+                [
+                    [
+                        "campaigns",
+                        "deliver",
+                        "various commodity malware families"
+                    ],
+                    [
+                        "campaigns",
+                        "to deliver",
+                        "various commodity malware families"
+                    ]
+                ],
+                [
+                    [
+                        "Group-IB",
+                        "detailed in a blog post",
+                        "the exploitation of the vulnerability"
+                    ],
+                    [
+                        "Group-IB",
+                        "detailed",
+                        "a blog post"
+                    ]
+                ],
+                [
+                    [
+                        "proof of concepts and exploit generators",
+                        "uploaded to",
+                        "public GitHub repositories"
+                    ],
+                    [
+                        "proof of concepts and exploit generators",
+                        "were uploaded to",
+                        "public GitHub repositories"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "CVE-2023-38831",
+                    "utilizes",
+                    "quirk in the implementation of Windows\u2019 ShellExecute"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "One of those bugs",
+                    "is",
+                    "CVE-2023-38831"
+                ],
+                [
+                    "Windows\u2019 ShellExecute",
+                    "has a quirk when attempting to open",
+                    "a file with an extension containing spaces"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

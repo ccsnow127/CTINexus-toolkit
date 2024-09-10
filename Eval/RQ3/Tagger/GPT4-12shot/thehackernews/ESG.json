@@ -1,0 +1,369 @@
+{
+    "CTI": {
+        "text": "arracuda has revealed that Chinese threat actors exploited a new zero-day in its Email Security Gateway (ESG) appliances to deploy backdoors on a limited number of devices. Tracked as CVE-2023-7102, the issue relates to a case of arbitrary code execution that resides within a third-party and open-source library named Spreadsheet::ParseExcel that's used by the Amavis scanner within the gateway to screen Microsoft Excel email attachments for malware. The company attributed the activity to a threat actor tracked by Google-owned Mandiant as UNC4841, which was previously linked to the active exploitation of another zero-day in Barracuda devices (CVE-2023-2868, CVSS score: 9.8) earlier this year.Successful exploitation of the new flaw is accomplished by means of a specially crafted Microsoft Excel email attachment. This is followed by the deployment of new variants of known implants called SEASPY and SALTWATER that are equipped to offer persistence and command execution capabilities.",
+        "link": "https://thehackernews.com/2023/12/chinese-hackers-exploited-new-zero-day.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Chinese threat actors",
+                "relation": "exploited",
+                "object": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances"
+            },
+            {
+                "subject": "CVE-2023-7102",
+                "relation": "relates to",
+                "object": "arbitrary code execution"
+            },
+            {
+                "subject": "CVE-2023-7102",
+                "relation": "resides within",
+                "object": "Spreadsheet::ParseExcel"
+            },
+            {
+                "subject": "Spreadsheet::ParseExcel",
+                "relation": "is used by",
+                "object": "the Amavis scanner"
+            },
+            {
+                "subject": "the Amavis scanner",
+                "relation": "screens",
+                "object": "Microsoft Excel email attachments for malware"
+            },
+            {
+                "subject": "UNC4841",
+                "relation": "linked to",
+                "object": "the exploitation of CVE-2023-7102"
+            },
+            {
+                "subject": "UNC4841",
+                "relation": "previously linked to",
+                "object": "the active exploitation of another zero-day in Barracuda devices"
+            },
+            {
+                "subject": "the other zero-day in Barracuda devices",
+                "relation": "is",
+                "object": "CVE-2023-2868"
+            },
+            {
+                "subject": "CVE-2023-2868",
+                "relation": "CVSS score",
+                "object": "9.8"
+            },
+            {
+                "subject": "successful exploitation of CVE-2023-7102",
+                "relation": "accomplished by",
+                "object": "a specially crafted Microsoft Excel email attachment"
+            },
+            {
+                "subject": "the deployment",
+                "relation": "followed by",
+                "object": "new variants of SEASPY and SALTWATER"
+            },
+            {
+                "subject": "SEASPY and SALTWATER",
+                "relation": "equip",
+                "object": "persistence and command execution capabilities"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1968,
+                "cost": 0.019680000000000003
+            },
+            "output": {
+                "tokens": 378,
+                "cost": 0.011340000000000001
+            },
+            "total": {
+                "tokens": 2346,
+                "cost": 0.031020000000000006
+            }
+        },
+        "time": 11.866486549377441,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/thehackernews/ESG-QD1-wsL.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-microsoft.json",
+                    0.12760242363531504
+                ],
+                [
+                    "BleepingComputer-vmware.json",
+                    0.1537878419633921
+                ],
+                [
+                    "BleepingComputer-apple.json",
+                    0.21325976127486743
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Chinese threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "exploited",
+                "object": {
+                    "text": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-7102",
+                    "class": "Vulnerability"
+                },
+                "relation": "relates to",
+                "object": {
+                    "text": "arbitrary code execution",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-7102",
+                    "class": "Vulnerability"
+                },
+                "relation": "resides within",
+                "object": {
+                    "text": "Spreadsheet::ParseExcel",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Spreadsheet::ParseExcel",
+                    "class": "Tool"
+                },
+                "relation": "is used by",
+                "object": {
+                    "text": "the Amavis scanner",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the Amavis scanner",
+                    "class": "Tool"
+                },
+                "relation": "screens",
+                "object": {
+                    "text": "Microsoft Excel email attachments for malware",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "UNC4841",
+                    "class": "Attacker"
+                },
+                "relation": "linked to",
+                "object": {
+                    "text": "the exploitation of CVE-2023-7102",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "UNC4841",
+                    "class": "Attacker"
+                },
+                "relation": "previously linked to",
+                "object": {
+                    "text": "the active exploitation of another zero-day in Barracuda devices",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the other zero-day in Barracuda devices",
+                    "class": "Vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "CVE-2023-2868",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-2868",
+                    "class": "Vulnerability"
+                },
+                "relation": "CVSS score",
+                "object": {
+                    "text": "9.8",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "successful exploitation of CVE-2023-7102",
+                    "class": "Event"
+                },
+                "relation": "accomplished by",
+                "object": {
+                    "text": "a specially crafted Microsoft Excel email attachment",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the deployment",
+                    "class": "Event"
+                },
+                "relation": "followed by",
+                "object": {
+                    "text": "new variants of SEASPY and SALTWATER",
+                    "class": "Malware:Variants"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SEASPY and SALTWATER",
+                    "class": "Malware"
+                },
+                "relation": "equip",
+                "object": {
+                    "text": "persistence and command execution capabilities",
+                    "class": "Malware Characteristic:Capability"
+                }
+            }
+        ],
+        "response_time": 51.926143169403076,
+        "Demo_num": 12,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-12shot/prompt_store/thehackernews/ESG.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1887,
+                "cost": 0.01887
+            },
+            "output": {
+                "tokens": 718,
+                "cost": 0.02154
+            },
+            "total": {
+                "tokens": 2605,
+                "cost": 0.04041
+            }
+        },
+        "Eval": {
+            "correct": 20,
+            "incorrect": 4,
+            "TP": 20,
+            "TN": 0,
+            "FP": 4,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 3,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Attacker": {
+                    "TP": 3,
+                    "TN": 21,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 2,
+                    "TN": 19,
+                    "FP": 1,
+                    "FN": 2
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 1,
+                    "TN": 23,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 1,
+                    "TN": 22,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 2,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 2,
+                    "TN": 21,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 6,
+                    "TN": 16,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 8
+        }
+    }
+}

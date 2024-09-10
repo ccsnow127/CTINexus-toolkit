@@ -1,0 +1,24 @@
+defaults:  
+  - _self_
+
+### basic setting
+# inFile: 
+# CTI_Source: securityweek
+inSet: dataset/IE-inputs
+outSet: /home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand
+
+### openAI setting
+model: gpt-4-0125-preview
+api_key: <YOUR_OPENAI_KEY>
+
+### demonstration setting
+retriever:
+  type: "rand" #retriever type
+  # permutation:  #the permutation of the kNN
+shot: 2 #k of the kNN
+demo_set: /home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc #store the demos(also the current ground truth)
+
+### prompt setting
+ie_prompt_set: Toolbox/IE_Prompts #the folder stored the prompt templates 
+templ: QD1.jinja #used promt template
+ie_prompt_store: /home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store #store the prompt used for each CTI report

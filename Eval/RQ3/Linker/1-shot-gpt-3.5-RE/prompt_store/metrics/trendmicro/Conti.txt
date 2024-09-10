@@ -1,0 +1,17 @@
+"Example:
+
+"Context": "CVE-2023-36884 is a remote code execution vulnerability that was previously patched. The vulnerability allowed attackers to craft Microsoft Office documents in a way that circumvented the Mark of the Web (MoTW) security feature. This allowed the files to be opened without triggering a security warning, ultimately enabling remote code execution. To counteract a previously mitigated but actively exploited CVE-2023-36884 flaw, Microsoft has introduced an Office Defense in Depth update. The Russian threat actor Storm-0978/RomCom is responsible for actively exploiting this vulnerability. This group, previously recognized for deploying the Industrial Spy ransomware in their attacks, has now rebranded as 'Underground' and extorts victims through their ransomware operations."
+
+"Question": What do you think is the relationship between entity "Storm-0978/RomCom" and entity "CVE-2023-36884"
+
+"predicted_triple": {"subject": "Storm-0978/RomCom", "relation": "actively exploited", "object": "CVE-2023-36884"}
+---------------------
+Target task:
+
+"Context": Conti can arrive in the system through BazarLoader, which is delivered via phishing emails containing a Google Drive link that downloads the malware.Alternatively, the ransomware can arrive via exploiting the the FortiGate firewall vulnerabilities CVE-2018-13379 and CVE-2018-13374. After successfully exploiting the application, the ransomware deploys Cobalt Strike to gain a foothold on the system. Conti can also arrive as a result of the exploitation of the ProxyShell Microsoft Exchange vulnerabilities. The Conti group uses tools such as Whoami, Nltest, and Net. These tools give the operators information about where they are in the system, and what rights and permissions they have. Since the operators employ double extortion tactics, they actively look for files to exfiltrate in the discovery stage. The threat actors use tools such as ShareFinder to identify the shares needed for exfiltration and ransomware deployment. Although the group mostly relies on finding the domain admin credentials to gain full access to the domain, they may also use a couple of exploits like Zerologon (CVE-2020-1472) and PrintNightmare (CVE-2021-1675), to elevate their privilege and further strengthen their foothold in the network.
+
+"Question": What do you think is the relationship between entity "The group" and entity "Conti"?
+
+"predicted_triple": """insert your answer here"""
+
+Your response must be JSON and nothing else. predicted_subject and predicted_object should be chosen from entity "The group" and entity "Conti", do not come up with new entity."

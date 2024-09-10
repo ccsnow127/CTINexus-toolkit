@@ -1,0 +1,17 @@
+"Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"Context": "CVE-2023-36884 is a remote code execution vulnerability that was previously patched. The vulnerability allowed attackers to craft Microsoft Office documents in a way that circumvented the Mark of the Web (MoTW) security feature. This allowed the files to be opened without triggering a security warning, ultimately enabling remote code execution. To counteract a previously mitigated but actively exploited CVE-2023-36884 flaw, Microsoft has introduced an Office Defense in Depth update. The Russian threat actor Storm-0978/RomCom is responsible for actively exploiting this vulnerability. This group, previously recognized for deploying the Industrial Spy ransomware in their attacks, has now rebranded as 'Underground' and extorts victims through their ransomware operations."
+
+"Question": What do you think is the relationship between entity "Storm-0978/RomCom" and entity "CVE-2023-36884"
+
+"predicted_triple": {"subject": "Storm-0978/RomCom", "relation": "actively exploited", "object": "CVE-2023-36884"}
+---------------------
+Target task:
+
+"Context": We discovered a recent WhatsApp phishing campaign through our telemetry that led to banking trojan activity. In this campaign, the attacker shares a malicious APK file through WhatsApp with a message asking users to enter sensitive information in the app. The widely circulated fake banking message states \u201cYour [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You.\u201d and includes a APK file named [redacted]-BANK[.]apk. Upon investigation, we discovered that the APK file was malicious and interacting with it installs a fraudulent application on the victim device. The installed app impersonates a legitimate bank located in India and disguises itself as the bank's official Know Your Customer (KYC) application to trick users into submitting their sensitive information, despite this particular banking organization not being affiliated with an official KYC-related app. This information is then sent to a command and control (C2) server, as well as to the attacker's hard-coded phone number used in SMS functionality.
+
+"Question": What do you think is the relationship between entity "the information" and entity "the attacker"?
+
+"predicted_triple": """insert your answer here""""

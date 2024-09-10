@@ -1,0 +1,272 @@
+{
+    "CTI": {
+        "text": "United States organizations within the financial sector are currently being attacked by a recently discovered ransomware operation named, Yanluowang. The ransomware operation is highly experienced with ransomware-as-a-service (RaaS) and could be linked to veteran RaaS groups, Fivehands and Thieflock. Although the group is primarily focused on attacking organizations within the financial sector, they have also targeted companies in manufacturing, IT services, consultancy, and engineering. Let's take a look at Yanluowang's techniques, tactics, and how they may be connected to Fivehands and Thieflock. In October 2021, Symantec's Threat Hunter Team, a division of Broadcom Software, discovered that Yanluowang ransomware was actively being used by a threat actor who was seen attacking U.S. corporations since at least August 2021. What was interesting about the attack was that many of the tools, tactics, and procedures (TTPs) used were previously used by ransomware threat actor, Thieflock. Most analysts assumed that the threat actor using Yanluowang must be an affiliate of Thieflock who shifted allegiances. Although Yanluowang attempted to attack a large organization in October 2021 by deploying ransomware, they were not successful due to the ransomware being somewhat underdeveloped. According to Symantec, their Threat Hunter Team initially discovered the use of AdFind, a legitimate command-line Active Directory query tool, on the undisclosed target's network. Ransomware attackers often use AdFind as a reconnaissance tool. The tool also equipped attackers with resources that they needed for lateral movement by way of Active Directory. Days after discovering the suspicious use of AdFind, attackers attempted to deploy Yanluowang ransomware.",
+        "link": "https://explore.avertium.com/resource/in-depth-look-at-yanluowang-ransomware"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Yanluowang",
+                "relation": "is",
+                "object": "a ransomware operation"
+            },
+            {
+                "subject": "Yanluowang ransomware operation",
+                "relation": "is experienced with",
+                "object": "ransomware-as-a-service (RaaS)"
+            },
+            {
+                "subject": "Yanluowang",
+                "relation": "could be linked to",
+                "object": "veteran RaaS groups, Fivehands and Thieflock"
+            },
+            {
+                "subject": "Yanluowang",
+                "relation": "attacked",
+                "object": "organizations within the financial sector"
+            },
+            {
+                "subject": "Yanluowang",
+                "relation": "also targeted",
+                "object": "companies in manufacturing, IT services, consultancy, and engineering"
+            },
+            {
+                "subject": "Threat actor using Yanluowang",
+                "relation": "seen attacking",
+                "object": "U.S. corporations"
+            },
+            {
+                "subject": "Threat actor using Yanluowang",
+                "relation": "assumed to be",
+                "object": "an affiliate of Thieflock"
+            },
+            {
+                "subject": "Threat actor using Yanluowang",
+                "relation": "attempted to attack",
+                "object": "a large organization"
+            },
+            {
+                "subject": "Yanluowang ransomware",
+                "relation": "was",
+                "object": "underdeveloped"
+            },
+            {
+                "subject": "Threat Hunter Team",
+                "relation": "discovered use of",
+                "object": "AdFind"
+            },
+            {
+                "subject": "AdFind",
+                "relation": "is used for",
+                "object": "reconnaissance"
+            },
+            {
+                "subject": "Attackers",
+                "relation": "used AdFind for",
+                "object": "lateral movement"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3357,
+                "cost": 0.03357
+            },
+            "output": {
+                "tokens": 353,
+                "cost": 0.01059
+            },
+            "total": {
+                "tokens": 3710,
+                "cost": 0.044160000000000005
+            }
+        },
+        "time": 17.73672318458557,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/AVERTIUM/yanluowang-QD1-IQj.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "AVERTIUM: fivehands.json",
+                    0.1459535246980436
+                ],
+                [
+                    "AVERTIUM: mallox.json",
+                    0.15247010342303632
+                ],
+                [
+                    "symantec: 3AM.json",
+                    0.17874146253944415
+                ],
+                [
+                    "AVERTIUM: royal-ransomware.json",
+                    0.18400157717216967
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 3,
+                "fn": 4,
+                "precision": 0.75,
+                "recall": 0.6923076923076923,
+                "f1": 0.7199999999999999
+            },
+            "matched_list": [
+                [
+                    [
+                        "Yanluowang",
+                        "is",
+                        "a ransomware operation"
+                    ],
+                    [
+                        "Yanluowang ransomware operation",
+                        "is experienced with",
+                        "ransomware-as-a-service"
+                    ]
+                ],
+                [
+                    [
+                        "Yanluowang ransomware operation",
+                        "is experienced with",
+                        "ransomware-as-a-service (RaaS)"
+                    ],
+                    [
+                        "Yanluowang ransomware operation",
+                        "is experienced with",
+                        "ransomware-as-a-service"
+                    ]
+                ],
+                [
+                    [
+                        "Yanluowang",
+                        "could be linked to",
+                        "veteran RaaS groups, Fivehands and Thieflock"
+                    ],
+                    [
+                        "Yanluowang",
+                        "could be linked to",
+                        "Fivehands and Thieflock"
+                    ]
+                ],
+                [
+                    [
+                        "Yanluowang",
+                        "also targeted",
+                        "companies in manufacturing, IT services, consultancy, and engineering"
+                    ],
+                    [
+                        "Yanluowang",
+                        "has targeted",
+                        "companies in manufacturing, IT services, consultancy, and engineering"
+                    ]
+                ],
+                [
+                    [
+                        "Threat actor using Yanluowang",
+                        "seen attacking",
+                        "U.S. corporations"
+                    ],
+                    [
+                        "The threat actor",
+                        "was seen attacking",
+                        "U.S. corporations"
+                    ]
+                ],
+                [
+                    [
+                        "Threat actor using Yanluowang",
+                        "assumed to be",
+                        "an affiliate of Thieflock"
+                    ],
+                    [
+                        "Threat actor using Yanluowang",
+                        "is assumed to be",
+                        "an affiliate of Thieflock"
+                    ]
+                ],
+                [
+                    [
+                        "Threat Hunter Team",
+                        "discovered use of",
+                        "AdFind"
+                    ],
+                    [
+                        "The use of AdFind",
+                        "was discovered on",
+                        "the target's network"
+                    ]
+                ],
+                [
+                    [
+                        "AdFind",
+                        "is used for",
+                        "reconnaissance"
+                    ],
+                    [
+                        "AdFind",
+                        "is used as",
+                        "a reconnaissance tool"
+                    ]
+                ],
+                [
+                    [
+                        "Attackers",
+                        "used AdFind for",
+                        "lateral movement"
+                    ],
+                    [
+                        "Attackers",
+                        "use AdFind for",
+                        "lateral movement via Active Directory"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Yanluowang",
+                    "attacked",
+                    "organizations within the financial sector"
+                ],
+                [
+                    "Threat actor using Yanluowang",
+                    "attempted to attack",
+                    "a large organization"
+                ],
+                [
+                    "Yanluowang ransomware",
+                    "was",
+                    "underdeveloped"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Yanluowang ransomware operation",
+                    "is attacking",
+                    "United States organizations within the financial sector"
+                ],
+                [
+                    "Symantec's Threat Hunter Team",
+                    "discovered",
+                    "Yanluowang ransomware"
+                ],
+                [
+                    "Yanluowang",
+                    "attempted to attack",
+                    "a large organization"
+                ],
+                [
+                    "Attackers",
+                    "attempted to deploy",
+                    "Yanluowang ransomware"
+                ]
+            ],
+            "thresh": 0.8
+        }
+    }
+}

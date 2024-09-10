@@ -1,0 +1,210 @@
+{
+    "CTI": {
+        "text": "Microsoft has released a workaround for a zero-day flaw that was initially flagged in April and that attackers already have used to target organizations in Russia and Tibet, researchers said. The remote control execution (RCE) flaw, tracked as CVE-2022-3019, is associated with the Microsoft Support Diagnostic Tool (MSDT), which, ironically, itself collects information about bugs in the company\u2019s products and reports to Microsoft Support. If successfully exploited, attackers can install programs, view, change or delete data, or create new accounts in the context allowed by the user\u2019s rights, the company said. A remote code execution vulnerability exists when MSDT is called using the URL protocol from a calling application such as Word,\u201d Microsoft explained in its guidance on the Microsoft Security Response Center. \u201cAn attacker who successfully exploits this vulnerability can run arbitrary code with the privileges of the calling application.",
+        "link": "https://threatpost.com/microsoft-workaround-0day-attack/179776/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "attackers",
+                "relation": "targeted",
+                "object": "organizations in Russia"
+            },
+            {
+                "subject": "attackers",
+                "relation": "targeted",
+                "object": "organizations in Tibet"
+            },
+            {
+                "subject": "Microsoft Support Diagnostic Tool (MSDT)",
+                "relation": "has",
+                "object": "CVE-2022-3019"
+            },
+            {
+                "subject": "CVE-2022-3019",
+                "relation": "is a",
+                "object": "zero-day flaw"
+            },
+            {
+                "subject": "CVE-2022-3019",
+                "relation": "is a",
+                "object": "remote control execution (RCE) flaw"
+            },
+            {
+                "subject": "attackers",
+                "relation": "can install",
+                "object": "programs"
+            },
+            {
+                "subject": "attackers",
+                "relation": "can view",
+                "object": "data"
+            },
+            {
+                "subject": "attackers",
+                "relation": "can change",
+                "object": "data"
+            },
+            {
+                "subject": "attackers",
+                "relation": "can delete",
+                "object": "data"
+            },
+            {
+                "subject": "attackers",
+                "relation": "can create",
+                "object": "new accounts"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1486,
+                "cost": 0.014860000000000002
+            },
+            "output": {
+                "tokens": 242,
+                "cost": 0.00726
+            },
+            "total": {
+                "tokens": 1728,
+                "cost": 0.02212
+            }
+        },
+        "time": 11.595790386199951,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/threatPost/Microsoft-QD1-HKC.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Sea-Turtle.json",
+                    "random"
+                ],
+                [
+                    "Seedworm.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 5,
+                "fp": 5,
+                "fn": 3,
+                "precision": 0.5,
+                "recall": 0.625,
+                "f1": 0.5555555555555556
+            },
+            "matched_list": [
+                [
+                    [
+                        "attackers",
+                        "targeted",
+                        "organizations in Tibet"
+                    ],
+                    [
+                        "zero-day flaw",
+                        "was targeted at",
+                        "organizations in Russia and Tibet"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft Support Diagnostic Tool (MSDT)",
+                        "has",
+                        "CVE-2022-3019"
+                    ],
+                    [
+                        "CVE-2022-3019",
+                        "is associated with",
+                        "the Microsoft Support Diagnostic Tool (MSDT)"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-3019",
+                        "is a",
+                        "zero-day flaw"
+                    ],
+                    [
+                        "CVE-2022-3019",
+                        "is a",
+                        "remote control execution (RCE) flaw"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-3019",
+                        "is a",
+                        "remote control execution (RCE) flaw"
+                    ],
+                    [
+                        "CVE-2022-3019",
+                        "is a",
+                        "remote control execution (RCE) flaw"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "can install",
+                        "programs"
+                    ],
+                    [
+                        "attackers",
+                        "install programs, view, change or delete data, or create new accounts",
+                        "in the context allowed by the user\u2019s rights"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "attackers",
+                    "targeted",
+                    "organizations in Russia"
+                ],
+                [
+                    "attackers",
+                    "can view",
+                    "data"
+                ],
+                [
+                    "attackers",
+                    "can change",
+                    "data"
+                ],
+                [
+                    "attackers",
+                    "can delete",
+                    "data"
+                ],
+                [
+                    "attackers",
+                    "can create",
+                    "new accounts"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Microsoft",
+                    "released",
+                    "a workaround for a zero-day flaw"
+                ],
+                [
+                    "A remote code execution vulnerability",
+                    "exists when",
+                    "MSDT is called using the URL protocol from a calling application such as Word"
+                ],
+                [
+                    "An attacker",
+                    "can run",
+                    "arbitrary code with the privileges of the calling application"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

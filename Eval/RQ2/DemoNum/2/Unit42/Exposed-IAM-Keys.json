@@ -1,0 +1,248 @@
+{
+    "CTI": {
+        "text": "Unit 42 researchers have identified an active campaign we are calling EleKtra-Leak, which performs automated targeting of exposed identity and access management (IAM) credentials within public GitHub repositories. AWS detects and auto-remediates much of the threat of exposed credentials in popular source code repositories by applying a special quarantine policy \u2014 but by manually removing that automatic protection, we were able to develop deeper insights into the activities that the actor would carry out in the case where compromised credentials are obtained in some other way. In those cases, the threat actor associated with the campaign was able to create multiple AWS Elastic Compute (EC2) instances that they used for wide-ranging and long-lasting cryptojacking operations. We believe these operations have been active for at least two years and are still active today.",
+        "link": ""
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unit 42 researchers",
+                "relation": "have identified",
+                "object": "an active campaign"
+            },
+            {
+                "subject": "an active campaign",
+                "relation": "is called",
+                "object": "EleKtra-Leak"
+            },
+            {
+                "subject": "EleKtra-Leak",
+                "relation": "performs",
+                "object": "automated targeting of exposed identity and access management (IAM) credentials"
+            },
+            {
+                "subject": "exposed identity and access management (IAM) credentials",
+                "relation": "within",
+                "object": "public GitHub repositories"
+            },
+            {
+                "subject": "AWS",
+                "relation": "detects and auto-remediates",
+                "object": "much of the threat of exposed credentials"
+            },
+            {
+                "subject": "exposed credentials",
+                "relation": "in",
+                "object": "popular source code repositories"
+            },
+            {
+                "subject": "AWS",
+                "relation": "applying",
+                "object": "a special quarantine policy"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "associated with",
+                "object": "the campaign"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "able to create",
+                "object": "multiple AWS Elastic Compute (EC2) instances"
+            },
+            {
+                "subject": "AWS Elastic Compute (EC2) instances",
+                "relation": "used for",
+                "object": "wide-ranging and long-lasting cryptojacking operations"
+            },
+            {
+                "subject": "these operations",
+                "relation": "have been active for",
+                "object": "at least two years"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1049,
+                "cost": 0.010490000000000001
+            },
+            "output": {
+                "tokens": 306,
+                "cost": 0.00918
+            },
+            "total": {
+                "tokens": 1355,
+                "cost": 0.01967
+            }
+        },
+        "time": 15.622320890426636,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/Unit42/Exposed-IAM-Keys-QD1-pR8.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Unit42: Google-Workspace.json",
+                    0.10059211325108613
+                ],
+                [
+                    "BleepingComputer: github.json",
+                    0.11066901626136644
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 2,
+                "fn": 3,
+                "precision": 0.8181818181818182,
+                "recall": 0.75,
+                "f1": 0.7826086956521738
+            },
+            "matched_list": [
+                [
+                    [
+                        "Unit 42 researchers",
+                        "have identified",
+                        "an active campaign"
+                    ],
+                    [
+                        "Unit 42 researchers",
+                        "have identified",
+                        "an active campaign"
+                    ]
+                ],
+                [
+                    [
+                        "an active campaign",
+                        "is called",
+                        "EleKtra-Leak"
+                    ],
+                    [
+                        "the active campaign",
+                        "is called",
+                        "EleKtra-Leak"
+                    ]
+                ],
+                [
+                    [
+                        "EleKtra-Leak",
+                        "performs",
+                        "automated targeting of exposed identity and access management (IAM) credentials"
+                    ],
+                    [
+                        "EleKtra-Leak",
+                        "performs",
+                        "automated targeting of exposed IAM credentials"
+                    ]
+                ],
+                [
+                    [
+                        "AWS",
+                        "detects and auto-remediates",
+                        "much of the threat of exposed credentials"
+                    ],
+                    [
+                        "AWS",
+                        "detects and auto-remediates",
+                        "the threat of exposed credentials"
+                    ]
+                ],
+                [
+                    [
+                        "exposed credentials",
+                        "in",
+                        "popular source code repositories"
+                    ],
+                    [
+                        "the threat of exposed credentials",
+                        "is in",
+                        "popular source code repositories"
+                    ]
+                ],
+                [
+                    [
+                        "AWS",
+                        "applying",
+                        "a special quarantine policy"
+                    ],
+                    [
+                        "AWS",
+                        "applies",
+                        "a special quarantine policy"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor",
+                        "associated with",
+                        "the campaign"
+                    ],
+                    [
+                        "the threat actor",
+                        "is associated with",
+                        "the campaign"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor",
+                        "able to create",
+                        "multiple AWS Elastic Compute (EC2) instances"
+                    ],
+                    [
+                        "the threat actor",
+                        "was able to create",
+                        "multiple AWS EC2 instances"
+                    ]
+                ],
+                [
+                    [
+                        "AWS Elastic Compute (EC2) instances",
+                        "used for",
+                        "wide-ranging and long-lasting cryptojacking operations"
+                    ],
+                    [
+                        "AWS EC2 instances",
+                        "are used for",
+                        "cryptojacking operations"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "exposed identity and access management (IAM) credentials",
+                    "within",
+                    "public GitHub repositories"
+                ],
+                [
+                    "these operations",
+                    "have been active for",
+                    "at least two years"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "IAM credentials",
+                    "are within",
+                    "public GitHub repositories"
+                ],
+                [
+                    "Unit 42 researchers",
+                    "were able to develop",
+                    "deeper insights"
+                ],
+                [
+                    "cryptojacking operations",
+                    "have been active for",
+                    "at least two years"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,110 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'A new Android backdoor', 'relation': 'is discovered with', 'object': 'potent capabilities to carry out a range of malicious actions'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The new Android backdoor', 'relation': 'is dubbed', 'object': 'Xamalicious'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Xamalicious', 'relation': 'is developed using', 'object': 'an open-source mobile app framework called Xamarin'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Xamalicious', 'relation': 'abuses', 'object': "the operating system's accessibility permissions"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Xamalicious', 'relation': 'is capable of', 'object': 'gathering metadata about the compromised device'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Xamalicious', 'relation': 'contacts', 'object': 'a command-and-control (C2) server'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Xamalicious', 'relation': 'fetches', 'object': 'a second-stage payload'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The second stage', 'relation': 'is injected as', 'object': 'an assembly DLL at runtime level'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The second stage', 'relation': 'takes full control of', 'object': 'the device'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The actions', 'relation': 'are', 'object': 'potentially fraudulent'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fraudulent actions', 'relation': 'include', 'object': 'clicking on ads, installing apps'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fraudulent actions', 'relation': 'are without', 'object': 'user consent'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The cybersecurity firm', 'relation': 'identified', 'object': '25 apps with Xamalicious'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Some apps', 'relation': 'were distributed on', 'object': 'the official Google Play Store since mid-2020'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The apps', 'relation': 'are estimated to have been installed', 'object': 'at least 327,000 times'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

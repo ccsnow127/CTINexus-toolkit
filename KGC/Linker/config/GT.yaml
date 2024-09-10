@@ -1,0 +1,32 @@
+defaults:  
+  - _self_
+
+# CTI_Source: BleepingComputer
+# inFile: akira.json
+
+addition:
+  darkreading:
+    - Bluetooth-Flaw.json
+  securityweek:
+    - wallescape.json
+  thehackernews:
+    - ESG.json
+  threatPost:
+    - H0lyGh0st.json
+  trendmicro:
+    - Akira.json
+
+inSet: /home/yutong/CTINexus/dataset/Merger-output-large-GT
+outSet: /home/yutong/CTINexus/dataset/Linker-outputs-GT
+
+## oepnai config
+model: gpt-4-0125-preview
+api_key: <YOUR_OPENAI_KEY>
+
+
+## prompt constructor
+link_prompt_folder: Toolbox/LinkerPrompt
+link_prompt_file: GT.jinja
+
+## prompt store
+link_prompt_set: /home/yutong/CTINexus/dataset/Linker-outputs-GT/prompt_store/metrics

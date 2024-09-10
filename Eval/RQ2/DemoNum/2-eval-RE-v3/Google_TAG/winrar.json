@@ -1,0 +1,268 @@
+{
+    "CTI": {
+        "text": "In August 2023, RARLabs released an updated version of WinRAR that included fixes for several security-related bugs. One of those bugs, later assigned CVE-2023-38831, is a logical vulnerability within WinRAR causing extraneous temporary file expansion when processing crafted archives, combined with a quirk in the implementation of Windows\u2019 ShellExecute when attempting to open a file with an extension containing spaces. The vulnerability allows attackers to execute arbitrary code when a user attempts to view a benign file (such as an ordinary PNG file) within a ZIP archive. As detailed in a blog post from Group-IB, the vulnerability had been exploited as 0-day by cybercrime actors in-the-wild since at least April 2023 for campaigns targeting financial traders to deliver various commodity malware families. Hours after the blog post was released, proof of concepts and exploit generators were uploaded to public GitHub repositories. ",
+        "link": "https://blog.google/threat-analysis-group/government-backed-actors-exploiting-winrar-vulnerability/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "RARLabs",
+                "relation": "released",
+                "object": "updated version of WinRAR"
+            },
+            {
+                "subject": "WinRAR",
+                "relation": "included fixes for",
+                "object": "several security-related bugs"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "is a",
+                "object": "logical vulnerability within WinRAR"
+            },
+            {
+                "subject": "logical vulnerability",
+                "relation": "causing",
+                "object": "extraneous temporary file expansion"
+            },
+            {
+                "subject": "extraneous temporary file expansion",
+                "relation": "when processing",
+                "object": "crafted archives"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "allows",
+                "object": "attackers to execute arbitrary code"
+            },
+            {
+                "subject": "attackers",
+                "relation": "execute",
+                "object": "arbitrary code when a user attempts to view a benign file within a ZIP archive"
+            },
+            {
+                "subject": "Group-IB",
+                "relation": "detailed",
+                "object": "the vulnerability exploited as 0-day"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "exploited as 0-day by",
+                "object": "cybercrime actors"
+            },
+            {
+                "subject": "cybercrime actors",
+                "relation": "targeting",
+                "object": "financial traders"
+            },
+            {
+                "subject": "cybercrime actors",
+                "relation": "deliver",
+                "object": "various commodity malware families"
+            },
+            {
+                "subject": "proof of concepts and exploit generators",
+                "relation": "were uploaded to",
+                "object": "public GitHub repositories"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1111,
+                "cost": 0.01111
+            },
+            "output": {
+                "tokens": 324,
+                "cost": 0.00972
+            },
+            "total": {
+                "tokens": 1435,
+                "cost": 0.02083
+            }
+        },
+        "time": 18.913849592208862,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/Google_TAG/winrar-QD1-Gp5.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.14453002323757944
+                ],
+                [
+                    "symantec: Follina.json",
+                    0.16801457428136113
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9230769230769231,
+                "f1": 0.9600000000000001
+            },
+            "matched_list": [
+                [
+                    [
+                        "RARLabs",
+                        "released",
+                        "updated version of WinRAR"
+                    ],
+                    [
+                        "RARLabs",
+                        "released",
+                        "an updated version of WinRAR"
+                    ]
+                ],
+                [
+                    [
+                        "WinRAR",
+                        "included fixes for",
+                        "several security-related bugs"
+                    ],
+                    [
+                        "an updated version of WinRAR",
+                        "included",
+                        "fixes for security-related bugs"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-38831",
+                        "is a",
+                        "logical vulnerability within WinRAR"
+                    ],
+                    [
+                        "CVE-2023-38831",
+                        "is a",
+                        "logical vulnerability within WinRAR"
+                    ]
+                ],
+                [
+                    [
+                        "logical vulnerability",
+                        "causing",
+                        "extraneous temporary file expansion"
+                    ],
+                    [
+                        "logical vulnerability within WinRAR",
+                        "causing",
+                        "extraneous temporary file expansion"
+                    ]
+                ],
+                [
+                    [
+                        "extraneous temporary file expansion",
+                        "when processing",
+                        "crafted archives"
+                    ],
+                    [
+                        "logical vulnerability within WinRAR",
+                        "causing",
+                        "extraneous temporary file expansion"
+                    ]
+                ],
+                [
+                    [
+                        "vulnerability",
+                        "allows",
+                        "attackers to execute arbitrary code"
+                    ],
+                    [
+                        "The vulnerability",
+                        "allows attackers to execute",
+                        "arbitrary code"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "execute",
+                        "arbitrary code when a user attempts to view a benign file within a ZIP archive"
+                    ],
+                    [
+                        "The vulnerability",
+                        "allows attackers to execute",
+                        "arbitrary code"
+                    ]
+                ],
+                [
+                    [
+                        "Group-IB",
+                        "detailed",
+                        "the vulnerability exploited as 0-day"
+                    ],
+                    [
+                        "The vulnerability",
+                        "had been exploited as",
+                        "0-day"
+                    ]
+                ],
+                [
+                    [
+                        "vulnerability",
+                        "exploited as 0-day by",
+                        "cybercrime actors"
+                    ],
+                    [
+                        "cybercrime actors",
+                        "exploited",
+                        "The vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "cybercrime actors",
+                        "targeting",
+                        "financial traders"
+                    ],
+                    [
+                        "campaigns",
+                        "targeting",
+                        "financial traders"
+                    ]
+                ],
+                [
+                    [
+                        "cybercrime actors",
+                        "deliver",
+                        "various commodity malware families"
+                    ],
+                    [
+                        "campaigns",
+                        "to deliver",
+                        "various commodity malware families"
+                    ]
+                ],
+                [
+                    [
+                        "proof of concepts and exploit generators",
+                        "were uploaded to",
+                        "public GitHub repositories"
+                    ],
+                    [
+                        "proof of concepts and exploit generators",
+                        "were uploaded to",
+                        "public GitHub repositories"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Windows\u2019 ShellExecute",
+                    "has a quirk when attempting to open",
+                    "a file with an extension containing spaces"
+                ]
+            ]
+        }
+    }
+}

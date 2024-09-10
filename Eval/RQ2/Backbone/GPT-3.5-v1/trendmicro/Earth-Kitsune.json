@@ -1,0 +1,222 @@
+{
+    "CTI": {
+        "text": "We found Operation Earth Kitsune using a total of five C&C servers, seven samples, and four new bugs, aiming to compromise websites to host malware. We initiated our investigation after noticing that the Korean American National Coordinating Council (KANCC) website was redirecting visitors to the Hanseattle website. Users who accessed the said site were redirected to a weaponized version of a proof of concept (POC) for the CVE-2019-5782 Google Chrome vulnerability published in the chromium tracking system. Digging deeper, we discovered that the attack does not only involve a weaponized version of the mentioned Chrome exploit; the exploit was infecting the victim machine with three separate malware samples.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/cyber-attacks/operation-earth-kitsune-tracking-slub-s-current-operations"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Operation Earth Kitsune",
+                "relation": "using",
+                "object": "a total of five C&C servers"
+            },
+            {
+                "subject": "Operation Earth Kitsune",
+                "relation": "using",
+                "object": "seven samples"
+            },
+            {
+                "subject": "Operation Earth Kitsune",
+                "relation": "using",
+                "object": "four new bugs"
+            },
+            {
+                "subject": "Operation Earth Kitsune",
+                "relation": "aiming to",
+                "object": "compromise websites to host malware"
+            },
+            {
+                "subject": "Korean American National Coordinating Council (KANCC) website",
+                "relation": "was redirecting",
+                "object": "visitors to the Hanseattle website"
+            },
+            {
+                "subject": "users",
+                "relation": "accessed",
+                "object": "the said site"
+            },
+            {
+                "subject": "the attack",
+                "relation": "involves",
+                "object": "a weaponized version of the mentioned Chrome exploit"
+            },
+            {
+                "subject": "the attack",
+                "relation": "involves",
+                "object": "the exploit infecting the victim machine with three separate malware samples"
+            },
+            {
+                "subject": "weaponized version",
+                "relation": "for",
+                "object": "CVE-2019-5782 Google Chrome vulnerability"
+            },
+            {
+                "subject": "weaponized version",
+                "relation": "published in",
+                "object": "the chromium tracking system"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1282,
+                "cost": 0.000641
+            },
+            "output": {
+                "tokens": 283,
+                "cost": 0.0004245
+            },
+            "total": {
+                "tokens": 1565,
+                "cost": 0.0010655
+            }
+        },
+        "time": 3.5853559970855713,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/trendmicro/Earth-Kitsune-QD1-wPq.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Unit42: VenomRAT.json",
+                    0.11428243404103658
+                ],
+                [
+                    "darkreading: Google-Patches.json",
+                    0.15868213864968644
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 2,
+                "fn": 1,
+                "precision": 0.8,
+                "recall": 0.8888888888888888,
+                "f1": 0.8421052631578948
+            },
+            "matched_list": [
+                [
+                    [
+                        "Operation Earth Kitsune",
+                        "using",
+                        "a total of five C&C servers"
+                    ],
+                    [
+                        "Operation Earth Kitsune",
+                        "using",
+                        "five C&C servers"
+                    ]
+                ],
+                [
+                    [
+                        "Operation Earth Kitsune",
+                        "using",
+                        "seven samples"
+                    ],
+                    [
+                        "Operation Earth Kitsune",
+                        "using",
+                        "seven samples"
+                    ]
+                ],
+                [
+                    [
+                        "Operation Earth Kitsune",
+                        "using",
+                        "four new bugs"
+                    ],
+                    [
+                        "Operation Earth Kitsune",
+                        "using",
+                        "four new bugs"
+                    ]
+                ],
+                [
+                    [
+                        "Operation Earth Kitsune",
+                        "aiming to",
+                        "compromise websites to host malware"
+                    ],
+                    [
+                        "Operation Earth Kitsune",
+                        "aims to",
+                        "compromise websites"
+                    ]
+                ],
+                [
+                    [
+                        "Korean American National Coordinating Council (KANCC) website",
+                        "was redirecting",
+                        "visitors to the Hanseattle website"
+                    ],
+                    [
+                        "Korean American National Coordinating Council website",
+                        "redirecting visitors to",
+                        "Hanseattle website"
+                    ]
+                ],
+                [
+                    [
+                        "the attack",
+                        "involves",
+                        "a weaponized version of the mentioned Chrome exploit"
+                    ],
+                    [
+                        "weaponized version of the mentioned Chrome exploit",
+                        "infecting",
+                        "victim machine with three separate malware samples"
+                    ]
+                ],
+                [
+                    [
+                        "the attack",
+                        "involves",
+                        "the exploit infecting the victim machine with three separate malware samples"
+                    ],
+                    [
+                        "weaponized version of the mentioned Chrome exploit",
+                        "infecting",
+                        "victim machine with three separate malware samples"
+                    ]
+                ],
+                [
+                    [
+                        "weaponized version",
+                        "for",
+                        "CVE-2019-5782 Google Chrome vulnerability"
+                    ],
+                    [
+                        "CVE-2019-5782",
+                        "is a",
+                        "Google Chrome vulnerability"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "users",
+                    "accessed",
+                    "the said site"
+                ],
+                [
+                    "weaponized version",
+                    "published in",
+                    "the chromium tracking system"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Hanseattle website",
+                    "redirected users to",
+                    "a weaponized version of a proof of concept for CVE-2019-5782"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

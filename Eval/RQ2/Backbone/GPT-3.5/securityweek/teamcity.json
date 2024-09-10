@@ -1,0 +1,309 @@
+{
+    "CTI": {
+        "text": "A TeamCity vulnerability disclosed recently in controversial circumstances is being exploited in ransomware attacks, according to the product\u2019s developer and cybersecurity companies. On March 4, JetBrains, the developer of the TeamCity build management and continuous integration server, announced fixes for CVE-2024-27198 and CVE-2024-27199, two serious authentication bypass vulnerabilities. CVE-2024-27198, which has been rated critical, can be exploited by remote, unauthenticated attackers to take complete control of a server by creating a new admin user account or by generating an admin access token. Rapid7, whose researchers discovered the vulnerabilities, made public details of CVE-2024-27198 and CVE-2024-27199 a few hours after JetBrains announced fixes. Full disclosure seems to have occurred due to miscommunication between the two companies. Rapid7 was concerned that JetBrains would try to silently patch the vulnerabilities and the vendor was concerned that Rapid7 would disclose details too quickly. JetBrains informed customers about patches without notifying Rapid7, which decided to immediately This led to threat actors beginning to target CVE-2024-27198 shortly after disclosure on March 4. By March 6, LeakIX, a project that scans the web for vulnerable and misconfigured systems, started seeing mass exploitation, with signs of rogue user creation seen in 1,400 instances. GuidePoint Security reported on Friday that a ransomware group named BianLian, which has been known to target critical infrastructure, may have exploited CVE-2024-27198 for initial access. ",
+        "link": "https://www.securityweek.com/recent-teamcity-vulnerability-exploited-in-ransomware-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "TeamCity vulnerability",
+                "relation": "is being exploited in",
+                "object": "ransomware attacks"
+            },
+            {
+                "subject": "JetBrains",
+                "relation": "announced fixes for",
+                "object": "CVE-2024-27198 and CVE-2024-27199"
+            },
+            {
+                "subject": "CVE-2024-27198",
+                "relation": "has been rated",
+                "object": "critical"
+            },
+            {
+                "subject": "CVE-2024-27198",
+                "relation": "can be exploited by",
+                "object": "remote, unauthenticated attackers"
+            },
+            {
+                "subject": "Rapid7",
+                "relation": "discovered",
+                "object": "the vulnerabilities"
+            },
+            {
+                "subject": "Rapid7",
+                "relation": "made public details of",
+                "object": "CVE-2024-27198 and CVE-2024-27199 a few hours after JetBrains announced fixes"
+            },
+            {
+                "subject": "Rapid7",
+                "relation": "was concerned about",
+                "object": "JetBrains silently patching the vulnerabilities"
+            },
+            {
+                "subject": "JetBrains",
+                "relation": "informed customers about patches without notifying",
+                "object": "Rapid7"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "began to target",
+                "object": "CVE-2024-27198 shortly after disclosure on March 4"
+            },
+            {
+                "subject": "LeakIX",
+                "relation": "started seeing mass exploitation with signs of rogue user creation seen in",
+                "object": "1,400 instances"
+            },
+            {
+                "subject": "GuidePoint Security",
+                "relation": "reported that a ransomware group named",
+                "object": "BianLian may have exploited CVE-2024-27198 for initial access"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1337,
+                "cost": 0.0006684999999999999
+            },
+            "output": {
+                "tokens": 372,
+                "cost": 0.000558
+            },
+            "total": {
+                "tokens": 1709,
+                "cost": 0.0012265
+            }
+        },
+        "time": 6.421853065490723,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/securityweek/teamcity-QD1-34j.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Microsoft: teamcity-cve.json",
+                    0.18852263909481404
+                ],
+                [
+                    "darkreading: SolarWinds-Style.json",
+                    0.19641684554664254
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 4,
+                "fn": 9,
+                "precision": 0.6666666666666666,
+                "recall": 0.47058823529411764,
+                "f1": 0.5517241379310345
+            },
+            "matched_list": [
+                [
+                    [
+                        "TeamCity vulnerability",
+                        "is being exploited in",
+                        "ransomware attacks"
+                    ],
+                    [
+                        "The TeamCity vulnerability",
+                        "is being exploited in",
+                        "ransomware attacks"
+                    ],
+                    [
+                        0.9244372467814084,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "JetBrains",
+                        "announced fixes for",
+                        "CVE-2024-27198 and CVE-2024-27199"
+                    ],
+                    [
+                        "JetBrains",
+                        "announced fixes for",
+                        "CVE-2024-27198 and CVE-2024-27199"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-27198",
+                        "has been rated",
+                        "critical"
+                    ],
+                    [
+                        "CVE-2024-27198",
+                        "is rated",
+                        "critical"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-27198",
+                        "can be exploited by",
+                        "remote, unauthenticated attackers"
+                    ],
+                    [
+                        "The TeamCity vulnerability",
+                        "is being exploited in",
+                        "ransomware attacks"
+                    ],
+                    [
+                        0.5081975715987718,
+                        0.4770598522678695
+                    ]
+                ],
+                [
+                    [
+                        "Rapid7",
+                        "discovered",
+                        "the vulnerabilities"
+                    ],
+                    [
+                        "Rapid7",
+                        "discovered",
+                        "the vulnerabilities"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Rapid7",
+                        "made public details of",
+                        "CVE-2024-27198 and CVE-2024-27199 a few hours after JetBrains announced fixes"
+                    ],
+                    [
+                        "Rapid7",
+                        "made public details of",
+                        "CVE-2024-27198 and CVE-2024-27199"
+                    ],
+                    [
+                        1.0,
+                        0.7356479628067006
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "began to target",
+                        "CVE-2024-27198 shortly after disclosure on March 4"
+                    ],
+                    [
+                        "CVE-2024-27198",
+                        "can be exploited by",
+                        "remote, unauthenticated attackers"
+                    ],
+                    [
+                        0.52417303638711,
+                        0.757293848256165,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "began to target",
+                        "CVE-2024-27198 shortly after disclosure on March 4"
+                    ],
+                    [
+                        "threat actors",
+                        "begin to target",
+                        "CVE-2024-27198"
+                    ],
+                    [
+                        1.0,
+                        0.757293848256165
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Rapid7",
+                    "was concerned about",
+                    "JetBrains silently patching the vulnerabilities"
+                ],
+                [
+                    "JetBrains",
+                    "informed customers about patches without notifying",
+                    "Rapid7"
+                ],
+                [
+                    "LeakIX",
+                    "started seeing mass exploitation with signs of rogue user creation seen in",
+                    "1,400 instances"
+                ],
+                [
+                    "GuidePoint Security",
+                    "reported that a ransomware group named",
+                    "BianLian may have exploited CVE-2024-27198 for initial access"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "A TeamCity vulnerability",
+                    "disclosed",
+                    "recently"
+                ],
+                [
+                    "remote, unauthenticated attackers",
+                    "take complete control of",
+                    "a server"
+                ],
+                [
+                    "CVE-2024-27199",
+                    "is",
+                    "a serious authentication bypass vulnerability"
+                ],
+                [
+                    "LeakIX",
+                    "started seeing",
+                    "mass exploitation"
+                ],
+                [
+                    "exploitation",
+                    "signs of",
+                    "rogue user creation"
+                ],
+                [
+                    "rogue user creation",
+                    "seen in",
+                    "1,400 instances"
+                ],
+                [
+                    "BianLian",
+                    "may have exploited",
+                    "CVE-2024-27198"
+                ],
+                [
+                    "BianLian",
+                    "is a",
+                    "ransomware group"
+                ],
+                [
+                    "BianLian",
+                    "target",
+                    "critical infrastructure"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "CTI": "On July 11, 2023, Unit 42 cloud researchers discovered a new peer-to-peer (P2P) worm we call P2PInfect. Written in Rust, a highly scalable and cloud-friendly programming language, this worm is capable of cross-platform infections and targets Redis, a popular open-source database application that is heavily used within cloud environments. Redis instances can be run on both Linux and Windows operating systems. Unit 42 researchers have identified over 307,000 unique Redis systems communicating publicly over the last two weeks, of which 934 may be vulnerable to this P2P worm variant. While not all of the 307,000 Redis instances will be vulnerable, the worm will still target these systems and attempt the compromise. The P2PInfect worm infects vulnerable Redis instances by exploiting the Lua sandbox escape vulnerability, CVE-2022-0543. While the vulnerability was disclosed in 2022, its scope is not fully known at this point. However, it is rated in the NIST National Vulnerability Database with a Critical CVSS score of 10.0. Additionally, the fact that P2PInfect exploits Redis servers running on both Linux and Windows operating systems makes it more scalable and potent than other worms. The P2P worm observed by Unit 42 researchers serves as an example of a serious attack threat actors could conduct using this vulnerability.",
+    "IE": {
+        "triplets": [
+            {
+                "subject": "P2PInfect",
+                "relation": "is called",
+                "object": "a new peer-to-peer (P2P) worm"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "is written in",
+                "object": "Rust"
+            },
+            {
+                "subject": "Rust",
+                "relation": "is",
+                "object": "a highly scalable and cloud-friendly programming language"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "is capable of",
+                "object": "cross-platform infections"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "targets",
+                "object": "Redis"
+            },
+            {
+                "subject": "Redis",
+                "relation": "is",
+                "object": "a popular open-source database application"
+            },
+            {
+                "subject": "Redis",
+                "relation": "is used within",
+                "object": "cloud environments"
+            },
+            {
+                "subject": "Redis instances",
+                "relation": "can run on",
+                "object": "Linux and Windows operating systems"
+            },
+            {
+                "subject": "Unit 42 researchers",
+                "relation": "discovered",
+                "object": "over 307,000 unique Redis systems communicating publicly"
+            },
+            {
+                "subject": "934 Redis systems",
+                "relation": "may be vulnerable to",
+                "object": "this P2P worm variant"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "infects",
+                "object": "vulnerable Redis instances"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "exploits",
+                "object": "the Lua sandbox escape vulnerability"
+            },
+            {
+                "subject": "the Lua sandbox escape vulnerability",
+                "relation": "is known as",
+                "object": "CVE-2022-0543"
+            },
+            {
+                "subject": "CVE-2022-0543",
+                "relation": "is rated in",
+                "object": "the NIST National Vulnerability Database with a Critical CVSS score of 10.0"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "exploits Redis servers running on",
+                "object": "both Linux and Windows operating systems"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1307,
+                "cost": 0.013070000000000002
+            },
+            "output": {
+                "tokens": 427,
+                "cost": 0.01281
+            },
+            "total": {
+                "tokens": 1734,
+                "cost": 0.02588
+            }
+        },
+        "time": 12.583770275115967,
+        "link": "https://unit42.paloaltonetworks.com/peer-to-peer-worm-p2pinfect/",
+        "prompt_file": "dataset/prompt_set/Unit42/P2PInfect-Q3-cne.jinja",
+        "prompt_template": "Q3.jinja"
+    }
+}

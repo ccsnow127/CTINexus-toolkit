@@ -1,0 +1,154 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Jupyter', 'relation': 'is a variant of', 'object': 'information stealer'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'has been targeting', 'object': 'users of Chrome, Edge, and Firefox browsers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'is also referred to as', 'object': 'Yellow Cockatoo'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'is also referred to as', 'object': 'Solarmarker'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'is also referred to as', 'object': 'Polazert'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'can backdoor', 'object': 'machines'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'harvests', 'object': 'credential information'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'credential information', 'relation': 'includes', 'object': 'computer name'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'credential information', 'relation': 'includes', 'object': "user's admin privileges"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'credential information', 'relation': 'includes', 'object': 'cookies'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'credential information', 'relation': 'includes', 'object': 'Web data'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'credential information', 'relation': 'includes', 'object': 'browser password manager information'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'steals', 'object': 'logins for crypto-wallets'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'steals', 'object': 'logins for remote access apps'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'new version of Jupyter', 'relation': 'leveraging', 'object': 'PowerShell command modifications'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'new version of Jupyter', 'relation': 'leveraging', 'object': 'legitimate-looking, digitally signed payloads'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'functioning as', 'object': 'a full-fledged backdoor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'supports', 'object': 'command and control (C2) communications'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'acts as', 'object': 'a dropper and loader for other malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'hollows', 'object': 'shell code to evade detection'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'executes', 'object': 'PowerShell scripts and commands'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'targeting', 'object': 'Ethereum Wallet'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'targeting', 'object': 'MyMonero Wallet'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'targeting', 'object': 'Atomic Wallet'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'accessing', 'object': 'OpenVPN'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Jupyter', 'relation': 'accessing', 'object': 'Remote Desktop Protocol'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

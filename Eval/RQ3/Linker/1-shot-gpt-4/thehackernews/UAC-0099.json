@@ -1,0 +1,1144 @@
+{
+    "CTI": {
+        "text": "The threat actor known as UAC-0099 has been linked to continued attacks aimed at Ukraine, some of which leverage a high-severity flaw in the WinRAR software to deliver a malware strain called LONEPAGE. The threat actor targets Ukrainian employees working for companies outside of Ukraine. UAC-0099 was first documented by the Computer Emergency Response Team of Ukraine (CERT-UA) in June 2023, detailing its attacks against state organizations and media entities for espionage motives. The attack chains leveraged phishing messages containing HTA, RAR, and LNK file attachments that led to the deployment of LONEPAGE, a Visual Basic Script (VBS) malware that's capable of contacting a command-and-control (C2) server to retrieve additional payloads such as keyloggers, stealers, and screenshot malware. The latest analysis from Deep Instinct reveals that the use of HTA attachments is just one of three different infection chains, the other two of which leverage self-extracting (SFX) archives and booby-trapped ZIP files. The ZIP files exploit the WinRAR vulnerability (CVE-2023-38831, CVSS score: 7.8) to distribute LONEPAGE.",
+        "link": "https://thehackernews.com/2023/12/uac-0099-using-winrar-exploit-to-target.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "UAC-0099",
+                "relation": "linked to",
+                "object": "attacks aimed at Ukraine"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "leverage",
+                "object": "flaw in the WinRAR software"
+            },
+            {
+                "subject": "flaw in the WinRAR software",
+                "relation": "to deliver",
+                "object": "LONEPAGE malware"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "targets",
+                "object": "Ukrainian employees"
+            },
+            {
+                "subject": "Ukrainian employees",
+                "relation": "working for",
+                "object": "companies outside of Ukraine"
+            },
+            {
+                "subject": "CERT-UA",
+                "relation": "documented",
+                "object": "UAC-0099"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "attacks",
+                "object": "state organizations"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "attacks",
+                "object": "media entities"
+            },
+            {
+                "subject": "attacks",
+                "relation": "for",
+                "object": "espionage motives"
+            },
+            {
+                "subject": "attack chains",
+                "relation": "leveraged",
+                "object": "phishing messages"
+            },
+            {
+                "subject": "phishing messages",
+                "relation": "contain",
+                "object": "HTA, RAR, and LNK file attachments"
+            },
+            {
+                "subject": "HTA, RAR, and LNK file attachments",
+                "relation": "lead to",
+                "object": "deployment of LONEPAGE"
+            },
+            {
+                "subject": "LONEPAGE",
+                "relation": "is",
+                "object": "VBS malware"
+            },
+            {
+                "subject": "LONEPAGE",
+                "relation": "capable of contacting",
+                "object": "command-and-control (C2) server"
+            },
+            {
+                "subject": "command-and-control (C2) server",
+                "relation": "to retrieve",
+                "object": "additional payloads"
+            },
+            {
+                "subject": "additional payloads",
+                "relation": "such as",
+                "object": "keyloggers, stealers, and screenshot malware"
+            },
+            {
+                "subject": "Deep Instinct",
+                "relation": "reveals",
+                "object": "use of HTA attachments"
+            },
+            {
+                "subject": "use of HTA attachments",
+                "relation": "is",
+                "object": "one of three different infection chains"
+            },
+            {
+                "subject": "other infection chains",
+                "relation": "leverage",
+                "object": "self-extracting (SFX) archives"
+            },
+            {
+                "subject": "other infection chains",
+                "relation": "leverage",
+                "object": "booby-trapped ZIP files"
+            },
+            {
+                "subject": "ZIP files",
+                "relation": "exploit",
+                "object": "the WinRAR vulnerability"
+            },
+            {
+                "subject": "the WinRAR vulnerability",
+                "relation": "is",
+                "object": "CVE-2023-38831, CVSS score: 7.8"
+            }
+        ],
+        "triples_count": 22,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2741,
+                "cost": 0.027410000000000004
+            },
+            "output": {
+                "tokens": 592,
+                "cost": 0.01776
+            },
+            "total": {
+                "tokens": 3333,
+                "cost": 0.04517
+            }
+        },
+        "time": 16.244689226150513,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/thehackernews/UAC-0099-QD1-vNM.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-charming-kitten.json",
+                    0.08456268192216736
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.08470229604847443
+                ],
+                [
+                    "BleepingComputer-purplefox.json",
+                    0.11113614262640702
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "UAC-0099",
+                    "class": "Attacker"
+                },
+                "relation": "linked to",
+                "object": {
+                    "text": "attacks aimed at Ukraine",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "UAC-0099",
+                    "class": "Attacker"
+                },
+                "relation": "leverage",
+                "object": {
+                    "text": "flaw in the WinRAR software",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "flaw in the WinRAR software",
+                    "class": "Vulnerability"
+                },
+                "relation": "to deliver",
+                "object": {
+                    "text": "LONEPAGE malware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "UAC-0099",
+                    "class": "Attacker"
+                },
+                "relation": "targets",
+                "object": {
+                    "text": "Ukrainian employees",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Ukrainian employees",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "working for",
+                "object": {
+                    "text": "companies outside of Ukraine",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CERT-UA",
+                    "class": "Organization"
+                },
+                "relation": "documented",
+                "object": {
+                    "text": "UAC-0099",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "UAC-0099",
+                    "class": "Attacker"
+                },
+                "relation": "attacks",
+                "object": {
+                    "text": "state organizations",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "UAC-0099",
+                    "class": "Attacker"
+                },
+                "relation": "attacks",
+                "object": {
+                    "text": "media entities",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attacks",
+                    "class": "Event"
+                },
+                "relation": "for",
+                "object": {
+                    "text": "espionage motives",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attack chains",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "leveraged",
+                "object": {
+                    "text": "phishing messages",
+                    "class": "Indicator:Email"
+                }
+            },
+            {
+                "subject": {
+                    "text": "phishing messages",
+                    "class": "Indicator:Email"
+                },
+                "relation": "contain",
+                "object": {
+                    "text": "HTA, RAR, and LNK file attachments",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "HTA, RAR, and LNK file attachments",
+                    "class": "Indicator:File"
+                },
+                "relation": "lead to",
+                "object": {
+                    "text": "deployment of LONEPAGE",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "LONEPAGE",
+                    "class": "Malware"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "VBS malware",
+                    "class": "Malware:Feature"
+                }
+            },
+            {
+                "subject": {
+                    "text": "LONEPAGE",
+                    "class": "Malware"
+                },
+                "relation": "capable of contacting",
+                "object": {
+                    "text": "command-and-control (C2) server",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "command-and-control (C2) server",
+                    "class": "Infrastructure"
+                },
+                "relation": "to retrieve",
+                "object": {
+                    "text": "additional payloads",
+                    "class": "Malware:Payload"
+                }
+            },
+            {
+                "subject": {
+                    "text": "additional payloads",
+                    "class": "Malware:Payload"
+                },
+                "relation": "such as",
+                "object": {
+                    "text": "keyloggers, stealers, and screenshot malware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Deep Instinct",
+                    "class": "Organization"
+                },
+                "relation": "reveals",
+                "object": {
+                    "text": "use of HTA attachments",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "use of HTA attachments",
+                    "class": "Information"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "one of three different infection chains",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "other infection chains",
+                    "class": "Information"
+                },
+                "relation": "leverage",
+                "object": {
+                    "text": "self-extracting (SFX) archives",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "other infection chains",
+                    "class": "Information"
+                },
+                "relation": "leverage",
+                "object": {
+                    "text": "booby-trapped ZIP files",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "ZIP files",
+                    "class": "Indicator:File"
+                },
+                "relation": "exploit",
+                "object": {
+                    "text": "the WinRAR vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the WinRAR vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "CVE-2023-38831, CVSS score: 7.8",
+                    "class": "Vulnerability"
+                }
+            }
+        ],
+        "response_time": 46.810123443603516,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/thehackernews/UAC-0099.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1939,
+                "cost": 0.01939
+            },
+            "output": {
+                "tokens": 1093,
+                "cost": 0.03279
+            },
+            "total": {
+                "tokens": 3032,
+                "cost": 0.052180000000000004
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "UAC-0099",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099"
+                    ],
+                    "entity_text": "UAC-0099"
+                },
+                "relation": "linked to",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "attacks aimed at Ukraine",
+                    "mention_class": "Event",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "attacks aimed at Ukraine"
+                    ],
+                    "entity_text": "attacks aimed at Ukraine"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "UAC-0099",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099"
+                    ],
+                    "entity_text": "UAC-0099"
+                },
+                "relation": "leverage",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "flaw in the WinRAR software",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "the WinRAR vulnerability",
+                        "the WinRAR vulnerability",
+                        "flaw in the WinRAR software",
+                        "flaw in the WinRAR software"
+                    ],
+                    "entity_text": "the WinRAR vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "flaw in the WinRAR software",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "the WinRAR vulnerability",
+                        "the WinRAR vulnerability",
+                        "flaw in the WinRAR software",
+                        "flaw in the WinRAR software"
+                    ],
+                    "entity_text": "the WinRAR vulnerability"
+                },
+                "relation": "to deliver",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "LONEPAGE malware",
+                    "mention_class": "Malware",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "LONEPAGE",
+                        "LONEPAGE",
+                        "LONEPAGE malware"
+                    ],
+                    "entity_text": "LONEPAGE"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "UAC-0099",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099"
+                    ],
+                    "entity_text": "UAC-0099"
+                },
+                "relation": "targets",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "Ukrainian employees",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "Ukrainian employees",
+                        "Ukrainian employees"
+                    ],
+                    "entity_text": "Ukrainian employees"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "Ukrainian employees",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "Ukrainian employees",
+                        "Ukrainian employees"
+                    ],
+                    "entity_text": "Ukrainian employees"
+                },
+                "relation": "working for",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "companies outside of Ukraine",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "companies outside of Ukraine"
+                    ],
+                    "entity_text": "companies outside of Ukraine"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "CERT-UA",
+                    "mention_class": "Organization",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "CERT-UA"
+                    ],
+                    "entity_text": "CERT-UA"
+                },
+                "relation": "documented",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "UAC-0099",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099"
+                    ],
+                    "entity_text": "UAC-0099"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "UAC-0099",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099"
+                    ],
+                    "entity_text": "UAC-0099"
+                },
+                "relation": "attacks",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "state organizations",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "state organizations"
+                    ],
+                    "entity_text": "state organizations"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "UAC-0099",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099"
+                    ],
+                    "entity_text": "UAC-0099"
+                },
+                "relation": "attacks",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "media entities",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "media entities"
+                    ],
+                    "entity_text": "media entities"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "attacks",
+                    "mention_class": "Event",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "attacks"
+                    ],
+                    "entity_text": "attacks"
+                },
+                "relation": "for",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "espionage motives",
+                    "mention_class": "Information",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "espionage motives"
+                    ],
+                    "entity_text": "espionage motives"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "attack chains",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "attack chains"
+                    ],
+                    "entity_text": "attack chains"
+                },
+                "relation": "leveraged",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "phishing messages",
+                    "mention_class": "Indicator:Email",
+                    "entity_id": 18,
+                    "mentions_merged": [
+                        "phishing messages",
+                        "phishing messages"
+                    ],
+                    "entity_text": "phishing messages"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "phishing messages",
+                    "mention_class": "Indicator:Email",
+                    "entity_id": 18,
+                    "mentions_merged": [
+                        "phishing messages",
+                        "phishing messages"
+                    ],
+                    "entity_text": "phishing messages"
+                },
+                "relation": "contain",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "HTA, RAR, and LNK file attachments",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 19,
+                    "mentions_merged": [
+                        "HTA, RAR, and LNK file attachments",
+                        "HTA, RAR, and LNK file attachments"
+                    ],
+                    "entity_text": "HTA, RAR, and LNK file attachments"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "HTA, RAR, and LNK file attachments",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 19,
+                    "mentions_merged": [
+                        "HTA, RAR, and LNK file attachments",
+                        "HTA, RAR, and LNK file attachments"
+                    ],
+                    "entity_text": "HTA, RAR, and LNK file attachments"
+                },
+                "relation": "lead to",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "deployment of LONEPAGE",
+                    "mention_class": "Event",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "deployment of LONEPAGE"
+                    ],
+                    "entity_text": "deployment of LONEPAGE"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "LONEPAGE",
+                    "mention_class": "Malware",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "LONEPAGE",
+                        "LONEPAGE",
+                        "LONEPAGE malware"
+                    ],
+                    "entity_text": "LONEPAGE"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "VBS malware",
+                    "mention_class": "Malware:Feature",
+                    "entity_id": 22,
+                    "mentions_merged": [
+                        "VBS malware"
+                    ],
+                    "entity_text": "VBS malware"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 26,
+                    "mention_text": "LONEPAGE",
+                    "mention_class": "Malware",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "LONEPAGE",
+                        "LONEPAGE",
+                        "LONEPAGE malware"
+                    ],
+                    "entity_text": "LONEPAGE"
+                },
+                "relation": "capable of contacting",
+                "object": {
+                    "mention_id": 27,
+                    "mention_text": "command-and-control (C2) server",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 23,
+                    "mentions_merged": [
+                        "command-and-control (C2) server",
+                        "command-and-control (C2) server"
+                    ],
+                    "entity_text": "command-and-control (C2) server"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 28,
+                    "mention_text": "command-and-control (C2) server",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 23,
+                    "mentions_merged": [
+                        "command-and-control (C2) server",
+                        "command-and-control (C2) server"
+                    ],
+                    "entity_text": "command-and-control (C2) server"
+                },
+                "relation": "to retrieve",
+                "object": {
+                    "mention_id": 29,
+                    "mention_text": "additional payloads",
+                    "mention_class": "Malware:Payload",
+                    "entity_id": 24,
+                    "mentions_merged": [
+                        "additional payloads",
+                        "additional payloads"
+                    ],
+                    "entity_text": "additional payloads"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 30,
+                    "mention_text": "additional payloads",
+                    "mention_class": "Malware:Payload",
+                    "entity_id": 24,
+                    "mentions_merged": [
+                        "additional payloads",
+                        "additional payloads"
+                    ],
+                    "entity_text": "additional payloads"
+                },
+                "relation": "such as",
+                "object": {
+                    "mention_id": 31,
+                    "mention_text": "keyloggers, stealers, and screenshot malware",
+                    "mention_class": "Malware",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "keyloggers, stealers, and screenshot malware"
+                    ],
+                    "entity_text": "keyloggers, stealers, and screenshot malware"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 32,
+                    "mention_text": "Deep Instinct",
+                    "mention_class": "Organization",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "Deep Instinct"
+                    ],
+                    "entity_text": "Deep Instinct"
+                },
+                "relation": "reveals",
+                "object": {
+                    "mention_id": 33,
+                    "mention_text": "use of HTA attachments",
+                    "mention_class": "Information",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "use of HTA attachments",
+                        "use of HTA attachments"
+                    ],
+                    "entity_text": "use of HTA attachments"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 34,
+                    "mention_text": "use of HTA attachments",
+                    "mention_class": "Information",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "use of HTA attachments",
+                        "use of HTA attachments"
+                    ],
+                    "entity_text": "use of HTA attachments"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 35,
+                    "mention_text": "one of three different infection chains",
+                    "mention_class": "Information",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "one of three different infection chains",
+                        "other infection chains",
+                        "other infection chains"
+                    ],
+                    "entity_text": "other infection chains"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 36,
+                    "mention_text": "other infection chains",
+                    "mention_class": "Information",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "one of three different infection chains",
+                        "other infection chains",
+                        "other infection chains"
+                    ],
+                    "entity_text": "other infection chains"
+                },
+                "relation": "leverage",
+                "object": {
+                    "mention_id": 37,
+                    "mention_text": "self-extracting (SFX) archives",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 21,
+                    "mentions_merged": [
+                        "self-extracting (SFX) archives"
+                    ],
+                    "entity_text": "self-extracting (SFX) archives"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 38,
+                    "mention_text": "other infection chains",
+                    "mention_class": "Information",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "one of three different infection chains",
+                        "other infection chains",
+                        "other infection chains"
+                    ],
+                    "entity_text": "other infection chains"
+                },
+                "relation": "leverage",
+                "object": {
+                    "mention_id": 39,
+                    "mention_text": "booby-trapped ZIP files",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 20,
+                    "mentions_merged": [
+                        "ZIP files",
+                        "booby-trapped ZIP files"
+                    ],
+                    "entity_text": "ZIP files"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 40,
+                    "mention_text": "ZIP files",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 20,
+                    "mentions_merged": [
+                        "ZIP files",
+                        "booby-trapped ZIP files"
+                    ],
+                    "entity_text": "ZIP files"
+                },
+                "relation": "exploit",
+                "object": {
+                    "mention_id": 41,
+                    "mention_text": "the WinRAR vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "the WinRAR vulnerability",
+                        "the WinRAR vulnerability",
+                        "flaw in the WinRAR software",
+                        "flaw in the WinRAR software"
+                    ],
+                    "entity_text": "the WinRAR vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 42,
+                    "mention_text": "the WinRAR vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "the WinRAR vulnerability",
+                        "the WinRAR vulnerability",
+                        "flaw in the WinRAR software",
+                        "flaw in the WinRAR software"
+                    ],
+                    "entity_text": "the WinRAR vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 43,
+                    "mention_text": "CVE-2023-38831, CVSS score: 7.8",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "CVE-2023-38831, CVSS score: 7.8"
+                    ],
+                    "entity_text": "CVE-2023-38831, CVSS score: 7.8"
+                }
+            }
+        ],
+        "mentions_num": 44,
+        "response_time": 9.407350301742554,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 25
+    },
+    "LP": {
+        "predicted_links": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "UAC-0099",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099"
+                    ],
+                    "entity_text": "UAC-0099"
+                },
+                "relation": "attacks for",
+                "object": {
+                    "entity_id": 17,
+                    "mention_text": "espionage motives"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 18,
+                    "mention_text": "phishing messages"
+                },
+                "relation": "used by",
+                "object": {
+                    "mention_id": 0,
+                    "mention_text": "UAC-0099",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099",
+                        "UAC-0099"
+                    ],
+                    "entity_text": "UAC-0099"
+                }
+            }
+        ],
+        "response_time": 5.313567876815796,
+        "model": "gpt-4-0125-preview",
+        "usage": {
+            "input": {
+                "tokens": 1058,
+                "cost": 0.01058
+            },
+            "output": {
+                "tokens": 78,
+                "cost": 0.00234
+            },
+            "total": {
+                "tokens": 1136,
+                "cost": 0.012920000000000001
+            }
+        },
+        "topic_node": {
+            "mention_id": 0,
+            "mention_text": "UAC-0099",
+            "mention_class": "Attacker",
+            "entity_id": 0,
+            "mentions_merged": [
+                "UAC-0099",
+                "UAC-0099",
+                "UAC-0099",
+                "UAC-0099",
+                "UAC-0099",
+                "UAC-0099"
+            ],
+            "entity_text": "UAC-0099"
+        },
+        "main_nodes": [
+            {
+                "mention_id": 17,
+                "mention_text": "espionage motives",
+                "mention_class": "Information",
+                "entity_id": 17,
+                "mentions_merged": [
+                    "espionage motives"
+                ],
+                "entity_text": "espionage motives"
+            },
+            {
+                "mention_id": 19,
+                "mention_text": "phishing messages",
+                "mention_class": "Indicator:Email",
+                "entity_id": 18,
+                "mentions_merged": [
+                    "phishing messages",
+                    "phishing messages"
+                ],
+                "entity_text": "phishing messages"
+            }
+        ],
+        "subgraphs": [
+            [
+                0,
+                1,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                13,
+                14,
+                15,
+                16,
+                20,
+                21,
+                22,
+                23,
+                24
+            ],
+            [
+                17,
+                2
+            ],
+            [
+                3,
+                18,
+                19,
+                12
+            ]
+        ],
+        "subgraph_num": 3,
+        "Eval": {
+            "correct": 0,
+            "incorrect": 2
+        }
+    }
+}

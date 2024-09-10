@@ -1,0 +1,208 @@
+{
+    "CTI": {
+        "text": "Microsoft has identified a nation-state activity group tracked as Flax Typhoon, based in China, that is targeting dozens of organizations in Taiwan with the likely intention of performing espionage. Flax Typhoon gains and maintains long-term access to Taiwanese organizations' networks with minimal use of malware, relying on tools built into the operating system, along with some normally benign software to quietly remain in these networks. Microsoft has not observed Flax Typhoon using this access to conduct additional actions. This blog aims to raise awareness of the techniques used by this threat actor and inform better defenses to protect against future attacks.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/08/24/flax-typhoon-using-legitimate-software-to-quietly-access-taiwanese-organizations/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft",
+                "relation": "has identified",
+                "object": "a nation-state activity group tracked as Flax Typhoon"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "based in",
+                "object": "China"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "is targeting",
+                "object": "dozens of organizations in Taiwan"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "with the likely intention of",
+                "object": "performing espionage"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "gains and maintains long-term access to",
+                "object": "Taiwanese organizations' networks"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "relies on",
+                "object": "tools built into the operating system"
+            },
+            {
+                "subject": "Flax Typhoon",
+                "relation": "relies on",
+                "object": "some normally benign software"
+            },
+            {
+                "subject": "tools built into the operating system",
+                "relation": "used to",
+                "object": "quietly remain in networks"
+            },
+            {
+                "subject": "some normally benign software",
+                "relation": "used to",
+                "object": "quietly remain in networks"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "has not observed",
+                "object": "Flax Typhoon using this access to conduct additional actions"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1016,
+                "cost": 0.01016
+            },
+            "output": {
+                "tokens": 284,
+                "cost": 0.00852
+            },
+            "total": {
+                "tokens": 1300,
+                "cost": 0.018680000000000002
+            }
+        },
+        "time": 14.521031618118286,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/Microsoft/taiwanese-QD1-v39.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "teamcity-cve.json",
+                    "random"
+                ],
+                [
+                    "Earth-Kitsune.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 3,
+                "fn": 0,
+                "precision": 0.7,
+                "recall": 1.0,
+                "f1": 0.8235294117647058
+            },
+            "matched_list": [
+                [
+                    [
+                        "Microsoft",
+                        "has identified",
+                        "a nation-state activity group tracked as Flax Typhoon"
+                    ],
+                    [
+                        "Microsoft",
+                        "has identified",
+                        "Flax Typhoon"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "based in",
+                        "China"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "is based in",
+                        "China"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "is targeting",
+                        "dozens of organizations in Taiwan"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "is targeting",
+                        "organizations in Taiwan"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "gains and maintains long-term access to",
+                        "Taiwanese organizations' networks"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "gains and maintains",
+                        "long-term access to Taiwanese organizations' networks"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "relies on",
+                        "tools built into the operating system"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "relies on",
+                        "tools built into the operating system"
+                    ]
+                ],
+                [
+                    [
+                        "Flax Typhoon",
+                        "relies on",
+                        "some normally benign software"
+                    ],
+                    [
+                        "Flax Typhoon",
+                        "relies on",
+                        "normally benign software"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "has not observed",
+                        "Flax Typhoon using this access to conduct additional actions"
+                    ],
+                    [
+                        "Microsoft",
+                        "has not observed",
+                        "Flax Typhoon using this access to conduct additional actions"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Flax Typhoon",
+                    "with the likely intention of",
+                    "performing espionage"
+                ],
+                [
+                    "tools built into the operating system",
+                    "used to",
+                    "quietly remain in networks"
+                ],
+                [
+                    "some normally benign software",
+                    "used to",
+                    "quietly remain in networks"
+                ]
+            ],
+            "not_recall_list": [],
+            "thresh": 0.7
+        }
+    }
+}

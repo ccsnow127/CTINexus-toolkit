@@ -1,0 +1,214 @@
+{
+    "CTI": {
+        "text": "BlackCat operators recently announced new updates to their tooling, including a utility called Munchkin that allows attackers to propagate the BlackCat payload to remote machines and shares on a victim organization network. For the past two years, the BlackCat ransomware operators have continued to evolve and iterate their tooling as part of their ransomware-as-a-service (RaaS) business model. As part of a recent investigation, Unit 42 researchers have acquired an instance of Munchkin that is unique, in that it is loaded in a customized Alpine virtual machine (VM). This new tactic of leveraging a customized VM to deploy malware has been gaining traction in recent months, allowing ransomware threat actors to use VMs to circumvent security solutions in deploying their malware payloads.",
+        "link": "https://unit42.paloaltonetworks.com/blackcat-ransomware-releases-new-utility-munchkin/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "BlackCat operators",
+                "relation": "announced updates to",
+                "object": "their tooling"
+            },
+            {
+                "subject": "BlackCat payload",
+                "relation": "propagated by",
+                "object": "Munchkin"
+            },
+            {
+                "subject": "Munchkin",
+                "relation": "allows attackers to propagate",
+                "object": "the BlackCat payload to remote machines and shares"
+            },
+            {
+                "subject": "BlackCat ransomware operators",
+                "relation": "evolve",
+                "object": "their tooling"
+            },
+            {
+                "subject": "BlackCat ransomware operators",
+                "relation": "operate",
+                "object": "ransomware-as-a-service"
+            },
+            {
+                "subject": "Unit 42 researchers",
+                "relation": "acquired",
+                "object": "an instance of Munchkin"
+            },
+            {
+                "subject": "Munchkin instance",
+                "relation": "is loaded in",
+                "object": "a customized Alpine virtual machine"
+            },
+            {
+                "subject": "customized VM",
+                "relation": "deployed for",
+                "object": "circumventing security solutions"
+            },
+            {
+                "subject": "ransomware threat actors",
+                "relation": "use VMs to",
+                "object": "circumvent security solutions in deploying malware payloads"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3078,
+                "cost": 0.030780000000000002
+            },
+            "output": {
+                "tokens": 254,
+                "cost": 0.00762
+            },
+            "total": {
+                "tokens": 3332,
+                "cost": 0.038400000000000004
+            }
+        },
+        "time": 9.897214889526367,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/Unit42/BlackCat-QD1-SlT.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "AVERTIUM: mallox.json",
+                    0.10376866691997355
+                ],
+                [
+                    "trendmicro: Trigona.json",
+                    0.10384479529099985
+                ],
+                [
+                    "AVERTIUM: yanluowang.json",
+                    0.10947752064530467
+                ],
+                [
+                    "AVERTIUM: royal-ransomware.json",
+                    0.11587169161254837
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.8888888888888888,
+                "recall": 1.0,
+                "f1": 0.9411764705882353
+            },
+            "matched_list": [
+                [
+                    [
+                        "BlackCat operators",
+                        "announced updates to",
+                        "their tooling"
+                    ],
+                    [
+                        "BlackCat operators",
+                        "announced updates to",
+                        "their tooling"
+                    ]
+                ],
+                [
+                    [
+                        "BlackCat payload",
+                        "propagated by",
+                        "Munchkin"
+                    ],
+                    [
+                        "Munchkin",
+                        "allows attackers to propagate",
+                        "the BlackCat payload"
+                    ]
+                ],
+                [
+                    [
+                        "Munchkin",
+                        "allows attackers to propagate",
+                        "the BlackCat payload to remote machines and shares"
+                    ],
+                    [
+                        "Munchkin",
+                        "allows attackers to propagate",
+                        "the BlackCat payload"
+                    ]
+                ],
+                [
+                    [
+                        "BlackCat ransomware operators",
+                        "evolve",
+                        "their tooling"
+                    ],
+                    [
+                        "BlackCat ransomware operators",
+                        "evolve and iterate",
+                        "their tooling"
+                    ]
+                ],
+                [
+                    [
+                        "BlackCat ransomware operators",
+                        "operate",
+                        "ransomware-as-a-service"
+                    ],
+                    [
+                        "BlackCat ransomware operators",
+                        "use",
+                        "ransomware-as-a-service (RaaS) business model"
+                    ]
+                ],
+                [
+                    [
+                        "Munchkin instance",
+                        "is loaded in",
+                        "a customized Alpine virtual machine"
+                    ],
+                    [
+                        "Munchkin",
+                        "is loaded in",
+                        "a customized Alpine virtual machine (VM)"
+                    ]
+                ],
+                [
+                    [
+                        "customized VM",
+                        "deployed for",
+                        "circumventing security solutions"
+                    ],
+                    [
+                        "customized VM",
+                        "to deploy",
+                        "malware"
+                    ]
+                ],
+                [
+                    [
+                        "ransomware threat actors",
+                        "use VMs to",
+                        "circumvent security solutions in deploying malware payloads"
+                    ],
+                    [
+                        "ransomware threat actors",
+                        "use VMs to",
+                        "circumvent security solutions"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Unit 42 researchers",
+                    "acquired",
+                    "an instance of Munchkin"
+                ]
+            ],
+            "not_recall_list": [],
+            "thresh": 0.7
+        }
+    }
+}

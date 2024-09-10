@@ -1,0 +1,107 @@
+{
+    "CTI": {
+        "text": "In August 2023, RARLabs released an updated version of WinRAR that included fixes for several security-related bugs. One of those bugs, later assigned CVE-2023-38831, is a logical vulnerability within WinRAR causing extraneous temporary file expansion when processing crafted archives, combined with a quirk in the implementation of Windows\u2019 ShellExecute when attempting to open a file with an extension containing spaces. The vulnerability allows attackers to execute arbitrary code when a user attempts to view a benign file (such as an ordinary PNG file) within a ZIP archive. As detailed in a blog post from Group-IB, the vulnerability had been exploited as 0-day by cybercrime actors in-the-wild since at least April 2023 for campaigns targeting financial traders to deliver various commodity malware families. Hours after the blog post was released, proof of concepts and exploit generators were uploaded to public GitHub repositories. ",
+        "link": "https://blog.google/threat-analysis-group/government-backed-actors-exploiting-winrar-vulnerability/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "RARLabs",
+                "relation": "released",
+                "object": "an updated version of WinRAR"
+            },
+            {
+                "subject": "WinRAR",
+                "relation": "included fixes for",
+                "object": "several security-related bugs"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "is a",
+                "object": "logical vulnerability within WinRAR"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "causes",
+                "object": "extraneous temporary file expansion"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "utilizes",
+                "object": "quirk in the implementation of Windows\u2019 ShellExecute"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "allows",
+                "object": "attackers to execute arbitrary code"
+            },
+            {
+                "subject": "the vulnerability",
+                "relation": "exploited as",
+                "object": "0-day by cybercrime actors"
+            },
+            {
+                "subject": "0-day",
+                "relation": "used for",
+                "object": "campaigns targeting financial traders"
+            },
+            {
+                "subject": "campaigns",
+                "relation": "deliver",
+                "object": "various commodity malware families"
+            },
+            {
+                "subject": "Group-IB",
+                "relation": "detailed in a blog post",
+                "object": "the exploitation of the vulnerability"
+            },
+            {
+                "subject": "proof of concepts and exploit generators",
+                "relation": "uploaded to",
+                "object": "public GitHub repositories"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2096,
+                "cost": 0.020960000000000003
+            },
+            "output": {
+                "tokens": 307,
+                "cost": 0.00921
+            },
+            "total": {
+                "tokens": 2403,
+                "cost": 0.030170000000000002
+            }
+        },
+        "time": 13.409372568130493,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/Google_TAG/winrar-QD1-LLm.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "Unit42: VenomRAT.json",
+                    0.1215880029648068
+                ],
+                [
+                    "Google_TAG: zimbra.json",
+                    0.12423842235742553
+                ],
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.14453002323757944
+                ],
+                [
+                    "symantec: Follina.json",
+                    0.16801457428136113
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

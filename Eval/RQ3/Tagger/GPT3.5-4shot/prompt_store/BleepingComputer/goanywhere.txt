@@ -1,0 +1,136 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Exploit code', 'relation': 'is available for', 'object': 'a critical authentication bypass vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a critical authentication bypass vulnerability', 'relation': 'is in', 'object': "Fortra's GoAnywhere MFT software"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'create', 'object': 'new admin users'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'new admin users', 'relation': 'are created on', 'object': 'unpatched instances'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'unpatched instances', 'relation': 'via', 'object': 'the administration portal'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'GoAnywhere MFT', 'relation': 'is', 'object': 'a web-based managed file transfer tool'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'GoAnywhere MFT', 'relation': 'helps', 'object': 'transfer files securely'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'GoAnywhere MFT', 'relation': 'keep', 'object': 'audit logs of accessed shared files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'security researchers', 'relation': 'published', 'object': 'a technical analysis of the vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': "Horizon3's Attack Team", 'relation': 'shared', 'object': 'a proof-of-concept (PoC) exploit'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a proof-of-concept (PoC) exploit', 'relation': 'helps create', 'object': 'new admin users'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'new admin users', 'relation': 'on', 'object': 'vulnerable GoAnywhere MFT instances exposed online'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Their exploit', 'relation': 'takes advantage of', 'object': 'the path traversal issue'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the path traversal issue', 'relation': 'at the root of', 'object': 'CVE-2024-0204'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-0204', 'relation': 'to access', 'object': 'the vulnerable /InitialAccountSetup.xhtml endpoint'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-0204', 'relation': 'start', 'object': 'the initial account setup screen'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the initial account setup screen', 'relation': 'to create', 'object': 'a new administrator account'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

@@ -1,0 +1,114 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'TA444', 'relation': 'is known as', 'object': 'APT38'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'TA444', 'relation': 'is known as', 'object': 'BlueNoroff'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'TA444', 'relation': 'is known as', 'object': 'BlackAlicanto'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'TA444', 'relation': 'is known as', 'object': 'Coperenicum'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'TA444', 'relation': 'is known as', 'object': 'Sapphire Sleet'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'TA444', 'relation': 'is known as', 'object': 'Stardust Chollima'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'TA444', 'relation': 'debuted', 'object': 'SpectralBlur malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SpectralBlur malware', 'relation': 'targets', 'object': 'macOS users'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SpectralBlur malware', 'relation': 'is a', 'object': 'moderately capable backdoor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SpectralBlur malware', 'relation': 'can upload/download', 'object': 'files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SpectralBlur malware', 'relation': 'can run', 'object': 'a shell'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SpectralBlur malware', 'relation': 'can update', 'object': 'its configuration'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SpectralBlur malware', 'relation': 'can delete', 'object': 'files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SpectralBlur malware', 'relation': 'can hibernate', 'object': ''}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SpectralBlur malware', 'relation': 'can sleep', 'object': ''}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'commands', 'relation': 'issued from', 'object': 'command-and-control server'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

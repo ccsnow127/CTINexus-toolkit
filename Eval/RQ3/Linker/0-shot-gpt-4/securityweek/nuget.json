@@ -1,0 +1,747 @@
+{
+    "CTI": {
+        "text": "A suspicious NuGet package designed to harvest data from industrial systems appears to be targeting developers who use technology from Chinese company Bozhon, ReversingLabs reports. Named SqzrFramework480 and published on the NuGet repository in January 2024, the package is a .NET library responsible for calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries, and more.However, it can also harvest various types of information from different types of industrial systems, including cameras and robotic arms, can take screenshots, send ping packets, and open sockets for data transfer. \u201cNone of those behaviors are resolutely malicious. However, when taken together, they raise alarms. For example, we can assume that the screenshots that are being taken are sent to the remote server via the open socket. The ping serves as a heartbeat check to see if the exfiltration server is alive,\u201d ReversingLabs notes. The function that takes screenshots, which is not explicitly declared in the code, operates in a continuous loop if successful, capturing the primary screen every minute and sending the information to a remote IP address, via the opened socket.",
+        "link": "https://www.securityweek.com/suspicious-nuget-package-harvesting-information-from-industrial-systems/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "A suspicious NuGet package",
+                "relation": "is designed to",
+                "object": "harvest data from industrial systems"
+            },
+            {
+                "subject": "A suspicious NuGet package",
+                "relation": "appears to be targeting",
+                "object": "developers who use technology from Chinese company Bozhon"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "is published on",
+                "object": "the NuGet repository"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "is responsible for",
+                "object": "calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can harvest",
+                "object": "various types of information from different types of industrial systems"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can take",
+                "object": "screenshots"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can send",
+                "object": "ping packets"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can open",
+                "object": "sockets for data transfer"
+            },
+            {
+                "subject": "The function that takes screenshots",
+                "relation": "operates in",
+                "object": "a continuous loop"
+            },
+            {
+                "subject": "The function",
+                "relation": "is not explicitly declared in",
+                "object": "the code"
+            },
+            {
+                "subject": "The function",
+                "relation": "captures",
+                "object": "the primary screen every minute"
+            },
+            {
+                "subject": "The information",
+                "relation": "is sent to",
+                "object": "a remote IP address"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2350,
+                "cost": 0.023500000000000004
+            },
+            "output": {
+                "tokens": 345,
+                "cost": 0.01035
+            },
+            "total": {
+                "tokens": 2695,
+                "cost": 0.033850000000000005
+            }
+        },
+        "time": 14.349138736724854,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/securityweek/nuget-QD1-gKQ.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-cactus.json",
+                    0.05327213433487249
+                ],
+                [
+                    "AVERTIUM-CVE-2023-36884.json",
+                    0.05339611835186609
+                ],
+                [
+                    "BleepingComputer-vmware.json",
+                    0.06352210095123519
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "A suspicious NuGet package",
+                    "class": "Malware"
+                },
+                "relation": "is designed to",
+                "object": {
+                    "text": "harvest data from industrial systems",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "A suspicious NuGet package",
+                    "class": "Malware"
+                },
+                "relation": "appears to be targeting",
+                "object": {
+                    "text": "developers who use technology from Chinese company Bozhon",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "is published on",
+                "object": {
+                    "text": "the NuGet repository",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "is responsible for",
+                "object": {
+                    "text": "calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "can harvest",
+                "object": {
+                    "text": "various types of information from different types of industrial systems",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "can take",
+                "object": {
+                    "text": "screenshots",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "can send",
+                "object": {
+                    "text": "ping packets",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "can open",
+                "object": {
+                    "text": "sockets for data transfer",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The function that takes screenshots",
+                    "class": "Malware Characteristic:Feature"
+                },
+                "relation": "operates in",
+                "object": {
+                    "text": "a continuous loop",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The function",
+                    "class": "Malware Characteristic:Feature"
+                },
+                "relation": "is not explicitly declared in",
+                "object": {
+                    "text": "the code",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The function",
+                    "class": "Malware Characteristic:Feature"
+                },
+                "relation": "captures",
+                "object": {
+                    "text": "the primary screen every minute",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The information",
+                    "class": "Information"
+                },
+                "relation": "is sent to",
+                "object": {
+                    "text": "a remote IP address",
+                    "class": "Indicator:IP"
+                }
+            }
+        ],
+        "response_time": 31.191131591796875,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/securityweek/nuget.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1502,
+                "cost": 0.01502
+            },
+            "output": {
+                "tokens": 836,
+                "cost": 0.02508
+            },
+            "total": {
+                "tokens": 2338,
+                "cost": 0.040100000000000004
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "A suspicious NuGet package",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "A suspicious NuGet package",
+                        "A suspicious NuGet package"
+                    ],
+                    "entity_text": "A suspicious NuGet package"
+                },
+                "relation": "is designed to",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "harvest data from industrial systems",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "harvest data from industrial systems",
+                        "various types of information from different types of industrial systems"
+                    ],
+                    "entity_text": "harvest data from industrial systems"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "A suspicious NuGet package",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "A suspicious NuGet package",
+                        "A suspicious NuGet package"
+                    ],
+                    "entity_text": "A suspicious NuGet package"
+                },
+                "relation": "appears to be targeting",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "developers who use technology from Chinese company Bozhon",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "developers who use technology from Chinese company Bozhon"
+                    ],
+                    "entity_text": "developers who use technology from Chinese company Bozhon"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "SqzrFramework480",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480"
+                    ],
+                    "entity_text": "SqzrFramework480"
+                },
+                "relation": "is published on",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "the NuGet repository",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "the NuGet repository"
+                    ],
+                    "entity_text": "the NuGet repository"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "SqzrFramework480",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480"
+                    ],
+                    "entity_text": "SqzrFramework480"
+                },
+                "relation": "is responsible for",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries"
+                    ],
+                    "entity_text": "calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "SqzrFramework480",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480"
+                    ],
+                    "entity_text": "SqzrFramework480"
+                },
+                "relation": "can harvest",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "various types of information from different types of industrial systems",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "harvest data from industrial systems",
+                        "various types of information from different types of industrial systems"
+                    ],
+                    "entity_text": "harvest data from industrial systems"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "SqzrFramework480",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480"
+                    ],
+                    "entity_text": "SqzrFramework480"
+                },
+                "relation": "can take",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "screenshots",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "screenshots"
+                    ],
+                    "entity_text": "screenshots"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "SqzrFramework480",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480"
+                    ],
+                    "entity_text": "SqzrFramework480"
+                },
+                "relation": "can send",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "ping packets",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "ping packets"
+                    ],
+                    "entity_text": "ping packets"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "SqzrFramework480",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480"
+                    ],
+                    "entity_text": "SqzrFramework480"
+                },
+                "relation": "can open",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "sockets for data transfer",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "sockets for data transfer"
+                    ],
+                    "entity_text": "sockets for data transfer"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "The function that takes screenshots",
+                    "mention_class": "Malware Characteristic:Feature",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "The function that takes screenshots"
+                    ],
+                    "entity_text": "The function that takes screenshots"
+                },
+                "relation": "operates in",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "a continuous loop",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "a continuous loop"
+                    ],
+                    "entity_text": "a continuous loop"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "The function",
+                    "mention_class": "Malware Characteristic:Feature",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "The function",
+                        "The function"
+                    ],
+                    "entity_text": "The function"
+                },
+                "relation": "is not explicitly declared in",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "the code",
+                    "mention_class": "Information",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "the code"
+                    ],
+                    "entity_text": "the code"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "The function",
+                    "mention_class": "Malware Characteristic:Feature",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "The function",
+                        "The function"
+                    ],
+                    "entity_text": "The function"
+                },
+                "relation": "captures",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "the primary screen every minute",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "the primary screen every minute"
+                    ],
+                    "entity_text": "the primary screen every minute"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "The information",
+                    "mention_class": "Information",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "The information"
+                    ],
+                    "entity_text": "The information"
+                },
+                "relation": "is sent to",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "a remote IP address",
+                    "mention_class": "Indicator:IP",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "a remote IP address"
+                    ],
+                    "entity_text": "a remote IP address"
+                }
+            }
+        ],
+        "mentions_num": 24,
+        "response_time": 4.717328786849976,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 16
+    },
+    "LP": {
+        "predicted_links": [
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "SqzrFramework480",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480"
+                    ],
+                    "entity_text": "SqzrFramework480"
+                },
+                "relation": "contains",
+                "object": {
+                    "entity_id": 9,
+                    "mention_text": "a continuous loop"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 11,
+                    "mention_text": "The function"
+                },
+                "relation": "is a component of",
+                "object": {
+                    "mention_id": 4,
+                    "mention_text": "SqzrFramework480",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480"
+                    ],
+                    "entity_text": "SqzrFramework480"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "SqzrFramework480",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480",
+                        "SqzrFramework480"
+                    ],
+                    "entity_text": "SqzrFramework480"
+                },
+                "relation": "is responsible for harvesting",
+                "object": {
+                    "entity_id": 14,
+                    "mention_text": "The information"
+                }
+            }
+        ],
+        "response_time": 9.013281345367432,
+        "model": "gpt-4-0125-preview",
+        "usage": {
+            "input": {
+                "tokens": 1151,
+                "cost": 0.011510000000000001
+            },
+            "output": {
+                "tokens": 104,
+                "cost": 0.0031200000000000004
+            },
+            "total": {
+                "tokens": 1255,
+                "cost": 0.01463
+            }
+        },
+        "topic_node": {
+            "mention_id": 4,
+            "mention_text": "SqzrFramework480",
+            "mention_class": "Malware",
+            "entity_id": 1,
+            "mentions_merged": [
+                "SqzrFramework480",
+                "SqzrFramework480",
+                "SqzrFramework480",
+                "SqzrFramework480",
+                "SqzrFramework480",
+                "SqzrFramework480"
+            ],
+            "entity_text": "SqzrFramework480"
+        },
+        "main_nodes": [
+            {
+                "mention_id": 17,
+                "mention_text": "a continuous loop",
+                "mention_class": "Malware Characteristic:Behavior",
+                "entity_id": 9,
+                "mentions_merged": [
+                    "a continuous loop"
+                ],
+                "entity_text": "a continuous loop"
+            },
+            {
+                "mention_id": 18,
+                "mention_text": "The function",
+                "mention_class": "Malware Characteristic:Feature",
+                "entity_id": 11,
+                "mentions_merged": [
+                    "The function",
+                    "The function"
+                ],
+                "entity_text": "The function"
+            },
+            {
+                "mention_id": 22,
+                "mention_text": "The information",
+                "mention_class": "Information",
+                "entity_id": 14,
+                "mentions_merged": [
+                    "The information"
+                ],
+                "entity_text": "The information"
+            }
+        ],
+        "subgraphs": [
+            [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            [
+                9,
+                12
+            ],
+            [
+                10,
+                11,
+                13
+            ],
+            [
+                14,
+                15
+            ]
+        ],
+        "subgraph_num": 4,
+        "Eval": {
+            "correct": 0,
+            "incorrect": 3
+        }
+    }
+}

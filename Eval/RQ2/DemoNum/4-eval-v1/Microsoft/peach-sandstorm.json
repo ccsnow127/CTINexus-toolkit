@@ -1,0 +1,275 @@
+{
+    "CTI": {
+        "text": "Since February 2023, Microsoft has observed password spray activity against thousands of organizations carried out  by an actor we track as Peach Sandstorm (HOLMIUM). Peach Sandstorm is an Iranian nation-state threat actor who has recently pursued organizations in the satellite, defense, and pharmaceutical sectors around the globe. Based upon the profile of victim organizations targeted and the observed follow-on intrusion activity, Microsoft assesses that this initial access campaign is likely used to facilitate intelligence collection in support of Iranian state interests. In cases where Peach Sandstorm successfully authenticated to an account, Microsoft observed the group using a combination of publicly available and custom tools for discovery, persistence, and lateral movement. In a small number of intrusions, Peach Sandstorm was observed exfiltrating data from the compromised environment.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/09/14/peach-sandstorm-password-spray-campaigns-enable-intelligence-collection-at-high-value-targets/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft",
+                "relation": "has observed",
+                "object": "password spray activity"
+            },
+            {
+                "subject": "password spray activity",
+                "relation": "carried out by",
+                "object": "Peach Sandstorm (HOLMIUM)"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "is",
+                "object": "an Iranian nation-state threat actor"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "pursued",
+                "object": "organizations in the satellite sector"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "pursued",
+                "object": "organizations in the defense sector"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "pursued",
+                "object": "organizations in the pharmaceutical sector"
+            },
+            {
+                "subject": "initial access campaign",
+                "relation": "is used to facilitate",
+                "object": "intelligence collection"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "successfully authenticated to",
+                "object": "an account"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "used",
+                "object": "a combination of publicly available and custom tools"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "used tools for",
+                "object": "discovery, persistence, and lateral movement"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "exfiltrated data from",
+                "object": "the compromised environment"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2512,
+                "cost": 0.025120000000000003
+            },
+            "output": {
+                "tokens": 313,
+                "cost": 0.00939
+            },
+            "total": {
+                "tokens": 2825,
+                "cost": 0.034510000000000006
+            }
+        },
+        "time": 12.55705213546753,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/Microsoft/peach-sandstorm-QD1-SVO.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "Microsoft: taiwanese.json",
+                    0.11398702441188113
+                ],
+                [
+                    "AVERTIUM: charming-kitten.json",
+                    0.13440273538685288
+                ],
+                [
+                    "Microsoft: north-korean.json",
+                    0.14801696841196196
+                ],
+                [
+                    "thehackernews: FalseFont.json",
+                    0.4241252689590431
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 11,
+                "fp": 0,
+                "fn": 4,
+                "precision": 1.0,
+                "recall": 0.7333333333333333,
+                "f1": 0.846153846153846
+            },
+            "matched_list": [
+                [
+                    [
+                        "Microsoft",
+                        "has observed",
+                        "password spray activity"
+                    ],
+                    [
+                        "password spray activity",
+                        "targeted",
+                        "thousands of organizations"
+                    ]
+                ],
+                [
+                    [
+                        "password spray activity",
+                        "carried out by",
+                        "Peach Sandstorm (HOLMIUM)"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "used",
+                        "password spray activity"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "is",
+                        "an Iranian nation-state threat actor"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "is",
+                        "an Iranian nation-state threat actor"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "pursued",
+                        "organizations in the satellite sector"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "pursued organizations in",
+                        "the satellite sector"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "pursued",
+                        "organizations in the defense sector"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "pursued organizations in",
+                        "the defense sector"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "pursued",
+                        "organizations in the pharmaceutical sector"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "pursued organizations in",
+                        "the pharmaceutical sector"
+                    ]
+                ],
+                [
+                    [
+                        "initial access campaign",
+                        "is used to facilitate",
+                        "intelligence collection"
+                    ],
+                    [
+                        "initial access campaign",
+                        "facilitates",
+                        "intelligence collection"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "successfully authenticated to",
+                        "an account"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "successfully authenticated to",
+                        "an account"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "used",
+                        "a combination of publicly available and custom tools"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "used",
+                        "publicly available tools"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "used tools for",
+                        "discovery, persistence, and lateral movement"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "used",
+                        "publicly available tools"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "exfiltrated data from",
+                        "the compromised environment"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "observed exfiltrating data from",
+                        "the compromised environment"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Peach Sandstorm",
+                    "is tracked as",
+                    "HOLMIUM"
+                ],
+                [
+                    "Microsoft",
+                    "observes",
+                    "follow-on intrusion activity"
+                ],
+                [
+                    "intelligence collection",
+                    "supports",
+                    "Iranian state interests"
+                ],
+                [
+                    "Peach Sandstorm",
+                    "executed",
+                    "lateral movement"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

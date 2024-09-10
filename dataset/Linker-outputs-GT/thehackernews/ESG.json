@@ -1,0 +1,772 @@
+{
+    "CTI": {
+        "text": "arracuda has revealed that Chinese threat actors exploited a new zero-day in its Email Security Gateway (ESG) appliances to deploy backdoors on a limited number of devices. Tracked as CVE-2023-7102, the issue relates to a case of arbitrary code execution that resides within a third-party and open-source library named Spreadsheet::ParseExcel that's used by the Amavis scanner within the gateway to screen Microsoft Excel email attachments for malware. The company attributed the activity to a threat actor tracked by Google-owned Mandiant as UNC4841, which was previously linked to the active exploitation of another zero-day in Barracuda devices (CVE-2023-2868, CVSS score: 9.8) earlier this year.Successful exploitation of the new flaw is accomplished by means of a specially crafted Microsoft Excel email attachment. This is followed by the deployment of new variants of known implants called SEASPY and SALTWATER that are equipped to offer persistence and command execution capabilities.",
+        "link": "https://thehackernews.com/2023/12/chinese-hackers-exploited-new-zero-day.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Chinese threat actors",
+                "relation": "exploited",
+                "object": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances"
+            },
+            {
+                "subject": "CVE-2023-7102",
+                "relation": "relates to",
+                "object": "arbitrary code execution"
+            },
+            {
+                "subject": "CVE-2023-7102",
+                "relation": "resides within",
+                "object": "Spreadsheet::ParseExcel"
+            },
+            {
+                "subject": "Spreadsheet::ParseExcel",
+                "relation": "is used by",
+                "object": "the Amavis scanner"
+            },
+            {
+                "subject": "the Amavis scanner",
+                "relation": "screens",
+                "object": "Microsoft Excel email attachments for malware"
+            },
+            {
+                "subject": "UNC4841",
+                "relation": "linked to",
+                "object": "the exploitation of CVE-2023-7102"
+            },
+            {
+                "subject": "UNC4841",
+                "relation": "previously linked to",
+                "object": "the active exploitation of another zero-day in Barracuda devices"
+            },
+            {
+                "subject": "the other zero-day in Barracuda devices",
+                "relation": "is",
+                "object": "CVE-2023-2868"
+            },
+            {
+                "subject": "CVE-2023-2868",
+                "relation": "CVSS score",
+                "object": "9.8"
+            },
+            {
+                "subject": "successful exploitation of CVE-2023-7102",
+                "relation": "accomplished by",
+                "object": "a specially crafted Microsoft Excel email attachment"
+            },
+            {
+                "subject": "the deployment",
+                "relation": "followed by",
+                "object": "new variants of SEASPY and SALTWATER"
+            },
+            {
+                "subject": "SEASPY and SALTWATER",
+                "relation": "equip",
+                "object": "persistence and command execution capabilities"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1968,
+                "cost": 0.019680000000000003
+            },
+            "output": {
+                "tokens": 378,
+                "cost": 0.011340000000000001
+            },
+            "total": {
+                "tokens": 2346,
+                "cost": 0.031020000000000006
+            }
+        },
+        "time": 11.866486549377441,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/thehackernews/ESG-QD1-wsL.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-microsoft.json",
+                    0.12760242363531504
+                ],
+                [
+                    "BleepingComputer-vmware.json",
+                    0.1537878419633921
+                ],
+                [
+                    "BleepingComputer-apple.json",
+                    0.21325976127486743
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Chinese threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "exploited",
+                "object": {
+                    "text": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-7102",
+                    "class": "Vulnerability"
+                },
+                "relation": "relates to",
+                "object": {
+                    "text": "arbitrary code execution",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-7102",
+                    "class": "Vulnerability"
+                },
+                "relation": "resides within",
+                "object": {
+                    "text": "Spreadsheet::ParseExcel",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Spreadsheet::ParseExcel",
+                    "class": "Tool"
+                },
+                "relation": "is used by",
+                "object": {
+                    "text": "the Amavis scanner",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the Amavis scanner",
+                    "class": "Tool"
+                },
+                "relation": "screens",
+                "object": {
+                    "text": "Microsoft Excel email attachments for malware",
+                    "class": "Malware Characteristic:Payload"
+                }
+            },
+            {
+                "subject": {
+                    "text": "UNC4841",
+                    "class": "Attacker"
+                },
+                "relation": "linked to",
+                "object": {
+                    "text": "the exploitation of CVE-2023-7102",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "UNC4841",
+                    "class": "Attacker"
+                },
+                "relation": "previously linked to",
+                "object": {
+                    "text": "the active exploitation of another zero-day in Barracuda devices",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the other zero-day in Barracuda devices",
+                    "class": "Vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "CVE-2023-2868",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-2868",
+                    "class": "Vulnerability"
+                },
+                "relation": "CVSS score",
+                "object": {
+                    "text": "9.8",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "successful exploitation of CVE-2023-7102",
+                    "class": "Event"
+                },
+                "relation": "accomplished by",
+                "object": {
+                    "text": "a specially crafted Microsoft Excel email attachment",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the deployment",
+                    "class": "Event"
+                },
+                "relation": "followed by",
+                "object": {
+                    "text": "new variants of SEASPY and SALTWATER",
+                    "class": "Malware:Variants"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SEASPY and SALTWATER",
+                    "class": "Malware"
+                },
+                "relation": "equip",
+                "object": {
+                    "text": "persistence and command execution capabilities",
+                    "class": "Malware Characteristic:Capability"
+                }
+            }
+        ],
+        "response_time": 24.06919240951538,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/thehackernews/ESG.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1535,
+                "cost": 0.01535
+            },
+            "output": {
+                "tokens": 719,
+                "cost": 0.02157
+            },
+            "total": {
+                "tokens": 2254,
+                "cost": 0.03692
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "Chinese threat actors",
+                    "mention_class": "Attacker",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "Chinese threat actors"
+                    ],
+                    "entity_text": "Chinese threat actors"
+                },
+                "relation": "exploited",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                        "the other zero-day in Barracuda devices"
+                    ],
+                    "entity_text": "the other zero-day in Barracuda devices"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "CVE-2023-7102",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "CVE-2023-7102",
+                        "CVE-2023-7102"
+                    ],
+                    "entity_text": "CVE-2023-7102"
+                },
+                "relation": "relates to",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "arbitrary code execution",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "arbitrary code execution"
+                    ],
+                    "entity_text": "arbitrary code execution"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "CVE-2023-7102",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "CVE-2023-7102",
+                        "CVE-2023-7102"
+                    ],
+                    "entity_text": "CVE-2023-7102"
+                },
+                "relation": "resides within",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "Spreadsheet::ParseExcel",
+                    "mention_class": "Tool",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "Spreadsheet::ParseExcel",
+                        "Spreadsheet::ParseExcel"
+                    ],
+                    "entity_text": "Spreadsheet::ParseExcel"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "Spreadsheet::ParseExcel",
+                    "mention_class": "Tool",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "Spreadsheet::ParseExcel",
+                        "Spreadsheet::ParseExcel"
+                    ],
+                    "entity_text": "Spreadsheet::ParseExcel"
+                },
+                "relation": "is used by",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "the Amavis scanner",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "the Amavis scanner",
+                        "the Amavis scanner"
+                    ],
+                    "entity_text": "the Amavis scanner"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "the Amavis scanner",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "the Amavis scanner",
+                        "the Amavis scanner"
+                    ],
+                    "entity_text": "the Amavis scanner"
+                },
+                "relation": "screens",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "Microsoft Excel email attachments for malware",
+                    "mention_class": "Malware Characteristic:Payload",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "Microsoft Excel email attachments for malware"
+                    ],
+                    "entity_text": "Microsoft Excel email attachments for malware"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "UNC4841",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "UNC4841",
+                        "UNC4841"
+                    ],
+                    "entity_text": "UNC4841"
+                },
+                "relation": "linked to",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "the exploitation of CVE-2023-7102",
+                    "mention_class": "Event",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "successful exploitation of CVE-2023-7102",
+                        "the exploitation of CVE-2023-7102",
+                        "the active exploitation of another zero-day in Barracuda devices"
+                    ],
+                    "entity_text": "the exploitation of CVE-2023-7102"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "UNC4841",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "UNC4841",
+                        "UNC4841"
+                    ],
+                    "entity_text": "UNC4841"
+                },
+                "relation": "previously linked to",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "the active exploitation of another zero-day in Barracuda devices",
+                    "mention_class": "Event",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "successful exploitation of CVE-2023-7102",
+                        "the exploitation of CVE-2023-7102",
+                        "the active exploitation of another zero-day in Barracuda devices"
+                    ],
+                    "entity_text": "the exploitation of CVE-2023-7102"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "the other zero-day in Barracuda devices",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                        "the other zero-day in Barracuda devices"
+                    ],
+                    "entity_text": "the other zero-day in Barracuda devices"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "CVE-2023-2868",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "CVE-2023-2868",
+                        "CVE-2023-2868"
+                    ],
+                    "entity_text": "CVE-2023-2868"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "CVE-2023-2868",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "CVE-2023-2868",
+                        "CVE-2023-2868"
+                    ],
+                    "entity_text": "CVE-2023-2868"
+                },
+                "relation": "CVSS score",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "9.8",
+                    "mention_class": "Information",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "9.8"
+                    ],
+                    "entity_text": "9.8"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "successful exploitation of CVE-2023-7102",
+                    "mention_class": "Event",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "successful exploitation of CVE-2023-7102",
+                        "the exploitation of CVE-2023-7102",
+                        "the active exploitation of another zero-day in Barracuda devices"
+                    ],
+                    "entity_text": "the exploitation of CVE-2023-7102"
+                },
+                "relation": "accomplished by",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "a specially crafted Microsoft Excel email attachment",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "a specially crafted Microsoft Excel email attachment"
+                    ],
+                    "entity_text": "a specially crafted Microsoft Excel email attachment"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "the deployment",
+                    "mention_class": "Event",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "the deployment"
+                    ],
+                    "entity_text": "the deployment"
+                },
+                "relation": "followed by",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "new variants of SEASPY and SALTWATER",
+                    "mention_class": "Malware:Variants",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "new variants of SEASPY and SALTWATER"
+                    ],
+                    "entity_text": "new variants of SEASPY and SALTWATER"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "SEASPY and SALTWATER",
+                    "mention_class": "Malware",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "SEASPY and SALTWATER"
+                    ],
+                    "entity_text": "SEASPY and SALTWATER"
+                },
+                "relation": "equip",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "persistence and command execution capabilities",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "persistence and command execution capabilities"
+                    ],
+                    "entity_text": "persistence and command execution capabilities"
+                }
+            }
+        ],
+        "mentions_num": 24,
+        "response_time": 4.548437118530273,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 16
+    },
+    "LP": {
+        "predicted_links": [
+            {
+                "subject": {
+                    "entity_id": 4,
+                    "mention_text": "arbitrary code execution"
+                },
+                "relation": "is a vulnerability exploited in",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                        "the other zero-day in Barracuda devices"
+                    ],
+                    "entity_text": "the other zero-day in Barracuda devices"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 9,
+                    "mention_text": "the exploitation of CVE-2023-7102"
+                },
+                "relation": "is related to",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                        "the other zero-day in Barracuda devices"
+                    ],
+                    "entity_text": "the other zero-day in Barracuda devices"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 17,
+                    "mention_text": "CVE-2023-2868"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                        "the other zero-day in Barracuda devices"
+                    ],
+                    "entity_text": "the other zero-day in Barracuda devices"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 10,
+                    "mention_text": "the deployment"
+                },
+                "relation": "is unrelated to",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                        "the other zero-day in Barracuda devices"
+                    ],
+                    "entity_text": "the other zero-day in Barracuda devices"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 5,
+                    "mention_text": "persistence and command execution capabilities"
+                },
+                "relation": "are facilitated by exploiting",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                        "the other zero-day in Barracuda devices"
+                    ],
+                    "entity_text": "the other zero-day in Barracuda devices"
+                }
+            }
+        ],
+        "response_time": 11.421828746795654,
+        "model": "gpt-4-0125-preview",
+        "usage": {
+            "input": {
+                "tokens": 5838,
+                "cost": 0.05838000000000001
+            },
+            "output": {
+                "tokens": 165,
+                "cost": 0.00495
+            },
+            "total": {
+                "tokens": 6003,
+                "cost": 0.06333
+            }
+        },
+        "topic_node": {
+            "mention_id": 1,
+            "mention_text": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+            "mention_class": "Vulnerability",
+            "entity_id": 2,
+            "mentions_merged": [
+                "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances",
+                "the other zero-day in Barracuda devices"
+            ],
+            "entity_text": "the other zero-day in Barracuda devices"
+        },
+        "main_nodes": [
+            {
+                "mention_id": 3,
+                "mention_text": "arbitrary code execution",
+                "mention_class": "Malware Characteristic:Capability",
+                "entity_id": 4,
+                "mentions_merged": [
+                    "arbitrary code execution"
+                ],
+                "entity_text": "arbitrary code execution"
+            },
+            {
+                "mention_id": 11,
+                "mention_text": "the exploitation of CVE-2023-7102",
+                "mention_class": "Event",
+                "entity_id": 9,
+                "mentions_merged": [
+                    "successful exploitation of CVE-2023-7102",
+                    "the exploitation of CVE-2023-7102",
+                    "the active exploitation of another zero-day in Barracuda devices"
+                ],
+                "entity_text": "the exploitation of CVE-2023-7102"
+            },
+            {
+                "mention_id": 16,
+                "mention_text": "CVE-2023-2868",
+                "mention_class": "Vulnerability",
+                "entity_id": 17,
+                "mentions_merged": [
+                    "CVE-2023-2868",
+                    "CVE-2023-2868"
+                ],
+                "entity_text": "CVE-2023-2868"
+            },
+            {
+                "mention_id": 20,
+                "mention_text": "the deployment",
+                "mention_class": "Event",
+                "entity_id": 10,
+                "mentions_merged": [
+                    "the deployment"
+                ],
+                "entity_text": "the deployment"
+            },
+            {
+                "mention_id": 23,
+                "mention_text": "persistence and command execution capabilities",
+                "mention_class": "Malware Characteristic:Capability",
+                "entity_id": 5,
+                "mentions_merged": [
+                    "persistence and command execution capabilities"
+                ],
+                "entity_text": "persistence and command execution capabilities"
+            }
+        ],
+        "subgraphs": [
+            [
+                1,
+                2,
+                6,
+                7,
+                8,
+                16
+            ],
+            [
+                4,
+                15
+            ],
+            [
+                0,
+                9,
+                12
+            ],
+            [
+                17,
+                11
+            ],
+            [
+                10,
+                13
+            ],
+            [
+                5,
+                14
+            ]
+        ],
+        "subgraph_num": 6
+    }
+}

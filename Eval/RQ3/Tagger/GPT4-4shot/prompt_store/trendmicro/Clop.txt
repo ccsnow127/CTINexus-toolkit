@@ -1,0 +1,140 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Clop operators', 'relation': 'exploited', 'object': 'a SolarWinds Serv-U vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Clop operators', 'relation': 'deliver', 'object': 'the Clop ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The Serv-U Managed File Transfer and Serv-U Secure FTP', 'relation': 'is a', 'object': 'remote code execution (RCE) vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The Serv-U vulnerability', 'relation': 'tracked as', 'object': 'CVE-2021-35211'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2021-35211', 'relation': 'allowed', 'object': 'RCE on the vulnerable server with elevated privileges'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'A maritime services giant with headquarters in Singapore', 'relation': 'fell prey to', 'object': 'Clop'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Clop', 'relation': 'breached', 'object': 'IT systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Clop', 'relation': 'steal', 'object': 'classified proprietary commercial information'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Clop', 'relation': 'steal', 'object': 'employee data'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'employee data', 'relation': 'included', 'object': 'bank account details'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'employee data', 'relation': 'included', 'object': 'payroll information'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'employee data', 'relation': 'included', 'object': 'passports'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'employee data', 'relation': 'included', 'object': 'email addresses'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'employee data', 'relation': 'included', 'object': 'internal correspondence'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Microsoft Security', 'relation': 'reported', 'object': 'DEV-0950 distributed Clop in a campaign'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'DEV-0950', 'relation': 'appears to be associated with', 'object': 'FIN11 (aka TA505)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'DEV-0950', 'relation': 'distributed', 'object': 'Clop'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Clop', 'relation': 'targeted', 'object': 'victims of the Raspberry Robin worm'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

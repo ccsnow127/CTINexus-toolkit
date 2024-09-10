@@ -1,0 +1,110 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'CISA and the FBI', 'relation': 'warned', 'object': 'that threat actors using Androxgh0st malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'threat actors', 'relation': 'building', 'object': 'a botnet'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'botnet', 'relation': 'focused on', 'object': 'cloud credential theft'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'threat actors', 'relation': 'using', 'object': 'stolen information to deliver additional malicious payloads'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Androxgh0st malware', 'relation': 'scans for', 'object': 'websites and servers vulnerable to RCE vulnerabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2017-9841', 'relation': 'is vulnerable in', 'object': 'PHPUnit unit testing framework'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2021-41773', 'relation': 'is vulnerable in', 'object': 'Apache HTTP Server'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2018-15133', 'relation': 'is vulnerable in', 'object': 'Laravel PHP web framework'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Androxgh0st', 'relation': 'is a', 'object': 'Python-scripted malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Androxgh0st', 'relation': 'targets', 'object': '.env files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': '.env files', 'relation': 'contain', 'object': 'credentials for AWS, Microsoft Office 365, SendGrid, Twilio'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Androxgh0st malware', 'relation': 'supports', 'object': 'functions abusing SMTP'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'threat actors', 'relation': 'use', 'object': 'stolen Twilio and SendGrid credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'stolen credentials', 'relation': 'conduct', 'object': 'spam campaigns'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'spam campaigns', 'relation': 'impersonating', 'object': 'the breached companies'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

@@ -1,0 +1,313 @@
+{
+    "CTI": {
+        "text": "Beginning in March 2016, Buckeye began using a variant of DoublePulsar (Backdoor.Doublepulsar), a backdoor that was subsequently released by the Shadow Brokers in 2017. DoublePulsar was delivered to victims using a custom exploit tool (Trojan.Bemstour) that was specifically designed to install DoublePulsar. Bemstour exploits two Windows vulnerabilities in order to achieve remote kernel code execution on targeted computers. One vulnerability is a Windows zero-day vulnerability (CVE-2019-0703) discovered by Symantec. The second Windows vulnerability (CVE-2017-0143) was patched in March 2017 after it was discovered to have been used by two exploit tools\u2014EternalRomance and EternalSynergy\u2014that were also released as part of the Shadow Brokers leak.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/buckeye-windows-zero-day-exploit"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Buckeye",
+                "relation": "began using",
+                "object": "a variant of DoublePulsar"
+            },
+            {
+                "subject": "DoublePulsar",
+                "relation": "is a",
+                "object": "backdoor"
+            },
+            {
+                "subject": "DoublePulsar",
+                "relation": "was delivered using",
+                "object": "Trojan.Bemstour"
+            },
+            {
+                "subject": "Trojan.Bemstour",
+                "relation": "is a",
+                "object": "custom exploit tool"
+            },
+            {
+                "subject": "Trojan.Bemstour",
+                "relation": "designed to install",
+                "object": "DoublePulsar"
+            },
+            {
+                "subject": "Bemstour",
+                "relation": "exploits",
+                "object": "two Windows vulnerabilities"
+            },
+            {
+                "subject": "two Windows vulnerabilities",
+                "relation": "achieve",
+                "object": "remote kernel code execution"
+            },
+            {
+                "subject": "CVE-2019-0703",
+                "relation": "is a",
+                "object": "Windows zero-day vulnerability"
+            },
+            {
+                "subject": "Symantec",
+                "relation": "discovered",
+                "object": "CVE-2019-0703"
+            },
+            {
+                "subject": "CVE-2017-0143",
+                "relation": "is a",
+                "object": "Windows vulnerability"
+            },
+            {
+                "subject": "CVE-2017-0143",
+                "relation": "was patched in",
+                "object": "March 2017"
+            },
+            {
+                "subject": "CVE-2017-0143",
+                "relation": "was used by",
+                "object": "EternalRomance and EternalSynergy"
+            },
+            {
+                "subject": "EternalRomance and EternalSynergy",
+                "relation": "are",
+                "object": "exploit tools"
+            },
+            {
+                "subject": "Shadow Brokers",
+                "relation": "released",
+                "object": "DoublePulsar"
+            },
+            {
+                "subject": "Shadow Brokers leak",
+                "relation": "included",
+                "object": "EternalRomance and EternalSynergy"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1150,
+                "cost": 0.011500000000000002
+            },
+            "output": {
+                "tokens": 428,
+                "cost": 0.01284
+            },
+            "total": {
+                "tokens": 1578,
+                "cost": 0.02434
+            }
+        },
+        "time": 17.980883598327637,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/symantec/Buckeye-QD1-ySX.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.15144034589186636
+                ],
+                [
+                    "darkreading: Microsoft-Outlook.json",
+                    0.15792402635456138
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "Buckeye",
+                        "began using",
+                        "a variant of DoublePulsar"
+                    ],
+                    [
+                        "Buckeye",
+                        "began using",
+                        "DoublePulsar"
+                    ]
+                ],
+                [
+                    [
+                        "DoublePulsar",
+                        "is a",
+                        "backdoor"
+                    ],
+                    [
+                        "DoublePulsar",
+                        "is a variant of",
+                        "Backdoor.Doublepulsar"
+                    ]
+                ],
+                [
+                    [
+                        "DoublePulsar",
+                        "was delivered using",
+                        "Trojan.Bemstour"
+                    ],
+                    [
+                        "DoublePulsar",
+                        "was delivered using",
+                        "Trojan.Bemstour"
+                    ]
+                ],
+                [
+                    [
+                        "Trojan.Bemstour",
+                        "is a",
+                        "custom exploit tool"
+                    ],
+                    [
+                        "Trojan.Bemstour",
+                        "is designed to install",
+                        "DoublePulsar"
+                    ]
+                ],
+                [
+                    [
+                        "Trojan.Bemstour",
+                        "designed to install",
+                        "DoublePulsar"
+                    ],
+                    [
+                        "Trojan.Bemstour",
+                        "is designed to install",
+                        "DoublePulsar"
+                    ]
+                ],
+                [
+                    [
+                        "Bemstour",
+                        "exploits",
+                        "two Windows vulnerabilities"
+                    ],
+                    [
+                        "Bemstour",
+                        "exploits",
+                        "Windows vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "two Windows vulnerabilities",
+                        "achieve",
+                        "remote kernel code execution"
+                    ],
+                    [
+                        "remote kernel code execution",
+                        "is on",
+                        "targeted computers"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2019-0703",
+                        "is a",
+                        "Windows zero-day vulnerability"
+                    ],
+                    [
+                        "Windows zero-day vulnerability",
+                        "is",
+                        "CVE-2019-0703"
+                    ]
+                ],
+                [
+                    [
+                        "Symantec",
+                        "discovered",
+                        "CVE-2019-0703"
+                    ],
+                    [
+                        "CVE-2019-0703",
+                        "discovered by",
+                        "Symantec"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2017-0143",
+                        "is a",
+                        "Windows vulnerability"
+                    ],
+                    [
+                        "The second Windows vulnerability",
+                        "is",
+                        "CVE-2017-0143"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2017-0143",
+                        "was patched in",
+                        "March 2017"
+                    ],
+                    [
+                        "CVE-2017-0143",
+                        "was patched in",
+                        "March 2017"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2017-0143",
+                        "was used by",
+                        "EternalRomance and EternalSynergy"
+                    ],
+                    [
+                        "CVE-2017-0143",
+                        "used by",
+                        "EternalRomance"
+                    ]
+                ],
+                [
+                    [
+                        "EternalRomance and EternalSynergy",
+                        "are",
+                        "exploit tools"
+                    ],
+                    [
+                        "EternalRomance",
+                        "released as part of",
+                        "the Shadow Brokers leak"
+                    ]
+                ],
+                [
+                    [
+                        "Shadow Brokers",
+                        "released",
+                        "DoublePulsar"
+                    ],
+                    [
+                        "DoublePulsar",
+                        "was released by",
+                        "the Shadow Brokers"
+                    ]
+                ],
+                [
+                    [
+                        "Shadow Brokers leak",
+                        "included",
+                        "EternalRomance and EternalSynergy"
+                    ],
+                    [
+                        "EternalRomance",
+                        "released as part of",
+                        "the Shadow Brokers leak"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": []
+        }
+    }
+}

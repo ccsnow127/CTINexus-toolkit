@@ -1,0 +1,211 @@
+{
+    "CTI": {
+        "text": "On Oct. 10, 2023, Citrix published a patch for their Netscaler ADC and Netscaler Gateway products. One particular vulnerability that this patch is meant to mitigate has come to be known as Citrix Bleed (CVE-2023-4966).This nickname was given because the vulnerability can leak sensitive information from the device's memory, which can include session tokens. Attackers can then use these credentials to gain a foothold into systems via session hijacking. At the time of the patch, Citrix was unaware of ongoing attacks using this vulnerability but has since stated that they have observed threat actors using it. The Unit 42 Incident Response and Managed Threat Hunting teams have observed ransomware groups exploiting Citrix Bleed. The Managed Threat Hunting team has also observed what appeared to be remote executions from Netscaler gateways in association with exploitation of this vulnerability.",
+        "link": "https://unit42.paloaltonetworks.com/threat-brief-cve-2023-4966-netscaler-citrix-bleed/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Citrix",
+                "relation": "published a patch for",
+                "object": "Netscaler ADC and Netscaler Gateway products"
+            },
+            {
+                "subject": "Citrix Bleed (CVE-2023-4966)",
+                "relation": "is meant to mitigate",
+                "object": "vulnerability"
+            },
+            {
+                "subject": "Citrix Bleed",
+                "relation": "can leak",
+                "object": "sensitive information from the device's memory"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "can include",
+                "object": "session tokens"
+            },
+            {
+                "subject": "Attackers",
+                "relation": "use these credentials to gain",
+                "object": "a foothold into systems via session hijacking"
+            },
+            {
+                "subject": "Citrix",
+                "relation": "was unaware of",
+                "object": "ongoing attacks using this vulnerability"
+            },
+            {
+                "subject": "Citrix",
+                "relation": "has observed",
+                "object": "threat actors using it"
+            },
+            {
+                "subject": "The Unit 42 Incident Response and Managed Threat Hunting teams",
+                "relation": "have observed",
+                "object": "ransomware groups exploiting Citrix Bleed"
+            },
+            {
+                "subject": "The Managed Threat Hunting team",
+                "relation": "has also observed",
+                "object": "what appeared to be remote executions from Netscaler gateways in association with exploitation of this vulnerability"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1329,
+                "cost": 0.013290000000000001
+            },
+            "output": {
+                "tokens": 281,
+                "cost": 0.00843
+            },
+            "total": {
+                "tokens": 1610,
+                "cost": 0.021720000000000003
+            }
+        },
+        "time": 14.640575170516968,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/Unit42/Citrix-Bleed-QD1-0FH.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "taiwanese.json",
+                    "random"
+                ],
+                [
+                    "Clop.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "Citrix",
+                        "published a patch for",
+                        "Netscaler ADC and Netscaler Gateway products"
+                    ],
+                    [
+                        "Citrix",
+                        "published",
+                        "a patch"
+                    ]
+                ],
+                [
+                    [
+                        "Citrix Bleed (CVE-2023-4966)",
+                        "is meant to mitigate",
+                        "vulnerability"
+                    ],
+                    [
+                        "Citrix Bleed",
+                        "is tracked as",
+                        "CVE-2023-4966"
+                    ]
+                ],
+                [
+                    [
+                        "Citrix Bleed",
+                        "can leak",
+                        "sensitive information from the device's memory"
+                    ],
+                    [
+                        "Citrix Bleed",
+                        "can leak",
+                        "sensitive information"
+                    ]
+                ],
+                [
+                    [
+                        "sensitive information",
+                        "can include",
+                        "session tokens"
+                    ],
+                    [
+                        "sensitive information",
+                        "can include",
+                        "session tokens"
+                    ]
+                ],
+                [
+                    [
+                        "Attackers",
+                        "use these credentials to gain",
+                        "a foothold into systems via session hijacking"
+                    ],
+                    [
+                        "attackers",
+                        "use",
+                        "credentials"
+                    ]
+                ],
+                [
+                    [
+                        "Citrix",
+                        "was unaware of",
+                        "ongoing attacks using this vulnerability"
+                    ],
+                    [
+                        "Citrix",
+                        "was unaware of",
+                        "ongoing attacks"
+                    ]
+                ],
+                [
+                    [
+                        "Citrix",
+                        "has observed",
+                        "threat actors using it"
+                    ],
+                    [
+                        "threat actors",
+                        "using",
+                        "Citrix Bleed"
+                    ]
+                ],
+                [
+                    [
+                        "The Unit 42 Incident Response and Managed Threat Hunting teams",
+                        "have observed",
+                        "ransomware groups exploiting Citrix Bleed"
+                    ],
+                    [
+                        "Unit 42 Incident Response and Managed Threat Hunting teams",
+                        "observed",
+                        "ransomware groups exploiting Citrix Bleed"
+                    ]
+                ],
+                [
+                    [
+                        "The Managed Threat Hunting team",
+                        "has also observed",
+                        "what appeared to be remote executions from Netscaler gateways in association with exploitation of this vulnerability"
+                    ],
+                    [
+                        "Managed Threat Hunting team",
+                        "observed",
+                        "remote executions from Netscaler gateways"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [],
+            "thresh": 0.7
+        }
+    }
+}

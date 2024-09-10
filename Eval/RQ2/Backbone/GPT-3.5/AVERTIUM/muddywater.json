@@ -1,0 +1,397 @@
+{
+    "CTI": {
+        "text": "In February 2022, CISA, the Federal Bureau of Investigation (FBI), the U.S. Cyber Command Cyber National Mission Force (CNMF), the United Kingdom's National Cyber Security Centre (NCSC-UK), and the National Security Agency (NSA) released a joint statement regarding their observation of Iranian government-sponsored APT MuddyWater and their malicious cyber activity. MuddyWater is known for cyber espionage, as well as other cybercriminal operations as part of Iran's Ministry of Intelligence and Security. The threat actors have targeted several government and private sector organizations in the defense, oil and natural gas, local government, and telecommunications industries - focusing on Asia, Africa, Europe, and North America. MuddyWater conducts broad cyber campaigns, exploiting publicly reported vulnerabilities and using open-source tools and strategies to gain access to their target's systems. Also, known as MERCURY, Earth Vetala, Static Kitten, Seedworm, and TEMP.Zagros, MuddyWater is an Iranian APT and a subservient element within the Iranian Ministry of Intelligence and Security (MOIS). The group has been active since 2018 and has provided stolen data and access to the Iranian government by exploiting known vulnerabilities and using open-source tools to deploy their ransomware. In November 2021, Cisco Talos observed a campaign targeting Turkey government entities, including the Scientific and Technological Research Council of Turkey - Tubitak. MuddyWater has three goals when conducting their attacks: cyber espionage, intellectual property theft, and ransomware attacks.",
+        "link": "https://explore.avertium.com/resource/in-depth-look-at-iranian-apt-muddywater"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "MuddyWater",
+                "relation": "is known as",
+                "object": "MERCURY"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "is known as",
+                "object": "Earth Vetala"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "is known as",
+                "object": "Static Kitten"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "is known as",
+                "object": "Seedworm"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "is known as",
+                "object": "TEMP.Zagros"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "is",
+                "object": "an Iranian APT"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "is",
+                "object": "a subservient element within the Iranian Ministry of Intelligence and Security (MOIS)"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "has been active since",
+                "object": "2018"
+            },
+            {
+                "subject": "Iranian government-sponsored APT MuddyWater",
+                "relation": "targeted",
+                "object": "government and private sector organizations in the defense, oil and natural gas, local government, and telecommunications industries"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "conducts",
+                "object": "broad cyber campaigns exploiting publicly reported vulnerabilities and using open-source tools"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "has provided",
+                "object": "stolen data and access to the Iranian government"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "exploiting",
+                "object": "known vulnerabilities"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "using",
+                "object": "open-source tools to deploy their ransomware"
+            },
+            {
+                "subject": "Cisco Talos",
+                "relation": "observed",
+                "object": "a campaign targeting Turkey government entities including the Scientific and Technological Research Council of Turkey - Tubitak"
+            },
+            {
+                "subject": "MuddyWater",
+                "relation": "has",
+                "object": "three goals when conducting their attacks: cyber espionage, intellectual property theft, and ransomware attacks"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1596,
+                "cost": 0.000798
+            },
+            "output": {
+                "tokens": 461,
+                "cost": 0.0006915000000000001
+            },
+            "total": {
+                "tokens": 2057,
+                "cost": 0.0014895
+            }
+        },
+        "time": 7.705065011978149,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/AVERTIUM/muddywater-QD1-GWK.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "AVERTIUM: charming-kitten.json",
+                    0.19329483975423312
+                ],
+                [
+                    "symantec: Seedworm.json",
+                    0.22967220956862217
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 3,
+                "fn": 11,
+                "precision": 0.8,
+                "recall": 0.5217391304347826,
+                "f1": 0.6315789473684211
+            },
+            "matched_list": [
+                [
+                    [
+                        "MuddyWater",
+                        "is known as",
+                        "MERCURY"
+                    ],
+                    [
+                        "MuddyWater",
+                        "is also known as",
+                        "MERCURY, Earth Vetala, Static Kitten, Seedworm, TEMP.Zagros"
+                    ],
+                    [
+                        1.0,
+                        0.550216450132922
+                    ]
+                ],
+                [
+                    [
+                        "MuddyWater",
+                        "is known as",
+                        "Earth Vetala"
+                    ],
+                    [
+                        "MuddyWater",
+                        "is also known as",
+                        "MERCURY, Earth Vetala, Static Kitten, Seedworm, TEMP.Zagros"
+                    ],
+                    [
+                        1.0,
+                        0.49489434117016695
+                    ]
+                ],
+                [
+                    [
+                        "MuddyWater",
+                        "is",
+                        "an Iranian APT"
+                    ],
+                    [
+                        "MuddyWater",
+                        "is known for",
+                        "cyber espionage"
+                    ],
+                    [
+                        1.0,
+                        0.4534558669301877
+                    ]
+                ],
+                [
+                    [
+                        "MuddyWater",
+                        "is",
+                        "a subservient element within the Iranian Ministry of Intelligence and Security (MOIS)"
+                    ],
+                    [
+                        "MuddyWater",
+                        "is",
+                        "a part of Iran's Ministry of Intelligence and Security"
+                    ],
+                    [
+                        1.0,
+                        0.8166155467519924
+                    ]
+                ],
+                [
+                    [
+                        "MuddyWater",
+                        "has been active since",
+                        "2018"
+                    ],
+                    [
+                        "MuddyWater",
+                        "has been active since",
+                        "2018"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Iranian government-sponsored APT MuddyWater",
+                        "targeted",
+                        "government and private sector organizations in the defense, oil and natural gas, local government, and telecommunications industries"
+                    ],
+                    [
+                        "MuddyWater",
+                        "targeted",
+                        "government and private sector organizations"
+                    ],
+                    [
+                        0.74731313195774,
+                        0.7108539743720933
+                    ]
+                ],
+                [
+                    [
+                        "MuddyWater",
+                        "conducts",
+                        "broad cyber campaigns exploiting publicly reported vulnerabilities and using open-source tools"
+                    ],
+                    [
+                        "MuddyWater",
+                        "is known for",
+                        "cyber espionage"
+                    ],
+                    [
+                        1.0,
+                        0.5629148840615796
+                    ]
+                ],
+                [
+                    [
+                        "MuddyWater",
+                        "has provided",
+                        "stolen data and access to the Iranian government"
+                    ],
+                    [
+                        "MuddyWater",
+                        "is known for",
+                        "cyber espionage"
+                    ],
+                    [
+                        1.0,
+                        0.49454762554731446
+                    ]
+                ],
+                [
+                    [
+                        "MuddyWater",
+                        "exploiting",
+                        "known vulnerabilities"
+                    ],
+                    [
+                        "MuddyWater",
+                        "exploits",
+                        "publicly reported vulnerabilities"
+                    ],
+                    [
+                        1.0,
+                        0.79658196110919
+                    ]
+                ],
+                [
+                    [
+                        "MuddyWater",
+                        "using",
+                        "open-source tools to deploy their ransomware"
+                    ],
+                    [
+                        "MuddyWater",
+                        "uses",
+                        "open-source tools and strategies"
+                    ],
+                    [
+                        1.0,
+                        0.5599174290406231
+                    ]
+                ],
+                [
+                    [
+                        "Cisco Talos",
+                        "observed",
+                        "a campaign targeting Turkey government entities including the Scientific and Technological Research Council of Turkey - Tubitak"
+                    ],
+                    [
+                        "Cisco Talos",
+                        "observed",
+                        "a campaign targeting Turkey government entities"
+                    ],
+                    [
+                        1.0,
+                        0.8246369840907645
+                    ]
+                ],
+                [
+                    [
+                        "MuddyWater",
+                        "has",
+                        "three goals when conducting their attacks: cyber espionage, intellectual property theft, and ransomware attacks"
+                    ],
+                    [
+                        "MuddyWater",
+                        "is known for",
+                        "cyber espionage"
+                    ],
+                    [
+                        1.0,
+                        0.591806899195352
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "MuddyWater",
+                    "is known as",
+                    "Static Kitten"
+                ],
+                [
+                    "MuddyWater",
+                    "is known as",
+                    "Seedworm"
+                ],
+                [
+                    "MuddyWater",
+                    "is known as",
+                    "TEMP.Zagros"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "CISA, FBI, U.S. Cyber Command Cyber National Mission Force (CNMF), United Kingdom's National Cyber Security Centre (NCSC-UK), and the National Security Agency (NSA)",
+                    "released",
+                    "a joint statement"
+                ],
+                [
+                    "targeted organizations",
+                    "are in",
+                    "the defense, oil and natural gas, local government, and telecommunications industries"
+                ],
+                [
+                    "MuddyWater",
+                    "focuses on",
+                    "Asia, Africa, Europe, and North America"
+                ],
+                [
+                    "MuddyWater",
+                    "conducts",
+                    "broad cyber campaigns"
+                ],
+                [
+                    "MuddyWater",
+                    "is",
+                    "an Iranian APT"
+                ],
+                [
+                    "MuddyWater",
+                    "is a subservient element within",
+                    "the Iranian Ministry of Intelligence and Security (MOIS)"
+                ],
+                [
+                    "MuddyWater",
+                    "provided",
+                    "stolen data and access to the Iranian government"
+                ],
+                [
+                    "MuddyWater",
+                    "exploited",
+                    "known vulnerabilities"
+                ],
+                [
+                    "MuddyWater",
+                    "used",
+                    "open-source tools to deploy their ransomware"
+                ],
+                [
+                    "the campaign",
+                    "targeted",
+                    "the Scientific and Technological Research Council of Turkey - Tubitak"
+                ],
+                [
+                    "MuddyWater",
+                    "has goals",
+                    "cyber espionage, intellectual property theft, and ransomware attacks"
+                ]
+            ]
+        }
+    }
+}

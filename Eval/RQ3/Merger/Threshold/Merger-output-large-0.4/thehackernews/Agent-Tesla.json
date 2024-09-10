@@ -1,0 +1,1045 @@
+{
+    "CTI": {
+        "text": "Attackers are weaponizing an old Microsoft Office vulnerability as part of phishing campaigns to distribute a strain of malware called Agent Tesla. The infection chains leverage decoy Excel documents attached in invoice-themed messages to trick potential targets into opening them and activate the exploitation of CVE-2017-11882 (CVSS score: 7.8), a memory corruption vulnerability in Office's Equation Editor that could result in code execution with the privileges of the user. The findings, which come from Zscaler ThreatLabz, build on prior reports from Fortinet FortiGuard Labs, which detailed a similar phishing campaign that exploited the security flaw to deliver the malware. Once a user downloads a malicious attachment and opens it, if their version of Microsoft Excel is vulnerable, the Excel file initiates communication with a malicious destination and proceeds to download additional files without requiring any further user interaction. The first payload is an obfuscated Visual Basic Script, which initiates the download of a malicious JPG file that comes embedded with a Base64-encoded DLL file.",
+        "link": "https://thehackernews.com/2023/12/hackers-exploiting-old-ms-excel.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Attackers",
+                "relation": "are weaponizing",
+                "object": "an old Microsoft Office vulnerability"
+            },
+            {
+                "subject": "Microsoft Office vulnerability",
+                "relation": "used in",
+                "object": "phishing campaigns"
+            },
+            {
+                "subject": "phishing campaigns",
+                "relation": "to distribute",
+                "object": "Agent Tesla"
+            },
+            {
+                "subject": "Agent Tesla",
+                "relation": "is a",
+                "object": "strain of malware"
+            },
+            {
+                "subject": "infection chains",
+                "relation": "leverage",
+                "object": "decoy Excel documents"
+            },
+            {
+                "subject": "decoy Excel documents",
+                "relation": "attached in",
+                "object": "invoice-themed messages"
+            },
+            {
+                "subject": "CVE-2017-11882",
+                "relation": "is exploited by",
+                "object": "infection chains"
+            },
+            {
+                "subject": "CVE-2017-11882",
+                "relation": "is a",
+                "object": "memory corruption vulnerability"
+            },
+            {
+                "subject": "memory corruption vulnerability",
+                "relation": "in",
+                "object": "Office's Equation Editor"
+            },
+            {
+                "subject": "CVE-2017-11882",
+                "relation": "could result in",
+                "object": "code execution"
+            },
+            {
+                "subject": "Zscaler ThreatLabz",
+                "relation": "builds on",
+                "object": "prior reports"
+            },
+            {
+                "subject": "Fortinet FortiGuard Labs",
+                "relation": "detailed",
+                "object": "a similar phishing campaign"
+            },
+            {
+                "subject": "a similar phishing campaign",
+                "relation": "exploited",
+                "object": "the security flaw"
+            },
+            {
+                "subject": "the security flaw",
+                "relation": "to deliver",
+                "object": "the malware"
+            },
+            {
+                "subject": "user",
+                "relation": "downloads and opens",
+                "object": "a malicious attachment"
+            },
+            {
+                "subject": "Excel file",
+                "relation": "initiates communication with",
+                "object": "a malicious destination"
+            },
+            {
+                "subject": "Excel file",
+                "relation": "downloads",
+                "object": "additional files"
+            },
+            {
+                "subject": "first payload",
+                "relation": "is",
+                "object": "an obfuscated Visual Basic Script"
+            },
+            {
+                "subject": "an obfuscated Visual Basic Script",
+                "relation": "initiates the download of",
+                "object": "a malicious JPG file"
+            },
+            {
+                "subject": "a malicious JPG file",
+                "relation": "comes embedded with",
+                "object": "a Base64-encoded DLL file"
+            }
+        ],
+        "triples_count": 20,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1708,
+                "cost": 0.01708
+            },
+            "output": {
+                "tokens": 524,
+                "cost": 0.01572
+            },
+            "total": {
+                "tokens": 2232,
+                "cost": 0.0328
+            }
+        },
+        "time": 14.650290727615356,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/thehackernews/Agent-Tesla-QD1-dav.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-github.json",
+                    0.10075499242247206
+                ],
+                [
+                    "BleepingComputer-apple.json",
+                    0.11592014490464997
+                ],
+                [
+                    "AVERTIUM-CVE-2023-36884.json",
+                    0.13474630429731244
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Attackers",
+                    "class": "Attacker"
+                },
+                "relation": "are weaponizing",
+                "object": {
+                    "text": "an old Microsoft Office vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Microsoft Office vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "used in",
+                "object": {
+                    "text": "phishing campaigns",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "phishing campaigns",
+                    "class": "Event"
+                },
+                "relation": "to distribute",
+                "object": {
+                    "text": "Agent Tesla",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Agent Tesla",
+                    "class": "Malware"
+                },
+                "relation": "is a",
+                "object": {
+                    "text": "strain of malware",
+                    "class": "Malware Characteristic:Variants"
+                }
+            },
+            {
+                "subject": {
+                    "text": "infection chains",
+                    "class": "Malware Characteristic:Behavior"
+                },
+                "relation": "leverage",
+                "object": {
+                    "text": "decoy Excel documents",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "decoy Excel documents",
+                    "class": "Indicator:File"
+                },
+                "relation": "attached in",
+                "object": {
+                    "text": "invoice-themed messages",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2017-11882",
+                    "class": "Vulnerability"
+                },
+                "relation": "is exploited by",
+                "object": {
+                    "text": "infection chains",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2017-11882",
+                    "class": "Vulnerability"
+                },
+                "relation": "is a",
+                "object": {
+                    "text": "memory corruption vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "memory corruption vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "in",
+                "object": {
+                    "text": "Office's Equation Editor",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2017-11882",
+                    "class": "Vulnerability"
+                },
+                "relation": "could result in",
+                "object": {
+                    "text": "code execution",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Zscaler ThreatLabz",
+                    "class": "Organization"
+                },
+                "relation": "builds on",
+                "object": {
+                    "text": "prior reports",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Fortinet FortiGuard Labs",
+                    "class": "Organization"
+                },
+                "relation": "detailed",
+                "object": {
+                    "text": "a similar phishing campaign",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a similar phishing campaign",
+                    "class": "Event"
+                },
+                "relation": "exploited",
+                "object": {
+                    "text": "the security flaw",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the security flaw",
+                    "class": "Vulnerability"
+                },
+                "relation": "to deliver",
+                "object": {
+                    "text": "the malware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "user",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "downloads and opens",
+                "object": {
+                    "text": "a malicious attachment",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Excel file",
+                    "class": "Indicator:File"
+                },
+                "relation": "initiates communication with",
+                "object": {
+                    "text": "a malicious destination",
+                    "class": "Indicator:Domain"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Excel file",
+                    "class": "Indicator:File"
+                },
+                "relation": "downloads",
+                "object": {
+                    "text": "additional files",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "first payload",
+                    "class": "Malware"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "an obfuscated Visual Basic Script",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "an obfuscated Visual Basic Script",
+                    "class": "Indicator:File"
+                },
+                "relation": "initiates the download of",
+                "object": {
+                    "text": "a malicious JPG file",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a malicious JPG file",
+                    "class": "Indicator:File"
+                },
+                "relation": "comes embedded with",
+                "object": {
+                    "text": "a Base64-encoded DLL file",
+                    "class": "Malware Characteristic:Payload"
+                }
+            }
+        ],
+        "response_time": 33.737112045288086,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/thehackernews/Agent-Tesla.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1811,
+                "cost": 0.01811
+            },
+            "output": {
+                "tokens": 967,
+                "cost": 0.02901
+            },
+            "total": {
+                "tokens": 2778,
+                "cost": 0.04712
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "Attackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Attackers"
+                    ],
+                    "entity_text": "Attackers"
+                },
+                "relation": "are weaponizing",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "an old Microsoft Office vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an old Microsoft Office vulnerability",
+                        "Microsoft Office vulnerability",
+                        "CVE-2017-11882",
+                        "CVE-2017-11882",
+                        "memory corruption vulnerability",
+                        "memory corruption vulnerability",
+                        "CVE-2017-11882",
+                        "the security flaw",
+                        "the security flaw"
+                    ],
+                    "entity_text": "CVE-2017-11882"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "Microsoft Office vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an old Microsoft Office vulnerability",
+                        "Microsoft Office vulnerability",
+                        "CVE-2017-11882",
+                        "CVE-2017-11882",
+                        "memory corruption vulnerability",
+                        "memory corruption vulnerability",
+                        "CVE-2017-11882",
+                        "the security flaw",
+                        "the security flaw"
+                    ],
+                    "entity_text": "CVE-2017-11882"
+                },
+                "relation": "used in",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "phishing campaigns",
+                    "mention_class": "Event",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a similar phishing campaign",
+                        "phishing campaigns",
+                        "phishing campaigns",
+                        "a similar phishing campaign"
+                    ],
+                    "entity_text": "a similar phishing campaign"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "phishing campaigns",
+                    "mention_class": "Event",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a similar phishing campaign",
+                        "phishing campaigns",
+                        "phishing campaigns",
+                        "a similar phishing campaign"
+                    ],
+                    "entity_text": "a similar phishing campaign"
+                },
+                "relation": "to distribute",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "Agent Tesla",
+                    "mention_class": "Malware",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Agent Tesla",
+                        "Agent Tesla"
+                    ],
+                    "entity_text": "Agent Tesla"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "Agent Tesla",
+                    "mention_class": "Malware",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Agent Tesla",
+                        "Agent Tesla"
+                    ],
+                    "entity_text": "Agent Tesla"
+                },
+                "relation": "is a",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "strain of malware",
+                    "mention_class": "Malware Characteristic:Variants",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "strain of malware"
+                    ],
+                    "entity_text": "strain of malware"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "infection chains",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "infection chains",
+                        "infection chains"
+                    ],
+                    "entity_text": "infection chains"
+                },
+                "relation": "leverage",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "decoy Excel documents",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "Excel file",
+                        "additional files",
+                        "an obfuscated Visual Basic Script",
+                        "an obfuscated Visual Basic Script",
+                        "a malicious JPG file",
+                        "a malicious JPG file",
+                        "decoy Excel documents",
+                        "decoy Excel documents",
+                        "a malicious attachment",
+                        "Excel file"
+                    ],
+                    "entity_text": "Excel file"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "decoy Excel documents",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "Excel file",
+                        "additional files",
+                        "an obfuscated Visual Basic Script",
+                        "an obfuscated Visual Basic Script",
+                        "a malicious JPG file",
+                        "a malicious JPG file",
+                        "decoy Excel documents",
+                        "decoy Excel documents",
+                        "a malicious attachment",
+                        "Excel file"
+                    ],
+                    "entity_text": "Excel file"
+                },
+                "relation": "attached in",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "invoice-themed messages",
+                    "mention_class": "Event",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "invoice-themed messages"
+                    ],
+                    "entity_text": "invoice-themed messages"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "CVE-2017-11882",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an old Microsoft Office vulnerability",
+                        "Microsoft Office vulnerability",
+                        "CVE-2017-11882",
+                        "CVE-2017-11882",
+                        "memory corruption vulnerability",
+                        "memory corruption vulnerability",
+                        "CVE-2017-11882",
+                        "the security flaw",
+                        "the security flaw"
+                    ],
+                    "entity_text": "CVE-2017-11882"
+                },
+                "relation": "is exploited by",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "infection chains",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "infection chains",
+                        "infection chains"
+                    ],
+                    "entity_text": "infection chains"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "CVE-2017-11882",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an old Microsoft Office vulnerability",
+                        "Microsoft Office vulnerability",
+                        "CVE-2017-11882",
+                        "CVE-2017-11882",
+                        "memory corruption vulnerability",
+                        "memory corruption vulnerability",
+                        "CVE-2017-11882",
+                        "the security flaw",
+                        "the security flaw"
+                    ],
+                    "entity_text": "CVE-2017-11882"
+                },
+                "relation": "is a",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "memory corruption vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an old Microsoft Office vulnerability",
+                        "Microsoft Office vulnerability",
+                        "CVE-2017-11882",
+                        "CVE-2017-11882",
+                        "memory corruption vulnerability",
+                        "memory corruption vulnerability",
+                        "CVE-2017-11882",
+                        "the security flaw",
+                        "the security flaw"
+                    ],
+                    "entity_text": "CVE-2017-11882"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "memory corruption vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an old Microsoft Office vulnerability",
+                        "Microsoft Office vulnerability",
+                        "CVE-2017-11882",
+                        "CVE-2017-11882",
+                        "memory corruption vulnerability",
+                        "memory corruption vulnerability",
+                        "CVE-2017-11882",
+                        "the security flaw",
+                        "the security flaw"
+                    ],
+                    "entity_text": "CVE-2017-11882"
+                },
+                "relation": "in",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "Office's Equation Editor",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "Office's Equation Editor"
+                    ],
+                    "entity_text": "Office's Equation Editor"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "CVE-2017-11882",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an old Microsoft Office vulnerability",
+                        "Microsoft Office vulnerability",
+                        "CVE-2017-11882",
+                        "CVE-2017-11882",
+                        "memory corruption vulnerability",
+                        "memory corruption vulnerability",
+                        "CVE-2017-11882",
+                        "the security flaw",
+                        "the security flaw"
+                    ],
+                    "entity_text": "CVE-2017-11882"
+                },
+                "relation": "could result in",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "code execution",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "code execution"
+                    ],
+                    "entity_text": "code execution"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "Zscaler ThreatLabz",
+                    "mention_class": "Organization",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "Zscaler ThreatLabz",
+                        "Fortinet FortiGuard Labs"
+                    ],
+                    "entity_text": "Zscaler ThreatLabz"
+                },
+                "relation": "builds on",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "prior reports",
+                    "mention_class": "Information",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "prior reports"
+                    ],
+                    "entity_text": "prior reports"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "Fortinet FortiGuard Labs",
+                    "mention_class": "Organization",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "Zscaler ThreatLabz",
+                        "Fortinet FortiGuard Labs"
+                    ],
+                    "entity_text": "Zscaler ThreatLabz"
+                },
+                "relation": "detailed",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "a similar phishing campaign",
+                    "mention_class": "Event",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a similar phishing campaign",
+                        "phishing campaigns",
+                        "phishing campaigns",
+                        "a similar phishing campaign"
+                    ],
+                    "entity_text": "a similar phishing campaign"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "a similar phishing campaign",
+                    "mention_class": "Event",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a similar phishing campaign",
+                        "phishing campaigns",
+                        "phishing campaigns",
+                        "a similar phishing campaign"
+                    ],
+                    "entity_text": "a similar phishing campaign"
+                },
+                "relation": "exploited",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "the security flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an old Microsoft Office vulnerability",
+                        "Microsoft Office vulnerability",
+                        "CVE-2017-11882",
+                        "CVE-2017-11882",
+                        "memory corruption vulnerability",
+                        "memory corruption vulnerability",
+                        "CVE-2017-11882",
+                        "the security flaw",
+                        "the security flaw"
+                    ],
+                    "entity_text": "CVE-2017-11882"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 26,
+                    "mention_text": "the security flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an old Microsoft Office vulnerability",
+                        "Microsoft Office vulnerability",
+                        "CVE-2017-11882",
+                        "CVE-2017-11882",
+                        "memory corruption vulnerability",
+                        "memory corruption vulnerability",
+                        "CVE-2017-11882",
+                        "the security flaw",
+                        "the security flaw"
+                    ],
+                    "entity_text": "CVE-2017-11882"
+                },
+                "relation": "to deliver",
+                "object": {
+                    "mention_id": 27,
+                    "mention_text": "the malware",
+                    "mention_class": "Malware",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "the malware"
+                    ],
+                    "entity_text": "the malware"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 28,
+                    "mention_text": "user",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "user"
+                    ],
+                    "entity_text": "user"
+                },
+                "relation": "downloads and opens",
+                "object": {
+                    "mention_id": 29,
+                    "mention_text": "a malicious attachment",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "Excel file",
+                        "additional files",
+                        "an obfuscated Visual Basic Script",
+                        "an obfuscated Visual Basic Script",
+                        "a malicious JPG file",
+                        "a malicious JPG file",
+                        "decoy Excel documents",
+                        "decoy Excel documents",
+                        "a malicious attachment",
+                        "Excel file"
+                    ],
+                    "entity_text": "Excel file"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 30,
+                    "mention_text": "Excel file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "Excel file",
+                        "additional files",
+                        "an obfuscated Visual Basic Script",
+                        "an obfuscated Visual Basic Script",
+                        "a malicious JPG file",
+                        "a malicious JPG file",
+                        "decoy Excel documents",
+                        "decoy Excel documents",
+                        "a malicious attachment",
+                        "Excel file"
+                    ],
+                    "entity_text": "Excel file"
+                },
+                "relation": "initiates communication with",
+                "object": {
+                    "mention_id": 31,
+                    "mention_text": "a malicious destination",
+                    "mention_class": "Indicator:Domain",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "a malicious destination"
+                    ],
+                    "entity_text": "a malicious destination"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 32,
+                    "mention_text": "Excel file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "Excel file",
+                        "additional files",
+                        "an obfuscated Visual Basic Script",
+                        "an obfuscated Visual Basic Script",
+                        "a malicious JPG file",
+                        "a malicious JPG file",
+                        "decoy Excel documents",
+                        "decoy Excel documents",
+                        "a malicious attachment",
+                        "Excel file"
+                    ],
+                    "entity_text": "Excel file"
+                },
+                "relation": "downloads",
+                "object": {
+                    "mention_id": 33,
+                    "mention_text": "additional files",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "Excel file",
+                        "additional files",
+                        "an obfuscated Visual Basic Script",
+                        "an obfuscated Visual Basic Script",
+                        "a malicious JPG file",
+                        "a malicious JPG file",
+                        "decoy Excel documents",
+                        "decoy Excel documents",
+                        "a malicious attachment",
+                        "Excel file"
+                    ],
+                    "entity_text": "Excel file"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 34,
+                    "mention_text": "first payload",
+                    "mention_class": "Malware",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "first payload"
+                    ],
+                    "entity_text": "first payload"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 35,
+                    "mention_text": "an obfuscated Visual Basic Script",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "Excel file",
+                        "additional files",
+                        "an obfuscated Visual Basic Script",
+                        "an obfuscated Visual Basic Script",
+                        "a malicious JPG file",
+                        "a malicious JPG file",
+                        "decoy Excel documents",
+                        "decoy Excel documents",
+                        "a malicious attachment",
+                        "Excel file"
+                    ],
+                    "entity_text": "Excel file"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 36,
+                    "mention_text": "an obfuscated Visual Basic Script",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "Excel file",
+                        "additional files",
+                        "an obfuscated Visual Basic Script",
+                        "an obfuscated Visual Basic Script",
+                        "a malicious JPG file",
+                        "a malicious JPG file",
+                        "decoy Excel documents",
+                        "decoy Excel documents",
+                        "a malicious attachment",
+                        "Excel file"
+                    ],
+                    "entity_text": "Excel file"
+                },
+                "relation": "initiates the download of",
+                "object": {
+                    "mention_id": 37,
+                    "mention_text": "a malicious JPG file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "Excel file",
+                        "additional files",
+                        "an obfuscated Visual Basic Script",
+                        "an obfuscated Visual Basic Script",
+                        "a malicious JPG file",
+                        "a malicious JPG file",
+                        "decoy Excel documents",
+                        "decoy Excel documents",
+                        "a malicious attachment",
+                        "Excel file"
+                    ],
+                    "entity_text": "Excel file"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 38,
+                    "mention_text": "a malicious JPG file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "Excel file",
+                        "additional files",
+                        "an obfuscated Visual Basic Script",
+                        "an obfuscated Visual Basic Script",
+                        "a malicious JPG file",
+                        "a malicious JPG file",
+                        "decoy Excel documents",
+                        "decoy Excel documents",
+                        "a malicious attachment",
+                        "Excel file"
+                    ],
+                    "entity_text": "Excel file"
+                },
+                "relation": "comes embedded with",
+                "object": {
+                    "mention_id": 39,
+                    "mention_text": "a Base64-encoded DLL file",
+                    "mention_class": "Malware Characteristic:Payload",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "a Base64-encoded DLL file"
+                    ],
+                    "entity_text": "a Base64-encoded DLL file"
+                }
+            }
+        ],
+        "mentions_num": 40,
+        "response_time": 9.19777512550354,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 17,
+        "threshold": 0.4,
+        "Eval": {
+            "TP": 28,
+            "FP": 1,
+            "FN": 0,
+            "TN": 11
+        }
+    }
+}

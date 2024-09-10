@@ -1,0 +1,188 @@
+{
+    "CTI": {
+        "text": "In January 2021, Threat Analysis Group (TAG) publicly disclosed a campaign from government backed actors in North Korea who used 0-day exploits to target security researchers working on vulnerability research and development. Over the past two and a half years, TAG has continued to track and disrupt campaigns from these actors, finding 0-days and protecting online users. Recently, TAG became aware of a new campaign likely from the same actors based on similarities with the previous campaign.",
+        "link": "https://blog.google/threat-analysis-group/active-north-korean-campaign-targeting-security-researchers/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Threat Analysis Group (TAG)",
+                "relation": "disclosed",
+                "object": "a campaign from government backed actors in North Korea"
+            },
+            {
+                "subject": "government backed actors in North Korea",
+                "relation": "used",
+                "object": "0-day exploits to target security researchers"
+            },
+            {
+                "subject": "Threat Analysis Group (TAG)",
+                "relation": "continued to track and disrupt",
+                "object": "campaigns from these actors"
+            },
+            {
+                "subject": "Threat Analysis Group (TAG)",
+                "relation": "finding",
+                "object": "0-days"
+            },
+            {
+                "subject": "Threat Analysis Group (TAG)",
+                "relation": "protecting",
+                "object": "online users"
+            },
+            {
+                "subject": "Threat Analysis Group (TAG)",
+                "relation": "became aware of",
+                "object": "a new campaign likely from the same actors"
+            },
+            {
+                "subject": "a new campaign",
+                "relation": "has similarities with",
+                "object": "the previous campaign"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1345,
+                "cost": 0.013450000000000002
+            },
+            "output": {
+                "tokens": 257,
+                "cost": 0.00771
+            },
+            "total": {
+                "tokens": 1602,
+                "cost": 0.02116
+            }
+        },
+        "time": 17.993473768234253,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/Google_TAG/north-korean-campaign-QD1-SRN.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "SilverRAT.json",
+                    "random"
+                ],
+                [
+                    "Follina.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 0,
+                "fn": 2,
+                "precision": 1.0,
+                "recall": 0.7777777777777778,
+                "f1": 0.8750000000000001
+            },
+            "matched_list": [
+                [
+                    [
+                        "Threat Analysis Group (TAG)",
+                        "disclosed",
+                        "a campaign from government backed actors in North Korea"
+                    ],
+                    [
+                        "Threat Analysis Group (TAG)",
+                        "disclosed",
+                        "a campaign from government backed actors in North Korea"
+                    ]
+                ],
+                [
+                    [
+                        "government backed actors in North Korea",
+                        "used",
+                        "0-day exploits to target security researchers"
+                    ],
+                    [
+                        "government backed actors in North Korea",
+                        "used",
+                        "0-day exploits"
+                    ]
+                ],
+                [
+                    [
+                        "Threat Analysis Group (TAG)",
+                        "continued to track and disrupt",
+                        "campaigns from these actors"
+                    ],
+                    [
+                        "Threat Analysis Group (TAG)",
+                        "continued to track and disrupt",
+                        "campaigns from these actors"
+                    ]
+                ],
+                [
+                    [
+                        "Threat Analysis Group (TAG)",
+                        "finding",
+                        "0-days"
+                    ],
+                    [
+                        "Threat Analysis Group (TAG)",
+                        "protecting",
+                        "online users"
+                    ]
+                ],
+                [
+                    [
+                        "Threat Analysis Group (TAG)",
+                        "protecting",
+                        "online users"
+                    ],
+                    [
+                        "Threat Analysis Group (TAG)",
+                        "protecting",
+                        "online users"
+                    ]
+                ],
+                [
+                    [
+                        "Threat Analysis Group (TAG)",
+                        "became aware of",
+                        "a new campaign likely from the same actors"
+                    ],
+                    [
+                        "Threat Analysis Group (TAG)",
+                        "became aware of",
+                        "a new campaign"
+                    ]
+                ],
+                [
+                    [
+                        "a new campaign",
+                        "has similarities with",
+                        "the previous campaign"
+                    ],
+                    [
+                        "a new campaign",
+                        "based on",
+                        "similarities with the previous campaign"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "security researchers",
+                    "work on",
+                    "vulnerability research and development"
+                ],
+                [
+                    "campaigns from these actors",
+                    "finding",
+                    "0-days"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

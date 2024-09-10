@@ -1,0 +1,284 @@
+{
+    "CTI": {
+        "text": "As part of TAG's mission to counter serious threats to Google and our users, we've analyzed a range of persistent threats including APT35 and Charming Kitten, an Iranian government-backed group that regularly targets high risk users. For years, we have been countering this group\u2019s efforts to hijack accounts, deploy malware, and their use of novel techniques to conduct espionage aligned with the interests of the Iranian government. Now, we\u2019re shining light on a new tool of theirs. In December 2021, TAG discovered a novel Charming Kitten tool, named HYPERSCRAPE, used to steal user data from Gmail, Yahoo!, and Microsoft Outlook accounts. The attacker runs HYPERSCRAPE on their own machine to download victims\u2019 inboxes using previously acquired credentials. We have seen it deployed against fewer than two dozen accounts located in Iran. The oldest known sample is from 2020, and the tool is still under active development. We have taken actions to re-secure these accounts and have notified the victims through our Government Backed Attacker Warnings.",
+        "link": "https://blog.google/threat-analysis-group/new-iranian-apt-data-extraction-tool/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "APT35",
+                "relation": "is also known as",
+                "object": "Charming Kitten"
+            },
+            {
+                "subject": "Charming Kitten",
+                "relation": "is",
+                "object": "an Iranian government-backed group"
+            },
+            {
+                "subject": "Charming Kitten",
+                "relation": "targets",
+                "object": "high risk users"
+            },
+            {
+                "subject": "Charming Kitten",
+                "relation": "hijacks",
+                "object": "accounts"
+            },
+            {
+                "subject": "Charming Kitten",
+                "relation": "deploys",
+                "object": "malware"
+            },
+            {
+                "subject": "Charming Kitten",
+                "relation": "uses",
+                "object": "novel techniques to conduct espionage aligned with the interests of the Iranian government"
+            },
+            {
+                "subject": "Charming Kitten",
+                "relation": "has a tool named",
+                "object": "HYPERSCRAPE"
+            },
+            {
+                "subject": "HYPERSCRAPE",
+                "relation": "is used to",
+                "object": "steal user data from Gmail, Yahoo!, and Microsoft Outlook accounts"
+            },
+            {
+                "subject": "HYPERSCRAPE",
+                "relation": "runs on",
+                "object": "attacker's own machine"
+            },
+            {
+                "subject": "HYPERSCRAPE",
+                "relation": "downloads",
+                "object": "victims\u2019 inboxes using previously acquired credentials"
+            },
+            {
+                "subject": "HYPERSCRAPE",
+                "relation": "deployed against",
+                "object": "fewer than two dozen accounts located in Iran"
+            },
+            {
+                "subject": "HYPERSCRAPE",
+                "relation": "is still under",
+                "object": "active development"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1088,
+                "cost": 0.01088
+            },
+            "output": {
+                "tokens": 340,
+                "cost": 0.0102
+            },
+            "total": {
+                "tokens": 1428,
+                "cost": 0.02108
+            }
+        },
+        "time": 9.790327310562134,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/Google_TAG/iranian-QD1-uZj.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "Google_TAG: coldriver.json",
+                    0.2251928470464505
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 0,
+                "fn": 5,
+                "precision": 1.0,
+                "recall": 0.7058823529411765,
+                "f1": 0.8275862068965517
+            },
+            "matched_list": [
+                [
+                    [
+                        "APT35",
+                        "is also known as",
+                        "Charming Kitten"
+                    ],
+                    [
+                        "APT35",
+                        "is known as",
+                        "Charming Kitten"
+                    ]
+                ],
+                [
+                    [
+                        "Charming Kitten",
+                        "is",
+                        "an Iranian government-backed group"
+                    ],
+                    [
+                        "Charming Kitten",
+                        "backed by",
+                        "Iranian government"
+                    ]
+                ],
+                [
+                    [
+                        "Charming Kitten",
+                        "targets",
+                        "high risk users"
+                    ],
+                    [
+                        "Charming Kitten",
+                        "targets",
+                        "high risk users"
+                    ]
+                ],
+                [
+                    [
+                        "Charming Kitten",
+                        "hijacks",
+                        "accounts"
+                    ],
+                    [
+                        "Charming Kitten",
+                        "deploys",
+                        "malware"
+                    ]
+                ],
+                [
+                    [
+                        "Charming Kitten",
+                        "deploys",
+                        "malware"
+                    ],
+                    [
+                        "Charming Kitten",
+                        "uses",
+                        "novel techniques"
+                    ]
+                ],
+                [
+                    [
+                        "Charming Kitten",
+                        "uses",
+                        "novel techniques to conduct espionage aligned with the interests of the Iranian government"
+                    ],
+                    [
+                        "Charming Kitten",
+                        "conducts",
+                        "espionage"
+                    ]
+                ],
+                [
+                    [
+                        "Charming Kitten",
+                        "has a tool named",
+                        "HYPERSCRAPE"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "is a tool of",
+                        "Charming Kitten"
+                    ]
+                ],
+                [
+                    [
+                        "HYPERSCRAPE",
+                        "is used to",
+                        "steal user data from Gmail, Yahoo!, and Microsoft Outlook accounts"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "used to steal",
+                        "user data"
+                    ]
+                ],
+                [
+                    [
+                        "HYPERSCRAPE",
+                        "runs on",
+                        "attacker's own machine"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "targets",
+                        "Gmail accounts"
+                    ]
+                ],
+                [
+                    [
+                        "HYPERSCRAPE",
+                        "downloads",
+                        "victims\u2019 inboxes using previously acquired credentials"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "targets",
+                        "Yahoo! accounts"
+                    ]
+                ],
+                [
+                    [
+                        "HYPERSCRAPE",
+                        "deployed against",
+                        "fewer than two dozen accounts located in Iran"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "targets",
+                        "Microsoft Outlook accounts"
+                    ]
+                ],
+                [
+                    [
+                        "HYPERSCRAPE",
+                        "is still under",
+                        "active development"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "runs on",
+                        "attacker's machine"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "HYPERSCRAPE",
+                    "downloads",
+                    "victims' inboxes"
+                ],
+                [
+                    "HYPERSCRAPE",
+                    "uses",
+                    "previously acquired credentials"
+                ],
+                [
+                    "HYPERSCRAPE",
+                    "deployed against",
+                    "accounts located in Iran"
+                ],
+                [
+                    "HYPERSCRAPE",
+                    "sample from",
+                    "2020"
+                ],
+                [
+                    "HYPERSCRAPE",
+                    "is under",
+                    "active development"
+                ]
+            ]
+        }
+    }
+}

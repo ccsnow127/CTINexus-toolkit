@@ -1,0 +1,375 @@
+{
+    "CTI": {
+        "text": "A recently uncovered ransomware operation named 'Kasseika' has joined the club of threat actors that employs Bring Your Own Vulnerable Driver (BYOVD) tactics to disable antivirus software before encrypting files. Kasseika abuses the Martini driver (Martini.sys/viragt64.sys), part of TG Soft's VirtIT Agent System, to disable antivirus products protecting the targeted system. Kasseika attacks start with a phishing email sent to employees of the targeted organization, attempting to steal their account credentials, which will then be used for initial access to the corporate network. Next, Kasseika operators abuse the Windows PsExec tool to execute malicious .bat files on the infected system and others they have accessed through lateral movement. The batch file checks for the presence of a process named 'Martini.exe' and terminates it to avoid interference. Next, it downloads the vulnerable 'Martini.sys' driver on the machine. By using BYOVD attacks, aka exploiting flaws in the loaded driver, the malware gains the privileges to terminate 991 processes from a hardcoded list, many of which correspond to antivirus products, security tools, analysis tools, and system utilities.",
+        "link": "https://www.bleepingcomputer.com/news/security/kasseika-ransomware-uses-antivirus-driver-to-kill-other-antiviruses/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "ransomware operation",
+                "relation": "named",
+                "object": "Kasseika"
+            },
+            {
+                "subject": "Kasseika",
+                "relation": "employs",
+                "object": "Bring Your Own Vulnerable Driver (BYOVD) tactics"
+            },
+            {
+                "subject": "Kasseika",
+                "relation": "abuses",
+                "object": "the Martini driver"
+            },
+            {
+                "subject": "the Martini driver",
+                "relation": "part of",
+                "object": "TG Soft's VirtIT Agent System"
+            },
+            {
+                "subject": "Kasseika",
+                "relation": "disables",
+                "object": "antivirus software"
+            },
+            {
+                "subject": "Kasseika attacks",
+                "relation": "start with",
+                "object": "a phishing email"
+            },
+            {
+                "subject": "phishing email",
+                "relation": "attempts to steal",
+                "object": "account credentials"
+            },
+            {
+                "subject": "account credentials",
+                "relation": "used for",
+                "object": "initial access to the corporate network"
+            },
+            {
+                "subject": "Kasseika operators",
+                "relation": "abuse",
+                "object": "the Windows PsExec tool"
+            },
+            {
+                "subject": "Windows PsExec tool",
+                "relation": "execute",
+                "object": "malicious .bat files"
+            },
+            {
+                "subject": "malicious .bat files",
+                "relation": "check for",
+                "object": "presence of a process named 'Martini.exe'"
+            },
+            {
+                "subject": "malicious .bat files",
+                "relation": "download",
+                "object": "the vulnerable 'Martini.sys' driver"
+            },
+            {
+                "subject": "BYOVD attacks",
+                "relation": "exploit",
+                "object": "flaws in the loaded driver"
+            },
+            {
+                "subject": "BYOVD attacks",
+                "relation": "gain",
+                "object": "privileges to terminate 991 processes"
+            },
+            {
+                "subject": "terminated processes",
+                "relation": "include",
+                "object": "antivirus products, security tools, analysis tools, and system utilities"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1152,
+                "cost": 0.01152
+            },
+            "output": {
+                "tokens": 408,
+                "cost": 0.012240000000000001
+            },
+            "total": {
+                "tokens": 1560,
+                "cost": 0.023760000000000003
+            }
+        },
+        "time": 10.6032235622406,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/BleepingComputer/kasseika-QD1-Oa1.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "securityweek: rootkit.json",
+                    0.21749818942568164
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 13,
+                "fp": 2,
+                "precision": 0.8666666666666667,
+                "recall": 0.7222222222222222,
+                "f1": 0.7878787878787877,
+                "fn": 5
+            },
+            "matched_list": [
+                [
+                    [
+                        "ransomware operation",
+                        "named",
+                        "Kasseika"
+                    ],
+                    [
+                        "Kasseika",
+                        "is named",
+                        "a ransomware operation"
+                    ],
+                    [
+                        0.9432789317854259,
+                        1.0,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "Kasseika",
+                        "employs",
+                        "Bring Your Own Vulnerable Driver (BYOVD) tactics"
+                    ],
+                    [
+                        "Kasseika",
+                        "employs",
+                        "Bring Your Own Vulnerable Driver (BYOVD) tactics"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Kasseika",
+                        "abuses",
+                        "the Martini driver"
+                    ],
+                    [
+                        "Kasseika",
+                        "abuses",
+                        "the Martini driver"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "the Martini driver",
+                        "part of",
+                        "TG Soft's VirtIT Agent System"
+                    ],
+                    [
+                        "The Martini driver",
+                        "is part of",
+                        "TG Soft's VirtIT Agent System"
+                    ],
+                    [
+                        0.9376783503120364,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Kasseika attacks",
+                        "start with",
+                        "a phishing email"
+                    ],
+                    [
+                        "Kasseika attacks",
+                        "start with",
+                        "a phishing email"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "phishing email",
+                        "attempts to steal",
+                        "account credentials"
+                    ],
+                    [
+                        "A phishing email",
+                        "attempts to steal",
+                        "account credentials"
+                    ],
+                    [
+                        0.9003816560783479,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "account credentials",
+                        "used for",
+                        "initial access to the corporate network"
+                    ],
+                    [
+                        "Account credentials",
+                        "are used for",
+                        "initial access to the corporate network"
+                    ],
+                    [
+                        0.9186928674247842,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Kasseika operators",
+                        "abuse",
+                        "the Windows PsExec tool"
+                    ],
+                    [
+                        "Kasseika operators",
+                        "abuse",
+                        "the Windows PsExec tool"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Windows PsExec tool",
+                        "execute",
+                        "malicious .bat files"
+                    ],
+                    [
+                        "Windows PsExec tool",
+                        "is used to execute",
+                        "malicious .bat files"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "malicious .bat files",
+                        "check for",
+                        "presence of a process named 'Martini.exe'"
+                    ],
+                    [
+                        "The batch file",
+                        "checks for",
+                        "the presence of a process named 'Martini.exe'"
+                    ],
+                    [
+                        0.5145145749901888,
+                        0.983806135355172
+                    ]
+                ],
+                [
+                    [
+                        "malicious .bat files",
+                        "download",
+                        "the vulnerable 'Martini.sys' driver"
+                    ],
+                    [
+                        "The batch file",
+                        "checks for",
+                        "the presence of a process named 'Martini.exe'"
+                    ],
+                    [
+                        0.5145145749901888,
+                        0.6343383846264754
+                    ]
+                ],
+                [
+                    [
+                        "BYOVD attacks",
+                        "exploit",
+                        "flaws in the loaded driver"
+                    ],
+                    [
+                        "BYOVD attacks",
+                        "exploit flaws",
+                        "in the loaded driver"
+                    ],
+                    [
+                        1.0,
+                        0.7172825623558012
+                    ]
+                ],
+                [
+                    [
+                        "terminated processes",
+                        "include",
+                        "antivirus products, security tools, analysis tools, and system utilities"
+                    ],
+                    [
+                        "Terminated processes",
+                        "correspond to",
+                        "antivirus products, security tools, analysis tools, and system utilities"
+                    ],
+                    [
+                        0.8212573551109775,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Kasseika",
+                    "disables",
+                    "antivirus software"
+                ],
+                [
+                    "BYOVD attacks",
+                    "gain",
+                    "privileges to terminate 991 processes"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "The Martini driver",
+                    "is used to disable",
+                    "antivirus products"
+                ],
+                [
+                    "A phishing email",
+                    "is sent to",
+                    "employees of the targeted organization"
+                ],
+                [
+                    "The batch file",
+                    "terminates",
+                    "'Martini.exe'"
+                ],
+                [
+                    "The batch file",
+                    "downloads",
+                    "the vulnerable 'Martini.sys' driver"
+                ],
+                [
+                    "The malware",
+                    "gains privileges to terminate",
+                    "991 processes"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,369 @@
+{
+    "CTI": {
+        "text": "A suspicious NuGet package designed to harvest data from industrial systems appears to be targeting developers who use technology from Chinese company Bozhon, ReversingLabs reports. Named SqzrFramework480 and published on the NuGet repository in January 2024, the package is a .NET library responsible for calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries, and more.However, it can also harvest various types of information from different types of industrial systems, including cameras and robotic arms, can take screenshots, send ping packets, and open sockets for data transfer. \u201cNone of those behaviors are resolutely malicious. However, when taken together, they raise alarms. For example, we can assume that the screenshots that are being taken are sent to the remote server via the open socket. The ping serves as a heartbeat check to see if the exfiltration server is alive,\u201d ReversingLabs notes. The function that takes screenshots, which is not explicitly declared in the code, operates in a continuous loop if successful, capturing the primary screen every minute and sending the information to a remote IP address, via the opened socket.",
+        "link": "https://www.securityweek.com/suspicious-nuget-package-harvesting-information-from-industrial-systems/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "A suspicious NuGet package",
+                "relation": "is designed to",
+                "object": "harvest data from industrial systems"
+            },
+            {
+                "subject": "A suspicious NuGet package",
+                "relation": "appears to be targeting",
+                "object": "developers who use technology from Chinese company Bozhon"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "is published on",
+                "object": "the NuGet repository"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "is responsible for",
+                "object": "calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can harvest",
+                "object": "various types of information from different types of industrial systems"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can take",
+                "object": "screenshots"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can send",
+                "object": "ping packets"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can open",
+                "object": "sockets for data transfer"
+            },
+            {
+                "subject": "The function that takes screenshots",
+                "relation": "operates in",
+                "object": "a continuous loop"
+            },
+            {
+                "subject": "The function",
+                "relation": "is not explicitly declared in",
+                "object": "the code"
+            },
+            {
+                "subject": "The function",
+                "relation": "captures",
+                "object": "the primary screen every minute"
+            },
+            {
+                "subject": "The information",
+                "relation": "is sent to",
+                "object": "a remote IP address"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2350,
+                "cost": 0.023500000000000004
+            },
+            "output": {
+                "tokens": 345,
+                "cost": 0.01035
+            },
+            "total": {
+                "tokens": 2695,
+                "cost": 0.033850000000000005
+            }
+        },
+        "time": 14.349138736724854,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/securityweek/nuget-QD1-gKQ.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-cactus.json",
+                    0.05327213433487249
+                ],
+                [
+                    "AVERTIUM-CVE-2023-36884.json",
+                    0.05339611835186609
+                ],
+                [
+                    "BleepingComputer-vmware.json",
+                    0.06352210095123519
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "A suspicious NuGet package",
+                    "class": "Malware"
+                },
+                "relation": "is designed to",
+                "object": {
+                    "text": "harvest data from industrial systems",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "A suspicious NuGet package",
+                    "class": "Malware"
+                },
+                "relation": "appears to be targeting",
+                "object": {
+                    "text": "developers who use technology from Chinese company Bozhon",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "is published on",
+                "object": {
+                    "text": "the NuGet repository",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "is responsible for",
+                "object": {
+                    "text": "calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "can harvest",
+                "object": {
+                    "text": "various types of information from different types of industrial systems",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "can take",
+                "object": {
+                    "text": "screenshots",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "can send",
+                "object": {
+                    "text": "ping packets",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SqzrFramework480",
+                    "class": "Malware"
+                },
+                "relation": "can open",
+                "object": {
+                    "text": "sockets for data transfer",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The function that takes screenshots",
+                    "class": "Malware Characteristic:Behavior"
+                },
+                "relation": "operates in",
+                "object": {
+                    "text": "a continuous loop",
+                    "class": "Malware Characteristic:Feature"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The function",
+                    "class": "Malware Characteristic:Behavior"
+                },
+                "relation": "is not explicitly declared in",
+                "object": {
+                    "text": "the code",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The function",
+                    "class": "Malware Characteristic:Behavior"
+                },
+                "relation": "captures",
+                "object": {
+                    "text": "the primary screen every minute",
+                    "class": "Malware Characteristic:Feature"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The information",
+                    "class": "Information"
+                },
+                "relation": "is sent to",
+                "object": {
+                    "text": "a remote IP address",
+                    "class": "Indicator:IP"
+                }
+            }
+        ],
+        "response_time": 17.42252802848816,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-8shot/prompt_store/securityweek/nuget.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1502,
+                "cost": 0.01502
+            },
+            "output": {
+                "tokens": 716,
+                "cost": 0.02148
+            },
+            "total": {
+                "tokens": 2218,
+                "cost": 0.0365
+            }
+        },
+        "Eval": {
+            "correct": 24,
+            "incorrect": 0,
+            "TP": 24,
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Exploit Target": {
+                    "TP": 1,
+                    "TN": 23,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 1,
+                    "TN": 23,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 2,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 8,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 11,
+                    "TN": 13,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 1,
+                    "TN": 23,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 6
+        }
+    }
+}

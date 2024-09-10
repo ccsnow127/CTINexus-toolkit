@@ -1,0 +1,534 @@
+{
+    "CTI": {
+        "text": "A zero-day vulnerability (CVE-2023-36884) affecting Microsoft Windows and Office products is being exploited by attackers in the wild. To date, the exploit has been used in highly targeted attacks against organizations in the government and defense sectors in Europe and North America. The vulnerability was disclosed yesterday (July 11) by Microsoft, which said that an attacker could create a specially crafted Microsoft Office document that enables remote code execution on the target's computer. In order for the exploit to succeed, the victim needs to open the malicious file. No patch has been released yet for the vulnerability. ",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/microsoft-zeroday-exploit"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "zero-day vulnerability",
+                "relation": "affects",
+                "object": "Microsoft Windows and Office products"
+            },
+            {
+                "subject": "attackers",
+                "relation": "exploit",
+                "object": "zero-day vulnerability"
+            },
+            {
+                "subject": "exploit",
+                "relation": "used in",
+                "object": "highly targeted attacks"
+            },
+            {
+                "subject": "highly targeted attacks",
+                "relation": "against",
+                "object": "organizations in the government and defense sectors"
+            },
+            {
+                "subject": "organizations",
+                "relation": "are in",
+                "object": "Europe"
+            },
+            {
+                "subject": "organizations",
+                "relation": "are in",
+                "object": "North America"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "disclosed",
+                "object": "zero-day vulnerability"
+            },
+            {
+                "subject": "attacker",
+                "relation": "could create",
+                "object": "a specially crafted Microsoft Office document"
+            },
+            {
+                "subject": "a specially crafted Microsoft Office document",
+                "relation": "enables",
+                "object": "remote code execution"
+            },
+            {
+                "subject": "victim",
+                "relation": "needs to open",
+                "object": "the malicious file"
+            },
+            {
+                "subject": "No patch",
+                "relation": "has been released for",
+                "object": "the vulnerability"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1662,
+                "cost": 0.016620000000000003
+            },
+            "output": {
+                "tokens": 261,
+                "cost": 0.00783
+            },
+            "total": {
+                "tokens": 1923,
+                "cost": 0.024450000000000003
+            }
+        },
+        "time": 7.745713710784912,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/symantec/Windows-Zero-Day-QD1-gD9.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-chrome.json",
+                    0.1497372711278447
+                ],
+                [
+                    "BleepingComputer-apple.json",
+                    0.20009409336669384
+                ],
+                [
+                    "AVERTIUM-CVE-2023-36884.json",
+                    0.21936666340415975
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "zero-day vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "affects",
+                "object": {
+                    "text": "Microsoft Windows and Office products",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "exploit",
+                "object": {
+                    "text": "zero-day vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "exploit",
+                    "class": "Tool"
+                },
+                "relation": "used in",
+                "object": {
+                    "text": "highly targeted attacks",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "highly targeted attacks",
+                    "class": "Event"
+                },
+                "relation": "against",
+                "object": {
+                    "text": "organizations in the government and defense sectors",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "organizations",
+                    "class": "Organization"
+                },
+                "relation": "are in",
+                "object": {
+                    "text": "Europe",
+                    "class": "Location"
+                }
+            },
+            {
+                "subject": {
+                    "text": "organizations",
+                    "class": "Organization"
+                },
+                "relation": "are in",
+                "object": {
+                    "text": "North America",
+                    "class": "Location"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Microsoft",
+                    "class": "Organization"
+                },
+                "relation": "disclosed",
+                "object": {
+                    "text": "zero-day vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attacker",
+                    "class": "Attacker"
+                },
+                "relation": "could create",
+                "object": {
+                    "text": "a specially crafted Microsoft Office document",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a specially crafted Microsoft Office document",
+                    "class": "Indicator:File"
+                },
+                "relation": "enables",
+                "object": {
+                    "text": "remote code execution",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "victim",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "needs to open",
+                "object": {
+                    "text": "the malicious file",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "No patch",
+                    "class": "Information"
+                },
+                "relation": "has been released for",
+                "object": {
+                    "text": "the vulnerability",
+                    "class": "Vulnerability"
+                }
+            }
+        ],
+        "response_time": 23.64948320388794,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/symantec/Windows-Zero-Day.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1399,
+                "cost": 0.01399
+            },
+            "output": {
+                "tokens": 573,
+                "cost": 0.01719
+            },
+            "total": {
+                "tokens": 1972,
+                "cost": 0.03118
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "zero-day vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "zero-day vulnerability",
+                        "the vulnerability",
+                        "zero-day vulnerability",
+                        "zero-day vulnerability"
+                    ],
+                    "entity_text": "zero-day vulnerability"
+                },
+                "relation": "affects",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "Microsoft Windows and Office products",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "Microsoft Windows and Office products"
+                    ],
+                    "entity_text": "Microsoft Windows and Office products"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "attackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "attackers",
+                        "attacker"
+                    ],
+                    "entity_text": "attacker"
+                },
+                "relation": "exploit",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "zero-day vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "zero-day vulnerability",
+                        "the vulnerability",
+                        "zero-day vulnerability",
+                        "zero-day vulnerability"
+                    ],
+                    "entity_text": "zero-day vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "exploit",
+                    "mention_class": "Tool",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "exploit"
+                    ],
+                    "entity_text": "exploit"
+                },
+                "relation": "used in",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "highly targeted attacks",
+                    "mention_class": "Event",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "highly targeted attacks",
+                        "highly targeted attacks"
+                    ],
+                    "entity_text": "highly targeted attacks"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "highly targeted attacks",
+                    "mention_class": "Event",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "highly targeted attacks",
+                        "highly targeted attacks"
+                    ],
+                    "entity_text": "highly targeted attacks"
+                },
+                "relation": "against",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "organizations in the government and defense sectors",
+                    "mention_class": "Organization",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "organizations in the government and defense sectors"
+                    ],
+                    "entity_text": "organizations in the government and defense sectors"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "organizations",
+                    "mention_class": "Organization",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "organizations",
+                        "organizations"
+                    ],
+                    "entity_text": "organizations"
+                },
+                "relation": "are in",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "Europe",
+                    "mention_class": "Location",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "Europe"
+                    ],
+                    "entity_text": "Europe"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "organizations",
+                    "mention_class": "Organization",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "organizations",
+                        "organizations"
+                    ],
+                    "entity_text": "organizations"
+                },
+                "relation": "are in",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "North America",
+                    "mention_class": "Location",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "North America"
+                    ],
+                    "entity_text": "North America"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "Microsoft",
+                    "mention_class": "Organization",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Microsoft"
+                    ],
+                    "entity_text": "Microsoft"
+                },
+                "relation": "disclosed",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "zero-day vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "zero-day vulnerability",
+                        "the vulnerability",
+                        "zero-day vulnerability",
+                        "zero-day vulnerability"
+                    ],
+                    "entity_text": "zero-day vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "attacker",
+                    "mention_class": "Attacker",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "attackers",
+                        "attacker"
+                    ],
+                    "entity_text": "attacker"
+                },
+                "relation": "could create",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "a specially crafted Microsoft Office document",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "a specially crafted Microsoft Office document",
+                        "a specially crafted Microsoft Office document"
+                    ],
+                    "entity_text": "a specially crafted Microsoft Office document"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "a specially crafted Microsoft Office document",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "a specially crafted Microsoft Office document",
+                        "a specially crafted Microsoft Office document"
+                    ],
+                    "entity_text": "a specially crafted Microsoft Office document"
+                },
+                "relation": "enables",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "remote code execution",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "remote code execution"
+                    ],
+                    "entity_text": "remote code execution"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "victim",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "victim"
+                    ],
+                    "entity_text": "victim"
+                },
+                "relation": "needs to open",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "the malicious file",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "the malicious file"
+                    ],
+                    "entity_text": "the malicious file"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "No patch",
+                    "mention_class": "Information",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "No patch"
+                    ],
+                    "entity_text": "No patch"
+                },
+                "relation": "has been released for",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "the vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "zero-day vulnerability",
+                        "the vulnerability",
+                        "zero-day vulnerability",
+                        "zero-day vulnerability"
+                    ],
+                    "entity_text": "zero-day vulnerability"
+                }
+            }
+        ],
+        "mentions_num": 22,
+        "response_time": 3.212597131729126,
+        "embedding_model": "text-embedding-3-small",
+        "entity_num": 15,
+        "threshold": 0.6,
+        "Eval": {
+            "TP": 11,
+            "FP": 1,
+            "FN": 0,
+            "TN": 10
+        }
+    }
+}

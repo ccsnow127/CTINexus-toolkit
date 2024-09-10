@@ -1,0 +1,265 @@
+{
+    "CTI": {
+        "text": "Microsoft is urging users to patch a zero-day vulnerability dubbed Dogwalk that is actively being exploited in the wild. The bug (CVE-2022-34713) is tied to a Microsoft Windows Support Diagnostic Tool and allows a remote attacker to execute code on a vulnerable system. The warning is part of a massive August Patch Tuesday update that included 121 flaws, 17 of which were critical and 101 carrying a Common Vulnerability Scoring System rating of Important. Microsoft states that CVE-2022-34713 is a \u201cvariant of\u201d Dogwalk, but different. Microsoft scored the vulnerability as Important and warns that the exploitation of the bug can only be preformed by an adversary with physical access to a vulnerable computer.",
+        "link": "https://threatpost.com/microsoft-patches-dogwalk-zero-day-and-17-critical-flaws/180378/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft",
+                "relation": "is urging",
+                "object": "users to patch a zero-day vulnerability dubbed Dogwalk"
+            },
+            {
+                "subject": "Dogwalk",
+                "relation": "is actively being exploited",
+                "object": "in the wild"
+            },
+            {
+                "subject": "Dogwalk",
+                "relation": "is tied to",
+                "object": "a Microsoft Windows Support Diagnostic Tool"
+            },
+            {
+                "subject": "a remote attacker",
+                "relation": "allows to execute code on",
+                "object": "a vulnerable system"
+            },
+            {
+                "subject": "The warning",
+                "relation": "is part of",
+                "object": "a massive August Patch Tuesday update"
+            },
+            {
+                "subject": "August Patch Tuesday update",
+                "relation": "included",
+                "object": "121 flaws"
+            },
+            {
+                "subject": "121 flaws",
+                "relation": "includes",
+                "object": "17 critical"
+            },
+            {
+                "subject": "121 flaws",
+                "relation": "carrying",
+                "object": "a Common Vulnerability Scoring System rating of Important"
+            },
+            {
+                "subject": "CVE-2022-34713",
+                "relation": "is a variant of",
+                "object": "Dogwalk"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "scored",
+                "object": "the vulnerability as Important"
+            },
+            {
+                "subject": "the exploitation of the bug",
+                "relation": "can only be performed by",
+                "object": "an adversary with physical access to a vulnerable computer"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1213,
+                "cost": 0.01213
+            },
+            "output": {
+                "tokens": 293,
+                "cost": 0.008790000000000001
+            },
+            "total": {
+                "tokens": 1506,
+                "cost": 0.02092
+            }
+        },
+        "time": 13.806623697280884,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/threatPost/Dogwalk-QD1-Doi.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.21894771602647117
+                ],
+                [
+                    "threatPost: CISA.json",
+                    0.24471561440237663
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 5,
+                "fp": 6,
+                "fn": 8,
+                "precision": 0.45454545454545453,
+                "recall": 0.38461538461538464,
+                "f1": 0.41666666666666663
+            },
+            "matched_list": [
+                [
+                    [
+                        "Microsoft",
+                        "is urging",
+                        "users to patch a zero-day vulnerability dubbed Dogwalk"
+                    ],
+                    [
+                        "Microsoft",
+                        "is urging",
+                        "users to patch"
+                    ],
+                    [
+                        1.0,
+                        0.6045883900983998
+                    ]
+                ],
+                [
+                    [
+                        "August Patch Tuesday update",
+                        "included",
+                        "121 flaws"
+                    ],
+                    [
+                        "August Patch Tuesday update",
+                        "included",
+                        "121 flaws"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "121 flaws",
+                        "carrying",
+                        "a Common Vulnerability Scoring System rating of Important"
+                    ],
+                    [
+                        "101",
+                        "carrying a",
+                        "Common Vulnerability Scoring System rating of Important"
+                    ],
+                    [
+                        0.47314856705157926,
+                        0.9172410460688745
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-34713",
+                        "is a variant of",
+                        "Dogwalk"
+                    ],
+                    [
+                        "zero-day vulnerability",
+                        "dubbed",
+                        "Dogwalk"
+                    ],
+                    [
+                        0.4546829683954685,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "the exploitation of the bug",
+                        "can only be performed by",
+                        "an adversary with physical access to a vulnerable computer"
+                    ],
+                    [
+                        "exploitation of the bug",
+                        "can be performed by",
+                        "an adversary with physical access to a vulnerable computer"
+                    ],
+                    [
+                        0.9767429320012905,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Dogwalk",
+                    "is actively being exploited",
+                    "in the wild"
+                ],
+                [
+                    "Dogwalk",
+                    "is tied to",
+                    "a Microsoft Windows Support Diagnostic Tool"
+                ],
+                [
+                    "a remote attacker",
+                    "allows to execute code on",
+                    "a vulnerable system"
+                ],
+                [
+                    "The warning",
+                    "is part of",
+                    "a massive August Patch Tuesday update"
+                ],
+                [
+                    "121 flaws",
+                    "includes",
+                    "17 critical"
+                ],
+                [
+                    "Microsoft",
+                    "scored",
+                    "the vulnerability as Important"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "zero-day vulnerability",
+                    "is being exploited in",
+                    "the wild"
+                ],
+                [
+                    "The bug",
+                    "is",
+                    "CVE-2022-34713"
+                ],
+                [
+                    "CVE-2022-34713",
+                    "is tied to",
+                    "a Microsoft Windows Support Diagnostic Tool"
+                ],
+                [
+                    "CVE-2022-34713",
+                    "allows",
+                    "a remote attacker to execute code on a vulnerable system"
+                ],
+                [
+                    "Microsoft",
+                    "warns",
+                    "as part of a massive August Patch Tuesday update"
+                ],
+                [
+                    "17",
+                    "are",
+                    "critical"
+                ],
+                [
+                    "CVE-2022-34713",
+                    "is a variant of",
+                    "Dogwalk"
+                ],
+                [
+                    "CVE-2022-34713",
+                    "scored as",
+                    "Important"
+                ]
+            ]
+        }
+    }
+}

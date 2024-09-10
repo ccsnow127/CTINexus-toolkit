@@ -1,0 +1,289 @@
+{
+    "CTI": {
+        "text": "Recent spam campaigns leading to URSA/Mispadu banking trojan (detected by Trend Micro as TrojanSpy.Win32.MISPADU.THIADBO) have been uncovered, as reported by malware analyst Pedro Tavares in a Twitter post and by Seguranca Informatica in a blog post. Mispadu malware steals credentials from users' systems. This attack targets systems with Spanish and Portuguese as system languages. It is also likely that they have targets similar to previous Mispadu attacks where users from Mexico, Spain, Portugal, and other nearby regions were targeted. This behavior is in line with past Mispadu schemes, such as the one where spam emails for fake discount coupons were used as bait.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/mispadu-banking-trojan-resurfaces"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "spam campaigns",
+                "relation": "lead to",
+                "object": "URSA/Mispadu banking trojan"
+            },
+            {
+                "subject": "URSA/Mispadu banking trojan",
+                "relation": "is detected by",
+                "object": "Trend Micro as TrojanSpy.Win32.MISPADU.THIADBO"
+            },
+            {
+                "subject": "Mispadu malware",
+                "relation": "steals",
+                "object": "credentials"
+            },
+            {
+                "subject": "This attack",
+                "relation": "targets systems with",
+                "object": "Spanish and Portuguese as system languages"
+            },
+            {
+                "subject": "targets",
+                "relation": "are likely similar to",
+                "object": "previous Mispadu attacks"
+            },
+            {
+                "subject": "previous Mispadu attacks",
+                "relation": "target users from",
+                "object": "Mexico, Spain, Portugal, and other nearby regions"
+            },
+            {
+                "subject": "Mispadu schemes",
+                "relation": "use",
+                "object": "spam emails for fake discount coupons as bait"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2645,
+                "cost": 0.02645
+            },
+            "output": {
+                "tokens": 217,
+                "cost": 0.00651
+            },
+            "total": {
+                "tokens": 2862,
+                "cost": 0.03296
+            }
+        },
+        "time": 5.446591377258301,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/trendmicro/Mispadu-Banking-Trojan-QD1-PNu.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-purplefox.json",
+                    0.0561190613976645
+                ],
+                [
+                    "AVERTIUM-charming-kitten.json",
+                    0.05784419276900171
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.0605930111085503
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "spam campaigns",
+                    "class": "Event"
+                },
+                "relation": "lead to",
+                "object": {
+                    "text": "URSA/Mispadu banking trojan",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "URSA/Mispadu banking trojan",
+                    "class": "Malware"
+                },
+                "relation": "is detected by",
+                "object": {
+                    "text": "Trend Micro as TrojanSpy.Win32.MISPADU.THIADBO",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mispadu malware",
+                    "class": "Malware"
+                },
+                "relation": "steals",
+                "object": {
+                    "text": "credentials",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "This attack",
+                    "class": "Event"
+                },
+                "relation": "targets systems with",
+                "object": {
+                    "text": "Spanish and Portuguese as system languages",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "targets",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "are likely similar to",
+                "object": {
+                    "text": "previous Mispadu attacks",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "previous Mispadu attacks",
+                    "class": "Event"
+                },
+                "relation": "target users from",
+                "object": {
+                    "text": "Mexico, Spain, Portugal, and other nearby regions",
+                    "class": "Location"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Mispadu schemes",
+                    "class": "Malware"
+                },
+                "relation": "use",
+                "object": {
+                    "text": "spam emails for fake discount coupons as bait",
+                    "class": "Information"
+                }
+            }
+        ],
+        "response_time": 14.092130899429321,
+        "Demo_num": 12,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-12shot/prompt_store/trendmicro/Mispadu-Banking-Trojan.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1631,
+                "cost": 0.01631
+            },
+            "output": {
+                "tokens": 410,
+                "cost": 0.0123
+            },
+            "total": {
+                "tokens": 2041,
+                "cost": 0.028610000000000003
+            }
+        },
+        "Eval": {
+            "correct": 12,
+            "incorrect": 2,
+            "TP": 11,
+            "TN": 1,
+            "FP": 2,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 1,
+                    "TN": 13,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 13,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Attacker": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 4,
+                    "TN": 9,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 2,
+                    "TN": 11,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 1,
+                    "TN": 13,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 3,
+                    "TN": 10,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 1,
+                    "TN": 13,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 6
+        }
+    }
+}

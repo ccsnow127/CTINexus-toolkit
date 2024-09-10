@@ -1,0 +1,289 @@
+{
+    "CTI": {
+        "text": "Since at least August, attackers have been exploiting CVE-2023-4966 (aka CitrixBleed), a 7.5 high-severity vulnerability affecting Citrix Systems' NetScaler ADC and Gateway networking products. Even after it was brought to light in October, many organizations have struggled to comprehensively shore up their systems. One such organization appears to be Comcast Xfinity. On Monday, the cable giant disclosed a CitrixBleed-enabled breach of its customer data, including usernames and hashed passwords, and, for some, names, contact information, last four digits of Social Security numbers, dates of birth, and security questions and answers.",
+        "link": "https://www.darkreading.com/cyberattacks-data-breaches/comcast-xfinity-breached-citrix-bleed-35m-customers"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "attackers",
+                "relation": "have been exploiting",
+                "object": "CVE-2023-4966"
+            },
+            {
+                "subject": "CVE-2023-4966",
+                "relation": "affects",
+                "object": "Citrix Systems' NetScaler ADC and Gateway networking products"
+            },
+            {
+                "subject": "CVE-2023-4966",
+                "relation": "is also known as",
+                "object": "CitrixBleed"
+            },
+            {
+                "subject": "CVE-2023-4966",
+                "relation": "is",
+                "object": "a 7.5 high-severity vulnerability"
+            },
+            {
+                "subject": "Comcast Xfinity",
+                "relation": "disclosed",
+                "object": "a CitrixBleed-enabled breach of its customer data"
+            },
+            {
+                "subject": "the breach",
+                "relation": "includes",
+                "object": "usernames and hashed passwords"
+            },
+            {
+                "subject": "the breach",
+                "relation": "includes",
+                "object": "names, contact information, last four digits of Social Security numbers, dates of birth, and security questions and answers"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2284,
+                "cost": 0.022840000000000003
+            },
+            "output": {
+                "tokens": 229,
+                "cost": 0.00687
+            },
+            "total": {
+                "tokens": 2513,
+                "cost": 0.029710000000000004
+            }
+        },
+        "time": 5.878235816955566,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/darkreading/CitrixBleed-QD1-LtW.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-vmware.json",
+                    0.06476522665029281
+                ],
+                [
+                    "BleepingComputer-chrome.json",
+                    0.07409575561185809
+                ],
+                [
+                    "BleepingComputer-citrix.json",
+                    0.18328224596063125
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "have been exploiting",
+                "object": {
+                    "text": "CVE-2023-4966",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-4966",
+                    "class": "Vulnerability"
+                },
+                "relation": "affects",
+                "object": {
+                    "text": "Citrix Systems' NetScaler ADC and Gateway networking products",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-4966",
+                    "class": "Vulnerability"
+                },
+                "relation": "is also known as",
+                "object": {
+                    "text": "CitrixBleed",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-4966",
+                    "class": "Vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "a 7.5 high-severity vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Comcast Xfinity",
+                    "class": "Organization"
+                },
+                "relation": "disclosed",
+                "object": {
+                    "text": "a CitrixBleed-enabled breach of its customer data",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the breach",
+                    "class": "Event"
+                },
+                "relation": "includes",
+                "object": {
+                    "text": "usernames and hashed passwords",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the breach",
+                    "class": "Event"
+                },
+                "relation": "includes",
+                "object": {
+                    "text": "names, contact information, last four digits of Social Security numbers, dates of birth, and security questions and answers",
+                    "class": "Information"
+                }
+            }
+        ],
+        "response_time": 5.061233758926392,
+        "Demo_num": 1,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT3.5-1shot/prompt_store/darkreading/CitrixBleed.txt",
+        "model_usage": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 664,
+                "cost": 0.000332
+            },
+            "output": {
+                "tokens": 375,
+                "cost": 0.0005625000000000001
+            },
+            "total": {
+                "tokens": 1039,
+                "cost": 0.0008945000000000001
+            }
+        },
+        "Eval": {
+            "correct": 11,
+            "incorrect": 3,
+            "TP": 11,
+            "TN": 0,
+            "FP": 3,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 13,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 1,
+                    "TN": 13,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 3,
+                    "TN": 11,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 13,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 2,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 1,
+                    "TN": 13,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 4,
+                    "TN": 8,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 6
+        }
+    }
+}

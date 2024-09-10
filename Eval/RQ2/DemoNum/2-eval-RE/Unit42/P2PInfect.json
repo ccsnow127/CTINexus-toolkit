@@ -1,0 +1,301 @@
+{
+    "CTI": {
+        "text": "On July 11, 2023, Unit 42 cloud researchers discovered a new peer-to-peer (P2P) worm we call P2PInfect. Written in Rust, a highly scalable and cloud-friendly programming language, this worm is capable of cross-platform infections and targets Redis, a popular open-source database application that is heavily used within cloud environments. Redis instances can be run on both Linux and Windows operating systems. Unit 42 researchers have identified over 307,000 unique Redis systems communicating publicly over the last two weeks, of which 934 may be vulnerable to this P2P worm variant. While not all of the 307,000 Redis instances will be vulnerable, the worm will still target these systems and attempt the compromise. The P2PInfect worm infects vulnerable Redis instances by exploiting the Lua sandbox escape vulnerability, CVE-2022-0543. While the vulnerability was disclosed in 2022, its scope is not fully known at this point. However, it is rated in the NIST National Vulnerability Database with a Critical CVSS score of 10.0. Additionally, the fact that P2PInfect exploits Redis servers running on both Linux and Windows operating systems makes it more scalable and potent than other worms. The P2P worm observed by Unit 42 researchers serves as an example of a serious attack threat actors could conduct using this vulnerability.",
+        "link": "https://unit42.paloaltonetworks.com/peer-to-peer-worm-p2pinfect/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unit 42 cloud researchers",
+                "relation": "discovered",
+                "object": "P2PInfect"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "is written in",
+                "object": "Rust"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "targets",
+                "object": "Redis"
+            },
+            {
+                "subject": "Redis",
+                "relation": "is",
+                "object": "a popular open-source database application"
+            },
+            {
+                "subject": "Redis",
+                "relation": "is used within",
+                "object": "cloud environments"
+            },
+            {
+                "subject": "Redis instances",
+                "relation": "can be run on",
+                "object": "Linux and Windows operating systems"
+            },
+            {
+                "subject": "Unit 42 researchers",
+                "relation": "identified",
+                "object": "over 307,000 unique Redis systems"
+            },
+            {
+                "subject": "Redis systems",
+                "relation": "communicating publicly over the last two weeks",
+                "object": "307,000"
+            },
+            {
+                "subject": "Redis systems",
+                "relation": "may be vulnerable to",
+                "object": "P2PInfect"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "infects",
+                "object": "vulnerable Redis instances"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "exploits",
+                "object": "the Lua sandbox escape vulnerability, CVE-2022-0543"
+            },
+            {
+                "subject": "CVE-2022-0543",
+                "relation": "is rated in",
+                "object": "the NIST National Vulnerability Database"
+            },
+            {
+                "subject": "CVE-2022-0543",
+                "relation": "has a CVSS score of",
+                "object": "10.0"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "exploits Redis servers running on",
+                "object": "both Linux and Windows operating systems"
+            }
+        ],
+        "triples_count": 14,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1375,
+                "cost": 0.013750000000000002
+            },
+            "output": {
+                "tokens": 407,
+                "cost": 0.01221
+            },
+            "total": {
+                "tokens": 1782,
+                "cost": 0.025960000000000004
+            }
+        },
+        "time": 23.821670532226562,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/Unit42/P2PInfect-QD1-ZpS.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "symantec: Equation.json",
+                    0.12165794548310119
+                ],
+                [
+                    "Microsoft: defending-new-vectors.json",
+                    0.1337306209953929
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 13,
+                "fp": 1,
+                "fn": 2,
+                "precision": 0.9285714285714286,
+                "recall": 0.8666666666666667,
+                "f1": 0.896551724137931
+            },
+            "matched_list": [
+                [
+                    [
+                        "Unit 42 cloud researchers",
+                        "discovered",
+                        "P2PInfect"
+                    ],
+                    [
+                        "Unit 42 cloud researchers",
+                        "discovered",
+                        "P2PInfect"
+                    ]
+                ],
+                [
+                    [
+                        "P2PInfect",
+                        "is written in",
+                        "Rust"
+                    ],
+                    [
+                        "P2PInfect",
+                        "is written in",
+                        "Rust"
+                    ]
+                ],
+                [
+                    [
+                        "P2PInfect",
+                        "targets",
+                        "Redis"
+                    ],
+                    [
+                        "P2PInfect",
+                        "is capable of",
+                        "cross-platform infections"
+                    ]
+                ],
+                [
+                    [
+                        "Redis",
+                        "is",
+                        "a popular open-source database application"
+                    ],
+                    [
+                        "P2PInfect",
+                        "targets",
+                        "Redis"
+                    ]
+                ],
+                [
+                    [
+                        "Redis",
+                        "is used within",
+                        "cloud environments"
+                    ],
+                    [
+                        "Redis",
+                        "is",
+                        "a popular open-source database application"
+                    ]
+                ],
+                [
+                    [
+                        "Redis instances",
+                        "can be run on",
+                        "Linux and Windows operating systems"
+                    ],
+                    [
+                        "Redis",
+                        "is used within",
+                        "cloud environments"
+                    ]
+                ],
+                [
+                    [
+                        "Unit 42 researchers",
+                        "identified",
+                        "over 307,000 unique Redis systems"
+                    ],
+                    [
+                        "Unit 42 researchers",
+                        "have identified",
+                        "over 307,000 unique Redis systems"
+                    ]
+                ],
+                [
+                    [
+                        "Redis systems",
+                        "communicating publicly over the last two weeks",
+                        "307,000"
+                    ],
+                    [
+                        "934 Redis systems",
+                        "may be vulnerable to",
+                        "P2PInfect worm variant"
+                    ]
+                ],
+                [
+                    [
+                        "Redis systems",
+                        "may be vulnerable to",
+                        "P2PInfect"
+                    ],
+                    [
+                        "P2PInfect",
+                        "infects",
+                        "vulnerable Redis instances"
+                    ]
+                ],
+                [
+                    [
+                        "P2PInfect",
+                        "infects",
+                        "vulnerable Redis instances"
+                    ],
+                    [
+                        "P2PInfect",
+                        "exploits",
+                        "the Lua sandbox escape vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "P2PInfect",
+                        "exploits",
+                        "the Lua sandbox escape vulnerability, CVE-2022-0543"
+                    ],
+                    [
+                        "the Lua sandbox escape vulnerability",
+                        "is",
+                        "CVE-2022-0543"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-0543",
+                        "is rated in",
+                        "the NIST National Vulnerability Database"
+                    ],
+                    [
+                        "CVE-2022-0543",
+                        "is rated in the NIST National Vulnerability Database with",
+                        "a Critical CVSS score of 10.0"
+                    ]
+                ],
+                [
+                    [
+                        "P2PInfect",
+                        "exploits Redis servers running on",
+                        "both Linux and Windows operating systems"
+                    ],
+                    [
+                        "Redis instances",
+                        "can be run on",
+                        "Linux and Windows operating systems"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "CVE-2022-0543",
+                    "has a CVSS score of",
+                    "10.0"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "P2PInfect",
+                    "exploits Redis servers running on",
+                    "Linux and Windows operating systems"
+                ],
+                [
+                    "P2PInfect worm",
+                    "serves as",
+                    "an example of a serious attack threat"
+                ]
+            ]
+        }
+    }
+}

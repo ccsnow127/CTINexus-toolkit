@@ -1,0 +1,108 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'government backed actors in North Korea', 'relation': 'used', 'object': '0-day exploits'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'government backed actors in North Korea', 'relation': 'targeted', 'object': 'security researchers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'security researchers', 'relation': 'work on', 'object': 'vulnerability research and development'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat Analysis Group (TAG)', 'relation': 'disclosed', 'object': 'a campaign from government backed actors in North Korea'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat Analysis Group (TAG)', 'relation': 'continued to track and disrupt', 'object': 'campaigns from these actors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'campaigns from these actors', 'relation': 'finding', 'object': '0-days'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat Analysis Group (TAG)', 'relation': 'protecting', 'object': 'online users'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat Analysis Group (TAG)', 'relation': 'became aware of', 'object': 'a new campaign'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a new campaign', 'relation': 'is likely from', 'object': 'the same actors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a new campaign', 'relation': 'based on', 'object': 'similarities with the previous campaign'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

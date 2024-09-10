@@ -1,0 +1,273 @@
+{
+    "CTI": {
+        "text": "In June 2023, Google\u2019s Threat Analysis Group (TAG) discovered an in-the-wild 0-day exploit targeting Zimbra Collaboration, an email server many organizations use to host their email. Since discovering the 0-day, now patched as CVE-2023-37580, TAG has observed four different groups exploiting the same bug to steal email data, user credentials, and authentication tokens. Most of this activity occurred after the initial fix became public on Github. CVE-2023-37580 is a reflected cross-site scripting (XSS) vulnerability. XSS is a web application vulnerability that allows malicious scripts to be injected into another website. In this case, there was a vulnerability in Zimbra that injected the parameter within the URL directly into the webpage, causing the script to be executed. ",
+        "link": "https://blog.google/threat-analysis-group/zimbra-0-day-used-to-target-international-government-organizations/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Google\u2019s Threat Analysis Group (TAG)",
+                "relation": "discovered",
+                "object": "an in-the-wild 0-day exploit targeting Zimbra Collaboration"
+            },
+            {
+                "subject": "an in-the-wild 0-day exploit",
+                "relation": "targeting",
+                "object": "Zimbra Collaboration"
+            },
+            {
+                "subject": "Zimbra Collaboration",
+                "relation": "is an",
+                "object": "email server"
+            },
+            {
+                "subject": "CVE-2023-37580",
+                "relation": "is",
+                "object": "a reflected cross-site scripting (XSS) vulnerability"
+            },
+            {
+                "subject": "CVE-2023-37580",
+                "relation": "now patched as",
+                "object": "CVE-2023-37580"
+            },
+            {
+                "subject": "TAG",
+                "relation": "has observed",
+                "object": "four different groups exploiting the same bug"
+            },
+            {
+                "subject": "four different groups",
+                "relation": "exploiting",
+                "object": "the same bug"
+            },
+            {
+                "subject": "the same bug",
+                "relation": "to steal",
+                "object": "email data"
+            },
+            {
+                "subject": "the same bug",
+                "relation": "to steal",
+                "object": "user credentials"
+            },
+            {
+                "subject": "the same bug",
+                "relation": "to steal",
+                "object": "authentication tokens"
+            },
+            {
+                "subject": "Most of this activity",
+                "relation": "occurred after",
+                "object": "the initial fix became public on Github"
+            },
+            {
+                "subject": "XSS",
+                "relation": "is",
+                "object": "a web application vulnerability"
+            },
+            {
+                "subject": "XSS",
+                "relation": "allows",
+                "object": "malicious scripts to be injected into another website"
+            },
+            {
+                "subject": "a vulnerability in Zimbra",
+                "relation": "injected the parameter within the URL directly into",
+                "object": "the webpage"
+            },
+            {
+                "subject": "the parameter within the URL",
+                "relation": "causing",
+                "object": "the script to be executed"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 979,
+                "cost": 0.00979
+            },
+            "output": {
+                "tokens": 415,
+                "cost": 0.012450000000000001
+            },
+            "total": {
+                "tokens": 1394,
+                "cost": 0.022240000000000003
+            }
+        },
+        "time": 10.068982124328613,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/Google_TAG/zimbra-QD1-R6v.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "darkreading: Zimbra.json",
+                    0.4453872046902282
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 9,
+                "fn": 5,
+                "precision": 0.4,
+                "recall": 0.5454545454545454,
+                "f1": 0.4615384615384615
+            },
+            "matched_list": [
+                [
+                    [
+                        "Google\u2019s Threat Analysis Group (TAG)",
+                        "discovered",
+                        "an in-the-wild 0-day exploit targeting Zimbra Collaboration"
+                    ],
+                    [
+                        "Google\u2019s Threat Analysis Group (TAG)",
+                        "discovered",
+                        "an in-the-wild 0-day exploit"
+                    ]
+                ],
+                [
+                    [
+                        "an in-the-wild 0-day exploit",
+                        "targeting",
+                        "Zimbra Collaboration"
+                    ],
+                    [
+                        "an in-the-wild 0-day exploit",
+                        "targeting",
+                        "Zimbra Collaboration"
+                    ]
+                ],
+                [
+                    [
+                        "Zimbra Collaboration",
+                        "is an",
+                        "email server"
+                    ],
+                    [
+                        "Zimbra Collaboration",
+                        "is used by",
+                        "many organizations to host their email"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-37580",
+                        "is",
+                        "a reflected cross-site scripting (XSS) vulnerability"
+                    ],
+                    [
+                        "CVE-2023-37580",
+                        "is a",
+                        "reflected cross-site scripting (XSS) vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "XSS",
+                        "allows",
+                        "malicious scripts to be injected into another website"
+                    ],
+                    [
+                        "XSS",
+                        "allows",
+                        "malicious scripts to be injected into another website"
+                    ]
+                ],
+                [
+                    [
+                        "a vulnerability in Zimbra",
+                        "injected the parameter within the URL directly into",
+                        "the webpage"
+                    ],
+                    [
+                        "a vulnerability in Zimbra",
+                        "injected the parameter within",
+                        "the URL directly into the webpage"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "CVE-2023-37580",
+                    "now patched as",
+                    "CVE-2023-37580"
+                ],
+                [
+                    "TAG",
+                    "has observed",
+                    "four different groups exploiting the same bug"
+                ],
+                [
+                    "four different groups",
+                    "exploiting",
+                    "the same bug"
+                ],
+                [
+                    "the same bug",
+                    "to steal",
+                    "email data"
+                ],
+                [
+                    "the same bug",
+                    "to steal",
+                    "user credentials"
+                ],
+                [
+                    "the same bug",
+                    "to steal",
+                    "authentication tokens"
+                ],
+                [
+                    "Most of this activity",
+                    "occurred after",
+                    "the initial fix became public on Github"
+                ],
+                [
+                    "XSS",
+                    "is",
+                    "a web application vulnerability"
+                ],
+                [
+                    "the parameter within the URL",
+                    "causing",
+                    "the script to be executed"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "the 0-day",
+                    "is patched as",
+                    "CVE-2023-37580"
+                ],
+                [
+                    "CVE-2023-37580",
+                    "is exploited by",
+                    "four different groups"
+                ],
+                [
+                    "groups",
+                    "steal",
+                    "email data"
+                ],
+                [
+                    "groups",
+                    "steal",
+                    "user credentials"
+                ],
+                [
+                    "groups",
+                    "steal",
+                    "authentication tokens"
+                ]
+            ]
+        }
+    }
+}

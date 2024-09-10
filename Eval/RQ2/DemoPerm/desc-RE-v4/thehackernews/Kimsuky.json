@@ -1,0 +1,252 @@
+{
+    "CTI": {
+        "text": "Nation-state actors affiliated to North Korea have been observed using spear-phishing attacks to deliver an assortment of backdoors and tools such as AppleSeed, Meterpreter, and TinyNuke to seize control of compromised machines. South Korea-based cybersecurity company AhnLab attributed the activity to an advanced persistent threat group known as Kimsuky. A notable point about attacks that use AppleSeed is that similar methods of attack have been used for many years with no significant changes to the malware that are used together. Kimsuky, active for over a decade, is known for its targeting of a wide range of entities in South Korea, before expanding its focus to include other geographies in 2017. It was sanctioned by the U.S. government late last month for amassing intelligence to support North Korea's strategic objectives. The threat actor's espionage campaigns are realized through spear-phishing attacks containing malicious lure documents that, upon opening, culminate in the deployment of various malware families.",
+        "link": "https://thehackernews.com/2023/12/kimsuky-hackers-deploying-appleseed.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Nation-state actors affiliated to North Korea",
+                "relation": "using",
+                "object": "spear-phishing attacks"
+            },
+            {
+                "subject": "spear-phishing attacks",
+                "relation": "deliver",
+                "object": "an assortment of backdoors and tools"
+            },
+            {
+                "subject": "backdoors and tools",
+                "relation": "includes",
+                "object": "AppleSeed, Meterpreter, TinyNuke"
+            },
+            {
+                "subject": "backdoors and tools",
+                "relation": "used to",
+                "object": "seize control of compromised machines"
+            },
+            {
+                "subject": "AhnLab",
+                "relation": "attributed the activity to",
+                "object": "Kimsuky"
+            },
+            {
+                "subject": "attacks that use AppleSeed",
+                "relation": "use",
+                "object": "similar methods of attack for many years"
+            },
+            {
+                "subject": "Kimsuky",
+                "relation": "known for",
+                "object": "targeting a wide range of entities in South Korea"
+            },
+            {
+                "subject": "Kimsuky",
+                "relation": "expanded focus to include",
+                "object": "other geographies in 2017"
+            },
+            {
+                "subject": "Kimsuky",
+                "relation": "sanctioned by",
+                "object": "the U.S. government"
+            },
+            {
+                "subject": "Kimsuky",
+                "relation": "realizes espionage campaigns through",
+                "object": "spear-phishing attacks containing malicious lure documents"
+            },
+            {
+                "subject": "malicious lure documents",
+                "relation": "culminate in",
+                "object": "the deployment of various malware families"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1427,
+                "cost": 0.014270000000000001
+            },
+            "output": {
+                "tokens": 338,
+                "cost": 0.01014
+            },
+            "total": {
+                "tokens": 1765,
+                "cost": 0.02441
+            }
+        },
+        "time": 14.875957727432251,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/thehackernews/Kimsuky-QD1-ibm.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Unit42: Bear-Hallmarks.json",
+                    0.2369702586120681
+                ],
+                [
+                    "Google_TAG: apt37.json",
+                    0.15779259224054987
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 11,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9166666666666666,
+                "f1": 0.9565217391304348
+            },
+            "matched_list": [
+                [
+                    [
+                        "Nation-state actors affiliated to North Korea",
+                        "using",
+                        "spear-phishing attacks"
+                    ],
+                    [
+                        "Nation-state actors affiliated to North Korea",
+                        "use",
+                        "spear-phishing attacks"
+                    ]
+                ],
+                [
+                    [
+                        "spear-phishing attacks",
+                        "deliver",
+                        "an assortment of backdoors and tools"
+                    ],
+                    [
+                        "spear-phishing attacks",
+                        "deliver",
+                        "backdoors"
+                    ]
+                ],
+                [
+                    [
+                        "backdoors and tools",
+                        "includes",
+                        "AppleSeed, Meterpreter, TinyNuke"
+                    ],
+                    [
+                        "spear-phishing attacks",
+                        "deliver",
+                        "tools such as AppleSeed, Meterpreter, and TinyNuke"
+                    ]
+                ],
+                [
+                    [
+                        "backdoors and tools",
+                        "used to",
+                        "seize control of compromised machines"
+                    ],
+                    [
+                        "backdoors and tools",
+                        "seize control of",
+                        "compromised machines"
+                    ]
+                ],
+                [
+                    [
+                        "AhnLab",
+                        "attributed the activity to",
+                        "Kimsuky"
+                    ],
+                    [
+                        "AhnLab",
+                        "attributed",
+                        "the activity to Kimsuky"
+                    ]
+                ],
+                [
+                    [
+                        "attacks that use AppleSeed",
+                        "use",
+                        "similar methods of attack for many years"
+                    ],
+                    [
+                        "attacks using AppleSeed",
+                        "use",
+                        "similar methods of attack for many years"
+                    ]
+                ],
+                [
+                    [
+                        "Kimsuky",
+                        "known for",
+                        "targeting a wide range of entities in South Korea"
+                    ],
+                    [
+                        "Kimsuky",
+                        "is known for",
+                        "targeting entities in South Korea"
+                    ]
+                ],
+                [
+                    [
+                        "Kimsuky",
+                        "expanded focus to include",
+                        "other geographies in 2017"
+                    ],
+                    [
+                        "Kimsuky",
+                        "expanded focus to include",
+                        "other geographies in 2017"
+                    ]
+                ],
+                [
+                    [
+                        "Kimsuky",
+                        "sanctioned by",
+                        "the U.S. government"
+                    ],
+                    [
+                        "Kimsuky",
+                        "sanctioned by",
+                        "the U.S. government"
+                    ]
+                ],
+                [
+                    [
+                        "Kimsuky",
+                        "realizes espionage campaigns through",
+                        "spear-phishing attacks containing malicious lure documents"
+                    ],
+                    [
+                        "Kimsuky",
+                        "realizes espionage campaigns through",
+                        "spear-phishing attacks"
+                    ]
+                ],
+                [
+                    [
+                        "malicious lure documents",
+                        "culminate in",
+                        "the deployment of various malware families"
+                    ],
+                    [
+                        "malicious lure documents",
+                        "culminate in",
+                        "the deployment of various malware families"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "AppleSeed",
+                    "used together with",
+                    "no significant changes to the malware"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

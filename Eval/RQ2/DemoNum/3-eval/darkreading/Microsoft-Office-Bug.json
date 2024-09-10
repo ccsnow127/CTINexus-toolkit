@@ -1,0 +1,287 @@
+{
+    "CTI": {
+        "text": "Attackers are exploiting a 6-year-old Microsoft Office remote code execution (RCE) flaw to deliver spyware, in an email campaign weaponized by malicious Excel attachments and characterized by sophisticated evasion tactics. Threat actors dangle lures relating to business activity in spam emails that deliver files that contain CVE-2017-11882, an RCE flaw that dates back to 2014 and can allow for system takeover, Zscaler revealed in a blog post published Dec. 19. The end goal of the attack is to load Agent Tesla, a remote access Trojan (RAT) and advanced keylogger first discovered in 2014, and exfiltrate credentials and other data from an infected system via a Telegram bot run by the attackers.",
+        "link": "https://www.darkreading.com/cloud-security/attackers-exploit-microsoft-office-bug-spyware"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Attackers",
+                "relation": "are exploiting",
+                "object": "a 6-year-old Microsoft Office remote code execution (RCE) flaw"
+            },
+            {
+                "subject": "email campaign",
+                "relation": "weaponized by",
+                "object": "malicious Excel attachments"
+            },
+            {
+                "subject": "email campaign",
+                "relation": "characterized by",
+                "object": "sophisticated evasion tactics"
+            },
+            {
+                "subject": "Threat actors",
+                "relation": "dangle lures relating to",
+                "object": "business activity"
+            },
+            {
+                "subject": "spam emails",
+                "relation": "deliver files that contain",
+                "object": "CVE-2017-11882"
+            },
+            {
+                "subject": "CVE-2017-11882",
+                "relation": "is an RCE flaw",
+                "object": "that dates back to 2014"
+            },
+            {
+                "subject": "CVE-2017-11882",
+                "relation": "can allow for",
+                "object": "system takeover"
+            },
+            {
+                "subject": "The end goal of the attack",
+                "relation": "is to load",
+                "object": "Agent Tesla"
+            },
+            {
+                "subject": "Agent Tesla",
+                "relation": "is a",
+                "object": "remote access Trojan (RAT) and advanced keylogger"
+            },
+            {
+                "subject": "Agent Tesla",
+                "relation": "exfiltrate credentials and other data from",
+                "object": "an infected system"
+            },
+            {
+                "subject": "exfiltration",
+                "relation": "via",
+                "object": "a Telegram bot run by the attackers"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2173,
+                "cost": 0.021730000000000003
+            },
+            "output": {
+                "tokens": 330,
+                "cost": 0.0099
+            },
+            "total": {
+                "tokens": 2503,
+                "cost": 0.031630000000000005
+            }
+        },
+        "time": 17.537649631500244,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/darkreading/Microsoft-Office-Bug-QD1-jNf.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "thehackernews: ESG.json",
+                    0.13275773876035138
+                ],
+                [
+                    "threatPost: Atlassian.json",
+                    0.14395134752323036
+                ],
+                [
+                    "thehackernews: Agent-Tesla.json",
+                    0.19722037643026166
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 3,
+                "fn": 5,
+                "precision": 0.7272727272727273,
+                "recall": 0.6153846153846154,
+                "f1": 0.6666666666666667
+            },
+            "matched_list": [
+                [
+                    [
+                        "Attackers",
+                        "are exploiting",
+                        "a 6-year-old Microsoft Office remote code execution (RCE) flaw"
+                    ],
+                    [
+                        "attackers",
+                        "exploiting",
+                        "a 6-year-old Microsoft Office remote code execution (RCE) flaw"
+                    ],
+                    [
+                        0.9182640754015774,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "email campaign",
+                        "weaponized by",
+                        "malicious Excel attachments"
+                    ],
+                    [
+                        "email campaign",
+                        "weaponized by",
+                        "malicious Excel attachments"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "email campaign",
+                        "characterized by",
+                        "sophisticated evasion tactics"
+                    ],
+                    [
+                        "email campaign",
+                        "characterized by",
+                        "sophisticated evasion tactics"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Threat actors",
+                        "dangle lures relating to",
+                        "business activity"
+                    ],
+                    [
+                        "threat actors",
+                        "dangle lures relating to",
+                        "business activity"
+                    ],
+                    [
+                        0.8014289483948704,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "spam emails",
+                        "deliver files that contain",
+                        "CVE-2017-11882"
+                    ],
+                    [
+                        "spam emails",
+                        "deliver files that contain",
+                        "CVE-2017-11882"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2017-11882",
+                        "can allow for",
+                        "system takeover"
+                    ],
+                    [
+                        "CVE-2017-11882",
+                        "can allow for",
+                        "system takeover"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "The end goal of the attack",
+                        "is to load",
+                        "Agent Tesla"
+                    ],
+                    [
+                        "attack end goal",
+                        "is to load",
+                        "Agent Tesla"
+                    ],
+                    [
+                        0.7124597088233137,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Agent Tesla",
+                        "is a",
+                        "remote access Trojan (RAT) and advanced keylogger"
+                    ],
+                    [
+                        "Agent Tesla",
+                        "is a",
+                        "remote access Trojan (RAT)"
+                    ],
+                    [
+                        1.0,
+                        0.8300064506698693
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "CVE-2017-11882",
+                    "is an RCE flaw",
+                    "that dates back to 2014"
+                ],
+                [
+                    "Agent Tesla",
+                    "exfiltrate credentials and other data from",
+                    "an infected system"
+                ],
+                [
+                    "exfiltration",
+                    "via",
+                    "a Telegram bot run by the attackers"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "CVE-2017-11882",
+                    "is a",
+                    "remote code execution (RCE) flaw"
+                ],
+                [
+                    "Agent Tesla",
+                    "is an",
+                    "advanced keylogger"
+                ],
+                [
+                    "Agent Tesla",
+                    "exfiltrate",
+                    "credentials and other data"
+                ],
+                [
+                    "credentials and other data",
+                    "exfiltrated via",
+                    "a Telegram bot"
+                ],
+                [
+                    "a Telegram bot",
+                    "run by",
+                    "the attackers"
+                ]
+            ]
+        }
+    }
+}

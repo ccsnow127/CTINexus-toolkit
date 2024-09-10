@@ -1,0 +1,981 @@
+{
+    "CTI": {
+        "text": "In May 2023, Kroll Cyber Threat Intelligence analysts published their discoveries of a new ransomware variant referred to as CACTUS, which has been actively targeting large commercial entities since March 2023. The name CACTUS is derived from the filename found within the ransom note, cAcTuS.readme.txt, and is also self-declared within the note. Encrypted files carry the extension .cts1, although variations in the appended number have been observed across different incidents and victims. CACTUS uses a unique tactic by requiring a key for decrypting the binary, likely implemented to evade antivirus detection. This key is embedded within a file named ntuser.dat, loaded through a scheduled task. Kroll's research noted instances of data exfiltration and victim extortion over Tox, a peer-to-peer messaging service, but no known victim leak site was identified.In its operations, CACTUS demonstrates a consistent set of tactics, techniques, and procedures (TTPs). The initial exploit involves the exploitation of vulnerable VPN appliances, a prevalent method observed across multiple CACTUS incidents. Once inside the network, the threat actor conducts internal scouting using tools like SoftPerfect Network Scanner and PowerShell commands to enumerate endpoints, identify user accounts, and ping remote endpoints. To maintain persistence, CACTUS deploys various remote access methods, including legitimate tools like Splashtop, AnyDesk, and SuperOps RMM, along with malicious tools like Cobalt Strike and Chisel. The threat actor attempts to disable security software using custom scripts, such as TotalExec, and uninstall common antivirus software.",
+        "link": "https://explore.avertium.com/resource/new-ransomware-strains-cactus-and-3am"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "is a variant targeting",
+                "object": "large commercial entities"
+            },
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "uses a unique tactic by requiring",
+                "object": "a key for decrypting the binary"
+            },
+            {
+                "subject": "The key",
+                "relation": "is embedded within",
+                "object": "ntuser.dat"
+            },
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "conducts",
+                "object": "data exfiltration"
+            },
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "conducts",
+                "object": "victim extortion over Tox"
+            },
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "exploits",
+                "object": "vulnerable VPN appliances"
+            },
+            {
+                "subject": "The threat actor",
+                "relation": "uses",
+                "object": "SoftPerfect Network Scanner"
+            },
+            {
+                "subject": "The threat actor",
+                "relation": "uses",
+                "object": "PowerShell commands"
+            },
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "deploys",
+                "object": "remote access methods"
+            },
+            {
+                "subject": "legitimate tools",
+                "relation": "include",
+                "object": "Splashtop"
+            },
+            {
+                "subject": "legitimate tools",
+                "relation": "include",
+                "object": "AnyDesk"
+            },
+            {
+                "subject": "legitimate tools",
+                "relation": "include",
+                "object": "SuperOps RMM"
+            },
+            {
+                "subject": "malicious tools",
+                "relation": "include",
+                "object": "Cobalt Strike"
+            },
+            {
+                "subject": "malicious tools",
+                "relation": "include",
+                "object": "Chisel"
+            },
+            {
+                "subject": "The threat actor",
+                "relation": "attempts to disable",
+                "object": "security software using custom scripts"
+            },
+            {
+                "subject": "The custom scripts",
+                "relation": "include",
+                "object": "TotalExec"
+            },
+            {
+                "subject": "The threat actor",
+                "relation": "uninstalls",
+                "object": "common antivirus software"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3295,
+                "cost": 0.03295
+            },
+            "output": {
+                "tokens": 423,
+                "cost": 0.01269
+            },
+            "total": {
+                "tokens": 3718,
+                "cost": 0.04564
+            }
+        },
+        "time": 10.973860502243042,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/AVERTIUM/cactus-QD1-F6h.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-mallox.json",
+                    0.10816487727275854
+                ],
+                [
+                    "AVERTIUM-fivehands.json",
+                    0.12334574998886129
+                ],
+                [
+                    "AVERTIUM-rhysida.json",
+                    0.13110634648691022
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "is a variant targeting",
+                "object": {
+                    "text": "large commercial entities",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "uses a unique tactic by requiring",
+                "object": {
+                    "text": "a key for decrypting the binary",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The key",
+                    "class": "Credential"
+                },
+                "relation": "is embedded within",
+                "object": {
+                    "text": "ntuser.dat",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "conducts",
+                "object": {
+                    "text": "data exfiltration",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "conducts",
+                "object": {
+                    "text": "victim extortion over Tox",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "exploits",
+                "object": {
+                    "text": "vulnerable VPN appliances",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The threat actor",
+                    "class": "Attacker"
+                },
+                "relation": "uses",
+                "object": {
+                    "text": "SoftPerfect Network Scanner",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The threat actor",
+                    "class": "Attacker"
+                },
+                "relation": "uses",
+                "object": {
+                    "text": "PowerShell commands",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "deploys",
+                "object": {
+                    "text": "remote access methods",
+                    "class": "Malware Characteristic:Feature"
+                }
+            },
+            {
+                "subject": {
+                    "text": "legitimate tools",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "Splashtop",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "legitimate tools",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "AnyDesk",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "legitimate tools",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "SuperOps RMM",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious tools",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "Cobalt Strike",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious tools",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "Chisel",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The threat actor",
+                    "class": "Attacker"
+                },
+                "relation": "attempts to disable",
+                "object": {
+                    "text": "security software using custom scripts",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The custom scripts",
+                    "class": "Information"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "TotalExec",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The threat actor",
+                    "class": "Attacker"
+                },
+                "relation": "uninstalls",
+                "object": {
+                    "text": "common antivirus software",
+                    "class": "Tool"
+                }
+            }
+        ],
+        "response_time": 34.7104594707489,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/AVERTIUM/cactus.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1675,
+                "cost": 0.01675
+            },
+            "output": {
+                "tokens": 881,
+                "cost": 0.026430000000000002
+            },
+            "total": {
+                "tokens": 2556,
+                "cost": 0.04318
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "CACTUS ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware"
+                    ],
+                    "entity_text": "CACTUS ransomware"
+                },
+                "relation": "is a variant targeting",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "large commercial entities",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "large commercial entities"
+                    ],
+                    "entity_text": "large commercial entities"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "CACTUS ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware"
+                    ],
+                    "entity_text": "CACTUS ransomware"
+                },
+                "relation": "uses a unique tactic by requiring",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "a key for decrypting the binary",
+                    "mention_class": "Credential",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a key for decrypting the binary"
+                    ],
+                    "entity_text": "a key for decrypting the binary"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "The key",
+                    "mention_class": "Credential",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "The key"
+                    ],
+                    "entity_text": "The key"
+                },
+                "relation": "is embedded within",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "ntuser.dat",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "ntuser.dat"
+                    ],
+                    "entity_text": "ntuser.dat"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "CACTUS ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware"
+                    ],
+                    "entity_text": "CACTUS ransomware"
+                },
+                "relation": "conducts",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "data exfiltration",
+                    "mention_class": "Event",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "data exfiltration"
+                    ],
+                    "entity_text": "data exfiltration"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "CACTUS ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware"
+                    ],
+                    "entity_text": "CACTUS ransomware"
+                },
+                "relation": "conducts",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "victim extortion over Tox",
+                    "mention_class": "Event",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "victim extortion over Tox"
+                    ],
+                    "entity_text": "victim extortion over Tox"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "CACTUS ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware"
+                    ],
+                    "entity_text": "CACTUS ransomware"
+                },
+                "relation": "exploits",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "vulnerable VPN appliances",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "vulnerable VPN appliances"
+                    ],
+                    "entity_text": "vulnerable VPN appliances"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "The threat actor",
+                    "mention_class": "Attacker",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "The threat actor",
+                        "The threat actor",
+                        "The threat actor",
+                        "The threat actor"
+                    ],
+                    "entity_text": "The threat actor"
+                },
+                "relation": "uses",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "SoftPerfect Network Scanner",
+                    "mention_class": "Tool",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "SoftPerfect Network Scanner"
+                    ],
+                    "entity_text": "SoftPerfect Network Scanner"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "The threat actor",
+                    "mention_class": "Attacker",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "The threat actor",
+                        "The threat actor",
+                        "The threat actor",
+                        "The threat actor"
+                    ],
+                    "entity_text": "The threat actor"
+                },
+                "relation": "uses",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "PowerShell commands",
+                    "mention_class": "Tool",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "PowerShell commands"
+                    ],
+                    "entity_text": "PowerShell commands"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "CACTUS ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware"
+                    ],
+                    "entity_text": "CACTUS ransomware"
+                },
+                "relation": "deploys",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "remote access methods",
+                    "mention_class": "Malware Characteristic:Feature",
+                    "entity_id": 19,
+                    "mentions_merged": [
+                        "remote access methods"
+                    ],
+                    "entity_text": "remote access methods"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "legitimate tools",
+                    "mention_class": "Tool",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "legitimate tools",
+                        "legitimate tools",
+                        "legitimate tools",
+                        "malicious tools",
+                        "malicious tools"
+                    ],
+                    "entity_text": "legitimate tools"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "Splashtop",
+                    "mention_class": "Tool",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "Splashtop"
+                    ],
+                    "entity_text": "Splashtop"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "legitimate tools",
+                    "mention_class": "Tool",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "legitimate tools",
+                        "legitimate tools",
+                        "legitimate tools",
+                        "malicious tools",
+                        "malicious tools"
+                    ],
+                    "entity_text": "legitimate tools"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "AnyDesk",
+                    "mention_class": "Tool",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "AnyDesk"
+                    ],
+                    "entity_text": "AnyDesk"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "legitimate tools",
+                    "mention_class": "Tool",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "legitimate tools",
+                        "legitimate tools",
+                        "legitimate tools",
+                        "malicious tools",
+                        "malicious tools"
+                    ],
+                    "entity_text": "legitimate tools"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "SuperOps RMM",
+                    "mention_class": "Tool",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "SuperOps RMM"
+                    ],
+                    "entity_text": "SuperOps RMM"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "malicious tools",
+                    "mention_class": "Tool",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "legitimate tools",
+                        "legitimate tools",
+                        "legitimate tools",
+                        "malicious tools",
+                        "malicious tools"
+                    ],
+                    "entity_text": "legitimate tools"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "Cobalt Strike",
+                    "mention_class": "Tool",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "Cobalt Strike"
+                    ],
+                    "entity_text": "Cobalt Strike"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 26,
+                    "mention_text": "malicious tools",
+                    "mention_class": "Tool",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "legitimate tools",
+                        "legitimate tools",
+                        "legitimate tools",
+                        "malicious tools",
+                        "malicious tools"
+                    ],
+                    "entity_text": "legitimate tools"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 27,
+                    "mention_text": "Chisel",
+                    "mention_class": "Tool",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "Chisel"
+                    ],
+                    "entity_text": "Chisel"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 28,
+                    "mention_text": "The threat actor",
+                    "mention_class": "Attacker",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "The threat actor",
+                        "The threat actor",
+                        "The threat actor",
+                        "The threat actor"
+                    ],
+                    "entity_text": "The threat actor"
+                },
+                "relation": "attempts to disable",
+                "object": {
+                    "mention_id": 29,
+                    "mention_text": "security software using custom scripts",
+                    "mention_class": "Information",
+                    "entity_id": 20,
+                    "mentions_merged": [
+                        "security software using custom scripts",
+                        "The custom scripts"
+                    ],
+                    "entity_text": "The custom scripts"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 30,
+                    "mention_text": "The custom scripts",
+                    "mention_class": "Information",
+                    "entity_id": 20,
+                    "mentions_merged": [
+                        "security software using custom scripts",
+                        "The custom scripts"
+                    ],
+                    "entity_text": "The custom scripts"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 31,
+                    "mention_text": "TotalExec",
+                    "mention_class": "Tool",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "TotalExec"
+                    ],
+                    "entity_text": "TotalExec"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 32,
+                    "mention_text": "The threat actor",
+                    "mention_class": "Attacker",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "The threat actor",
+                        "The threat actor",
+                        "The threat actor",
+                        "The threat actor"
+                    ],
+                    "entity_text": "The threat actor"
+                },
+                "relation": "uninstalls",
+                "object": {
+                    "mention_id": 33,
+                    "mention_text": "common antivirus software",
+                    "mention_class": "Tool",
+                    "entity_id": 18,
+                    "mentions_merged": [
+                        "common antivirus software"
+                    ],
+                    "entity_text": "common antivirus software"
+                }
+            }
+        ],
+        "mentions_num": 34,
+        "response_time": 6.80403470993042,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 21
+    },
+    "LP": {
+        "predicted_links": [
+            {
+                "subject": {
+                    "entity_id": 3,
+                    "mention_text": "The key"
+                },
+                "relation": "used for decryption by",
+                "object": {
+                    "mention_id": 0,
+                    "mention_text": "CACTUS ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware"
+                    ],
+                    "entity_text": "CACTUS ransomware"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 8,
+                    "mention_text": "The threat actor"
+                },
+                "relation": "is responsible for deploying",
+                "object": {
+                    "mention_id": 0,
+                    "mention_text": "CACTUS ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware"
+                    ],
+                    "entity_text": "CACTUS ransomware"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 9,
+                    "mention_text": "legitimate tools"
+                },
+                "relation": "used for maintaining persistence",
+                "object": {
+                    "mention_id": 0,
+                    "mention_text": "CACTUS ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware",
+                        "CACTUS ransomware"
+                    ],
+                    "entity_text": "CACTUS ransomware"
+                }
+            }
+        ],
+        "response_time": 7.189283609390259,
+        "model": "gpt-4-0125-preview",
+        "usage": {
+            "input": {
+                "tokens": 1820,
+                "cost": 0.0182
+            },
+            "output": {
+                "tokens": 113,
+                "cost": 0.00339
+            },
+            "total": {
+                "tokens": 1933,
+                "cost": 0.02159
+            }
+        },
+        "topic_node": {
+            "mention_id": 0,
+            "mention_text": "CACTUS ransomware",
+            "mention_class": "Malware",
+            "entity_id": 0,
+            "mentions_merged": [
+                "CACTUS ransomware",
+                "CACTUS ransomware",
+                "CACTUS ransomware",
+                "CACTUS ransomware",
+                "CACTUS ransomware",
+                "CACTUS ransomware"
+            ],
+            "entity_text": "CACTUS ransomware"
+        },
+        "main_nodes": [
+            {
+                "mention_id": 4,
+                "mention_text": "The key",
+                "mention_class": "Credential",
+                "entity_id": 3,
+                "mentions_merged": [
+                    "The key"
+                ],
+                "entity_text": "The key"
+            },
+            {
+                "mention_id": 12,
+                "mention_text": "The threat actor",
+                "mention_class": "Attacker",
+                "entity_id": 8,
+                "mentions_merged": [
+                    "The threat actor",
+                    "The threat actor",
+                    "The threat actor",
+                    "The threat actor"
+                ],
+                "entity_text": "The threat actor"
+            },
+            {
+                "mention_id": 18,
+                "mention_text": "legitimate tools",
+                "mention_class": "Tool",
+                "entity_id": 9,
+                "mentions_merged": [
+                    "legitimate tools",
+                    "legitimate tools",
+                    "legitimate tools",
+                    "malicious tools",
+                    "malicious tools"
+                ],
+                "entity_text": "legitimate tools"
+            }
+        ],
+        "subgraphs": [
+            [
+                0,
+                1,
+                2,
+                5,
+                6,
+                7,
+                19
+            ],
+            [
+                3,
+                4
+            ],
+            [
+                8,
+                10,
+                11,
+                17,
+                18,
+                20
+            ],
+            [
+                9,
+                12,
+                13,
+                14,
+                15,
+                16
+            ]
+        ],
+        "subgraph_num": 4,
+        "Eval": {
+            "correct": 3,
+            "incorrect": 0
+        }
+    }
+}

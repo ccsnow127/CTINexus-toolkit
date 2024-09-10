@@ -1,0 +1,156 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": {"subject": "Akira ransomware group", "relation": "claimed responsibility for", "object": "three recent attacks"}
+
+"tagged_triple": {"subject": {"text": "Akira ransomware group", "class": "Attacker"}, "relation": "claimed responsibility for", "object": {"text": "three recent attacks", "class": "Event"}} 
+---------------------
+Example 2:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "APT35", "relation": "used", "object": "a new strain of malware for intelligence collection"}
+
+"tagged_triple": {"subject": {"text": "APT35", "class": "Attacker"}, "relation": "drops", "object": {"text": "a new strain of malware for intelligence collection", "class": "Malware"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Cuba ransomware actors", "relation": "potentially connected with", "object": "RomCom Remote Access Trojan (RAT) actors"}
+
+"tagged_triple": {"subject": {"text": "Cuba ransomware actors", "class": "Attacker"},"relation": "potentially connected with", "object": {"text": "RomCom Remote Access Trojan (RAT) actors", "class": "Attacker"}}
+---------------------
+Example 5:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 6:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 7:
+
+"triple": {"subject": "Microsoft's SQL servers", "relation": "hold data for", "object": "internet services and apps"}
+
+"tagged_triple": {"subject": {"text": "Microsoft's SQL servers", "class": "Infrastructure"}, "relation": "hold data for", "object": {"text": "internet services and apps","class": "Infrastructure"}}
+---------------------
+Example 8:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'North Korean threat group', 'relation': 'is known as', 'object': 'Lazarus'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Lazarus', 'relation': 'exploited', 'object': 'a Windows zero-day vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a Windows zero-day vulnerability', 'relation': 'for', 'object': 'privilege escalation'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attacks', 'relation': 'involving', 'object': 'a rootkit named FudModule'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a Windows zero-day vulnerability', 'relation': 'is tracked as', 'object': 'CVE-2024-21338'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-21338', 'relation': 'was observed in', 'object': 'Lazarus attacks'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Avast', 'relation': 'developed', 'object': 'a proof-of-concept (PoC) exploit'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Avast', 'relation': 'sent', 'object': 'a proof-of-concept (PoC) exploit to Microsoft'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The flaw', 'relation': 'was patched by', 'object': 'Microsoft'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-21338', 'relation': 'impacts', 'object': "the 'appid.sys' driver"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': "the 'appid.sys' driver", 'relation': 'is associated with', 'object': 'Microsoft\u2019s AppLocker security feature'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-21338', 'relation': 'enables', 'object': 'attack on systems with driver allowlisting'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Lazarus hackers', 'relation': 'were able to elevate', 'object': 'their privileges'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Lazarus hackers', 'relation': 'established', 'object': 'a kernel read/write primitive'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'They', 'relation': 'perform', 'object': 'direct kernel object manipulation'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'direct kernel object manipulation', 'relation': 'in', 'object': 'an updated version of the FudModule rootkit'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

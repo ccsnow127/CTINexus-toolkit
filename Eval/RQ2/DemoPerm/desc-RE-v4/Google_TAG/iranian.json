@@ -1,0 +1,264 @@
+{
+    "CTI": {
+        "text": "As part of TAG's mission to counter serious threats to Google and our users, we've analyzed a range of persistent threats including APT35 and Charming Kitten, an Iranian government-backed group that regularly targets high risk users. For years, we have been countering this group\u2019s efforts to hijack accounts, deploy malware, and their use of novel techniques to conduct espionage aligned with the interests of the Iranian government. Now, we\u2019re shining light on a new tool of theirs. In December 2021, TAG discovered a novel Charming Kitten tool, named HYPERSCRAPE, used to steal user data from Gmail, Yahoo!, and Microsoft Outlook accounts. The attacker runs HYPERSCRAPE on their own machine to download victims\u2019 inboxes using previously acquired credentials. We have seen it deployed against fewer than two dozen accounts located in Iran. The oldest known sample is from 2020, and the tool is still under active development. We have taken actions to re-secure these accounts and have notified the victims through our Government Backed Attacker Warnings.",
+        "link": "https://blog.google/threat-analysis-group/new-iranian-apt-data-extraction-tool/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "APT35",
+                "relation": "is",
+                "object": "an Iranian government-backed group"
+            },
+            {
+                "subject": "APT35",
+                "relation": "is also known as",
+                "object": "Charming Kitten"
+            },
+            {
+                "subject": "APT35",
+                "relation": "targets",
+                "object": "high risk users"
+            },
+            {
+                "subject": "APT35",
+                "relation": "efforts include",
+                "object": "hijacking accounts"
+            },
+            {
+                "subject": "APT35",
+                "relation": "efforts include",
+                "object": "deploying malware"
+            },
+            {
+                "subject": "APT35",
+                "relation": "uses",
+                "object": "novel techniques to conduct espionage aligned with the interests of the Iranian government"
+            },
+            {
+                "subject": "Charming Kitten",
+                "relation": "has a tool named",
+                "object": "HYPERSCRAPE"
+            },
+            {
+                "subject": "HYPERSCRAPE",
+                "relation": "is used to",
+                "object": "steal user data from Gmail, Yahoo!, and Microsoft Outlook accounts"
+            },
+            {
+                "subject": "HYPERSCRAPE",
+                "relation": "runs on",
+                "object": "attacker's own machine"
+            },
+            {
+                "subject": "HYPERSCRAPE",
+                "relation": "downloads",
+                "object": "victims\u2019 inboxes using previously acquired credentials"
+            },
+            {
+                "subject": "HYPERSCRAPE",
+                "relation": "deployed against",
+                "object": "fewer than two dozen accounts located in Iran"
+            },
+            {
+                "subject": "HYPERSCRAPE",
+                "relation": "oldest known sample from",
+                "object": "2020"
+            },
+            {
+                "subject": "HYPERSCRAPE",
+                "relation": "is under",
+                "object": "active development"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1621,
+                "cost": 0.016210000000000002
+            },
+            "output": {
+                "tokens": 361,
+                "cost": 0.010830000000000001
+            },
+            "total": {
+                "tokens": 1982,
+                "cost": 0.02704
+            }
+        },
+        "time": 14.08284878730774,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/Google_TAG/iranian-QD1-iBB.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Google_TAG: coldriver.json",
+                    0.2251928470464505
+                ],
+                [
+                    "AVERTIUM: charming-kitten.json",
+                    0.19599434054518083
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 4,
+                "fn": 2,
+                "precision": 0.6923076923076923,
+                "recall": 0.8181818181818182,
+                "f1": 0.7500000000000001
+            },
+            "matched_list": [
+                [
+                    [
+                        "APT35",
+                        "is",
+                        "an Iranian government-backed group"
+                    ],
+                    [
+                        "APT35",
+                        "is known as",
+                        "Charming Kitten"
+                    ]
+                ],
+                [
+                    [
+                        "APT35",
+                        "is also known as",
+                        "Charming Kitten"
+                    ],
+                    [
+                        "APT35",
+                        "is known as",
+                        "Charming Kitten"
+                    ]
+                ],
+                [
+                    [
+                        "Charming Kitten",
+                        "has a tool named",
+                        "HYPERSCRAPE"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "is a tool of",
+                        "Charming Kitten"
+                    ]
+                ],
+                [
+                    [
+                        "HYPERSCRAPE",
+                        "is used to",
+                        "steal user data from Gmail, Yahoo!, and Microsoft Outlook accounts"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "targets",
+                        "Gmail accounts"
+                    ]
+                ],
+                [
+                    [
+                        "HYPERSCRAPE",
+                        "runs on",
+                        "attacker's own machine"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "runs on",
+                        "attacker's machine"
+                    ]
+                ],
+                [
+                    [
+                        "HYPERSCRAPE",
+                        "downloads",
+                        "victims\u2019 inboxes using previously acquired credentials"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "downloads",
+                        "victims' inboxes"
+                    ]
+                ],
+                [
+                    [
+                        "HYPERSCRAPE",
+                        "deployed against",
+                        "fewer than two dozen accounts located in Iran"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "deployed against",
+                        "accounts located in Iran"
+                    ]
+                ],
+                [
+                    [
+                        "HYPERSCRAPE",
+                        "oldest known sample from",
+                        "2020"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "sample from",
+                        "2020"
+                    ]
+                ],
+                [
+                    [
+                        "HYPERSCRAPE",
+                        "is under",
+                        "active development"
+                    ],
+                    [
+                        "HYPERSCRAPE",
+                        "is under",
+                        "active development"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "APT35",
+                    "targets",
+                    "high risk users"
+                ],
+                [
+                    "APT35",
+                    "efforts include",
+                    "hijacking accounts"
+                ],
+                [
+                    "APT35",
+                    "efforts include",
+                    "deploying malware"
+                ],
+                [
+                    "APT35",
+                    "uses",
+                    "novel techniques to conduct espionage aligned with the interests of the Iranian government"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Charming Kitten",
+                    "targets",
+                    "high risk users"
+                ],
+                [
+                    "Charming Kitten",
+                    "uses",
+                    "novel techniques"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

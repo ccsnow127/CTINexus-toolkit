@@ -1,0 +1,320 @@
+{
+    "CTI": {
+        "text": "Maintainers of the Python Package Index (PyPI) repository were forced to suspend new project creation and new user registration on Thursday to mitigate a worrisome malware upload campaign. The confirmation of the PyPI incident, which has since been resolved, comes as security researchers at Checkmarx warn that multiple malicious Python packages are being pushed via typo-squatting techniques. \u201cThis is a multi-stage attack and the malicious payload aimed to steal crypto wallets, sensitive data from browsers (cookies, extensions data, etc..) and various credentials. In addition, the malicious payload employed a persistence mechanism to survive reboots,\u201d Checkmarx said in a research note. Earlier this week, the company said it spotted multiple malicious Python packages being uploaded on the Python Package Index (PyPI) and noted that these packages most likely were created using automation tools. \u201cThe malicious code is located within each package\u2019s setup.py file, enabling automatic execution upon installation,\u201d Checkmarx explained. \u201cUpon execution, the malicious code within the setup.py file attempted to retrieve an additional payload from a remote server. The URL for the payload was dynamically constructed by appending the package name as a query parameter.\u201d The end result is an info-stealer designed to harvest sensitive information from the victim\u2019s machine and a persistence mechanism to ensure it remained active on the compromised system even after the initial execution. \u201cThe discovery of these malicious Python packages on PyPI highlights the ongoing nature of cybersecurity threats within the software development ecosystem. This incident is not an isolated case, and similar attacks targeting package repositories and software supply chains are likely to continue,\u201d the company warned.",
+        "link": "https://www.securityweek.com/malware-upload-attack-hits-pypi-repository/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Maintainers of the Python Package Index (PyPI)",
+                "relation": "were forced to suspend",
+                "object": "new project creation and new user registration"
+            },
+            {
+                "subject": "a worrisome malware upload campaign",
+                "relation": "prompted",
+                "object": "suspension of new project creation and new user registration on PyPI"
+            },
+            {
+                "subject": "security researchers at Checkmarx",
+                "relation": "warn",
+                "object": "that multiple malicious Python packages are being pushed via typo-squatting techniques"
+            },
+            {
+                "subject": "the malicious payload",
+                "relation": "aimed to steal",
+                "object": "crypto wallets, sensitive data from browsers, and various credentials"
+            },
+            {
+                "subject": "the malicious payload",
+                "relation": "employed",
+                "object": "a persistence mechanism to survive reboots"
+            },
+            {
+                "subject": "multiple malicious Python packages",
+                "relation": "being uploaded on",
+                "object": "the Python Package Index (PyPI)"
+            },
+            {
+                "subject": "the malicious code",
+                "relation": "is located within",
+                "object": "each package\u2019s setup.py file"
+            },
+            {
+                "subject": "the malicious code within the setup.py file",
+                "relation": "attempted to retrieve",
+                "object": "an additional payload from a remote server"
+            },
+            {
+                "subject": "The URL for the payload",
+                "relation": "was dynamically constructed by",
+                "object": "appending the package name as a query parameter"
+            },
+            {
+                "subject": "The end result",
+                "relation": "is",
+                "object": "an info-stealer designed to harvest sensitive information from the victim\u2019s machine and a persistence mechanism to ensure it remained active on the compromised system even after the initial execution"
+            },
+            {
+                "subject": "These malicious Python packages on PyPI",
+                "relation": "highlights",
+                "object": "the ongoing nature of cybersecurity threats within the software development ecosystem"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2317,
+                "cost": 0.023170000000000003
+            },
+            "output": {
+                "tokens": 387,
+                "cost": 0.01161
+            },
+            "total": {
+                "tokens": 2704,
+                "cost": 0.034780000000000005
+            }
+        },
+        "time": 17.53501009941101,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/securityweek/pypi-QD1-mXJ.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "thehackernews: Agent-Tesla.json",
+                    0.09825849818043454
+                ],
+                [
+                    "securityweek: nuget.json",
+                    0.10127678136111298
+                ],
+                [
+                    "Microsoft: diamond-sleet.json",
+                    0.10671825436691347
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 1,
+                "fn": 7,
+                "precision": 0.9090909090909091,
+                "recall": 0.5882352941176471,
+                "f1": 0.7142857142857143
+            },
+            "matched_list": [
+                [
+                    [
+                        "Maintainers of the Python Package Index (PyPI)",
+                        "were forced to suspend",
+                        "new project creation and new user registration"
+                    ],
+                    [
+                        "Maintainers of the Python Package Index (PyPI)",
+                        "were forced to",
+                        "suspend new project creation and new user registration"
+                    ],
+                    [
+                        1.0,
+                        0.6642176642570093
+                    ]
+                ],
+                [
+                    [
+                        "security researchers at Checkmarx",
+                        "warn",
+                        "that multiple malicious Python packages are being pushed via typo-squatting techniques"
+                    ],
+                    [
+                        "security researchers at Checkmarx",
+                        "warn",
+                        "multiple malicious Python packages are being pushed"
+                    ],
+                    [
+                        1.0,
+                        0.8078997996062968
+                    ]
+                ],
+                [
+                    [
+                        "the malicious payload",
+                        "aimed to steal",
+                        "crypto wallets, sensitive data from browsers, and various credentials"
+                    ],
+                    [
+                        "malicious payload",
+                        "aimed to steal",
+                        "crypto wallets"
+                    ],
+                    [
+                        0.9264052224223891,
+                        0.6374928825609992
+                    ]
+                ],
+                [
+                    [
+                        "the malicious payload",
+                        "employed",
+                        "a persistence mechanism to survive reboots"
+                    ],
+                    [
+                        "malicious payload",
+                        "employed",
+                        "a persistence mechanism to survive reboots"
+                    ],
+                    [
+                        0.9264052224223891,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "multiple malicious Python packages",
+                        "being uploaded on",
+                        "the Python Package Index (PyPI)"
+                    ],
+                    [
+                        "malicious code",
+                        "is located within",
+                        "package's setup.py file"
+                    ],
+                    [
+                        0.5170346350835998,
+                        0.47038919677861424
+                    ]
+                ],
+                [
+                    [
+                        "the malicious code",
+                        "is located within",
+                        "each package\u2019s setup.py file"
+                    ],
+                    [
+                        "malicious code",
+                        "is located within",
+                        "package's setup.py file"
+                    ],
+                    [
+                        0.9427527540210178,
+                        0.8723310712739907
+                    ]
+                ],
+                [
+                    [
+                        "the malicious code within the setup.py file",
+                        "attempted to retrieve",
+                        "an additional payload from a remote server"
+                    ],
+                    [
+                        "malicious code",
+                        "attempted to retrieve",
+                        "an additional payload from a remote server"
+                    ],
+                    [
+                        0.6532255068117222,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "The URL for the payload",
+                        "was dynamically constructed by",
+                        "appending the package name as a query parameter"
+                    ],
+                    [
+                        "URL for the payload",
+                        "was dynamically constructed by",
+                        "appending the package name as a query parameter"
+                    ],
+                    [
+                        0.9443236636195725,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "The end result",
+                        "is",
+                        "an info-stealer designed to harvest sensitive information from the victim\u2019s machine and a persistence mechanism to ensure it remained active on the compromised system even after the initial execution"
+                    ],
+                    [
+                        "result",
+                        "is",
+                        "an info-stealer designed to harvest sensitive information"
+                    ],
+                    [
+                        0.4932559985364232,
+                        0.8150490728439695
+                    ]
+                ],
+                [
+                    [
+                        "These malicious Python packages on PyPI",
+                        "highlights",
+                        "the ongoing nature of cybersecurity threats within the software development ecosystem"
+                    ],
+                    [
+                        "security researchers at Checkmarx",
+                        "warn",
+                        "multiple malicious Python packages are being pushed"
+                    ],
+                    [
+                        0.7524896333769916,
+                        0.4600404655016648,
+                        "passive form"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "a worrisome malware upload campaign",
+                    "prompted",
+                    "suspension of new project creation and new user registration on PyPI"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Maintainers",
+                    "mitigate",
+                    "malware upload campaign"
+                ],
+                [
+                    "malicious Python packages",
+                    "are being pushed via",
+                    "typo-squatting techniques"
+                ],
+                [
+                    "malicious payload",
+                    "aimed to steal",
+                    "sensitive data from browsers"
+                ],
+                [
+                    "malicious payload",
+                    "aimed to steal",
+                    "various credentials"
+                ],
+                [
+                    "malicious code",
+                    "enables",
+                    "automatic execution upon installation"
+                ],
+                [
+                    "result",
+                    "includes",
+                    "a persistence mechanism"
+                ],
+                [
+                    "discovery",
+                    "highlights",
+                    "ongoing nature of cybersecurity threats within the software development ecosystem"
+                ]
+            ]
+        }
+    }
+}

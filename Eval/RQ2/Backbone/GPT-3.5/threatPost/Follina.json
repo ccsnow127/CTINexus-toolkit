@@ -1,0 +1,262 @@
+{
+    "CTI": {
+        "text": "Researchers have added state-sponsored hackers to the list of adversaries attempting to exploit Microsoft\u2019s now-patched Follina vulnerability. According to researchers at Proofpoint, state-sponsored hackers have attempted to abuse the Follina vulnerability in Microsoft Office, aiming an email-based exploit at U.S. and E.U. government targets via phishing campaigns. Proofpoint researchers spotted the attacks and believe the adversaries have ties to a government, which it did not identify. Attacks consist of campaigns targeting victims U.S. and E.U. government workers. Malicious emails contain fake recruitment pitches promising a 20 percent boost in salaries and entice recipients to download an accompanying attachment. The malicious attachment targets the remote code execution bug CVE-2022-30190, dubbed Follina.",
+        "link": "https://threatpost.com/follina-exploited-by-state-sponsored-hackers/179890/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Researchers",
+                "relation": "have added",
+                "object": "state-sponsored hackers to the list of adversaries"
+            },
+            {
+                "subject": "state-sponsored hackers",
+                "relation": "are attempting to exploit",
+                "object": "Microsoft\u2019s now-patched Follina vulnerability"
+            },
+            {
+                "subject": "state-sponsored hackers",
+                "relation": "abuse",
+                "object": "the Follina vulnerability in Microsoft Office"
+            },
+            {
+                "subject": "email-based exploit",
+                "relation": "is aimed at",
+                "object": "U.S. and E.U. government targets"
+            },
+            {
+                "subject": "Proofpoint researchers",
+                "relation": "spotted",
+                "object": "the attacks"
+            },
+            {
+                "subject": "the adversaries",
+                "relation": "have ties to",
+                "object": "a government"
+            },
+            {
+                "subject": "attacks",
+                "relation": "consist of",
+                "object": "campaigns targeting victims U.S. and E.U. government workers"
+            },
+            {
+                "subject": "Malicious emails",
+                "relation": "contain",
+                "object": "fake recruitment pitches promising a 20 percent boost in salaries"
+            },
+            {
+                "subject": "fake recruitment pitches",
+                "relation": "entice recipients to download",
+                "object": "an accompanying attachment"
+            },
+            {
+                "subject": "accompanying attachment",
+                "relation": "targets",
+                "object": "the remote code execution bug CVE-2022-30190, dubbed Follina"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1157,
+                "cost": 0.0005785
+            },
+            "output": {
+                "tokens": 292,
+                "cost": 0.000438
+            },
+            "total": {
+                "tokens": 1449,
+                "cost": 0.0010165
+            }
+        },
+        "time": 4.101824760437012,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/threatPost/Follina-QD1-Piv.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "threatPost: toddycat.json",
+                    0.12782704088992547
+                ],
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.159133992947919
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 3,
+                "fn": 5,
+                "precision": 0.7,
+                "recall": 0.5833333333333334,
+                "f1": 0.6363636363636365
+            },
+            "matched_list": [
+                [
+                    [
+                        "state-sponsored hackers",
+                        "are attempting to exploit",
+                        "Microsoft\u2019s now-patched Follina vulnerability"
+                    ],
+                    [
+                        "state-sponsored hackers",
+                        "added to",
+                        "list of adversaries attempting to exploit Follina vulnerability"
+                    ],
+                    [
+                        1.0,
+                        0.606537452856632
+                    ]
+                ],
+                [
+                    [
+                        "state-sponsored hackers",
+                        "abuse",
+                        "the Follina vulnerability in Microsoft Office"
+                    ],
+                    [
+                        "state-sponsored hackers",
+                        "added to",
+                        "list of adversaries attempting to exploit Follina vulnerability"
+                    ],
+                    [
+                        1.0,
+                        0.6647491340765372
+                    ]
+                ],
+                [
+                    [
+                        "Proofpoint researchers",
+                        "spotted",
+                        "the attacks"
+                    ],
+                    [
+                        "Proofpoint researchers",
+                        "spotted",
+                        "the attacks"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "the adversaries",
+                        "have ties to",
+                        "a government"
+                    ],
+                    [
+                        "adversaries",
+                        "have ties to",
+                        "a government"
+                    ],
+                    [
+                        0.8923169612167997,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "attacks",
+                        "consist of",
+                        "campaigns targeting victims U.S. and E.U. government workers"
+                    ],
+                    [
+                        "attacks",
+                        "consist of",
+                        "campaigns targeting U.S. and E.U. government workers"
+                    ],
+                    [
+                        1.0,
+                        0.8990190026981759
+                    ]
+                ],
+                [
+                    [
+                        "Malicious emails",
+                        "contain",
+                        "fake recruitment pitches promising a 20 percent boost in salaries"
+                    ],
+                    [
+                        "Malicious emails",
+                        "contain",
+                        "fake recruitment pitches"
+                    ],
+                    [
+                        1.0,
+                        0.7841698900734344
+                    ]
+                ],
+                [
+                    [
+                        "accompanying attachment",
+                        "targets",
+                        "the remote code execution bug CVE-2022-30190, dubbed Follina"
+                    ],
+                    [
+                        "The malicious attachment",
+                        "targets",
+                        "the remote code execution bug CVE-2022-30190, dubbed Follina"
+                    ],
+                    [
+                        0.46463303544794843,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Researchers",
+                    "have added",
+                    "state-sponsored hackers to the list of adversaries"
+                ],
+                [
+                    "email-based exploit",
+                    "is aimed at",
+                    "U.S. and E.U. government targets"
+                ],
+                [
+                    "fake recruitment pitches",
+                    "entice recipients to download",
+                    "an accompanying attachment"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "state-sponsored hackers",
+                    "attempted to abuse",
+                    "the Follina vulnerability in Microsoft Office"
+                ],
+                [
+                    "state-sponsored hackers",
+                    "aimed exploit at",
+                    "U.S. and E.U. government targets"
+                ],
+                [
+                    "the attacks",
+                    "used",
+                    "email-based exploit"
+                ],
+                [
+                    "Fake recruitment pitches",
+                    "promise",
+                    "a 20 percent boost in salaries"
+                ],
+                [
+                    "recipients",
+                    "enticed to download",
+                    "an accompanying attachment"
+                ]
+            ]
+        }
+    }
+}

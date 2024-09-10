@@ -1,0 +1,172 @@
+{
+    "CTI": {
+        "text": "A new vulnerability dubbed 'LeftoverLocals' affecting graphics processing units from AMD, Apple, Qualcomm, and Imagination Technologies allows retrieving data from the local memory space. Tracked as CVE-2023-4969, the security issue enables data recovery from vulnerable GPUs, especially in the context of large language models (LLMs) and machine learning (ML) processes. LeftoverLocals lets attackers launch a 'listener' - a GPU kernel that reads from uninitialized local memory and can dump the data in a persistent location, such as the global memory. If the local memory is not cleared, the attacker can use the listener to read values left behind by the 'writer' - a program that stores values to local memory. The recovered data can reveal sensitive information about the victim's computations, including model inputs, outputs, weights, and intermediate computations.",
+        "link": "https://www.bleepingcomputer.com/news/security/amd-apple-qualcomm-gpus-leak-ai-data-in-leftoverlocals-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "LeftoverLocals",
+                "relation": "is a",
+                "object": "vulnerability"
+            },
+            {
+                "subject": "LeftoverLocals",
+                "relation": "affecting",
+                "object": "graphics processing units"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "AMD"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Apple"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Qualcomm"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Imagination Technologies"
+            },
+            {
+                "subject": "LeftoverLocals",
+                "relation": "tracked as",
+                "object": "CVE-2023-4969"
+            },
+            {
+                "subject": "CVE-2023-4969",
+                "relation": "enables",
+                "object": "data recovery from vulnerable GPUs"
+            },
+            {
+                "subject": "data recovery",
+                "relation": "is in the context of",
+                "object": "large language models (LLMs)"
+            },
+            {
+                "subject": "data recovery",
+                "relation": "is in the context of",
+                "object": "machine learning (ML) processes"
+            },
+            {
+                "subject": "LeftoverLocals",
+                "relation": "lets attackers launch",
+                "object": "'listener'"
+            },
+            {
+                "subject": "'listener'",
+                "relation": "is a",
+                "object": "GPU kernel"
+            },
+            {
+                "subject": "'listener'",
+                "relation": "reads from",
+                "object": "uninitialized local memory"
+            },
+            {
+                "subject": "'listener'",
+                "relation": "can dump the data in",
+                "object": "a persistent location"
+            },
+            {
+                "subject": "a persistent location",
+                "relation": "such as",
+                "object": "the global memory"
+            },
+            {
+                "subject": "attacker",
+                "relation": "can use",
+                "object": "listener"
+            },
+            {
+                "subject": "listener",
+                "relation": "to read",
+                "object": "values left behind by the 'writer'"
+            },
+            {
+                "subject": "'writer'",
+                "relation": "is a",
+                "object": "program"
+            },
+            {
+                "subject": "'writer'",
+                "relation": "stores values to",
+                "object": "local memory"
+            },
+            {
+                "subject": "recovered data",
+                "relation": "can reveal",
+                "object": "sensitive information about the victim's computations"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "model inputs"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "outputs"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "weights"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "intermediate computations"
+            }
+        ],
+        "triples_count": 24,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2303,
+                "cost": 0.023030000000000002
+            },
+            "output": {
+                "tokens": 563,
+                "cost": 0.01689
+            },
+            "total": {
+                "tokens": 2866,
+                "cost": 0.03992
+            }
+        },
+        "time": 22.64409899711609,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/BleepingComputer/qualcomm-QD1-90l.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "threatPost: zuorat.json",
+                    0.06295010687064666
+                ],
+                [
+                    "BleepingComputer: apple.json",
+                    0.06409617903871719
+                ],
+                [
+                    "Unit42: Citrix-Bleed.json",
+                    0.06575835955700361
+                ],
+                [
+                    "BleepingComputer: chrome.json",
+                    0.1774117489956562
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

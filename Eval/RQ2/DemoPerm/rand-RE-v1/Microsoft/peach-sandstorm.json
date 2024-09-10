@@ -1,0 +1,193 @@
+{
+    "CTI": {
+        "text": "Since February 2023, Microsoft has observed password spray activity against thousands of organizations carried out  by an actor we track as Peach Sandstorm (HOLMIUM). Peach Sandstorm is an Iranian nation-state threat actor who has recently pursued organizations in the satellite, defense, and pharmaceutical sectors around the globe. Based upon the profile of victim organizations targeted and the observed follow-on intrusion activity, Microsoft assesses that this initial access campaign is likely used to facilitate intelligence collection in support of Iranian state interests. In cases where Peach Sandstorm successfully authenticated to an account, Microsoft observed the group using a combination of publicly available and custom tools for discovery, persistence, and lateral movement. In a small number of intrusions, Peach Sandstorm was observed exfiltrating data from the compromised environment.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/09/14/peach-sandstorm-password-spray-campaigns-enable-intelligence-collection-at-high-value-targets/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft",
+                "relation": "has observed",
+                "object": "password spray activity against thousands of organizations"
+            },
+            {
+                "subject": "Peach Sandstorm (HOLMIUM)",
+                "relation": "is",
+                "object": "an Iranian nation-state threat actor"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "has pursued",
+                "object": "organizations in the satellite, defense, and pharmaceutical sectors"
+            },
+            {
+                "subject": "Initial access campaign",
+                "relation": "is used to facilitate",
+                "object": "intelligence collection in support of Iranian state interests"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "successfully authenticated to",
+                "object": "an account"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "used",
+                "object": "a combination of publicly available and custom tools for discovery, persistence, and lateral movement"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "was observed exfiltrating data from",
+                "object": "the compromised environment"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1506,
+                "cost": 0.01506
+            },
+            "output": {
+                "tokens": 214,
+                "cost": 0.00642
+            },
+            "total": {
+                "tokens": 1720,
+                "cost": 0.02148
+            }
+        },
+        "time": 13.484471797943115,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/Microsoft/peach-sandstorm-QD1-F2V.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "yanluowang.json",
+                    "random"
+                ],
+                [
+                    "Bear-Hallmarks.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 0,
+                "fn": 3,
+                "precision": 1.0,
+                "recall": 0.7,
+                "f1": 0.8235294117647058
+            },
+            "matched_list": [
+                [
+                    [
+                        "Microsoft",
+                        "has observed",
+                        "password spray activity against thousands of organizations"
+                    ],
+                    [
+                        "password spray activity",
+                        "targeted",
+                        "thousands of organizations"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm (HOLMIUM)",
+                        "is",
+                        "an Iranian nation-state threat actor"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "is",
+                        "an Iranian nation-state threat actor"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "has pursued",
+                        "organizations in the satellite, defense, and pharmaceutical sectors"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "pursued organizations in",
+                        "the defense sector"
+                    ]
+                ],
+                [
+                    [
+                        "Initial access campaign",
+                        "is used to facilitate",
+                        "intelligence collection in support of Iranian state interests"
+                    ],
+                    [
+                        "initial access campaign",
+                        "facilitates",
+                        "intelligence collection"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "successfully authenticated to",
+                        "an account"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "successfully authenticated to",
+                        "an account"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "used",
+                        "a combination of publicly available and custom tools for discovery, persistence, and lateral movement"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "used",
+                        "publicly available tools"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "was observed exfiltrating data from",
+                        "the compromised environment"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "observed exfiltrating data from",
+                        "the compromised environment"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Peach Sandstorm",
+                    "used",
+                    "password spray activity"
+                ],
+                [
+                    "Microsoft",
+                    "observes",
+                    "follow-on intrusion activity"
+                ],
+                [
+                    "Peach Sandstorm",
+                    "executed",
+                    "lateral movement"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

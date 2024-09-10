@@ -1,0 +1,283 @@
+{
+    "CTI": {
+        "text": "arracuda has revealed that Chinese threat actors exploited a new zero-day in its Email Security Gateway (ESG) appliances to deploy backdoors on a limited number of devices. Tracked as CVE-2023-7102, the issue relates to a case of arbitrary code execution that resides within a third-party and open-source library named Spreadsheet::ParseExcel that's used by the Amavis scanner within the gateway to screen Microsoft Excel email attachments for malware. The company attributed the activity to a threat actor tracked by Google-owned Mandiant as UNC4841, which was previously linked to the active exploitation of another zero-day in Barracuda devices (CVE-2023-2868, CVSS score: 9.8) earlier this year.Successful exploitation of the new flaw is accomplished by means of a specially crafted Microsoft Excel email attachment. This is followed by the deployment of new variants of known implants called SEASPY and SALTWATER that are equipped to offer persistence and command execution capabilities.",
+        "link": "https://thehackernews.com/2023/12/chinese-hackers-exploited-new-zero-day.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Chinese threat actors",
+                "relation": "exploited",
+                "object": "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances"
+            },
+            {
+                "subject": "The new zero-day",
+                "relation": "is tracked as",
+                "object": "CVE-2023-7102"
+            },
+            {
+                "subject": "CVE-2023-7102",
+                "relation": "relates to",
+                "object": "a case of arbitrary code execution"
+            },
+            {
+                "subject": "arbitrary code execution",
+                "relation": "resides within",
+                "object": "Spreadsheet::ParseExcel"
+            },
+            {
+                "subject": "Spreadsheet::ParseExcel",
+                "relation": "is used by",
+                "object": "the Amavis scanner"
+            },
+            {
+                "subject": "The Amavis scanner",
+                "relation": "screens",
+                "object": "Microsoft Excel email attachments for malware"
+            },
+            {
+                "subject": "The threat actor",
+                "relation": "is tracked by",
+                "object": "Mandiant as UNC4841"
+            },
+            {
+                "subject": "UNC4841",
+                "relation": "was previously linked to",
+                "object": "the active exploitation of another zero-day in Barracuda devices"
+            },
+            {
+                "subject": "another zero-day in Barracuda devices",
+                "relation": "is",
+                "object": "CVE-2023-2868"
+            },
+            {
+                "subject": "CVE-2023-2868",
+                "relation": "has",
+                "object": "a CVSS score: 9.8"
+            },
+            {
+                "subject": "Successful exploitation of the new flaw",
+                "relation": "is accomplished by",
+                "object": "a specially crafted Microsoft Excel email attachment"
+            },
+            {
+                "subject": "The deployment",
+                "relation": "follows",
+                "object": "successful exploitation"
+            },
+            {
+                "subject": "This deployment",
+                "relation": "involves",
+                "object": "new variants of known implants SEASPY and SALTWATER"
+            },
+            {
+                "subject": "SEASPY and SALTWATER",
+                "relation": "are equipped to offer",
+                "object": "persistence and command execution capabilities"
+            }
+        ],
+        "triples_count": 14,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1493,
+                "cost": 0.01493
+            },
+            "output": {
+                "tokens": 428,
+                "cost": 0.01284
+            },
+            "total": {
+                "tokens": 1921,
+                "cost": 0.027770000000000003
+            }
+        },
+        "time": 20.79189705848694,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/thehackernews/ESG-QD1-7mG.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "thehackernews: OfBiz.json",
+                    0.15776297683366516
+                ],
+                [
+                    "BleepingComputer: apple.json",
+                    0.19865605903623845
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 2,
+                "fn": 0,
+                "precision": 0.8571428571428571,
+                "recall": 1.0,
+                "f1": 0.923076923076923
+            },
+            "matched_list": [
+                [
+                    [
+                        "Chinese threat actors",
+                        "exploited",
+                        "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances"
+                    ],
+                    [
+                        "Chinese threat actors",
+                        "exploited",
+                        "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances"
+                    ]
+                ],
+                [
+                    [
+                        "The new zero-day",
+                        "is tracked as",
+                        "CVE-2023-7102"
+                    ],
+                    [
+                        "CVE-2023-7102",
+                        "relates to",
+                        "arbitrary code execution"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-7102",
+                        "relates to",
+                        "a case of arbitrary code execution"
+                    ],
+                    [
+                        "CVE-2023-7102",
+                        "resides within",
+                        "Spreadsheet::ParseExcel"
+                    ]
+                ],
+                [
+                    [
+                        "arbitrary code execution",
+                        "resides within",
+                        "Spreadsheet::ParseExcel"
+                    ],
+                    [
+                        "Spreadsheet::ParseExcel",
+                        "is used by",
+                        "the Amavis scanner"
+                    ]
+                ],
+                [
+                    [
+                        "Spreadsheet::ParseExcel",
+                        "is used by",
+                        "the Amavis scanner"
+                    ],
+                    [
+                        "the Amavis scanner",
+                        "screens",
+                        "Microsoft Excel email attachments for malware"
+                    ]
+                ],
+                [
+                    [
+                        "The Amavis scanner",
+                        "screens",
+                        "Microsoft Excel email attachments for malware"
+                    ],
+                    [
+                        "successful exploitation of CVE-2023-7102",
+                        "accomplished by",
+                        "a specially crafted Microsoft Excel email attachment"
+                    ]
+                ],
+                [
+                    [
+                        "The threat actor",
+                        "is tracked by",
+                        "Mandiant as UNC4841"
+                    ],
+                    [
+                        "UNC4841",
+                        "linked to",
+                        "the exploitation of CVE-2023-7102"
+                    ]
+                ],
+                [
+                    [
+                        "UNC4841",
+                        "was previously linked to",
+                        "the active exploitation of another zero-day in Barracuda devices"
+                    ],
+                    [
+                        "UNC4841",
+                        "previously linked to",
+                        "the active exploitation of another zero-day in Barracuda devices"
+                    ]
+                ],
+                [
+                    [
+                        "another zero-day in Barracuda devices",
+                        "is",
+                        "CVE-2023-2868"
+                    ],
+                    [
+                        "the other zero-day in Barracuda devices",
+                        "is",
+                        "CVE-2023-2868"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-2868",
+                        "has",
+                        "a CVSS score: 9.8"
+                    ],
+                    [
+                        "CVE-2023-2868",
+                        "CVSS score",
+                        "9.8"
+                    ]
+                ],
+                [
+                    [
+                        "The deployment",
+                        "follows",
+                        "successful exploitation"
+                    ],
+                    [
+                        "the deployment",
+                        "followed by",
+                        "new variants of SEASPY and SALTWATER"
+                    ]
+                ],
+                [
+                    [
+                        "This deployment",
+                        "involves",
+                        "new variants of known implants SEASPY and SALTWATER"
+                    ],
+                    [
+                        "SEASPY and SALTWATER",
+                        "equip",
+                        "persistence and command execution capabilities"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Successful exploitation of the new flaw",
+                    "is accomplished by",
+                    "a specially crafted Microsoft Excel email attachment"
+                ],
+                [
+                    "SEASPY and SALTWATER",
+                    "are equipped to offer",
+                    "persistence and command execution capabilities"
+                ]
+            ],
+            "not_recall_list": []
+        }
+    }
+}

@@ -1,0 +1,286 @@
+{
+    "CTI": {
+        "text": "The most severe of the externally reported flaws is a use-after-free bug in ANGLE, the open source cross-platform graphics engine used in Chrome and other popular browsers. The issue is tracked as CVE-2024-2883 and Google notes in its advisory that the researcher who discovered the bug has received a $10,000 bug bounty reward. According to the advisory, the three other defects reported by external researchers are all high-severity vulnerabilities. The first is CVE-2024-2885, a use-after-free issue in Dawn. The remaining two flaws, tracked as CVE-2024-2886 and CVE-2024-2887, are zero-day vulnerabilities that were exploited and reported last week at the Pwn2Own Vancouver 2024 hacking contest. No additional bounty rewards, aside from those earned at the competition, were handed out for these issues. CVE-2024-2886, a use-after-free in WebCodecs, was demonstrated by Seunghyun Lee of KAIST Hacking Lab, who exploited two such issues in the browser at the hacking contest and earned a total of $145,000 in rewards. CVE-2024-2887 is a Type Confusion bug in WebAssembly, exploited on the first day of Pwn2Own by security researcher Manfred Paul, who earned a $42,500 reward for it.Paul also demonstrated Safari and Firefox vulnerabilities at the hacking contest, earning a total of over $200,000 in rewards and winning the competition. Mozilla was first to release patches for the zero-day demonstrated at Pwn2Own.",
+        "link": "https://www.securityweek.com/chrome-update-patches-zero-day-vulnerabilities-exploited-at-pwn2own/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "CVE-2024-2883",
+                "relation": "is",
+                "object": "a use-after-free bug in ANGLE"
+            },
+            {
+                "subject": "ANGLE",
+                "relation": "is",
+                "object": "the open source cross-platform graphics engine"
+            },
+            {
+                "subject": "ANGLE",
+                "relation": "is used in",
+                "object": "Chrome and other popular browsers"
+            },
+            {
+                "subject": "CVE-2024-2885",
+                "relation": "is",
+                "object": "a use-after-free issue in Dawn"
+            },
+            {
+                "subject": "CVE-2024-2886",
+                "relation": "is",
+                "object": "a use-after-free in WebCodecs"
+            },
+            {
+                "subject": "CVE-2024-2887",
+                "relation": "is",
+                "object": "a Type Confusion bug in WebAssembly"
+            },
+            {
+                "subject": "CVE-2024-2886",
+                "relation": "was demonstrated by",
+                "object": "Seunghyun Lee of KAIST Hacking Lab"
+            },
+            {
+                "subject": "Seunghyun Lee",
+                "relation": "exploited",
+                "object": "two use-after-free issues in the browser"
+            },
+            {
+                "subject": "Seunghyun Lee",
+                "relation": "earned",
+                "object": "$145,000 in rewards"
+            },
+            {
+                "subject": "CVE-2024-2887",
+                "relation": "was exploited by",
+                "object": "Manfred Paul"
+            },
+            {
+                "subject": "Manfred Paul",
+                "relation": "earned",
+                "object": "$42,500 reward for CVE-2024-2887"
+            },
+            {
+                "subject": "Manfred Paul",
+                "relation": "demonstrated",
+                "object": "Safari and Firefox vulnerabilities"
+            },
+            {
+                "subject": "Manfred Paul",
+                "relation": "won",
+                "object": "the Pwn2Own Vancouver 2024 hacking contest"
+            },
+            {
+                "subject": "Mozilla",
+                "relation": "released",
+                "object": "patches for the zero-day demonstrated at Pwn2Own"
+            }
+        ],
+        "triples_count": 14,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 956,
+                "cost": 0.00956
+            },
+            "output": {
+                "tokens": 431,
+                "cost": 0.01293
+            },
+            "total": {
+                "tokens": 1387,
+                "cost": 0.022490000000000003
+            }
+        },
+        "time": 10.462140560150146,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/securityweek/pwn2own-QD1-x1B.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "darkreading: Google-Patches.json",
+                    0.1672751919588255
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 13,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.9285714285714286,
+                "recall": 1.0,
+                "f1": 0.962962962962963
+            },
+            "matched_list": [
+                [
+                    [
+                        "CVE-2024-2883",
+                        "is",
+                        "a use-after-free bug in ANGLE"
+                    ],
+                    [
+                        "use-after-free bug",
+                        "is in",
+                        "ANGLE"
+                    ]
+                ],
+                [
+                    [
+                        "ANGLE",
+                        "is",
+                        "the open source cross-platform graphics engine"
+                    ],
+                    [
+                        "use-after-free bug",
+                        "is in",
+                        "ANGLE"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2885",
+                        "is",
+                        "a use-after-free issue in Dawn"
+                    ],
+                    [
+                        "CVE-2024-2885",
+                        "is",
+                        "a use-after-free issue in Dawn"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2886",
+                        "is",
+                        "a use-after-free in WebCodecs"
+                    ],
+                    [
+                        "CVE-2024-2886",
+                        "is a use-after-free in",
+                        "WebCodecs"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2887",
+                        "is",
+                        "a Type Confusion bug in WebAssembly"
+                    ],
+                    [
+                        "CVE-2024-2887",
+                        "is a Type Confusion bug in",
+                        "WebAssembly"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2886",
+                        "was demonstrated by",
+                        "Seunghyun Lee of KAIST Hacking Lab"
+                    ],
+                    [
+                        "Seunghyun Lee",
+                        "exploited",
+                        "CVE-2024-2886"
+                    ]
+                ],
+                [
+                    [
+                        "Seunghyun Lee",
+                        "exploited",
+                        "two use-after-free issues in the browser"
+                    ],
+                    [
+                        "Seunghyun Lee",
+                        "exploited",
+                        "CVE-2024-2886"
+                    ]
+                ],
+                [
+                    [
+                        "Seunghyun Lee",
+                        "earned",
+                        "$145,000 in rewards"
+                    ],
+                    [
+                        "Seunghyun Lee",
+                        "earned",
+                        "$145,000 at Pwn2Own"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-2887",
+                        "was exploited by",
+                        "Manfred Paul"
+                    ],
+                    [
+                        "Manfred Paul",
+                        "exploited",
+                        "CVE-2024-2887"
+                    ]
+                ],
+                [
+                    [
+                        "Manfred Paul",
+                        "earned",
+                        "$42,500 reward for CVE-2024-2887"
+                    ],
+                    [
+                        "Manfred Paul",
+                        "earned",
+                        "$42,500 for CVE-2024-2887"
+                    ]
+                ],
+                [
+                    [
+                        "Manfred Paul",
+                        "demonstrated",
+                        "Safari and Firefox vulnerabilities"
+                    ],
+                    [
+                        "Manfred Paul",
+                        "demonstrated vulnerabilities at",
+                        "Pwn2Own"
+                    ]
+                ],
+                [
+                    [
+                        "Manfred Paul",
+                        "won",
+                        "the Pwn2Own Vancouver 2024 hacking contest"
+                    ],
+                    [
+                        "Manfred Paul",
+                        "demonstrated vulnerabilities at",
+                        "Pwn2Own"
+                    ]
+                ],
+                [
+                    [
+                        "Mozilla",
+                        "released",
+                        "patches for the zero-day demonstrated at Pwn2Own"
+                    ],
+                    [
+                        "Mozilla",
+                        "released patches for",
+                        "the zero-day demonstrated at Pwn2Own"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "ANGLE",
+                    "is used in",
+                    "Chrome and other popular browsers"
+                ]
+            ],
+            "not_recall_list": []
+        }
+    }
+}

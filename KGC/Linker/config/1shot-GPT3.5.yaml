@@ -1,0 +1,48 @@
+defaults:  
+  - _self_
+
+addition: 
+  AVERTIUM:
+    - muddywater.json
+    - ragnar.json
+    - uantum-ransomware.json
+  darkreading:
+    - Gh0st-RAT.json
+    - Microsoft-Outlook.json
+  Google_TAG:
+    - egypt.json
+    - winrar.json
+  Microsoft:
+    - cadet-blizzard.json
+    - diamond-sleet.json
+    - migraine-could.json
+  symantec:
+    - Seedworm.json
+  thehackernews:
+    - Kimsuky.json
+    - OfBiz.json
+    - Xamalicious.json
+  threatPost:
+    - CISA.json
+    - toddycat.json
+  trendmicro:
+    - Earth-Kitsune.json
+  Unit42:
+    - VenomRAT.json
+# CTI_Source: AVERTIUM
+# inFile: akira.json
+inSet: /home/yutong/CTINexus/dataset/Merger-output-large-GT
+outSet: /home/yutong/CTINexus/Eval/RQ3/Linker/1-shot-gpt-3.5-RE
+
+## oepnai config
+model: gpt-3.5-turbo-0125
+api_key: <YOUR_OPENAI_KEY>
+
+
+## prompt constructor
+link_prompt_folder: Toolbox/LinkerPrompt
+link_prompt_file: 1-shot.jinja
+shot: 1
+
+## prompt store
+link_prompt_set: /home/yutong/CTINexus/Eval/RQ3/Linker/1-shot-gpt-3.5-RE/prompt_store/metrics

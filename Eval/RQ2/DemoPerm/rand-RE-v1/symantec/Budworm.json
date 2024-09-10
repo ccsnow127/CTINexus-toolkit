@@ -1,0 +1,285 @@
+{
+    "CTI": {
+        "text": "The Budworm advanced persistent threat (APT) group continues to actively develop its toolset. Most recently, the Threat Hunter Team in Symantec, part of Broadcom, discovered Budworm using an updated version of one of its key tools to target a Middle Eastern telecommunications organization and an Asian government. Both attacks occurred in August 2023. Budworm (aka LuckyMouse, Emissary Panda, APT27) deployed a previously unseen variant of its SysUpdate backdoor (SysUpdate DLL inicore_v2.3.30.dll). SysUpdate is exclusively used by Budworm. As well as its custom malware, Budworm also used a variety of living-off-the-land and publicly available tools in these attacks. It appears the activity by the group may have been stopped early in the attack chain as the only malicious activity seen on infected machines is credential harvesting.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/budworm-tool-update-telecoms-govt"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Budworm",
+                "relation": "is also known as",
+                "object": "LuckyMouse"
+            },
+            {
+                "subject": "Budworm",
+                "relation": "is also known as",
+                "object": "Emissary Panda"
+            },
+            {
+                "subject": "Budworm",
+                "relation": "is also known as",
+                "object": "APT27"
+            },
+            {
+                "subject": "Budworm",
+                "relation": "deployed",
+                "object": "SysUpdate backdoor"
+            },
+            {
+                "subject": "SysUpdate",
+                "relation": "is a version of",
+                "object": "SysUpdate DLL inicore_v2.3.30.dll"
+            },
+            {
+                "subject": "SysUpdate",
+                "relation": "is exclusively used by",
+                "object": "Budworm"
+            },
+            {
+                "subject": "Budworm",
+                "relation": "targeted",
+                "object": "a Middle Eastern telecommunications organization"
+            },
+            {
+                "subject": "Budworm",
+                "relation": "targeted",
+                "object": "an Asian government"
+            },
+            {
+                "subject": "Budworm",
+                "relation": "used",
+                "object": "custom malware"
+            },
+            {
+                "subject": "Budworm",
+                "relation": "used",
+                "object": "living-off-the-land tools"
+            },
+            {
+                "subject": "Budworm",
+                "relation": "used",
+                "object": "publicly available tools"
+            },
+            {
+                "subject": "malicious activity",
+                "relation": "seen on",
+                "object": "infected machines"
+            },
+            {
+                "subject": "malicious activity",
+                "relation": "is",
+                "object": "credential harvesting"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1414,
+                "cost": 0.014140000000000002
+            },
+            "output": {
+                "tokens": 341,
+                "cost": 0.01023
+            },
+            "total": {
+                "tokens": 1755,
+                "cost": 0.024370000000000003
+            }
+        },
+        "time": 13.52185869216919,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/symantec/Budworm-QD1-nhM.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "peach-sandstorm.json",
+                    "random"
+                ],
+                [
+                    "Dogwalk.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 13,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9285714285714286,
+                "f1": 0.962962962962963
+            },
+            "matched_list": [
+                [
+                    [
+                        "Budworm",
+                        "is also known as",
+                        "LuckyMouse"
+                    ],
+                    [
+                        "Budworm",
+                        "is also known as",
+                        "LuckyMouse"
+                    ]
+                ],
+                [
+                    [
+                        "Budworm",
+                        "is also known as",
+                        "Emissary Panda"
+                    ],
+                    [
+                        "Budworm",
+                        "is also known as",
+                        "Emissary Panda"
+                    ]
+                ],
+                [
+                    [
+                        "Budworm",
+                        "is also known as",
+                        "APT27"
+                    ],
+                    [
+                        "Budworm",
+                        "is also known as",
+                        "APT27"
+                    ]
+                ],
+                [
+                    [
+                        "Budworm",
+                        "deployed",
+                        "SysUpdate backdoor"
+                    ],
+                    [
+                        "Budworm",
+                        "used",
+                        "an updated version of SysUpdate"
+                    ]
+                ],
+                [
+                    [
+                        "SysUpdate",
+                        "is a version of",
+                        "SysUpdate DLL inicore_v2.3.30.dll"
+                    ],
+                    [
+                        "SysUpdate DLL inicore_v2.3.30.dll",
+                        "is a variant of",
+                        "SysUpdate backdoor"
+                    ]
+                ],
+                [
+                    [
+                        "SysUpdate",
+                        "is exclusively used by",
+                        "Budworm"
+                    ],
+                    [
+                        "SysUpdate",
+                        "is exclusively used by",
+                        "Budworm"
+                    ]
+                ],
+                [
+                    [
+                        "Budworm",
+                        "targeted",
+                        "a Middle Eastern telecommunications organization"
+                    ],
+                    [
+                        "Budworm",
+                        "targeted",
+                        "a Middle Eastern telecommunications organization"
+                    ]
+                ],
+                [
+                    [
+                        "Budworm",
+                        "targeted",
+                        "an Asian government"
+                    ],
+                    [
+                        "Budworm",
+                        "targeted",
+                        "an Asian government"
+                    ]
+                ],
+                [
+                    [
+                        "Budworm",
+                        "used",
+                        "custom malware"
+                    ],
+                    [
+                        "Budworm",
+                        "used",
+                        "custom malware"
+                    ]
+                ],
+                [
+                    [
+                        "Budworm",
+                        "used",
+                        "living-off-the-land tools"
+                    ],
+                    [
+                        "Budworm",
+                        "used",
+                        "living-off-the-land and publicly available tools"
+                    ]
+                ],
+                [
+                    [
+                        "Budworm",
+                        "used",
+                        "publicly available tools"
+                    ],
+                    [
+                        "Budworm",
+                        "used",
+                        "living-off-the-land and publicly available tools"
+                    ]
+                ],
+                [
+                    [
+                        "malicious activity",
+                        "seen on",
+                        "infected machines"
+                    ],
+                    [
+                        "the malicious activity seen on infected machines",
+                        "is",
+                        "credential harvesting"
+                    ]
+                ],
+                [
+                    [
+                        "malicious activity",
+                        "is",
+                        "credential harvesting"
+                    ],
+                    [
+                        "the malicious activity seen on infected machines",
+                        "is",
+                        "credential harvesting"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Budworm",
+                    "activity stopped early in",
+                    "the attack chain"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

@@ -1,0 +1,134 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'JinxLoader', 'relation': 'is a', 'object': 'Go-based malware loader'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'threat actors', 'relation': 'use', 'object': 'JinxLoader'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'JinxLoader', 'relation': 'delivers', 'object': 'next-stage payloads'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'next-stage payloads', 'relation': 'include', 'object': 'Formbook'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'next-stage payloads', 'relation': 'include', 'object': 'XLoader'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'JinxLoader', 'relation': 'pays homage to', 'object': 'League of Legends character Jinx'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attacks', 'relation': 'begin with', 'object': 'phishing emails'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'phishing emails', 'relation': 'impersonate', 'object': 'Abu Dhabi National Oil Company'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'recipients', 'relation': 'urged to open', 'object': 'password-protected RAR archive attachments'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'RAR archive attachments', 'relation': 'drop', 'object': 'JinxLoader executable'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'JinxLoader executable', 'relation': 'acts as', 'object': 'a gateway for Formbook or XLoader'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'DarkGate', 'relation': 'is distributing in', 'object': 'campaigns'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PikaBot', 'relation': 'is distributing in', 'object': 'campaigns'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'TA544', 'relation': 'is known as', 'object': 'Narwal Spider'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'TA544', 'relation': 'leveraging', 'object': 'IDAT Loader'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'IDAT Loader', 'relation': 'is a', 'object': 'loader malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'IDAT Loader', 'relation': 'to deploy', 'object': 'Remcos RAT'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'IDAT Loader', 'relation': 'to deploy', 'object': 'SystemBC malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Meduza Stealer', 'relation': 'released an updated version on', 'object': 'the dark web'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Meduza Stealer version 2.2', 'relation': 'supports', 'object': 'browser-based cryptocurrency wallets'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Meduza Stealer version 2.2', 'relation': 'has', 'object': 'an improved credit card grabber'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

@@ -1,0 +1,388 @@
+{
+    "CTI": {
+        "text": "The threat actor known as UAC-0099 has been linked to continued attacks aimed at Ukraine, some of which leverage a high-severity flaw in the WinRAR software to deliver a malware strain called LONEPAGE. The threat actor targets Ukrainian employees working for companies outside of Ukraine. UAC-0099 was first documented by the Computer Emergency Response Team of Ukraine (CERT-UA) in June 2023, detailing its attacks against state organizations and media entities for espionage motives. The attack chains leveraged phishing messages containing HTA, RAR, and LNK file attachments that led to the deployment of LONEPAGE, a Visual Basic Script (VBS) malware that's capable of contacting a command-and-control (C2) server to retrieve additional payloads such as keyloggers, stealers, and screenshot malware. The latest analysis from Deep Instinct reveals that the use of HTA attachments is just one of three different infection chains, the other two of which leverage self-extracting (SFX) archives and booby-trapped ZIP files. The ZIP files exploit the WinRAR vulnerability (CVE-2023-38831, CVSS score: 7.8) to distribute LONEPAGE.",
+        "link": "https://thehackernews.com/2023/12/uac-0099-using-winrar-exploit-to-target.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "UAC-0099",
+                "relation": "linked to",
+                "object": "attacks aimed at Ukraine"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "leverage",
+                "object": "a high-severity flaw in WinRAR"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "deliver",
+                "object": "LONEPAGE"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "targets",
+                "object": "Ukrainian employees working for companies outside of Ukraine"
+            },
+            {
+                "subject": "CERT-UA",
+                "relation": "documented",
+                "object": "UAC-0099"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "attacks",
+                "object": "state organizations"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "attacks",
+                "object": "media entities"
+            },
+            {
+                "subject": "attack chains",
+                "relation": "leverage",
+                "object": "phishing messages"
+            },
+            {
+                "subject": "phishing messages",
+                "relation": "contain",
+                "object": "HTA, RAR, and LNK file attachments"
+            },
+            {
+                "subject": "attack chains",
+                "relation": "lead to",
+                "object": "deployment of LONEPAGE"
+            },
+            {
+                "subject": "LONEPAGE",
+                "relation": "is a",
+                "object": "Visual Basic Script malware"
+            },
+            {
+                "subject": "LONEPAGE",
+                "relation": "contacts",
+                "object": "a command-and-control (C2) server"
+            },
+            {
+                "subject": "C2 server",
+                "relation": "retrieve",
+                "object": "additional payloads"
+            },
+            {
+                "subject": "additional payloads",
+                "relation": "include",
+                "object": "keyloggers, stealers, and screenshot malware"
+            },
+            {
+                "subject": "Deep Instinct",
+                "relation": "reveals",
+                "object": "use of HTA attachments"
+            },
+            {
+                "subject": "infection chains",
+                "relation": "leverage",
+                "object": "SFX archives"
+            },
+            {
+                "subject": "infection chains",
+                "relation": "leverage",
+                "object": "booby-trapped ZIP files"
+            },
+            {
+                "subject": "ZIP files",
+                "relation": "exploit",
+                "object": "WinRAR vulnerability (CVE-2023-38831, CVSS score: 7.8)"
+            },
+            {
+                "subject": "ZIP files",
+                "relation": "distribute",
+                "object": "LONEPAGE"
+            }
+        ],
+        "triples_count": 19,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 825,
+                "cost": 0.00825
+            },
+            "output": {
+                "tokens": 523,
+                "cost": 0.01569
+            },
+            "total": {
+                "tokens": 1348,
+                "cost": 0.02394
+            }
+        },
+        "time": 14.304099321365356,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/thehackernews/UAC-0099-QD1-yBC.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "thehackernews: UAC-0050.json",
+                    0.22722179077017868
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 16,
+                "fp": 3,
+                "fn": 6,
+                "precision": 0.8421052631578947,
+                "recall": 0.7272727272727273,
+                "f1": 0.7804878048780488
+            },
+            "matched_list": [
+                [
+                    [
+                        "UAC-0099",
+                        "linked to",
+                        "attacks aimed at Ukraine"
+                    ],
+                    [
+                        "UAC-0099",
+                        "linked to",
+                        "attacks aimed at Ukraine"
+                    ]
+                ],
+                [
+                    [
+                        "UAC-0099",
+                        "leverage",
+                        "a high-severity flaw in WinRAR"
+                    ],
+                    [
+                        "UAC-0099",
+                        "leverage",
+                        "flaw in the WinRAR software"
+                    ]
+                ],
+                [
+                    [
+                        "UAC-0099",
+                        "targets",
+                        "Ukrainian employees working for companies outside of Ukraine"
+                    ],
+                    [
+                        "UAC-0099",
+                        "targets",
+                        "Ukrainian employees"
+                    ]
+                ],
+                [
+                    [
+                        "CERT-UA",
+                        "documented",
+                        "UAC-0099"
+                    ],
+                    [
+                        "CERT-UA",
+                        "documented",
+                        "UAC-0099"
+                    ]
+                ],
+                [
+                    [
+                        "UAC-0099",
+                        "attacks",
+                        "state organizations"
+                    ],
+                    [
+                        "UAC-0099",
+                        "attacks",
+                        "state organizations"
+                    ]
+                ],
+                [
+                    [
+                        "UAC-0099",
+                        "attacks",
+                        "media entities"
+                    ],
+                    [
+                        "UAC-0099",
+                        "attacks",
+                        "media entities"
+                    ]
+                ],
+                [
+                    [
+                        "attack chains",
+                        "leverage",
+                        "phishing messages"
+                    ],
+                    [
+                        "attack chains",
+                        "leveraged",
+                        "phishing messages"
+                    ]
+                ],
+                [
+                    [
+                        "phishing messages",
+                        "contain",
+                        "HTA, RAR, and LNK file attachments"
+                    ],
+                    [
+                        "phishing messages",
+                        "contain",
+                        "HTA, RAR, and LNK file attachments"
+                    ]
+                ],
+                [
+                    [
+                        "LONEPAGE",
+                        "is a",
+                        "Visual Basic Script malware"
+                    ],
+                    [
+                        "LONEPAGE",
+                        "is",
+                        "VBS malware"
+                    ]
+                ],
+                [
+                    [
+                        "LONEPAGE",
+                        "contacts",
+                        "a command-and-control (C2) server"
+                    ],
+                    [
+                        "LONEPAGE",
+                        "capable of contacting",
+                        "command-and-control (C2) server"
+                    ]
+                ],
+                [
+                    [
+                        "C2 server",
+                        "retrieve",
+                        "additional payloads"
+                    ],
+                    [
+                        "command-and-control (C2) server",
+                        "to retrieve",
+                        "additional payloads"
+                    ]
+                ],
+                [
+                    [
+                        "additional payloads",
+                        "include",
+                        "keyloggers, stealers, and screenshot malware"
+                    ],
+                    [
+                        "additional payloads",
+                        "such as",
+                        "keyloggers, stealers, and screenshot malware"
+                    ]
+                ],
+                [
+                    [
+                        "Deep Instinct",
+                        "reveals",
+                        "use of HTA attachments"
+                    ],
+                    [
+                        "Deep Instinct",
+                        "reveals",
+                        "use of HTA attachments"
+                    ]
+                ],
+                [
+                    [
+                        "infection chains",
+                        "leverage",
+                        "SFX archives"
+                    ],
+                    [
+                        "other infection chains",
+                        "leverage",
+                        "self-extracting (SFX) archives"
+                    ]
+                ],
+                [
+                    [
+                        "infection chains",
+                        "leverage",
+                        "booby-trapped ZIP files"
+                    ],
+                    [
+                        "other infection chains",
+                        "leverage",
+                        "booby-trapped ZIP files"
+                    ]
+                ],
+                [
+                    [
+                        "ZIP files",
+                        "exploit",
+                        "WinRAR vulnerability (CVE-2023-38831, CVSS score: 7.8)"
+                    ],
+                    [
+                        "ZIP files",
+                        "exploit",
+                        "the WinRAR vulnerability"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "UAC-0099",
+                    "deliver",
+                    "LONEPAGE"
+                ],
+                [
+                    "attack chains",
+                    "lead to",
+                    "deployment of LONEPAGE"
+                ],
+                [
+                    "ZIP files",
+                    "distribute",
+                    "LONEPAGE"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "flaw in the WinRAR software",
+                    "to deliver",
+                    "LONEPAGE malware"
+                ],
+                [
+                    "Ukrainian employees",
+                    "working for",
+                    "companies outside of Ukraine"
+                ],
+                [
+                    "attacks",
+                    "for",
+                    "espionage motives"
+                ],
+                [
+                    "HTA, RAR, and LNK file attachments",
+                    "lead to",
+                    "deployment of LONEPAGE"
+                ],
+                [
+                    "use of HTA attachments",
+                    "is",
+                    "one of three different infection chains"
+                ],
+                [
+                    "the WinRAR vulnerability",
+                    "is",
+                    "CVE-2023-38831, CVSS score: 7.8"
+                ]
+            ]
+        }
+    }
+}

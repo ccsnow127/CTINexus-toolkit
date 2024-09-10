@@ -1,0 +1,355 @@
+{
+    "CTI": {
+        "text": "More threat actors have started exploiting two recently resolved vulnerabilities in the ConnectWise ScreenConnect remote desktop access software. The issues, tracked as CVE-2024-1709 (CVSS score of 10) and CVE-2024-1708 (CVSS score of 8.4), are described as an authentication bypass flaw and a path traversal bug. ConnectWise disclosed the security defects on February 19, when it announced patches for them. Two days later, the company updated its advisory to warn of ongoing exploitation. \u201cEssentially, a bad actor could mimic the role as system admin, delete all other users and take over the instance,\u201d the company notes in its advisory. A proof-of-concept (PoC) exploit targeting the flaws, collectively referred to as SlashAndGrab, was made public last week, and threat actors quickly started exploiting them for malware delivery. Now, Trend Micro says that more cybercrime groups have started exploiting the flaws, including the Black Basta and Bl00dy ransomware groups. Following initial access to vulnerable servers, Black Basta was seen performing reconnaissance, discovery, and elevation of privilege activities, and deploying Cobalt Strike payloads. In addition to searching for members of the \u2018domain admin\u2019 group, the attackers also added new accounts to the administrator group and deployed scripts to identify machines that recently connected to the Active Directory environment.",
+        "link": "https://www.securityweek.com/black-basta-bl00dy-ransomware-exploiting-recent-screenconnect-flaws/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "threat actors",
+                "relation": "started exploiting",
+                "object": "two recently resolved vulnerabilities in the ConnectWise ScreenConnect remote desktop access software"
+            },
+            {
+                "subject": "two recently resolved vulnerabilities",
+                "relation": "in",
+                "object": "the ConnectWise ScreenConnect remote desktop access software"
+            },
+            {
+                "subject": "CVE-2024-1709",
+                "relation": "is described as",
+                "object": "an authentication bypass flaw"
+            },
+            {
+                "subject": "CVE-2024-1709",
+                "relation": "has CVSS score of",
+                "object": "10"
+            },
+            {
+                "subject": "CVE-2024-1708",
+                "relation": "is described as",
+                "object": "a path traversal bug"
+            },
+            {
+                "subject": "CVE-2024-1708",
+                "relation": "has CVSS score of",
+                "object": "8.4"
+            },
+            {
+                "subject": "ConnectWise",
+                "relation": "disclosed",
+                "object": "the security defects"
+            },
+            {
+                "subject": "ConnectWise",
+                "relation": "announced patches for",
+                "object": "the security defects"
+            },
+            {
+                "subject": "a bad actor",
+                "relation": "could mimic the role as",
+                "object": "system admin"
+            },
+            {
+                "subject": "SlashAndGrab",
+                "relation": "is a",
+                "object": "proof-of-concept (PoC) exploit targeting the flaws"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "started exploiting",
+                "object": "them for malware delivery"
+            },
+            {
+                "subject": "cybercrime groups",
+                "relation": "started exploiting",
+                "object": "the flaws"
+            },
+            {
+                "subject": "Black Basta",
+                "relation": "is a",
+                "object": "ransomware group"
+            },
+            {
+                "subject": "Bl00dy",
+                "relation": "is a",
+                "object": "ransomware group"
+            },
+            {
+                "subject": "Black Basta",
+                "relation": "was seen performing",
+                "object": "reconnaissance, discovery, and elevation of privilege activities"
+            },
+            {
+                "subject": "Black Basta",
+                "relation": "deploying",
+                "object": "Cobalt Strike payloads"
+            },
+            {
+                "subject": "attackers",
+                "relation": "added",
+                "object": "new accounts to the administrator group"
+            },
+            {
+                "subject": "attackers",
+                "relation": "deployed",
+                "object": "scripts to identify machines that recently connected to the Active Directory environment"
+            }
+        ],
+        "triples_count": 18,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1527,
+                "cost": 0.01527
+            },
+            "output": {
+                "tokens": 499,
+                "cost": 0.01497
+            },
+            "total": {
+                "tokens": 2026,
+                "cost": 0.030240000000000003
+            }
+        },
+        "time": 21.66560196876526,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/securityweek/screenconnect-QD1-L6V.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "zuorat.json",
+                    "random"
+                ],
+                [
+                    "iPhone-Users.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 3,
+                "fn": 2,
+                "precision": 0.8333333333333334,
+                "recall": 0.8823529411764706,
+                "f1": 0.8571428571428571
+            },
+            "matched_list": [
+                [
+                    [
+                        "threat actors",
+                        "started exploiting",
+                        "two recently resolved vulnerabilities in the ConnectWise ScreenConnect remote desktop access software"
+                    ],
+                    [
+                        "threat actors",
+                        "have started exploiting",
+                        "recently resolved vulnerabilities in ConnectWise ScreenConnect"
+                    ]
+                ],
+                [
+                    [
+                        "two recently resolved vulnerabilities",
+                        "in",
+                        "the ConnectWise ScreenConnect remote desktop access software"
+                    ],
+                    [
+                        "threat actors",
+                        "have started exploiting",
+                        "recently resolved vulnerabilities in ConnectWise ScreenConnect"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-1709",
+                        "is described as",
+                        "an authentication bypass flaw"
+                    ],
+                    [
+                        "CVE-2024-1709",
+                        "is a",
+                        "an authentication bypass flaw"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-1709",
+                        "has CVSS score of",
+                        "10"
+                    ],
+                    [
+                        "CVE-2024-1709",
+                        "has",
+                        "CVSS score of 10"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-1708",
+                        "is described as",
+                        "a path traversal bug"
+                    ],
+                    [
+                        "CVE-2024-1708",
+                        "is a",
+                        "a path traversal bug"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-1708",
+                        "has CVSS score of",
+                        "8.4"
+                    ],
+                    [
+                        "CVE-2024-1708",
+                        "has",
+                        "CVSS score of 8.4"
+                    ]
+                ],
+                [
+                    [
+                        "ConnectWise",
+                        "disclosed",
+                        "the security defects"
+                    ],
+                    [
+                        "ConnectWise",
+                        "disclosed",
+                        "the security defects"
+                    ]
+                ],
+                [
+                    [
+                        "ConnectWise",
+                        "announced patches for",
+                        "the security defects"
+                    ],
+                    [
+                        "ConnectWise",
+                        "disclosed",
+                        "the security defects"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "started exploiting",
+                        "them for malware delivery"
+                    ],
+                    [
+                        "threat actors",
+                        "started exploiting",
+                        "them for malware delivery"
+                    ]
+                ],
+                [
+                    [
+                        "cybercrime groups",
+                        "started exploiting",
+                        "the flaws"
+                    ],
+                    [
+                        "cybercrime groups",
+                        "have started exploiting",
+                        "the flaws"
+                    ]
+                ],
+                [
+                    [
+                        "Bl00dy",
+                        "is a",
+                        "ransomware group"
+                    ],
+                    [
+                        "Bl00dy ransomware groups",
+                        "is exploiting",
+                        "the flaws"
+                    ]
+                ],
+                [
+                    [
+                        "Black Basta",
+                        "was seen performing",
+                        "reconnaissance, discovery, and elevation of privilege activities"
+                    ],
+                    [
+                        "Black Basta",
+                        "performed",
+                        "reconnaissance, discovery, and elevation of privilege activities"
+                    ]
+                ],
+                [
+                    [
+                        "Black Basta",
+                        "deploying",
+                        "Cobalt Strike payloads"
+                    ],
+                    [
+                        "Black Basta",
+                        "deployed",
+                        "Cobalt Strike payloads"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "added",
+                        "new accounts to the administrator group"
+                    ],
+                    [
+                        "attackers",
+                        "added",
+                        "new accounts to the administrator group"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "deployed",
+                        "scripts to identify machines that recently connected to the Active Directory environment"
+                    ],
+                    [
+                        "attackers",
+                        "deployed scripts to identify",
+                        "machines that recently connected to the Active Directory environment"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "a bad actor",
+                    "could mimic the role as",
+                    "system admin"
+                ],
+                [
+                    "SlashAndGrab",
+                    "is a",
+                    "proof-of-concept (PoC) exploit targeting the flaws"
+                ],
+                [
+                    "Black Basta",
+                    "is a",
+                    "ransomware group"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "a PoC exploit targeting the flaws",
+                    "was made public",
+                    "last week"
+                ],
+                [
+                    "Black Basta",
+                    "is exploiting",
+                    "the flaws"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

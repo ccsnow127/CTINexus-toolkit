@@ -1,0 +1,680 @@
+{
+    "CTI": {
+        "text": "In June 2023, Google\u2019s Threat Analysis Group (TAG) discovered an in-the-wild 0-day exploit targeting Zimbra Collaboration, an email server many organizations use to host their email. Since discovering the 0-day, now patched as CVE-2023-37580, TAG has observed four different groups exploiting the same bug to steal email data, user credentials, and authentication tokens. Most of this activity occurred after the initial fix became public on Github. CVE-2023-37580 is a reflected cross-site scripting (XSS) vulnerability. XSS is a web application vulnerability that allows malicious scripts to be injected into another website. In this case, there was a vulnerability in Zimbra that injected the parameter within the URL directly into the webpage, causing the script to be executed. ",
+        "link": "https://blog.google/threat-analysis-group/zimbra-0-day-used-to-target-international-government-organizations/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Google\u2019s Threat Analysis Group (TAG)",
+                "relation": "discovered",
+                "object": "an in-the-wild 0-day exploit"
+            },
+            {
+                "subject": "an in-the-wild 0-day exploit",
+                "relation": "targeting",
+                "object": "Zimbra Collaboration"
+            },
+            {
+                "subject": "Zimbra Collaboration",
+                "relation": "is used by",
+                "object": "many organizations to host their email"
+            },
+            {
+                "subject": "the 0-day",
+                "relation": "is patched as",
+                "object": "CVE-2023-37580"
+            },
+            {
+                "subject": "CVE-2023-37580",
+                "relation": "is exploited by",
+                "object": "four different groups"
+            },
+            {
+                "subject": "groups",
+                "relation": "steal",
+                "object": "email data"
+            },
+            {
+                "subject": "groups",
+                "relation": "steal",
+                "object": "user credentials"
+            },
+            {
+                "subject": "groups",
+                "relation": "steal",
+                "object": "authentication tokens"
+            },
+            {
+                "subject": "CVE-2023-37580",
+                "relation": "is a",
+                "object": "reflected cross-site scripting (XSS) vulnerability"
+            },
+            {
+                "subject": "XSS",
+                "relation": "allows",
+                "object": "malicious scripts to be injected into another website"
+            },
+            {
+                "subject": "a vulnerability in Zimbra",
+                "relation": "injected the parameter within",
+                "object": "the URL directly into the webpage"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1952,
+                "cost": 0.019520000000000003
+            },
+            "output": {
+                "tokens": 309,
+                "cost": 0.00927
+            },
+            "total": {
+                "tokens": 2261,
+                "cost": 0.028790000000000003
+            }
+        },
+        "time": 7.421259880065918,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Google_TAG/zimbra-QD1-SZg.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-chrome.json",
+                    0.11446999925440343
+                ],
+                [
+                    "BleepingComputer-vmware.json",
+                    0.12981529063931488
+                ],
+                [
+                    "BleepingComputer-github.json",
+                    0.1313617987152128
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Google\u2019s Threat Analysis Group (TAG)",
+                    "class": "Organization"
+                },
+                "relation": "discovered",
+                "object": {
+                    "text": "an in-the-wild 0-day exploit",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "an in-the-wild 0-day exploit",
+                    "class": "Event"
+                },
+                "relation": "targeting",
+                "object": {
+                    "text": "Zimbra Collaboration",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Zimbra Collaboration",
+                    "class": "Infrastructure"
+                },
+                "relation": "is used by",
+                "object": {
+                    "text": "many organizations to host their email",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the 0-day",
+                    "class": "Event"
+                },
+                "relation": "is patched as",
+                "object": {
+                    "text": "CVE-2023-37580",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-37580",
+                    "class": "Vulnerability"
+                },
+                "relation": "is exploited by",
+                "object": {
+                    "text": "four different groups",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "groups",
+                    "class": "Attacker"
+                },
+                "relation": "steal",
+                "object": {
+                    "text": "email data",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "groups",
+                    "class": "Attacker"
+                },
+                "relation": "steal",
+                "object": {
+                    "text": "user credentials",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "groups",
+                    "class": "Attacker"
+                },
+                "relation": "steal",
+                "object": {
+                    "text": "authentication tokens",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-37580",
+                    "class": "Vulnerability"
+                },
+                "relation": "is a",
+                "object": {
+                    "text": "reflected cross-site scripting (XSS) vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "XSS",
+                    "class": "Vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "malicious scripts to be injected into another website",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a vulnerability in Zimbra",
+                    "class": "Vulnerability"
+                },
+                "relation": "injected the parameter within",
+                "object": {
+                    "text": "the URL directly into the webpage",
+                    "class": "Indicator:URL"
+                }
+            }
+        ],
+        "response_time": 27.28211236000061,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/Google_TAG/zimbra.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1447,
+                "cost": 0.014470000000000002
+            },
+            "output": {
+                "tokens": 613,
+                "cost": 0.01839
+            },
+            "total": {
+                "tokens": 2060,
+                "cost": 0.03286
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "Google\u2019s Threat Analysis Group (TAG)",
+                    "mention_class": "Organization",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Google\u2019s Threat Analysis Group (TAG)"
+                    ],
+                    "entity_text": "Google\u2019s Threat Analysis Group (TAG)"
+                },
+                "relation": "discovered",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "an in-the-wild 0-day exploit",
+                    "mention_class": "Event",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an in-the-wild 0-day exploit",
+                        "an in-the-wild 0-day exploit",
+                        "the 0-day"
+                    ],
+                    "entity_text": "an in-the-wild 0-day exploit"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "an in-the-wild 0-day exploit",
+                    "mention_class": "Event",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an in-the-wild 0-day exploit",
+                        "an in-the-wild 0-day exploit",
+                        "the 0-day"
+                    ],
+                    "entity_text": "an in-the-wild 0-day exploit"
+                },
+                "relation": "targeting",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "Zimbra Collaboration",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "Zimbra Collaboration"
+                    ],
+                    "entity_text": "Zimbra Collaboration"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "Zimbra Collaboration",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "Zimbra Collaboration"
+                    ],
+                    "entity_text": "Zimbra Collaboration"
+                },
+                "relation": "is used by",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "many organizations to host their email",
+                    "mention_class": "Information",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "many organizations to host their email"
+                    ],
+                    "entity_text": "many organizations to host their email"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "the 0-day",
+                    "mention_class": "Event",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an in-the-wild 0-day exploit",
+                        "an in-the-wild 0-day exploit",
+                        "the 0-day"
+                    ],
+                    "entity_text": "an in-the-wild 0-day exploit"
+                },
+                "relation": "is patched as",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "CVE-2023-37580",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "CVE-2023-37580",
+                        "CVE-2023-37580",
+                        "CVE-2023-37580"
+                    ],
+                    "entity_text": "CVE-2023-37580"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "CVE-2023-37580",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "CVE-2023-37580",
+                        "CVE-2023-37580",
+                        "CVE-2023-37580"
+                    ],
+                    "entity_text": "CVE-2023-37580"
+                },
+                "relation": "is exploited by",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "four different groups",
+                    "mention_class": "Attacker",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "four different groups"
+                    ],
+                    "entity_text": "four different groups"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "groups",
+                    "mention_class": "Attacker",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "groups",
+                        "groups",
+                        "groups"
+                    ],
+                    "entity_text": "groups"
+                },
+                "relation": "steal",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "email data",
+                    "mention_class": "Information",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "email data"
+                    ],
+                    "entity_text": "email data"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "groups",
+                    "mention_class": "Attacker",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "groups",
+                        "groups",
+                        "groups"
+                    ],
+                    "entity_text": "groups"
+                },
+                "relation": "steal",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "user credentials",
+                    "mention_class": "Credential",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "user credentials"
+                    ],
+                    "entity_text": "user credentials"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "groups",
+                    "mention_class": "Attacker",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "groups",
+                        "groups",
+                        "groups"
+                    ],
+                    "entity_text": "groups"
+                },
+                "relation": "steal",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "authentication tokens",
+                    "mention_class": "Credential",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "authentication tokens"
+                    ],
+                    "entity_text": "authentication tokens"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "CVE-2023-37580",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "CVE-2023-37580",
+                        "CVE-2023-37580",
+                        "CVE-2023-37580"
+                    ],
+                    "entity_text": "CVE-2023-37580"
+                },
+                "relation": "is a",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "reflected cross-site scripting (XSS) vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "reflected cross-site scripting (XSS) vulnerability",
+                        "XSS"
+                    ],
+                    "entity_text": "XSS"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "XSS",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "reflected cross-site scripting (XSS) vulnerability",
+                        "XSS"
+                    ],
+                    "entity_text": "XSS"
+                },
+                "relation": "allows",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "malicious scripts to be injected into another website",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "malicious scripts to be injected into another website"
+                    ],
+                    "entity_text": "malicious scripts to be injected into another website"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "a vulnerability in Zimbra",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "a vulnerability in Zimbra"
+                    ],
+                    "entity_text": "a vulnerability in Zimbra"
+                },
+                "relation": "injected the parameter within",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "the URL directly into the webpage",
+                    "mention_class": "Indicator:URL",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "the URL directly into the webpage"
+                    ],
+                    "entity_text": "the URL directly into the webpage"
+                }
+            }
+        ],
+        "mentions_num": 22,
+        "response_time": 4.624213218688965,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 15
+    },
+    "LP": {
+        "predicted_links": [
+            {
+                "subject": {
+                    "entity_id": 3,
+                    "mention_text": "Zimbra Collaboration"
+                },
+                "relation": "was targeted by",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "an in-the-wild 0-day exploit",
+                    "mention_class": "Event",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an in-the-wild 0-day exploit",
+                        "an in-the-wild 0-day exploit",
+                        "the 0-day"
+                    ],
+                    "entity_text": "an in-the-wild 0-day exploit"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 9,
+                    "mention_text": "groups"
+                },
+                "relation": "are exploiting",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "an in-the-wild 0-day exploit",
+                    "mention_class": "Event",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an in-the-wild 0-day exploit",
+                        "an in-the-wild 0-day exploit",
+                        "the 0-day"
+                    ],
+                    "entity_text": "an in-the-wild 0-day exploit"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 8,
+                    "mention_text": "a vulnerability in Zimbra"
+                },
+                "relation": "led to",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "an in-the-wild 0-day exploit",
+                    "mention_class": "Event",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "an in-the-wild 0-day exploit",
+                        "an in-the-wild 0-day exploit",
+                        "the 0-day"
+                    ],
+                    "entity_text": "an in-the-wild 0-day exploit"
+                }
+            }
+        ],
+        "response_time": 2.9694199562072754,
+        "model": "gpt-3.5-turbo-0125",
+        "usage": {
+            "input": {
+                "tokens": 2209,
+                "cost": 0.0011045
+            },
+            "output": {
+                "tokens": 120,
+                "cost": 0.00018
+            },
+            "total": {
+                "tokens": 2329,
+                "cost": 0.0012845
+            }
+        },
+        "topic_node": {
+            "mention_id": 1,
+            "mention_text": "an in-the-wild 0-day exploit",
+            "mention_class": "Event",
+            "entity_id": 1,
+            "mentions_merged": [
+                "an in-the-wild 0-day exploit",
+                "an in-the-wild 0-day exploit",
+                "the 0-day"
+            ],
+            "entity_text": "an in-the-wild 0-day exploit"
+        },
+        "main_nodes": [
+            {
+                "mention_id": 4,
+                "mention_text": "Zimbra Collaboration",
+                "mention_class": "Infrastructure",
+                "entity_id": 3,
+                "mentions_merged": [
+                    "Zimbra Collaboration"
+                ],
+                "entity_text": "Zimbra Collaboration"
+            },
+            {
+                "mention_id": 10,
+                "mention_text": "groups",
+                "mention_class": "Attacker",
+                "entity_id": 9,
+                "mentions_merged": [
+                    "groups",
+                    "groups",
+                    "groups"
+                ],
+                "entity_text": "groups"
+            },
+            {
+                "mention_id": 20,
+                "mention_text": "a vulnerability in Zimbra",
+                "mention_class": "Vulnerability",
+                "entity_id": 8,
+                "mentions_merged": [
+                    "a vulnerability in Zimbra"
+                ],
+                "entity_text": "a vulnerability in Zimbra"
+            }
+        ],
+        "subgraphs": [
+            [
+                0,
+                1,
+                2,
+                6,
+                7,
+                10,
+                13
+            ],
+            [
+                3,
+                4
+            ],
+            [
+                9,
+                11,
+                12,
+                5
+            ],
+            [
+                8,
+                14
+            ]
+        ],
+        "subgraph_num": 4,
+        "Eval": {
+            "correct": 2,
+            "incorrect": 1
+        }
+    }
+}

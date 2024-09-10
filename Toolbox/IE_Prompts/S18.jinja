@@ -1,0 +1,43 @@
+You are a security analyst, you are analyzing cyber threats by reading and extracting useful information from reports about cyber threats. Extracted information should follow the format of {"subject": ..., "relation": "...", "object": "..."}. Not all information is useful, useful information includes: threat actor, attack pattern, campaign, identity, indicator, infrastructure, location, tool, vulnerability, malware. I have provided 2 examples, read the examples and learn how to extract useful information. At the end, you should extract triplets from the Target report. Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"CTI": This malware family uses the .NET framework and leverages the domain name service (DNS) protocol to create a covert channel and provide different backdoor functionalities. Early this year, Ukrainian cybersecurity researchers found Fighting Ursa leveraging a zero-day exploit in Microsoft Outlook (now known as CVE-2023-23397). This vulnerability is especially concerning since it does not require user interaction to exploit. Unit 42 researchers have observed this group using CVE-2023-23397 over the past 20 months to target at least 30 organizations within 14 nations that are of likely strategic intelligence value to the Russian government and its military. 
+
+"triplets": [
+{"subject": "This malware family", "relation": "uses", "object": ".NET framework"}, 
+{"subject": "This malware family", "relation": "leverages", "object": "the domain name service (DNS) protocol"}, 
+{"subject": "This malware family", "relation": "creates", "object": "a covert channel"}, 
+{"subject": "This malware family", "relation": "provides", "object": "different backdoor functionalities"}, 
+{"subject": "Ukrainian cybersecurity researchers", "relation": "discovered", "object": "Fighting Ursa"}, 
+{"subject": "Fighting Ursa", "relation": "leverage", "object": "a zero-day exploit in Microsoft Outlook"}, 
+{"subject": "a zero-day exploit in Microsoft Outlook", "relation": "is known as", "object": "CVE-2023-23397"},
+{"subject": "CVE-2023-23397", "relation": "is exploited", "object": "without user interaction"}, 
+{"subject": "Unit 42 researchers", "relation": "discovered", "object": "Fighting Ursa"}, 
+{"subject": "Fighting Ursa", "relation": "used", "object": "CVE-2023-23397"}, 
+{"subject": "Fighting Ursa", "relation": "targeted", "object": "at least 30 organizations within 14 nations"}, 
+{"subject": "at least 30 organizations within 14 nations", "relation": "are of likely strategic intelligence value to", "object": "the Russian government and its military"}
+]
+---------------------
+Example 2:
+
+"CTI": Fighting Ursa (aka APT28, Fancy Bear, Strontium/Forest Blizzard, Pawn Storm, Sofacy, or Sednit) is a group associated with Russia"s military intelligence, and they are well known for their focus on targets of Russian interest – especially those of military interest. Fighting Ursa has been attributed to Russia"s General Staff Main Intelligence Directorate (GRU) 85th Special Service Centre (GTsSS) military intelligence Unit 26165.
+
+"triplets": [
+{"subject": "Fighting Ursa", "relation": "is known as", "object": "APT28"}, 
+{"subject": "Fighting Ursa", "relation": "is known as", "object": "Fancy Bear"}, 
+{"subject": "Fighting Ursa", "relation": "is known as", "object": "Strontium/Forest Blizzard"}, 
+{"subject": "Fighting Ursa", "relation": "is known as", "object": "Pawn Storm"},  
+{"subject": "Fighting Ursa", "relation": "is known as", "object": "Sofacy"},  
+{"subject": "Fighting Ursa", "relation": "is known as", "object": "Sednit"},  
+{"subject": "Fighting Ursa", "relation": "is", "object": "a group associated with Russia"s military intelligence"},  
+{"subject": "Fighting Ursa", "relation": "focuses on", "object": "targets of Russian interest"},  
+{"subject": "targets of Russian interest", "relation": "are especially of", "object": "military interest"}, 
+{"subject": "Fighting Ursa", "relation": "has been attributed to", "object": "Russia"s General Staff Main Intelligence Directorate (GRU) 85th Special Service Centre (GTsSS) military intelligence Unit 26165"}
+]
+---------------------
+Target report:
+
+"CTI": The Akira ransomware group, a relatively new player in the ransomware market, has claimed responsibility for three recent attacks. The victims include 4LEAF, an American engineering consultancy business; Park-Rite, a U.S.-based packaging materials manufacturer; and Family Day Care Services, a Canadian childcare service. Akira listed the names of the three victims on their leak site threatening to release company records if they refuse to pay a ransom.Researchers discovered the ransomware Trojan on August 28, 2017, and at that time, it appeared to be in its testing phase. The Trojan is currently being distributed by targeting unprotected websites, with a specific focus on WordPress sites. Once infected, Akira drops one or multiple payload files. After infection, a ransom note is left before the ransomware creates multiple registry values in Windows, such as the Run and RunOnce registries. The presence of .akira files means that your data has likely been encrypted by Akira ransomware.
+
+"triplets": """insert your answer here, don't output ```json ```"""

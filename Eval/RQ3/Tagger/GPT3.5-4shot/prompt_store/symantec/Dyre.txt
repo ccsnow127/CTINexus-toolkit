@@ -1,0 +1,112 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Dyre', 'relation': 'is', 'object': 'a financial Trojan'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Dyre', 'relation': 'is configured to defraud', 'object': 'the customers of more than 1,000 banks and other companies worldwide'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Consumers in English-speaking countries', 'relation': 'are most at risk by', 'object': 'Dyre'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'English-speaking countries', 'relation': 'include', 'object': 'the US and UK'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Dyre', 'relation': 'took place of', 'object': 'Gameover Zeus, Shylock, and Ramnit as a main threat'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Symantec', 'relation': 'detected', 'object': 'Dyre as Infostealer.Dyre'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Dyre', 'relation': 'targets', 'object': 'Windows computers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Dyre', 'relation': 'can steal', 'object': 'banking and other credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Dyre', 'relation': 'attacks', 'object': 'Internet Explorer, Chrome, and Firefox'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Dyre', 'relation': 'is used to infect victims with', 'object': 'other types of malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Other types of malware', 'relation': 'include', 'object': 'adding victims to spam botnets'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

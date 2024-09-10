@@ -1,0 +1,126 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': "CISA, FBI, U.S. Cyber Command Cyber National Mission Force (CNMF), United Kingdom's National Cyber Security Centre (NCSC-UK), and the National Security Agency (NSA)", 'relation': 'released', 'object': 'a joint statement'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'is known for', 'object': 'cyber espionage'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'is', 'object': "a part of Iran's Ministry of Intelligence and Security"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'targeted', 'object': 'government and private sector organizations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'targeted organizations', 'relation': 'are in', 'object': 'the defense, oil and natural gas, local government, and telecommunications industries'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'focuses on', 'object': 'Asia, Africa, Europe, and North America'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'conducts', 'object': 'broad cyber campaigns'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'exploits', 'object': 'publicly reported vulnerabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'uses', 'object': 'open-source tools and strategies'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'is also known as', 'object': 'MERCURY, Earth Vetala, Static Kitten, Seedworm, TEMP.Zagros'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'is', 'object': 'an Iranian APT'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'is a subservient element within', 'object': 'the Iranian Ministry of Intelligence and Security (MOIS)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'has been active since', 'object': '2018'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'provided', 'object': 'stolen data and access to the Iranian government'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'exploited', 'object': 'known vulnerabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'used', 'object': 'open-source tools to deploy their ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cisco Talos', 'relation': 'observed', 'object': 'a campaign targeting Turkey government entities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the campaign', 'relation': 'targeted', 'object': 'the Scientific and Technological Research Council of Turkey - Tubitak'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'MuddyWater', 'relation': 'has goals', 'object': 'cyber espionage, intellectual property theft, and ransomware attacks'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

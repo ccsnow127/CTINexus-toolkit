@@ -1,0 +1,289 @@
+{
+    "CTI": {
+        "text": "Threat actors are exploiting a critical vulnerability in Magento to inject a persistent backdoor into ecommerce websites, cybersecurity firm Sansec reports. The issue, tracked as CVE-2024-20720 (CVSS score of 9.1), is described as an OS command injection flaw leading to arbitrary code execution without user interaction. Adobe resolved the critical vulnerability in February 2024 in both Adobe Commerce and Magento, as part of its Tuesday Patch updates. However, it appears that there are websites that have yet to be updated and remain vulnerable to exploitation. According to Sansec, threat actors have discovered a clever way to exploit CVE-2024-20720, using a crafted layout template in the database to inject XML code that can reinfect Magento servers even after a manual fix. Attackers combine the Magento layout parser with the beberlei/assert package (installed by default) to execute system commands. Because the layout block is tied to the checkout cart, this command is executed whenever <store>/checkout/cart is requested. As part of the observed attacks, the backdoor is added to the automatically generated content management system (CMS) controller, ensuring the backdoor is periodically reinjected and providing persistent remote code execution via POST commands. The threat actors have employed the mechanism to inject a fake Stripe payment skimmer and steal payment data from the compromised web stores.",
+        "link": "https://www.securityweek.com/magento-vulnerability-exploited-to-deploy-persistent-backdoor/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Threat actors",
+                "relation": "are exploiting",
+                "object": "a critical vulnerability in Magento"
+            },
+            {
+                "subject": "Critical vulnerability",
+                "relation": "tracked as",
+                "object": "CVE-2024-20720"
+            },
+            {
+                "subject": "CVE-2024-20720",
+                "relation": "is described as",
+                "object": "an OS command injection flaw"
+            },
+            {
+                "subject": "CVE-2024-20720",
+                "relation": "leads to",
+                "object": "arbitrary code execution without user interaction"
+            },
+            {
+                "subject": "Adobe",
+                "relation": "resolved",
+                "object": "the critical vulnerability in February 2024"
+            },
+            {
+                "subject": "CVE-2024-20720",
+                "relation": "is exploited using",
+                "object": "a crafted layout template in the database"
+            },
+            {
+                "subject": "Threat actors",
+                "relation": "inject XML code",
+                "object": "to reinfect Magento servers"
+            },
+            {
+                "subject": "Magento layout parser",
+                "relation": "is combined with",
+                "object": "the beberlei/assert package"
+            },
+            {
+                "subject": "The command",
+                "relation": "is executed",
+                "object": "whenever <store>/checkout/cart is requested"
+            },
+            {
+                "subject": "The backdoor",
+                "relation": "is added to",
+                "object": "the automatically generated CMS controller"
+            },
+            {
+                "subject": "Backdoor",
+                "relation": "provides",
+                "object": "persistent remote code execution via POST commands"
+            },
+            {
+                "subject": "Threat actors",
+                "relation": "have employed",
+                "object": "the mechanism to inject a fake Stripe payment skimmer"
+            },
+            {
+                "subject": "Fake Stripe payment skimmer",
+                "relation": "is used to",
+                "object": "steal payment data from the compromised web stores"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2091,
+                "cost": 0.02091
+            },
+            "output": {
+                "tokens": 465,
+                "cost": 0.01395
+            },
+            "total": {
+                "tokens": 2556,
+                "cost": 0.03486
+            }
+        },
+        "time": 21.867894649505615,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/securityweek/magento-QD1-69J.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "threatPost: Dogwalk.json",
+                    0.11157160206273911
+                ],
+                [
+                    "BleepingComputer: atlassian.json",
+                    0.13657726994856298
+                ],
+                [
+                    "securityweek: goblin.json",
+                    0.1529250800853244
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 13,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9285714285714286,
+                "f1": 0.962962962962963
+            },
+            "matched_list": [
+                [
+                    [
+                        "Threat actors",
+                        "are exploiting",
+                        "a critical vulnerability in Magento"
+                    ],
+                    [
+                        "threat actors",
+                        "are exploiting",
+                        "a critical vulnerability in Magento"
+                    ]
+                ],
+                [
+                    [
+                        "Critical vulnerability",
+                        "tracked as",
+                        "CVE-2024-20720"
+                    ],
+                    [
+                        "the critical vulnerability in Magento",
+                        "is tracked as",
+                        "CVE-2024-20720"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-20720",
+                        "is described as",
+                        "an OS command injection flaw"
+                    ],
+                    [
+                        "CVE-2024-20720",
+                        "is described as",
+                        "an OS command injection flaw"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-20720",
+                        "leads to",
+                        "arbitrary code execution without user interaction"
+                    ],
+                    [
+                        "threat actors",
+                        "exploit",
+                        "CVE-2024-20720"
+                    ]
+                ],
+                [
+                    [
+                        "Adobe",
+                        "resolved",
+                        "the critical vulnerability in February 2024"
+                    ],
+                    [
+                        "Adobe",
+                        "resolved",
+                        "the critical vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-20720",
+                        "is exploited using",
+                        "a crafted layout template in the database"
+                    ],
+                    [
+                        "threat actors",
+                        "use",
+                        "a crafted layout template in the database"
+                    ]
+                ],
+                [
+                    [
+                        "Threat actors",
+                        "inject XML code",
+                        "to reinfect Magento servers"
+                    ],
+                    [
+                        "XML code",
+                        "can reinfect",
+                        "Magento servers"
+                    ]
+                ],
+                [
+                    [
+                        "Magento layout parser",
+                        "is combined with",
+                        "the beberlei/assert package"
+                    ],
+                    [
+                        "attackers",
+                        "combine",
+                        "the Magento layout parser with the beberlei/assert package"
+                    ]
+                ],
+                [
+                    [
+                        "The command",
+                        "is executed",
+                        "whenever <store>/checkout/cart is requested"
+                    ],
+                    [
+                        "command",
+                        "is executed",
+                        "whenever <store>/checkout/cart is requested"
+                    ]
+                ],
+                [
+                    [
+                        "The backdoor",
+                        "is added to",
+                        "the automatically generated CMS controller"
+                    ],
+                    [
+                        "the backdoor",
+                        "is added to",
+                        "the automatically generated CMS controller"
+                    ]
+                ],
+                [
+                    [
+                        "Backdoor",
+                        "provides",
+                        "persistent remote code execution via POST commands"
+                    ],
+                    [
+                        "the backdoor",
+                        "ensures",
+                        "persistent remote code execution via POST commands"
+                    ]
+                ],
+                [
+                    [
+                        "Threat actors",
+                        "have employed",
+                        "the mechanism to inject a fake Stripe payment skimmer"
+                    ],
+                    [
+                        "threat actors",
+                        "have employed",
+                        "the mechanism to inject a fake Stripe payment skimmer"
+                    ]
+                ],
+                [
+                    [
+                        "Fake Stripe payment skimmer",
+                        "is used to",
+                        "steal payment data from the compromised web stores"
+                    ],
+                    [
+                        "a fake Stripe payment skimmer",
+                        "to steal",
+                        "payment data from compromised web stores"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "the layout block",
+                    "is tied to",
+                    "the checkout cart"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,321 @@
+{
+    "CTI": {
+        "text": "Attackers can exploit a critical Bluetooth security vulnerability that's been lurking largely unnoticed for years on macOS, iOS, Android, and Linux device platforms. The keystroke injection vulnerability allows an attacker to control the targeted device as if they were attached by a Bluetooth keyboard, performing various functions remotely depending on the endpoint. Tracked as CVE-2023-45866, the flaw exists in how in the Bluetooth protocol is implemented on various platforms. It works by tricking the Bluetooth host state-machine into pairing with a fake keyboard without user confirmation. The vulnerability enables an attacker to pair an emulated Bluetooth keyboard with a victim's phone or computer, implementing the keyboard as a Python script that runs on a Linux computer. The attacker can then inject keystrokes, typing on the target device as if they were a Bluetooth keyboard legitimately attached to the target.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/critical-bluetooth-flaw-exposes-android-apple-and-linux-devices-to-keystroke-injection-attack"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "attackers",
+                "relation": "exploit",
+                "object": "a critical Bluetooth security vulnerability"
+            },
+            {
+                "subject": "The critical Bluetooth security vulnerability",
+                "relation": "is on",
+                "object": "macOS, iOS, Android, and Linux device platforms"
+            },
+            {
+                "subject": "The critical Bluetooth security vulnerability",
+                "relation": "allows",
+                "object": "keystroke injection"
+            },
+            {
+                "subject": "keystroke injection vulnerability",
+                "relation": "allows",
+                "object": "an attacker to control the targeted device"
+            },
+            {
+                "subject": "CVE-2023-45866",
+                "relation": "exists in",
+                "object": "how the Bluetooth protocol is implemented"
+            },
+            {
+                "subject": "The flaw",
+                "relation": "works by",
+                "object": "tricking the Bluetooth host state-machine"
+            },
+            {
+                "subject": "The attacker",
+                "relation": "pair",
+                "object": "an emulated Bluetooth keyboard with a victim's phone or computer"
+            },
+            {
+                "subject": "The emulated Bluetooth keyboard",
+                "relation": "is implemented as",
+                "object": "a Python script that runs on a Linux computer"
+            },
+            {
+                "subject": "The attacker",
+                "relation": "inject keystrokes",
+                "object": "typing on the target device"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1740,
+                "cost": 0.017400000000000002
+            },
+            "output": {
+                "tokens": 261,
+                "cost": 0.00783
+            },
+            "total": {
+                "tokens": 2001,
+                "cost": 0.025230000000000002
+            }
+        },
+        "time": 7.084382057189941,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/darkreading/Bluetooth-Flaw-QD1-QXK.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-mastodon.json",
+                    0.059481264311729606
+                ],
+                [
+                    "BleepingComputer-github.json",
+                    0.06366865079727135
+                ],
+                [
+                    "BleepingComputer-apple.json",
+                    0.06492595991787939
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "exploit",
+                "object": {
+                    "text": "a critical Bluetooth security vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The critical Bluetooth security vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is on",
+                "object": {
+                    "text": "macOS, iOS, Android, and Linux device platforms",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The critical Bluetooth security vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "keystroke injection",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "keystroke injection vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "allows",
+                "object": {
+                    "text": "an attacker to control the targeted device",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2023-45866",
+                    "class": "Vulnerability"
+                },
+                "relation": "exists in",
+                "object": {
+                    "text": "how the Bluetooth protocol is implemented",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The flaw",
+                    "class": "Vulnerability"
+                },
+                "relation": "works by",
+                "object": {
+                    "text": "tricking the Bluetooth host state-machine",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The attacker",
+                    "class": "Attacker"
+                },
+                "relation": "pair",
+                "object": {
+                    "text": "an emulated Bluetooth keyboard with a victim's phone or computer",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The emulated Bluetooth keyboard",
+                    "class": "Tool"
+                },
+                "relation": "is implemented as",
+                "object": {
+                    "text": "a Python script that runs on a Linux computer",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The attacker",
+                    "class": "Attacker"
+                },
+                "relation": "inject keystrokes",
+                "object": {
+                    "text": "typing on the target device",
+                    "class": "Malware Characteristic:Capability"
+                }
+            }
+        ],
+        "response_time": 16.636640548706055,
+        "Demo_num": 12,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-12shot/prompt_store/darkreading/Bluetooth-Flaw.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1713,
+                "cost": 0.017130000000000003
+            },
+            "output": {
+                "tokens": 530,
+                "cost": 0.0159
+            },
+            "total": {
+                "tokens": 2243,
+                "cost": 0.033030000000000004
+            }
+        },
+        "Eval": {
+            "correct": 11,
+            "incorrect": 7,
+            "TP": 11,
+            "TN": 3,
+            "FP": 7,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 18,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 18,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 2,
+                    "TN": 15,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Attacker": {
+                    "TP": 3,
+                    "TN": 15,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 0,
+                    "TN": 18,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 15,
+                    "FP": 2,
+                    "FN": 1
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 18,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 18,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 0,
+                    "TN": 17,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 4,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 18,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 18,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 18,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 6,
+                    "TN": 12,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 15,
+                    "FP": 0,
+                    "FN": 3
+                }
+            },
+            "Num_of_classes": 6
+        }
+    }
+}

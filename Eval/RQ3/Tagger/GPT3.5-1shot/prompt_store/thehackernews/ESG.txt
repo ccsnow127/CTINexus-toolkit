@@ -1,0 +1,98 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Chinese threat actors', 'relation': 'exploited', 'object': "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-7102', 'relation': 'relates to', 'object': 'arbitrary code execution'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-7102', 'relation': 'resides within', 'object': 'Spreadsheet::ParseExcel'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Spreadsheet::ParseExcel', 'relation': 'is used by', 'object': 'the Amavis scanner'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the Amavis scanner', 'relation': 'screens', 'object': 'Microsoft Excel email attachments for malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UNC4841', 'relation': 'linked to', 'object': 'the exploitation of CVE-2023-7102'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UNC4841', 'relation': 'previously linked to', 'object': 'the active exploitation of another zero-day in Barracuda devices'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the other zero-day in Barracuda devices', 'relation': 'is', 'object': 'CVE-2023-2868'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-2868', 'relation': 'CVSS score', 'object': '9.8'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'successful exploitation of CVE-2023-7102', 'relation': 'accomplished by', 'object': 'a specially crafted Microsoft Excel email attachment'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the deployment', 'relation': 'followed by', 'object': 'new variants of SEASPY and SALTWATER'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SEASPY and SALTWATER', 'relation': 'equip', 'object': 'persistence and command execution capabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

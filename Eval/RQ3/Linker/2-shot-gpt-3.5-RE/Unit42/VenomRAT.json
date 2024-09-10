@@ -1,0 +1,663 @@
+{
+    "CTI": {
+        "text": "Researchers should be aware of threat actors repurposing older proof of concept (PoC) code to quickly craft a fake PoC for a newly released vulnerability. On Aug. 17, 2023, the Zero Day Initiative publicly reported a remote code execution (RCE) vulnerability in WinRAR tracked as CVE-2023-40477. They had disclosed it to the vendor on June 8, 2023. Four days after the public reporting of CVE-2023-40477, an actor using an alias of whalersplonk committed a fake PoC script to their GitHub repository. The fake PoC meant to exploit this WinRAR vulnerability was based on a publicly available PoC script that exploited a SQL injection vulnerability in an application called GeoServer, which is tracked as CVE-2023-25157. We analyzed the fake PoC script and all the links in the infection chain, which ultimately installed a VenomRAT payload.",
+        "link": "https://unit42.paloaltonetworks.com/fake-cve-2023-40477-poc-hides-venomrat/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "threat actors",
+                "relation": "repurpose",
+                "object": "older proof of concept (PoC) code"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "craft",
+                "object": "a fake PoC for a newly released vulnerability"
+            },
+            {
+                "subject": "remote code execution (RCE) vulnerability",
+                "relation": "is in",
+                "object": "WinRAR"
+            },
+            {
+                "subject": "RCE vulnerability",
+                "relation": "tracked as",
+                "object": "CVE-2023-40477"
+            },
+            {
+                "subject": "whalersplonk",
+                "relation": "committed",
+                "object": "a fake PoC script to their GitHub repository"
+            },
+            {
+                "subject": "fake PoC script",
+                "relation": "meant to exploit",
+                "object": "WinRAR vulnerability"
+            },
+            {
+                "subject": "fake PoC script",
+                "relation": "was based on",
+                "object": "a publicly available PoC script"
+            },
+            {
+                "subject": "publicly available PoC script",
+                "relation": "exploited",
+                "object": "a SQL injection vulnerability"
+            },
+            {
+                "subject": "SQL injection vulnerability",
+                "relation": "is in",
+                "object": "GeoServer"
+            },
+            {
+                "subject": "SQL injection vulnerability",
+                "relation": "tracked as",
+                "object": "CVE-2023-25157"
+            },
+            {
+                "subject": "VenomRAT payload",
+                "relation": "installed by",
+                "object": "all the links in the infection chain"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1750,
+                "cost": 0.0175
+            },
+            "output": {
+                "tokens": 319,
+                "cost": 0.00957
+            },
+            "total": {
+                "tokens": 2069,
+                "cost": 0.027070000000000004
+            }
+        },
+        "time": 10.418038845062256,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Unit42/VenomRAT-QD1-hrU.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-CVE-2023-36884.json",
+                    0.10710724067473226
+                ],
+                [
+                    "BleepingComputer-goanywhere.json",
+                    0.11451824795647161
+                ],
+                [
+                    "BleepingComputer-github.json",
+                    0.12535055191510303
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "repurpose",
+                "object": {
+                    "text": "older proof of concept (PoC) code",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "craft",
+                "object": {
+                    "text": "a fake PoC for a newly released vulnerability",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "remote code execution (RCE) vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is in",
+                "object": {
+                    "text": "WinRAR",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "RCE vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "tracked as",
+                "object": {
+                    "text": "CVE-2023-40477",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "whalersplonk",
+                    "class": "Attacker"
+                },
+                "relation": "committed",
+                "object": {
+                    "text": "a fake PoC script to their GitHub repository",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "fake PoC script",
+                    "class": "Information"
+                },
+                "relation": "meant to exploit",
+                "object": {
+                    "text": "WinRAR vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "fake PoC script",
+                    "class": "Information"
+                },
+                "relation": "was based on",
+                "object": {
+                    "text": "a publicly available PoC script",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "publicly available PoC script",
+                    "class": "Information"
+                },
+                "relation": "exploited",
+                "object": {
+                    "text": "a SQL injection vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SQL injection vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is in",
+                "object": {
+                    "text": "GeoServer",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SQL injection vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "tracked as",
+                "object": {
+                    "text": "CVE-2023-25157",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "VenomRAT payload",
+                    "class": "Malware"
+                },
+                "relation": "installed by",
+                "object": {
+                    "text": "all the links in the infection chain",
+                    "class": "Information"
+                }
+            }
+        ],
+        "response_time": 18.862749338150024,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/Unit42/VenomRAT.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1444,
+                "cost": 0.014440000000000001
+            },
+            "output": {
+                "tokens": 541,
+                "cost": 0.01623
+            },
+            "total": {
+                "tokens": 1985,
+                "cost": 0.030670000000000003
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "threat actors",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "threat actors",
+                        "threat actors"
+                    ],
+                    "entity_text": "threat actors"
+                },
+                "relation": "repurpose",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "older proof of concept (PoC) code",
+                    "mention_class": "Information",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "older proof of concept (PoC) code",
+                        "a fake PoC for a newly released vulnerability",
+                        "a fake PoC script to their GitHub repository",
+                        "fake PoC script",
+                        "fake PoC script",
+                        "a publicly available PoC script",
+                        "publicly available PoC script"
+                    ],
+                    "entity_text": "fake PoC script"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "threat actors",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "threat actors",
+                        "threat actors"
+                    ],
+                    "entity_text": "threat actors"
+                },
+                "relation": "craft",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "a fake PoC for a newly released vulnerability",
+                    "mention_class": "Information",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "a fake PoC script to their GitHub repository",
+                        "a fake PoC for a newly released vulnerability"
+                    ],
+                    "entity_text": "a fake PoC script to their GitHub repository"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "remote code execution (RCE) vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "remote code execution (RCE) vulnerability",
+                        "RCE vulnerability",
+                        "WinRAR vulnerability",
+                        "a SQL injection vulnerability",
+                        "SQL injection vulnerability",
+                        "SQL injection vulnerability"
+                    ],
+                    "entity_text": "SQL injection vulnerability"
+                },
+                "relation": "is in",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "WinRAR",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "WinRAR"
+                    ],
+                    "entity_text": "WinRAR"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "RCE vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "remote code execution (RCE) vulnerability",
+                        "RCE vulnerability",
+                        "WinRAR vulnerability",
+                        "a SQL injection vulnerability",
+                        "SQL injection vulnerability",
+                        "SQL injection vulnerability"
+                    ],
+                    "entity_text": "SQL injection vulnerability"
+                },
+                "relation": "tracked as",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "CVE-2023-40477",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "CVE-2023-25157",
+                        "CVE-2023-40477"
+                    ],
+                    "entity_text": "CVE-2023-25157"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "whalersplonk",
+                    "mention_class": "Attacker",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "whalersplonk"
+                    ],
+                    "entity_text": "whalersplonk"
+                },
+                "relation": "committed",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "a fake PoC script to their GitHub repository",
+                    "mention_class": "Information",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "a fake PoC script to their GitHub repository",
+                        "a fake PoC for a newly released vulnerability"
+                    ],
+                    "entity_text": "a fake PoC script to their GitHub repository"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "fake PoC script",
+                    "mention_class": "Information",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "older proof of concept (PoC) code",
+                        "a fake PoC for a newly released vulnerability",
+                        "a fake PoC script to their GitHub repository",
+                        "fake PoC script",
+                        "fake PoC script",
+                        "a publicly available PoC script",
+                        "publicly available PoC script"
+                    ],
+                    "entity_text": "fake PoC script"
+                },
+                "relation": "meant to exploit",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "WinRAR vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "remote code execution (RCE) vulnerability",
+                        "RCE vulnerability",
+                        "WinRAR vulnerability",
+                        "a SQL injection vulnerability",
+                        "SQL injection vulnerability",
+                        "SQL injection vulnerability"
+                    ],
+                    "entity_text": "SQL injection vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "fake PoC script",
+                    "mention_class": "Information",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "older proof of concept (PoC) code",
+                        "a fake PoC for a newly released vulnerability",
+                        "a fake PoC script to their GitHub repository",
+                        "fake PoC script",
+                        "fake PoC script",
+                        "a publicly available PoC script",
+                        "publicly available PoC script"
+                    ],
+                    "entity_text": "fake PoC script"
+                },
+                "relation": "was based on",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "a publicly available PoC script",
+                    "mention_class": "Information",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "older proof of concept (PoC) code",
+                        "a fake PoC for a newly released vulnerability",
+                        "a fake PoC script to their GitHub repository",
+                        "fake PoC script",
+                        "fake PoC script",
+                        "a publicly available PoC script",
+                        "publicly available PoC script"
+                    ],
+                    "entity_text": "fake PoC script"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "publicly available PoC script",
+                    "mention_class": "Information",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "older proof of concept (PoC) code",
+                        "a fake PoC for a newly released vulnerability",
+                        "a fake PoC script to their GitHub repository",
+                        "fake PoC script",
+                        "fake PoC script",
+                        "a publicly available PoC script",
+                        "publicly available PoC script"
+                    ],
+                    "entity_text": "fake PoC script"
+                },
+                "relation": "exploited",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "a SQL injection vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "remote code execution (RCE) vulnerability",
+                        "RCE vulnerability",
+                        "WinRAR vulnerability",
+                        "a SQL injection vulnerability",
+                        "SQL injection vulnerability",
+                        "SQL injection vulnerability"
+                    ],
+                    "entity_text": "SQL injection vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "SQL injection vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "remote code execution (RCE) vulnerability",
+                        "RCE vulnerability",
+                        "WinRAR vulnerability",
+                        "a SQL injection vulnerability",
+                        "SQL injection vulnerability",
+                        "SQL injection vulnerability"
+                    ],
+                    "entity_text": "SQL injection vulnerability"
+                },
+                "relation": "is in",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "GeoServer",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "GeoServer"
+                    ],
+                    "entity_text": "GeoServer"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "SQL injection vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "remote code execution (RCE) vulnerability",
+                        "RCE vulnerability",
+                        "WinRAR vulnerability",
+                        "a SQL injection vulnerability",
+                        "SQL injection vulnerability",
+                        "SQL injection vulnerability"
+                    ],
+                    "entity_text": "SQL injection vulnerability"
+                },
+                "relation": "tracked as",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "CVE-2023-25157",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "CVE-2023-25157",
+                        "CVE-2023-40477"
+                    ],
+                    "entity_text": "CVE-2023-25157"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "VenomRAT payload",
+                    "mention_class": "Malware",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "VenomRAT payload"
+                    ],
+                    "entity_text": "VenomRAT payload"
+                },
+                "relation": "installed by",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "all the links in the infection chain",
+                    "mention_class": "Information",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "all the links in the infection chain"
+                    ],
+                    "entity_text": "all the links in the infection chain"
+                }
+            }
+        ],
+        "mentions_num": 22,
+        "response_time": 4.5808703899383545,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 10
+    },
+    "LP": {
+        "predicted_links": [
+            {
+                "subject": {
+                    "entity_id": 9,
+                    "mention_text": "VenomRAT payload"
+                },
+                "relation": "is installed through",
+                "object": {
+                    "mention_id": 4,
+                    "mention_text": "remote code execution (RCE) vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "remote code execution (RCE) vulnerability",
+                        "RCE vulnerability",
+                        "WinRAR vulnerability",
+                        "a SQL injection vulnerability",
+                        "SQL injection vulnerability",
+                        "SQL injection vulnerability"
+                    ],
+                    "entity_text": "SQL injection vulnerability"
+                }
+            }
+        ],
+        "response_time": 0.880293607711792,
+        "model": "gpt-3.5-turbo-0125",
+        "usage": {
+            "input": {
+                "tokens": 757,
+                "cost": 0.0003785
+            },
+            "output": {
+                "tokens": 34,
+                "cost": 5.1e-05
+            },
+            "total": {
+                "tokens": 791,
+                "cost": 0.0004295
+            }
+        },
+        "topic_node": {
+            "mention_id": 4,
+            "mention_text": "remote code execution (RCE) vulnerability",
+            "mention_class": "Vulnerability",
+            "entity_id": 5,
+            "mentions_merged": [
+                "remote code execution (RCE) vulnerability",
+                "RCE vulnerability",
+                "WinRAR vulnerability",
+                "a SQL injection vulnerability",
+                "SQL injection vulnerability",
+                "SQL injection vulnerability"
+            ],
+            "entity_text": "SQL injection vulnerability"
+        },
+        "main_nodes": [
+            {
+                "mention_id": 20,
+                "mention_text": "VenomRAT payload",
+                "mention_class": "Malware",
+                "entity_id": 9,
+                "mentions_merged": [
+                    "VenomRAT payload"
+                ],
+                "entity_text": "VenomRAT payload"
+            }
+        ],
+        "subgraphs": [
+            [
+                0,
+                1,
+                2,
+                3,
+                5,
+                6,
+                7,
+                8
+            ],
+            [
+                9,
+                4
+            ]
+        ],
+        "subgraph_num": 2,
+        "Eval": {
+            "correct": 0,
+            "incorrect": 1
+        }
+    }
+}

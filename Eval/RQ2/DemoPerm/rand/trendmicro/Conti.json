@@ -1,0 +1,341 @@
+{
+    "CTI": {
+        "text": "Conti can arrive in the system through BazarLoader, which is delivered via phishing emails containing a Google Drive link that downloads the malware.Alternatively, the ransomware can arrive via exploiting the the FortiGate firewall vulnerabilities CVE-2018-13379 and CVE-2018-13374. After successfully exploiting the application, the ransomware deploys Cobalt Strike to gain a foothold on the system. Conti can also arrive as a result of the exploitation of the ProxyShell Microsoft Exchange vulnerabilities. The Conti group uses tools such as Whoami, Nltest, and Net. These tools give the operators information about where they are in the system, and what rights and permissions they have. Since the operators employ double extortion tactics, they actively look for files to exfiltrate in the discovery stage. The threat actors use tools such as ShareFinder to identify the shares needed for exfiltration and ransomware deployment. Although the group mostly relies on finding the domain admin credentials to gain full access to the domain, they may also use a couple of exploits like Zerologon (CVE-2020-1472) and PrintNightmare (CVE-2021-1675), to elevate their privilege and further strengthen their foothold in the network.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-conti"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Conti",
+                "relation": "arrives through",
+                "object": "BazarLoader"
+            },
+            {
+                "subject": "BazarLoader",
+                "relation": "delivered via",
+                "object": "phishing emails"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "contain",
+                "object": "a Google Drive link"
+            },
+            {
+                "subject": "Google Drive link",
+                "relation": "downloads",
+                "object": "the malware"
+            },
+            {
+                "subject": "ransomware",
+                "relation": "arrives via exploiting",
+                "object": "FortiGate firewall vulnerabilities"
+            },
+            {
+                "subject": "FortiGate firewall vulnerabilities",
+                "relation": "include",
+                "object": "CVE-2018-13379"
+            },
+            {
+                "subject": "FortiGate firewall vulnerabilities",
+                "relation": "include",
+                "object": "CVE-2018-13374"
+            },
+            {
+                "subject": "ransomware",
+                "relation": "deploys",
+                "object": "Cobalt Strike"
+            },
+            {
+                "subject": "Conti",
+                "relation": "arrives as a result of the exploitation of",
+                "object": "ProxyShell Microsoft Exchange vulnerabilities"
+            },
+            {
+                "subject": "Conti group",
+                "relation": "uses tools",
+                "object": "Whoami, Nltest, and Net"
+            },
+            {
+                "subject": "operators",
+                "relation": "employ",
+                "object": "double extortion tactics"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "use tools",
+                "object": "ShareFinder"
+            },
+            {
+                "subject": "group",
+                "relation": "relies on finding",
+                "object": "the domain admin credentials"
+            },
+            {
+                "subject": "group",
+                "relation": "may also use",
+                "object": "exploits"
+            },
+            {
+                "subject": "exploits",
+                "relation": "include",
+                "object": "Zerologon (CVE-2020-1472)"
+            },
+            {
+                "subject": "exploits",
+                "relation": "include",
+                "object": "PrintNightmare (CVE-2021-1675)"
+            }
+        ],
+        "triples_count": 16,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1434,
+                "cost": 0.01434
+            },
+            "output": {
+                "tokens": 430,
+                "cost": 0.0129
+            },
+            "total": {
+                "tokens": 1864,
+                "cost": 0.02724
+            }
+        },
+        "time": 20.12313485145569,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/trendmicro/Conti-QD1-u1x.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "akira.json",
+                    "random"
+                ],
+                [
+                    "UAC-0050.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 16,
+                "fp": 0,
+                "fn": 2,
+                "precision": 1.0,
+                "recall": 0.8888888888888888,
+                "f1": 0.9411764705882353
+            },
+            "matched_list": [
+                [
+                    [
+                        "Conti",
+                        "arrives through",
+                        "BazarLoader"
+                    ],
+                    [
+                        "Conti",
+                        "can arrive through",
+                        "BazarLoader"
+                    ]
+                ],
+                [
+                    [
+                        "BazarLoader",
+                        "delivered via",
+                        "phishing emails"
+                    ],
+                    [
+                        "BazarLoader",
+                        "is delivered via",
+                        "phishing emails"
+                    ]
+                ],
+                [
+                    [
+                        "phishing emails",
+                        "contain",
+                        "a Google Drive link"
+                    ],
+                    [
+                        "phishing emails",
+                        "contain",
+                        "a Google Drive link"
+                    ]
+                ],
+                [
+                    [
+                        "Google Drive link",
+                        "downloads",
+                        "the malware"
+                    ],
+                    [
+                        "a Google Drive link",
+                        "downloads",
+                        "the malware"
+                    ]
+                ],
+                [
+                    [
+                        "ransomware",
+                        "arrives via exploiting",
+                        "FortiGate firewall vulnerabilities"
+                    ],
+                    [
+                        "Conti",
+                        "can arrive via exploiting",
+                        "FortiGate firewall vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "FortiGate firewall vulnerabilities",
+                        "include",
+                        "CVE-2018-13379"
+                    ],
+                    [
+                        "FortiGate firewall vulnerabilities",
+                        "include",
+                        "CVE-2018-13379"
+                    ]
+                ],
+                [
+                    [
+                        "FortiGate firewall vulnerabilities",
+                        "include",
+                        "CVE-2018-13374"
+                    ],
+                    [
+                        "FortiGate firewall vulnerabilities",
+                        "include",
+                        "CVE-2018-13374"
+                    ]
+                ],
+                [
+                    [
+                        "ransomware",
+                        "deploys",
+                        "Cobalt Strike"
+                    ],
+                    [
+                        "the ransomware",
+                        "deploys",
+                        "Cobalt Strike"
+                    ]
+                ],
+                [
+                    [
+                        "Conti",
+                        "arrives as a result of the exploitation of",
+                        "ProxyShell Microsoft Exchange vulnerabilities"
+                    ],
+                    [
+                        "Conti",
+                        "can arrive as a result of exploitation of",
+                        "ProxyShell Microsoft Exchange vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "Conti group",
+                        "uses tools",
+                        "Whoami, Nltest, and Net"
+                    ],
+                    [
+                        "Conti group",
+                        "uses tools such as",
+                        "Whoami, Nltest, and Net"
+                    ]
+                ],
+                [
+                    [
+                        "operators",
+                        "employ",
+                        "double extortion tactics"
+                    ],
+                    [
+                        "operators",
+                        "employ",
+                        "double extortion tactics"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "use tools",
+                        "ShareFinder"
+                    ],
+                    [
+                        "The threat actors",
+                        "use",
+                        "ShareFinder"
+                    ]
+                ],
+                [
+                    [
+                        "group",
+                        "relies on finding",
+                        "the domain admin credentials"
+                    ],
+                    [
+                        "The group",
+                        "relies on",
+                        "finding the domain admin credentials"
+                    ]
+                ],
+                [
+                    [
+                        "group",
+                        "may also use",
+                        "exploits"
+                    ],
+                    [
+                        "The group",
+                        "may use exploits such as",
+                        "Zerologon"
+                    ]
+                ],
+                [
+                    [
+                        "exploits",
+                        "include",
+                        "Zerologon (CVE-2020-1472)"
+                    ],
+                    [
+                        "Zerologon",
+                        "is identified as",
+                        "CVE-2020-1472"
+                    ]
+                ],
+                [
+                    [
+                        "exploits",
+                        "include",
+                        "PrintNightmare (CVE-2021-1675)"
+                    ],
+                    [
+                        "PrintNightmare",
+                        "is identified as",
+                        "CVE-2021-1675"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "These tools",
+                    "give information about",
+                    "system location and user permissions"
+                ],
+                [
+                    "ShareFinder",
+                    "identifies",
+                    "shares needed for exfiltration and ransomware deployment"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

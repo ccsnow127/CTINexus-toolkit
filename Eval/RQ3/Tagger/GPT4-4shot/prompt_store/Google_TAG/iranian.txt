@@ -1,0 +1,136 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'APT35', 'relation': 'is known as', 'object': 'Charming Kitten'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Charming Kitten', 'relation': 'backed by', 'object': 'Iranian government'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Charming Kitten', 'relation': 'targets', 'object': 'high risk users'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Charming Kitten', 'relation': 'deploys', 'object': 'malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Charming Kitten', 'relation': 'uses', 'object': 'novel techniques'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Charming Kitten', 'relation': 'conducts', 'object': 'espionage'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HYPERSCRAPE', 'relation': 'is a tool of', 'object': 'Charming Kitten'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HYPERSCRAPE', 'relation': 'used to steal', 'object': 'user data'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HYPERSCRAPE', 'relation': 'targets', 'object': 'Gmail accounts'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HYPERSCRAPE', 'relation': 'targets', 'object': 'Yahoo! accounts'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HYPERSCRAPE', 'relation': 'targets', 'object': 'Microsoft Outlook accounts'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HYPERSCRAPE', 'relation': 'runs on', 'object': "attacker's machine"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HYPERSCRAPE', 'relation': 'downloads', 'object': "victims' inboxes"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HYPERSCRAPE', 'relation': 'uses', 'object': 'previously acquired credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HYPERSCRAPE', 'relation': 'deployed against', 'object': 'accounts located in Iran'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HYPERSCRAPE', 'relation': 'sample from', 'object': '2020'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HYPERSCRAPE', 'relation': 'is under', 'object': 'active development'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

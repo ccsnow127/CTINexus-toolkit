@@ -1,0 +1,642 @@
+{
+    "CTI": {
+        "text": "Unit 42 recently discovered a malware campaign targeting Portuguese speakers, which aims to redirect cryptocurrency away from legitimate users\u2019 wallets and into wallets controlled by threat actors instead. To do this, the campaign uses a type of malware known as a cryptocurrency clipper, which monitors the victim\u2019s clipboard for signs that a cryptocurrency wallet address is being copied. The malware, which we call CryptoClippy, seeks to replace the user\u2019s actual wallet address with the threat actor\u2019s, causing the user to inadvertently send cryptocurrency to the threat actor. Unit 42 Managed Threat Hunting found victims across manufacturing, IT services, and real estate industries, though they likely impacted the personal wallet addresses of someone using their work machine. To deliver the malware to users\u2019 computers, threat actors in this campaign used both Google Ads and traffic distribution systems (TDS) to redirect victims to malicious domains that are impersonating the legitimate WhatsApp Web application. They use this to ensure victims are real users, and also that they\u2019re Portuguese speakers. For users who are sent to malicious domains, the threat attempts to trick them into downloading malicious files, including either .zip or .exe files, that lead to the final payload.",
+        "link": "https://unit42.paloaltonetworks.com/crypto-clipper-targets-portuguese-speakers/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "malware campaign",
+                "relation": "targets",
+                "object": "Portuguese speakers"
+            },
+            {
+                "subject": "malware campaign",
+                "relation": "aims to",
+                "object": "redirect cryptocurrency to threat actors"
+            },
+            {
+                "subject": "cryptocurrency clipper",
+                "relation": "monitors",
+                "object": "clipboard for cryptocurrency wallet address"
+            },
+            {
+                "subject": "CryptoClippy",
+                "relation": "replaces",
+                "object": "user\u2019s actual wallet address with threat actor\u2019s"
+            },
+            {
+                "subject": "Unit 42 Managed Threat Hunting",
+                "relation": "found victims across",
+                "object": "manufacturing"
+            },
+            {
+                "subject": "Unit 42 Managed Threat Hunting",
+                "relation": "found victims across",
+                "object": "IT services"
+            },
+            {
+                "subject": "Unit 42 Managed Threat Hunting",
+                "relation": "found victims across",
+                "object": "real estate industries"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "used",
+                "object": "Google Ads"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "used",
+                "object": "traffic distribution systems (TDS)"
+            },
+            {
+                "subject": "malicious domains",
+                "relation": "are impersonating",
+                "object": "WhatsApp Web application"
+            },
+            {
+                "subject": "threat",
+                "relation": "tricks users into downloading",
+                "object": "malicious files"
+            },
+            {
+                "subject": "malicious files",
+                "relation": "include",
+                "object": ".zip or .exe files"
+            },
+            {
+                "subject": "malicious files",
+                "relation": "lead to",
+                "object": "the final payload"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3097,
+                "cost": 0.03097
+            },
+            "output": {
+                "tokens": 422,
+                "cost": 0.012660000000000001
+            },
+            "total": {
+                "tokens": 3519,
+                "cost": 0.04363
+            }
+        },
+        "time": 12.673296689987183,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Unit42/CryptoClippy-QD1-WCW.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-charming-kitten.json",
+                    0.09712980374951502
+                ],
+                [
+                    "AVERTIUM-mallox.json",
+                    0.10425799955710746
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.11927607648145433
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "malware campaign",
+                    "class": "Malware"
+                },
+                "relation": "targets",
+                "object": {
+                    "text": "Portuguese speakers",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malware campaign",
+                    "class": "Malware"
+                },
+                "relation": "aims to",
+                "object": {
+                    "text": "redirect cryptocurrency to threat actors",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "cryptocurrency clipper",
+                    "class": "Malware"
+                },
+                "relation": "monitors",
+                "object": {
+                    "text": "clipboard for cryptocurrency wallet address",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CryptoClippy",
+                    "class": "Malware"
+                },
+                "relation": "replaces",
+                "object": {
+                    "text": "user\u2019s actual wallet address with threat actor\u2019s",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Unit 42 Managed Threat Hunting",
+                    "class": "Organization"
+                },
+                "relation": "found victims across",
+                "object": {
+                    "text": "manufacturing",
+                    "class": "Industry"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Unit 42 Managed Threat Hunting",
+                    "class": "Organization"
+                },
+                "relation": "found victims across",
+                "object": {
+                    "text": "IT services",
+                    "class": "Industry"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Unit 42 Managed Threat Hunting",
+                    "class": "Organization"
+                },
+                "relation": "found victims across",
+                "object": {
+                    "text": "real estate industries",
+                    "class": "Industry"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "used",
+                "object": {
+                    "text": "Google Ads",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "used",
+                "object": {
+                    "text": "traffic distribution systems (TDS)",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious domains",
+                    "class": "Indicator:Domain"
+                },
+                "relation": "are impersonating",
+                "object": {
+                    "text": "WhatsApp Web application",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat",
+                    "class": "Malware"
+                },
+                "relation": "tricks users into downloading",
+                "object": {
+                    "text": "malicious files",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious files",
+                    "class": "Indicator:File"
+                },
+                "relation": "include",
+                "object": {
+                    "text": ".zip or .exe files",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious files",
+                    "class": "Indicator:File"
+                },
+                "relation": "lead to",
+                "object": {
+                    "text": "the final payload",
+                    "class": "Malware Characteristic:Payload"
+                }
+            }
+        ],
+        "response_time": 27.089599609375,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/Unit42/CryptoClippy.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1506,
+                "cost": 0.01506
+            },
+            "output": {
+                "tokens": 688,
+                "cost": 0.020640000000000002
+            },
+            "total": {
+                "tokens": 2194,
+                "cost": 0.0357
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "malware campaign",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "malware campaign",
+                        "malware campaign",
+                        "cryptocurrency clipper",
+                        "CryptoClippy",
+                        "threat"
+                    ],
+                    "entity_text": "malware campaign"
+                },
+                "relation": "targets",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "Portuguese speakers",
+                    "mention_class": "Information",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "Portuguese speakers",
+                        "WhatsApp Web application",
+                        ".zip or .exe files"
+                    ],
+                    "entity_text": ".zip or .exe files"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "malware campaign",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "malware campaign",
+                        "malware campaign",
+                        "cryptocurrency clipper",
+                        "CryptoClippy",
+                        "threat"
+                    ],
+                    "entity_text": "malware campaign"
+                },
+                "relation": "aims to",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "redirect cryptocurrency to threat actors",
+                    "mention_class": "Event",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "redirect cryptocurrency to threat actors"
+                    ],
+                    "entity_text": "redirect cryptocurrency to threat actors"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "cryptocurrency clipper",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "malware campaign",
+                        "malware campaign",
+                        "cryptocurrency clipper",
+                        "CryptoClippy",
+                        "threat"
+                    ],
+                    "entity_text": "malware campaign"
+                },
+                "relation": "monitors",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "clipboard for cryptocurrency wallet address",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "clipboard for cryptocurrency wallet address",
+                        "user\u2019s actual wallet address with threat actor\u2019s"
+                    ],
+                    "entity_text": "clipboard for cryptocurrency wallet address"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "CryptoClippy",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "malware campaign",
+                        "malware campaign",
+                        "cryptocurrency clipper",
+                        "CryptoClippy",
+                        "threat"
+                    ],
+                    "entity_text": "malware campaign"
+                },
+                "relation": "replaces",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "user\u2019s actual wallet address with threat actor\u2019s",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "clipboard for cryptocurrency wallet address",
+                        "user\u2019s actual wallet address with threat actor\u2019s"
+                    ],
+                    "entity_text": "clipboard for cryptocurrency wallet address"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "Unit 42 Managed Threat Hunting",
+                    "mention_class": "Organization",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Unit 42 Managed Threat Hunting",
+                        "Unit 42 Managed Threat Hunting",
+                        "Unit 42 Managed Threat Hunting"
+                    ],
+                    "entity_text": "Unit 42 Managed Threat Hunting"
+                },
+                "relation": "found victims across",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "manufacturing",
+                    "mention_class": "Industry",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "manufacturing",
+                        "IT services",
+                        "real estate industries"
+                    ],
+                    "entity_text": "IT services"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "Unit 42 Managed Threat Hunting",
+                    "mention_class": "Organization",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Unit 42 Managed Threat Hunting",
+                        "Unit 42 Managed Threat Hunting",
+                        "Unit 42 Managed Threat Hunting"
+                    ],
+                    "entity_text": "Unit 42 Managed Threat Hunting"
+                },
+                "relation": "found victims across",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "IT services",
+                    "mention_class": "Industry",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "manufacturing",
+                        "IT services",
+                        "real estate industries"
+                    ],
+                    "entity_text": "IT services"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "Unit 42 Managed Threat Hunting",
+                    "mention_class": "Organization",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Unit 42 Managed Threat Hunting",
+                        "Unit 42 Managed Threat Hunting",
+                        "Unit 42 Managed Threat Hunting"
+                    ],
+                    "entity_text": "Unit 42 Managed Threat Hunting"
+                },
+                "relation": "found victims across",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "real estate industries",
+                    "mention_class": "Industry",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "manufacturing",
+                        "IT services",
+                        "real estate industries"
+                    ],
+                    "entity_text": "IT services"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "threat actors",
+                    "mention_class": "Attacker",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "threat actors",
+                        "threat actors"
+                    ],
+                    "entity_text": "threat actors"
+                },
+                "relation": "used",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "Google Ads",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "traffic distribution systems (TDS)",
+                        "Google Ads"
+                    ],
+                    "entity_text": "Google Ads"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "threat actors",
+                    "mention_class": "Attacker",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "threat actors",
+                        "threat actors"
+                    ],
+                    "entity_text": "threat actors"
+                },
+                "relation": "used",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "traffic distribution systems (TDS)",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "traffic distribution systems (TDS)",
+                        "Google Ads"
+                    ],
+                    "entity_text": "Google Ads"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "malicious domains",
+                    "mention_class": "Indicator:Domain",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "malicious domains"
+                    ],
+                    "entity_text": "malicious domains"
+                },
+                "relation": "are impersonating",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "WhatsApp Web application",
+                    "mention_class": "Information",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "Portuguese speakers",
+                        "WhatsApp Web application",
+                        ".zip or .exe files"
+                    ],
+                    "entity_text": ".zip or .exe files"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "threat",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "malware campaign",
+                        "malware campaign",
+                        "cryptocurrency clipper",
+                        "CryptoClippy",
+                        "threat"
+                    ],
+                    "entity_text": "malware campaign"
+                },
+                "relation": "tricks users into downloading",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "malicious files",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "malicious files",
+                        "malicious files",
+                        "malicious files"
+                    ],
+                    "entity_text": "malicious files"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "malicious files",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "malicious files",
+                        "malicious files",
+                        "malicious files"
+                    ],
+                    "entity_text": "malicious files"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": ".zip or .exe files",
+                    "mention_class": "Information",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "Portuguese speakers",
+                        "WhatsApp Web application",
+                        ".zip or .exe files"
+                    ],
+                    "entity_text": ".zip or .exe files"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "malicious files",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "malicious files",
+                        "malicious files",
+                        "malicious files"
+                    ],
+                    "entity_text": "malicious files"
+                },
+                "relation": "lead to",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "the final payload",
+                    "mention_class": "Malware Characteristic:Payload",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "the final payload"
+                    ],
+                    "entity_text": "the final payload"
+                }
+            }
+        ],
+        "mentions_num": 26,
+        "response_time": 16.330819845199585,
+        "embedding_model": "secure-bert",
+        "entity_num": 11,
+        "threshold": 0.6,
+        "Eval": {
+            "TP": 12,
+            "FP": 11,
+            "FN": 0,
+            "TN": 3
+        }
+    }
+}

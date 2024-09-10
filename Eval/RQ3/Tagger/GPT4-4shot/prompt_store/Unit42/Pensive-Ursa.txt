@@ -1,0 +1,128 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Pensive Ursa', 'relation': 'is known as', 'object': 'Turla'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Pensive Ursa', 'relation': 'is known as', 'object': 'Uroburos'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Kazuar', 'relation': 'is another name for', 'object': 'the cassowary bird'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Kazuar', 'relation': 'is a', 'object': '.NET backdoor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Pensive Ursa', 'relation': 'uses', 'object': 'Kazuar as a second stage payload'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Pensive Ursa', 'relation': 'is based in', 'object': 'Russia'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Pensive Ursa', 'relation': 'operates since', 'object': 'at least 2004'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Pensive Ursa', 'relation': 'is linked to', 'object': 'the Russian Federal Security Service (FSB)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Kazuar', 'relation': 'targets', 'object': 'the Ukrainian defense sector'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Kazuar', 'relation': 'was targeting', 'object': 'sensitive assets'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'sensitive assets', 'relation': 'found in', 'object': 'Signal messages, source control and cloud platforms data'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Unit 42', 'relation': 'discovered Kazuar in', 'object': '2017'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Kazuar', 'relation': 'targets', 'object': 'organizations in the European government and military sectors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The Sunburst backdoor', 'relation': 'is tied to', 'object': 'Kazuar by code resemblance'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Kazuar', 'relation': 'demonstrates', 'object': 'complexity level'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

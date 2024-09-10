@@ -1,0 +1,126 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Unit 42 incident response team', 'relation': 'engaged in', 'object': 'a Black Basta breach response'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the response', 'relation': 'uncovered', 'object': 'GootLoader malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the response', 'relation': 'uncovered', 'object': 'Brute Ratel C4 red-teaming tool'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the response', 'relation': 'uncovered', 'object': 'PlugX malware sample'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PlugX malware', 'relation': 'infects', 'object': 'removable USB media devices'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PlugX malware', 'relation': 'hides actor files in', 'object': 'a USB device'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'hiding technique', 'relation': 'works on', 'object': 'Windows operating systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malicious files', 'relation': 'can be viewed on', 'object': 'Unix-like OS'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malicious files', 'relation': 'can be viewed by', 'object': 'mounting the USB device in a forensic tool'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'A similar variant of PlugX', 'relation': 'infects', 'object': 'USB devices'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The variant', 'relation': 'copies', 'object': 'Adobe PDF and Microsoft Word files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Copies', 'relation': 'are placed in', 'object': 'a hidden folder on the USB device'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The hidden folder', 'relation': 'is created by', 'object': 'the malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PlugX', 'relation': 'is used by', 'object': 'multiple groups with a Chinese nexus'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PlugX', 'relation': 'is used by', 'object': 'several cybercrime groups'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PlugX', 'relation': 'has been observed in', 'object': 'high-profile cyberattacks'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'high-profile cyberattacks', 'relation': 'include', 'object': 'the U.S. Government Office of Personnel Management (OPM) breach'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PlugX', 'relation': 'is a', 'object': 'modular malware framework'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'modular malware framework', 'relation': 'supports', 'object': 'an evolving set of capabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

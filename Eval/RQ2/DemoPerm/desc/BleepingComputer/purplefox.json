@@ -1,0 +1,320 @@
+{
+    "CTI": {
+        "text": "PurpleFox (or 'DirtyMoe') is a modular Windows botnet malware first spotted in 2018 that comes with a rootkit module allowing it to hide and persist between device reboots. It can be used as a downloader that introduces more potent second-stage payloads on compromised systems, offers its operators backdoor capabilities, and can also act as a distributed denial of service (DDoS) bot. In October 2021, researchers noticed that new versions of PurpleFox switched to using WebSocket for command and control (C2) communications for stealth. In January 2022, a campaign spread the malware under the guise of a Telegram desktop app. CERT-UA used IoCs shared by Avast and TrendMicro to identify PurpleFox malware infections on Ukrainian computers, tracking the activity under the identifier 'UAC-0027'. CERT-UA says PurpleFox typically infects systems when victims launch laced MSI installers and highlights its self-propagation capabilities using exploits for known flaws and password brute-forcing.",
+        "link": "https://www.bleepingcomputer.com/news/security/purplefox-malware-infects-thousands-of-computers-in-ukraine/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "PurpleFox",
+                "relation": "is a",
+                "object": "modular Windows botnet malware"
+            },
+            {
+                "subject": "PurpleFox",
+                "relation": "comes with",
+                "object": "a rootkit module"
+            },
+            {
+                "subject": "rootkit module",
+                "relation": "allows",
+                "object": "to hide and persist between device reboots"
+            },
+            {
+                "subject": "PurpleFox",
+                "relation": "can be used as",
+                "object": "a downloader"
+            },
+            {
+                "subject": "PurpleFox",
+                "relation": "introduces",
+                "object": "second-stage payloads"
+            },
+            {
+                "subject": "PurpleFox",
+                "relation": "offers",
+                "object": "backdoor capabilities"
+            },
+            {
+                "subject": "PurpleFox",
+                "relation": "can also act as",
+                "object": "a DDoS bot"
+            },
+            {
+                "subject": "new versions of PurpleFox",
+                "relation": "switched to using",
+                "object": "WebSocket for C2 communications"
+            },
+            {
+                "subject": "campaign",
+                "relation": "spread",
+                "object": "PurpleFox"
+            },
+            {
+                "subject": "campaign",
+                "relation": "under the guise of",
+                "object": "a Telegram desktop app"
+            },
+            {
+                "subject": "CERT-UA",
+                "relation": "used IoCs to identify",
+                "object": "PurpleFox malware infections"
+            },
+            {
+                "subject": "PurpleFox",
+                "relation": "infects systems when",
+                "object": "victims launch laced MSI installers"
+            },
+            {
+                "subject": "PurpleFox",
+                "relation": "has",
+                "object": "self-propagation capabilities"
+            },
+            {
+                "subject": "self-propagation",
+                "relation": "using",
+                "object": "exploits for known flaws"
+            },
+            {
+                "subject": "self-propagation",
+                "relation": "using",
+                "object": "password brute-forcing"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1702,
+                "cost": 0.01702
+            },
+            "output": {
+                "tokens": 375,
+                "cost": 0.01125
+            },
+            "total": {
+                "tokens": 2077,
+                "cost": 0.02827
+            }
+        },
+        "time": 13.438624143600464,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/BleepingComputer/purplefox-QD1-OQL.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "thehackernews: UAC-0050.json",
+                    0.10572528606859664
+                ],
+                [
+                    "darkreading: Jupyter-Infostealer.json",
+                    0.10427004034780134
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9375,
+                "f1": 0.967741935483871
+            },
+            "matched_list": [
+                [
+                    [
+                        "PurpleFox",
+                        "is a",
+                        "modular Windows botnet malware"
+                    ],
+                    [
+                        "PurpleFox",
+                        "is",
+                        "a modular Windows botnet malware"
+                    ]
+                ],
+                [
+                    [
+                        "PurpleFox",
+                        "comes with",
+                        "a rootkit module"
+                    ],
+                    [
+                        "PurpleFox",
+                        "comes with",
+                        "a rootkit module"
+                    ]
+                ],
+                [
+                    [
+                        "rootkit module",
+                        "allows",
+                        "to hide and persist between device reboots"
+                    ],
+                    [
+                        "The rootkit module",
+                        "allows",
+                        "to hide and persist between device reboots"
+                    ]
+                ],
+                [
+                    [
+                        "PurpleFox",
+                        "can be used as",
+                        "a downloader"
+                    ],
+                    [
+                        "PurpleFox",
+                        "can be used as",
+                        "a downloader"
+                    ]
+                ],
+                [
+                    [
+                        "PurpleFox",
+                        "introduces",
+                        "second-stage payloads"
+                    ],
+                    [
+                        "PurpleFox",
+                        "introduces",
+                        "second-stage payloads on compromised systems"
+                    ]
+                ],
+                [
+                    [
+                        "PurpleFox",
+                        "offers",
+                        "backdoor capabilities"
+                    ],
+                    [
+                        "PurpleFox",
+                        "offers",
+                        "backdoor capabilities"
+                    ]
+                ],
+                [
+                    [
+                        "PurpleFox",
+                        "can also act as",
+                        "a DDoS bot"
+                    ],
+                    [
+                        "PurpleFox",
+                        "can act as",
+                        "a DDoS bot"
+                    ]
+                ],
+                [
+                    [
+                        "new versions of PurpleFox",
+                        "switched to using",
+                        "WebSocket for C2 communications"
+                    ],
+                    [
+                        "New versions of PurpleFox",
+                        "switched to using",
+                        "WebSocket for command and control (C2) communications"
+                    ]
+                ],
+                [
+                    [
+                        "campaign",
+                        "spread",
+                        "PurpleFox"
+                    ],
+                    [
+                        "PurpleFox",
+                        "highlights",
+                        "its self-propagation capabilities"
+                    ]
+                ],
+                [
+                    [
+                        "campaign",
+                        "under the guise of",
+                        "a Telegram desktop app"
+                    ],
+                    [
+                        "A campaign",
+                        "spread",
+                        "the malware under the guise of a Telegram desktop app"
+                    ]
+                ],
+                [
+                    [
+                        "CERT-UA",
+                        "used IoCs to identify",
+                        "PurpleFox malware infections"
+                    ],
+                    [
+                        "CERT-UA",
+                        "to identify",
+                        "PurpleFox malware infections"
+                    ]
+                ],
+                [
+                    [
+                        "PurpleFox",
+                        "infects systems when",
+                        "victims launch laced MSI installers"
+                    ],
+                    [
+                        "PurpleFox",
+                        "infects systems when victims launch",
+                        "laced MSI installers"
+                    ]
+                ],
+                [
+                    [
+                        "PurpleFox",
+                        "has",
+                        "self-propagation capabilities"
+                    ],
+                    [
+                        "PurpleFox",
+                        "highlights",
+                        "its self-propagation capabilities"
+                    ]
+                ],
+                [
+                    [
+                        "self-propagation",
+                        "using",
+                        "exploits for known flaws"
+                    ],
+                    [
+                        "The self-propagation capabilities",
+                        "use",
+                        "exploits for known flaws"
+                    ]
+                ],
+                [
+                    [
+                        "self-propagation",
+                        "using",
+                        "password brute-forcing"
+                    ],
+                    [
+                        "The self-propagation capabilities",
+                        "use",
+                        "password brute-forcing"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "PurpleFox",
+                    "is also known as",
+                    "DirtyMoe"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

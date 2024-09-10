@@ -1,0 +1,263 @@
+{
+    "CTI": {
+        "text": "Researchers this week disclosed details on two security vulnerabilities in Microsoft Outlook that, when chained together, give attackers a way to execute arbitrary code on affected systems without any user interaction. Unusually, both of them can be triggered using a sound file. One of the flaws, tracked as CVE-2023-35384, is actually the second patch bypass that researchers at Akamai have uncovered for a critical privilege escalation vulnerability in Outlook that Microsoft first patched in March. The second flaw that Akamai disclosed this week (CVE-2023-36710) is a remote code execution (RCE) vulnerability in a feature of Windows Media Foundation, and it has to do with how Windows parses sound files.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/researchers-release-details-on-two-patched-outlook-zero-click-flaws"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "two security vulnerabilities",
+                "relation": "in",
+                "object": "Microsoft Outlook"
+            },
+            {
+                "subject": "attackers",
+                "relation": "can execute",
+                "object": "arbitrary code on affected systems"
+            },
+            {
+                "subject": "arbitrary code execution",
+                "relation": "requires",
+                "object": "no user interaction"
+            },
+            {
+                "subject": "both vulnerabilities",
+                "relation": "can be triggered using",
+                "object": "a sound file"
+            },
+            {
+                "subject": "CVE-2023-35384",
+                "relation": "is a",
+                "object": "patch bypass for privilege escalation vulnerability"
+            },
+            {
+                "subject": "Akamai",
+                "relation": "uncovered",
+                "object": "CVE-2023-35384"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "first patched",
+                "object": "the critical privilege escalation vulnerability in March"
+            },
+            {
+                "subject": "CVE-2023-36710",
+                "relation": "is a",
+                "object": "remote code execution vulnerability"
+            },
+            {
+                "subject": "CVE-2023-36710",
+                "relation": "in",
+                "object": "Windows Media Foundation"
+            },
+            {
+                "subject": "Windows",
+                "relation": "parses",
+                "object": "sound files"
+            },
+            {
+                "subject": "CVE-2023-35384",
+                "relation": "allows",
+                "object": "privilege escalation"
+            },
+            {
+                "subject": "CVE-2023-36710",
+                "relation": "enables",
+                "object": "remote code execution"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1323,
+                "cost": 0.01323
+            },
+            "output": {
+                "tokens": 310,
+                "cost": 0.009300000000000001
+            },
+            "total": {
+                "tokens": 1633,
+                "cost": 0.02253
+            }
+        },
+        "time": 18.20242929458618,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/darkreading/Microsoft-Outlook-QD1-x1S.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "symantec: Buckeye.json",
+                    0.15792402635456138
+                ],
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.15486417667089813
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "two security vulnerabilities",
+                        "in",
+                        "Microsoft Outlook"
+                    ],
+                    [
+                        "two security vulnerabilities",
+                        "are in",
+                        "Microsoft Outlook"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "can execute",
+                        "arbitrary code on affected systems"
+                    ],
+                    [
+                        "attackers",
+                        "execute",
+                        "arbitrary code on affected systems"
+                    ]
+                ],
+                [
+                    [
+                        "arbitrary code execution",
+                        "requires",
+                        "no user interaction"
+                    ],
+                    [
+                        "execution",
+                        "does not require",
+                        "user interaction"
+                    ]
+                ],
+                [
+                    [
+                        "both vulnerabilities",
+                        "can be triggered using",
+                        "a sound file"
+                    ],
+                    [
+                        "both vulnerabilities",
+                        "can be triggered using",
+                        "a sound file"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-35384",
+                        "is a",
+                        "patch bypass for privilege escalation vulnerability"
+                    ],
+                    [
+                        "CVE-2023-35384",
+                        "is a",
+                        "patch bypass for a critical privilege escalation vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "Akamai",
+                        "uncovered",
+                        "CVE-2023-35384"
+                    ],
+                    [
+                        "CVE-2023-35384",
+                        "was uncovered by",
+                        "researchers at Akamai"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "first patched",
+                        "the critical privilege escalation vulnerability in March"
+                    ],
+                    [
+                        "Microsoft",
+                        "first patched",
+                        "a privilege escalation vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-36710",
+                        "is a",
+                        "remote code execution vulnerability"
+                    ],
+                    [
+                        "CVE-2023-36710",
+                        "is a",
+                        "remote code execution (RCE) vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-36710",
+                        "in",
+                        "Windows Media Foundation"
+                    ],
+                    [
+                        "CVE-2023-36710",
+                        "is in",
+                        "a feature of Windows Media Foundation"
+                    ]
+                ],
+                [
+                    [
+                        "Windows",
+                        "parses",
+                        "sound files"
+                    ],
+                    [
+                        "Windows",
+                        "parses",
+                        "sound files"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-35384",
+                        "allows",
+                        "privilege escalation"
+                    ],
+                    [
+                        "CVE-2023-35384",
+                        "is a",
+                        "patch bypass for a critical privilege escalation vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-36710",
+                        "enables",
+                        "remote code execution"
+                    ],
+                    [
+                        "CVE-2023-36710",
+                        "is a",
+                        "remote code execution (RCE) vulnerability"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [],
+            "thresh": 0.7
+        }
+    }
+}

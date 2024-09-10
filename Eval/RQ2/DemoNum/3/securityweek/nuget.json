@@ -1,0 +1,250 @@
+{
+    "CTI": {
+        "text": "A suspicious NuGet package designed to harvest data from industrial systems appears to be targeting developers who use technology from Chinese company Bozhon, ReversingLabs reports. Named SqzrFramework480 and published on the NuGet repository in January 2024, the package is a .NET library responsible for calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries, and more.However, it can also harvest various types of information from different types of industrial systems, including cameras and robotic arms, can take screenshots, send ping packets, and open sockets for data transfer. \u201cNone of those behaviors are resolutely malicious. However, when taken together, they raise alarms. For example, we can assume that the screenshots that are being taken are sent to the remote server via the open socket. The ping serves as a heartbeat check to see if the exfiltration server is alive,\u201d ReversingLabs notes. The function that takes screenshots, which is not explicitly declared in the code, operates in a continuous loop if successful, capturing the primary screen every minute and sending the information to a remote IP address, via the opened socket.",
+        "link": "https://www.securityweek.com/suspicious-nuget-package-harvesting-information-from-industrial-systems/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "NuGet package",
+                "relation": "designed to harvest data from",
+                "object": "industrial systems"
+            },
+            {
+                "subject": "NuGet package",
+                "relation": "targeting",
+                "object": "developers who use technology from Bozhon"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "is a",
+                "object": ".NET library responsible for calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "published on",
+                "object": "the NuGet repository"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can harvest",
+                "object": "various types of information from different types of industrial systems"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can take",
+                "object": "screenshots"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can send",
+                "object": "ping packets"
+            },
+            {
+                "subject": "SqzrFramework480",
+                "relation": "can open",
+                "object": "sockets for data transfer"
+            },
+            {
+                "subject": "function that takes screenshots",
+                "relation": "operates in",
+                "object": "a continuous loop"
+            },
+            {
+                "subject": "function that takes screenshots",
+                "relation": "captures",
+                "object": "the primary screen every minute"
+            },
+            {
+                "subject": "information",
+                "relation": "sent to",
+                "object": "a remote IP address via the opened socket"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2527,
+                "cost": 0.02527
+            },
+            "output": {
+                "tokens": 396,
+                "cost": 0.01188
+            },
+            "total": {
+                "tokens": 2923,
+                "cost": 0.03715
+            }
+        },
+        "time": 21.015088319778442,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/securityweek/nuget-QD1-Zb8.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM: CVE-2023-36884.json",
+                    0.057079615281677334
+                ],
+                [
+                    "darkreading: Jupyter-Infostealer.json",
+                    0.06318604842548722
+                ],
+                [
+                    "securityweek: pypi.json",
+                    0.10127678136111298
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 3,
+                "fn": 4,
+                "precision": 0.7272727272727273,
+                "recall": 0.6666666666666666,
+                "f1": 0.6956521739130435
+            },
+            "matched_list": [
+                [
+                    [
+                        "SqzrFramework480",
+                        "is a",
+                        ".NET library responsible for calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries"
+                    ],
+                    [
+                        "SqzrFramework480",
+                        "is responsible for",
+                        "calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries"
+                    ]
+                ],
+                [
+                    [
+                        "SqzrFramework480",
+                        "published on",
+                        "the NuGet repository"
+                    ],
+                    [
+                        "SqzrFramework480",
+                        "is published on",
+                        "the NuGet repository"
+                    ]
+                ],
+                [
+                    [
+                        "SqzrFramework480",
+                        "can harvest",
+                        "various types of information from different types of industrial systems"
+                    ],
+                    [
+                        "SqzrFramework480",
+                        "can harvest",
+                        "various types of information from different types of industrial systems"
+                    ]
+                ],
+                [
+                    [
+                        "SqzrFramework480",
+                        "can take",
+                        "screenshots"
+                    ],
+                    [
+                        "SqzrFramework480",
+                        "can take",
+                        "screenshots"
+                    ]
+                ],
+                [
+                    [
+                        "SqzrFramework480",
+                        "can send",
+                        "ping packets"
+                    ],
+                    [
+                        "SqzrFramework480",
+                        "can send",
+                        "ping packets"
+                    ]
+                ],
+                [
+                    [
+                        "SqzrFramework480",
+                        "can open",
+                        "sockets for data transfer"
+                    ],
+                    [
+                        "SqzrFramework480",
+                        "can open",
+                        "sockets for data transfer"
+                    ]
+                ],
+                [
+                    [
+                        "function that takes screenshots",
+                        "operates in",
+                        "a continuous loop"
+                    ],
+                    [
+                        "The function that takes screenshots",
+                        "operates in",
+                        "a continuous loop"
+                    ]
+                ],
+                [
+                    [
+                        "function that takes screenshots",
+                        "captures",
+                        "the primary screen every minute"
+                    ],
+                    [
+                        "The function",
+                        "captures",
+                        "the primary screen every minute"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "NuGet package",
+                    "designed to harvest data from",
+                    "industrial systems"
+                ],
+                [
+                    "NuGet package",
+                    "targeting",
+                    "developers who use technology from Bozhon"
+                ],
+                [
+                    "information",
+                    "sent to",
+                    "a remote IP address via the opened socket"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "A suspicious NuGet package",
+                    "is designed to",
+                    "harvest data from industrial systems"
+                ],
+                [
+                    "A suspicious NuGet package",
+                    "appears to be targeting",
+                    "developers who use technology from Chinese company Bozhon"
+                ],
+                [
+                    "The function",
+                    "is not explicitly declared in",
+                    "the code"
+                ],
+                [
+                    "The information",
+                    "is sent to",
+                    "a remote IP address"
+                ]
+            ]
+        }
+    }
+}

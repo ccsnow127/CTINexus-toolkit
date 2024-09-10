@@ -1,0 +1,113 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Action",
+    "Attacker",
+    "Campaign",
+    "Event",
+    "Exploit Target Object",
+    "Host",
+    {
+        "Indicator":[
+            "Adress",
+            "Email",
+            "File",
+            "Hash"
+        ]
+    },
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic",
+    "Malware Family",
+    "Organization",
+    "Software",
+    "System",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "is", "object": "a relatively new player in the ransomware market"} 
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "is", "object": {"text": "a relatively new player in the ransomware market", "class": "This entity cannot be classified into any of the existing types"}} 
+---------------------
+Example 2:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "claimed responsibility for", "object": "three recent attacks"}
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "claimed responsibility for", "object": {"text": "three recent attacks", "class": "Event"}} 
+---------------------
+Example 3:
+
+"triple": {"subject": "The victims", "relation": "include", "object": "4LEAF"}
+
+"tagged_triple": {"subject": {"text": "The victims", "class": "Exploit Target Object"}, "relation": "include", "object": {"text": "4LEAF", "class": "Exploit Target Object"}} 
+---------------------
+
+
+"triple":: {'subject': 'The Akira ransomware group', 'relation': 'is', 'object': 'a relatively new player in the ransomware market'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The Akira ransomware group', 'relation': 'claimed responsibility for', 'object': 'three recent attacks'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The victims', 'relation': 'include', 'object': '4LEAF'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The victims', 'relation': 'include', 'object': 'Park-Rite'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The victims', 'relation': 'include', 'object': 'Family Day Care Services'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Akira', 'relation': 'listed', 'object': 'the names of the three victims on their leak site'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Akira', 'relation': 'threatening to', 'object': 'release company records if they refuse to pay a ransom'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Researchers', 'relation': 'discovered', 'object': 'the ransomware Trojan on August 28, 2017'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The Trojan', 'relation': 'appeared to be', 'object': 'in its testing phase'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The Trojan', 'relation': 'is being distributed by', 'object': 'targeting unprotected websites'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The Trojan', 'relation': 'has a specific focus on', 'object': 'WordPress sites'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Akira', 'relation': 'drops', 'object': 'one or multiple payload files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Akira', 'relation': 'leaves', 'object': 'a ransom note'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Akira', 'relation': 'creates', 'object': 'multiple registry values in Windows'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The presence of .akira files', 'relation': 'means', 'object': 'that your data has likely been encrypted by Akira ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

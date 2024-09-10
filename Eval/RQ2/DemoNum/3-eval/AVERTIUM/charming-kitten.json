@@ -1,0 +1,305 @@
+{
+    "CTI": {
+        "text": "The Iranian advanced persistent threat actor and cyberespionage group, APT35, also known as Charming Kitten or Phosphorus, has been making headlines since 2014. During that time, the group launched one of the most sophisticated internet based spying campaigns organized by Iranian threat actors - a campaign conducted via social media. Since then, the group has not slowed down and has been responsible for several other cyber attacks around the world. In 2019, APT35 was responsible for targeting several academic institutions in the U.S, France, and the Middle East region. In late 2020, the group targeted medical research organizations in Israel and in the U.S. By 2021, APT35 was abusing Microsoft Exchange Server vulnerabilities that were chained together (ProxyShell). As of 2022, APT35 has been observed using new tactics to attack a wide range of targets. Using a new strain of malware, the threat actors were able to use the malware for intelligence collection. The group has also been seen using a new tool called Hyperscrape to quietly extract emails from victim's mailboxes.",
+        "link": "https://explore.avertium.com/resource/in-depth-look-at-apt35-aka-charming-kitten"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "APT35",
+                "relation": "is also known as",
+                "object": "Charming Kitten"
+            },
+            {
+                "subject": "APT35",
+                "relation": "is also known as",
+                "object": "Phosphorus"
+            },
+            {
+                "subject": "APT35",
+                "relation": "launched",
+                "object": "a sophisticated internet based spying campaign via social media"
+            },
+            {
+                "subject": "APT35",
+                "relation": "responsible for",
+                "object": "several cyber attacks around the world"
+            },
+            {
+                "subject": "APT35",
+                "relation": "targeted",
+                "object": "academic institutions in the U.S, France, and the Middle East region"
+            },
+            {
+                "subject": "APT35",
+                "relation": "targeted",
+                "object": "medical research organizations in Israel and in the U.S"
+            },
+            {
+                "subject": "APT35",
+                "relation": "abusing",
+                "object": "Microsoft Exchange Server vulnerabilities"
+            },
+            {
+                "subject": "APT35",
+                "relation": "used",
+                "object": "new tactics to attack a wide range of targets"
+            },
+            {
+                "subject": "APT35",
+                "relation": "used",
+                "object": "a new strain of malware for intelligence collection"
+            },
+            {
+                "subject": "Hyperscrape",
+                "relation": "is a tool of",
+                "object": "APT35"
+            },
+            {
+                "subject": "Hyperscrape",
+                "relation": "used to quietly extract",
+                "object": "emails from victim's mailboxes"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2386,
+                "cost": 0.023860000000000003
+            },
+            "output": {
+                "tokens": 306,
+                "cost": 0.00918
+            },
+            "total": {
+                "tokens": 2692,
+                "cost": 0.03304
+            }
+        },
+        "time": 18.161040544509888,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/AVERTIUM/charming-kitten-QD1-qsJ.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "threatPost: toddycat.json",
+                    0.17443035928508321
+                ],
+                [
+                    "AVERTIUM: muddywater.json",
+                    0.19329483975423312
+                ],
+                [
+                    "Google_TAG: iranian.json",
+                    0.19599434054518083
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 1,
+                "fn": 4,
+                "precision": 0.9090909090909091,
+                "recall": 0.7142857142857143,
+                "f1": 0.8
+            },
+            "matched_list": [
+                [
+                    [
+                        "APT35",
+                        "is also known as",
+                        "Charming Kitten"
+                    ],
+                    [
+                        "APT35",
+                        "is also known as",
+                        "Charming Kitten"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "APT35",
+                        "is also known as",
+                        "Phosphorus"
+                    ],
+                    [
+                        "APT35",
+                        "is also known as",
+                        "Phosphorus"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "APT35",
+                        "launched",
+                        "a sophisticated internet based spying campaign via social media"
+                    ],
+                    [
+                        "APT35",
+                        "is",
+                        "an Iranian advanced persistent threat actor"
+                    ],
+                    [
+                        1.0,
+                        0.5104920351509775
+                    ]
+                ],
+                [
+                    [
+                        "APT35",
+                        "responsible for",
+                        "several cyber attacks around the world"
+                    ],
+                    [
+                        "APT35",
+                        "used",
+                        "new tactics to attack a wide range of targets"
+                    ],
+                    [
+                        1.0,
+                        0.48749224025526683
+                    ]
+                ],
+                [
+                    [
+                        "APT35",
+                        "targeted",
+                        "academic institutions in the U.S, France, and the Middle East region"
+                    ],
+                    [
+                        "APT35",
+                        "targeted",
+                        "academic institutions in the U.S, France, and the Middle East region"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "APT35",
+                        "targeted",
+                        "medical research organizations in Israel and in the U.S"
+                    ],
+                    [
+                        "APT35",
+                        "targeted",
+                        "academic institutions in the U.S, France, and the Middle East region"
+                    ],
+                    [
+                        1.0,
+                        0.46367457418156666
+                    ]
+                ],
+                [
+                    [
+                        "APT35",
+                        "abusing",
+                        "Microsoft Exchange Server vulnerabilities"
+                    ],
+                    [
+                        "APT35",
+                        "abused",
+                        "Microsoft Exchange Server vulnerabilities"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "APT35",
+                        "used",
+                        "new tactics to attack a wide range of targets"
+                    ],
+                    [
+                        "APT35",
+                        "used",
+                        "new tactics to attack a wide range of targets"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "APT35",
+                        "used",
+                        "a new strain of malware for intelligence collection"
+                    ],
+                    [
+                        "APT35",
+                        "is",
+                        "an Iranian advanced persistent threat actor"
+                    ],
+                    [
+                        1.0,
+                        0.48741667160861324
+                    ]
+                ],
+                [
+                    [
+                        "Hyperscrape",
+                        "is a tool of",
+                        "APT35"
+                    ],
+                    [
+                        "APT35",
+                        "used",
+                        "Hyperscrape to extract emails from victim's mailboxes"
+                    ],
+                    [
+                        0.6828865853315143,
+                        1.0,
+                        "passive form"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Hyperscrape",
+                    "used to quietly extract",
+                    "emails from victim's mailboxes"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "APT35",
+                    "launched",
+                    "internet based spying campaigns via social media"
+                ],
+                [
+                    "APT35",
+                    "targeted",
+                    "medical research organizations in Israel and in the U.S"
+                ],
+                [
+                    "Microsoft Exchange Server vulnerabilities",
+                    "were chained together",
+                    "ProxyShell"
+                ],
+                [
+                    "APT35",
+                    "used",
+                    "a new strain of malware for intelligence collection"
+                ]
+            ]
+        }
+    }
+}

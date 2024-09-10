@@ -1,0 +1,210 @@
+{
+    "CTI": {
+        "text": "Microsoft Threat Intelligence continues to track and disrupt malicious activity attributed to a Russian state-sponsored actor we track as Star Blizzard (formerly SEABORGIUM, also known as COLDRIVER and Callisto Group). Star Blizzard has improved their detection evasion capabilities since 2022 while remaining focused on email credential theft against the same targets. Star Blizzard, whose activities we assess to have historically supported both espionage and cyber influence objectives, continues to prolifically target individuals and organizations involved in international affairs, defense, and logistics support to Ukraine, as well as academia, information security companies, and other entities aligning with Russian state interests. Microsoft continues to refine and deploy protections against Star Blizzard's evolving spear-phishing tactics.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/12/07/star-blizzard-increases-sophistication-and-evasion-in-ongoing-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft Threat Intelligence",
+                "relation": "continues to track and disrupt",
+                "object": "malicious activity attributed to Star Blizzard"
+            },
+            {
+                "subject": "Star Blizzard",
+                "relation": "formerly known as",
+                "object": "SEABORGIUM"
+            },
+            {
+                "subject": "Star Blizzard",
+                "relation": "also known as",
+                "object": "COLDRIVER and Callisto Group"
+            },
+            {
+                "subject": "Star Blizzard",
+                "relation": "has improved",
+                "object": "their detection evasion capabilities since 2022"
+            },
+            {
+                "subject": "Star Blizzard",
+                "relation": "remains focused on",
+                "object": "email credential theft"
+            },
+            {
+                "subject": "Star Blizzard",
+                "relation": "activities assess to have supported",
+                "object": "espionage and cyber influence objectives"
+            },
+            {
+                "subject": "Star Blizzard",
+                "relation": "continues to prolifically target",
+                "object": "individuals and organizations involved in international affairs, defense, and logistics support to Ukraine, as well as academia, information security companies, and other entities aligning with Russian state interests"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "continues to refine and deploy",
+                "object": "protections against Star Blizzard's evolving spear-phishing tactics"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1226,
+                "cost": 0.012260000000000002
+            },
+            "output": {
+                "tokens": 262,
+                "cost": 0.00786
+            },
+            "total": {
+                "tokens": 1488,
+                "cost": 0.020120000000000002
+            }
+        },
+        "time": 11.978597640991211,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/Microsoft/star-blizzard-QD1-L9S.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "chrome.json",
+                    "random"
+                ],
+                [
+                    "Follina.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 0,
+                "fn": 3,
+                "precision": 1.0,
+                "recall": 0.7272727272727273,
+                "f1": 0.8421052631578948
+            },
+            "matched_list": [
+                [
+                    [
+                        "Microsoft Threat Intelligence",
+                        "continues to track and disrupt",
+                        "malicious activity attributed to Star Blizzard"
+                    ],
+                    [
+                        "Microsoft",
+                        "deploys protections against",
+                        "Star Blizzard's evolving spear-phishing tactics"
+                    ]
+                ],
+                [
+                    [
+                        "Star Blizzard",
+                        "formerly known as",
+                        "SEABORGIUM"
+                    ],
+                    [
+                        "Star Blizzard",
+                        "formerly known as",
+                        "SEABORGIUM"
+                    ]
+                ],
+                [
+                    [
+                        "Star Blizzard",
+                        "also known as",
+                        "COLDRIVER and Callisto Group"
+                    ],
+                    [
+                        "Star Blizzard",
+                        "also known as",
+                        "COLDRIVER"
+                    ]
+                ],
+                [
+                    [
+                        "Star Blizzard",
+                        "has improved",
+                        "their detection evasion capabilities since 2022"
+                    ],
+                    [
+                        "Star Blizzard",
+                        "improved",
+                        "detection evasion capabilities"
+                    ]
+                ],
+                [
+                    [
+                        "Star Blizzard",
+                        "remains focused on",
+                        "email credential theft"
+                    ],
+                    [
+                        "Star Blizzard",
+                        "remains focused on",
+                        "email credential theft"
+                    ]
+                ],
+                [
+                    [
+                        "Star Blizzard",
+                        "activities assess to have supported",
+                        "espionage and cyber influence objectives"
+                    ],
+                    [
+                        "Star Blizzard",
+                        "supported objectives include",
+                        "cyber influence"
+                    ]
+                ],
+                [
+                    [
+                        "Star Blizzard",
+                        "continues to prolifically target",
+                        "individuals and organizations involved in international affairs, defense, and logistics support to Ukraine, as well as academia, information security companies, and other entities aligning with Russian state interests"
+                    ],
+                    [
+                        "Star Blizzard",
+                        "targets",
+                        "entities aligning with Russian state interests"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "continues to refine and deploy",
+                        "protections against Star Blizzard's evolving spear-phishing tactics"
+                    ],
+                    [
+                        "Microsoft",
+                        "deploys protections against",
+                        "Star Blizzard's evolving spear-phishing tactics"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Star Blizzard",
+                    "targets",
+                    "logistics support to Ukraine"
+                ],
+                [
+                    "Star Blizzard",
+                    "targets",
+                    "academia"
+                ],
+                [
+                    "Star Blizzard",
+                    "targets",
+                    "information security companies"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

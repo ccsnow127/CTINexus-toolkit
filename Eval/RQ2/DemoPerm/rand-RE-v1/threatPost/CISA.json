@@ -1,0 +1,170 @@
+{
+    "CTI": {
+        "text": "A Windows 11 vulnerability, part of Microsoft\u2019s Patch Tuesday roundup of fixes, is being exploited in the wild, prompting the U.S. Cybersecurity and Infrastructure Security Agency (CISA) to advise patching of the elevation of privileges flaw by August 2. The recommendation is directed at federal agencies and concerns CVE-2022-22047, a vulnerability that carries a CVSS score of high (7.8) and exposes Windows Client Server Runtime Subsystem (CSRSS) used in Windows 11 (and earlier versions dating back to 7) and also Windows Server 2022 (and earlier versions 2008, 2012, 2016 and 2019) to attack. The CSRSS bug is an elevation of privileges vulnerability that allows adversaries with a pre-established foothold on a targeted system to execute code as an unprivileged user. When the bug was first reported by Microsoft\u2019s own security team earlier this month it was classified as a zero-day, or a known bug with no patch. ",
+        "link": "https://threatpost.com/cisa-urges-patch-11-bug/180235/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Windows 11 vulnerability",
+                "relation": "is part of",
+                "object": "Microsoft\u2019s Patch Tuesday roundup of fixes"
+            },
+            {
+                "subject": "CISA",
+                "relation": "advises",
+                "object": "patching of the elevation of privileges flaw by August 2"
+            },
+            {
+                "subject": "CVE-2022-22047",
+                "relation": "is a vulnerability that carries a CVSS score of",
+                "object": "high (7.8)"
+            },
+            {
+                "subject": "CVE-2022-22047",
+                "relation": "exposes",
+                "object": "Windows Client Server Runtime Subsystem (CSRSS)"
+            },
+            {
+                "subject": "CSRSS bug",
+                "relation": "is an elevation of privileges vulnerability that allows",
+                "object": "adversaries to execute code as an unprivileged user"
+            },
+            {
+                "subject": "Microsoft\u2019s own security team",
+                "relation": "reported",
+                "object": "the bug as a zero-day"
+            }
+        ],
+        "triples_count": 6,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1680,
+                "cost": 0.016800000000000002
+            },
+            "output": {
+                "tokens": 247,
+                "cost": 0.00741
+            },
+            "total": {
+                "tokens": 1927,
+                "cost": 0.024210000000000002
+            }
+        },
+        "time": 11.183039426803589,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/threatPost/CISA-QD1-3mA.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "ragnar.json",
+                    "random"
+                ],
+                [
+                    "ukraine.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 5,
+                "fp": 1,
+                "fn": 3,
+                "precision": 0.8333333333333334,
+                "recall": 0.625,
+                "f1": 0.7142857142857143
+            },
+            "matched_list": [
+                [
+                    [
+                        "CISA",
+                        "advises",
+                        "patching of the elevation of privileges flaw by August 2"
+                    ],
+                    [
+                        "U.S. Cybersecurity and Infrastructure Security Agency (CISA)",
+                        "advise",
+                        "patching of the elevation of privileges flaw"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-22047",
+                        "is a vulnerability that carries a CVSS score of",
+                        "high (7.8)"
+                    ],
+                    [
+                        "CVE-2022-22047",
+                        "carries",
+                        "a CVSS score of high (7.8)"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-22047",
+                        "exposes",
+                        "Windows Client Server Runtime Subsystem (CSRSS)"
+                    ],
+                    [
+                        "Windows Client Server Runtime Subsystem (CSRSS)",
+                        "is used in",
+                        "Windows Server 2022"
+                    ]
+                ],
+                [
+                    [
+                        "CSRSS bug",
+                        "is an elevation of privileges vulnerability that allows",
+                        "adversaries to execute code as an unprivileged user"
+                    ],
+                    [
+                        "The CSRSS bug",
+                        "is an",
+                        "elevation of privileges vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft\u2019s own security team",
+                        "reported",
+                        "the bug as a zero-day"
+                    ],
+                    [
+                        "Microsoft\u2019s own security team",
+                        "reported",
+                        "the bug"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Windows 11 vulnerability",
+                    "is part of",
+                    "Microsoft\u2019s Patch Tuesday roundup of fixes"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "A Windows 11 vulnerability",
+                    "is being exploited",
+                    "in the wild"
+                ],
+                [
+                    "The recommendation",
+                    "is directed at",
+                    "federal agencies"
+                ],
+                [
+                    "adversaries",
+                    "execute code as",
+                    "an unprivileged user"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

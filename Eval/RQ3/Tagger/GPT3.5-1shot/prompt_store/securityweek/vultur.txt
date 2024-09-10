@@ -1,0 +1,134 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Vultur', 'relation': 'is known as', 'object': 'Android banking malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vultur', 'relation': 'updated with', 'object': 'new capabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'operators', 'relation': 'interact with', 'object': 'infected devices'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'operators', 'relation': 'modify', 'object': 'files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vultur', 'relation': 'abused', 'object': 'AlphaVNC'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vultur', 'relation': 'abused', 'object': 'ngrok'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vultur', 'relation': 'for', 'object': 'remotely accessing the VNC server'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vultur', 'relation': 'for', 'object': 'automating screen recording and key-logging'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vultur', 'relation': 'allows attackers to', 'object': 'control the infected device'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vultur', 'relation': 'prevents', 'object': 'applications from running'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vultur', 'relation': 'displays', 'object': 'custom notifications'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vultur', 'relation': 'bypasses', 'object': 'lock-screen protections'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vultur', 'relation': 'downloads, uploads, installs, searches for, and deletes', 'object': 'files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The infection chain', 'relation': 'starts with', 'object': 'a SMS message'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SMS message', 'relation': 'instructs to call', 'object': 'a phone number'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'second SMS message', 'relation': 'includes a link to', 'object': 'a modified McAfee Security package'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'modified McAfee Security package', 'relation': 'contains', 'object': 'the functionality of legitimate McAfee Security software'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'modified McAfee Security package', 'relation': 'contains', 'object': 'Brunhilda'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Brunhilda', 'relation': 'deploys', 'object': 'Vultur via three payloads'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vultur', 'relation': 'can prevent', 'object': 'the user from interacting with applications'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'applications', 'relation': 'are defined in', 'object': 'a list provided by the attacker'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

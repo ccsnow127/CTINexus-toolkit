@@ -1,0 +1,417 @@
+{
+    "CTI": {
+        "text": "Maintainers of the Python Package Index (PyPI) repository were forced to suspend new project creation and new user registration on Thursday to mitigate a worrisome malware upload campaign. The confirmation of the PyPI incident, which has since been resolved, comes as security researchers at Checkmarx warn that multiple malicious Python packages are being pushed via typo-squatting techniques. \u201cThis is a multi-stage attack and the malicious payload aimed to steal crypto wallets, sensitive data from browsers (cookies, extensions data, etc..) and various credentials. In addition, the malicious payload employed a persistence mechanism to survive reboots,\u201d Checkmarx said in a research note. Earlier this week, the company said it spotted multiple malicious Python packages being uploaded on the Python Package Index (PyPI) and noted that these packages most likely were created using automation tools. \u201cThe malicious code is located within each package\u2019s setup.py file, enabling automatic execution upon installation,\u201d Checkmarx explained. \u201cUpon execution, the malicious code within the setup.py file attempted to retrieve an additional payload from a remote server. The URL for the payload was dynamically constructed by appending the package name as a query parameter.\u201d The end result is an info-stealer designed to harvest sensitive information from the victim\u2019s machine and a persistence mechanism to ensure it remained active on the compromised system even after the initial execution. \u201cThe discovery of these malicious Python packages on PyPI highlights the ongoing nature of cybersecurity threats within the software development ecosystem. This incident is not an isolated case, and similar attacks targeting package repositories and software supply chains are likely to continue,\u201d the company warned.",
+        "link": "https://www.securityweek.com/malware-upload-attack-hits-pypi-repository/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Maintainers of the Python Package Index (PyPI)",
+                "relation": "were forced to",
+                "object": "suspend new project creation and new user registration"
+            },
+            {
+                "subject": "Maintainers",
+                "relation": "mitigate",
+                "object": "malware upload campaign"
+            },
+            {
+                "subject": "security researchers at Checkmarx",
+                "relation": "warn",
+                "object": "multiple malicious Python packages are being pushed"
+            },
+            {
+                "subject": "malicious Python packages",
+                "relation": "are being pushed via",
+                "object": "typo-squatting techniques"
+            },
+            {
+                "subject": "malicious payload",
+                "relation": "aimed to steal",
+                "object": "crypto wallets"
+            },
+            {
+                "subject": "malicious payload",
+                "relation": "aimed to steal",
+                "object": "sensitive data from browsers"
+            },
+            {
+                "subject": "malicious payload",
+                "relation": "aimed to steal",
+                "object": "various credentials"
+            },
+            {
+                "subject": "malicious payload",
+                "relation": "employed",
+                "object": "a persistence mechanism to survive reboots"
+            },
+            {
+                "subject": "malicious code",
+                "relation": "is located within",
+                "object": "package's setup.py file"
+            },
+            {
+                "subject": "malicious code",
+                "relation": "enables",
+                "object": "automatic execution upon installation"
+            },
+            {
+                "subject": "malicious code",
+                "relation": "attempted to retrieve",
+                "object": "an additional payload from a remote server"
+            },
+            {
+                "subject": "URL for the payload",
+                "relation": "was dynamically constructed by",
+                "object": "appending the package name as a query parameter"
+            },
+            {
+                "subject": "result",
+                "relation": "is",
+                "object": "an info-stealer designed to harvest sensitive information"
+            },
+            {
+                "subject": "result",
+                "relation": "includes",
+                "object": "a persistence mechanism"
+            },
+            {
+                "subject": "discovery",
+                "relation": "highlights",
+                "object": "ongoing nature of cybersecurity threats within the software development ecosystem"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2735,
+                "cost": 0.027350000000000003
+            },
+            "output": {
+                "tokens": 432,
+                "cost": 0.012960000000000001
+            },
+            "total": {
+                "tokens": 3167,
+                "cost": 0.040310000000000006
+            }
+        },
+        "time": 11.100929021835327,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/securityweek/pypi-QD1-sNN.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-apple.json",
+                    0.07088091505933075
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.07780412005385877
+                ],
+                [
+                    "AVERTIUM-cactus.json",
+                    0.09910458858503672
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Maintainers of the Python Package Index (PyPI)",
+                    "class": "Organization"
+                },
+                "relation": "were forced to",
+                "object": {
+                    "text": "suspend new project creation and new user registration",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Maintainers",
+                    "class": "Organization"
+                },
+                "relation": "mitigate",
+                "object": {
+                    "text": "malware upload campaign",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "security researchers at Checkmarx",
+                    "class": "Organization"
+                },
+                "relation": "warn",
+                "object": {
+                    "text": "multiple malicious Python packages are being pushed",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious Python packages",
+                    "class": "Malware"
+                },
+                "relation": "are being pushed via",
+                "object": {
+                    "text": "typo-squatting techniques",
+                    "class": "Attack"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious payload",
+                    "class": "Malware"
+                },
+                "relation": "aimed to steal",
+                "object": {
+                    "text": "crypto wallets",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious payload",
+                    "class": "Malware"
+                },
+                "relation": "aimed to steal",
+                "object": {
+                    "text": "sensitive data from browsers",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious payload",
+                    "class": "Malware"
+                },
+                "relation": "aimed to steal",
+                "object": {
+                    "text": "various credentials",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious payload",
+                    "class": "Malware"
+                },
+                "relation": "employed",
+                "object": {
+                    "text": "a persistence mechanism to survive reboots",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious code",
+                    "class": "Malware"
+                },
+                "relation": "is located within",
+                "object": {
+                    "text": "package's setup.py file",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious code",
+                    "class": "Malware"
+                },
+                "relation": "enables",
+                "object": {
+                    "text": "automatic execution upon installation",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious code",
+                    "class": "Malware"
+                },
+                "relation": "attempted to retrieve",
+                "object": {
+                    "text": "an additional payload from a remote server",
+                    "class": "Attack"
+                }
+            },
+            {
+                "subject": {
+                    "text": "URL for the payload",
+                    "class": "Indicator:URL"
+                },
+                "relation": "was dynamically constructed by",
+                "object": {
+                    "text": "appending the package name as a query parameter",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "result",
+                    "class": "Information"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "an info-stealer designed to harvest sensitive information",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "result",
+                    "class": "Information"
+                },
+                "relation": "includes",
+                "object": {
+                    "text": "a persistence mechanism",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "discovery",
+                    "class": "Event"
+                },
+                "relation": "highlights",
+                "object": {
+                    "text": "ongoing nature of cybersecurity threats within the software development ecosystem",
+                    "class": "Information"
+                }
+            }
+        ],
+        "response_time": 14.060896873474121,
+        "Demo_num": 4,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT3.5-4shot/prompt_store/securityweek/pypi.txt",
+        "model_usage": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1265,
+                "cost": 0.0006324999999999999
+            },
+            "output": {
+                "tokens": 733,
+                "cost": 0.0010995
+            },
+            "total": {
+                "tokens": 1998,
+                "cost": 0.001732
+            }
+        },
+        "Eval": {
+            "correct": 23,
+            "incorrect": 7,
+            "TP": 23,
+            "TN": 0,
+            "FP": 5,
+            "FN": 2,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 30,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 1,
+                    "TN": 28,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 30,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 0,
+                    "TN": 30,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 3,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 3
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 30,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 2,
+                    "TN": 28,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 2,
+                    "TN": 24,
+                    "FP": 3,
+                    "FN": 1
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 30,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 8,
+                    "TN": 19,
+                    "FP": 1,
+                    "FN": 2
+                },
+                "Malware Characteristic": {
+                    "TP": 4,
+                    "TN": 25,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Organization": {
+                    "TP": 3,
+                    "TN": 27,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 30,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 30,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 30,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 28,
+                    "FP": 2,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 8
+        }
+    }
+}

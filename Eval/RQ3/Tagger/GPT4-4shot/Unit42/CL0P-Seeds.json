@@ -1,0 +1,257 @@
+{
+    "CTI": {
+        "text": "The CL0P ransomware group recently began using torrents to distribute victim data after a successful campaign stealing data from thousands of companies. We'll cover the reason for this shift in methodology and what this means for visibility to the outside world. CL0P has been one of the ransomware groups most actively posting data about their victims on leak sites tracked by Unit 42 (second only to LockBit in 2023). Unit 42 consultants have recently observed CL0P in about 10 incident response cases.",
+        "link": "https://unit42.paloaltonetworks.com/cl0p-group-distributes-ransomware-data-with-torrents/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "The CL0P ransomware group",
+                "relation": "began using",
+                "object": "torrents to distribute victim data"
+            },
+            {
+                "subject": "The CL0P ransomware group",
+                "relation": "stealing data from",
+                "object": "thousands of companies"
+            },
+            {
+                "subject": "The CL0P ransomware group",
+                "relation": "posting data about",
+                "object": "their victims on leak sites"
+            },
+            {
+                "subject": "Unit 42",
+                "relation": "tracked",
+                "object": "leak sites"
+            },
+            {
+                "subject": "Unit 42",
+                "relation": "observed CL0P in",
+                "object": "incident response cases"
+            }
+        ],
+        "triples_count": 5,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2494,
+                "cost": 0.02494
+            },
+            "output": {
+                "tokens": 148,
+                "cost": 0.00444
+            },
+            "total": {
+                "tokens": 2642,
+                "cost": 0.02938
+            }
+        },
+        "time": 4.068605661392212,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Unit42/CL0P-Seeds-QD1-4u2.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-ragnar.json",
+                    0.09027667229120116
+                ],
+                [
+                    "AVERTIUM-akira.json",
+                    0.09285167294298041
+                ],
+                [
+                    "AVERTIUM-mallox.json",
+                    0.17542276568636705
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "The CL0P ransomware group",
+                    "class": "Attacker"
+                },
+                "relation": "began using",
+                "object": {
+                    "text": "torrents to distribute victim data",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The CL0P ransomware group",
+                    "class": "Attacker"
+                },
+                "relation": "stealing data from",
+                "object": {
+                    "text": "thousands of companies",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The CL0P ransomware group",
+                    "class": "Attacker"
+                },
+                "relation": "posting data about",
+                "object": {
+                    "text": "their victims on leak sites",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Unit 42",
+                    "class": "Organization"
+                },
+                "relation": "tracked",
+                "object": {
+                    "text": "leak sites",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Unit 42",
+                    "class": "Organization"
+                },
+                "relation": "observed CL0P in",
+                "object": {
+                    "text": "incident response cases",
+                    "class": "Event"
+                }
+            }
+        ],
+        "response_time": 10.594624757766724,
+        "Demo_num": 4,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-4shot/prompt_store/Unit42/CL0P-Seeds.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 808,
+                "cost": 0.00808
+            },
+            "output": {
+                "tokens": 278,
+                "cost": 0.00834
+            },
+            "total": {
+                "tokens": 1086,
+                "cost": 0.01642
+            }
+        },
+        "Eval": {
+            "correct": 9,
+            "incorrect": 1,
+            "TP": 9,
+            "TN": 0,
+            "FP": 1,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 9,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Attacker": {
+                    "TP": 3,
+                    "TN": 7,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 3,
+                    "TN": 6,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 0,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 0,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 2,
+                    "TN": 8,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 1,
+                    "TN": 9,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 10,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 4
+        }
+    }
+}

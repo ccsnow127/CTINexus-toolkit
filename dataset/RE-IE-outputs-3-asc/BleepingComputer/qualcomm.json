@@ -1,0 +1,158 @@
+{
+    "CTI": {
+        "text": "A new vulnerability dubbed 'LeftoverLocals' affecting graphics processing units from AMD, Apple, Qualcomm, and Imagination Technologies allows retrieving data from the local memory space. Tracked as CVE-2023-4969, the security issue enables data recovery from vulnerable GPUs, especially in the context of large language models (LLMs) and machine learning (ML) processes. LeftoverLocals lets attackers launch a 'listener' - a GPU kernel that reads from uninitialized local memory and can dump the data in a persistent location, such as the global memory. If the local memory is not cleared, the attacker can use the listener to read values left behind by the 'writer' - a program that stores values to local memory. The recovered data can reveal sensitive information about the victim's computations, including model inputs, outputs, weights, and intermediate computations.",
+        "link": "https://www.bleepingcomputer.com/news/security/amd-apple-qualcomm-gpus-leak-ai-data-in-leftoverlocals-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "LeftoverLocals",
+                "relation": "affects",
+                "object": "graphics processing units"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "AMD"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Apple"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Qualcomm"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Imagination Technologies"
+            },
+            {
+                "subject": "LeftoverLocals",
+                "relation": "allows",
+                "object": "retrieving data from local memory space"
+            },
+            {
+                "subject": "The vulnerability",
+                "relation": "is tracked as",
+                "object": "CVE-2023-4969"
+            },
+            {
+                "subject": "The vulnerability",
+                "relation": "enables",
+                "object": "data recovery from vulnerable GPUs"
+            },
+            {
+                "subject": "vulnerable GPUs",
+                "relation": "especially in context of",
+                "object": "large language models processes"
+            },
+            {
+                "subject": "vulnerable GPUs",
+                "relation": "especially in context of",
+                "object": "machine learning processes"
+            },
+            {
+                "subject": "attackers",
+                "relation": "launch",
+                "object": "'listener'"
+            },
+            {
+                "subject": "'listener'",
+                "relation": "is a",
+                "object": "GPU kernel that reads from uninitialized local memory"
+            },
+            {
+                "subject": "'listener'",
+                "relation": "can dump data in",
+                "object": "persistent location"
+            },
+            {
+                "subject": "persistent location",
+                "relation": "such as",
+                "object": "the global memory"
+            },
+            {
+                "subject": "attacker",
+                "relation": "use",
+                "object": "listener to read values"
+            },
+            {
+                "subject": "values",
+                "relation": "left behind by",
+                "object": "'writer'"
+            },
+            {
+                "subject": "'writer'",
+                "relation": "is a",
+                "object": "program that stores values to local memory"
+            },
+            {
+                "subject": "recovered data",
+                "relation": "can reveal",
+                "object": "sensitive information about victim's computations"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "model inputs"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "outputs"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "weights"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "includes",
+                "object": "intermediate computations"
+            }
+        ],
+        "triples_count": 22,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1784,
+                "cost": 0.01784
+            },
+            "output": {
+                "tokens": 513,
+                "cost": 0.015390000000000001
+            },
+            "total": {
+                "tokens": 2297,
+                "cost": 0.03323
+            }
+        },
+        "time": 13.038778305053711,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/BleepingComputer/qualcomm-QD1-tnP.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-mastodon.json",
+                    0.05243586691932423
+                ],
+                [
+                    "BleepingComputer-apple.json",
+                    0.07493194462094664
+                ],
+                [
+                    "BleepingComputer-chrome.json",
+                    0.17536710205677786
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

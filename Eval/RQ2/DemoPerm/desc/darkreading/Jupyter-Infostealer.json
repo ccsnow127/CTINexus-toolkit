@@ -1,0 +1,341 @@
+{
+    "CTI": {
+        "text": "Security researchers have spotted a recent increase in attacks involving a sophisticated new variant of Jupyter, an information stealer that has been targeting users of Chrome, Edge, and Firefox browsers since at least 2020. The malware, also referred to as Yellow Cockatoo, Solarmarker, and Polazert, can backdoor machines and harvest a variety of credential information, including computer name, the user's admin privileges, cookies, Web data, browser password manager information, and other sensitive data from victim systems - such as logins for crypto-wallets and remote access apps. Researchers from VMware's Carbon Black managed detection and response (MDR) service recently observed the new version of the malware leveraging PowerShell command modifications and legitimate-looking, digitally signed payloads, infecting a steadily rising number of systems since late October. Morphisec and BlackBerry \u2014 two other vendors that have previously tracked Jupyter \u2014 have identified the malware as capable of functioning as a full-fledged backdoor. They have described its capabilities as including support for command and control (C2) communications, acting as a dropper and loader for other malware, hollowing shell code to evade detection, and executing PowerShell scripts and commands. BlackBerry has reported observing Jupyter also targeting crypto-wallets, such as Ethereum Wallet, MyMonero Wallet, and Atomic Wallet, in addition to accessing OpenVPN, Remote Desktop Protocol, and other remote access applications.",
+        "link": "https://www.darkreading.com/cyberattacks-data-breaches/evasive-jupyter-infostealer-campaign-dangerous-variant"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Jupyter",
+                "relation": "is a",
+                "object": "information stealer"
+            },
+            {
+                "subject": "Jupyter",
+                "relation": "also referred to as",
+                "object": "Yellow Cockatoo, Solarmarker, Polazert"
+            },
+            {
+                "subject": "Jupyter",
+                "relation": "targets",
+                "object": "users of Chrome, Edge, and Firefox browsers"
+            },
+            {
+                "subject": "Jupyter",
+                "relation": "can backdoor",
+                "object": "machines"
+            },
+            {
+                "subject": "Jupyter",
+                "relation": "harvests",
+                "object": "credential information"
+            },
+            {
+                "subject": "credential information",
+                "relation": "includes",
+                "object": "computer name, user's admin privileges, cookies, Web data, browser password manager information"
+            },
+            {
+                "subject": "Jupyter",
+                "relation": "steals",
+                "object": "logins for crypto-wallets and remote access apps"
+            },
+            {
+                "subject": "VMware's Carbon Black MDR service",
+                "relation": "observed",
+                "object": "new version of Jupyter"
+            },
+            {
+                "subject": "new version of Jupyter",
+                "relation": "leveraging",
+                "object": "PowerShell command modifications"
+            },
+            {
+                "subject": "new version of Jupyter",
+                "relation": "uses",
+                "object": "legitimate-looking, digitally signed payloads"
+            },
+            {
+                "subject": "Jupyter",
+                "relation": "functions as",
+                "object": "a full-fledged backdoor"
+            },
+            {
+                "subject": "Jupyter",
+                "relation": "supports",
+                "object": "command and control (C2) communications"
+            },
+            {
+                "subject": "Jupyter",
+                "relation": "acts as",
+                "object": "a dropper and loader for other malware"
+            },
+            {
+                "subject": "Jupyter",
+                "relation": "executes",
+                "object": "PowerShell scripts and commands"
+            },
+            {
+                "subject": "Jupyter",
+                "relation": "targets",
+                "object": "crypto-wallets"
+            },
+            {
+                "subject": "crypto-wallets",
+                "relation": "include",
+                "object": "Ethereum Wallet, MyMonero Wallet, and Atomic Wallet"
+            },
+            {
+                "subject": "Jupyter",
+                "relation": "accesses",
+                "object": "OpenVPN, Remote Desktop Protocol, and other remote access applications"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1754,
+                "cost": 0.01754
+            },
+            "output": {
+                "tokens": 490,
+                "cost": 0.0147
+            },
+            "total": {
+                "tokens": 2244,
+                "cost": 0.03224
+            }
+        },
+        "time": 24.015721559524536,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/darkreading/Jupyter-Infostealer-QD1-zdi.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Unit42: CryptoClippy.json",
+                    0.17180355314040152
+                ],
+                [
+                    "thehackernews: JinxLoader.json",
+                    0.12453916212660286
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 2,
+                "fn": 1,
+                "precision": 0.8823529411764706,
+                "recall": 0.9375,
+                "f1": 0.9090909090909091
+            },
+            "matched_list": [
+                [
+                    [
+                        "Jupyter",
+                        "is a",
+                        "information stealer"
+                    ],
+                    [
+                        "Jupyter",
+                        "is a variant of",
+                        "information stealer"
+                    ]
+                ],
+                [
+                    [
+                        "Jupyter",
+                        "also referred to as",
+                        "Yellow Cockatoo, Solarmarker, Polazert"
+                    ],
+                    [
+                        "Jupyter",
+                        "is also referred to as",
+                        "Yellow Cockatoo"
+                    ]
+                ],
+                [
+                    [
+                        "Jupyter",
+                        "targets",
+                        "users of Chrome, Edge, and Firefox browsers"
+                    ],
+                    [
+                        "Jupyter",
+                        "has been targeting",
+                        "users of Chrome, Edge, and Firefox browsers"
+                    ]
+                ],
+                [
+                    [
+                        "Jupyter",
+                        "can backdoor",
+                        "machines"
+                    ],
+                    [
+                        "Jupyter",
+                        "can backdoor",
+                        "machines"
+                    ]
+                ],
+                [
+                    [
+                        "Jupyter",
+                        "harvests",
+                        "credential information"
+                    ],
+                    [
+                        "Jupyter",
+                        "harvests",
+                        "credential information"
+                    ]
+                ],
+                [
+                    [
+                        "credential information",
+                        "includes",
+                        "computer name, user's admin privileges, cookies, Web data, browser password manager information"
+                    ],
+                    [
+                        "credential information",
+                        "includes",
+                        "browser password manager information"
+                    ]
+                ],
+                [
+                    [
+                        "Jupyter",
+                        "steals",
+                        "logins for crypto-wallets and remote access apps"
+                    ],
+                    [
+                        "Jupyter",
+                        "steals",
+                        "logins for crypto-wallets"
+                    ]
+                ],
+                [
+                    [
+                        "new version of Jupyter",
+                        "leveraging",
+                        "PowerShell command modifications"
+                    ],
+                    [
+                        "new version of Jupyter",
+                        "leveraging",
+                        "PowerShell command modifications"
+                    ]
+                ],
+                [
+                    [
+                        "new version of Jupyter",
+                        "uses",
+                        "legitimate-looking, digitally signed payloads"
+                    ],
+                    [
+                        "new version of Jupyter",
+                        "leveraging",
+                        "legitimate-looking, digitally signed payloads"
+                    ]
+                ],
+                [
+                    [
+                        "Jupyter",
+                        "functions as",
+                        "a full-fledged backdoor"
+                    ],
+                    [
+                        "Jupyter",
+                        "functioning as",
+                        "a full-fledged backdoor"
+                    ]
+                ],
+                [
+                    [
+                        "Jupyter",
+                        "supports",
+                        "command and control (C2) communications"
+                    ],
+                    [
+                        "Jupyter",
+                        "supports",
+                        "command and control (C2) communications"
+                    ]
+                ],
+                [
+                    [
+                        "Jupyter",
+                        "acts as",
+                        "a dropper and loader for other malware"
+                    ],
+                    [
+                        "Jupyter",
+                        "acts as",
+                        "a dropper and loader for other malware"
+                    ]
+                ],
+                [
+                    [
+                        "Jupyter",
+                        "executes",
+                        "PowerShell scripts and commands"
+                    ],
+                    [
+                        "Jupyter",
+                        "executes",
+                        "PowerShell scripts and commands"
+                    ]
+                ],
+                [
+                    [
+                        "Jupyter",
+                        "targets",
+                        "crypto-wallets"
+                    ],
+                    [
+                        "Jupyter",
+                        "targeting",
+                        "Ethereum Wallet"
+                    ]
+                ],
+                [
+                    [
+                        "Jupyter",
+                        "accesses",
+                        "OpenVPN, Remote Desktop Protocol, and other remote access applications"
+                    ],
+                    [
+                        "Jupyter",
+                        "accessing",
+                        "OpenVPN"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "VMware's Carbon Black MDR service",
+                    "observed",
+                    "new version of Jupyter"
+                ],
+                [
+                    "crypto-wallets",
+                    "include",
+                    "Ethereum Wallet, MyMonero Wallet, and Atomic Wallet"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Jupyter",
+                    "hollows",
+                    "shell code to evade detection"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

@@ -1,0 +1,293 @@
+{
+    "CTI": {
+        "text": "A financially motivated threat actor has been targeting one-day vulnerabilities in public-facing services to deploy Linux backdoors, Check Point reports. Tracked as Magnet Goblin, the adversary was seen quickly adopting one-day vulnerabilities, often in edge devices, and relying on the Nerbian custom malware family to perform nefarious activities. Magnet Goblin was seen targeting publicly disclosed vulnerabilities in Ivanti VPNs (CVE-2023-46805, CVE-2024-21887, CVE-2024-21888, and CVE-2024-21893), Magento (CVE-2022-24086), Qlik Sense (CVE-2023-41265, CVE-2023-41266, and CVE-2023-48365), and possibly Apache ActiveMQ. As part of an attack exploiting the recent Ivanti flaws, the threat actor was observed deploying a JavaScript credential stealer called Warpwire, a Linux variant of the NerbianRAT backdoor, and the open source tunneling tool Ligolo. The Warpwire stealer was previously linked to the mass exploitation of Ivanti vulnerabilities, suggesting that multiple threat actors might be using it, Check Point says. The tool was also seen in a 2022 attack against Magento servers, which were used as command-and-control (C&C) servers for the Windows variant of NerbianRAT and for Warpwire. Magnet Goblin deployed MiniNerbian, a smaller version of the Linux NerbianRAT backdoor, on the compromised Magento instances.",
+        "link": "https://www.securityweek.com/magnet-goblin-delivers-linux-malware-using-one-day-vulnerabilities/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "A financially motivated threat actor",
+                "relation": "has been targeting",
+                "object": "one-day vulnerabilities in public-facing services"
+            },
+            {
+                "subject": "Magnet Goblin",
+                "relation": "was seen quickly adopting",
+                "object": "one-day vulnerabilities"
+            },
+            {
+                "subject": "Magnet Goblin",
+                "relation": "relies on",
+                "object": "the Nerbian custom malware family"
+            },
+            {
+                "subject": "Magnet Goblin",
+                "relation": "was seen targeting vulnerabilities in",
+                "object": "Ivanti VPNs, Magento, Qlik Sense, and possibly Apache ActiveMQ"
+            },
+            {
+                "subject": "The threat actor",
+                "relation": "was observed deploying",
+                "object": "JavaScript credential stealer called Warpwire, a Linux variant of the NerbianRAT backdoor, and the open source tunneling tool Ligolo"
+            },
+            {
+                "subject": "Warpwire stealer",
+                "relation": "was previously linked to",
+                "object": "mass exploitation of Ivanti vulnerabilities"
+            },
+            {
+                "subject": "Warpwire stealer",
+                "relation": "was seen in",
+                "object": "a 2022 attack against Magento servers"
+            },
+            {
+                "subject": "Magento servers",
+                "relation": "were used as",
+                "object": "command-and-control (C&C) servers"
+            },
+            {
+                "subject": "Magnet Goblin",
+                "relation": "deployed",
+                "object": "MiniNerbian, a smaller version of the Linux NerbianRAT backdoor"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1986,
+                "cost": 0.000993
+            },
+            "output": {
+                "tokens": 318,
+                "cost": 0.000477
+            },
+            "total": {
+                "tokens": 2304,
+                "cost": 0.00147
+            }
+        },
+        "time": 4.560367107391357,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/securityweek/goblin-QD1-d6T.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "darkreading: apache-activemq.json",
+                    0.12001001301468558
+                ],
+                [
+                    "securityweek: magento.json",
+                    0.1529250800853244
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 0,
+                "fn": 9,
+                "precision": 1.0,
+                "recall": 0.5,
+                "f1": 0.6666666666666666
+            },
+            "matched_list": [
+                [
+                    [
+                        "A financially motivated threat actor",
+                        "has been targeting",
+                        "one-day vulnerabilities in public-facing services"
+                    ],
+                    [
+                        "A financially motivated threat actor",
+                        "has been targeting",
+                        "one-day vulnerabilities in public-facing services"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Magnet Goblin",
+                        "was seen quickly adopting",
+                        "one-day vulnerabilities"
+                    ],
+                    [
+                        "Magnet Goblin",
+                        "adopting",
+                        "one-day vulnerabilities"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Magnet Goblin",
+                        "relies on",
+                        "the Nerbian custom malware family"
+                    ],
+                    [
+                        "Magnet Goblin",
+                        "relies on",
+                        "the Nerbian custom malware family"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Magnet Goblin",
+                        "was seen targeting vulnerabilities in",
+                        "Ivanti VPNs, Magento, Qlik Sense, and possibly Apache ActiveMQ"
+                    ],
+                    [
+                        "Magnet Goblin",
+                        "targeting",
+                        "publicly disclosed vulnerabilities in Ivanti VPNs"
+                    ],
+                    [
+                        1.0,
+                        0.5275739905306065
+                    ]
+                ],
+                [
+                    [
+                        "The threat actor",
+                        "was observed deploying",
+                        "JavaScript credential stealer called Warpwire, a Linux variant of the NerbianRAT backdoor, and the open source tunneling tool Ligolo"
+                    ],
+                    [
+                        "A financially motivated threat actor",
+                        "deploy",
+                        "Linux backdoors"
+                    ],
+                    [
+                        0.7742127758686198,
+                        0.5063307002779787
+                    ]
+                ],
+                [
+                    [
+                        "Warpwire stealer",
+                        "was previously linked to",
+                        "mass exploitation of Ivanti vulnerabilities"
+                    ],
+                    [
+                        "Warpwire stealer",
+                        "was linked to",
+                        "the mass exploitation of Ivanti vulnerabilities"
+                    ],
+                    [
+                        1.0,
+                        0.9405413721842928
+                    ]
+                ],
+                [
+                    [
+                        "Warpwire stealer",
+                        "was seen in",
+                        "a 2022 attack against Magento servers"
+                    ],
+                    [
+                        "Warpwire",
+                        "seen in",
+                        "a 2022 attack against Magento servers"
+                    ],
+                    [
+                        0.769439322095828,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Magento servers",
+                        "were used as",
+                        "command-and-control (C&C) servers"
+                    ],
+                    [
+                        "Magento servers",
+                        "used as",
+                        "command-and-control (C&C) servers for the Windows variant of NerbianRAT"
+                    ],
+                    [
+                        1.0,
+                        0.7360078955403057
+                    ]
+                ],
+                [
+                    [
+                        "Magnet Goblin",
+                        "deployed",
+                        "MiniNerbian, a smaller version of the Linux NerbianRAT backdoor"
+                    ],
+                    [
+                        "Magnet Goblin",
+                        "relies on",
+                        "the Nerbian custom malware family"
+                    ],
+                    [
+                        1.0,
+                        0.5932507964595005
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "The threat actor",
+                    "is tracked as",
+                    "Magnet Goblin"
+                ],
+                [
+                    "Magnet Goblin",
+                    "targeting",
+                    "publicly disclosed vulnerabilities in Magento"
+                ],
+                [
+                    "Magnet Goblin",
+                    "targeting",
+                    "publicly disclosed vulnerabilities in Qlik Sense"
+                ],
+                [
+                    "Magnet Goblin",
+                    "possibly targeting",
+                    "Apache ActiveMQ"
+                ],
+                [
+                    "The threat actor",
+                    "deploying",
+                    "a JavaScript credential stealer called Warpwire"
+                ],
+                [
+                    "The threat actor",
+                    "deploying",
+                    "a Linux variant of the NerbianRAT backdoor"
+                ],
+                [
+                    "The threat actor",
+                    "deploying",
+                    "Ligolo"
+                ],
+                [
+                    "Magento servers",
+                    "used for",
+                    "Warpwire"
+                ],
+                [
+                    "Magnet Goblin",
+                    "deployed",
+                    "MiniNerbian on the compromised Magento instances"
+                ]
+            ]
+        }
+    }
+}

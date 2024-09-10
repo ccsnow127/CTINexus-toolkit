@@ -1,0 +1,246 @@
+{
+    "CTI": {
+        "text": "Equation has employed a number of specialist tools. Among these are Trojan.Grokey a custom keylogger (also known as \u201cGrok\u201d) and W32.Fanni, which is also known as \u201cFanny worm\u201d. This worm's chief purpose appears to be the targeting of air-gapped networks. It can receive commands and exfiltrate data through infected USB sticks. Fanny used two zero day exploits that were also used in the Stuxnet attacks. The exploits were used in Fanny prior to Stuxnet indicating that Equation had prior knowledge of the vulnerabilities. Another similarity lies in the fact that Stuxnet was also designed to attack air-gapped networks.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/equation-cyberespionage-group"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Equation",
+                "relation": "employed",
+                "object": "specialist tools"
+            },
+            {
+                "subject": "Trojan.Grokey",
+                "relation": "is also known as",
+                "object": "Grok"
+            },
+            {
+                "subject": "Trojan.Grokey",
+                "relation": "is a",
+                "object": "custom keylogger"
+            },
+            {
+                "subject": "W32.Fanni",
+                "relation": "is also known as",
+                "object": "Fanny worm"
+            },
+            {
+                "subject": "Fanny worm",
+                "relation": "targeting",
+                "object": "air-gapped networks"
+            },
+            {
+                "subject": "Fanny worm",
+                "relation": "can receive commands through",
+                "object": "infected USB sticks"
+            },
+            {
+                "subject": "Fanny worm",
+                "relation": "can exfiltrate data through",
+                "object": "infected USB sticks"
+            },
+            {
+                "subject": "Fanny",
+                "relation": "used",
+                "object": "two zero day exploits"
+            },
+            {
+                "subject": "two zero day exploits",
+                "relation": "were used in",
+                "object": "the Stuxnet attacks"
+            },
+            {
+                "subject": "Fanny",
+                "relation": "indicates",
+                "object": "Equation had prior knowledge of the vulnerabilities"
+            },
+            {
+                "subject": "Stuxnet",
+                "relation": "designed to attack",
+                "object": "air-gapped networks"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1640,
+                "cost": 0.0164
+            },
+            "output": {
+                "tokens": 286,
+                "cost": 0.00858
+            },
+            "total": {
+                "tokens": 1926,
+                "cost": 0.024980000000000002
+            }
+        },
+        "time": 12.789775848388672,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/symantec/Equation-QD1-A4e.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Unit42: P2PInfect.json",
+                    0.12165794548310119
+                ],
+                [
+                    "symantec: Buckeye.json",
+                    0.07930821390461208
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.9090909090909091,
+                "recall": 0.9090909090909091,
+                "f1": 0.9090909090909091
+            },
+            "matched_list": [
+                [
+                    [
+                        "Equation",
+                        "employed",
+                        "specialist tools"
+                    ],
+                    [
+                        "Equation",
+                        "employed",
+                        "specialist tools"
+                    ]
+                ],
+                [
+                    [
+                        "Trojan.Grokey",
+                        "is also known as",
+                        "Grok"
+                    ],
+                    [
+                        "Trojan.Grokey",
+                        "is also known as",
+                        "\"Grok\""
+                    ]
+                ],
+                [
+                    [
+                        "Trojan.Grokey",
+                        "is a",
+                        "custom keylogger"
+                    ],
+                    [
+                        "Trojan.Grokey",
+                        "is also known as",
+                        "\"Grok\""
+                    ]
+                ],
+                [
+                    [
+                        "W32.Fanni",
+                        "is also known as",
+                        "Fanny worm"
+                    ],
+                    [
+                        "W32.Fanni",
+                        "is also known as",
+                        "\"Fanny worm\""
+                    ]
+                ],
+                [
+                    [
+                        "Fanny worm",
+                        "targeting",
+                        "air-gapped networks"
+                    ],
+                    [
+                        "Fanny worm",
+                        "targets",
+                        "air-gapped networks"
+                    ]
+                ],
+                [
+                    [
+                        "Fanny worm",
+                        "can receive commands through",
+                        "infected USB sticks"
+                    ],
+                    [
+                        "Fanny",
+                        "can receive commands through",
+                        "infected USB sticks"
+                    ]
+                ],
+                [
+                    [
+                        "Fanny worm",
+                        "can exfiltrate data through",
+                        "infected USB sticks"
+                    ],
+                    [
+                        "Fanny",
+                        "exfiltrates data through",
+                        "infected USB sticks"
+                    ]
+                ],
+                [
+                    [
+                        "Fanny",
+                        "used",
+                        "two zero day exploits"
+                    ],
+                    [
+                        "Fanny",
+                        "used",
+                        "two zero day exploits"
+                    ]
+                ],
+                [
+                    [
+                        "Fanny",
+                        "indicates",
+                        "Equation had prior knowledge of the vulnerabilities"
+                    ],
+                    [
+                        "Equation",
+                        "had prior knowledge of",
+                        "the vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "Stuxnet",
+                        "designed to attack",
+                        "air-gapped networks"
+                    ],
+                    [
+                        "Stuxnet",
+                        "was designed to attack",
+                        "air-gapped networks"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "two zero day exploits",
+                    "were used in",
+                    "the Stuxnet attacks"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "The exploits",
+                    "were used in",
+                    "Fanny prior to Stuxnet"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

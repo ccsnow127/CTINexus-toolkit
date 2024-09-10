@@ -1,0 +1,220 @@
+{
+    "CTI": {
+        "text": "Microsoft security researchers recently identified a campaign where attackers attempted to move laterally to a cloud environment through a SQL Server instance. This attack technique demonstrates an approach we've seen in other cloud services such as VMs and Kubernetes cluster, but not in SQL Server. The attackers initially exploited a SQL injection vulnerability in an application within the target's environment. This allowed the attacker to gain access and elevated permissions on a Microsoft SQL Server instance deployed in Azure Virtual Machine (VM). The attackers then used the acquired elevated permission to attempt to move laterally to additional cloud resources by abusing the server's cloud identity. Cloud identities are commonly used in cloud services including SQL Server and may possess elevated permissions to carry out actions in the cloud. This attack highlights the need to properly secure cloud identities to defend SQL Server instances and cloud resources from unauthorized access.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/10/03/defending-new-vectors-threat-actors-attempt-sql-server-to-cloud-lateral-movement/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "attackers",
+                "relation": "attempted to move laterally to",
+                "object": "a cloud environment"
+            },
+            {
+                "subject": "attack technique",
+                "relation": "demonstrates an approach seen in",
+                "object": "other cloud services such as VMs and Kubernetes cluster"
+            },
+            {
+                "subject": "attackers",
+                "relation": "exploited",
+                "object": "a SQL injection vulnerability"
+            },
+            {
+                "subject": "SQL injection vulnerability",
+                "relation": "in",
+                "object": "an application within the target's environment"
+            },
+            {
+                "subject": "attacker",
+                "relation": "gained access and elevated permissions on",
+                "object": "a Microsoft SQL Server instance deployed in Azure Virtual Machine (VM)"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used elevated permission to attempt to move laterally to",
+                "object": "additional cloud resources"
+            },
+            {
+                "subject": "server's cloud identity",
+                "relation": "abused for",
+                "object": "lateral movement to additional cloud resources"
+            },
+            {
+                "subject": "cloud identities",
+                "relation": "used in",
+                "object": "cloud services including SQL Server"
+            },
+            {
+                "subject": "attack",
+                "relation": "highlights the need to properly secure",
+                "object": "cloud identities"
+            },
+            {
+                "subject": "proper security of cloud identities",
+                "relation": "defends",
+                "object": "SQL Server instances and cloud resources from unauthorized access"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1233,
+                "cost": 0.01233
+            },
+            "output": {
+                "tokens": 294,
+                "cost": 0.00882
+            },
+            "total": {
+                "tokens": 1527,
+                "cost": 0.021150000000000002
+            }
+        },
+        "time": 6.71064305305481,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/Microsoft/defending-new-vectors-QD1-KuK.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "AVERTIUM: fargo.json",
+                    0.14427222206357407
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 3,
+                "fn": 3,
+                "precision": 0.7,
+                "recall": 0.7,
+                "f1": 0.7
+            },
+            "matched_list": [
+                [
+                    [
+                        "attackers",
+                        "attempted to move laterally to",
+                        "a cloud environment"
+                    ],
+                    [
+                        "attackers",
+                        "attempted to move laterally to",
+                        "a cloud environment"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "exploited",
+                        "a SQL injection vulnerability"
+                    ],
+                    [
+                        "attackers",
+                        "exploited",
+                        "a SQL injection vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "SQL injection vulnerability",
+                        "in",
+                        "an application within the target's environment"
+                    ],
+                    [
+                        "a SQL injection vulnerability",
+                        "in",
+                        "an application"
+                    ]
+                ],
+                [
+                    [
+                        "attacker",
+                        "gained access and elevated permissions on",
+                        "a Microsoft SQL Server instance deployed in Azure Virtual Machine (VM)"
+                    ],
+                    [
+                        "attackers",
+                        "gain access and elevated permissions on",
+                        "a Microsoft SQL Server instance"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "used elevated permission to attempt to move laterally to",
+                        "additional cloud resources"
+                    ],
+                    [
+                        "the acquired elevated permission",
+                        "to attempt to move laterally to",
+                        "additional cloud resources"
+                    ]
+                ],
+                [
+                    [
+                        "server's cloud identity",
+                        "abused for",
+                        "lateral movement to additional cloud resources"
+                    ],
+                    [
+                        "additional cloud resources",
+                        "by abusing",
+                        "the server's cloud identity"
+                    ]
+                ],
+                [
+                    [
+                        "cloud identities",
+                        "used in",
+                        "cloud services including SQL Server"
+                    ],
+                    [
+                        "cloud services",
+                        "include",
+                        "SQL Server"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "attack technique",
+                    "demonstrates an approach seen in",
+                    "other cloud services such as VMs and Kubernetes cluster"
+                ],
+                [
+                    "attack",
+                    "highlights the need to properly secure",
+                    "cloud identities"
+                ],
+                [
+                    "proper security of cloud identities",
+                    "defends",
+                    "SQL Server instances and cloud resources from unauthorized access"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "attackers",
+                    "used",
+                    "the acquired elevated permission"
+                ],
+                [
+                    "Cloud identities",
+                    "may possess",
+                    "elevated permissions"
+                ],
+                [
+                    "elevated permissions",
+                    "to carry out actions in",
+                    "the cloud"
+                ]
+            ]
+        }
+    }
+}

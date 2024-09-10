@@ -1,0 +1,234 @@
+{
+    "CTI": {
+        "text": "A new ransomware family calling itself 3AM has emerged. To date, the ransomware has only been used in a limited fashion. Symantec's Threat Hunter Team, part of Broadcom, has seen it used in a single attack by a ransomware affiliate that attempted to deploy LockBit on a target's network and then switched to 3AM when LockBit was blocked. 3AM is written in Rust and appears to be a completely new malware family. The ransomware attempts to stop multiple services on the infected computer before it begins encrypting files. Once encryption is complete, it attempts to delete Volume Shadow (VSS) copies. It is still unclear whether its authors have any links to known cybercrime organizations. ",
+        "link": ""
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "3AM",
+                "relation": "is a",
+                "object": "new ransomware family"
+            },
+            {
+                "subject": "3AM ransomware",
+                "relation": "has been used in",
+                "object": "a limited fashion"
+            },
+            {
+                "subject": "Symantec's Threat Hunter Team",
+                "relation": "has seen",
+                "object": "3AM used in a single attack"
+            },
+            {
+                "subject": "a ransomware affiliate",
+                "relation": "attempted to deploy",
+                "object": "LockBit"
+            },
+            {
+                "subject": "the ransomware affiliate",
+                "relation": "switched to",
+                "object": "3AM when LockBit was blocked"
+            },
+            {
+                "subject": "3AM",
+                "relation": "is written in",
+                "object": "Rust"
+            },
+            {
+                "subject": "3AM",
+                "relation": "is",
+                "object": "a completely new malware family"
+            },
+            {
+                "subject": "3AM ransomware",
+                "relation": "attempts to stop",
+                "object": "multiple services on the infected computer"
+            },
+            {
+                "subject": "3AM ransomware",
+                "relation": "begins encrypting",
+                "object": "files"
+            },
+            {
+                "subject": "3AM ransomware",
+                "relation": "attempts to delete",
+                "object": "Volume Shadow (VSS) copies"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1606,
+                "cost": 0.01606
+            },
+            "output": {
+                "tokens": 282,
+                "cost": 0.00846
+            },
+            "total": {
+                "tokens": 1888,
+                "cost": 0.02452
+            }
+        },
+        "time": 13.638668298721313,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/symantec/3AM-QD1-zOV.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "trendmicro: LockBit.json",
+                    0.13628145706744732
+                ],
+                [
+                    "AVERTIUM: yanluowang.json",
+                    0.17874146253944415
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9090909090909091,
+                "f1": 0.9523809523809523
+            },
+            "matched_list": [
+                [
+                    [
+                        "3AM",
+                        "is a",
+                        "new ransomware family"
+                    ],
+                    [
+                        "3AM",
+                        "is",
+                        "a ransomware family"
+                    ]
+                ],
+                [
+                    [
+                        "3AM ransomware",
+                        "has been used in",
+                        "a limited fashion"
+                    ],
+                    [
+                        "3AM",
+                        "is",
+                        "a ransomware family"
+                    ]
+                ],
+                [
+                    [
+                        "Symantec's Threat Hunter Team",
+                        "has seen",
+                        "3AM used in a single attack"
+                    ],
+                    [
+                        "3AM",
+                        "was used in",
+                        "a single attack"
+                    ]
+                ],
+                [
+                    [
+                        "a ransomware affiliate",
+                        "attempted to deploy",
+                        "LockBit"
+                    ],
+                    [
+                        "ransomware affiliate",
+                        "attempted to deploy",
+                        "LockBit"
+                    ]
+                ],
+                [
+                    [
+                        "the ransomware affiliate",
+                        "switched to",
+                        "3AM when LockBit was blocked"
+                    ],
+                    [
+                        "ransomware affiliate",
+                        "switched to",
+                        "3AM"
+                    ]
+                ],
+                [
+                    [
+                        "3AM",
+                        "is written in",
+                        "Rust"
+                    ],
+                    [
+                        "3AM",
+                        "is written in",
+                        "Rust"
+                    ]
+                ],
+                [
+                    [
+                        "3AM",
+                        "is",
+                        "a completely new malware family"
+                    ],
+                    [
+                        "3AM",
+                        "is",
+                        "a completely new malware family"
+                    ]
+                ],
+                [
+                    [
+                        "3AM ransomware",
+                        "attempts to stop",
+                        "multiple services on the infected computer"
+                    ],
+                    [
+                        "3AM",
+                        "attempts to stop",
+                        "multiple services"
+                    ]
+                ],
+                [
+                    [
+                        "3AM ransomware",
+                        "begins encrypting",
+                        "files"
+                    ],
+                    [
+                        "3AM",
+                        "begins encrypting",
+                        "files"
+                    ]
+                ],
+                [
+                    [
+                        "3AM ransomware",
+                        "attempts to delete",
+                        "Volume Shadow (VSS) copies"
+                    ],
+                    [
+                        "3AM",
+                        "attempts to delete",
+                        "Volume Shadow (VSS) copies"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "its authors",
+                    "have links to",
+                    "unknown cybercrime organizations"
+                ]
+            ]
+        }
+    }
+}

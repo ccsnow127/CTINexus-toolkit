@@ -1,0 +1,243 @@
+{
+    "CTI": {
+        "text": "The Akira ransomware group, a relatively new player in the ransomware market, has claimed responsibility for three recent attacks. The victims include 4LEAF, an American engineering consultancy business; Park-Rite, a U.S.-based packaging materials manufacturer; and Family Day Care Services, a Canadian childcare service. Akira listed the names of the three victims on their leak site threatening to release company records if they refuse to pay a ransom. Researchers discovered the ransomware Trojan on August 28, 2017, and at that time, it appeared to be in its testing phase. The Trojan is currently being distributed by targeting unprotected websites, with a specific focus on WordPress sites. Once infected, Akira drops one or multiple payload files. After infection, a ransom note is left before the ransomware creates multiple registry values in Windows, such as the Run and RunOnce registries. The presence of .akira files means that your data has likely been encrypted by Akira ransomware.",
+        "link": "https://explore.avertium.com/resource/ransomware-akira-and-rapture"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Akira ransomware group",
+                "relation": "claimed responsibility for",
+                "object": "attacks on 4LEAF, Park-Rite, and Family Day Care Services"
+            },
+            {
+                "subject": "Akira ransomware group",
+                "relation": "listed",
+                "object": "the names of 4LEAF, Park-Rite, and Family Day Care Services on their leak site"
+            },
+            {
+                "subject": "Akira ransomware group",
+                "relation": "threatening",
+                "object": "to release company records if a ransom is not paid"
+            },
+            {
+                "subject": "Akira ransomware Trojan",
+                "relation": "being distributed by",
+                "object": "targeting unprotected websites"
+            },
+            {
+                "subject": "Akira ransomware Trojan focus",
+                "relation": "is on",
+                "object": "WordPress sites"
+            },
+            {
+                "subject": "Akira ransomware",
+                "relation": "drops",
+                "object": "one or multiple payload files after infection"
+            },
+            {
+                "subject": "Akira ransomware",
+                "relation": "leaves",
+                "object": "a ransom note after infection"
+            },
+            {
+                "subject": "Akira ransomware",
+                "relation": "creates",
+                "object": "multiple registry values in Windows"
+            },
+            {
+                "subject": "Presence of .akira files",
+                "relation": "means",
+                "object": "data has likely been encrypted by Akira ransomware"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1845,
+                "cost": 0.01845
+            },
+            "output": {
+                "tokens": 283,
+                "cost": 0.008490000000000001
+            },
+            "total": {
+                "tokens": 2128,
+                "cost": 0.026940000000000002
+            }
+        },
+        "time": 12.060864448547363,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/AVERTIUM/akira-QD1-C5H.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "trendmicro: Akira.json",
+                    0.19095458863963483
+                ],
+                [
+                    "AVERTIUM: mallox.json",
+                    0.14218900080766217
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 3,
+                "fn": 10,
+                "precision": 0.6666666666666666,
+                "recall": 0.375,
+                "f1": 0.4800000000000001
+            },
+            "matched_list": [
+                [
+                    [
+                        "Akira ransomware group",
+                        "claimed responsibility for",
+                        "attacks on 4LEAF, Park-Rite, and Family Day Care Services"
+                    ],
+                    [
+                        "Akira ransomware group",
+                        "claimed responsibility for",
+                        "three recent attacks"
+                    ]
+                ],
+                [
+                    [
+                        "Akira ransomware group",
+                        "threatening",
+                        "to release company records if a ransom is not paid"
+                    ],
+                    [
+                        "Akira",
+                        "threatening to release",
+                        "company records"
+                    ]
+                ],
+                [
+                    [
+                        "Akira ransomware Trojan",
+                        "being distributed by",
+                        "targeting unprotected websites"
+                    ],
+                    [
+                        "The Trojan",
+                        "is being distributed by targeting",
+                        "unprotected websites"
+                    ]
+                ],
+                [
+                    [
+                        "Akira ransomware",
+                        "drops",
+                        "one or multiple payload files after infection"
+                    ],
+                    [
+                        "Akira",
+                        "drops",
+                        "payload files"
+                    ]
+                ],
+                [
+                    [
+                        "Akira ransomware",
+                        "creates",
+                        "multiple registry values in Windows"
+                    ],
+                    [
+                        "ransomware",
+                        "creates multiple registry values in",
+                        "Windows"
+                    ]
+                ],
+                [
+                    [
+                        "Presence of .akira files",
+                        "means",
+                        "data has likely been encrypted by Akira ransomware"
+                    ],
+                    [
+                        ".akira files",
+                        "indicates",
+                        "data encrypted by Akira ransomware"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Akira ransomware group",
+                    "listed",
+                    "the names of 4LEAF, Park-Rite, and Family Day Care Services on their leak site"
+                ],
+                [
+                    "Akira ransomware Trojan focus",
+                    "is on",
+                    "WordPress sites"
+                ],
+                [
+                    "Akira ransomware",
+                    "leaves",
+                    "a ransom note after infection"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "victims",
+                    "include",
+                    "4LEAF"
+                ],
+                [
+                    "victims",
+                    "include",
+                    "Park-Rite"
+                ],
+                [
+                    "victims",
+                    "include",
+                    "Family Day Care Services"
+                ],
+                [
+                    "Akira",
+                    "listed",
+                    "the names of the three victims on their leak site"
+                ],
+                [
+                    "Akira",
+                    "threatening for",
+                    "ransom"
+                ],
+                [
+                    "The ransomware Trojan",
+                    "was discovered on",
+                    "August 28, 2017"
+                ],
+                [
+                    "The ransomware Trojan",
+                    "appeared to be in",
+                    "testing phase"
+                ],
+                [
+                    "unprotected websites",
+                    "focused on",
+                    "WordPress sites"
+                ],
+                [
+                    "Akira",
+                    "leaves",
+                    "a ransom note"
+                ],
+                [
+                    "Windows",
+                    "includes registries",
+                    "Run and RunOnce"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

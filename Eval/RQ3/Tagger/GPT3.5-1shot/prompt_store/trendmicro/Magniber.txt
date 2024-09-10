@@ -1,0 +1,102 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'malicious attackers', 'relation': 'use', 'object': 'the Magniber ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Magniber ransomware', 'relation': 'targets', 'object': 'organizations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'phishing attacks', 'relation': 'distribute', 'object': 'the Magniber ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the Magniber ransomware', 'relation': 'uses', 'object': 'standalone JavaScript files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'standalone JavaScript files', 'relation': 'digitally signed with', 'object': 'a malformed key'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the Magniber ransomware', 'relation': 'exploits', 'object': 'CVE-2022-44698'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2022-44698', 'relation': 'bypass', 'object': 'Mark-of-the-Web (MOTW) security warnings'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Microsoft', 'relation': 'patched', 'object': 'CVE-2022-44698'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Magniber ransomware', 'relation': 'was known as', 'object': 'a successor of Cerber'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Magnitude exploit kit', 'relation': 'distributed', 'object': 'the Magniber ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Magniber ransomware', 'relation': 'targeted', 'object': 'South Korea'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Magniber ransomware', 'relation': 'expanded targets', 'object': 'across Asia'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Magniber ransomware', 'relation': 'uses', 'object': 'CVE-2018-8174 for initial access'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

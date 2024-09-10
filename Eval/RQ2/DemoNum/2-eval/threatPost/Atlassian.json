@@ -1,0 +1,253 @@
+{
+    "CTI": {
+        "text": "Threat actors are using public exploits to pummel a critical zero-day remote code execution (RCE) flaw that affects all versions of a popular collaboration tool used in cloud and hybrid server environments and allows for complete host takeover.Researchers from Volexity uncovered the flaw in Atlassian Confluence Server and Data Center software over the Memorial Day weekend after they detected suspicious activity on two internet-facing web servers belonging to a customer running the software, they said in a blog post published last week. The researchers tracked the activity to a public exploit for the vulnerability, CVE-2022-26134, that\u2019s been spreading rapidly, and subsequently reported the flaw to Atlassian. As observed by Volexity researchers, what\u2019s being described as an \u201cOGNL injection vulnerability\u201d appears to allow for a Java Server Page (JSP) webshell to be written into a publicly accessible web directory on Confluence software.",
+        "link": "https://threatpost.com/public-exploits-atlassian-confluence-flaw/179887/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Threat actors",
+                "relation": "are using",
+                "object": "public exploits to pummel a critical zero-day remote code execution (RCE) flaw"
+            },
+            {
+                "subject": "a critical zero-day remote code execution (RCE) flaw",
+                "relation": "affects",
+                "object": "all versions of a popular collaboration tool used in cloud and hybrid server environments"
+            },
+            {
+                "subject": "a critical zero-day remote code execution (RCE) flaw",
+                "relation": "allows for",
+                "object": "complete host takeover"
+            },
+            {
+                "subject": "Researchers from Volexity",
+                "relation": "uncovered",
+                "object": "the flaw in Atlassian Confluence Server and Data Center software"
+            },
+            {
+                "subject": "Researchers from Volexity",
+                "relation": "tracked",
+                "object": "the activity to a public exploit for the vulnerability, CVE-2022-26134"
+            },
+            {
+                "subject": "the vulnerability, CVE-2022-26134",
+                "relation": "has been",
+                "object": "spreading rapidly"
+            },
+            {
+                "subject": "The vulnerability, CVE-2022-26134",
+                "relation": "is described as",
+                "object": "an \u201cOGNL injection vulnerability\u201d"
+            },
+            {
+                "subject": "an \u201cOGNL injection vulnerability\u201d",
+                "relation": "appears to allow for",
+                "object": "a Java Server Page (JSP) webshell to be written into a publicly accessible web directory on Confluence software"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1464,
+                "cost": 0.014640000000000002
+            },
+            "output": {
+                "tokens": 310,
+                "cost": 0.009300000000000001
+            },
+            "total": {
+                "tokens": 1774,
+                "cost": 0.023940000000000003
+            }
+        },
+        "time": 12.82422137260437,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/threatPost/Atlassian-QD1-we2.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "darkreading: apache-activemq.json",
+                    0.17207592732463362
+                ],
+                [
+                    "BleepingComputer: atlassian.json",
+                    0.3393723065054859
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 2,
+                "fn": 6,
+                "precision": 0.7777777777777778,
+                "recall": 0.5384615384615384,
+                "f1": 0.6363636363636364
+            },
+            "matched_list": [
+                [
+                    [
+                        "Threat actors",
+                        "are using",
+                        "public exploits to pummel a critical zero-day remote code execution (RCE) flaw"
+                    ],
+                    [
+                        "Threat actors",
+                        "are using",
+                        "public exploits"
+                    ],
+                    [
+                        1.0,
+                        0.6136063009968216
+                    ]
+                ],
+                [
+                    [
+                        "a critical zero-day remote code execution (RCE) flaw",
+                        "affects",
+                        "all versions of a popular collaboration tool used in cloud and hybrid server environments"
+                    ],
+                    [
+                        "critical zero-day remote code execution flaw",
+                        "affects",
+                        "all versions of a popular collaboration tool"
+                    ],
+                    [
+                        0.8959886527509356,
+                        0.8686401436871568
+                    ]
+                ],
+                [
+                    [
+                        "a critical zero-day remote code execution (RCE) flaw",
+                        "allows for",
+                        "complete host takeover"
+                    ],
+                    [
+                        "critical zero-day remote code execution flaw",
+                        "allows for",
+                        "complete host takeover"
+                    ],
+                    [
+                        0.8959886527509356,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Researchers from Volexity",
+                        "uncovered",
+                        "the flaw in Atlassian Confluence Server and Data Center software"
+                    ],
+                    [
+                        "Researchers from Volexity",
+                        "uncovered",
+                        "the flaw"
+                    ],
+                    [
+                        1.0,
+                        0.46598774185959413
+                    ]
+                ],
+                [
+                    [
+                        "The vulnerability, CVE-2022-26134",
+                        "is described as",
+                        "an \u201cOGNL injection vulnerability\u201d"
+                    ],
+                    [
+                        "the vulnerability",
+                        "is",
+                        "CVE-2022-26134"
+                    ],
+                    [
+                        0.8559801299036041,
+                        0.5015071291117874,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "The vulnerability, CVE-2022-26134",
+                        "is described as",
+                        "an \u201cOGNL injection vulnerability\u201d"
+                    ],
+                    [
+                        "CVE-2022-26134",
+                        "is described as",
+                        "an OGNL injection vulnerability"
+                    ],
+                    [
+                        0.8559801299036041,
+                        0.8720890644436493
+                    ]
+                ],
+                [
+                    [
+                        "an \u201cOGNL injection vulnerability\u201d",
+                        "appears to allow for",
+                        "a Java Server Page (JSP) webshell to be written into a publicly accessible web directory on Confluence software"
+                    ],
+                    [
+                        "an OGNL injection vulnerability",
+                        "appears to allow",
+                        "a Java Server Page webshell to be written into a publicly accessible web directory"
+                    ],
+                    [
+                        0.8720890644436493,
+                        0.8730287322298473
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Researchers from Volexity",
+                    "tracked",
+                    "the activity to a public exploit for the vulnerability, CVE-2022-26134"
+                ],
+                [
+                    "the vulnerability, CVE-2022-26134",
+                    "has been",
+                    "spreading rapidly"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "public exploits",
+                    "to pummel",
+                    "critical zero-day remote code execution flaw"
+                ],
+                [
+                    "the flaw",
+                    "is in",
+                    "Atlassian Confluence Server and Data Center software"
+                ],
+                [
+                    "Researchers from Volexity",
+                    "detected",
+                    "suspicious activity"
+                ],
+                [
+                    "suspicious activity",
+                    "is on",
+                    "internet-facing web servers"
+                ],
+                [
+                    "Researchers from Volexity",
+                    "reported",
+                    "the flaw to Atlassian"
+                ],
+                [
+                    "a Java Server Page webshell",
+                    "to be written into",
+                    "a publicly accessible web directory on Confluence software"
+                ]
+            ]
+        }
+    }
+}

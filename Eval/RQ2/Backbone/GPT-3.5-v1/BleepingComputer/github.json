@@ -1,0 +1,193 @@
+{
+    "CTI": {
+        "text": "GitHub rotated keys potentially exposed by a vulnerability patched in December that could let attackers access credentials within production containers via environment variables. This unsafe reflection vulnerability (tracked as CVE-2024-0200) can allow attackers to gain remote code execution on unpatched servers. GitHub also fixed a second high-severity Enterprise Server command injection vulnerability (CVE-2024-0507) that would allow attackers using a Management Console user account with an editor role to escalate privileges.",
+        "link": "https://www.bleepingcomputer.com/news/security/github-rotates-keys-to-mitigate-impact-of-credential-exposing-flaw"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "GitHub",
+                "relation": "rotated keys potentially exposed by",
+                "object": "a vulnerability patched in December"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "could let",
+                "object": "attackers access credentials within production containers via environment variables"
+            },
+            {
+                "subject": "unsafe reflection vulnerability",
+                "relation": "is tracked as",
+                "object": "CVE-2024-0200"
+            },
+            {
+                "subject": "CVE-2024-0200",
+                "relation": "can allow",
+                "object": "attackers to gain remote code execution on unpatched servers"
+            },
+            {
+                "subject": "GitHub",
+                "relation": "also fixed",
+                "object": "a second high-severity Enterprise Server command injection vulnerability"
+            },
+            {
+                "subject": "second high-severity Enterprise Server command injection vulnerability",
+                "relation": "is",
+                "object": "CVE-2024-0507"
+            },
+            {
+                "subject": "CVE-2024-0507",
+                "relation": "would allow",
+                "object": "attackers using a Management Console user account with an editor role to escalate privileges"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1124,
+                "cost": 0.000562
+            },
+            "output": {
+                "tokens": 237,
+                "cost": 0.0003555
+            },
+            "total": {
+                "tokens": 1361,
+                "cost": 0.0009175
+            }
+        },
+        "time": 3.9601223468780518,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/BleepingComputer/github-QD1-N4J.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "BleepingComputer: atlassian.json",
+                    0.1597628684436567
+                ],
+                [
+                    "BleepingComputer: mastodon.json",
+                    0.1869048308093441
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 1,
+                "fn": 4,
+                "precision": 0.8571428571428571,
+                "recall": 0.6,
+                "f1": 0.7058823529411764
+            },
+            "matched_list": [
+                [
+                    [
+                        "GitHub",
+                        "rotated keys potentially exposed by",
+                        "a vulnerability patched in December"
+                    ],
+                    [
+                        "GitHub",
+                        "rotated",
+                        "keys"
+                    ]
+                ],
+                [
+                    [
+                        "unsafe reflection vulnerability",
+                        "is tracked as",
+                        "CVE-2024-0200"
+                    ],
+                    [
+                        "unsafe reflection vulnerability",
+                        "tracked as",
+                        "CVE-2024-0200"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-0200",
+                        "can allow",
+                        "attackers to gain remote code execution on unpatched servers"
+                    ],
+                    [
+                        "CVE-2024-0200",
+                        "on",
+                        "unpatched servers"
+                    ]
+                ],
+                [
+                    [
+                        "GitHub",
+                        "also fixed",
+                        "a second high-severity Enterprise Server command injection vulnerability"
+                    ],
+                    [
+                        "GitHub",
+                        "fixed",
+                        "a second high-severity Enterprise Server command injection vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "second high-severity Enterprise Server command injection vulnerability",
+                        "is",
+                        "CVE-2024-0507"
+                    ],
+                    [
+                        "second high-severity Enterprise Server command injection vulnerability",
+                        "is",
+                        "CVE-2024-0507"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-0507",
+                        "would allow",
+                        "attackers using a Management Console user account with an editor role to escalate privileges"
+                    ],
+                    [
+                        "attackers",
+                        "using",
+                        "a Management Console user account with an editor role"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "vulnerability",
+                    "could let",
+                    "attackers access credentials within production containers via environment variables"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "vulnerability",
+                    "patched in",
+                    "December"
+                ],
+                [
+                    "attackers",
+                    "access",
+                    "credentials"
+                ],
+                [
+                    "credentials",
+                    "in",
+                    "production containers"
+                ],
+                [
+                    "credentials",
+                    "via",
+                    "environment variables"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

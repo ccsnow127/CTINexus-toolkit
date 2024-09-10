@@ -1,0 +1,93 @@
+{
+    "CTI": {
+        "text": "Unit 42 researchers discovered a security risk in the Google Workspace (formerly known as G Suite) domain-wide delegation feature. We exposed an unexpected way to gain access to the Google Workspace domain data from Google Cloud Platform (GCP). We found that a GCP identity with the necessary permission can generate an access token to a delegated user. A malicious insider or an external attacker with stolen credentials can use this access token to impersonate Google Workspace users, granting unauthorized access to their data or to perform operations on their behalf.",
+        "link": "https://unit42.paloaltonetworks.com/critical-risk-in-google-workspace-delegation-feature/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unit 42 researchers",
+                "relation": "discovered",
+                "object": "a security risk"
+            },
+            {
+                "subject": "a security risk",
+                "relation": "is in",
+                "object": "the Google Workspace domain-wide delegation feature"
+            },
+            {
+                "subject": "A GCP identity",
+                "relation": "can generate",
+                "object": "an access token"
+            },
+            {
+                "subject": "an access token",
+                "relation": "to",
+                "object": "a delegated user"
+            },
+            {
+                "subject": "A malicious insider or an external attacker",
+                "relation": "use",
+                "object": "this access token"
+            },
+            {
+                "subject": "this access token",
+                "relation": "to impersonate",
+                "object": "Google Workspace users"
+            },
+            {
+                "subject": "A malicious insider or an external attacker",
+                "relation": "grant",
+                "object": "unauthorized access"
+            },
+            {
+                "subject": "unauthorized access",
+                "relation": "to",
+                "object": "their data"
+            },
+            {
+                "subject": "A malicious insider or an external attacker",
+                "relation": "perform operations on",
+                "object": "their behalf"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2355,
+                "cost": 0.02355
+            },
+            "output": {
+                "tokens": 229,
+                "cost": 0.00687
+            },
+            "total": {
+                "tokens": 2584,
+                "cost": 0.030420000000000003
+            }
+        },
+        "time": 5.792339563369751,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Unit42/Google-Workspace-QD1-VDW.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-mallox.json",
+                    0.058308618460348675
+                ],
+                [
+                    "BleepingComputer-mastodon.json",
+                    0.061130894354750234
+                ],
+                [
+                    "BleepingComputer-chrome.json",
+                    0.1194516904305824
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

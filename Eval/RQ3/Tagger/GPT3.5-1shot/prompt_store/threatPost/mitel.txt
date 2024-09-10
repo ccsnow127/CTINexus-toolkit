@@ -1,0 +1,90 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Ransomware groups', 'relation': 'are abusing', 'object': 'unpatched versions of a Linux-based Mitel VoIP application'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Ransomware groups', 'relation': 'using', 'object': 'it as a springboard plant malware on targeted systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The critical remote code execution (RCE) flaw', 'relation': 'is tracked as', 'object': 'CVE-2022-29499'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Crowdstrike', 'relation': 'report', 'object': 'CVE-2022-29499'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2022-29499', 'relation': 'is', 'object': 'a zero-day vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2022-29499', 'relation': 'is now', 'object': 'patched'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Mitel', 'relation': 'is known for', 'object': 'providing business phone systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Mitel', 'relation': 'is known for', 'object': 'unified communication as a service (UCaaS)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Mitel', 'relation': 'focuses on', 'object': 'VoIP technology'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'VoIP technology', 'relation': 'allows', 'object': 'users to make phone calls using an internet connection'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

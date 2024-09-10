@@ -1,0 +1,343 @@
+{
+    "CTI": {
+        "text": "We found samples that show how malicious actors are using Discord as part of a campaign involving malicious spam emails that eventually end in an AveMaria or AgentTesla malware infection. We first observed the use of malicious spam to deliver these malware families in 2019 \u2014 however, the addition of Discord as part of its attack routine is relatively recent. The malicious emails are typically either postal delivery notifications or invoices with an included DHL or TNT-themed attachment. These emails come with embedded links \u2014 either in the images or the text \u2014 that point to a Discord URL with the following format: hxxps://cdn[.]discordapp[.]com/attachments/{ChannelID}/{AttachmentID}/example[.]exe. These URLs are used to host AveMaria and AgentTesla, which will then infect the users' machines once they click on the executable.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/malicious-actors-target-comm-apps-such-as-zoom-slack-discord"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "malicious actors",
+                "relation": "using",
+                "object": "Discord"
+            },
+            {
+                "subject": "campaign",
+                "relation": "involving",
+                "object": "malicious spam emails"
+            },
+            {
+                "subject": "malicious spam emails",
+                "relation": "end in",
+                "object": "an AveMaria or AgentTesla malware infection"
+            },
+            {
+                "subject": "use of malicious spam",
+                "relation": "to deliver",
+                "object": "AveMaria"
+            },
+            {
+                "subject": "use of malicious spam",
+                "relation": "to deliver",
+                "object": "AgentTesla"
+            },
+            {
+                "subject": "malicious emails",
+                "relation": "are",
+                "object": "postal delivery notifications or invoices"
+            },
+            {
+                "subject": "malicious emails",
+                "relation": "include",
+                "object": "DHL or TNT-themed attachment"
+            },
+            {
+                "subject": "emails",
+                "relation": "come with",
+                "object": "embedded links"
+            },
+            {
+                "subject": "embedded links",
+                "relation": "point to",
+                "object": "a Discord URL"
+            },
+            {
+                "subject": "Discord URL",
+                "relation": "used to host",
+                "object": "AveMaria"
+            },
+            {
+                "subject": "Discord URL",
+                "relation": "used to host",
+                "object": "AgentTesla"
+            },
+            {
+                "subject": "AveMaria and AgentTesla",
+                "relation": "infect",
+                "object": "users' machines"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1213,
+                "cost": 0.01213
+            },
+            "output": {
+                "tokens": 289,
+                "cost": 0.00867
+            },
+            "total": {
+                "tokens": 1502,
+                "cost": 0.0208
+            }
+        },
+        "time": 16.9420063495636,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/trendmicro/Comm-Apps-QD1-hSd.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "darkreading: Microsoft-Office-Bug.json",
+                    0.11217772141864336
+                ],
+                [
+                    "trendmicro: Ryuk.json",
+                    0.13932311086193927
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 1,
+                "fn": 5,
+                "precision": 0.9230769230769231,
+                "recall": 0.7058823529411765,
+                "f1": 0.8000000000000002
+            },
+            "matched_list": [
+                [
+                    [
+                        "malicious actors",
+                        "using",
+                        "Discord"
+                    ],
+                    [
+                        "malicious actors",
+                        "use",
+                        "Discord"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "campaign",
+                        "involving",
+                        "malicious spam emails"
+                    ],
+                    [
+                        "malicious actors",
+                        "part of",
+                        "a campaign"
+                    ],
+                    [
+                        0.7714040725398836,
+                        0.5711883612824672,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "campaign",
+                        "involving",
+                        "malicious spam emails"
+                    ],
+                    [
+                        "a campaign",
+                        "involves",
+                        "malicious spam emails"
+                    ],
+                    [
+                        0.7714040725398836,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "malicious spam emails",
+                        "end in",
+                        "an AveMaria or AgentTesla malware infection"
+                    ],
+                    [
+                        "malicious spam emails",
+                        "end in",
+                        "an AveMaria or AgentTesla malware infection"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "use of malicious spam",
+                        "to deliver",
+                        "AveMaria"
+                    ],
+                    [
+                        "malicious spam emails",
+                        "deliver",
+                        "AveMaria"
+                    ],
+                    [
+                        0.8069644292862844,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "use of malicious spam",
+                        "to deliver",
+                        "AgentTesla"
+                    ],
+                    [
+                        "malicious spam emails",
+                        "deliver",
+                        "AgentTesla"
+                    ],
+                    [
+                        0.8069644292862844,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "malicious emails",
+                        "are",
+                        "postal delivery notifications or invoices"
+                    ],
+                    [
+                        "malicious emails",
+                        "are",
+                        "postal delivery notifications or invoices"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "malicious emails",
+                        "include",
+                        "DHL or TNT-themed attachment"
+                    ],
+                    [
+                        "malicious emails",
+                        "are",
+                        "postal delivery notifications or invoices"
+                    ],
+                    [
+                        1.0,
+                        0.46078275447508177
+                    ]
+                ],
+                [
+                    [
+                        "emails",
+                        "come with",
+                        "embedded links"
+                    ],
+                    [
+                        "emails",
+                        "come with",
+                        "embedded links"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "embedded links",
+                        "point to",
+                        "a Discord URL"
+                    ],
+                    [
+                        "embedded links",
+                        "point to",
+                        "a Discord URL"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Discord URL",
+                        "used to host",
+                        "AveMaria"
+                    ],
+                    [
+                        "Discord URL",
+                        "hosts",
+                        "AveMaria"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Discord URL",
+                        "used to host",
+                        "AgentTesla"
+                    ],
+                    [
+                        "Discord URL",
+                        "hosts",
+                        "AgentTesla"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "AveMaria and AgentTesla",
+                    "infect",
+                    "users' machines"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "the addition of Discord",
+                    "is part of",
+                    "attack routine"
+                ],
+                [
+                    "malicious emails",
+                    "include",
+                    "DHL or TNT-themed attachment"
+                ],
+                [
+                    "Discord URL",
+                    "format is",
+                    "hxxps://cdn[.]discordapp[.]com/attachments/{ChannelID}/{AttachmentID}/example[.]exe"
+                ],
+                [
+                    "users",
+                    "click on",
+                    "the executable"
+                ],
+                [
+                    "the executable",
+                    "infects",
+                    "the users' machines"
+                ]
+            ]
+        }
+    }
+}

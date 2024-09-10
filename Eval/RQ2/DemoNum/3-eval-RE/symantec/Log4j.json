@@ -1,0 +1,185 @@
+{
+    "CTI": {
+        "text": "Log4j has been making headlines recently after the public disclosure of three critical vulnerabilities in the utility which can lead to remote code execution (CVE-2021-44228 and CVE-2021-45046) and denial of service (CVE-2021-45105). The initial remote code execution vulnerability (CVE-2021-44228) has been dubbed Log4Shell and has dominated cyber-security news ever since it was publicly disclosed on December 9. The vulnerability has been exploited to deploy a plethora of payloads like coin miners, Dridex malware, and even ransomware such as Conti.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/log4j-vulnerabilities-attacks"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Log4j",
+                "relation": "has critical vulnerabilities leading to",
+                "object": "remote code execution and denial of service"
+            },
+            {
+                "subject": "CVE-2021-44228",
+                "relation": "can lead to",
+                "object": "remote code execution"
+            },
+            {
+                "subject": "CVE-2021-45046",
+                "relation": "can lead to",
+                "object": "remote code execution"
+            },
+            {
+                "subject": "CVE-2021-45105",
+                "relation": "can lead to",
+                "object": "denial of service"
+            },
+            {
+                "subject": "CVE-2021-44228",
+                "relation": "has been dubbed",
+                "object": "Log4Shell"
+            },
+            {
+                "subject": "The vulnerability",
+                "relation": "has been exploited to deploy",
+                "object": "coin miners, Dridex malware, and ransomware such as Conti"
+            }
+        ],
+        "triples_count": 6,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1944,
+                "cost": 0.019440000000000002
+            },
+            "output": {
+                "tokens": 188,
+                "cost": 0.00564
+            },
+            "total": {
+                "tokens": 2132,
+                "cost": 0.02508
+            }
+        },
+        "time": 12.778396368026733,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/symantec/Log4j-QD1-iwC.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "darkreading: Microsoft-Outlook.json",
+                    0.12828425182625508
+                ],
+                [
+                    "AVERTIUM: CVE-2023-36884.json",
+                    0.13703902734490978
+                ],
+                [
+                    "securityweek: teamcity.json",
+                    0.155530259212613
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 0,
+                "fn": 4,
+                "precision": 1.0,
+                "recall": 0.6,
+                "f1": 0.7499999999999999
+            },
+            "matched_list": [
+                [
+                    [
+                        "Log4j",
+                        "has critical vulnerabilities leading to",
+                        "remote code execution and denial of service"
+                    ],
+                    [
+                        "Log4j",
+                        "has",
+                        "critical vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2021-44228",
+                        "can lead to",
+                        "remote code execution"
+                    ],
+                    [
+                        "vulnerabilities",
+                        "can lead to",
+                        "remote code execution"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2021-45046",
+                        "can lead to",
+                        "remote code execution"
+                    ],
+                    [
+                        "vulnerabilities",
+                        "include",
+                        "CVE-2021-44228"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2021-45105",
+                        "can lead to",
+                        "denial of service"
+                    ],
+                    [
+                        "vulnerabilities",
+                        "include",
+                        "CVE-2021-45046"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2021-44228",
+                        "has been dubbed",
+                        "Log4Shell"
+                    ],
+                    [
+                        "vulnerabilities",
+                        "include",
+                        "CVE-2021-45105"
+                    ]
+                ],
+                [
+                    [
+                        "The vulnerability",
+                        "has been exploited to deploy",
+                        "coin miners, Dridex malware, and ransomware such as Conti"
+                    ],
+                    [
+                        "CVE-2021-44228",
+                        "exploited to deploy",
+                        "coin miners"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "vulnerabilities",
+                    "can lead to",
+                    "denial of service"
+                ],
+                [
+                    "CVE-2021-44228",
+                    "has been dubbed",
+                    "Log4Shell"
+                ],
+                [
+                    "CVE-2021-44228",
+                    "exploited to deploy",
+                    "Dridex malware"
+                ],
+                [
+                    "CVE-2021-44228",
+                    "exploited to deploy",
+                    "ransomware such as Conti"
+                ]
+            ]
+        }
+    }
+}

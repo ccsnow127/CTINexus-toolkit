@@ -1,0 +1,270 @@
+{
+    "CTI": {
+        "text": "arracuda has revealed that Chinese threat actors exploited a new zero-day in its Email Security Gateway (ESG) appliances to deploy backdoors on a limited number of devices. Tracked as CVE-2023-7102, the issue relates to a case of arbitrary code execution that resides within a third-party and open-source library named Spreadsheet::ParseExcel that's used by the Amavis scanner within the gateway to screen Microsoft Excel email attachments for malware. The company attributed the activity to a threat actor tracked by Google-owned Mandiant as UNC4841, which was previously linked to the active exploitation of another zero-day in Barracuda devices (CVE-2023-2868, CVSS score: 9.8) earlier this year.Successful exploitation of the new flaw is accomplished by means of a specially crafted Microsoft Excel email attachment. This is followed by the deployment of new variants of known implants called SEASPY and SALTWATER that are equipped to offer persistence and command execution capabilities.",
+        "link": "https://thehackernews.com/2023/12/chinese-hackers-exploited-new-zero-day.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Chinese threat actors",
+                "relation": "exploited",
+                "object": "a new zero-day"
+            },
+            {
+                "subject": "zero-day",
+                "relation": "is tracked as",
+                "object": "CVE-2023-7102"
+            },
+            {
+                "subject": "the issue",
+                "relation": "relates to",
+                "object": "arbitrary code execution"
+            },
+            {
+                "subject": "arbitrary code execution",
+                "relation": "resides within",
+                "object": "a third-party and open-source library named Spreadsheet::ParseExcel"
+            },
+            {
+                "subject": "Spreadsheet::ParseExcel",
+                "relation": "is used by",
+                "object": "the Amavis scanner within the gateway"
+            },
+            {
+                "subject": "the gateway",
+                "relation": "screens",
+                "object": "Microsoft Excel email attachments for malware"
+            },
+            {
+                "subject": "the activity",
+                "relation": "is attributed to",
+                "object": "a threat actor tracked by Google-owned Mandiant as UNC4841"
+            },
+            {
+                "subject": "UNC4841",
+                "relation": "was previously linked to",
+                "object": "the active exploitation of another zero-day in Barracuda devices (CVE-2023-2868, CVSS score: 9.8) earlier this year"
+            },
+            {
+                "subject": "successful exploitation",
+                "relation": "is accomplished by means of",
+                "object": "a specially crafted Microsoft Excel email attachment"
+            },
+            {
+                "subject": "new variants",
+                "relation": "are equipped to offer",
+                "object": "persistence and command execution capabilities"
+            },
+            {
+                "subject": "new variants",
+                "relation": "are called",
+                "object": "SEASPY"
+            },
+            {
+                "subject": "new variants",
+                "relation": "are called",
+                "object": "SALTWATER"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1493,
+                "cost": 0.0007465
+            },
+            "output": {
+                "tokens": 446,
+                "cost": 0.000669
+            },
+            "total": {
+                "tokens": 1939,
+                "cost": 0.0014155
+            }
+        },
+        "time": 4.798716068267822,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/thehackernews/ESG-QD1-ib2.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "thehackernews: OfBiz.json",
+                    0.15776297683366516
+                ],
+                [
+                    "BleepingComputer: apple.json",
+                    0.19865605903623845
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 5,
+                "fp": 7,
+                "fn": 7,
+                "precision": 0.4166666666666667,
+                "recall": 0.4166666666666667,
+                "f1": 0.4166666666666667
+            },
+            "matched_list": [
+                [
+                    [
+                        "Chinese threat actors",
+                        "exploited",
+                        "a new zero-day"
+                    ],
+                    [
+                        "Chinese threat actors",
+                        "exploited",
+                        "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances"
+                    ],
+                    [
+                        1.0,
+                        0.6783855805309026
+                    ]
+                ],
+                [
+                    [
+                        "zero-day",
+                        "is tracked as",
+                        "CVE-2023-7102"
+                    ],
+                    [
+                        "the other zero-day in Barracuda devices",
+                        "is",
+                        "CVE-2023-2868"
+                    ],
+                    [
+                        0.5631808177867093,
+                        0.8472929335777044
+                    ]
+                ],
+                [
+                    [
+                        "Spreadsheet::ParseExcel",
+                        "is used by",
+                        "the Amavis scanner within the gateway"
+                    ],
+                    [
+                        "Spreadsheet::ParseExcel",
+                        "is used by",
+                        "the Amavis scanner"
+                    ],
+                    [
+                        1.0,
+                        0.8790985009938131
+                    ]
+                ],
+                [
+                    [
+                        "UNC4841",
+                        "was previously linked to",
+                        "the active exploitation of another zero-day in Barracuda devices (CVE-2023-2868, CVSS score: 9.8) earlier this year"
+                    ],
+                    [
+                        "UNC4841",
+                        "linked to",
+                        "the exploitation of CVE-2023-7102"
+                    ],
+                    [
+                        1.0,
+                        0.6671494046116773
+                    ]
+                ],
+                [
+                    [
+                        "successful exploitation",
+                        "is accomplished by means of",
+                        "a specially crafted Microsoft Excel email attachment"
+                    ],
+                    [
+                        "successful exploitation of CVE-2023-7102",
+                        "accomplished by",
+                        "a specially crafted Microsoft Excel email attachment"
+                    ],
+                    [
+                        0.6317353949195914,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "the issue",
+                    "relates to",
+                    "arbitrary code execution"
+                ],
+                [
+                    "arbitrary code execution",
+                    "resides within",
+                    "a third-party and open-source library named Spreadsheet::ParseExcel"
+                ],
+                [
+                    "the gateway",
+                    "screens",
+                    "Microsoft Excel email attachments for malware"
+                ],
+                [
+                    "the activity",
+                    "is attributed to",
+                    "a threat actor tracked by Google-owned Mandiant as UNC4841"
+                ],
+                [
+                    "new variants",
+                    "are equipped to offer",
+                    "persistence and command execution capabilities"
+                ],
+                [
+                    "new variants",
+                    "are called",
+                    "SEASPY"
+                ],
+                [
+                    "new variants",
+                    "are called",
+                    "SALTWATER"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "CVE-2023-7102",
+                    "relates to",
+                    "arbitrary code execution"
+                ],
+                [
+                    "CVE-2023-7102",
+                    "resides within",
+                    "Spreadsheet::ParseExcel"
+                ],
+                [
+                    "the Amavis scanner",
+                    "screens",
+                    "Microsoft Excel email attachments for malware"
+                ],
+                [
+                    "UNC4841",
+                    "previously linked to",
+                    "the active exploitation of another zero-day in Barracuda devices"
+                ],
+                [
+                    "CVE-2023-2868",
+                    "CVSS score",
+                    "9.8"
+                ],
+                [
+                    "the deployment",
+                    "followed by",
+                    "new variants of SEASPY and SALTWATER"
+                ],
+                [
+                    "SEASPY and SALTWATER",
+                    "equip",
+                    "persistence and command execution capabilities"
+                ]
+            ]
+        }
+    }
+}

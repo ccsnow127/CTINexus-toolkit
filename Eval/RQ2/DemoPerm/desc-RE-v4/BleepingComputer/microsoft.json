@@ -1,0 +1,235 @@
+{
+    "CTI": {
+        "text": "Microsoft warned Friday night that some of its corporate email accounts were breached and data stolen by a Russian state-sponsored hacking group known as Midnight Blizzard. The company detected the attack on January 12th, with Microsoft's investigation ultimately determining that the attack was conducted by Russian threat actors known more commonly as Nobelium or APT29. Microsoft says the threat actors breached their systems in November 2023 when they conducted a password spray attack to access a legacy non-production test tenant account. Microsoft says the breached email accounts included members of Microsoft's leadership team and employees in the cybersecurity and legal departments, from which the hackers stole emails and attachments.",
+        "link": "https://www.bleepingcomputer.com/news/security/russian-hackers-stole-microsoft-corporate-emails-in-month-long-breach/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "is a",
+                "object": "Russian state-sponsored hacking group"
+            },
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "known as",
+                "object": "Nobelium"
+            },
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "also known as",
+                "object": "APT29"
+            },
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "breached",
+                "object": "Microsoft corporate email accounts"
+            },
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "stole",
+                "object": "data"
+            },
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "conducted",
+                "object": "a password spray attack"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "had breached accounts including",
+                "object": "members of Microsoft's leadership team"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "had breached accounts including",
+                "object": "employees in the cybersecurity department"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "had breached accounts including",
+                "object": "employees in the legal department"
+            },
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "accessed",
+                "object": "a legacy non-production test tenant account"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1321,
+                "cost": 0.013210000000000001
+            },
+            "output": {
+                "tokens": 251,
+                "cost": 0.00753
+            },
+            "total": {
+                "tokens": 1572,
+                "cost": 0.02074
+            }
+        },
+        "time": 11.441055297851562,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/BleepingComputer/microsoft-QD1-0iW.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Microsoft: cadet-blizzard.json",
+                    0.14921566467510144
+                ],
+                [
+                    "Microsoft: star-blizzard.json",
+                    0.1335206560032965
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 3,
+                "fn": 5,
+                "precision": 0.7,
+                "recall": 0.5833333333333334,
+                "f1": 0.6363636363636365
+            },
+            "matched_list": [
+                [
+                    [
+                        "Midnight Blizzard",
+                        "is a",
+                        "Russian state-sponsored hacking group"
+                    ],
+                    [
+                        "Midnight Blizzard",
+                        "is known as",
+                        "Russian state-sponsored hacking group"
+                    ]
+                ],
+                [
+                    [
+                        "Midnight Blizzard",
+                        "known as",
+                        "Nobelium"
+                    ],
+                    [
+                        "Midnight Blizzard",
+                        "known more commonly as",
+                        "Nobelium"
+                    ]
+                ],
+                [
+                    [
+                        "Midnight Blizzard",
+                        "also known as",
+                        "APT29"
+                    ],
+                    [
+                        "Midnight Blizzard",
+                        "known more commonly as",
+                        "APT29"
+                    ]
+                ],
+                [
+                    [
+                        "Midnight Blizzard",
+                        "breached",
+                        "Microsoft corporate email accounts"
+                    ],
+                    [
+                        "Microsoft",
+                        "warned",
+                        "email accounts were breached"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "had breached accounts including",
+                        "members of Microsoft's leadership team"
+                    ],
+                    [
+                        "breached email accounts",
+                        "included",
+                        "members of Microsoft's leadership team"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "had breached accounts including",
+                        "employees in the cybersecurity department"
+                    ],
+                    [
+                        "breached email accounts",
+                        "included",
+                        "members of Microsoft's leadership team"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "had breached accounts including",
+                        "employees in the legal department"
+                    ],
+                    [
+                        "breached email accounts",
+                        "included",
+                        "employees in the cybersecurity and legal departments"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Midnight Blizzard",
+                    "stole",
+                    "data"
+                ],
+                [
+                    "Midnight Blizzard",
+                    "conducted",
+                    "a password spray attack"
+                ],
+                [
+                    "Midnight Blizzard",
+                    "accessed",
+                    "a legacy non-production test tenant account"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Microsoft",
+                    "warned",
+                    "data stolen"
+                ],
+                [
+                    "attack",
+                    "was conducted by",
+                    "Russian threat actors"
+                ],
+                [
+                    "Russian threat actors",
+                    "conducted",
+                    "password spray attack"
+                ],
+                [
+                    "password spray attack",
+                    "to access",
+                    "a legacy non-production test tenant account"
+                ],
+                [
+                    "hackers",
+                    "stole",
+                    "emails and attachments"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

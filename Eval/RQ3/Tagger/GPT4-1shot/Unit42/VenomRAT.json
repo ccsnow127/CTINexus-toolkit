@@ -1,0 +1,353 @@
+{
+    "CTI": {
+        "text": "Researchers should be aware of threat actors repurposing older proof of concept (PoC) code to quickly craft a fake PoC for a newly released vulnerability. On Aug. 17, 2023, the Zero Day Initiative publicly reported a remote code execution (RCE) vulnerability in WinRAR tracked as CVE-2023-40477. They had disclosed it to the vendor on June 8, 2023. Four days after the public reporting of CVE-2023-40477, an actor using an alias of whalersplonk committed a fake PoC script to their GitHub repository. The fake PoC meant to exploit this WinRAR vulnerability was based on a publicly available PoC script that exploited a SQL injection vulnerability in an application called GeoServer, which is tracked as CVE-2023-25157. We analyzed the fake PoC script and all the links in the infection chain, which ultimately installed a VenomRAT payload.",
+        "link": "https://unit42.paloaltonetworks.com/fake-cve-2023-40477-poc-hides-venomrat/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "threat actors",
+                "relation": "repurpose",
+                "object": "older proof of concept (PoC) code"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "craft",
+                "object": "a fake PoC for a newly released vulnerability"
+            },
+            {
+                "subject": "remote code execution (RCE) vulnerability",
+                "relation": "is in",
+                "object": "WinRAR"
+            },
+            {
+                "subject": "RCE vulnerability",
+                "relation": "tracked as",
+                "object": "CVE-2023-40477"
+            },
+            {
+                "subject": "whalersplonk",
+                "relation": "committed",
+                "object": "a fake PoC script to their GitHub repository"
+            },
+            {
+                "subject": "fake PoC script",
+                "relation": "meant to exploit",
+                "object": "WinRAR vulnerability"
+            },
+            {
+                "subject": "fake PoC script",
+                "relation": "was based on",
+                "object": "a publicly available PoC script"
+            },
+            {
+                "subject": "publicly available PoC script",
+                "relation": "exploited",
+                "object": "a SQL injection vulnerability"
+            },
+            {
+                "subject": "SQL injection vulnerability",
+                "relation": "is in",
+                "object": "GeoServer"
+            },
+            {
+                "subject": "SQL injection vulnerability",
+                "relation": "tracked as",
+                "object": "CVE-2023-25157"
+            },
+            {
+                "subject": "VenomRAT payload",
+                "relation": "installed by",
+                "object": "all the links in the infection chain"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1750,
+                "cost": 0.0175
+            },
+            "output": {
+                "tokens": 319,
+                "cost": 0.00957
+            },
+            "total": {
+                "tokens": 2069,
+                "cost": 0.027070000000000004
+            }
+        },
+        "time": 10.418038845062256,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Unit42/VenomRAT-QD1-hrU.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-CVE-2023-36884.json",
+                    0.10710724067473226
+                ],
+                [
+                    "BleepingComputer-goanywhere.json",
+                    0.11451824795647161
+                ],
+                [
+                    "BleepingComputer-github.json",
+                    0.12535055191510303
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "repurpose",
+                "object": {
+                    "text": "older proof of concept (PoC) code",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "craft",
+                "object": {
+                    "text": "a fake PoC for a newly released vulnerability",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "remote code execution (RCE) vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is in",
+                "object": {
+                    "text": "WinRAR",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "RCE vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "tracked as",
+                "object": {
+                    "text": "CVE-2023-40477",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "whalersplonk",
+                    "class": "Attacker"
+                },
+                "relation": "committed",
+                "object": {
+                    "text": "a fake PoC script to their GitHub repository",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "fake PoC script",
+                    "class": "Information"
+                },
+                "relation": "meant to exploit",
+                "object": {
+                    "text": "WinRAR vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "fake PoC script",
+                    "class": "Information"
+                },
+                "relation": "was based on",
+                "object": {
+                    "text": "a publicly available PoC script",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "publicly available PoC script",
+                    "class": "Information"
+                },
+                "relation": "exploited",
+                "object": {
+                    "text": "a SQL injection vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SQL injection vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is in",
+                "object": {
+                    "text": "GeoServer",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SQL injection vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "tracked as",
+                "object": {
+                    "text": "CVE-2023-25157",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "VenomRAT payload",
+                    "class": "Malware"
+                },
+                "relation": "installed by",
+                "object": {
+                    "text": "all the links in the infection chain",
+                    "class": "Information"
+                }
+            }
+        ],
+        "response_time": 27.830941438674927,
+        "Demo_num": 1,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-1shot/prompt_store/Unit42/VenomRAT.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 817,
+                "cost": 0.00817
+            },
+            "output": {
+                "tokens": 609,
+                "cost": 0.01827
+            },
+            "total": {
+                "tokens": 1426,
+                "cost": 0.02644
+            }
+        },
+        "Eval": {
+            "correct": 22,
+            "incorrect": 0,
+            "TP": 22,
+            "TN": 0,
+            "FP": 0,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 3,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 0,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Exploit Target": {
+                    "TP": 2,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 8,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 1,
+                    "TN": 21,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 8,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 5
+        }
+    }
+}

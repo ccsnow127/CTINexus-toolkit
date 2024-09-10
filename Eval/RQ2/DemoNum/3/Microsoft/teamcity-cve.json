@@ -1,0 +1,232 @@
+{
+    "CTI": {
+        "text": "Since early October 2023, Microsoft has observed two North Korean nation-state threat actors \u2013 Diamond Sleet and Onyx Sleet \u2013 exploiting CVE-2023-42793, a remote-code execution vulnerability affecting multiple versions of JetBrains TeamCity server. TeamCity is a continuous integration/continuous deployment (CI/CD) application used by organizations for DevOps and other software development activities.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/10/18/multiple-north-korean-threat-actors-exploiting-the-teamcity-cve-2023-42793-vulnerability/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft",
+                "relation": "has observed",
+                "object": "Diamond Sleet"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "has observed",
+                "object": "Onyx Sleet"
+            },
+            {
+                "subject": "Diamond Sleet",
+                "relation": "is",
+                "object": "North Korean nation-state threat actor"
+            },
+            {
+                "subject": "Onyx Sleet",
+                "relation": "is",
+                "object": "North Korean nation-state threat actor"
+            },
+            {
+                "subject": "Diamond Sleet",
+                "relation": "exploiting",
+                "object": "CVE-2023-42793"
+            },
+            {
+                "subject": "Onyx Sleet",
+                "relation": "exploiting",
+                "object": "CVE-2023-42793"
+            },
+            {
+                "subject": "CVE-2023-42793",
+                "relation": "is a",
+                "object": "remote-code execution vulnerability"
+            },
+            {
+                "subject": "CVE-2023-42793",
+                "relation": "affects",
+                "object": "multiple versions of JetBrains TeamCity server"
+            },
+            {
+                "subject": "TeamCity",
+                "relation": "is used for",
+                "object": "DevOps"
+            },
+            {
+                "subject": "TeamCity",
+                "relation": "is used for",
+                "object": "software development activities"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2138,
+                "cost": 0.021380000000000003
+            },
+            "output": {
+                "tokens": 261,
+                "cost": 0.00783
+            },
+            "total": {
+                "tokens": 2399,
+                "cost": 0.029210000000000003
+            }
+        },
+        "time": 13.495298147201538,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/Microsoft/teamcity-cve-QD1-4uk.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "darkreading: SolarWinds-Style.json",
+                    0.16984519199824197
+                ],
+                [
+                    "securityweek: teamcity.json",
+                    0.18852263909481404
+                ],
+                [
+                    "Microsoft: north-korean.json",
+                    0.7789844283286241
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "Microsoft",
+                        "has observed",
+                        "Diamond Sleet"
+                    ],
+                    [
+                        "Diamond Sleet",
+                        "exploiting",
+                        "CVE-2023-42793"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "has observed",
+                        "Onyx Sleet"
+                    ],
+                    [
+                        "Onyx Sleet",
+                        "exploiting",
+                        "CVE-2023-42793"
+                    ]
+                ],
+                [
+                    [
+                        "Diamond Sleet",
+                        "is",
+                        "North Korean nation-state threat actor"
+                    ],
+                    [
+                        "two North Korean nation-state threat actors",
+                        "include",
+                        "Diamond Sleet"
+                    ]
+                ],
+                [
+                    [
+                        "Onyx Sleet",
+                        "is",
+                        "North Korean nation-state threat actor"
+                    ],
+                    [
+                        "two North Korean nation-state threat actors",
+                        "include",
+                        "Onyx Sleet"
+                    ]
+                ],
+                [
+                    [
+                        "Diamond Sleet",
+                        "exploiting",
+                        "CVE-2023-42793"
+                    ],
+                    [
+                        "Diamond Sleet",
+                        "exploiting",
+                        "CVE-2023-42793"
+                    ]
+                ],
+                [
+                    [
+                        "Onyx Sleet",
+                        "exploiting",
+                        "CVE-2023-42793"
+                    ],
+                    [
+                        "Onyx Sleet",
+                        "exploiting",
+                        "CVE-2023-42793"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-42793",
+                        "is a",
+                        "remote-code execution vulnerability"
+                    ],
+                    [
+                        "CVE-2023-42793",
+                        "is a",
+                        "remote-code execution vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-42793",
+                        "affects",
+                        "multiple versions of JetBrains TeamCity server"
+                    ],
+                    [
+                        "CVE-2023-42793",
+                        "affects",
+                        "multiple versions of JetBrains TeamCity server"
+                    ]
+                ],
+                [
+                    [
+                        "TeamCity",
+                        "is used for",
+                        "DevOps"
+                    ],
+                    [
+                        "TeamCity",
+                        "used by",
+                        "organizations for DevOps and other software development activities"
+                    ]
+                ],
+                [
+                    [
+                        "TeamCity",
+                        "is used for",
+                        "software development activities"
+                    ],
+                    [
+                        "TeamCity",
+                        "used by",
+                        "organizations for DevOps and other software development activities"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": []
+        }
+    }
+}

@@ -1,0 +1,190 @@
+{
+    "CTI": {
+        "text": "Clop is an extortion and ransomware operation run by a cyber-crime group known as Snakefly (aka TA505, FIN11). While the group initially extorted victims by encrypting files using its own ransomware payload (Ransom.Clop), in recent times it has been known to eschew encryption entirely and rely on the threat of leaking stolen data to extort its victims. The group has a track record in exploiting zero-day vulnerabilities. In 2021, it was linked to the exploitation of multiple vulnerabilities in Accellion FTA, another file-transfer application. Earlier this year it was responsible for exploiting a zero-day vulnerability (CVE-2023-0669) in the GoAnywhere MFT platform.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/moveit-vulnerabilities-exploits"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Clop",
+                "relation": "is operated by",
+                "object": "Snakefly"
+            },
+            {
+                "subject": "Snakefly",
+                "relation": "also known as",
+                "object": "TA505, FIN11"
+            },
+            {
+                "subject": "Snakefly",
+                "relation": "initially extorted victims by",
+                "object": "encrypting files using Ransom.Clop"
+            },
+            {
+                "subject": "Snakefly",
+                "relation": "relied on",
+                "object": "the threat of leaking stolen data to extort victims"
+            },
+            {
+                "subject": "Snakefly",
+                "relation": "has a track record in",
+                "object": "exploiting zero-day vulnerabilities"
+            },
+            {
+                "subject": "Snakefly",
+                "relation": "linked to exploitation of vulnerabilities in",
+                "object": "Accellion FTA"
+            },
+            {
+                "subject": "Snakefly",
+                "relation": "responsible for exploiting",
+                "object": "a zero-day vulnerability in the GoAnywhere MFT platform"
+            },
+            {
+                "subject": "a zero-day vulnerability",
+                "relation": "is tracked as",
+                "object": "CVE-2023-0669"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 915,
+                "cost": 0.00915
+            },
+            "output": {
+                "tokens": 233,
+                "cost": 0.0069900000000000006
+            },
+            "total": {
+                "tokens": 1148,
+                "cost": 0.01614
+            }
+        },
+        "time": 5.525423288345337,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/symantec/Clop-QD1-ptz.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "BleepingComputer: fortra.json",
+                    0.18318299727373305
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "Clop",
+                        "is operated by",
+                        "Snakefly"
+                    ],
+                    [
+                        "Clop",
+                        "is an operation run by",
+                        "Snakefly"
+                    ]
+                ],
+                [
+                    [
+                        "Snakefly",
+                        "also known as",
+                        "TA505, FIN11"
+                    ],
+                    [
+                        "Snakefly",
+                        "also known as",
+                        "FIN11"
+                    ]
+                ],
+                [
+                    [
+                        "Snakefly",
+                        "initially extorted victims by",
+                        "encrypting files using Ransom.Clop"
+                    ],
+                    [
+                        "Snakefly",
+                        "initially extorted victims by",
+                        "encrypting files"
+                    ]
+                ],
+                [
+                    [
+                        "Snakefly",
+                        "relied on",
+                        "the threat of leaking stolen data to extort victims"
+                    ],
+                    [
+                        "Snakefly",
+                        "relies on",
+                        "the threat of leaking stolen data"
+                    ]
+                ],
+                [
+                    [
+                        "Snakefly",
+                        "has a track record in",
+                        "exploiting zero-day vulnerabilities"
+                    ],
+                    [
+                        "Snakefly",
+                        "has a track record in",
+                        "exploiting zero-day vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "Snakefly",
+                        "linked to exploitation of vulnerabilities in",
+                        "Accellion FTA"
+                    ],
+                    [
+                        "Snakefly",
+                        "was linked to the exploitation of",
+                        "multiple vulnerabilities in Accellion FTA"
+                    ]
+                ],
+                [
+                    [
+                        "Snakefly",
+                        "responsible for exploiting",
+                        "a zero-day vulnerability in the GoAnywhere MFT platform"
+                    ],
+                    [
+                        "Snakefly",
+                        "has a track record in",
+                        "exploiting zero-day vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "a zero-day vulnerability",
+                        "is tracked as",
+                        "CVE-2023-0669"
+                    ],
+                    [
+                        "CVE-2023-0669",
+                        "is a zero-day vulnerability in",
+                        "the GoAnywhere MFT platform"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": []
+        }
+    }
+}

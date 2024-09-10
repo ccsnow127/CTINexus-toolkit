@@ -1,0 +1,112 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Mastodon', 'relation': 'has fixed', 'object': 'a critical vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the critical vulnerability', 'relation': 'allows', 'object': 'attackers to impersonate and take over any remote account'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the newly fixed flaw', 'relation': 'is tracked as', 'object': 'CVE-2024-23832'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-23832', 'relation': 'stems from', 'object': 'insufficient origin validation in Mastodon'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'insufficient origin validation', 'relation': 'allows', 'object': 'attackers to impersonate users and take over their accounts'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Mastodon team', 'relation': 'fixed', 'object': 'another critical bug tracked as CVE-2023-36460'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-36460', 'relation': 'is dubbed', 'object': "'TootRoot'"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-36460', 'relation': 'allowed', 'object': "attackers to send 'toots' that would create web shells on target instances"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': "'toots'", 'relation': 'create', 'object': 'web shells on target instances'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'could leverage', 'object': 'this flaw to completely compromise Mastodon servers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'this flaw', 'relation': 'allows', 'object': 'attackers to access sensitive user information, communications, and plant backdoors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

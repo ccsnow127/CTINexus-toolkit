@@ -1,0 +1,8 @@
+""Context": The threat actor known as UAC-0099 has been linked to continued attacks aimed at Ukraine, some of which leverage a high-severity flaw in the WinRAR software to deliver a malware strain called LONEPAGE. The threat actor targets Ukrainian employees working for companies outside of Ukraine. UAC-0099 was first documented by the Computer Emergency Response Team of Ukraine (CERT-UA) in June 2023, detailing its attacks against state organizations and media entities for espionage motives. The attack chains leveraged phishing messages containing HTA, RAR, and LNK file attachments that led to the deployment of LONEPAGE, a Visual Basic Script (VBS) malware that's capable of contacting a command-and-control (C2) server to retrieve additional payloads such as keyloggers, stealers, and screenshot malware. The latest analysis from Deep Instinct reveals that the use of HTA attachments is just one of three different infection chains, the other two of which leverage self-extracting (SFX) archives and booby-trapped ZIP files. The ZIP files exploit the WinRAR vulnerability (CVE-2023-38831, CVSS score: 7.8) to distribute LONEPAGE.
+
+"Question": What do you think is the relationship between entity "phishing messages" and entity "UAC-0099"
+---------------------
+Your response should follow the format:
+"predicted_triple": { "subject": predicted_subject, "relation": predicted_relation, "object": predicted_object }
+Return JSON object and nothing else, predicted_subject and predicted_object should be chosen from entity "phishing messages" and entity "UAC-0099", do not come up with new entity. Predicted relation doesn't need to be one word, it can be a phrase. For example, "is attacked by" is a valid relation.
+"predicted_triple": """ insert your answer here """"

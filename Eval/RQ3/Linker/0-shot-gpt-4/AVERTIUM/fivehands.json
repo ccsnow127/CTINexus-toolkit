@@ -1,0 +1,1244 @@
+{
+    "CTI": {
+        "text": "This report is an overview of the FiveHands Ransomware variant that successfully attacked an organization (CISA release date May 6, 2021). CISA reports that the variant used publicly-available pen test and exploitation tools, plus FiveHands ransomware and SombRAT remote access trojan (RAT), to steal information, obfuscate files, accomplish network discovery, accomplish credential access, and demand ransom from the victim. Tools used include SoftPerfect Network Scanner, FiveHands ransomware, PsExec.exe, ServeManager.exe, SombRAT, RouterScan.exe, grabff.exe, rclone.exe, and s3browser-9-5-3.exe. The initial access vector was a zero-day vulnerability in a VPN product. What followed is that the bad actor used SoftPerfect Network Scanner for the discovery of hostnames and network services. PsExec was then used to execute ServeManager.exe (what CISA calls FiveHands ransomware). FiveHands is a novel ransomware variant that uses a public key encryption scheme called NTRUEncrypt. Note: the NTRUEncrypt public key cryptosystem encryption algorithm (NTRU), is a lattice-based alternative to Rivest-Shamir-Adleman, known as RSA, and Elliptic-curve cryptography, or ECC, and is based on the shortest vector problem in a lattice. To prevent data recovery, FiveHands uses WMI to first enumerate then delete Volume Shadow copies. The malware also encrypts files in the recovery folder. After the files are encrypted, the program will write a ransom note to each folder and directory on the system.",
+        "link": "https://explore.avertium.com/resource/fivehands-ransomware-overview"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "FiveHands Ransomware variant",
+                "relation": "attacked",
+                "object": "an organization"
+            },
+            {
+                "subject": "Variant",
+                "relation": "used",
+                "object": "publicly-available pen test and exploitation tools"
+            },
+            {
+                "subject": "Variant",
+                "relation": "used",
+                "object": "FiveHands ransomware"
+            },
+            {
+                "subject": "Variant",
+                "relation": "used",
+                "object": "SombRAT"
+            },
+            {
+                "subject": "SombRAT",
+                "relation": "is a",
+                "object": "remote access trojan (RAT)"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "SoftPerfect Network Scanner"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "PsExec.exe"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "ServeManager.exe"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "RouterScan.exe"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "grabff.exe"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "rclone.exe"
+            },
+            {
+                "subject": "Tools used",
+                "relation": "include",
+                "object": "s3browser-9-5-3.exe"
+            },
+            {
+                "subject": "Initial access vector",
+                "relation": "was",
+                "object": "a zero-day vulnerability in a VPN product"
+            },
+            {
+                "subject": "Bad actor",
+                "relation": "used",
+                "object": "SoftPerfect Network Scanner"
+            },
+            {
+                "subject": "PsExec",
+                "relation": "used to execute",
+                "object": "ServeManager.exe"
+            },
+            {
+                "subject": "ServeManager.exe",
+                "relation": "is called",
+                "object": "FiveHands ransomware"
+            },
+            {
+                "subject": "FiveHands",
+                "relation": "uses",
+                "object": "NTRUEncrypt"
+            },
+            {
+                "subject": "NTRUEncrypt",
+                "relation": "is",
+                "object": "a public key encryption scheme"
+            },
+            {
+                "subject": "NTRUEncrypt",
+                "relation": "is an alternative to",
+                "object": "RSA"
+            },
+            {
+                "subject": "NTRUEncrypt",
+                "relation": "is based on",
+                "object": "the shortest vector problem in a lattice"
+            },
+            {
+                "subject": "FiveHands",
+                "relation": "uses WMI to",
+                "object": "enumerate then delete Volume Shadow copies"
+            },
+            {
+                "subject": "Malware",
+                "relation": "encrypts files in",
+                "object": "the recovery folder"
+            },
+            {
+                "subject": "Program",
+                "relation": "writes a ransom note to",
+                "object": "each folder and directory on the system"
+            }
+        ],
+        "triples_count": 23,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3058,
+                "cost": 0.030580000000000003
+            },
+            "output": {
+                "tokens": 583,
+                "cost": 0.017490000000000002
+            },
+            "total": {
+                "tokens": 3641,
+                "cost": 0.04807
+            }
+        },
+        "time": 16.400739669799805,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/AVERTIUM/fivehands-QD1-q50.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-fargo.json",
+                    0.12003770464085234
+                ],
+                [
+                    "AVERTIUM-cactus.json",
+                    0.12334574998886129
+                ],
+                [
+                    "AVERTIUM-yanluowang.json",
+                    0.14328542415762013
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "FiveHands Ransomware variant",
+                    "class": "Malware"
+                },
+                "relation": "attacked",
+                "object": {
+                    "text": "an organization",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Variant",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "used",
+                "object": {
+                    "text": "publicly-available pen test and exploitation tools",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Variant",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "used",
+                "object": {
+                    "text": "FiveHands ransomware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Variant",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "used",
+                "object": {
+                    "text": "SombRAT",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "SombRAT",
+                    "class": "Malware"
+                },
+                "relation": "is a",
+                "object": {
+                    "text": "remote access trojan (RAT)",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Tools used",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "SoftPerfect Network Scanner",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Tools used",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "PsExec.exe",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Tools used",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "ServeManager.exe",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Tools used",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "RouterScan.exe",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Tools used",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "grabff.exe",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Tools used",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "rclone.exe",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Tools used",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "s3browser-9-5-3.exe",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Initial access vector",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "was",
+                "object": {
+                    "text": "a zero-day vulnerability in a VPN product",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Bad actor",
+                    "class": "Attacker"
+                },
+                "relation": "used",
+                "object": {
+                    "text": "SoftPerfect Network Scanner",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "PsExec",
+                    "class": "Tool"
+                },
+                "relation": "used to execute",
+                "object": {
+                    "text": "ServeManager.exe",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "ServeManager.exe",
+                    "class": "Indicator:File"
+                },
+                "relation": "is called",
+                "object": {
+                    "text": "FiveHands ransomware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FiveHands",
+                    "class": "Malware"
+                },
+                "relation": "uses",
+                "object": {
+                    "text": "NTRUEncrypt",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "NTRUEncrypt",
+                    "class": "Tool"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "a public key encryption scheme",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "NTRUEncrypt",
+                    "class": "Tool"
+                },
+                "relation": "is an alternative to",
+                "object": {
+                    "text": "RSA",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "NTRUEncrypt",
+                    "class": "Tool"
+                },
+                "relation": "is based on",
+                "object": {
+                    "text": "the shortest vector problem in a lattice",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FiveHands",
+                    "class": "Malware"
+                },
+                "relation": "uses WMI to",
+                "object": {
+                    "text": "enumerate then delete Volume Shadow copies",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Malware",
+                    "class": "Malware"
+                },
+                "relation": "encrypts files in",
+                "object": {
+                    "text": "the recovery folder",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Program",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "writes a ransom note to",
+                "object": {
+                    "text": "each folder and directory on the system",
+                    "class": "Event"
+                }
+            }
+        ],
+        "response_time": 59.35354566574097,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/AVERTIUM/fivehands.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1925,
+                "cost": 0.019250000000000003
+            },
+            "output": {
+                "tokens": 1454,
+                "cost": 0.04362
+            },
+            "total": {
+                "tokens": 3379,
+                "cost": 0.06287000000000001
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "FiveHands Ransomware variant",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "FiveHands Ransomware variant",
+                        "FiveHands",
+                        "FiveHands ransomware",
+                        "FiveHands",
+                        "FiveHands ransomware"
+                    ],
+                    "entity_text": "FiveHands"
+                },
+                "relation": "attacked",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "an organization",
+                    "mention_class": "Organization",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "an organization"
+                    ],
+                    "entity_text": "an organization"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "Variant",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Variant",
+                        "Variant",
+                        "Variant"
+                    ],
+                    "entity_text": "Variant"
+                },
+                "relation": "used",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "publicly-available pen test and exploitation tools",
+                    "mention_class": "Tool",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "publicly-available pen test and exploitation tools"
+                    ],
+                    "entity_text": "publicly-available pen test and exploitation tools"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "Variant",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Variant",
+                        "Variant",
+                        "Variant"
+                    ],
+                    "entity_text": "Variant"
+                },
+                "relation": "used",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "FiveHands ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "FiveHands Ransomware variant",
+                        "FiveHands",
+                        "FiveHands ransomware",
+                        "FiveHands",
+                        "FiveHands ransomware"
+                    ],
+                    "entity_text": "FiveHands"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "Variant",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Variant",
+                        "Variant",
+                        "Variant"
+                    ],
+                    "entity_text": "Variant"
+                },
+                "relation": "used",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "SombRAT",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "SombRAT",
+                        "SombRAT"
+                    ],
+                    "entity_text": "SombRAT"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "SombRAT",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "SombRAT",
+                        "SombRAT"
+                    ],
+                    "entity_text": "SombRAT"
+                },
+                "relation": "is a",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "remote access trojan (RAT)",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "remote access trojan (RAT)"
+                    ],
+                    "entity_text": "remote access trojan (RAT)"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "Tools used",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used"
+                    ],
+                    "entity_text": "Tools used"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "SoftPerfect Network Scanner",
+                    "mention_class": "Tool",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "SoftPerfect Network Scanner",
+                        "SoftPerfect Network Scanner"
+                    ],
+                    "entity_text": "SoftPerfect Network Scanner"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "Tools used",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used"
+                    ],
+                    "entity_text": "Tools used"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "PsExec.exe",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "PsExec.exe"
+                    ],
+                    "entity_text": "PsExec.exe"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "Tools used",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used"
+                    ],
+                    "entity_text": "Tools used"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "ServeManager.exe",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "ServeManager.exe",
+                        "ServeManager.exe",
+                        "ServeManager.exe"
+                    ],
+                    "entity_text": "ServeManager.exe"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "Tools used",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used"
+                    ],
+                    "entity_text": "Tools used"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "RouterScan.exe",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "RouterScan.exe"
+                    ],
+                    "entity_text": "RouterScan.exe"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "Tools used",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used"
+                    ],
+                    "entity_text": "Tools used"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "grabff.exe",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "grabff.exe"
+                    ],
+                    "entity_text": "grabff.exe"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "Tools used",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used"
+                    ],
+                    "entity_text": "Tools used"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "rclone.exe",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 18,
+                    "mentions_merged": [
+                        "rclone.exe"
+                    ],
+                    "entity_text": "rclone.exe"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "Tools used",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used"
+                    ],
+                    "entity_text": "Tools used"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "s3browser-9-5-3.exe",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 19,
+                    "mentions_merged": [
+                        "s3browser-9-5-3.exe"
+                    ],
+                    "entity_text": "s3browser-9-5-3.exe"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "Initial access vector",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "Initial access vector"
+                    ],
+                    "entity_text": "Initial access vector"
+                },
+                "relation": "was",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "a zero-day vulnerability in a VPN product",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 20,
+                    "mentions_merged": [
+                        "a zero-day vulnerability in a VPN product"
+                    ],
+                    "entity_text": "a zero-day vulnerability in a VPN product"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 26,
+                    "mention_text": "Bad actor",
+                    "mention_class": "Attacker",
+                    "entity_id": 21,
+                    "mentions_merged": [
+                        "Bad actor"
+                    ],
+                    "entity_text": "Bad actor"
+                },
+                "relation": "used",
+                "object": {
+                    "mention_id": 27,
+                    "mention_text": "SoftPerfect Network Scanner",
+                    "mention_class": "Tool",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "SoftPerfect Network Scanner",
+                        "SoftPerfect Network Scanner"
+                    ],
+                    "entity_text": "SoftPerfect Network Scanner"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 28,
+                    "mention_text": "PsExec",
+                    "mention_class": "Tool",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "PsExec"
+                    ],
+                    "entity_text": "PsExec"
+                },
+                "relation": "used to execute",
+                "object": {
+                    "mention_id": 29,
+                    "mention_text": "ServeManager.exe",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "ServeManager.exe",
+                        "ServeManager.exe",
+                        "ServeManager.exe"
+                    ],
+                    "entity_text": "ServeManager.exe"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 30,
+                    "mention_text": "ServeManager.exe",
+                    "mention_class": "Indicator:File",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "ServeManager.exe",
+                        "ServeManager.exe",
+                        "ServeManager.exe"
+                    ],
+                    "entity_text": "ServeManager.exe"
+                },
+                "relation": "is called",
+                "object": {
+                    "mention_id": 31,
+                    "mention_text": "FiveHands ransomware",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "FiveHands Ransomware variant",
+                        "FiveHands",
+                        "FiveHands ransomware",
+                        "FiveHands",
+                        "FiveHands ransomware"
+                    ],
+                    "entity_text": "FiveHands"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 32,
+                    "mention_text": "FiveHands",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "FiveHands Ransomware variant",
+                        "FiveHands",
+                        "FiveHands ransomware",
+                        "FiveHands",
+                        "FiveHands ransomware"
+                    ],
+                    "entity_text": "FiveHands"
+                },
+                "relation": "uses",
+                "object": {
+                    "mention_id": 33,
+                    "mention_text": "NTRUEncrypt",
+                    "mention_class": "Tool",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "NTRUEncrypt",
+                        "NTRUEncrypt",
+                        "NTRUEncrypt",
+                        "NTRUEncrypt"
+                    ],
+                    "entity_text": "NTRUEncrypt"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 34,
+                    "mention_text": "NTRUEncrypt",
+                    "mention_class": "Tool",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "NTRUEncrypt",
+                        "NTRUEncrypt",
+                        "NTRUEncrypt",
+                        "NTRUEncrypt"
+                    ],
+                    "entity_text": "NTRUEncrypt"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 35,
+                    "mention_text": "a public key encryption scheme",
+                    "mention_class": "Information",
+                    "entity_id": 22,
+                    "mentions_merged": [
+                        "a public key encryption scheme"
+                    ],
+                    "entity_text": "a public key encryption scheme"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 36,
+                    "mention_text": "NTRUEncrypt",
+                    "mention_class": "Tool",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "NTRUEncrypt",
+                        "NTRUEncrypt",
+                        "NTRUEncrypt",
+                        "NTRUEncrypt"
+                    ],
+                    "entity_text": "NTRUEncrypt"
+                },
+                "relation": "is an alternative to",
+                "object": {
+                    "mention_id": 37,
+                    "mention_text": "RSA",
+                    "mention_class": "Tool",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "RSA"
+                    ],
+                    "entity_text": "RSA"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 38,
+                    "mention_text": "NTRUEncrypt",
+                    "mention_class": "Tool",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "NTRUEncrypt",
+                        "NTRUEncrypt",
+                        "NTRUEncrypt",
+                        "NTRUEncrypt"
+                    ],
+                    "entity_text": "NTRUEncrypt"
+                },
+                "relation": "is based on",
+                "object": {
+                    "mention_id": 39,
+                    "mention_text": "the shortest vector problem in a lattice",
+                    "mention_class": "Information",
+                    "entity_id": 23,
+                    "mentions_merged": [
+                        "the shortest vector problem in a lattice"
+                    ],
+                    "entity_text": "the shortest vector problem in a lattice"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 40,
+                    "mention_text": "FiveHands",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "FiveHands Ransomware variant",
+                        "FiveHands",
+                        "FiveHands ransomware",
+                        "FiveHands",
+                        "FiveHands ransomware"
+                    ],
+                    "entity_text": "FiveHands"
+                },
+                "relation": "uses WMI to",
+                "object": {
+                    "mention_id": 41,
+                    "mention_text": "enumerate then delete Volume Shadow copies",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 25,
+                    "mentions_merged": [
+                        "enumerate then delete Volume Shadow copies"
+                    ],
+                    "entity_text": "enumerate then delete Volume Shadow copies"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 42,
+                    "mention_text": "Malware",
+                    "mention_class": "Malware",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "Malware"
+                    ],
+                    "entity_text": "Malware"
+                },
+                "relation": "encrypts files in",
+                "object": {
+                    "mention_id": 43,
+                    "mention_text": "the recovery folder",
+                    "mention_class": "Information",
+                    "entity_id": 24,
+                    "mentions_merged": [
+                        "the recovery folder"
+                    ],
+                    "entity_text": "the recovery folder"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 44,
+                    "mention_text": "Program",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "Program"
+                    ],
+                    "entity_text": "Program"
+                },
+                "relation": "writes a ransom note to",
+                "object": {
+                    "mention_id": 45,
+                    "mention_text": "each folder and directory on the system",
+                    "mention_class": "Event",
+                    "entity_id": 26,
+                    "mentions_merged": [
+                        "each folder and directory on the system"
+                    ],
+                    "entity_text": "each folder and directory on the system"
+                }
+            }
+        ],
+        "mentions_num": 46,
+        "response_time": 9.282572746276855,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 27
+    },
+    "LP": {
+        "predicted_links": [
+            {
+                "subject": {
+                    "entity_id": 20,
+                    "mention_text": "a zero-day vulnerability in a VPN product"
+                },
+                "relation": "was exploited using",
+                "object": {
+                    "mention_id": 10,
+                    "mention_text": "Tools used",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used"
+                    ],
+                    "entity_text": "Tools used"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 24,
+                    "mention_text": "the recovery folder"
+                },
+                "relation": "is encrypted by",
+                "object": {
+                    "mention_id": 10,
+                    "mention_text": "Tools used",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used"
+                    ],
+                    "entity_text": "Tools used"
+                }
+            },
+            {
+                "subject": {
+                    "entity_id": 26,
+                    "mention_text": "each folder and directory on the system"
+                },
+                "relation": "is affected by",
+                "object": {
+                    "mention_id": 10,
+                    "mention_text": "Tools used",
+                    "mention_class": "Tool",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used",
+                        "Tools used"
+                    ],
+                    "entity_text": "Tools used"
+                }
+            }
+        ],
+        "response_time": 6.892138719558716,
+        "model": "gpt-4-0125-preview",
+        "usage": {
+            "input": {
+                "tokens": 1434,
+                "cost": 0.01434
+            },
+            "output": {
+                "tokens": 99,
+                "cost": 0.00297
+            },
+            "total": {
+                "tokens": 1533,
+                "cost": 0.01731
+            }
+        },
+        "topic_node": {
+            "mention_id": 10,
+            "mention_text": "Tools used",
+            "mention_class": "Tool",
+            "entity_id": 7,
+            "mentions_merged": [
+                "Tools used",
+                "Tools used",
+                "Tools used",
+                "Tools used",
+                "Tools used",
+                "Tools used",
+                "Tools used"
+            ],
+            "entity_text": "Tools used"
+        },
+        "main_nodes": [
+            {
+                "mention_id": 25,
+                "mention_text": "a zero-day vulnerability in a VPN product",
+                "mention_class": "Vulnerability",
+                "entity_id": 20,
+                "mentions_merged": [
+                    "a zero-day vulnerability in a VPN product"
+                ],
+                "entity_text": "a zero-day vulnerability in a VPN product"
+            },
+            {
+                "mention_id": 43,
+                "mention_text": "the recovery folder",
+                "mention_class": "Information",
+                "entity_id": 24,
+                "mentions_merged": [
+                    "the recovery folder"
+                ],
+                "entity_text": "the recovery folder"
+            },
+            {
+                "mention_id": 45,
+                "mention_text": "each folder and directory on the system",
+                "mention_class": "Event",
+                "entity_id": 26,
+                "mentions_merged": [
+                    "each folder and directory on the system"
+                ],
+                "entity_text": "each folder and directory on the system"
+            }
+        ],
+        "subgraphs": [
+            [
+                0,
+                1,
+                3,
+                4,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                21,
+                22,
+                23,
+                25
+            ],
+            [
+                20,
+                5
+            ],
+            [
+                24,
+                2
+            ],
+            [
+                26,
+                6
+            ]
+        ],
+        "subgraph_num": 4,
+        "Eval": {
+            "correct": 3,
+            "incorrect": 0
+        }
+    }
+}

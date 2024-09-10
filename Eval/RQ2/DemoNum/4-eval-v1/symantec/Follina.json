@@ -1,0 +1,220 @@
+{
+    "CTI": {
+        "text": "Follina (CVE-2022-30190) is a vulnerability in the Microsoft Support Diagnostic Tool (MSDT) that allows remote code execution on vulnerable systems through the ms-msdt protocol handler scheme. The bug is present in all supported versions of Windows. The vulnerability can be easily exploited by a specially crafted Word document that downloads and loads a malicious HTML file through Word's remote template feature. The HTML file ultimately allows the attacker to load and execute PowerShell code within Windows. The vulnerability can also be exploited through the RTF file format.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/follina-msdt-exploit-malware"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Follina",
+                "relation": "is",
+                "object": "CVE-2022-30190"
+            },
+            {
+                "subject": "CVE-2022-30190",
+                "relation": "is a vulnerability in",
+                "object": "the Microsoft Support Diagnostic Tool (MSDT)"
+            },
+            {
+                "subject": "CVE-2022-30190",
+                "relation": "allows",
+                "object": "remote code execution on vulnerable systems"
+            },
+            {
+                "subject": "CVE-2022-30190",
+                "relation": "exploited through",
+                "object": "the ms-msdt protocol handler scheme"
+            },
+            {
+                "subject": "The bug",
+                "relation": "is present in",
+                "object": "all supported versions of Windows"
+            },
+            {
+                "subject": "CVE-2022-30190",
+                "relation": "can be exploited by",
+                "object": "a specially crafted Word document"
+            },
+            {
+                "subject": "A specially crafted Word document",
+                "relation": "downloads and loads",
+                "object": "a malicious HTML file"
+            },
+            {
+                "subject": "A malicious HTML file",
+                "relation": "allows",
+                "object": "the attacker to load and execute PowerShell code within Windows"
+            },
+            {
+                "subject": "CVE-2022-30190",
+                "relation": "can also be exploited through",
+                "object": "the RTF file format"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2288,
+                "cost": 0.02288
+            },
+            "output": {
+                "tokens": 274,
+                "cost": 0.00822
+            },
+            "total": {
+                "tokens": 2562,
+                "cost": 0.031100000000000003
+            }
+        },
+        "time": 11.185417175292969,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/symantec/Follina-QD1-sfS.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "Microsoft: app-installer.json",
+                    0.17111350893666133
+                ],
+                [
+                    "threatPost: Dogwalk.json",
+                    0.21346085345628463
+                ],
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.22362235183145157
+                ],
+                [
+                    "threatPost: Microsoft.json",
+                    0.25782653597484195
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.8888888888888888,
+                "recall": 0.8888888888888888,
+                "f1": 0.8888888888888888
+            },
+            "matched_list": [
+                [
+                    [
+                        "Follina",
+                        "is",
+                        "CVE-2022-30190"
+                    ],
+                    [
+                        "Follina",
+                        "is a",
+                        "vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-30190",
+                        "allows",
+                        "remote code execution on vulnerable systems"
+                    ],
+                    [
+                        "Follina",
+                        "allows",
+                        "remote code execution on vulnerable systems"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-30190",
+                        "exploited through",
+                        "the ms-msdt protocol handler scheme"
+                    ],
+                    [
+                        "vulnerable systems",
+                        "through",
+                        "the ms-msdt protocol handler scheme"
+                    ]
+                ],
+                [
+                    [
+                        "The bug",
+                        "is present in",
+                        "all supported versions of Windows"
+                    ],
+                    [
+                        "The bug",
+                        "is present in",
+                        "all supported versions of Windows"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-30190",
+                        "can be exploited by",
+                        "a specially crafted Word document"
+                    ],
+                    [
+                        "vulnerability",
+                        "can be exploited by",
+                        "a specially crafted Word document"
+                    ]
+                ],
+                [
+                    [
+                        "A specially crafted Word document",
+                        "downloads and loads",
+                        "a malicious HTML file"
+                    ],
+                    [
+                        "a specially crafted Word document",
+                        "downloads and loads",
+                        "a malicious HTML file"
+                    ]
+                ],
+                [
+                    [
+                        "A malicious HTML file",
+                        "allows",
+                        "the attacker to load and execute PowerShell code within Windows"
+                    ],
+                    [
+                        "The HTML file",
+                        "allows",
+                        "the attacker to load and execute PowerShell code within Windows"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-30190",
+                        "can also be exploited through",
+                        "the RTF file format"
+                    ],
+                    [
+                        "vulnerability",
+                        "can also be exploited through",
+                        "the RTF file format"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "CVE-2022-30190",
+                    "is a vulnerability in",
+                    "the Microsoft Support Diagnostic Tool (MSDT)"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Follina",
+                    "is in",
+                    "the Microsoft Support Diagnostic Tool (MSDT)"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

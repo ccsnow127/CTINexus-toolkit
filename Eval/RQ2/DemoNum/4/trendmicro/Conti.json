@@ -1,0 +1,102 @@
+{
+    "CTI": {
+        "text": "Conti can arrive in the system through BazarLoader, which is delivered via phishing emails containing a Google Drive link that downloads the malware.Alternatively, the ransomware can arrive via exploiting the the FortiGate firewall vulnerabilities CVE-2018-13379 and CVE-2018-13374. After successfully exploiting the application, the ransomware deploys Cobalt Strike to gain a foothold on the system. Conti can also arrive as a result of the exploitation of the ProxyShell Microsoft Exchange vulnerabilities. The Conti group uses tools such as Whoami, Nltest, and Net. These tools give the operators information about where they are in the system, and what rights and permissions they have. Since the operators employ double extortion tactics, they actively look for files to exfiltrate in the discovery stage. The threat actors use tools such as ShareFinder to identify the shares needed for exfiltration and ransomware deployment. Although the group mostly relies on finding the domain admin credentials to gain full access to the domain, they may also use a couple of exploits like Zerologon (CVE-2020-1472) and PrintNightmare (CVE-2021-1675), to elevate their privilege and further strengthen their foothold in the network.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-conti"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Conti",
+                "relation": "arrives through",
+                "object": "BazarLoader"
+            },
+            {
+                "subject": "BazarLoader",
+                "relation": "delivered via",
+                "object": "phishing emails containing a Google Drive link"
+            },
+            {
+                "subject": "ransomware",
+                "relation": "exploits",
+                "object": "the FortiGate firewall vulnerabilities CVE-2018-13379 and CVE-2018-13374"
+            },
+            {
+                "subject": "ransomware",
+                "relation": "deploys",
+                "object": "Cobalt Strike"
+            },
+            {
+                "subject": "Conti",
+                "relation": "arrives",
+                "object": "via exploiting ProxyShell Microsoft Exchange vulnerabilities"
+            },
+            {
+                "subject": "Conti group",
+                "relation": "uses tools such as",
+                "object": "Whoami, Nltest, and Net"
+            },
+            {
+                "subject": "operators",
+                "relation": "employ",
+                "object": "double extortion tactics"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "use",
+                "object": "ShareFinder"
+            },
+            {
+                "subject": "group",
+                "relation": "relies on",
+                "object": "finding the domain admin credentials"
+            },
+            {
+                "subject": "group",
+                "relation": "may use",
+                "object": "exploits like Zerologon (CVE-2020-1472) and PrintNightmare (CVE-2021-1675)"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3230,
+                "cost": 0.0323
+            },
+            "output": {
+                "tokens": 293,
+                "cost": 0.008790000000000001
+            },
+            "total": {
+                "tokens": 3523,
+                "cost": 0.04109
+            }
+        },
+        "time": 13.580451726913452,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/trendmicro/Conti-QD1-oIF.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "AVERTIUM: yanluowang.json",
+                    0.11429085748637142
+                ],
+                [
+                    "symantec: Log4j.json",
+                    0.1199271587651822
+                ],
+                [
+                    "AVERTIUM: mallox.json",
+                    0.1403129590514541
+                ],
+                [
+                    "securityweek: screenconnect.json",
+                    0.14234390659944618
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

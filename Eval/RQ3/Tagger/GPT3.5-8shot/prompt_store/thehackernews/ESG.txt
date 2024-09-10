@@ -1,0 +1,140 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": {"subject": "Akira ransomware group", "relation": "claimed responsibility for", "object": "three recent attacks"}
+
+"tagged_triple": {"subject": {"text": "Akira ransomware group", "class": "Attacker"}, "relation": "claimed responsibility for", "object": {"text": "three recent attacks", "class": "Event"}} 
+---------------------
+Example 2:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "APT35", "relation": "used", "object": "a new strain of malware for intelligence collection"}
+
+"tagged_triple": {"subject": {"text": "APT35", "class": "Attacker"}, "relation": "drops", "object": {"text": "a new strain of malware for intelligence collection", "class": "Malware"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Cuba ransomware actors", "relation": "potentially connected with", "object": "RomCom Remote Access Trojan (RAT) actors"}
+
+"tagged_triple": {"subject": {"text": "Cuba ransomware actors", "class": "Attacker"},"relation": "potentially connected with", "object": {"text": "RomCom Remote Access Trojan (RAT) actors", "class": "Attacker"}}
+---------------------
+Example 5:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 6:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 7:
+
+"triple": {"subject": "Microsoft's SQL servers", "relation": "hold data for", "object": "internet services and apps"}
+
+"tagged_triple": {"subject": {"text": "Microsoft's SQL servers", "class": "Infrastructure"}, "relation": "hold data for", "object": {"text": "internet services and apps","class": "Infrastructure"}}
+---------------------
+Example 8:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Chinese threat actors', 'relation': 'exploited', 'object': "a new zero-day in Barracuda's Email Security Gateway (ESG) appliances"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-7102', 'relation': 'relates to', 'object': 'arbitrary code execution'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-7102', 'relation': 'resides within', 'object': 'Spreadsheet::ParseExcel'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Spreadsheet::ParseExcel', 'relation': 'is used by', 'object': 'the Amavis scanner'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the Amavis scanner', 'relation': 'screens', 'object': 'Microsoft Excel email attachments for malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UNC4841', 'relation': 'linked to', 'object': 'the exploitation of CVE-2023-7102'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UNC4841', 'relation': 'previously linked to', 'object': 'the active exploitation of another zero-day in Barracuda devices'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the other zero-day in Barracuda devices', 'relation': 'is', 'object': 'CVE-2023-2868'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-2868', 'relation': 'CVSS score', 'object': '9.8'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'successful exploitation of CVE-2023-7102', 'relation': 'accomplished by', 'object': 'a specially crafted Microsoft Excel email attachment'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the deployment', 'relation': 'followed by', 'object': 'new variants of SEASPY and SALTWATER'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SEASPY and SALTWATER', 'relation': 'equip', 'object': 'persistence and command execution capabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

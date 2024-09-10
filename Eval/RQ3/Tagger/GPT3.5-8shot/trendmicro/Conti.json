@@ -1,0 +1,481 @@
+{
+    "CTI": {
+        "text": "Conti can arrive in the system through BazarLoader, which is delivered via phishing emails containing a Google Drive link that downloads the malware.Alternatively, the ransomware can arrive via exploiting the the FortiGate firewall vulnerabilities CVE-2018-13379 and CVE-2018-13374. After successfully exploiting the application, the ransomware deploys Cobalt Strike to gain a foothold on the system. Conti can also arrive as a result of the exploitation of the ProxyShell Microsoft Exchange vulnerabilities. The Conti group uses tools such as Whoami, Nltest, and Net. These tools give the operators information about where they are in the system, and what rights and permissions they have. Since the operators employ double extortion tactics, they actively look for files to exfiltrate in the discovery stage. The threat actors use tools such as ShareFinder to identify the shares needed for exfiltration and ransomware deployment. Although the group mostly relies on finding the domain admin credentials to gain full access to the domain, they may also use a couple of exploits like Zerologon (CVE-2020-1472) and PrintNightmare (CVE-2021-1675), to elevate their privilege and further strengthen their foothold in the network.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-conti"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Conti",
+                "relation": "can arrive through",
+                "object": "BazarLoader"
+            },
+            {
+                "subject": "BazarLoader",
+                "relation": "is delivered via",
+                "object": "phishing emails"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "contain",
+                "object": "a Google Drive link"
+            },
+            {
+                "subject": "a Google Drive link",
+                "relation": "downloads",
+                "object": "the malware"
+            },
+            {
+                "subject": "Conti",
+                "relation": "can arrive via exploiting",
+                "object": "FortiGate firewall vulnerabilities"
+            },
+            {
+                "subject": "FortiGate firewall vulnerabilities",
+                "relation": "include",
+                "object": "CVE-2018-13379"
+            },
+            {
+                "subject": "FortiGate firewall vulnerabilities",
+                "relation": "include",
+                "object": "CVE-2018-13374"
+            },
+            {
+                "subject": "the ransomware",
+                "relation": "deploys",
+                "object": "Cobalt Strike"
+            },
+            {
+                "subject": "Conti",
+                "relation": "can arrive as a result of exploitation of",
+                "object": "ProxyShell Microsoft Exchange vulnerabilities"
+            },
+            {
+                "subject": "Conti group",
+                "relation": "uses tools such as",
+                "object": "Whoami, Nltest, and Net"
+            },
+            {
+                "subject": "These tools",
+                "relation": "give information about",
+                "object": "system location and user permissions"
+            },
+            {
+                "subject": "operators",
+                "relation": "employ",
+                "object": "double extortion tactics"
+            },
+            {
+                "subject": "The threat actors",
+                "relation": "use",
+                "object": "ShareFinder"
+            },
+            {
+                "subject": "ShareFinder",
+                "relation": "identifies",
+                "object": "shares needed for exfiltration and ransomware deployment"
+            },
+            {
+                "subject": "The group",
+                "relation": "relies on",
+                "object": "finding the domain admin credentials"
+            },
+            {
+                "subject": "The group",
+                "relation": "may use exploits such as",
+                "object": "Zerologon"
+            },
+            {
+                "subject": "Zerologon",
+                "relation": "is identified as",
+                "object": "CVE-2020-1472"
+            },
+            {
+                "subject": "The group",
+                "relation": "may use exploits such as",
+                "object": "PrintNightmare"
+            },
+            {
+                "subject": "PrintNightmare",
+                "relation": "is identified as",
+                "object": "CVE-2021-1675"
+            }
+        ],
+        "triples_count": 19,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2993,
+                "cost": 0.029930000000000002
+            },
+            "output": {
+                "tokens": 495,
+                "cost": 0.01485
+            },
+            "total": {
+                "tokens": 3488,
+                "cost": 0.04478
+            }
+        },
+        "time": 13.324362754821777,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/trendmicro/Conti-QD1-u8P.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-charming-kitten.json",
+                    0.11022702623745242
+                ],
+                [
+                    "BleepingComputer-kasseika.json",
+                    0.11311752231705198
+                ],
+                [
+                    "AVERTIUM-mallox.json",
+                    0.14807697100725567
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Conti",
+                    "class": "Attacker"
+                },
+                "relation": "can arrive through",
+                "object": {
+                    "text": "BazarLoader",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "BazarLoader",
+                    "class": "Malware"
+                },
+                "relation": "is delivered via",
+                "object": {
+                    "text": "phishing emails",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "phishing emails",
+                    "class": "Event"
+                },
+                "relation": "contain",
+                "object": {
+                    "text": "a Google Drive link",
+                    "class": "Indicator:URL"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a Google Drive link",
+                    "class": "Indicator:URL"
+                },
+                "relation": "downloads",
+                "object": {
+                    "text": "the malware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Conti",
+                    "class": "Attacker"
+                },
+                "relation": "can arrive via exploiting",
+                "object": {
+                    "text": "FortiGate firewall vulnerabilities",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FortiGate firewall vulnerabilities",
+                    "class": "Vulnerability"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "CVE-2018-13379",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FortiGate firewall vulnerabilities",
+                    "class": "Vulnerability"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "CVE-2018-13374",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the ransomware",
+                    "class": "Malware"
+                },
+                "relation": "deploys",
+                "object": {
+                    "text": "Cobalt Strike",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Conti",
+                    "class": "Attacker"
+                },
+                "relation": "can arrive as a result of exploitation of",
+                "object": {
+                    "text": "ProxyShell Microsoft Exchange vulnerabilities",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Conti group",
+                    "class": "Attacker"
+                },
+                "relation": "uses tools such as",
+                "object": {
+                    "text": "Whoami, Nltest, and Net",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "These tools",
+                    "class": "Tool"
+                },
+                "relation": "give information about",
+                "object": {
+                    "text": "system location and user permissions",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "operators",
+                    "class": "Organization"
+                },
+                "relation": "employ",
+                "object": {
+                    "text": "double extortion tactics",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "use",
+                "object": {
+                    "text": "ShareFinder",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "ShareFinder",
+                    "class": "Tool"
+                },
+                "relation": "identifies",
+                "object": {
+                    "text": "shares needed for exfiltration and ransomware deployment",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The group",
+                    "class": "Organization"
+                },
+                "relation": "relies on",
+                "object": {
+                    "text": "finding the domain admin credentials",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The group",
+                    "class": "Organization"
+                },
+                "relation": "may use exploits such as",
+                "object": {
+                    "text": "Zerologon",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Zerologon",
+                    "class": "Vulnerability"
+                },
+                "relation": "is identified as",
+                "object": {
+                    "text": "CVE-2020-1472",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The group",
+                    "class": "Organization"
+                },
+                "relation": "may use exploits such as",
+                "object": {
+                    "text": "PrintNightmare",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "PrintNightmare",
+                    "class": "Vulnerability"
+                },
+                "relation": "is identified as",
+                "object": {
+                    "text": "CVE-2021-1675",
+                    "class": "Vulnerability"
+                }
+            }
+        ],
+        "response_time": 13.193837404251099,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT3.5-8shot/prompt_store/trendmicro/Conti.txt",
+        "model_usage": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1785,
+                "cost": 0.0008925
+            },
+            "output": {
+                "tokens": 898,
+                "cost": 0.001347
+            },
+            "total": {
+                "tokens": 2683,
+                "cost": 0.0022395
+            }
+        },
+        "Eval": {
+            "correct": 27,
+            "incorrect": 11,
+            "TP": 27,
+            "TN": 0,
+            "FP": 11,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 38,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 37,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 5,
+                    "TN": 33,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 2,
+                    "TN": 29,
+                    "FP": 3,
+                    "FN": 4
+                },
+                "Event": {
+                    "TP": 0,
+                    "TN": 36,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 38,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 2,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "Information": {
+                    "TP": 2,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 38,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 4,
+                    "TN": 31,
+                    "FP": 0,
+                    "FN": 3
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 37,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 4,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 38,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 38,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 12,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 38,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 10
+        }
+    }
+}

@@ -1,0 +1,98 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Unit 42 researchers', 'relation': 'have identified', 'object': 'an active campaign'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the active campaign', 'relation': 'is called', 'object': 'EleKtra-Leak'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EleKtra-Leak', 'relation': 'performs', 'object': 'automated targeting of exposed IAM credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'IAM credentials', 'relation': 'are within', 'object': 'public GitHub repositories'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'AWS', 'relation': 'detects and auto-remediates', 'object': 'the threat of exposed credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the threat of exposed credentials', 'relation': 'is in', 'object': 'popular source code repositories'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'AWS', 'relation': 'applies', 'object': 'a special quarantine policy'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Unit 42 researchers', 'relation': 'were able to develop', 'object': 'deeper insights'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the threat actor', 'relation': 'is associated with', 'object': 'the campaign'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the threat actor', 'relation': 'was able to create', 'object': 'multiple AWS EC2 instances'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'AWS EC2 instances', 'relation': 'are used for', 'object': 'cryptojacking operations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'cryptojacking operations', 'relation': 'have been active for', 'object': 'at least two years'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

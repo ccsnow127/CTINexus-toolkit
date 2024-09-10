@@ -1,0 +1,33 @@
+identify entities, classifying them into these specific types: [threat actor, attack pattern, campaign, identity, indicator, infrastructure, location, tool, vulnerability, malware]. Next, analyze the relationships between these entities. Use the following relationship categories as a guide: [use, target, is a, are, exploit, in, observe, generate, have, known as, be associated with, conduct, is likely a, are likely, include, be attributed to]. If a relationship doesn't fit into these categories, summarize the relationship in your own words, ensuring it is clearly defined and relevant to the context. Below are some examples.
+---------------------
+"CTI": Fighting Ursa (aka APT28, Fancy Bear, Strontium/Forest Blizzard, Pawn Storm, Sofacy, or Sednit) is a group associated with Russia"s military intelligence, and they are well known for their focus on targets of Russian interest – especially those of military interest. Fighting Ursa has been attributed to Russia"s General Staff Main Intelligence Directorate (GRU) 85th Special Service Centre (GTsSS) military intelligence Unit 26165.
+---------------------
+"triples": [
+{"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "APT28", "class": "threat actor"}}, 
+{"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "Fancy Bear", "class": "threat actor"}}, 
+{"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "Strontium/Forest Blizzard", "class": "threat actor"}}, 
+{"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "Pawn Storm", "class": "threat actor"}}, 
+{"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "Sofacy", "class": "threat actor"}}, 
+{"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "Sednit", "class": "threat actor"}}, 
+{"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "be associated with"}, "object": {"value": "Russia"s military intelligence", "class": "identity"}}, 
+{"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "be attributed to"}, "object": {"value": "Russia"s General Staff Main Intelligence Directorate (GRU) 85th Special Service Centre (GTsSS) military intelligence Unit 26165", "class": "identity"}}
+]
+---------------------
+"CTI": The Akira ransomware group, a relatively new player in the ransomware market, has claimed responsibility for three recent attacks. The victims include 4LEAF, an American engineering consultancy business; Park-Rite, a U.S.-based packaging materials manufacturer; and Family Day Care Services, a Canadian childcare service. Akira listed the names of the three victims on their leak site threatening to release company records if they refuse to pay a ransom.Researchers discovered the ransomware Trojan on August 28, 2017, and at that time, it appeared to be in its testing phase. The Trojan is currently being distributed by targeting unprotected websites, with a specific focus on WordPress sites. Once infected, Akira drops one or multiple payload files. After infection, a ransom note is left before the ransomware creates multiple registry values in Windows, such as the Run and RunOnce registries. The presence of .akira files means that your data has likely been encrypted by Akira ransomware.
+---------------------
+"triples": [
+{"subject": {"value": "Akira ransomware group", "class": "malware"}, "relation": {"class": "be attributed to"}, "object": {"value": "", "class": ""}}
+{"subject": {"value": "Akira ransomware group", "class": "malware"}, "relation": {"class": "target"}, "object": {"value": "4LEAF", "class": "identity"}}
+{"subject": {"value": "Akira ransomware group", "class": "malware"}, "relation": {"class": "target"}, "object": {"value": "Park-Rite", "class": "identity"}}
+{"subject": {"value": "Akira ransomware group", "class": "malware"}, "relation": {"class": "target"}, "object": {"value": "Family Day Care Services", "class": "identity"}}
+{"subject": {"value": "Akira ransomware Trojan", "class": "malware"}, "relation": {"class": "be distributed by"}, "object": {"value": "", "class": ""}}
+{"subject": {"value": "Akira ransomware Trojan", "class": "malware"}, "relation": {"class": "be distributed by"}, "object": {"value": "", "class": ""}}
+{"subject": {"value": "Akira ransomware Trojan", "class": "malware"}, "relation": {"class": "drop"}, "object": {"value": "one or multiple payload files", "class": "tool"}}
+{"subject": {"value": "Akira ransomware Trojan", "class": "malware"}, "relation": {"class": "leave"}, "object": {"value": "ransom note", "class": "indicator"}}
+{"subject": {"value": "Akira ransomware Trojan", "class": "malware"}, "relation": {"class": "create"}, "object": {"value": "multiple registry values in Windows, such as the Run and RunOnce registries", "class": "infrastructure"}}
+{"subject": {"value": "ransomware Trojan by Akira", "class": "malware"}, "relation": {"class": "encrypt"}, "object": {"value": "", "class": ""}}
+]
+---------------------
+"CTI": The Akira ransomware group, a relatively new player in the ransomware market, has claimed responsibility for three recent attacks. The victims include 4LEAF, an American engineering consultancy business; Park-Rite, a U.S.-based packaging materials manufacturer; and Family Day Care Services, a Canadian childcare service. Akira listed the names of the three victims on their leak site threatening to release company records if they refuse to pay a ransom.Researchers discovered the ransomware Trojan on August 28, 2017, and at that time, it appeared to be in its testing phase. The Trojan is currently being distributed by targeting unprotected websites, with a specific focus on WordPress sites. Once infected, Akira drops one or multiple payload files. After infection, a ransom note is left before the ransomware creates multiple registry values in Windows, such as the Run and RunOnce registries. The presence of .akira files means that your data has likely been encrypted by Akira ransomware.
+---------------------
+"""Insert Your Answer Here"""

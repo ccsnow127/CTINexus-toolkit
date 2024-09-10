@@ -1,0 +1,666 @@
+{
+    "CTI": {
+        "text": "Microsoft security researchers recently identified a campaign where attackers attempted to move laterally to a cloud environment through a SQL Server instance. This attack technique demonstrates an approach we've seen in other cloud services such as VMs and Kubernetes cluster, but not in SQL Server. The attackers initially exploited a SQL injection vulnerability in an application within the target's environment. This allowed the attacker to gain access and elevated permissions on a Microsoft SQL Server instance deployed in Azure Virtual Machine (VM). The attackers then used the acquired elevated permission to attempt to move laterally to additional cloud resources by abusing the server's cloud identity. Cloud identities are commonly used in cloud services including SQL Server and may possess elevated permissions to carry out actions in the cloud. This attack highlights the need to properly secure cloud identities to defend SQL Server instances and cloud resources from unauthorized access.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/10/03/defending-new-vectors-threat-actors-attempt-sql-server-to-cloud-lateral-movement/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "attackers",
+                "relation": "attempted to move laterally to",
+                "object": "a cloud environment"
+            },
+            {
+                "subject": "a cloud environment",
+                "relation": "through",
+                "object": "a SQL Server instance"
+            },
+            {
+                "subject": "attackers",
+                "relation": "exploited",
+                "object": "a SQL injection vulnerability"
+            },
+            {
+                "subject": "a SQL injection vulnerability",
+                "relation": "in",
+                "object": "an application"
+            },
+            {
+                "subject": "attackers",
+                "relation": "gain access and elevated permissions on",
+                "object": "a Microsoft SQL Server instance"
+            },
+            {
+                "subject": "a Microsoft SQL Server instance",
+                "relation": "deployed in",
+                "object": "Azure Virtual Machine (VM)"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used",
+                "object": "the acquired elevated permission"
+            },
+            {
+                "subject": "the acquired elevated permission",
+                "relation": "to attempt to move laterally to",
+                "object": "additional cloud resources"
+            },
+            {
+                "subject": "additional cloud resources",
+                "relation": "by abusing",
+                "object": "the server's cloud identity"
+            },
+            {
+                "subject": "Cloud identities",
+                "relation": "are used in",
+                "object": "cloud services"
+            },
+            {
+                "subject": "cloud services",
+                "relation": "include",
+                "object": "SQL Server"
+            },
+            {
+                "subject": "Cloud identities",
+                "relation": "may possess",
+                "object": "elevated permissions"
+            },
+            {
+                "subject": "elevated permissions",
+                "relation": "to carry out actions in",
+                "object": "the cloud"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2701,
+                "cost": 0.027010000000000003
+            },
+            "output": {
+                "tokens": 341,
+                "cost": 0.01023
+            },
+            "total": {
+                "tokens": 3042,
+                "cost": 0.03724
+            }
+        },
+        "time": 7.98140811920166,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Microsoft/defending-new-vectors-QD1-0Zn.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-github.json",
+                    0.09780069722199901
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.10272382286791101
+                ],
+                [
+                    "AVERTIUM-fargo.json",
+                    0.1257529493699985
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "attempted to move laterally to",
+                "object": {
+                    "text": "a cloud environment",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a cloud environment",
+                    "class": "Infrastructure"
+                },
+                "relation": "through",
+                "object": {
+                    "text": "a SQL Server instance",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "exploited",
+                "object": {
+                    "text": "a SQL injection vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a SQL injection vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "in",
+                "object": {
+                    "text": "an application",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "gain access and elevated permissions on",
+                "object": {
+                    "text": "a Microsoft SQL Server instance",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a Microsoft SQL Server instance",
+                    "class": "Infrastructure"
+                },
+                "relation": "deployed in",
+                "object": {
+                    "text": "Azure Virtual Machine (VM)",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "used",
+                "object": {
+                    "text": "the acquired elevated permission",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the acquired elevated permission",
+                    "class": "Credential"
+                },
+                "relation": "to attempt to move laterally to",
+                "object": {
+                    "text": "additional cloud resources",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "additional cloud resources",
+                    "class": "Infrastructure"
+                },
+                "relation": "by abusing",
+                "object": {
+                    "text": "the server's cloud identity",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Cloud identities",
+                    "class": "Credential"
+                },
+                "relation": "are used in",
+                "object": {
+                    "text": "cloud services",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "cloud services",
+                    "class": "Infrastructure"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "SQL Server",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Cloud identities",
+                    "class": "Credential"
+                },
+                "relation": "may possess",
+                "object": {
+                    "text": "elevated permissions",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "elevated permissions",
+                    "class": "Credential"
+                },
+                "relation": "to carry out actions in",
+                "object": {
+                    "text": "the cloud",
+                    "class": "Location"
+                }
+            }
+        ],
+        "response_time": 28.121634244918823,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/Microsoft/defending-new-vectors.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1503,
+                "cost": 0.015030000000000002
+            },
+            "output": {
+                "tokens": 803,
+                "cost": 0.02409
+            },
+            "total": {
+                "tokens": 2306,
+                "cost": 0.03912
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "attackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "attackers",
+                        "attackers",
+                        "attackers",
+                        "attackers"
+                    ],
+                    "entity_text": "attackers"
+                },
+                "relation": "attempted to move laterally to",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "a cloud environment",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a cloud environment",
+                        "a cloud environment",
+                        "additional cloud resources",
+                        "additional cloud resources",
+                        "cloud services",
+                        "cloud services"
+                    ],
+                    "entity_text": "a cloud environment"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "a cloud environment",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a cloud environment",
+                        "a cloud environment",
+                        "additional cloud resources",
+                        "additional cloud resources",
+                        "cloud services",
+                        "cloud services"
+                    ],
+                    "entity_text": "a cloud environment"
+                },
+                "relation": "through",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "a SQL Server instance",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a Microsoft SQL Server instance",
+                        "a Microsoft SQL Server instance",
+                        "a SQL Server instance",
+                        "SQL Server"
+                    ],
+                    "entity_text": "a Microsoft SQL Server instance"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "attackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "attackers",
+                        "attackers",
+                        "attackers",
+                        "attackers"
+                    ],
+                    "entity_text": "attackers"
+                },
+                "relation": "exploited",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "a SQL injection vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "a SQL injection vulnerability",
+                        "a SQL injection vulnerability"
+                    ],
+                    "entity_text": "a SQL injection vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "a SQL injection vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "a SQL injection vulnerability",
+                        "a SQL injection vulnerability"
+                    ],
+                    "entity_text": "a SQL injection vulnerability"
+                },
+                "relation": "in",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "an application",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "an application"
+                    ],
+                    "entity_text": "an application"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "attackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "attackers",
+                        "attackers",
+                        "attackers",
+                        "attackers"
+                    ],
+                    "entity_text": "attackers"
+                },
+                "relation": "gain access and elevated permissions on",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "a Microsoft SQL Server instance",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a Microsoft SQL Server instance",
+                        "a Microsoft SQL Server instance",
+                        "a SQL Server instance",
+                        "SQL Server"
+                    ],
+                    "entity_text": "a Microsoft SQL Server instance"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "a Microsoft SQL Server instance",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a Microsoft SQL Server instance",
+                        "a Microsoft SQL Server instance",
+                        "a SQL Server instance",
+                        "SQL Server"
+                    ],
+                    "entity_text": "a Microsoft SQL Server instance"
+                },
+                "relation": "deployed in",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "Azure Virtual Machine (VM)",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "Azure Virtual Machine (VM)"
+                    ],
+                    "entity_text": "Azure Virtual Machine (VM)"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "attackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "attackers",
+                        "attackers",
+                        "attackers",
+                        "attackers"
+                    ],
+                    "entity_text": "attackers"
+                },
+                "relation": "used",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "the acquired elevated permission",
+                    "mention_class": "Credential",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "elevated permissions",
+                        "the acquired elevated permission",
+                        "the acquired elevated permission",
+                        "elevated permissions"
+                    ],
+                    "entity_text": "elevated permissions"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "the acquired elevated permission",
+                    "mention_class": "Credential",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "elevated permissions",
+                        "the acquired elevated permission",
+                        "the acquired elevated permission",
+                        "elevated permissions"
+                    ],
+                    "entity_text": "elevated permissions"
+                },
+                "relation": "to attempt to move laterally to",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "additional cloud resources",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a cloud environment",
+                        "a cloud environment",
+                        "additional cloud resources",
+                        "additional cloud resources",
+                        "cloud services",
+                        "cloud services"
+                    ],
+                    "entity_text": "a cloud environment"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "additional cloud resources",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a cloud environment",
+                        "a cloud environment",
+                        "additional cloud resources",
+                        "additional cloud resources",
+                        "cloud services",
+                        "cloud services"
+                    ],
+                    "entity_text": "a cloud environment"
+                },
+                "relation": "by abusing",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "the server's cloud identity",
+                    "mention_class": "Credential",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "the server's cloud identity",
+                        "Cloud identities",
+                        "Cloud identities"
+                    ],
+                    "entity_text": "Cloud identities"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "Cloud identities",
+                    "mention_class": "Credential",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "the server's cloud identity",
+                        "Cloud identities",
+                        "Cloud identities"
+                    ],
+                    "entity_text": "Cloud identities"
+                },
+                "relation": "are used in",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "cloud services",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a cloud environment",
+                        "a cloud environment",
+                        "additional cloud resources",
+                        "additional cloud resources",
+                        "cloud services",
+                        "cloud services"
+                    ],
+                    "entity_text": "a cloud environment"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "cloud services",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "a cloud environment",
+                        "a cloud environment",
+                        "additional cloud resources",
+                        "additional cloud resources",
+                        "cloud services",
+                        "cloud services"
+                    ],
+                    "entity_text": "a cloud environment"
+                },
+                "relation": "include",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "SQL Server",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a Microsoft SQL Server instance",
+                        "a Microsoft SQL Server instance",
+                        "a SQL Server instance",
+                        "SQL Server"
+                    ],
+                    "entity_text": "a Microsoft SQL Server instance"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "Cloud identities",
+                    "mention_class": "Credential",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "the server's cloud identity",
+                        "Cloud identities",
+                        "Cloud identities"
+                    ],
+                    "entity_text": "Cloud identities"
+                },
+                "relation": "may possess",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "elevated permissions",
+                    "mention_class": "Credential",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "elevated permissions",
+                        "the acquired elevated permission",
+                        "the acquired elevated permission",
+                        "elevated permissions"
+                    ],
+                    "entity_text": "elevated permissions"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "elevated permissions",
+                    "mention_class": "Credential",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "elevated permissions",
+                        "the acquired elevated permission",
+                        "the acquired elevated permission",
+                        "elevated permissions"
+                    ],
+                    "entity_text": "elevated permissions"
+                },
+                "relation": "to carry out actions in",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "the cloud",
+                    "mention_class": "Location",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "the cloud"
+                    ],
+                    "entity_text": "the cloud"
+                }
+            }
+        ],
+        "mentions_num": 26,
+        "response_time": 5.388138055801392,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 9,
+        "threshold": 0.5,
+        "Eval": {
+            "TP": 23,
+            "FP": 0,
+            "FN": 0,
+            "TN": 3
+        }
+    }
+}

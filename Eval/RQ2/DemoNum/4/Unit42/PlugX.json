@@ -1,0 +1,127 @@
+{
+    "CTI": {
+        "text": "Recently, our Unit 42 incident response team was engaged in a Black Basta breach response that uncovered several tools and malware samples on the victim's machines, including GootLoader malware, Brute Ratel C4 red-teaming tool and an older PlugX malware sample. The PlugX malware stood out to us as this variant infects any attached removable USB media devices such as floppy, thumb or flash drives and any additional systems the USB is later plugged into. This PlugX malware also hides actor files in a USB device using a novel technique that works even on the most recent Windows operating systems (OS) at the time of writing this post. This means the malicious files can only be viewed on a Unix-like (*nix) OS or by mounting the USB device in a forensic tool. We also discovered a similar variant of PlugX in VirusTotal that infects USB devices and copies all Adobe PDF and Microsoft Word files from the host. It places these copies in a hidden folder on the USB device that is created by the malware. PlugX is a second-stage implant used not only by multiple groups with a Chinese nexus but also by several cybercrime groups. It has been around for over a decade and has been observed in some high-profile cyberattacks, including the U.S. Government Office of Personnel Management (OPM) breach in 2015. It is a modular malware framework, supporting an evolving set of capabilities throughout the years.",
+        "link": "https://unit42.paloaltonetworks.com/plugx-variants-in-usbs/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unit 42",
+                "relation": "was engaged in",
+                "object": "a Black Basta breach response"
+            },
+            {
+                "subject": "response",
+                "relation": "uncovered",
+                "object": "tools and malware samples"
+            },
+            {
+                "subject": "samples",
+                "relation": "include",
+                "object": "GootLoader malware"
+            },
+            {
+                "subject": "samples",
+                "relation": "include",
+                "object": "Brute Ratel C4 red-teaming tool"
+            },
+            {
+                "subject": "samples",
+                "relation": "include",
+                "object": "an older PlugX malware sample"
+            },
+            {
+                "subject": "PlugX malware",
+                "relation": "infects",
+                "object": "attached removable USB media devices"
+            },
+            {
+                "subject": "PlugX malware",
+                "relation": "hides actor files in",
+                "object": "a USB device"
+            },
+            {
+                "subject": "USB device",
+                "relation": "using a novel technique",
+                "object": "on the most recent Windows OS"
+            },
+            {
+                "subject": "malicious files",
+                "relation": "can be viewed on",
+                "object": "a Unix-like (*nix) OS"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "is a",
+                "object": "second-stage implant"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "used by",
+                "object": "multiple groups with a Chinese nexus"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "used by",
+                "object": "several cybercrime groups"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "has been around for",
+                "object": "over a decade"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "observed in",
+                "object": "the U.S. Government Office of Personnel Management (OPM) breach"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "is",
+                "object": "a modular malware framework"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2874,
+                "cost": 0.02874
+            },
+            "output": {
+                "tokens": 388,
+                "cost": 0.011640000000000001
+            },
+            "total": {
+                "tokens": 3262,
+                "cost": 0.04038
+            }
+        },
+        "time": 17.871541738510132,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/Unit42/PlugX-QD1-qmO.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "AVERTIUM: charming-kitten.json",
+                    0.08843003888505292
+                ],
+                [
+                    "securityweek: vultur.json",
+                    0.09608178857483717
+                ],
+                [
+                    "BleepingComputer: purplefox.json",
+                    0.10171411322549828
+                ],
+                [
+                    "trendmicro: Earth-Berberoka.json",
+                    0.14216480384546598
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

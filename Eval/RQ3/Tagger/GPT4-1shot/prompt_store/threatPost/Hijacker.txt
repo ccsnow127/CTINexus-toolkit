@@ -1,0 +1,102 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'ChromeLoader', 'relation': 'is classified as', 'object': 'browser hijacker'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ChromeLoader', 'relation': 'redirects victims to', 'object': 'advertisement websites'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ChromeLoader', 'relation': 'uses', 'object': 'PowerShell'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PowerShell', 'relation': 'could lead to', 'object': 'further and advanced malicious activity'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'further and advanced malicious activity', 'relation': 'includes', 'object': 'propagation of ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'further and advanced malicious activity', 'relation': 'includes', 'object': 'spyware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'further and advanced malicious activity', 'relation': 'includes', 'object': 'theft of browser-session data'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ChromeLoader', 'relation': 'manifests as', 'object': 'browser extension'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'browser extension', 'relation': 'modifies', 'object': 'Chrome settings'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'browser extension', 'relation': 'redirects', 'object': 'user traffic to advertisement websites'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'victims', 'relation': 'become infected with', 'object': 'ChromeLoader'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ChromeLoader', 'relation': 'is distributed through', 'object': 'ISO files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ISO files', 'relation': 'poses as', 'object': 'cracked video game or pirated films or TV programs'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

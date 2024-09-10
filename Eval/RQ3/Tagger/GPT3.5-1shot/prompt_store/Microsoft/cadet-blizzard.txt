@@ -1,0 +1,94 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Cadet Blizzard', 'relation': 'formerly tracked as', 'object': 'DEV-0586'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cadet Blizzard', 'relation': 'is a', 'object': 'Russian state-sponsored threat actor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cadet Blizzard operations', 'relation': 'are associated with', 'object': 'the Russian General Staff Main Intelligence Directorate (GRU)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cadet Blizzard', 'relation': 'is separate from', 'object': 'Forest Blizzard (STRONTIUM)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cadet Blizzard', 'relation': 'is separate from', 'object': 'Seashell Blizzard (IRIDIUM)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cadet Blizzard', 'relation': 'created and deployed', 'object': 'WhisperGate'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'WhisperGate', 'relation': 'wipes', 'object': 'Master Boot Records (MBRs)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cadet Blizzard', 'relation': 'targeted', 'object': 'Ukrainian government organizations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cadet Blizzard', 'relation': 'linked to', 'object': 'the defacements of Ukrainian organization websites'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cadet Blizzard', 'relation': 'linked to', 'object': 'multiple operations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Free Civilian', 'relation': 'is a', 'object': 'hack-and-leak forum'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

@@ -1,0 +1,449 @@
+{
+    "CTI": {
+        "text": "Since mid-November 2023, Microsoft Threat Intelligence has observed threat actors, including financially motivated actors like Storm-0569, Storm-1113, Sangria Tempest, and Storm-1674, utilizing the ms-appinstaller URI scheme (App Installer) to distribute malware. In addition to ensuring that customers are protected from observed attacker activity, Microsoft investigated the use of App Installer in these attacks. In response to this activity, Microsoft has disabled the ms-appinstaller protocol handler by default. The observed threat actor activity abuses the current implementation of the ms-appinstaller protocol handler as an access vector for malware that may lead to ransomware distribution. Multiple cybercriminals are also selling a malware kit as a service that abuses the MSIX file format and ms-appinstaller protocol handler. These threat actors distribute signed malicious MSIX application packages using websites accessed through malicious advertisements for legitimate popular software. A second vector of phishing through Microsoft Teams is also in use by Storm-1674.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/12/28/financially-motivated-threat-actors-misusing-app-installer/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Storm-0569",
+                "relation": "is a",
+                "object": "financially motivated actor"
+            },
+            {
+                "subject": "Storm-1113",
+                "relation": "is a",
+                "object": "financially motivated actor"
+            },
+            {
+                "subject": "Sangria Tempest",
+                "relation": "is a",
+                "object": "financially motivated actor"
+            },
+            {
+                "subject": "Storm-1674",
+                "relation": "is a",
+                "object": "financially motivated actor"
+            },
+            {
+                "subject": "Threat actors",
+                "relation": "utilize",
+                "object": "the ms-appinstaller URI scheme"
+            },
+            {
+                "subject": "Threat actors",
+                "relation": "utilize",
+                "object": "App Installer to distribute malware"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "disabled",
+                "object": "the ms-appinstaller protocol handler"
+            },
+            {
+                "subject": "The ms-appinstaller protocol handler",
+                "relation": "is used as",
+                "object": "an access vector for malware"
+            },
+            {
+                "subject": "Threat actors",
+                "relation": "abuse",
+                "object": "the ms-appinstaller protocol handler"
+            },
+            {
+                "subject": "Access vector for malware",
+                "relation": "may lead to",
+                "object": "ransomware distribution"
+            },
+            {
+                "subject": "Cybercriminals",
+                "relation": "are selling",
+                "object": "a malware kit as a service"
+            },
+            {
+                "subject": "Malware kit",
+                "relation": "abuses",
+                "object": "the MSIX file format"
+            },
+            {
+                "subject": "Malware kit",
+                "relation": "abuses",
+                "object": "ms-appinstaller protocol handler"
+            },
+            {
+                "subject": "Threat actors",
+                "relation": "distribute",
+                "object": "signed malicious MSIX application packages"
+            },
+            {
+                "subject": "Signed malicious MSIX application packages",
+                "relation": "accessed through",
+                "object": "malicious advertisements"
+            },
+            {
+                "subject": "Signed malicious MSIX application packages",
+                "relation": "for",
+                "object": "legitimate popular software"
+            },
+            {
+                "subject": "Storm-1674",
+                "relation": "uses phishing through",
+                "object": "Microsoft Teams"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2826,
+                "cost": 0.028260000000000004
+            },
+            "output": {
+                "tokens": 444,
+                "cost": 0.01332
+            },
+            "total": {
+                "tokens": 3270,
+                "cost": 0.041580000000000006
+            }
+        },
+        "time": 10.709378719329834,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Microsoft/app-installer-QD1-Lif.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-charming-kitten.json",
+                    0.10426819023238174
+                ],
+                [
+                    "AVERTIUM-royal-ransomware.json",
+                    0.11407074850272622
+                ],
+                [
+                    "AVERTIUM-mallox.json",
+                    0.14835444957974192
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Storm-0569",
+                    "class": "Attacker"
+                },
+                "relation": "is a",
+                "object": {
+                    "text": "financially motivated actor",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Storm-1113",
+                    "class": "Attacker"
+                },
+                "relation": "is a",
+                "object": {
+                    "text": "financially motivated actor",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Sangria Tempest",
+                    "class": "Attacker"
+                },
+                "relation": "is a",
+                "object": {
+                    "text": "financially motivated actor",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Storm-1674",
+                    "class": "Attacker"
+                },
+                "relation": "is a",
+                "object": {
+                    "text": "financially motivated actor",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "utilize",
+                "object": {
+                    "text": "the ms-appinstaller URI scheme",
+                    "class": "Indicator:URL"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "utilize",
+                "object": {
+                    "text": "App Installer to distribute malware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Microsoft",
+                    "class": "Organization"
+                },
+                "relation": "disabled",
+                "object": {
+                    "text": "the ms-appinstaller protocol handler",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The ms-appinstaller protocol handler",
+                    "class": "Tool"
+                },
+                "relation": "is used as",
+                "object": {
+                    "text": "an access vector for malware",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "abuse",
+                "object": {
+                    "text": "the ms-appinstaller protocol handler",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Access vector for malware",
+                    "class": "Malware Characteristic"
+                },
+                "relation": "may lead to",
+                "object": {
+                    "text": "ransomware distribution",
+                    "class": "Malware Characteristic"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Cybercriminals",
+                    "class": "Attacker"
+                },
+                "relation": "are selling",
+                "object": {
+                    "text": "a malware kit as a service",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Malware kit",
+                    "class": "Malware"
+                },
+                "relation": "abuses",
+                "object": {
+                    "text": "the MSIX file format",
+                    "class": "Malware Characteristic:Payload"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Malware kit",
+                    "class": "Malware"
+                },
+                "relation": "abuses",
+                "object": {
+                    "text": "ms-appinstaller protocol handler",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "distribute",
+                "object": {
+                    "text": "signed malicious MSIX application packages",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Signed malicious MSIX application packages",
+                    "class": "Malware"
+                },
+                "relation": "accessed through",
+                "object": {
+                    "text": "malicious advertisements",
+                    "class": "Indicator:Domain"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Signed malicious MSIX application packages",
+                    "class": "Malware"
+                },
+                "relation": "for",
+                "object": {
+                    "text": "legitimate popular software",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Storm-1674",
+                    "class": "Attacker"
+                },
+                "relation": "uses phishing through",
+                "object": {
+                    "text": "Microsoft Teams",
+                    "class": "Tool"
+                }
+            }
+        ],
+        "response_time": 15.313348770141602,
+        "Demo_num": 4,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT3.5-4shot/prompt_store/Microsoft/app-installer.txt",
+        "model_usage": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1332,
+                "cost": 0.0006659999999999999
+            },
+            "output": {
+                "tokens": 808,
+                "cost": 0.001212
+            },
+            "total": {
+                "tokens": 2140,
+                "cost": 0.001878
+            }
+        },
+        "Eval": {
+            "correct": 23,
+            "incorrect": 11,
+            "TP": 23,
+            "TN": 8,
+            "FP": 11,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 5,
+                    "TN": 28,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Attacker": {
+                    "TP": 10,
+                    "TN": 20,
+                    "FP": 4,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 0,
+                    "TN": 32,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 32,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 0,
+                    "TN": 33,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 7,
+                    "TN": 27,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 30,
+                    "FP": 4,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 1,
+                    "TN": 33,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 8
+                }
+            },
+            "Num_of_classes": 7
+        }
+    }
+}

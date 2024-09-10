@@ -1,0 +1,102 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'ZuoRAT', 'relation': 'is a', 'object': 'remote access trojan (RAT)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ZuoRAT', 'relation': 'has been active since', 'object': 'April 2020'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ZuoRAT', 'relation': 'exploiting', 'object': 'known vulnerabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ZuoRAT', 'relation': 'target', 'object': 'SOHO routers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SOHO routers', 'relation': 'from', 'object': 'Cisco Systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SOHO routers', 'relation': 'from', 'object': 'Netgear'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SOHO routers', 'relation': 'from', 'object': 'Asus'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ZuoRAT', 'relation': 'can access', 'object': 'the local LAN'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ZuoRAT', 'relation': 'capture', 'object': 'packets'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'packets', 'relation': 'being transmitted on', 'object': 'the device'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ZuoRAT', 'relation': 'stage', 'object': 'man-in-the-middle attacks'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'man-in-the-middle attacks', 'relation': 'through', 'object': 'DNS and HTTPS hijacking'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ZuoRAT', 'relation': 'may be the work of', 'object': 'a state-sponsored actor'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

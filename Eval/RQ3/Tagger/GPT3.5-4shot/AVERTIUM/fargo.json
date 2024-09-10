@@ -1,0 +1,529 @@
+{
+    "CTI": {
+        "text": "Vulnerable Microsoft SQL servers are currently being targeted by threat actors and infected with FARGO ransomware (also known as Mallox and TargetCompany). Microsoft's SQL servers hold data for internet services and apps. A disruption  to these databases by FARGO could cause severe issues for businesses. In February 2022, the threat actors behind FARGO attacks dropped Cobalt Strike beacons, and by July 2022, they were hijacking vulnerable Microsoft SQL servers to steal bandwidth for their own proxy services. The latest FARGO attacks blackmail database owners into paying the demanded ransom. If the owners refuse to pay the ransom, the threat actors threaten to expose their stolen files on Telegram. FARGO is one of the most popular ransomware strains that focuses on Microsoft SQL servers. The ransomware infection starts by using powershell.exe and cmd.exe to download a .NET file to a compromised machine. After the payload fetches additional malware, a .BAT file terminates certain processes and services. To ensure that businesses can't recover their data, FARGO executes the recovery deactivation command and kills processes prior to initiating encryption. Once encryption is complete, FARGO renames locked files using the '.Fargo3' extension and generates a ransom note titled 'RECOVERY FILES.txt'. The threat actors expect the demanded ransom to be paid in Bitcoin. Database servers are often compromised via brute-force, and if a threat actor is able to use brute-force in their attack, it's likely due to their target having weak credentials. The threat actor may also try to attack a database server by exploiting well-known and unpatched vulnerabilities. It's important that organizations keep their devices updated with the latest security patches and maintain strong passwords.",
+        "link": "https://explore.avertium.com/resource/fargo-ransomware-attacking-microsoft-sql-servers"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft SQL servers",
+                "relation": "targeted by",
+                "object": "threat actors"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "infected with",
+                "object": "FARGO ransomware"
+            },
+            {
+                "subject": "FARGO ransomware",
+                "relation": "also known as",
+                "object": "Mallox and TargetCompany"
+            },
+            {
+                "subject": "Microsoft's SQL servers",
+                "relation": "hold data for",
+                "object": "internet services and apps"
+            },
+            {
+                "subject": "FARGO",
+                "relation": "could cause issues for",
+                "object": "businesses"
+            },
+            {
+                "subject": "FARGO attacks",
+                "relation": "dropped",
+                "object": "Cobalt Strike beacons"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "hijacking",
+                "object": "vulnerable Microsoft SQL servers"
+            },
+            {
+                "subject": "FARGO attacks",
+                "relation": "blackmail",
+                "object": "database owners"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "threaten to expose stolen files on",
+                "object": "Telegram"
+            },
+            {
+                "subject": "FARGO",
+                "relation": "focuses on",
+                "object": "Microsoft SQL servers"
+            },
+            {
+                "subject": "ransomware infection",
+                "relation": "starts by using",
+                "object": "powershell.exe and cmd.exe"
+            },
+            {
+                "subject": "ransomware infection",
+                "relation": "downloads",
+                "object": ".NET file"
+            },
+            {
+                "subject": "payload",
+                "relation": "fetches",
+                "object": "additional malware"
+            },
+            {
+                "subject": ".BAT file",
+                "relation": "terminates",
+                "object": "certain processes and services"
+            },
+            {
+                "subject": "FARGO",
+                "relation": "executes the recovery deactivation command",
+                "object": "prior to initiating encryption"
+            },
+            {
+                "subject": "FARGO",
+                "relation": "renames locked files with",
+                "object": "'.Fargo3' extension"
+            },
+            {
+                "subject": "FARGO",
+                "relation": "generates",
+                "object": "ransom note titled 'RECOVERY FILES.txt'"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "expect ransom to be paid in",
+                "object": "Bitcoin"
+            },
+            {
+                "subject": "Database servers",
+                "relation": "compromised via",
+                "object": "brute-force"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "may attack database server by exploiting",
+                "object": "well-known and unpatched vulnerabilities"
+            },
+            {
+                "subject": "organizations",
+                "relation": "keep devices updated with",
+                "object": "the latest security patches"
+            },
+            {
+                "subject": "organizations",
+                "relation": "maintain",
+                "object": "strong passwords"
+            }
+        ],
+        "triples_count": 22,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3220,
+                "cost": 0.0322
+            },
+            "output": {
+                "tokens": 585,
+                "cost": 0.01755
+            },
+            "total": {
+                "tokens": 3805,
+                "cost": 0.04975
+            }
+        },
+        "time": 16.37397313117981,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/AVERTIUM/fargo-QD1-xlY.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-ragnar.json",
+                    0.1483773002342417
+                ],
+                [
+                    "AVERTIUM-rhysida.json",
+                    0.15011427795436572
+                ],
+                [
+                    "AVERTIUM-mallox.json",
+                    0.21918282746519893
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Microsoft SQL servers",
+                    "class": "Infrastructure"
+                },
+                "relation": "targeted by",
+                "object": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "infected with",
+                "object": {
+                    "text": "FARGO ransomware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FARGO ransomware",
+                    "class": "Malware"
+                },
+                "relation": "also known as",
+                "object": {
+                    "text": "Mallox and TargetCompany",
+                    "class": "Malware Characteristic:Variants"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Microsoft's SQL servers",
+                    "class": "Infrastructure"
+                },
+                "relation": "hold data for",
+                "object": {
+                    "text": "internet services and apps",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FARGO",
+                    "class": "Malware"
+                },
+                "relation": "could cause issues for",
+                "object": {
+                    "text": "businesses",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FARGO attacks",
+                    "class": "Event"
+                },
+                "relation": "dropped",
+                "object": {
+                    "text": "Cobalt Strike beacons",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "hijacking",
+                "object": {
+                    "text": "vulnerable Microsoft SQL servers",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FARGO attacks",
+                    "class": "Event"
+                },
+                "relation": "blackmail",
+                "object": {
+                    "text": "database owners",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "threaten to expose stolen files on",
+                "object": {
+                    "text": "Telegram",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FARGO",
+                    "class": "Malware"
+                },
+                "relation": "focuses on",
+                "object": {
+                    "text": "Microsoft SQL servers",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "ransomware infection",
+                    "class": "Malware"
+                },
+                "relation": "starts by using",
+                "object": {
+                    "text": "powershell.exe and cmd.exe",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "ransomware infection",
+                    "class": "Malware"
+                },
+                "relation": "downloads",
+                "object": {
+                    "text": ".NET file",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "payload",
+                    "class": "Malware Characteristic:Payload"
+                },
+                "relation": "fetches",
+                "object": {
+                    "text": "additional malware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": ".BAT file",
+                    "class": "Tool"
+                },
+                "relation": "terminates",
+                "object": {
+                    "text": "certain processes and services",
+                    "class": "Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FARGO",
+                    "class": "Malware"
+                },
+                "relation": "executes the recovery deactivation command",
+                "object": {
+                    "text": "prior to initiating encryption",
+                    "class": "Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FARGO",
+                    "class": "Malware"
+                },
+                "relation": "renames locked files with",
+                "object": {
+                    "text": "'.Fargo3' extension",
+                    "class": "Malware Characteristic:Feature"
+                }
+            },
+            {
+                "subject": {
+                    "text": "FARGO",
+                    "class": "Malware"
+                },
+                "relation": "generates",
+                "object": {
+                    "text": "ransom note titled 'RECOVERY FILES.txt'",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "expect ransom to be paid in",
+                "object": {
+                    "text": "Bitcoin",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Database servers",
+                    "class": "Infrastructure"
+                },
+                "relation": "compromised via",
+                "object": {
+                    "text": "brute-force",
+                    "class": "Attack"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actor",
+                    "class": "Attacker"
+                },
+                "relation": "may attack database server by exploiting",
+                "object": {
+                    "text": "well-known and unpatched vulnerabilities",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "organizations",
+                    "class": "Organization"
+                },
+                "relation": "keep devices updated with",
+                "object": {
+                    "text": "the latest security patches",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "organizations",
+                    "class": "Organization"
+                },
+                "relation": "maintain",
+                "object": {
+                    "text": "strong passwords",
+                    "class": "Credential"
+                }
+            }
+        ],
+        "response_time": 17.346468925476074,
+        "Demo_num": 4,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT3.5-4shot/prompt_store/AVERTIUM/fargo.txt",
+        "model_usage": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1544,
+                "cost": 0.000772
+            },
+            "output": {
+                "tokens": 1021,
+                "cost": 0.0015315
+            },
+            "total": {
+                "tokens": 2565,
+                "cost": 0.0023035
+            }
+        },
+        "Eval": {
+            "correct": 31,
+            "incorrect": 13,
+            "TP": 29,
+            "TN": 6,
+            "FP": 12,
+            "FN": 1,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 44,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 43,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 2,
+                    "TN": 40,
+                    "FP": 1,
+                    "FN": 1
+                },
+                "Attacker": {
+                    "TP": 6,
+                    "TN": 38,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 2,
+                    "TN": 40,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 44,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 1,
+                    "TN": 41,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "Information": {
+                    "TP": 1,
+                    "TN": 39,
+                    "FP": 2,
+                    "FN": 2
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 44,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 8,
+                    "TN": 33,
+                    "FP": 3,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 1,
+                    "TN": 40,
+                    "FP": 2,
+                    "FN": 1
+                },
+                "Organization": {
+                    "TP": 2,
+                    "TN": 40,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 5,
+                    "TN": 38,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 44,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 1,
+                    "TN": 42,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 2,
+                    "TN": 37,
+                    "FP": 1,
+                    "FN": 4
+                }
+            },
+            "Num_of_classes": 12
+        }
+    }
+}

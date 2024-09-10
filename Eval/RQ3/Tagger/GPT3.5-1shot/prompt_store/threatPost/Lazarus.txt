@@ -1,0 +1,110 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'North Korean APT Lazarus', 'relation': 'is targeting', 'object': 'engineers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'cyberespionage campaign', 'relation': 'targets', 'object': 'engineers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'cyberespionage campaign', 'relation': 'attempts to spread', 'object': 'macOS malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malicious Mac executable', 'relation': 'targets', 'object': 'Apple and Intel chip-based systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ESET Research Labs', 'relation': 'identified', 'object': 'the campaign'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the campaign', 'relation': 'impersonates', 'object': 'cryptocurrency trader Coinbase'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the campaign', 'relation': 'dubbed', 'object': 'Operation Interception'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Operation Interception', 'relation': 'drops', 'object': 'a signed Mac executable'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'signed Mac executable', 'relation': 'disguised as', 'object': 'a job description for Coinbase'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'researchers', 'relation': 'discovered', 'object': 'malware uploaded to VirusTotal from Brazil'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Malware', 'relation': 'compiled for', 'object': 'Intel and Apple Silicon'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Malware', 'relation': 'drops', 'object': 'three files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'three files', 'relation': 'include', 'object': 'a decoy PDF document Coinbase_online_careers_2022_07.pdf'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'three files', 'relation': 'include', 'object': 'a bundle http[://]FinderFontsUpdater[.]app'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'three files', 'relation': 'include', 'object': 'a downloader safarifontagent'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

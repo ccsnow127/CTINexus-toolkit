@@ -1,0 +1,62 @@
+Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Action",
+    "Attacker",
+    "Campaign",
+    "Event",
+    "Exploit Target Object",
+    "Indicator":[
+        "Adress",
+        "Email",
+        "File",
+        "Hash"
+    ],
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic",
+    "Malware Family",
+    "Organization",
+    "Software",
+    "System",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "is", "object": "a relatively new player in the ransomware market"} 
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "is", "object": {"text": "a relatively new player in the ransomware market", "class": "This entity cannot be classified into any of the existing types"}} 
+---------------------
+Example 2:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "claimed responsibility for", "object": "three recent attacks"}
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "claimed responsibility for", "object": {"text": "three recent attacks", "class": "Event"}} 
+---------------------
+Example 3:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Information"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": {"Indicator": "File"}}} 
+---------------------
+Example 4:
+
+"triple": {"subject": "Akira", "relation": "drops", "object": "payload files"}
+
+"tagged_triple": {"subject": {"text": "Akira", "class": "Attacker"}, "relation": "drops", "object": {"text": "payload files", "class": {"Indicator": "File"}}}
+
+---------------------
+Target Triples:
+
+{% for triple in triples %}
+"triple":: {{ triple }}
+
+"tagged_triple": """insert your answer here"""
+---------------------{% endfor %}
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}

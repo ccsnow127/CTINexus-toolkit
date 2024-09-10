@@ -1,0 +1,138 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'UAC-0099', 'relation': 'linked to', 'object': 'attacks aimed at Ukraine'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UAC-0099', 'relation': 'leverage', 'object': 'flaw in the WinRAR software'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'flaw in the WinRAR software', 'relation': 'to deliver', 'object': 'LONEPAGE malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UAC-0099', 'relation': 'targets', 'object': 'Ukrainian employees'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Ukrainian employees', 'relation': 'working for', 'object': 'companies outside of Ukraine'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CERT-UA', 'relation': 'documented', 'object': 'UAC-0099'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UAC-0099', 'relation': 'attacks', 'object': 'state organizations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UAC-0099', 'relation': 'attacks', 'object': 'media entities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attacks', 'relation': 'for', 'object': 'espionage motives'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attack chains', 'relation': 'leveraged', 'object': 'phishing messages'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'phishing messages', 'relation': 'contain', 'object': 'HTA, RAR, and LNK file attachments'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'HTA, RAR, and LNK file attachments', 'relation': 'lead to', 'object': 'deployment of LONEPAGE'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LONEPAGE', 'relation': 'is', 'object': 'VBS malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'LONEPAGE', 'relation': 'capable of contacting', 'object': 'command-and-control (C2) server'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'command-and-control (C2) server', 'relation': 'to retrieve', 'object': 'additional payloads'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'additional payloads', 'relation': 'such as', 'object': 'keyloggers, stealers, and screenshot malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Deep Instinct', 'relation': 'reveals', 'object': 'use of HTA attachments'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'use of HTA attachments', 'relation': 'is', 'object': 'one of three different infection chains'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'other infection chains', 'relation': 'leverage', 'object': 'self-extracting (SFX) archives'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'other infection chains', 'relation': 'leverage', 'object': 'booby-trapped ZIP files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ZIP files', 'relation': 'exploit', 'object': 'the WinRAR vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the WinRAR vulnerability', 'relation': 'is', 'object': 'CVE-2023-38831, CVSS score: 7.8'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

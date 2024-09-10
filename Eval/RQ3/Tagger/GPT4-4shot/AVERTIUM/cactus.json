@@ -1,0 +1,449 @@
+{
+    "CTI": {
+        "text": "In May 2023, Kroll Cyber Threat Intelligence analysts published their discoveries of a new ransomware variant referred to as CACTUS, which has been actively targeting large commercial entities since March 2023. The name CACTUS is derived from the filename found within the ransom note, cAcTuS.readme.txt, and is also self-declared within the note. Encrypted files carry the extension .cts1, although variations in the appended number have been observed across different incidents and victims. CACTUS uses a unique tactic by requiring a key for decrypting the binary, likely implemented to evade antivirus detection. This key is embedded within a file named ntuser.dat, loaded through a scheduled task. Kroll's research noted instances of data exfiltration and victim extortion over Tox, a peer-to-peer messaging service, but no known victim leak site was identified.In its operations, CACTUS demonstrates a consistent set of tactics, techniques, and procedures (TTPs). The initial exploit involves the exploitation of vulnerable VPN appliances, a prevalent method observed across multiple CACTUS incidents. Once inside the network, the threat actor conducts internal scouting using tools like SoftPerfect Network Scanner and PowerShell commands to enumerate endpoints, identify user accounts, and ping remote endpoints. To maintain persistence, CACTUS deploys various remote access methods, including legitimate tools like Splashtop, AnyDesk, and SuperOps RMM, along with malicious tools like Cobalt Strike and Chisel. The threat actor attempts to disable security software using custom scripts, such as TotalExec, and uninstall common antivirus software.",
+        "link": "https://explore.avertium.com/resource/new-ransomware-strains-cactus-and-3am"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "is a variant targeting",
+                "object": "large commercial entities"
+            },
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "uses a unique tactic by requiring",
+                "object": "a key for decrypting the binary"
+            },
+            {
+                "subject": "The key",
+                "relation": "is embedded within",
+                "object": "ntuser.dat"
+            },
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "conducts",
+                "object": "data exfiltration"
+            },
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "conducts",
+                "object": "victim extortion over Tox"
+            },
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "exploits",
+                "object": "vulnerable VPN appliances"
+            },
+            {
+                "subject": "The threat actor",
+                "relation": "uses",
+                "object": "SoftPerfect Network Scanner"
+            },
+            {
+                "subject": "The threat actor",
+                "relation": "uses",
+                "object": "PowerShell commands"
+            },
+            {
+                "subject": "CACTUS ransomware",
+                "relation": "deploys",
+                "object": "remote access methods"
+            },
+            {
+                "subject": "legitimate tools",
+                "relation": "include",
+                "object": "Splashtop"
+            },
+            {
+                "subject": "legitimate tools",
+                "relation": "include",
+                "object": "AnyDesk"
+            },
+            {
+                "subject": "legitimate tools",
+                "relation": "include",
+                "object": "SuperOps RMM"
+            },
+            {
+                "subject": "malicious tools",
+                "relation": "include",
+                "object": "Cobalt Strike"
+            },
+            {
+                "subject": "malicious tools",
+                "relation": "include",
+                "object": "Chisel"
+            },
+            {
+                "subject": "The threat actor",
+                "relation": "attempts to disable",
+                "object": "security software using custom scripts"
+            },
+            {
+                "subject": "The custom scripts",
+                "relation": "include",
+                "object": "TotalExec"
+            },
+            {
+                "subject": "The threat actor",
+                "relation": "uninstalls",
+                "object": "common antivirus software"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3295,
+                "cost": 0.03295
+            },
+            "output": {
+                "tokens": 423,
+                "cost": 0.01269
+            },
+            "total": {
+                "tokens": 3718,
+                "cost": 0.04564
+            }
+        },
+        "time": 10.973860502243042,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/AVERTIUM/cactus-QD1-F6h.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-mallox.json",
+                    0.10816487727275854
+                ],
+                [
+                    "AVERTIUM-fivehands.json",
+                    0.12334574998886129
+                ],
+                [
+                    "AVERTIUM-rhysida.json",
+                    0.13110634648691022
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "is a variant targeting",
+                "object": {
+                    "text": "large commercial entities",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "uses a unique tactic by requiring",
+                "object": {
+                    "text": "a key for decrypting the binary",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The key",
+                    "class": "Credential"
+                },
+                "relation": "is embedded within",
+                "object": {
+                    "text": "ntuser.dat",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "conducts",
+                "object": {
+                    "text": "data exfiltration",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "conducts",
+                "object": {
+                    "text": "victim extortion over Tox",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "exploits",
+                "object": {
+                    "text": "vulnerable VPN appliances",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The threat actor",
+                    "class": "Attacker"
+                },
+                "relation": "uses",
+                "object": {
+                    "text": "SoftPerfect Network Scanner",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The threat actor",
+                    "class": "Attacker"
+                },
+                "relation": "uses",
+                "object": {
+                    "text": "PowerShell commands",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CACTUS ransomware",
+                    "class": "Malware"
+                },
+                "relation": "deploys",
+                "object": {
+                    "text": "remote access methods",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "legitimate tools",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "Splashtop",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "legitimate tools",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "AnyDesk",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "legitimate tools",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "SuperOps RMM",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious tools",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "Cobalt Strike",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious tools",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "Chisel",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The threat actor",
+                    "class": "Attacker"
+                },
+                "relation": "attempts to disable",
+                "object": {
+                    "text": "security software using custom scripts",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The custom scripts",
+                    "class": "Tool"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "TotalExec",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The threat actor",
+                    "class": "Attacker"
+                },
+                "relation": "uninstalls",
+                "object": {
+                    "text": "common antivirus software",
+                    "class": "Event"
+                }
+            }
+        ],
+        "response_time": 26.90933895111084,
+        "Demo_num": 4,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-4shot/prompt_store/AVERTIUM/cactus.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1311,
+                "cost": 0.013110000000000002
+            },
+            "output": {
+                "tokens": 893,
+                "cost": 0.02679
+            },
+            "total": {
+                "tokens": 2204,
+                "cost": 0.039900000000000005
+            }
+        },
+        "Eval": {
+            "correct": 27,
+            "incorrect": 7,
+            "TP": 26,
+            "TN": 1,
+            "FP": 7,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 2,
+                    "TN": 32,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 11,
+                    "TN": 19,
+                    "FP": 1,
+                    "FN": 3
+                },
+                "Attacker": {
+                    "TP": 4,
+                    "TN": 30,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 0,
+                    "TN": 30,
+                    "FP": 2,
+                    "FN": 2
+                },
+                "Exploit Target": {
+                    "TP": 1,
+                    "TN": 33,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 1,
+                    "TN": 33,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 0,
+                    "TN": 32,
+                    "FP": 0,
+                    "FN": 2
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 6,
+                    "TN": 26,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 1,
+                    "TN": 31,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 34,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 1,
+                    "TN": 33,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 9
+        }
+    }
+}

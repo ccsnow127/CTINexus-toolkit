@@ -1,0 +1,143 @@
+{
+    "CTI": {
+        "text": "Recently, our Unit 42 incident response team was engaged in a Black Basta breach response that uncovered several tools and malware samples on the victim's machines, including GootLoader malware, Brute Ratel C4 red-teaming tool and an older PlugX malware sample. The PlugX malware stood out to us as this variant infects any attached removable USB media devices such as floppy, thumb or flash drives and any additional systems the USB is later plugged into. This PlugX malware also hides actor files in a USB device using a novel technique that works even on the most recent Windows operating systems (OS) at the time of writing this post. This means the malicious files can only be viewed on a Unix-like (*nix) OS or by mounting the USB device in a forensic tool. We also discovered a similar variant of PlugX in VirusTotal that infects USB devices and copies all Adobe PDF and Microsoft Word files from the host. It places these copies in a hidden folder on the USB device that is created by the malware. PlugX is a second-stage implant used not only by multiple groups with a Chinese nexus but also by several cybercrime groups. It has been around for over a decade and has been observed in some high-profile cyberattacks, including the U.S. Government Office of Personnel Management (OPM) breach in 2015. It is a modular malware framework, supporting an evolving set of capabilities throughout the years.",
+        "link": "https://unit42.paloaltonetworks.com/plugx-variants-in-usbs/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unit 42 incident response team",
+                "relation": "engaged in",
+                "object": "a Black Basta breach response"
+            },
+            {
+                "subject": "the response",
+                "relation": "uncovered",
+                "object": "GootLoader malware"
+            },
+            {
+                "subject": "the response",
+                "relation": "uncovered",
+                "object": "Brute Ratel C4 red-teaming tool"
+            },
+            {
+                "subject": "the response",
+                "relation": "uncovered",
+                "object": "PlugX malware sample"
+            },
+            {
+                "subject": "PlugX malware",
+                "relation": "infects",
+                "object": "removable USB media devices"
+            },
+            {
+                "subject": "PlugX malware",
+                "relation": "hides actor files in",
+                "object": "a USB device"
+            },
+            {
+                "subject": "hiding technique",
+                "relation": "works on",
+                "object": "Windows operating systems"
+            },
+            {
+                "subject": "malicious files",
+                "relation": "can be viewed on",
+                "object": "Unix-like OS"
+            },
+            {
+                "subject": "malicious files",
+                "relation": "can be viewed by",
+                "object": "mounting the USB device in a forensic tool"
+            },
+            {
+                "subject": "A similar variant of PlugX",
+                "relation": "infects",
+                "object": "USB devices"
+            },
+            {
+                "subject": "The variant",
+                "relation": "copies",
+                "object": "Adobe PDF and Microsoft Word files"
+            },
+            {
+                "subject": "Copies",
+                "relation": "are placed in",
+                "object": "a hidden folder on the USB device"
+            },
+            {
+                "subject": "The hidden folder",
+                "relation": "is created by",
+                "object": "the malware"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "is used by",
+                "object": "multiple groups with a Chinese nexus"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "is used by",
+                "object": "several cybercrime groups"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "has been observed in",
+                "object": "high-profile cyberattacks"
+            },
+            {
+                "subject": "high-profile cyberattacks",
+                "relation": "include",
+                "object": "the U.S. Government Office of Personnel Management (OPM) breach"
+            },
+            {
+                "subject": "PlugX",
+                "relation": "is a",
+                "object": "modular malware framework"
+            },
+            {
+                "subject": "modular malware framework",
+                "relation": "supports",
+                "object": "an evolving set of capabilities"
+            }
+        ],
+        "triples_count": 19,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2786,
+                "cost": 0.027860000000000003
+            },
+            "output": {
+                "tokens": 523,
+                "cost": 0.01569
+            },
+            "total": {
+                "tokens": 3309,
+                "cost": 0.043550000000000005
+            }
+        },
+        "time": 12.136040925979614,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Unit42/PlugX-QD1-bqY.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-charming-kitten.json",
+                    0.09732678215926717
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.10334035112375387
+                ],
+                [
+                    "BleepingComputer-purplefox.json",
+                    0.14019848127607007
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

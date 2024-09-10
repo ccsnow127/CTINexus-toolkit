@@ -1,0 +1,167 @@
+{
+    "CTI": {
+        "text": "Recent spam campaigns leading to URSA/Mispadu banking trojan (detected by Trend Micro as TrojanSpy.Win32.MISPADU.THIADBO) have been uncovered, as reported by malware analyst Pedro Tavares in a Twitter post and by Seguranca Informatica in a blog post. Mispadu malware steals credentials from users' systems. This attack targets systems with Spanish and Portuguese as system languages. It is also likely that they have targets similar to previous Mispadu attacks where users from Mexico, Spain, Portugal, and other nearby regions were targeted. This behavior is in line with past Mispadu schemes, such as the one where spam emails for fake discount coupons were used as bait.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/mispadu-banking-trojan-resurfaces"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "spam campaigns",
+                "relation": "leading to",
+                "object": "URSA/Mispadu banking trojan"
+            },
+            {
+                "subject": "URSA/Mispadu banking trojan",
+                "relation": "detected as",
+                "object": "TrojanSpy.Win32.MISPADU.THIADBO"
+            },
+            {
+                "subject": "Mispadu malware",
+                "relation": "steals",
+                "object": "credentials"
+            },
+            {
+                "subject": "attack",
+                "relation": "targets systems with",
+                "object": "Spanish and Portuguese as system languages"
+            },
+            {
+                "subject": "targets",
+                "relation": "might also include",
+                "object": "users from Mexico, Spain, Portugal, and other nearby regions"
+            },
+            {
+                "subject": "past Mispadu schemes",
+                "relation": "involved",
+                "object": "spam emails for fake discount coupons"
+            }
+        ],
+        "triples_count": 6,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1477,
+                "cost": 0.0007385
+            },
+            "output": {
+                "tokens": 210,
+                "cost": 0.000315
+            },
+            "total": {
+                "tokens": 1687,
+                "cost": 0.0010535
+            }
+        },
+        "time": 3.2033886909484863,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/trendmicro/Mispadu-Banking-Trojan-QD1-7E8.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "securityweek: strelastealer.json",
+                    0.08583095799327192
+                ],
+                [
+                    "darkreading: Microsoft-Office-Bug.json",
+                    0.09046520246010883
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.8571428571428571,
+                "f1": 0.923076923076923
+            },
+            "matched_list": [
+                [
+                    [
+                        "spam campaigns",
+                        "leading to",
+                        "URSA/Mispadu banking trojan"
+                    ],
+                    [
+                        "spam campaigns",
+                        "lead to",
+                        "URSA/Mispadu banking trojan"
+                    ]
+                ],
+                [
+                    [
+                        "URSA/Mispadu banking trojan",
+                        "detected as",
+                        "TrojanSpy.Win32.MISPADU.THIADBO"
+                    ],
+                    [
+                        "URSA/Mispadu banking trojan",
+                        "is detected by",
+                        "Trend Micro as TrojanSpy.Win32.MISPADU.THIADBO"
+                    ]
+                ],
+                [
+                    [
+                        "Mispadu malware",
+                        "steals",
+                        "credentials"
+                    ],
+                    [
+                        "Mispadu malware",
+                        "steals",
+                        "credentials"
+                    ]
+                ],
+                [
+                    [
+                        "attack",
+                        "targets systems with",
+                        "Spanish and Portuguese as system languages"
+                    ],
+                    [
+                        "This attack",
+                        "targets systems with",
+                        "Spanish and Portuguese as system languages"
+                    ]
+                ],
+                [
+                    [
+                        "targets",
+                        "might also include",
+                        "users from Mexico, Spain, Portugal, and other nearby regions"
+                    ],
+                    [
+                        "previous Mispadu attacks",
+                        "target users from",
+                        "Mexico, Spain, Portugal, and other nearby regions"
+                    ]
+                ],
+                [
+                    [
+                        "past Mispadu schemes",
+                        "involved",
+                        "spam emails for fake discount coupons"
+                    ],
+                    [
+                        "Mispadu schemes",
+                        "use",
+                        "spam emails for fake discount coupons as bait"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "targets",
+                    "are likely similar to",
+                    "previous Mispadu attacks"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

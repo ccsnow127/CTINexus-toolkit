@@ -1,0 +1,752 @@
+{
+    "CTI": {
+        "text": "On July 11, 2023, Unit 42 cloud researchers discovered a new peer-to-peer (P2P) worm we call P2PInfect. Written in Rust, a highly scalable and cloud-friendly programming language, this worm is capable of cross-platform infections and targets Redis, a popular open-source database application that is heavily used within cloud environments. Redis instances can be run on both Linux and Windows operating systems. Unit 42 researchers have identified over 307,000 unique Redis systems communicating publicly over the last two weeks, of which 934 may be vulnerable to this P2P worm variant. While not all of the 307,000 Redis instances will be vulnerable, the worm will still target these systems and attempt the compromise. The P2PInfect worm infects vulnerable Redis instances by exploiting the Lua sandbox escape vulnerability, CVE-2022-0543. While the vulnerability was disclosed in 2022, its scope is not fully known at this point. However, it is rated in the NIST National Vulnerability Database with a Critical CVSS score of 10.0. Additionally, the fact that P2PInfect exploits Redis servers running on both Linux and Windows operating systems makes it more scalable and potent than other worms. The P2P worm observed by Unit 42 researchers serves as an example of a serious attack threat actors could conduct using this vulnerability.",
+        "link": "https://unit42.paloaltonetworks.com/peer-to-peer-worm-p2pinfect/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unit 42 cloud researchers",
+                "relation": "discovered",
+                "object": "P2PInfect"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "is written in",
+                "object": "Rust"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "is capable of",
+                "object": "cross-platform infections"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "targets",
+                "object": "Redis"
+            },
+            {
+                "subject": "Redis",
+                "relation": "is",
+                "object": "a popular open-source database application"
+            },
+            {
+                "subject": "Redis",
+                "relation": "is used within",
+                "object": "cloud environments"
+            },
+            {
+                "subject": "Redis instances",
+                "relation": "can be run on",
+                "object": "Linux and Windows operating systems"
+            },
+            {
+                "subject": "Unit 42 researchers",
+                "relation": "have identified",
+                "object": "over 307,000 unique Redis systems"
+            },
+            {
+                "subject": "934 Redis systems",
+                "relation": "may be vulnerable to",
+                "object": "P2PInfect worm variant"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "infects",
+                "object": "vulnerable Redis instances"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "exploits",
+                "object": "the Lua sandbox escape vulnerability"
+            },
+            {
+                "subject": "the Lua sandbox escape vulnerability",
+                "relation": "is",
+                "object": "CVE-2022-0543"
+            },
+            {
+                "subject": "CVE-2022-0543",
+                "relation": "is rated in the NIST National Vulnerability Database with",
+                "object": "a Critical CVSS score of 10.0"
+            },
+            {
+                "subject": "P2PInfect",
+                "relation": "exploits Redis servers running on",
+                "object": "Linux and Windows operating systems"
+            },
+            {
+                "subject": "P2PInfect worm",
+                "relation": "serves as",
+                "object": "an example of a serious attack threat"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2655,
+                "cost": 0.02655
+            },
+            "output": {
+                "tokens": 530,
+                "cost": 0.0159
+            },
+            "total": {
+                "tokens": 3185,
+                "cost": 0.04245
+            }
+        },
+        "time": 13.4958815574646,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Unit42/P2PInfect-QD1-T5g.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-goanywhere.json",
+                    0.07117949760068784
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.082357827585336
+                ],
+                [
+                    "BleepingComputer-purplefox.json",
+                    0.08320292009280716
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Unit 42 cloud researchers",
+                    "class": "Organization"
+                },
+                "relation": "discovered",
+                "object": {
+                    "text": "P2PInfect",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "P2PInfect",
+                    "class": "Malware"
+                },
+                "relation": "is written in",
+                "object": {
+                    "text": "Rust",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "P2PInfect",
+                    "class": "Malware"
+                },
+                "relation": "is capable of",
+                "object": {
+                    "text": "cross-platform infections",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "P2PInfect",
+                    "class": "Malware"
+                },
+                "relation": "targets",
+                "object": {
+                    "text": "Redis",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Redis",
+                    "class": "Tool"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "a popular open-source database application",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Redis",
+                    "class": "Tool"
+                },
+                "relation": "is used within",
+                "object": {
+                    "text": "cloud environments",
+                    "class": "Location"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Redis instances",
+                    "class": "Infrastructure"
+                },
+                "relation": "can be run on",
+                "object": {
+                    "text": "Linux and Windows operating systems",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Unit 42 researchers",
+                    "class": "Organization"
+                },
+                "relation": "have identified",
+                "object": {
+                    "text": "over 307,000 unique Redis systems",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "934 Redis systems",
+                    "class": "Information"
+                },
+                "relation": "may be vulnerable to",
+                "object": {
+                    "text": "P2PInfect worm variant",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "P2PInfect",
+                    "class": "Malware"
+                },
+                "relation": "infects",
+                "object": {
+                    "text": "vulnerable Redis instances",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "P2PInfect",
+                    "class": "Malware"
+                },
+                "relation": "exploits",
+                "object": {
+                    "text": "the Lua sandbox escape vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the Lua sandbox escape vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "CVE-2022-0543",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2022-0543",
+                    "class": "Vulnerability"
+                },
+                "relation": "is rated in the NIST National Vulnerability Database with",
+                "object": {
+                    "text": "a Critical CVSS score of 10.0",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "P2PInfect",
+                    "class": "Malware"
+                },
+                "relation": "exploits Redis servers running on",
+                "object": {
+                    "text": "Linux and Windows operating systems",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "P2PInfect worm",
+                    "class": "Malware"
+                },
+                "relation": "serves as",
+                "object": {
+                    "text": "an example of a serious attack threat",
+                    "class": "Information"
+                }
+            }
+        ],
+        "response_time": 40.07583165168762,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/Unit42/P2PInfect.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1637,
+                "cost": 0.016370000000000003
+            },
+            "output": {
+                "tokens": 986,
+                "cost": 0.029580000000000002
+            },
+            "total": {
+                "tokens": 2623,
+                "cost": 0.045950000000000005
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "Unit 42 cloud researchers",
+                    "mention_class": "Organization",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Unit 42 cloud researchers",
+                        "Unit 42 researchers"
+                    ],
+                    "entity_text": "Unit 42 researchers"
+                },
+                "relation": "discovered",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "P2PInfect",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm variant",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm"
+                    ],
+                    "entity_text": "P2PInfect"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "P2PInfect",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm variant",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm"
+                    ],
+                    "entity_text": "P2PInfect"
+                },
+                "relation": "is written in",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "Rust",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "Rust"
+                    ],
+                    "entity_text": "Rust"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "P2PInfect",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm variant",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm"
+                    ],
+                    "entity_text": "P2PInfect"
+                },
+                "relation": "is capable of",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "cross-platform infections",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "cross-platform infections"
+                    ],
+                    "entity_text": "cross-platform infections"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "P2PInfect",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm variant",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm"
+                    ],
+                    "entity_text": "P2PInfect"
+                },
+                "relation": "targets",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "Redis",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Redis"
+                    ],
+                    "entity_text": "Redis"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "Redis",
+                    "mention_class": "Tool",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "Redis",
+                        "Redis"
+                    ],
+                    "entity_text": "Redis"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "a popular open-source database application",
+                    "mention_class": "Information",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "a popular open-source database application"
+                    ],
+                    "entity_text": "a popular open-source database application"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "Redis",
+                    "mention_class": "Tool",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "Redis",
+                        "Redis"
+                    ],
+                    "entity_text": "Redis"
+                },
+                "relation": "is used within",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "cloud environments",
+                    "mention_class": "Location",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "cloud environments"
+                    ],
+                    "entity_text": "cloud environments"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "Redis instances",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "Redis instances"
+                    ],
+                    "entity_text": "Redis instances"
+                },
+                "relation": "can be run on",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "Linux and Windows operating systems",
+                    "mention_class": "Information",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "Linux and Windows operating systems",
+                        "Linux and Windows operating systems"
+                    ],
+                    "entity_text": "Linux and Windows operating systems"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "Unit 42 researchers",
+                    "mention_class": "Organization",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Unit 42 cloud researchers",
+                        "Unit 42 researchers"
+                    ],
+                    "entity_text": "Unit 42 researchers"
+                },
+                "relation": "have identified",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "over 307,000 unique Redis systems",
+                    "mention_class": "Information",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "over 307,000 unique Redis systems"
+                    ],
+                    "entity_text": "over 307,000 unique Redis systems"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "934 Redis systems",
+                    "mention_class": "Information",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "934 Redis systems"
+                    ],
+                    "entity_text": "934 Redis systems"
+                },
+                "relation": "may be vulnerable to",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "P2PInfect worm variant",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm variant",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm"
+                    ],
+                    "entity_text": "P2PInfect"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "P2PInfect",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm variant",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm"
+                    ],
+                    "entity_text": "P2PInfect"
+                },
+                "relation": "infects",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "vulnerable Redis instances",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "vulnerable Redis instances"
+                    ],
+                    "entity_text": "vulnerable Redis instances"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "P2PInfect",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm variant",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm"
+                    ],
+                    "entity_text": "P2PInfect"
+                },
+                "relation": "exploits",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "the Lua sandbox escape vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "the Lua sandbox escape vulnerability",
+                        "the Lua sandbox escape vulnerability"
+                    ],
+                    "entity_text": "the Lua sandbox escape vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "the Lua sandbox escape vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "the Lua sandbox escape vulnerability",
+                        "the Lua sandbox escape vulnerability"
+                    ],
+                    "entity_text": "the Lua sandbox escape vulnerability"
+                },
+                "relation": "is",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "CVE-2022-0543",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "CVE-2022-0543",
+                        "CVE-2022-0543"
+                    ],
+                    "entity_text": "CVE-2022-0543"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "CVE-2022-0543",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "CVE-2022-0543",
+                        "CVE-2022-0543"
+                    ],
+                    "entity_text": "CVE-2022-0543"
+                },
+                "relation": "is rated in the NIST National Vulnerability Database with",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "a Critical CVSS score of 10.0",
+                    "mention_class": "Information",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "a Critical CVSS score of 10.0"
+                    ],
+                    "entity_text": "a Critical CVSS score of 10.0"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 26,
+                    "mention_text": "P2PInfect",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm variant",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm"
+                    ],
+                    "entity_text": "P2PInfect"
+                },
+                "relation": "exploits Redis servers running on",
+                "object": {
+                    "mention_id": 27,
+                    "mention_text": "Linux and Windows operating systems",
+                    "mention_class": "Information",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "Linux and Windows operating systems",
+                        "Linux and Windows operating systems"
+                    ],
+                    "entity_text": "Linux and Windows operating systems"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 28,
+                    "mention_text": "P2PInfect worm",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm variant",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect",
+                        "P2PInfect worm"
+                    ],
+                    "entity_text": "P2PInfect"
+                },
+                "relation": "serves as",
+                "object": {
+                    "mention_id": 29,
+                    "mention_text": "an example of a serious attack threat",
+                    "mention_class": "Information",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "an example of a serious attack threat"
+                    ],
+                    "entity_text": "an example of a serious attack threat"
+                }
+            }
+        ],
+        "mentions_num": 30,
+        "response_time": 7.448562145233154,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 17,
+        "threshold": 0.7,
+        "Eval": {
+            "TP": 19,
+            "FP": 0,
+            "FN": 2,
+            "TN": 9
+        }
+    }
+}

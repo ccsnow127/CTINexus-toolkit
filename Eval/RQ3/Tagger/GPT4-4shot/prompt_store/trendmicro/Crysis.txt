@@ -1,0 +1,108 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Crysis/Dharma ransomware', 'relation': 'released', 'object': 'a hacking toolkit named Toolbox'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Toolbox', 'relation': 'contains', 'object': 'Mimikatz'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Toolbox', 'relation': 'contains', 'object': 'NirSoft Remote Desktop PassView'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Toolbox', 'relation': 'contains', 'object': 'Hash Suite Tools Free'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Mimikatz', 'relation': 'is used to', 'object': 'harvest passwords'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'NirSoft Remote Desktop PassView', 'relation': 'is used to', 'object': 'steal RDP passwords'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Hash Suite Tools Free', 'relation': 'is used to', 'object': 'dump hashes'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Crysis/Dharma ransomware', 'relation': 'operates under', 'object': 'ransomware-as-a-service (RaaS) model'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Toolbox', 'relation': 'helps to', 'object': 'find target computers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Toolbox', 'relation': 'helps to', 'object': 'deploy the ransomware payload'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

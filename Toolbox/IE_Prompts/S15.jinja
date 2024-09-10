@@ -1,0 +1,20 @@
+Identify entities, entities must of types in: [threat actor, attack pattern, campaign, identity, indicator, infrastructure, location, tool, vulnerability, malware]. Next, summarize the relationships between these entities, ensuring it is clearly defined and relevant to the context. Below are some examples.
+---------------------
+"CTI": The Akira ransomware group, a relatively new player in the ransomware market, has claimed responsibility for three recent attacks. The victims include 4LEAF, an American engineering consultancy business; Park-Rite, a U.S.-based packaging materials manufacturer; and Family Day Care Services, a Canadian childcare service. Akira listed the names of the three victims on their leak site threatening to release company records if they refuse to pay a ransom.Researchers discovered the ransomware Trojan on August 28, 2017, and at that time, it appeared to be in its testing phase. The Trojan is currently being distributed by targeting unprotected websites, with a specific focus on WordPress sites. Once infected, Akira drops one or multiple payload files. After infection, a ransom note is left before the ransomware creates multiple registry values in Windows, such as the Run and RunOnce registries. The presence of .akira files means that your data has likely been encrypted by Akira ransomware.
+---------------------
+"triples": [
+{"subject": {"value": "Akira ransomware group", "class": "malware"}, "relation": {"class": "be attributed to"}, "object": {"value": "", "class": ""}}
+{"subject": {"value": "Akira ransomware group", "class": "malware"}, "relation": {"class": "target"}, "object": {"value": "4LEAF", "class": "identity"}}
+{"subject": {"value": "Akira ransomware group", "class": "malware"}, "relation": {"class": "target"}, "object": {"value": "Park-Rite", "class": "identity"}}
+{"subject": {"value": "Akira ransomware group", "class": "malware"}, "relation": {"class": "target"}, "object": {"value": "Family Day Care Services", "class": "identity"}}
+{"subject": {"value": "Akira ransomware Trojan", "class": "malware"}, "relation": {"class": "be distributed by"}, "object": {"value": "", "class": ""}}
+{"subject": {"value": "Akira ransomware Trojan", "class": "malware"}, "relation": {"class": "be distributed by"}, "object": {"value": "", "class": ""}}
+{"subject": {"value": "Akira ransomware Trojan", "class": "malware"}, "relation": {"class": "drop"}, "object": {"value": "one or multiple payload files", "class": "tool"}}
+{"subject": {"value": "Akira ransomware Trojan", "class": "malware"}, "relation": {"class": "leave"}, "object": {"value": "ransom note", "class": "indicator"}}
+{"subject": {"value": "Akira ransomware Trojan", "class": "malware"}, "relation": {"class": "create"}, "object": {"value": "multiple registry values in Windows, such as the Run and RunOnce registries", "class": "infrastructure"}}
+{"subject": {"value": "ransomware Trojan by Akira", "class": "malware"}, "relation": {"class": "encrypt"}, "object": {"value": "", "class": ""}}
+]
+---------------------
+"CTI": The Akira ransomware group, a relatively new player in the ransomware market, has claimed responsibility for three recent attacks. The victims include 4LEAF, an American engineering consultancy business; Park-Rite, a U.S.-based packaging materials manufacturer; and Family Day Care Services, a Canadian childcare service. Akira listed the names of the three victims on their leak site threatening to release company records if they refuse to pay a ransom.Researchers discovered the ransomware Trojan on August 28, 2017, and at that time, it appeared to be in its testing phase. The Trojan is currently being distributed by targeting unprotected websites, with a specific focus on WordPress sites. Once infected, Akira drops one or multiple payload files. After infection, a ransom note is left before the ransomware creates multiple registry values in Windows, such as the Run and RunOnce registries. The presence of .akira files means that your data has likely been encrypted by Akira ransomware.
+---------------------
+"""Insert Your Answer Here"""

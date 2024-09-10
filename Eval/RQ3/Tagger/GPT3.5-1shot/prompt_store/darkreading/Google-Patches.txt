@@ -1,0 +1,102 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'CVE-2023-6345', 'relation': 'stems from', 'object': 'an integer overflow issue'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'an integer overflow issue', 'relation': 'is in', 'object': 'Skia'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Skia', 'relation': 'is', 'object': 'an open source 2D graphic library'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Skia', 'relation': 'is in', 'object': 'Chrome'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Google', 'relation': 'is tracking', 'object': 'CVE-2023-6345'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Google', 'relation': 'issued', 'object': 'a security update'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a security update', 'relation': 'addresses', 'object': 'seven Chrome vulnerabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-6345', 'relation': 'is one of', 'object': 'seven Chrome vulnerabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-6345', 'relation': 'has an exploit', 'object': 'publicly available'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-6345', 'relation': 'affects', 'object': 'Chrome versions prior to 119.0.6045.199'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'A remote attacker', 'relation': 'has compromised', 'object': 'the renderer process'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'A remote attacker', 'relation': 'perform', 'object': 'a sandbox escape'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a sandbox escape', 'relation': 'via', 'object': 'a malicious file'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

@@ -1,0 +1,200 @@
+{
+    "CTI": {
+        "text": "Unit 42 researchers have investigated a series of destructive cyberattacks beginning in January 2023 and continuing as recently as October 2023, targeting the education and technology sectors in Israel. The attacks are characterized by attempts to steal sensitive data, such as personally identifiable information (PII) and intellectual property. Once the attackers stole the information, they deployed various wipers intended to cover the attackers' tracks and to render the infected endpoints unusable.",
+        "link": "https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unit 42 researchers",
+                "relation": "investigated",
+                "object": "a series of destructive cyberattacks"
+            },
+            {
+                "subject": "destructive cyberattacks",
+                "relation": "targeting",
+                "object": "the education and technology sectors in Israel"
+            },
+            {
+                "subject": "destructive cyberattacks",
+                "relation": "characterized by",
+                "object": "attempts to steal sensitive data"
+            },
+            {
+                "subject": "sensitive data",
+                "relation": "includes",
+                "object": "personally identifiable information (PII) and intellectual property"
+            },
+            {
+                "subject": "attackers",
+                "relation": "stole",
+                "object": "sensitive data"
+            },
+            {
+                "subject": "attackers",
+                "relation": "deployed",
+                "object": "various wipers"
+            },
+            {
+                "subject": "various wipers",
+                "relation": "intended to",
+                "object": "cover the attackers' tracks"
+            },
+            {
+                "subject": "various wipers",
+                "relation": "render",
+                "object": "the infected endpoints unusable"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1519,
+                "cost": 0.01519
+            },
+            "output": {
+                "tokens": 218,
+                "cost": 0.00654
+            },
+            "total": {
+                "tokens": 1737,
+                "cost": 0.02173
+            }
+        },
+        "time": 11.493498802185059,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/Unit42/Agonizing-Serpens-QD1-1Yt.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Lazarus.json",
+                    "random"
+                ],
+                [
+                    "kasseika.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.8888888888888888,
+                "f1": 0.9411764705882353
+            },
+            "matched_list": [
+                [
+                    [
+                        "Unit 42 researchers",
+                        "investigated",
+                        "a series of destructive cyberattacks"
+                    ],
+                    [
+                        "Unit 42 researchers",
+                        "investigated",
+                        "destructive cyberattacks"
+                    ]
+                ],
+                [
+                    [
+                        "destructive cyberattacks",
+                        "targeting",
+                        "the education and technology sectors in Israel"
+                    ],
+                    [
+                        "destructive cyberattacks",
+                        "targeting",
+                        "Israel"
+                    ]
+                ],
+                [
+                    [
+                        "destructive cyberattacks",
+                        "characterized by",
+                        "attempts to steal sensitive data"
+                    ],
+                    [
+                        "attacks",
+                        "characterized by",
+                        "attempts to steal sensitive data"
+                    ]
+                ],
+                [
+                    [
+                        "sensitive data",
+                        "includes",
+                        "personally identifiable information (PII) and intellectual property"
+                    ],
+                    [
+                        "sensitive data",
+                        "includes",
+                        "personally identifiable information (PII)"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "stole",
+                        "sensitive data"
+                    ],
+                    [
+                        "attackers",
+                        "stole",
+                        "information"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "deployed",
+                        "various wipers"
+                    ],
+                    [
+                        "attackers",
+                        "deployed",
+                        "wipers"
+                    ]
+                ],
+                [
+                    [
+                        "various wipers",
+                        "intended to",
+                        "cover the attackers' tracks"
+                    ],
+                    [
+                        "wipers",
+                        "intended to",
+                        "cover the attackers' tracks"
+                    ]
+                ],
+                [
+                    [
+                        "various wipers",
+                        "render",
+                        "the infected endpoints unusable"
+                    ],
+                    [
+                        "wipers",
+                        "intended to render",
+                        "infected endpoints unusable"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "destructive cyberattacks",
+                    "began in",
+                    "January 2023"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

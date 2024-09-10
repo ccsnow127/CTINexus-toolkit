@@ -1,0 +1,128 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'A Chinese hacking group', 'relation': 'has been exploiting', 'object': 'a critical vCenter Server vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a critical vCenter Server vulnerability', 'relation': 'is', 'object': 'CVE-2023-34048'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-34048', 'relation': 'was patched in', 'object': 'October'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'VMware', 'relation': 'confirming', 'object': 'CVE-2023-34048 exploitation in-the-wild'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UNC3886', 'relation': 'is', 'object': 'Chinese cyber espionage group'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UNC3886', 'relation': 'used', 'object': 'CVE-2023-34048'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UNC3886', 'relation': 'breach', 'object': 'vCenter servers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UNC3886', 'relation': 'compromised', 'object': 'credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'credentials', 'relation': 'deploy', 'object': 'VirtualPita and VirtualPie backdoors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'VirtualPita and VirtualPie backdoors', 'relation': 'are on', 'object': 'ESXi hosts'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'backdoors', 'relation': 'deployed via', 'object': 'maliciously crafted vSphere Installation Bundles'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'UNC3886', 'relation': 'exploited', 'object': 'CVE-2023-20867 VMware Tools authentication bypass flaw'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-20867', 'relation': 'to escalate', 'object': 'privileges'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-20867', 'relation': 'to harvest', 'object': 'files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-20867', 'relation': 'to exfiltrate', 'object': 'files from guest VMs'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

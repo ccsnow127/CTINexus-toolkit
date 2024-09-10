@@ -1,0 +1,227 @@
+{
+    "CTI": {
+        "text": "Over 5,300 internet-exposed GitLab instances are vulnerable to CVE-2023-7028, a zero-click account takeover flaw GitLab warned about earlier this month. The critical (CVSS score: 10.0) flaw allows attackers to send password reset emails for a targeted account to an attacker-controlled email address, allowing the threat actor to change the password and take over the account. Based on GitLab's role as a software development and project planning platform and the type and severity of the flaw, these servers are at risk of supply chain attacks, proprietary code disclosure, API key leaks, and other malicious activity.",
+        "link": "https://www.bleepingcomputer.com/news/security/over-5-300-gitlab-servers-exposed-to-zero-click-account-takeover-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "internet-exposed GitLab instances",
+                "relation": "vulnerable to",
+                "object": "CVE-2023-7028"
+            },
+            {
+                "subject": "CVE-2023-7028",
+                "relation": "allows",
+                "object": "attackers to send password reset emails for a targeted account to an attacker-controlled email address"
+            },
+            {
+                "subject": "CVE-2023-7028",
+                "relation": "allows",
+                "object": "the threat actor to change the password and take over the account"
+            },
+            {
+                "subject": "GitLab",
+                "relation": "warned about",
+                "object": "CVE-2023-7028"
+            },
+            {
+                "subject": "CVE-2023-7028",
+                "relation": "is a",
+                "object": "zero-click account takeover flaw"
+            },
+            {
+                "subject": "servers",
+                "relation": "at risk of",
+                "object": "supply chain attacks"
+            },
+            {
+                "subject": "servers",
+                "relation": "at risk of",
+                "object": "proprietary code disclosure"
+            },
+            {
+                "subject": "servers",
+                "relation": "at risk of",
+                "object": "API key leaks"
+            },
+            {
+                "subject": "servers",
+                "relation": "at risk of",
+                "object": "other malicious activity"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1981,
+                "cost": 0.01981
+            },
+            "output": {
+                "tokens": 324,
+                "cost": 0.00972
+            },
+            "total": {
+                "tokens": 2305,
+                "cost": 0.02953
+            }
+        },
+        "time": 16.564148426055908,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/BleepingComputer/gitlab-QD1-1jW.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "wallescape.json",
+                    "random"
+                ],
+                [
+                    "fancy-bear.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 0,
+                "fn": 3,
+                "precision": 1.0,
+                "recall": 0.75,
+                "f1": 0.8571428571428571
+            },
+            "matched_list": [
+                [
+                    [
+                        "internet-exposed GitLab instances",
+                        "vulnerable to",
+                        "CVE-2023-7028"
+                    ],
+                    [
+                        "5,300 internet-exposed GitLab instances",
+                        "are vulnerable to",
+                        "CVE-2023-7028"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-7028",
+                        "allows",
+                        "attackers to send password reset emails for a targeted account to an attacker-controlled email address"
+                    ],
+                    [
+                        "CVE-2023-7028",
+                        "allows attackers to send",
+                        "password reset emails"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-7028",
+                        "allows",
+                        "the threat actor to change the password and take over the account"
+                    ],
+                    [
+                        "CVE-2023-7028",
+                        "is a",
+                        "zero-click account takeover flaw"
+                    ]
+                ],
+                [
+                    [
+                        "GitLab",
+                        "warned about",
+                        "CVE-2023-7028"
+                    ],
+                    [
+                        "GitLab",
+                        "warned about",
+                        "CVE-2023-7028"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-7028",
+                        "is a",
+                        "zero-click account takeover flaw"
+                    ],
+                    [
+                        "CVE-2023-7028",
+                        "is a",
+                        "zero-click account takeover flaw"
+                    ]
+                ],
+                [
+                    [
+                        "servers",
+                        "at risk of",
+                        "supply chain attacks"
+                    ],
+                    [
+                        "servers",
+                        "are at risk of",
+                        "supply chain attacks"
+                    ]
+                ],
+                [
+                    [
+                        "servers",
+                        "at risk of",
+                        "proprietary code disclosure"
+                    ],
+                    [
+                        "servers",
+                        "are at risk of",
+                        "proprietary code disclosure"
+                    ]
+                ],
+                [
+                    [
+                        "servers",
+                        "at risk of",
+                        "API key leaks"
+                    ],
+                    [
+                        "servers",
+                        "are at risk of",
+                        "API key leaks"
+                    ]
+                ],
+                [
+                    [
+                        "servers",
+                        "at risk of",
+                        "other malicious activity"
+                    ],
+                    [
+                        "servers",
+                        "are at risk of",
+                        "other malicious activity"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "password reset emails",
+                    "for",
+                    "a targeted account"
+                ],
+                [
+                    "threat actor",
+                    "take over",
+                    "the account"
+                ],
+                [
+                    "GitLab",
+                    "is",
+                    "software development and project planning platform"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

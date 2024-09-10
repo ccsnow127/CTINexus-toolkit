@@ -1,0 +1,118 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'exploited', 'object': 'a 0day in Microsoft MSHTML (CVE-2021-40444)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'is', 'object': 'an Initial Access Broker'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'works with', 'object': 'FIN12'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'works with', 'object': 'WIZARD SPIDER'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FIN12', 'relation': 'is known as', 'object': 'WIZARD SPIDER'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'WIZARD SPIDER', 'relation': 'is known as', 'object': 'FIN12'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'is motivated by', 'object': 'financial reasons'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'linked with', 'object': 'data exfiltration'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'linked with', 'object': 'deployment of human-operated ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'human-operated ransomware', 'relation': 'includes', 'object': 'Conti'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'human-operated ransomware', 'relation': 'includes', 'object': 'Diavol'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'sent emails a day up to', 'object': '5000'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'targeted', 'object': '650 organizations globally'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'previously targeted industries', 'object': 'IT'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'previously targeted industries', 'object': 'cybersecurity'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'previously targeted industries', 'object': 'healthcare'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EXOTIC LILY', 'relation': 'attacked', 'object': 'a wide variety of organizations and industries'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

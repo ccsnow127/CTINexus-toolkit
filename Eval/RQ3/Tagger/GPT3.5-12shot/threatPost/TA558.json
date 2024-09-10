@@ -1,0 +1,305 @@
+{
+    "CTI": {
+        "text": "A longtime threat group identified as TA558 has ramped up efforts to target the travel and hospitality industries. After a lull in activity, believed tied to COVID-related travel restrictions, the threat group has ramped up campaigns to exploit an uptick in travel and related airline and hotel bookings. Warnings come from security researchers who say TA558 cybercriminals have revamped their 2018 campaigns with fake reservation emails that contain links \u2013 that if clicked \u2013 deliver a malicious malware payload containing a potpourri of malware variants. What makes this most recent campaign unique, according to a report by Proofpoint, is the use of RAR and ISO file attachments linked to messages. ISO and RAR are single compressed files, that if executed, decompress the file and folder data inside of them.",
+        "link": "https://threatpost.com/reservation-links-prey-on-travelers/180462/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "TA558",
+                "relation": "targets",
+                "object": "travel and hospitality industries"
+            },
+            {
+                "subject": "TA558",
+                "relation": "exploits",
+                "object": "uptick in travel and related airline and hotel bookings"
+            },
+            {
+                "subject": "TA558 cybercriminals",
+                "relation": "revamped",
+                "object": "their 2018 campaigns"
+            },
+            {
+                "subject": "fake reservation emails",
+                "relation": "contain",
+                "object": "links"
+            },
+            {
+                "subject": "links",
+                "relation": "if clicked",
+                "object": "deliver a malicious malware payload"
+            },
+            {
+                "subject": "malicious malware payload",
+                "relation": "contains",
+                "object": "a potpourri of malware variants"
+            },
+            {
+                "subject": "RAR and ISO file attachments",
+                "relation": "linked to",
+                "object": "messages"
+            },
+            {
+                "subject": "RAR and ISO file attachments",
+                "relation": "if executed",
+                "object": "decompress the file and folder data inside of them"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3021,
+                "cost": 0.03021
+            },
+            "output": {
+                "tokens": 211,
+                "cost": 0.0063300000000000006
+            },
+            "total": {
+                "tokens": 3232,
+                "cost": 0.03654
+            }
+        },
+        "time": 6.344006776809692,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/threatPost/TA558-QD1-02c.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-mallox.json",
+                    0.05981747817014053
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.06081496288701707
+                ],
+                [
+                    "AVERTIUM-charming-kitten.json",
+                    0.0806136621158475
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "TA558",
+                    "class": "Attacker"
+                },
+                "relation": "targets",
+                "object": {
+                    "text": "travel and hospitality industries",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "TA558",
+                    "class": "Attacker"
+                },
+                "relation": "exploits",
+                "object": {
+                    "text": "uptick in travel and related airline and hotel bookings",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "TA558 cybercriminals",
+                    "class": "Attacker"
+                },
+                "relation": "revamped",
+                "object": {
+                    "text": "their 2018 campaigns",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "fake reservation emails",
+                    "class": "Malware"
+                },
+                "relation": "contain",
+                "object": {
+                    "text": "links",
+                    "class": "Indicator:URL"
+                }
+            },
+            {
+                "subject": {
+                    "text": "links",
+                    "class": "Indicator:URL"
+                },
+                "relation": "if clicked",
+                "object": {
+                    "text": "deliver a malicious malware payload",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "malicious malware payload",
+                    "class": "Malware"
+                },
+                "relation": "contains",
+                "object": {
+                    "text": "a potpourri of malware variants",
+                    "class": "Malware Characteristic:Variants"
+                }
+            },
+            {
+                "subject": {
+                    "text": "RAR and ISO file attachments",
+                    "class": "Indicator:File"
+                },
+                "relation": "linked to",
+                "object": {
+                    "text": "messages",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "RAR and ISO file attachments",
+                    "class": "Indicator:File"
+                },
+                "relation": "if executed",
+                "object": {
+                    "text": "decompress the file and folder data inside of them",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            }
+        ],
+        "response_time": 9.124170064926147,
+        "Demo_num": 12,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT3.5-12shot/prompt_store/threatPost/TA558.txt",
+        "model_usage": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1644,
+                "cost": 0.0008219999999999999
+            },
+            "output": {
+                "tokens": 392,
+                "cost": 0.000588
+            },
+            "total": {
+                "tokens": 2036,
+                "cost": 0.0014099999999999998
+            }
+        },
+        "Eval": {
+            "correct": 11,
+            "incorrect": 5,
+            "TP": 11,
+            "TN": 2,
+            "FP": 5,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 3,
+                    "TN": 13,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 2,
+                    "TN": 12,
+                    "FP": 1,
+                    "FN": 1
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 4,
+                    "TN": 11,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Information": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 2,
+                    "TN": 12,
+                    "FP": 1,
+                    "FN": 1
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 2,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 15,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 16,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 14,
+                    "FP": 0,
+                    "FN": 2
+                }
+            },
+            "Num_of_classes": 6
+        }
+    }
+}

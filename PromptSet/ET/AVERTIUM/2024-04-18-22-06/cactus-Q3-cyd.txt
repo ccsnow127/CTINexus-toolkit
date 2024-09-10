@@ -1,0 +1,117 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Action",
+    "Attacker",
+    "Campaign",
+    "Event",
+    "Exploit Target Object",
+    "Host",
+    {
+        "Indicator":[
+            "Adress",
+            "Email",
+            "File",
+            "Hash"
+        ]
+    },
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic",
+    "Malware Family",
+    "Organization",
+    "Software",
+    "System",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "is", "object": "a relatively new player in the ransomware market"} 
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "is", "object": {"text": "a relatively new player in the ransomware market", "class": "This entity cannot be classified into any of the existing types"}} 
+---------------------
+Example 2:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "claimed responsibility for", "object": "three recent attacks"}
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "claimed responsibility for", "object": {"text": "three recent attacks", "class": "Event"}} 
+---------------------
+Example 3:
+
+"triple": {"subject": "The victims", "relation": "include", "object": "4LEAF"}
+
+"tagged_triple": {"subject": {"text": "The victims", "class": "Exploit Target Object"}, "relation": "include", "object": {"text": "4LEAF", "class": "Exploit Target Object"}} 
+---------------------
+
+
+"triple":: {'subject': 'CACTUS', 'relation': 'is referred to as', 'object': 'a new ransomware variant'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CACTUS', 'relation': 'has been actively targeting', 'object': 'large commercial entities since March 2023'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The name CACTUS', 'relation': 'is derived from', 'object': 'the filename within the ransom note, cAcTuS.readme.txt'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Encrypted files', 'relation': 'carry', 'object': 'the extension .cts1'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CACTUS', 'relation': 'uses', 'object': 'a unique tactic'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'This tactic', 'relation': 'requires', 'object': 'a key for decrypting the binary'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'This key', 'relation': 'is embedded within', 'object': 'a file named ntuser.dat'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': "Kroll's research", 'relation': 'noted', 'object': 'instances of data exfiltration and victim extortion over Tox'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CACTUS', 'relation': 'exploits', 'object': 'vulnerable VPN appliances'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CACTUS', 'relation': 'conducts', 'object': 'internal scouting'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The threat actor', 'relation': 'uses', 'object': 'tools like SoftPerfect Network Scanner and PowerShell commands'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The threat actor', 'relation': 'deploys', 'object': 'various remote access methods'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The remote access methods', 'relation': 'include', 'object': 'legitimate tools like Splashtop, AnyDesk, and SuperOps RMM'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The remote access methods', 'relation': 'include', 'object': 'malicious tools like Cobalt Strike and Chisel'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The threat actor', 'relation': 'attempts to disable', 'object': 'security software using custom scripts like TotalExec'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The threat actor', 'relation': 'uninstalls', 'object': 'common antivirus software'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

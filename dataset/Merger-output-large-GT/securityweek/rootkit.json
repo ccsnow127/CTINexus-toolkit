@@ -1,0 +1,740 @@
+{
+    "CTI": {
+        "text": "The notorious North Korean threat group known as Lazarus exploited a Windows zero-day vulnerability for privilege escalation in attacks involving a rootkit named FudModule, according to cybersecurity firm Avast. The vulnerability is tracked as CVE-2024-21338 and it was observed by Avast in Lazarus attacks last year. The security company developed a proof-of-concept (PoC) exploit and sent it to Microsoft in August 2023. The flaw was patched by Microsoft with the company\u2019s February 2024 Patch Tuesday updates, but the initial advisory for CVE-2024-21338 did not list it as a zero-day. The vulnerability impacts the \u2018appid.sys\u2019 driver associated with Microsoft\u2019s AppLocker security feature. By targeting a vulnerability in a driver that is present on many systems \u2014 rather than using a bring your own vulnerable driver (BYOVD) approach \u2014 the attacker benefits from a higher degree of stealth. \u201cBy exploiting such a vulnerability, the attacker is in a sense living off the land with no need to bring, drop, or load any custom drivers, making it possible for a kernel attack to be truly fileless. This not only evades most detection mechanisms but also enables the attack on systems where driver allowlisting is in place,\u201d Avast explained. By exploiting CVE-2024-21338, Lazarus hackers were able to elevate their privileges on the compromised system and establish a kernel read/write primitive. This enabled them to perform direct kernel object manipulation in an updated version of the FudModule rootkit, which came to light in 2022. ",
+        "link": "https://www.securityweek.com/windows-zero-day-exploited-by-north-korean-hackers-in-rootkit-attack/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "North Korean threat group",
+                "relation": "is known as",
+                "object": "Lazarus"
+            },
+            {
+                "subject": "Lazarus",
+                "relation": "exploited",
+                "object": "a Windows zero-day vulnerability"
+            },
+            {
+                "subject": "a Windows zero-day vulnerability",
+                "relation": "for",
+                "object": "privilege escalation"
+            },
+            {
+                "subject": "attacks",
+                "relation": "involving",
+                "object": "a rootkit named FudModule"
+            },
+            {
+                "subject": "a Windows zero-day vulnerability",
+                "relation": "is tracked as",
+                "object": "CVE-2024-21338"
+            },
+            {
+                "subject": "CVE-2024-21338",
+                "relation": "was observed in",
+                "object": "Lazarus attacks"
+            },
+            {
+                "subject": "Avast",
+                "relation": "developed",
+                "object": "a proof-of-concept (PoC) exploit"
+            },
+            {
+                "subject": "Avast",
+                "relation": "sent",
+                "object": "a proof-of-concept (PoC) exploit to Microsoft"
+            },
+            {
+                "subject": "The flaw",
+                "relation": "was patched by",
+                "object": "Microsoft"
+            },
+            {
+                "subject": "CVE-2024-21338",
+                "relation": "impacts",
+                "object": "the 'appid.sys' driver"
+            },
+            {
+                "subject": "the 'appid.sys' driver",
+                "relation": "is associated with",
+                "object": "Microsoft\u2019s AppLocker security feature"
+            },
+            {
+                "subject": "CVE-2024-21338",
+                "relation": "enables",
+                "object": "attack on systems with driver allowlisting"
+            },
+            {
+                "subject": "Lazarus hackers",
+                "relation": "were able to elevate",
+                "object": "their privileges"
+            },
+            {
+                "subject": "Lazarus hackers",
+                "relation": "established",
+                "object": "a kernel read/write primitive"
+            },
+            {
+                "subject": "They",
+                "relation": "perform",
+                "object": "direct kernel object manipulation"
+            },
+            {
+                "subject": "direct kernel object manipulation",
+                "relation": "in",
+                "object": "an updated version of the FudModule rootkit"
+            }
+        ],
+        "triples_count": 16,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2205,
+                "cost": 0.02205
+            },
+            "output": {
+                "tokens": 458,
+                "cost": 0.01374
+            },
+            "total": {
+                "tokens": 2663,
+                "cost": 0.03579
+            }
+        },
+        "time": 15.375874280929565,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/securityweek/rootkit-QD1-mt9.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-apple.json",
+                    0.1178916142244758
+                ],
+                [
+                    "AVERTIUM-CVE-2023-36884.json",
+                    0.1232676980741352
+                ],
+                [
+                    "BleepingComputer-kasseika.json",
+                    0.19422225711473676
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "North Korean threat group",
+                    "class": "Attacker"
+                },
+                "relation": "is known as",
+                "object": {
+                    "text": "Lazarus",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Lazarus",
+                    "class": "Attacker"
+                },
+                "relation": "exploited",
+                "object": {
+                    "text": "a Windows zero-day vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a Windows zero-day vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "for",
+                "object": {
+                    "text": "privilege escalation",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attacks",
+                    "class": "Event"
+                },
+                "relation": "involving",
+                "object": {
+                    "text": "a rootkit named FudModule",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a Windows zero-day vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "is tracked as",
+                "object": {
+                    "text": "CVE-2024-21338",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2024-21338",
+                    "class": "Vulnerability"
+                },
+                "relation": "was observed in",
+                "object": {
+                    "text": "Lazarus attacks",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Avast",
+                    "class": "Organization"
+                },
+                "relation": "developed",
+                "object": {
+                    "text": "a proof-of-concept (PoC) exploit",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Avast",
+                    "class": "Organization"
+                },
+                "relation": "sent",
+                "object": {
+                    "text": "a proof-of-concept (PoC) exploit to Microsoft",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The flaw",
+                    "class": "Vulnerability"
+                },
+                "relation": "was patched by",
+                "object": {
+                    "text": "Microsoft",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2024-21338",
+                    "class": "Vulnerability"
+                },
+                "relation": "impacts",
+                "object": {
+                    "text": "the 'appid.sys' driver",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the 'appid.sys' driver",
+                    "class": "Infrastructure"
+                },
+                "relation": "is associated with",
+                "object": {
+                    "text": "Microsoft\u2019s AppLocker security feature",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2024-21338",
+                    "class": "Vulnerability"
+                },
+                "relation": "enables",
+                "object": {
+                    "text": "attack on systems with driver allowlisting",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Lazarus hackers",
+                    "class": "Attacker"
+                },
+                "relation": "were able to elevate",
+                "object": {
+                    "text": "their privileges",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Lazarus hackers",
+                    "class": "Attacker"
+                },
+                "relation": "established",
+                "object": {
+                    "text": "a kernel read/write primitive",
+                    "class": "Malware Characteristic:Capability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "They",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "perform",
+                "object": {
+                    "text": "direct kernel object manipulation",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "direct kernel object manipulation",
+                    "class": "Malware Characteristic:Behavior"
+                },
+                "relation": "in",
+                "object": {
+                    "text": "an updated version of the FudModule rootkit",
+                    "class": "Malware"
+                }
+            }
+        ],
+        "response_time": 36.09323287010193,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/securityweek/rootkit.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1673,
+                "cost": 0.016730000000000002
+            },
+            "output": {
+                "tokens": 1067,
+                "cost": 0.032010000000000004
+            },
+            "total": {
+                "tokens": 2740,
+                "cost": 0.048740000000000006
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "North Korean threat group",
+                    "mention_class": "Attacker",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "North Korean threat group"
+                    ],
+                    "entity_text": "North Korean threat group"
+                },
+                "relation": "is known as",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "Lazarus",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Lazarus hackers",
+                        "Lazarus",
+                        "Lazarus",
+                        "Lazarus hackers"
+                    ],
+                    "entity_text": "Lazarus hackers"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "Lazarus",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Lazarus hackers",
+                        "Lazarus",
+                        "Lazarus",
+                        "Lazarus hackers"
+                    ],
+                    "entity_text": "Lazarus hackers"
+                },
+                "relation": "exploited",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "a Windows zero-day vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a Windows zero-day vulnerability",
+                        "a Windows zero-day vulnerability",
+                        "a Windows zero-day vulnerability"
+                    ],
+                    "entity_text": "a Windows zero-day vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "a Windows zero-day vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a Windows zero-day vulnerability",
+                        "a Windows zero-day vulnerability",
+                        "a Windows zero-day vulnerability"
+                    ],
+                    "entity_text": "a Windows zero-day vulnerability"
+                },
+                "relation": "for",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "privilege escalation",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "privilege escalation"
+                    ],
+                    "entity_text": "privilege escalation"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "attacks",
+                    "mention_class": "Event",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "attacks"
+                    ],
+                    "entity_text": "attacks"
+                },
+                "relation": "involving",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "a rootkit named FudModule",
+                    "mention_class": "Malware",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "an updated version of the FudModule rootkit",
+                        "a rootkit named FudModule"
+                    ],
+                    "entity_text": "a rootkit named FudModule"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "a Windows zero-day vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "a Windows zero-day vulnerability",
+                        "a Windows zero-day vulnerability",
+                        "a Windows zero-day vulnerability"
+                    ],
+                    "entity_text": "a Windows zero-day vulnerability"
+                },
+                "relation": "is tracked as",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "CVE-2024-21338",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "CVE-2024-21338",
+                        "CVE-2024-21338",
+                        "CVE-2024-21338",
+                        "CVE-2024-21338"
+                    ],
+                    "entity_text": "CVE-2024-21338"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "CVE-2024-21338",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "CVE-2024-21338",
+                        "CVE-2024-21338",
+                        "CVE-2024-21338",
+                        "CVE-2024-21338"
+                    ],
+                    "entity_text": "CVE-2024-21338"
+                },
+                "relation": "was observed in",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "Lazarus attacks",
+                    "mention_class": "Event",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "Lazarus attacks"
+                    ],
+                    "entity_text": "Lazarus attacks"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "Avast",
+                    "mention_class": "Organization",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "Avast",
+                        "Avast"
+                    ],
+                    "entity_text": "Avast"
+                },
+                "relation": "developed",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "a proof-of-concept (PoC) exploit",
+                    "mention_class": "Tool",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "a proof-of-concept (PoC) exploit"
+                    ],
+                    "entity_text": "a proof-of-concept (PoC) exploit"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "Avast",
+                    "mention_class": "Organization",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "Avast",
+                        "Avast"
+                    ],
+                    "entity_text": "Avast"
+                },
+                "relation": "sent",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "a proof-of-concept (PoC) exploit to Microsoft",
+                    "mention_class": "Information",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "a proof-of-concept (PoC) exploit to Microsoft"
+                    ],
+                    "entity_text": "a proof-of-concept (PoC) exploit to Microsoft"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "The flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "The flaw"
+                    ],
+                    "entity_text": "The flaw"
+                },
+                "relation": "was patched by",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "Microsoft",
+                    "mention_class": "Organization",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "Microsoft"
+                    ],
+                    "entity_text": "Microsoft"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "CVE-2024-21338",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "CVE-2024-21338",
+                        "CVE-2024-21338",
+                        "CVE-2024-21338",
+                        "CVE-2024-21338"
+                    ],
+                    "entity_text": "CVE-2024-21338"
+                },
+                "relation": "impacts",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "the 'appid.sys' driver",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "the 'appid.sys' driver",
+                        "the 'appid.sys' driver"
+                    ],
+                    "entity_text": "the 'appid.sys' driver"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "the 'appid.sys' driver",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "the 'appid.sys' driver",
+                        "the 'appid.sys' driver"
+                    ],
+                    "entity_text": "the 'appid.sys' driver"
+                },
+                "relation": "is associated with",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "Microsoft\u2019s AppLocker security feature",
+                    "mention_class": "Information",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "Microsoft\u2019s AppLocker security feature"
+                    ],
+                    "entity_text": "Microsoft\u2019s AppLocker security feature"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "CVE-2024-21338",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "CVE-2024-21338",
+                        "CVE-2024-21338",
+                        "CVE-2024-21338",
+                        "CVE-2024-21338"
+                    ],
+                    "entity_text": "CVE-2024-21338"
+                },
+                "relation": "enables",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "attack on systems with driver allowlisting",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "attack on systems with driver allowlisting"
+                    ],
+                    "entity_text": "attack on systems with driver allowlisting"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "Lazarus hackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Lazarus hackers",
+                        "Lazarus",
+                        "Lazarus",
+                        "Lazarus hackers"
+                    ],
+                    "entity_text": "Lazarus hackers"
+                },
+                "relation": "were able to elevate",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "their privileges",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "their privileges"
+                    ],
+                    "entity_text": "their privileges"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 26,
+                    "mention_text": "Lazarus hackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Lazarus hackers",
+                        "Lazarus",
+                        "Lazarus",
+                        "Lazarus hackers"
+                    ],
+                    "entity_text": "Lazarus hackers"
+                },
+                "relation": "established",
+                "object": {
+                    "mention_id": 27,
+                    "mention_text": "a kernel read/write primitive",
+                    "mention_class": "Malware Characteristic:Capability",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "a kernel read/write primitive"
+                    ],
+                    "entity_text": "a kernel read/write primitive"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 28,
+                    "mention_text": "They",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 18,
+                    "mentions_merged": [
+                        "They"
+                    ],
+                    "entity_text": "They"
+                },
+                "relation": "perform",
+                "object": {
+                    "mention_id": 29,
+                    "mention_text": "direct kernel object manipulation",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 19,
+                    "mentions_merged": [
+                        "direct kernel object manipulation",
+                        "direct kernel object manipulation"
+                    ],
+                    "entity_text": "direct kernel object manipulation"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 30,
+                    "mention_text": "direct kernel object manipulation",
+                    "mention_class": "Malware Characteristic:Behavior",
+                    "entity_id": 19,
+                    "mentions_merged": [
+                        "direct kernel object manipulation",
+                        "direct kernel object manipulation"
+                    ],
+                    "entity_text": "direct kernel object manipulation"
+                },
+                "relation": "in",
+                "object": {
+                    "mention_id": 31,
+                    "mention_text": "an updated version of the FudModule rootkit",
+                    "mention_class": "Malware",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "an updated version of the FudModule rootkit",
+                        "a rootkit named FudModule"
+                    ],
+                    "entity_text": "a rootkit named FudModule"
+                }
+            }
+        ],
+        "mentions_num": 32,
+        "response_time": 6.638515472412109,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 20
+    }
+}

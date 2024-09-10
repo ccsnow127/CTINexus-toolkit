@@ -1,0 +1,221 @@
+{
+    "CTI": {
+        "text": "Follina (CVE-2022-30190) is a vulnerability in the Microsoft Support Diagnostic Tool (MSDT) that allows remote code execution on vulnerable systems through the ms-msdt protocol handler scheme. The bug is present in all supported versions of Windows. The vulnerability can be easily exploited by a specially crafted Word document that downloads and loads a malicious HTML file through Word's remote template feature. The HTML file ultimately allows the attacker to load and execute PowerShell code within Windows. The vulnerability can also be exploited through the RTF file format.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/follina-msdt-exploit-malware"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Follina",
+                "relation": "is",
+                "object": "a vulnerability in the Microsoft Support Diagnostic Tool (MSDT)"
+            },
+            {
+                "subject": "CVE-2022-30190",
+                "relation": "is",
+                "object": "a vulnerability"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "allows",
+                "object": "remote code execution on vulnerable systems through the ms-msdt protocol handler scheme"
+            },
+            {
+                "subject": "bug",
+                "relation": "is present in",
+                "object": "all supported versions of Windows"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "can be exploited by",
+                "object": "a specially crafted Word document that downloads and loads a malicious HTML file through Word's remote template feature"
+            },
+            {
+                "subject": "HTML file",
+                "relation": "allows",
+                "object": "the attacker to load and execute PowerShell code within Windows"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "can also be exploited through",
+                "object": "the RTF file format"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1143,
+                "cost": 0.0005715
+            },
+            "output": {
+                "tokens": 268,
+                "cost": 0.000402
+            },
+            "total": {
+                "tokens": 1411,
+                "cost": 0.0009735
+            }
+        },
+        "time": 4.57080078125,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/symantec/Follina-QD1-CN0.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.22362235183145157
+                ],
+                [
+                    "threatPost: Microsoft.json",
+                    0.25782653597484195
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 1,
+                "fn": 5,
+                "precision": 0.8571428571428571,
+                "recall": 0.5454545454545454,
+                "f1": 0.6666666666666665
+            },
+            "matched_list": [
+                [
+                    [
+                        "Follina",
+                        "is",
+                        "a vulnerability in the Microsoft Support Diagnostic Tool (MSDT)"
+                    ],
+                    [
+                        "Follina",
+                        "is a",
+                        "vulnerability"
+                    ],
+                    [
+                        1.0,
+                        0.47286040390929984
+                    ]
+                ],
+                [
+                    [
+                        "vulnerability",
+                        "allows",
+                        "remote code execution on vulnerable systems through the ms-msdt protocol handler scheme"
+                    ],
+                    [
+                        "vulnerable systems",
+                        "through",
+                        "the ms-msdt protocol handler scheme"
+                    ],
+                    [
+                        0.6599472366275452,
+                        0.7083666548345638
+                    ]
+                ],
+                [
+                    [
+                        "bug",
+                        "is present in",
+                        "all supported versions of Windows"
+                    ],
+                    [
+                        "The bug",
+                        "is present in",
+                        "all supported versions of Windows"
+                    ],
+                    [
+                        0.6949065089646288,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "vulnerability",
+                        "can be exploited by",
+                        "a specially crafted Word document that downloads and loads a malicious HTML file through Word's remote template feature"
+                    ],
+                    [
+                        "vulnerability",
+                        "can be exploited by",
+                        "a specially crafted Word document"
+                    ],
+                    [
+                        1.0,
+                        0.757527618603263
+                    ]
+                ],
+                [
+                    [
+                        "HTML file",
+                        "allows",
+                        "the attacker to load and execute PowerShell code within Windows"
+                    ],
+                    [
+                        "The HTML file",
+                        "allows",
+                        "the attacker to load and execute PowerShell code within Windows"
+                    ],
+                    [
+                        0.8305373143229158,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "vulnerability",
+                        "can also be exploited through",
+                        "the RTF file format"
+                    ],
+                    [
+                        "vulnerability",
+                        "can be exploited by",
+                        "a specially crafted Word document"
+                    ],
+                    [
+                        1.0,
+                        0.4724369167096193
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "CVE-2022-30190",
+                    "is",
+                    "a vulnerability"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Follina",
+                    "is in",
+                    "the Microsoft Support Diagnostic Tool (MSDT)"
+                ],
+                [
+                    "Follina",
+                    "allows",
+                    "remote code execution on vulnerable systems"
+                ],
+                [
+                    "a specially crafted Word document",
+                    "downloads and loads",
+                    "a malicious HTML file"
+                ],
+                [
+                    "a malicious HTML file",
+                    "through",
+                    "Word's remote template feature"
+                ],
+                [
+                    "vulnerability",
+                    "can also be exploited through",
+                    "the RTF file format"
+                ]
+            ]
+        }
+    }
+}

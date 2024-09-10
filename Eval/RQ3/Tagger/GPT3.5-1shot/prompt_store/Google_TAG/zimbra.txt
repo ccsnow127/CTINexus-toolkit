@@ -1,0 +1,94 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Google\u2019s Threat Analysis Group (TAG)', 'relation': 'discovered', 'object': 'an in-the-wild 0-day exploit'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'an in-the-wild 0-day exploit', 'relation': 'targeting', 'object': 'Zimbra Collaboration'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Zimbra Collaboration', 'relation': 'is used by', 'object': 'many organizations to host their email'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the 0-day', 'relation': 'is patched as', 'object': 'CVE-2023-37580'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-37580', 'relation': 'is exploited by', 'object': 'four different groups'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'groups', 'relation': 'steal', 'object': 'email data'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'groups', 'relation': 'steal', 'object': 'user credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'groups', 'relation': 'steal', 'object': 'authentication tokens'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2023-37580', 'relation': 'is a', 'object': 'reflected cross-site scripting (XSS) vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'XSS', 'relation': 'allows', 'object': 'malicious scripts to be injected into another website'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a vulnerability in Zimbra', 'relation': 'injected the parameter within', 'object': 'the URL directly into the webpage'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

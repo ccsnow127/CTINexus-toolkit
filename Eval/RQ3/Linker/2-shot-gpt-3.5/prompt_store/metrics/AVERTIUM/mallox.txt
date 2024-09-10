@@ -1,0 +1,25 @@
+"Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"Context": "Cuba ransomware first appeared in 2019 but remained relatively unnoticed until November 2021, when they reportedly targeted a minimum of 49 organizations across various sectors. The sectors included government, healthcare, information technology, manufacturing, and finance. During this time, Cuba ransomware operators were infiltrating networks by encrypting files using the '.cuba' extension. Over the years, the ransom demands from Cuba totals at least $145 million, and the group has successfully collected at least $60 million in ransom payments. By 2022, the threat actors had expanded their tactics, techniques, and procedures (TTPs), leading security researchers to suggest a potential connection between Cuba ransomware actors, RomCom Remote Access Trojan (RAT) actors, and Industrial Spy ransomware actors. This month, Cuba garnered attention when they took responsibility for a cyberattack on The Philadelphia Inquirer."
+
+"Question": What do you think is the relationship between entity "Cuba ransomware actors" and entity "Cuba ransomware"?
+
+"predicted_triple": {"subject": "Cuba ransomware actors", "relation": "are associated with", "object": "Cuba ransomware"}
+---------------------
+Example 2:
+
+"Context": "CVE-2023-36884 is a remote code execution vulnerability that was previously patched. The vulnerability allowed attackers to craft Microsoft Office documents in a way that circumvented the Mark of the Web (MoTW) security feature. This allowed the files to be opened without triggering a security warning, ultimately enabling remote code execution. To counteract a previously mitigated but actively exploited CVE-2023-36884 flaw, Microsoft has introduced an Office Defense in Depth update. The Russian threat actor Storm-0978/RomCom is responsible for actively exploiting this vulnerability. This group, previously recognized for deploying the Industrial Spy ransomware in their attacks, has now rebranded as 'Underground' and extorts victims through their ransomware operations."
+
+"Question": What do you think is the relationship between entity "Storm-0978/RomCom" and entity "CVE-2023-36884"
+
+"predicted_triple": {"subject": "Storm-0978/RomCom", "relation": "actively exploited", "object": "CVE-2023-36884"}
+---------------------
+Target task:
+
+"Context": Mallox ransomware specifically targets computers running Microsoft Windows. This ransomware was first observed in June 2021 and is known for exploiting unsecured MS-SQL servers as a penetration vector to compromise victims' networks. The ransomware's targeted industries are manufacturing, professional and legal services, and wholesale and retail. The ransomware operators claim that their victims include worldwide organizations. According to Lior Rochberger, a senior security researcher at Palo Alto Networks, Mallox's sudden increase in activity is attributed to the deliberate actions taken by the group's leaders to expand Mallox's operations. Rochberger stated that group appeared to focus more on recruiting affiliates at the beginning of 2023. This shift in strategy explains the significant increase observed this year. Recently, researchers from Unit 42 have noticed a significant increase in Mallox ransomware activity, with a surge of almost 174% compared to 2022. This increase is primarily due to Mallox using vulnerable MS-SQL (CVE-2020-0618 and CVE-2019-1068) servers to spread the ransomware. Unit 42 also observed Mallox using tactics such as brute force, data exfiltration, and the use of network scanning tools. Researchers have also reported that the group has attempted to distribute Mallox via phishing emails - suggesting affiliates may be involved. Once the threat actors gain access, they use the command line and PowerShell to download the Mallox ransomware payload from a remote server. Like other ransomware groups, the initial payload tries to deactivate any services that might hinder data encryption on the targeted system. Also, it tries to erase shadow copies, making data recovery more challenging after encryption. The malware also attempts to eliminate all event logs, utilizing a commonly used Microsoft command utility to try and complicate forensic analysis. Like CryptNet, the threat actors behind Mallox use the double extortion method - stealing data before encrypting it. They also have a data leak site where they leak the data of victims that refuse to pay or negotiate its ransom demands. Victims negotiate with the threat actors by using a private key to authenticate themselves. As previously stated, the ransomware operators claim to have breached hundreds of organizations worldwide. Unit 42 stated that their telemetry indicates at least dozens of potential Mallox victims. In 2022, Mallox ransomware was discovered to be a variant of the TargetCompany ransomware strain.
+
+"Question": What do you think is the relationship between entity "Mallox ransomware vulnerability" and entity "Mallox ransomware"?
+
+"predicted_triple": """insert your answer here""""

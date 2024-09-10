@@ -1,0 +1,286 @@
+{
+    "CTI": {
+        "text": "North Korean APT Lazarus is up to its old tricks with a cyberespionage campaign targeting engineers with a fake job posting that attempt to spread macOS malware. The malicious Mac executable used in the campaign targets both Apple and Intel chip-based systems. The campaign, identified by researchers from ESET Research Labs and revealed in a series of tweets posted Tuesday, impersonates cryptocurrency trader Coinbase in a job description claiming to seek an engineering manager for product security, researchers divulged. Dubbed Operation Interception, the recent campaign drops a signed Mac executable disguised as a job description for Coinbase, which researchers discovered uploaded to VirusTotal from Brazil. Malware is compiled for both Intel and Apple Silicon. It drops three files: a decoy PDF document Coinbase_online_careers_2022_07.pdf, a bundle http[://]FinderFontsUpdater[.]app and a downloader safarifontagent.\u201d",
+        "link": "https://threatpost.com/apt-lazarus-macos-malware/180426/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "North Korean APT Lazarus",
+                "relation": "is up to",
+                "object": "cyberespionage campaign"
+            },
+            {
+                "subject": "cyberespionage campaign",
+                "relation": "targeting",
+                "object": "engineers"
+            },
+            {
+                "subject": "cyberespionage campaign",
+                "relation": "spreads",
+                "object": "macOS malware"
+            },
+            {
+                "subject": "malicious Mac executable",
+                "relation": "targets",
+                "object": "Apple and Intel chip-based systems"
+            },
+            {
+                "subject": "campaign",
+                "relation": "identified by",
+                "object": "ESET Research Labs"
+            },
+            {
+                "subject": "campaign",
+                "relation": "impersonates",
+                "object": "cryptocurrency trader Coinbase"
+            },
+            {
+                "subject": "Operation Interception",
+                "relation": "drops",
+                "object": "signed Mac executable disguised as a job description for Coinbase"
+            },
+            {
+                "subject": "malware",
+                "relation": "is compiled for",
+                "object": "Intel and Apple Silicon"
+            },
+            {
+                "subject": "malware",
+                "relation": "drops",
+                "object": "three files"
+            },
+            {
+                "subject": "three files",
+                "relation": "include",
+                "object": "decoy PDF document Coinbase_online_careers_2022_07.pdf"
+            },
+            {
+                "subject": "three files",
+                "relation": "include",
+                "object": "bundle http[://]FinderFontsUpdater[.]app"
+            },
+            {
+                "subject": "three files",
+                "relation": "include",
+                "object": "downloader safarifontagent"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2287,
+                "cost": 0.02287
+            },
+            "output": {
+                "tokens": 318,
+                "cost": 0.00954
+            },
+            "total": {
+                "tokens": 2605,
+                "cost": 0.03241
+            }
+        },
+        "time": 14.144942998886108,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/threatPost/Lazarus-QD1-mlT.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "Unit42: CryptoClippy.json",
+                    0.09051896647140675
+                ],
+                [
+                    "Unit42: Bear-Hallmarks.json",
+                    0.09413525115680427
+                ],
+                [
+                    "darkreading: SpectralBlur.json",
+                    0.10621401541229353
+                ],
+                [
+                    "Google_TAG: north-korean-campaign.json",
+                    0.11882577291143047
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 11,
+                "fp": 1,
+                "fn": 4,
+                "precision": 0.9166666666666666,
+                "recall": 0.7333333333333333,
+                "f1": 0.8148148148148148
+            },
+            "matched_list": [
+                [
+                    [
+                        "cyberespionage campaign",
+                        "targeting",
+                        "engineers"
+                    ],
+                    [
+                        "cyberespionage campaign",
+                        "targets",
+                        "engineers"
+                    ]
+                ],
+                [
+                    [
+                        "cyberespionage campaign",
+                        "spreads",
+                        "macOS malware"
+                    ],
+                    [
+                        "cyberespionage campaign",
+                        "attempts to spread",
+                        "macOS malware"
+                    ]
+                ],
+                [
+                    [
+                        "malicious Mac executable",
+                        "targets",
+                        "Apple and Intel chip-based systems"
+                    ],
+                    [
+                        "malicious Mac executable",
+                        "targets",
+                        "Apple and Intel chip-based systems"
+                    ]
+                ],
+                [
+                    [
+                        "campaign",
+                        "identified by",
+                        "ESET Research Labs"
+                    ],
+                    [
+                        "ESET Research Labs",
+                        "identified",
+                        "the campaign"
+                    ]
+                ],
+                [
+                    [
+                        "campaign",
+                        "impersonates",
+                        "cryptocurrency trader Coinbase"
+                    ],
+                    [
+                        "the campaign",
+                        "impersonates",
+                        "cryptocurrency trader Coinbase"
+                    ]
+                ],
+                [
+                    [
+                        "Operation Interception",
+                        "drops",
+                        "signed Mac executable disguised as a job description for Coinbase"
+                    ],
+                    [
+                        "signed Mac executable",
+                        "disguised as",
+                        "a job description for Coinbase"
+                    ]
+                ],
+                [
+                    [
+                        "malware",
+                        "is compiled for",
+                        "Intel and Apple Silicon"
+                    ],
+                    [
+                        "Malware",
+                        "compiled for",
+                        "Intel and Apple Silicon"
+                    ]
+                ],
+                [
+                    [
+                        "malware",
+                        "drops",
+                        "three files"
+                    ],
+                    [
+                        "Malware",
+                        "drops",
+                        "three files"
+                    ]
+                ],
+                [
+                    [
+                        "three files",
+                        "include",
+                        "decoy PDF document Coinbase_online_careers_2022_07.pdf"
+                    ],
+                    [
+                        "three files",
+                        "include",
+                        "a decoy PDF document Coinbase_online_careers_2022_07.pdf"
+                    ]
+                ],
+                [
+                    [
+                        "three files",
+                        "include",
+                        "bundle http[://]FinderFontsUpdater[.]app"
+                    ],
+                    [
+                        "three files",
+                        "include",
+                        "a bundle http[://]FinderFontsUpdater[.]app"
+                    ]
+                ],
+                [
+                    [
+                        "three files",
+                        "include",
+                        "downloader safarifontagent"
+                    ],
+                    [
+                        "three files",
+                        "include",
+                        "a downloader safarifontagent"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "North Korean APT Lazarus",
+                    "is up to",
+                    "cyberespionage campaign"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "North Korean APT Lazarus",
+                    "is targeting",
+                    "engineers"
+                ],
+                [
+                    "the campaign",
+                    "dubbed",
+                    "Operation Interception"
+                ],
+                [
+                    "Operation Interception",
+                    "drops",
+                    "a signed Mac executable"
+                ],
+                [
+                    "researchers",
+                    "discovered",
+                    "malware uploaded to VirusTotal from Brazil"
+                ]
+            ],
+            "thresh": 0.8
+        }
+    }
+}

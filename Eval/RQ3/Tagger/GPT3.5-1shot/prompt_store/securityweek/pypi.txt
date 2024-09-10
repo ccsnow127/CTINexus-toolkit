@@ -1,0 +1,110 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Maintainers of the Python Package Index (PyPI)', 'relation': 'were forced to', 'object': 'suspend new project creation and new user registration'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Maintainers', 'relation': 'mitigate', 'object': 'malware upload campaign'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'security researchers at Checkmarx', 'relation': 'warn', 'object': 'multiple malicious Python packages are being pushed'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malicious Python packages', 'relation': 'are being pushed via', 'object': 'typo-squatting techniques'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malicious payload', 'relation': 'aimed to steal', 'object': 'crypto wallets'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malicious payload', 'relation': 'aimed to steal', 'object': 'sensitive data from browsers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malicious payload', 'relation': 'aimed to steal', 'object': 'various credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malicious payload', 'relation': 'employed', 'object': 'a persistence mechanism to survive reboots'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malicious code', 'relation': 'is located within', 'object': "package's setup.py file"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malicious code', 'relation': 'enables', 'object': 'automatic execution upon installation'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'malicious code', 'relation': 'attempted to retrieve', 'object': 'an additional payload from a remote server'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'URL for the payload', 'relation': 'was dynamically constructed by', 'object': 'appending the package name as a query parameter'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'result', 'relation': 'is', 'object': 'an info-stealer designed to harvest sensitive information'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'result', 'relation': 'includes', 'object': 'a persistence mechanism'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'discovery', 'relation': 'highlights', 'object': 'ongoing nature of cybersecurity threats within the software development ecosystem'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

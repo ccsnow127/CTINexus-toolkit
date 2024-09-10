@@ -1,0 +1,199 @@
+{
+    "CTI": {
+        "text": "A new vulnerability, which we refer to as \u201cMigraine\u201d for its involvement with macOS migration, could allow an attacker with root access to automatically bypass System Integrity Protection (SIP) in macOS and perform arbitrary operations on a device. We shared these findings with Apple through Coordinated Vulnerability Disclosure (CVD) via Microsoft Security Vulnerability Research (MSVR). A fix for this vulnerability, now identified as CVE-2023-32369, was included in the security updates released by Apple on May 18, 2023.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/05/30/new-macos-vulnerability-migraine-could-bypass-system-integrity-protection/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "A new vulnerability",
+                "relation": "is referred to as",
+                "object": "Migraine"
+            },
+            {
+                "subject": "A new vulnerability",
+                "relation": "could allow",
+                "object": "an attacker with root access to bypass System Integrity Protection (SIP) in macOS"
+            },
+            {
+                "subject": "A new vulnerability",
+                "relation": "could allow",
+                "object": "perform arbitrary operations on a device"
+            },
+            {
+                "subject": "Findings",
+                "relation": "were shared with",
+                "object": "Apple"
+            },
+            {
+                "subject": "Findings",
+                "relation": "via",
+                "object": "Coordinated Vulnerability Disclosure (CVD)"
+            },
+            {
+                "subject": "Findings",
+                "relation": "via",
+                "object": "Microsoft Security Vulnerability Research (MSVR)"
+            },
+            {
+                "subject": "A fix",
+                "relation": "was included in",
+                "object": "the security updates released by Apple"
+            },
+            {
+                "subject": "This vulnerability",
+                "relation": "now identified as",
+                "object": "CVE-2023-32369"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1239,
+                "cost": 0.012390000000000002
+            },
+            "output": {
+                "tokens": 221,
+                "cost": 0.0066300000000000005
+            },
+            "total": {
+                "tokens": 1460,
+                "cost": 0.019020000000000002
+            }
+        },
+        "time": 8.892038345336914,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/Microsoft/migraine-could-QD1-UbB.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "nuget.json",
+                    "random"
+                ],
+                [
+                    "Agonizing-Serpens.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 1,
+                "fn": 2,
+                "precision": 0.875,
+                "recall": 0.7777777777777778,
+                "f1": 0.823529411764706
+            },
+            "matched_list": [
+                [
+                    [
+                        "A new vulnerability",
+                        "is referred to as",
+                        "Migraine"
+                    ],
+                    [
+                        "vulnerability",
+                        "is referred to as",
+                        "Migraine"
+                    ]
+                ],
+                [
+                    [
+                        "A new vulnerability",
+                        "could allow",
+                        "an attacker with root access to bypass System Integrity Protection (SIP) in macOS"
+                    ],
+                    [
+                        "an attacker with root access",
+                        "bypass",
+                        "System Integrity Protection"
+                    ]
+                ],
+                [
+                    [
+                        "Findings",
+                        "were shared with",
+                        "Apple"
+                    ],
+                    [
+                        "findings",
+                        "were shared with",
+                        "Apple"
+                    ]
+                ],
+                [
+                    [
+                        "Findings",
+                        "via",
+                        "Coordinated Vulnerability Disclosure (CVD)"
+                    ],
+                    [
+                        "Coordinated Vulnerability Disclosure",
+                        "via",
+                        "Microsoft Security Vulnerability Research"
+                    ]
+                ],
+                [
+                    [
+                        "Findings",
+                        "via",
+                        "Microsoft Security Vulnerability Research (MSVR)"
+                    ],
+                    [
+                        "Coordinated Vulnerability Disclosure",
+                        "via",
+                        "Microsoft Security Vulnerability Research"
+                    ]
+                ],
+                [
+                    [
+                        "A fix",
+                        "was included in",
+                        "the security updates released by Apple"
+                    ],
+                    [
+                        "a fix",
+                        "was included in",
+                        "security updates"
+                    ]
+                ],
+                [
+                    [
+                        "This vulnerability",
+                        "now identified as",
+                        "CVE-2023-32369"
+                    ],
+                    [
+                        "vulnerability",
+                        "is identified as",
+                        "CVE-2023-32369"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "A new vulnerability",
+                    "could allow",
+                    "perform arbitrary operations on a device"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "an attacker with root access",
+                    "perform",
+                    "arbitrary operations"
+                ],
+                [
+                    "arbitrary operations",
+                    "are on",
+                    "a device"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

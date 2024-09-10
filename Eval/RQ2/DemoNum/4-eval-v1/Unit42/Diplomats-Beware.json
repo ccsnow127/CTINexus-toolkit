@@ -1,0 +1,328 @@
+{
+    "CTI": {
+        "text": "Russia's Foreign Intelligence Service hackers, which we call Cloaked Ursa (aka APT29, UAC-0004, Midnight Blizzard/Nobelium, Cozy Bear) are well known for targeting diplomatic missions globally. Their initial access attempts over the past two years have predominantly used phishing lures with a theme of diplomatic operations such as the following:\n1. Notes verbale (semiformal government-to-government diplomatic communications)\n2. Embassies' operating status updates\n3. Schedules for diplomats\n4. Invitations to embassy events. These types of lures are generally sent to individuals who handle this type of embassy correspondence as part of their daily jobs. They are meant to entice targets to open the files on behalf of the organization they work for. Recently, Unit 42 researchers observed instances of Cloaked Ursa using lures focusing on the diplomats themselves more than the countries they represent. We have identified Cloaked Ursa targeting diplomatic missions within Ukraine by leveraging something that all recently placed diplomats need \u2013 a vehicle. We observed Cloaked Ursa targeting at least 22 of over 80 foreign missions located in Kyiv. While we don't have details on their infection success rate, this is a truly astonishing number for a clandestine operation conducted by an advanced persistent threat (APT) that the United States and the United Kingdom publicly attribute to Russia's Foreign Intelligence Service (SVR).",
+        "link": "https://unit42.paloaltonetworks.com/cloaked-ursa-phishing/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Cloaked Ursa",
+                "relation": "is known as",
+                "object": "APT29"
+            },
+            {
+                "subject": "Cloaked Ursa",
+                "relation": "is known as",
+                "object": "UAC-0004"
+            },
+            {
+                "subject": "Cloaked Ursa",
+                "relation": "is known as",
+                "object": "Midnight Blizzard/Nobelium"
+            },
+            {
+                "subject": "Cloaked Ursa",
+                "relation": "is known as",
+                "object": "Cozy Bear"
+            },
+            {
+                "subject": "Cloaked Ursa",
+                "relation": "targets",
+                "object": "diplomatic missions globally"
+            },
+            {
+                "subject": "Cloaked Ursa",
+                "relation": "uses",
+                "object": "phishing lures"
+            },
+            {
+                "subject": "phishing lures",
+                "relation": "theme of",
+                "object": "diplomatic operations"
+            },
+            {
+                "subject": "phishing lures",
+                "relation": "include",
+                "object": "notes verbale"
+            },
+            {
+                "subject": "phishing lures",
+                "relation": "include",
+                "object": "embassies' operating status updates"
+            },
+            {
+                "subject": "phishing lures",
+                "relation": "include",
+                "object": "schedules for diplomats"
+            },
+            {
+                "subject": "phishing lures",
+                "relation": "include",
+                "object": "invitations to embassy events"
+            },
+            {
+                "subject": "Cloaked Ursa",
+                "relation": "targets",
+                "object": "diplomatic missions within Ukraine"
+            },
+            {
+                "subject": "Cloaked Ursa",
+                "relation": "leverages",
+                "object": "lures focusing on the diplomats"
+            },
+            {
+                "subject": "Cloaked Ursa",
+                "relation": "targeted",
+                "object": "at least 22 of over 80 foreign missions located in Kyiv"
+            },
+            {
+                "subject": "Cloaked Ursa",
+                "relation": "is attributed to",
+                "object": "Russia's Foreign Intelligence Service (SVR)"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3187,
+                "cost": 0.03187
+            },
+            "output": {
+                "tokens": 510,
+                "cost": 0.015300000000000001
+            },
+            "total": {
+                "tokens": 3697,
+                "cost": 0.047170000000000004
+            }
+        },
+        "time": 22.476908445358276,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/Unit42/Diplomats-Beware-QD1-yRM.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "Unit42: Pensive-Ursa.json",
+                    0.09543760771881787
+                ],
+                [
+                    "Unit42: Kazuar\u2019s-Nest.json",
+                    0.09543760771881787
+                ],
+                [
+                    "AVERTIUM: fancy-bear.json",
+                    0.09687582225110428
+                ],
+                [
+                    "Microsoft: midnight-blizzard.json",
+                    0.1221015448885838
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9375,
+                "f1": 0.967741935483871
+            },
+            "matched_list": [
+                [
+                    [
+                        "Cloaked Ursa",
+                        "is known as",
+                        "APT29"
+                    ],
+                    [
+                        "Cloaked Ursa",
+                        "is also known as",
+                        "APT29"
+                    ]
+                ],
+                [
+                    [
+                        "Cloaked Ursa",
+                        "is known as",
+                        "UAC-0004"
+                    ],
+                    [
+                        "Cloaked Ursa",
+                        "is also known as",
+                        "UAC-0004"
+                    ]
+                ],
+                [
+                    [
+                        "Cloaked Ursa",
+                        "is known as",
+                        "Midnight Blizzard/Nobelium"
+                    ],
+                    [
+                        "Cloaked Ursa",
+                        "is also known as",
+                        "Midnight Blizzard/Nobelium"
+                    ]
+                ],
+                [
+                    [
+                        "Cloaked Ursa",
+                        "is known as",
+                        "Cozy Bear"
+                    ],
+                    [
+                        "Cloaked Ursa",
+                        "is also known as",
+                        "Cozy Bear"
+                    ]
+                ],
+                [
+                    [
+                        "Cloaked Ursa",
+                        "targets",
+                        "diplomatic missions globally"
+                    ],
+                    [
+                        "Cloaked Ursa",
+                        "targets",
+                        "diplomatic missions globally"
+                    ]
+                ],
+                [
+                    [
+                        "Cloaked Ursa",
+                        "uses",
+                        "phishing lures"
+                    ],
+                    [
+                        "Cloaked Ursa",
+                        "used",
+                        "phishing lures with a theme of diplomatic operations"
+                    ]
+                ],
+                [
+                    [
+                        "phishing lures",
+                        "theme of",
+                        "diplomatic operations"
+                    ],
+                    [
+                        "phishing lures",
+                        "includes theme of",
+                        "Embassies' operating status updates"
+                    ]
+                ],
+                [
+                    [
+                        "phishing lures",
+                        "include",
+                        "notes verbale"
+                    ],
+                    [
+                        "phishing lures",
+                        "includes theme of",
+                        "Notes verbale"
+                    ]
+                ],
+                [
+                    [
+                        "phishing lures",
+                        "include",
+                        "embassies' operating status updates"
+                    ],
+                    [
+                        "phishing lures",
+                        "includes theme of",
+                        "Embassies' operating status updates"
+                    ]
+                ],
+                [
+                    [
+                        "phishing lures",
+                        "include",
+                        "schedules for diplomats"
+                    ],
+                    [
+                        "phishing lures",
+                        "includes theme of",
+                        "Schedules for diplomats"
+                    ]
+                ],
+                [
+                    [
+                        "phishing lures",
+                        "include",
+                        "invitations to embassy events"
+                    ],
+                    [
+                        "phishing lures",
+                        "includes theme of",
+                        "Invitations to embassy events"
+                    ]
+                ],
+                [
+                    [
+                        "Cloaked Ursa",
+                        "targets",
+                        "diplomatic missions within Ukraine"
+                    ],
+                    [
+                        "Cloaked Ursa",
+                        "targeting",
+                        "diplomatic missions within Ukraine"
+                    ]
+                ],
+                [
+                    [
+                        "Cloaked Ursa",
+                        "leverages",
+                        "lures focusing on the diplomats"
+                    ],
+                    [
+                        "Cloaked Ursa",
+                        "targets",
+                        "diplomatic missions globally"
+                    ]
+                ],
+                [
+                    [
+                        "Cloaked Ursa",
+                        "targeted",
+                        "at least 22 of over 80 foreign missions located in Kyiv"
+                    ],
+                    [
+                        "Cloaked Ursa",
+                        "targeted",
+                        "at least 22 of over 80 foreign missions located in Kyiv"
+                    ]
+                ],
+                [
+                    [
+                        "Cloaked Ursa",
+                        "is attributed to",
+                        "Russia's Foreign Intelligence Service (SVR)"
+                    ],
+                    [
+                        "Cloaked Ursa",
+                        "attributed to",
+                        "Russia's Foreign Intelligence Service (SVR)"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Cloaked Ursa",
+                    "leveraging",
+                    "need for a vehicle"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

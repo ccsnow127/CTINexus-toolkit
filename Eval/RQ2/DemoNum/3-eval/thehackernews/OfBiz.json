@@ -1,0 +1,402 @@
+{
+    "CTI": {
+        "text": "A new zero-day security flaw has been discovered in Apache OfBiz, an open-source Enterprise Resource Planning (ERP) system that could be exploited to bypass authentication protections.The vulnerability, tracked as CVE-2023-51467, resides in the login functionality and is the result of an incomplete patch for another critical vulnerability (CVE-2023-49070, CVSS score: 9.8) that was released earlier this month. CVE-2023-49070 refers to a pre-authenticated remote code execution flaw impacting versions prior to 18.12.10 that, when successfully exploited, could allow threat actors to gain full control over the server and siphon sensitive data. It is caused due to a deprecated XML-RPC component within Apache OFBiz. CVE-2023-51467 could be triggered using empty and invalid USERNAME and PASSWORD parameters in an HTTP request to return an authentication success message, effectively circumventing the protection and enabling a threat actor to access otherwise unauthorized internal resources.",
+        "link": "https://thehackernews.com/2023/12/critical-zero-day-in-apache-ofbiz-erp.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "A new zero-day security flaw",
+                "relation": "discovered in",
+                "object": "Apache OfBiz"
+            },
+            {
+                "subject": "A new zero-day security flaw",
+                "relation": "could be exploited to",
+                "object": "bypass authentication protections"
+            },
+            {
+                "subject": "The vulnerability",
+                "relation": "tracked as",
+                "object": "CVE-2023-51467"
+            },
+            {
+                "subject": "CVE-2023-51467",
+                "relation": "resides in",
+                "object": "the login functionality"
+            },
+            {
+                "subject": "CVE-2023-51467",
+                "relation": "is the result of",
+                "object": "an incomplete patch for another critical vulnerability"
+            },
+            {
+                "subject": "another critical vulnerability",
+                "relation": "is",
+                "object": "CVE-2023-49070"
+            },
+            {
+                "subject": "CVE-2023-49070",
+                "relation": "CVSS score",
+                "object": "9.8"
+            },
+            {
+                "subject": "CVE-2023-49070",
+                "relation": "refers to",
+                "object": "a pre-authenticated remote code execution flaw"
+            },
+            {
+                "subject": "CVE-2023-49070",
+                "relation": "impacts versions prior to",
+                "object": "18.12.10"
+            },
+            {
+                "subject": "successful exploitation of CVE-2023-49070",
+                "relation": "could allow",
+                "object": "threat actors to gain full control over the server"
+            },
+            {
+                "subject": "successful exploitation of CVE-2023-49070",
+                "relation": "could allow",
+                "object": "siphon sensitive data"
+            },
+            {
+                "subject": "CVE-2023-49070",
+                "relation": "is caused due to",
+                "object": "a deprecated XML-RPC component within Apache OFBiz"
+            },
+            {
+                "subject": "CVE-2023-51467",
+                "relation": "could be triggered using",
+                "object": "empty and invalid USERNAME and PASSWORD parameters in an HTTP request"
+            },
+            {
+                "subject": "empty and invalid USERNAME and PASSWORD parameters in an HTTP request",
+                "relation": "return",
+                "object": "an authentication success message"
+            },
+            {
+                "subject": "returning an authentication success message",
+                "relation": "effectively circumvents",
+                "object": "the protection"
+            },
+            {
+                "subject": "effectively circumventing the protection",
+                "relation": "enables",
+                "object": "a threat actor to access otherwise unauthorized internal resources"
+            }
+        ],
+        "triples_count": 16,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1876,
+                "cost": 0.018760000000000002
+            },
+            "output": {
+                "tokens": 501,
+                "cost": 0.01503
+            },
+            "total": {
+                "tokens": 2377,
+                "cost": 0.03379
+            }
+        },
+        "time": 23.04222846031189,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/thehackernews/OfBiz-QD1-6Ec.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "thehackernews: ESG.json",
+                    0.15776297683366516
+                ],
+                [
+                    "BleepingComputer: chrome.json",
+                    0.16766637505972865
+                ],
+                [
+                    "darkreading: Apache-ERP.json",
+                    0.29762249741746144
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 13,
+                "fp": 3,
+                "fn": 7,
+                "precision": 0.8125,
+                "recall": 0.65,
+                "f1": 0.7222222222222223
+            },
+            "matched_list": [
+                [
+                    [
+                        "A new zero-day security flaw",
+                        "discovered in",
+                        "Apache OfBiz"
+                    ],
+                    [
+                        "A new zero-day security flaw",
+                        "has been discovered in",
+                        "Apache OfBiz"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "A new zero-day security flaw",
+                        "could be exploited to",
+                        "bypass authentication protections"
+                    ],
+                    [
+                        "CVE-2023-49070",
+                        "refers to",
+                        "a pre-authenticated remote code execution flaw"
+                    ],
+                    [
+                        0.5264221131326869,
+                        0.4917631518732083
+                    ]
+                ],
+                [
+                    [
+                        "The vulnerability",
+                        "tracked as",
+                        "CVE-2023-51467"
+                    ],
+                    [
+                        "The vulnerability",
+                        "is tracked as",
+                        "CVE-2023-51467"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-51467",
+                        "resides in",
+                        "the login functionality"
+                    ],
+                    [
+                        "CVE-2023-51467",
+                        "resides in",
+                        "the login functionality"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-51467",
+                        "is the result of",
+                        "an incomplete patch for another critical vulnerability"
+                    ],
+                    [
+                        "The vulnerability",
+                        "is tracked as",
+                        "CVE-2023-51467"
+                    ],
+                    [
+                        0.5260154229611995,
+                        0.5234642330277091
+                    ]
+                ],
+                [
+                    [
+                        "another critical vulnerability",
+                        "is",
+                        "CVE-2023-49070"
+                    ],
+                    [
+                        "The vulnerability",
+                        "is tracked as",
+                        "CVE-2023-51467"
+                    ],
+                    [
+                        0.6865476091607665,
+                        0.8569289914999799
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-49070",
+                        "refers to",
+                        "a pre-authenticated remote code execution flaw"
+                    ],
+                    [
+                        "The vulnerability",
+                        "is tracked as",
+                        "CVE-2023-51467"
+                    ],
+                    [
+                        0.5271940067450427,
+                        0.5363472957005755
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-49070",
+                        "impacts versions prior to",
+                        "18.12.10"
+                    ],
+                    [
+                        "a pre-authenticated remote code execution flaw",
+                        "impacts versions prior to",
+                        "18.12.10"
+                    ],
+                    [
+                        0.5475913180818843,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-49070",
+                        "is caused due to",
+                        "a deprecated XML-RPC component within Apache OFBiz"
+                    ],
+                    [
+                        "A new zero-day security flaw",
+                        "has been discovered in",
+                        "Apache OfBiz"
+                    ],
+                    [
+                        0.5264221131326869,
+                        0.5948441302094515
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-51467",
+                        "could be triggered using",
+                        "empty and invalid USERNAME and PASSWORD parameters in an HTTP request"
+                    ],
+                    [
+                        "CVE-2023-51467",
+                        "could be triggered using",
+                        "empty and invalid USERNAME and PASSWORD parameters"
+                    ],
+                    [
+                        1.0,
+                        0.8963134690069927
+                    ]
+                ],
+                [
+                    [
+                        "empty and invalid USERNAME and PASSWORD parameters in an HTTP request",
+                        "return",
+                        "an authentication success message"
+                    ],
+                    [
+                        "empty and invalid USERNAME and PASSWORD parameters",
+                        "in an HTTP request to return",
+                        "an authentication success message"
+                    ],
+                    [
+                        0.8963134690069927,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "returning an authentication success message",
+                        "effectively circumvents",
+                        "the protection"
+                    ],
+                    [
+                        "an authentication success message",
+                        "effectively circumvents",
+                        "the protection"
+                    ],
+                    [
+                        0.8321767936282212,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "effectively circumventing the protection",
+                        "enables",
+                        "a threat actor to access otherwise unauthorized internal resources"
+                    ],
+                    [
+                        "the protection",
+                        "enables",
+                        "a threat actor to access otherwise unauthorized internal resources"
+                    ],
+                    [
+                        0.5019041841863118,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "CVE-2023-49070",
+                    "CVSS score",
+                    "9.8"
+                ],
+                [
+                    "successful exploitation of CVE-2023-49070",
+                    "could allow",
+                    "threat actors to gain full control over the server"
+                ],
+                [
+                    "successful exploitation of CVE-2023-49070",
+                    "could allow",
+                    "siphon sensitive data"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Apache OfBiz",
+                    "is",
+                    "an open-source Enterprise Resource Planning (ERP) system"
+                ],
+                [
+                    "CVE-2023-51467",
+                    "is the result of",
+                    "an incomplete patch for another critical vulnerability"
+                ],
+                [
+                    "another critical vulnerability",
+                    "is",
+                    "CVE-2023-49070"
+                ],
+                [
+                    "CVE-2023-49070",
+                    "has",
+                    "a CVSS score: 9.8"
+                ],
+                [
+                    "threat actors",
+                    "could gain",
+                    "full control over the server"
+                ],
+                [
+                    "threat actors",
+                    "siphon",
+                    "sensitive data"
+                ],
+                [
+                    "It",
+                    "is caused due to",
+                    "a deprecated XML-RPC component within Apache OFBiz"
+                ]
+            ]
+        }
+    }
+}

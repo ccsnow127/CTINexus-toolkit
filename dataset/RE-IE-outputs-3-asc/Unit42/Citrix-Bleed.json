@@ -1,0 +1,113 @@
+{
+    "CTI": {
+        "text": "On Oct. 10, 2023, Citrix published a patch for their Netscaler ADC and Netscaler Gateway products. One particular vulnerability that this patch is meant to mitigate has come to be known as Citrix Bleed (CVE-2023-4966).This nickname was given because the vulnerability can leak sensitive information from the device's memory, which can include session tokens. Attackers can then use these credentials to gain a foothold into systems via session hijacking. At the time of the patch, Citrix was unaware of ongoing attacks using this vulnerability but has since stated that they have observed threat actors using it. The Unit 42 Incident Response and Managed Threat Hunting teams have observed ransomware groups exploiting Citrix Bleed. The Managed Threat Hunting team has also observed what appeared to be remote executions from Netscaler gateways in association with exploitation of this vulnerability.",
+        "link": "https://unit42.paloaltonetworks.com/threat-brief-cve-2023-4966-netscaler-citrix-bleed/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Citrix",
+                "relation": "published",
+                "object": "a patch"
+            },
+            {
+                "subject": "the patch",
+                "relation": "is for",
+                "object": "Netscaler ADC and Netscaler Gateway products"
+            },
+            {
+                "subject": "Citrix Bleed",
+                "relation": "is tracked as",
+                "object": "CVE-2023-4966"
+            },
+            {
+                "subject": "Citrix Bleed",
+                "relation": "can leak",
+                "object": "sensitive information"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "can include",
+                "object": "session tokens"
+            },
+            {
+                "subject": "attackers",
+                "relation": "use",
+                "object": "credentials"
+            },
+            {
+                "subject": "credentials",
+                "relation": "to gain",
+                "object": "a foothold into systems"
+            },
+            {
+                "subject": "systems",
+                "relation": "are accessed via",
+                "object": "session hijacking"
+            },
+            {
+                "subject": "Citrix",
+                "relation": "was unaware of",
+                "object": "ongoing attacks"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "using",
+                "object": "Citrix Bleed"
+            },
+            {
+                "subject": "Unit 42 Incident Response and Managed Threat Hunting teams",
+                "relation": "observed",
+                "object": "ransomware groups exploiting Citrix Bleed"
+            },
+            {
+                "subject": "Managed Threat Hunting team",
+                "relation": "observed",
+                "object": "remote executions from Netscaler gateways"
+            },
+            {
+                "subject": "remote executions from Netscaler gateways",
+                "relation": "in association with",
+                "object": "exploitation of Citrix Bleed"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2698,
+                "cost": 0.02698
+            },
+            "output": {
+                "tokens": 336,
+                "cost": 0.01008
+            },
+            "total": {
+                "tokens": 3034,
+                "cost": 0.03706
+            }
+        },
+        "time": 8.126796245574951,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Unit42/Citrix-Bleed-QD1-j8g.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-github.json",
+                    0.0962363283674411
+                ],
+                [
+                    "AVERTIUM-mallox.json",
+                    0.11637122993132508
+                ],
+                [
+                    "BleepingComputer-citrix.json",
+                    0.3273224104129149
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

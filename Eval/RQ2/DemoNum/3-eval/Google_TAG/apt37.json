@@ -1,0 +1,448 @@
+{
+    "CTI": {
+        "text": "To protect our users, Google\u2019s Threat Analysis Group (TAG) routinely hunts for 0-day vulnerabilities exploited in-the-wild. This blog will describe a 0-day vulnerability, discovered by TAG in late October 2022, embedded in malicious documents and used to target users in South Korea. We attribute this activity to a group of North Korean government-backed actors known as APT37. These malicious documents exploited an Internet Explorer 0-day vulnerability in the JScript engine, CVE-2022-41128. Our policy is to quickly report vulnerabilities to vendors, and within a few hours of discovering this 0-day, we reported it to Microsoft and patches were released to protect users from these attacks. This is not the first time APT37 has used Internet Explorer 0-day exploits to target users. The group has historically focused their targeting on South Korean users, North Korean defectors, policy makers, journalists and human rights activists.",
+        "link": "https://blog.google/threat-analysis-group/internet-explorer-0-day-exploited-by-north-korean-actor-apt37/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Google\u2019s Threat Analysis Group (TAG)",
+                "relation": "hunts for",
+                "object": "0-day vulnerabilities"
+            },
+            {
+                "subject": "Google\u2019s Threat Analysis Group (TAG)",
+                "relation": "discovered",
+                "object": "a 0-day vulnerability"
+            },
+            {
+                "subject": "a 0-day vulnerability",
+                "relation": "embedded in",
+                "object": "malicious documents"
+            },
+            {
+                "subject": "malicious documents",
+                "relation": "used to target",
+                "object": "users in South Korea"
+            },
+            {
+                "subject": "this activity",
+                "relation": "attributed to",
+                "object": "APT37"
+            },
+            {
+                "subject": "APT37",
+                "relation": "is backed by",
+                "object": "North Korean government"
+            },
+            {
+                "subject": "malicious documents",
+                "relation": "exploited",
+                "object": "an Internet Explorer 0-day vulnerability in the JScript engine"
+            },
+            {
+                "subject": "an Internet Explorer 0-day vulnerability in the JScript engine",
+                "relation": "is",
+                "object": "CVE-2022-41128"
+            },
+            {
+                "subject": "Google\u2019s Threat Analysis Group (TAG)",
+                "relation": "reported",
+                "object": "the 0-day vulnerability to Microsoft"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "released",
+                "object": "patches"
+            },
+            {
+                "subject": "APT37",
+                "relation": "used",
+                "object": "Internet Explorer 0-day exploits"
+            },
+            {
+                "subject": "APT37",
+                "relation": "focused their targeting on",
+                "object": "South Korean users"
+            },
+            {
+                "subject": "APT37",
+                "relation": "focused their targeting on",
+                "object": "North Korean defectors"
+            },
+            {
+                "subject": "APT37",
+                "relation": "focused their targeting on",
+                "object": "policy makers"
+            },
+            {
+                "subject": "APT37",
+                "relation": "focused their targeting on",
+                "object": "journalists"
+            },
+            {
+                "subject": "APT37",
+                "relation": "focused their targeting on",
+                "object": "human rights activists"
+            }
+        ],
+        "triples_count": 16,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1602,
+                "cost": 0.016020000000000003
+            },
+            "output": {
+                "tokens": 418,
+                "cost": 0.01254
+            },
+            "total": {
+                "tokens": 2020,
+                "cost": 0.028560000000000002
+            }
+        },
+        "time": 29.22731590270996,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/Google_TAG/apt37-QD1-Wk9.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "Google_TAG: zimbra.json",
+                    0.1662680635242925
+                ],
+                [
+                    "Google_TAG: egypt.json",
+                    0.18696161443239828
+                ],
+                [
+                    "Google_TAG: north-korean-campaign.json",
+                    0.24368317339458093
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 18,
+                "fp": 0,
+                "fn": 3,
+                "precision": 1.0,
+                "recall": 0.8571428571428571,
+                "f1": 0.923076923076923
+            },
+            "matched_list": [
+                [
+                    [
+                        "Google\u2019s Threat Analysis Group (TAG)",
+                        "hunts for",
+                        "0-day vulnerabilities"
+                    ],
+                    [
+                        "Google\u2019s Threat Analysis Group (TAG)",
+                        "routinely hunts for",
+                        "0-day vulnerabilities"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Google\u2019s Threat Analysis Group (TAG)",
+                        "discovered",
+                        "a 0-day vulnerability"
+                    ],
+                    [
+                        "Google\u2019s Threat Analysis Group (TAG)",
+                        "routinely hunts for",
+                        "0-day vulnerabilities"
+                    ],
+                    [
+                        1.0,
+                        0.8581626097641777
+                    ]
+                ],
+                [
+                    [
+                        "a 0-day vulnerability",
+                        "embedded in",
+                        "malicious documents"
+                    ],
+                    [
+                        "a 0-day vulnerability",
+                        "embedded in",
+                        "malicious documents"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "malicious documents",
+                        "used to target",
+                        "users in South Korea"
+                    ],
+                    [
+                        "malicious documents",
+                        "used to target",
+                        "users in South Korea"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "this activity",
+                        "attributed to",
+                        "APT37"
+                    ],
+                    [
+                        "activity",
+                        "is attributed to",
+                        "APT37"
+                    ],
+                    [
+                        0.6899133038742846,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "APT37",
+                        "is backed by",
+                        "North Korean government"
+                    ],
+                    [
+                        "APT37",
+                        "is backed by",
+                        "North Korean government"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "malicious documents",
+                        "exploited",
+                        "an Internet Explorer 0-day vulnerability in the JScript engine"
+                    ],
+                    [
+                        "a 0-day vulnerability",
+                        "embedded in",
+                        "malicious documents"
+                    ],
+                    [
+                        1.0,
+                        0.71788853438657,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "malicious documents",
+                        "exploited",
+                        "an Internet Explorer 0-day vulnerability in the JScript engine"
+                    ],
+                    [
+                        "malicious documents",
+                        "exploited",
+                        "an Internet Explorer 0-day vulnerability"
+                    ],
+                    [
+                        1.0,
+                        0.899047211940434
+                    ]
+                ],
+                [
+                    [
+                        "an Internet Explorer 0-day vulnerability in the JScript engine",
+                        "is",
+                        "CVE-2022-41128"
+                    ],
+                    [
+                        "an Internet Explorer 0-day vulnerability",
+                        "is in",
+                        "the JScript engine"
+                    ],
+                    [
+                        0.6194624524582507,
+                        0.4864097518411128,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "an Internet Explorer 0-day vulnerability in the JScript engine",
+                        "is",
+                        "CVE-2022-41128"
+                    ],
+                    [
+                        "an Internet Explorer 0-day vulnerability",
+                        "is",
+                        "CVE-2022-41128"
+                    ],
+                    [
+                        0.899047211940434,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Google\u2019s Threat Analysis Group (TAG)",
+                        "reported",
+                        "the 0-day vulnerability to Microsoft"
+                    ],
+                    [
+                        "Google\u2019s Threat Analysis Group (TAG)",
+                        "routinely hunts for",
+                        "0-day vulnerabilities"
+                    ],
+                    [
+                        1.0,
+                        0.7740846775226135
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "released",
+                        "patches"
+                    ],
+                    [
+                        "Microsoft",
+                        "released",
+                        "patches"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "APT37",
+                        "used",
+                        "Internet Explorer 0-day exploits"
+                    ],
+                    [
+                        "APT37",
+                        "used",
+                        "Internet Explorer 0-day exploits"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "APT37",
+                        "focused their targeting on",
+                        "South Korean users"
+                    ],
+                    [
+                        "APT37",
+                        "targeted",
+                        "South Korean users"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "APT37",
+                        "focused their targeting on",
+                        "North Korean defectors"
+                    ],
+                    [
+                        "APT37",
+                        "is backed by",
+                        "North Korean government"
+                    ],
+                    [
+                        1.0,
+                        0.6019267638698773
+                    ]
+                ],
+                [
+                    [
+                        "APT37",
+                        "focused their targeting on",
+                        "policy makers"
+                    ],
+                    [
+                        "APT37",
+                        "targeted",
+                        "policy makers"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "APT37",
+                        "focused their targeting on",
+                        "journalists"
+                    ],
+                    [
+                        "APT37",
+                        "targeted",
+                        "journalists"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "APT37",
+                        "focused their targeting on",
+                        "human rights activists"
+                    ],
+                    [
+                        "APT37",
+                        "targeted",
+                        "human rights activists"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Google\u2019s Threat Analysis Group (TAG)",
+                    "discovered",
+                    "a 0-day vulnerability"
+                ],
+                [
+                    "Google\u2019s Threat Analysis Group (TAG)",
+                    "reported",
+                    "vulnerability to Microsoft"
+                ],
+                [
+                    "APT37",
+                    "targeted",
+                    "North Korean defectors"
+                ]
+            ]
+        }
+    }
+}

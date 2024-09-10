@@ -1,0 +1,385 @@
+{
+    "CTI": {
+        "text": "Microsoft security researchers recently identified a campaign where attackers attempted to move laterally to a cloud environment through a SQL Server instance. This attack technique demonstrates an approach we've seen in other cloud services such as VMs and Kubernetes cluster, but not in SQL Server. The attackers initially exploited a SQL injection vulnerability in an application within the target's environment. This allowed the attacker to gain access and elevated permissions on a Microsoft SQL Server instance deployed in Azure Virtual Machine (VM). The attackers then used the acquired elevated permission to attempt to move laterally to additional cloud resources by abusing the server's cloud identity. Cloud identities are commonly used in cloud services including SQL Server and may possess elevated permissions to carry out actions in the cloud. This attack highlights the need to properly secure cloud identities to defend SQL Server instances and cloud resources from unauthorized access.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/10/03/defending-new-vectors-threat-actors-attempt-sql-server-to-cloud-lateral-movement/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "attackers",
+                "relation": "attempted to move laterally to",
+                "object": "a cloud environment"
+            },
+            {
+                "subject": "a cloud environment",
+                "relation": "through",
+                "object": "a SQL Server instance"
+            },
+            {
+                "subject": "attackers",
+                "relation": "exploited",
+                "object": "a SQL injection vulnerability"
+            },
+            {
+                "subject": "a SQL injection vulnerability",
+                "relation": "in",
+                "object": "an application"
+            },
+            {
+                "subject": "attackers",
+                "relation": "gain access and elevated permissions on",
+                "object": "a Microsoft SQL Server instance"
+            },
+            {
+                "subject": "a Microsoft SQL Server instance",
+                "relation": "deployed in",
+                "object": "Azure Virtual Machine (VM)"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used",
+                "object": "the acquired elevated permission"
+            },
+            {
+                "subject": "the acquired elevated permission",
+                "relation": "to attempt to move laterally to",
+                "object": "additional cloud resources"
+            },
+            {
+                "subject": "additional cloud resources",
+                "relation": "by abusing",
+                "object": "the server's cloud identity"
+            },
+            {
+                "subject": "Cloud identities",
+                "relation": "are used in",
+                "object": "cloud services"
+            },
+            {
+                "subject": "cloud services",
+                "relation": "include",
+                "object": "SQL Server"
+            },
+            {
+                "subject": "Cloud identities",
+                "relation": "may possess",
+                "object": "elevated permissions"
+            },
+            {
+                "subject": "elevated permissions",
+                "relation": "to carry out actions in",
+                "object": "the cloud"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2701,
+                "cost": 0.027010000000000003
+            },
+            "output": {
+                "tokens": 341,
+                "cost": 0.01023
+            },
+            "total": {
+                "tokens": 3042,
+                "cost": 0.03724
+            }
+        },
+        "time": 7.98140811920166,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Microsoft/defending-new-vectors-QD1-0Zn.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-github.json",
+                    0.09780069722199901
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.10272382286791101
+                ],
+                [
+                    "AVERTIUM-fargo.json",
+                    0.1257529493699985
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "attempted to move laterally to",
+                "object": {
+                    "text": "a cloud environment",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a cloud environment",
+                    "class": "Infrastructure"
+                },
+                "relation": "through",
+                "object": {
+                    "text": "a SQL Server instance",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "exploited",
+                "object": {
+                    "text": "a SQL injection vulnerability",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a SQL injection vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "in",
+                "object": {
+                    "text": "an application",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "gain access and elevated permissions on",
+                "object": {
+                    "text": "a Microsoft SQL Server instance",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "a Microsoft SQL Server instance",
+                    "class": "Infrastructure"
+                },
+                "relation": "deployed in",
+                "object": {
+                    "text": "Azure Virtual Machine (VM)",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "used",
+                "object": {
+                    "text": "the acquired elevated permission",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the acquired elevated permission",
+                    "class": "Credential"
+                },
+                "relation": "to attempt to move laterally to",
+                "object": {
+                    "text": "additional cloud resources",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "additional cloud resources",
+                    "class": "Infrastructure"
+                },
+                "relation": "by abusing",
+                "object": {
+                    "text": "the server's cloud identity",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Cloud identities",
+                    "class": "Credential"
+                },
+                "relation": "are used in",
+                "object": {
+                    "text": "cloud services",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "cloud services",
+                    "class": "Infrastructure"
+                },
+                "relation": "include",
+                "object": {
+                    "text": "SQL Server",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Cloud identities",
+                    "class": "Credential"
+                },
+                "relation": "may possess",
+                "object": {
+                    "text": "elevated permissions",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "elevated permissions",
+                    "class": "Credential"
+                },
+                "relation": "to carry out actions in",
+                "object": {
+                    "text": "the cloud",
+                    "class": "Infrastructure"
+                }
+            }
+        ],
+        "response_time": 19.49582314491272,
+        "Demo_num": 12,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-12shot/prompt_store/Microsoft/defending-new-vectors.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1855,
+                "cost": 0.01855
+            },
+            "output": {
+                "tokens": 591,
+                "cost": 0.01773
+            },
+            "total": {
+                "tokens": 2446,
+                "cost": 0.03628
+            }
+        },
+        "Eval": {
+            "correct": 25,
+            "incorrect": 1,
+            "TP": 24,
+            "TN": 1,
+            "FP": 1,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 7,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 4,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 25,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Malware": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 11,
+                    "TN": 14,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 2,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 1,
+                    "TN": 25,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 5
+        }
+    }
+}

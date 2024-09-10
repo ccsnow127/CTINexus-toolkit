@@ -1,0 +1,348 @@
+{
+    "CTI": {
+        "text": "Google has rolled out security updates for the Chrome web browser to address a high-severity zero-day flaw that it said has been exploited in the wild. The vulnerability, assigned the CVE identifier CVE-2023-7024, has been described as a heap-based buffer overflow bug in the WebRTC framework that could be exploited to result in program crashes or arbitrary code execution. Cl\u00e9ment Lecigne and Vlad Stolyarov of Google's Threat Analysis Group (TAG) have been credited with discovering and reporting the flaw on December 19, 2023. No other details about the security defect have been released to prevent further abuse, with Google acknowledging that an exploit for CVE-2023-7024 exists in the wild. Given that WebRTC is an open-source project and that it's also supported by Mozilla Firefox and Apple Safari, it's currently not clear if the flaw has any impact beyond Chrome and Chromium-based browsers.",
+        "link": "https://thehackernews.com/2023/12/urgent-new-chrome-zero-day.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Google",
+                "relation": "rolled out",
+                "object": "security updates"
+            },
+            {
+                "subject": "security updates",
+                "relation": "addresses",
+                "object": "a high-severity zero-day flaw"
+            },
+            {
+                "subject": "a high-severity zero-day flaw",
+                "relation": "has been exploited",
+                "object": "in the wild"
+            },
+            {
+                "subject": "the vulnerability",
+                "relation": "assigned",
+                "object": "CVE-2023-7024"
+            },
+            {
+                "subject": "CVE-2023-7024",
+                "relation": "described as",
+                "object": "a heap-based buffer overflow bug"
+            },
+            {
+                "subject": "a heap-based buffer overflow bug",
+                "relation": "is in",
+                "object": "the WebRTC framework"
+            },
+            {
+                "subject": "a heap-based buffer overflow bug",
+                "relation": "could be exploited to",
+                "object": "result in program crashes or arbitrary code execution"
+            },
+            {
+                "subject": "Cl\u00e9ment Lecigne",
+                "relation": "credited with",
+                "object": "discovering and reporting CVE-2023-7024"
+            },
+            {
+                "subject": "Vlad Stolyarov",
+                "relation": "credited with",
+                "object": "discovering and reporting CVE-2023-7024"
+            },
+            {
+                "subject": "CVE-2023-7024",
+                "relation": "has an exploit",
+                "object": "exists in the wild"
+            },
+            {
+                "subject": "WebRTC",
+                "relation": "is",
+                "object": "an open-source project"
+            },
+            {
+                "subject": "WebRTC",
+                "relation": "supported by",
+                "object": "Mozilla Firefox"
+            },
+            {
+                "subject": "WebRTC",
+                "relation": "supported by",
+                "object": "Apple Safari"
+            },
+            {
+                "subject": "the flaw",
+                "relation": "has impact beyond",
+                "object": "Chrome and Chromium-based browsers"
+            }
+        ],
+        "triples_count": 14,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 820,
+                "cost": 0.0082
+            },
+            "output": {
+                "tokens": 381,
+                "cost": 0.011430000000000001
+            },
+            "total": {
+                "tokens": 1201,
+                "cost": 0.01963
+            }
+        },
+        "time": 8.448994159698486,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/thehackernews/chrome-zero-day-QD1-2iX.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "darkreading: Google-Patches.json",
+                    0.2555339590772286
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 2,
+                "precision": 0.8571428571428571,
+                "recall": 0.75,
+                "f1": 0.7999999999999999,
+                "fn": 4
+            },
+            "matched_list": [
+                [
+                    [
+                        "Google",
+                        "rolled out",
+                        "security updates"
+                    ],
+                    [
+                        "Google",
+                        "has rolled out",
+                        "security updates for the Chrome web browser"
+                    ],
+                    [
+                        1.0,
+                        0.7272940182022344
+                    ]
+                ],
+                [
+                    [
+                        "security updates",
+                        "addresses",
+                        "a high-severity zero-day flaw"
+                    ],
+                    [
+                        "security updates",
+                        "address",
+                        "a high-severity zero-day flaw"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "a high-severity zero-day flaw",
+                        "has been exploited",
+                        "in the wild"
+                    ],
+                    [
+                        "an exploit for CVE-2023-7024",
+                        "exists in",
+                        "the wild"
+                    ],
+                    [
+                        0.6271458844673127,
+                        0.7681044861978717
+                    ]
+                ],
+                [
+                    [
+                        "the vulnerability",
+                        "assigned",
+                        "CVE-2023-7024"
+                    ],
+                    [
+                        "a high-severity zero-day flaw",
+                        "is",
+                        "CVE-2023-7024"
+                    ],
+                    [
+                        0.5628477371116264,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-7024",
+                        "described as",
+                        "a heap-based buffer overflow bug"
+                    ],
+                    [
+                        "a high-severity zero-day flaw",
+                        "is",
+                        "CVE-2023-7024"
+                    ],
+                    [
+                        0.5661317578663484,
+                        0.5293070646929441
+                    ]
+                ],
+                [
+                    [
+                        "a heap-based buffer overflow bug",
+                        "is in",
+                        "the WebRTC framework"
+                    ],
+                    [
+                        "CVE-2023-7024",
+                        "has been described as",
+                        "a heap-based buffer overflow bug in the WebRTC framework"
+                    ],
+                    [
+                        0.5293070646929441,
+                        0.6298535139500204
+                    ]
+                ],
+                [
+                    [
+                        "a heap-based buffer overflow bug",
+                        "could be exploited to",
+                        "result in program crashes or arbitrary code execution"
+                    ],
+                    [
+                        "a high-severity zero-day flaw",
+                        "is",
+                        "CVE-2023-7024"
+                    ],
+                    [
+                        0.6163861311568072,
+                        0.4506003591416492
+                    ]
+                ],
+                [
+                    [
+                        "Cl\u00e9ment Lecigne",
+                        "credited with",
+                        "discovering and reporting CVE-2023-7024"
+                    ],
+                    [
+                        "Cl\u00e9ment Lecigne and Vlad Stolyarov",
+                        "credited with",
+                        "discovering and reporting CVE-2023-7024"
+                    ],
+                    [
+                        0.8450423545513303,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-7024",
+                        "has an exploit",
+                        "exists in the wild"
+                    ],
+                    [
+                        "an exploit for CVE-2023-7024",
+                        "exists in",
+                        "the wild"
+                    ],
+                    [
+                        0.8069135051083924,
+                        0.6458571549235215
+                    ]
+                ],
+                [
+                    [
+                        "WebRTC",
+                        "is",
+                        "an open-source project"
+                    ],
+                    [
+                        "WebRTC",
+                        "is",
+                        "an open-source project"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "WebRTC",
+                        "supported by",
+                        "Mozilla Firefox"
+                    ],
+                    [
+                        "WebRTC",
+                        "is supported by",
+                        "Mozilla Firefox"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "WebRTC",
+                        "supported by",
+                        "Apple Safari"
+                    ],
+                    [
+                        "WebRTC",
+                        "is supported by",
+                        "Mozilla Firefox"
+                    ],
+                    [
+                        1.0,
+                        0.6055851827096317
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Vlad Stolyarov",
+                    "credited with",
+                    "discovering and reporting CVE-2023-7024"
+                ],
+                [
+                    "the flaw",
+                    "has impact beyond",
+                    "Chrome and Chromium-based browsers"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "CVE-2023-7024",
+                    "could be exploited to result in",
+                    "program crashes"
+                ],
+                [
+                    "CVE-2023-7024",
+                    "could be exploited to",
+                    "arbitrary code execution"
+                ],
+                [
+                    "Google's Threat Analysis Group (TAG)",
+                    "includes",
+                    "Cl\u00e9ment Lecigne and Vlad Stolyarov"
+                ],
+                [
+                    "WebRTC",
+                    "is supported by",
+                    "Apple Safari"
+                ]
+            ]
+        }
+    }
+}

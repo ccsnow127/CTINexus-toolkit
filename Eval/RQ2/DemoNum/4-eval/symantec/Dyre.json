@@ -1,0 +1,240 @@
+{
+    "CTI": {
+        "text": "The Dyre financial Trojan has emerged over the past year to become one of the most potent financial fraud tools in operation. Dyre is configured to defraud the customers of more than 1,000 banks and other companies worldwide. Consumers in English-speaking countries, in particular the US and UK, are most at risk, since this is where the largest numbers of targeted banks are located.After a number of recent takedowns against major financial threats such as Gameover Zeus, Shylock, and Ramnit, the threat posed by these groups has receded but Dyre has taken their place as one of the main threats to ordinary consumers. Detected by Symantec as Infostealer.Dyre, Dyre targets Windows computers and can steal banking and other credentials by attacking all three major web browsers (Internet Explorer, Chrome, and Firefox). Dyre is a two-pronged threat. Aside from stealing credentials, it can also be used to infect victims with other types of malware, such as adding them to spam botnets.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/equation-cyberespionage-group"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Dyre",
+                "relation": "is",
+                "object": "financial Trojan"
+            },
+            {
+                "subject": "Dyre",
+                "relation": "is configured to defraud",
+                "object": "customers of more than 1,000 banks and other companies worldwide"
+            },
+            {
+                "subject": "Consumers in English-speaking countries",
+                "relation": "are most at risk",
+                "object": "the US and UK"
+            },
+            {
+                "subject": "Dyre",
+                "relation": "has taken place of",
+                "object": "Gameover Zeus, Shylock, and Ramnit"
+            },
+            {
+                "subject": "Dyre",
+                "relation": "detected by",
+                "object": "Symantec as Infostealer.Dyre"
+            },
+            {
+                "subject": "Dyre",
+                "relation": "targets",
+                "object": "Windows computers"
+            },
+            {
+                "subject": "Dyre",
+                "relation": "can steal",
+                "object": "banking and other credentials"
+            },
+            {
+                "subject": "Dyre",
+                "relation": "attacks",
+                "object": "Internet Explorer, Chrome, and Firefox"
+            },
+            {
+                "subject": "Dyre",
+                "relation": "used to infect victims with",
+                "object": "other types of malware"
+            },
+            {
+                "subject": "Dyre",
+                "relation": "adds victims to",
+                "object": "spam botnets"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 3026,
+                "cost": 0.030260000000000002
+            },
+            "output": {
+                "tokens": 343,
+                "cost": 0.01029
+            },
+            "total": {
+                "tokens": 3369,
+                "cost": 0.04055
+            }
+        },
+        "time": 16.45130443572998,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/symantec/Dyre-QD1-ya9.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "symantec: Grayfly.json",
+                    0.05990107313539676
+                ],
+                [
+                    "trendmicro: Mispadu-Banking-Trojan.json",
+                    0.07158333238105481
+                ],
+                [
+                    "Google_TAG: iranian.json",
+                    0.07201275454140725
+                ],
+                [
+                    "AVERTIUM: yanluowang.json",
+                    0.07749952961623058
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 2,
+                "fn": 3,
+                "precision": 0.8,
+                "recall": 0.7272727272727273,
+                "f1": 0.761904761904762
+            },
+            "matched_list": [
+                [
+                    [
+                        "Dyre",
+                        "is",
+                        "financial Trojan"
+                    ],
+                    [
+                        "Dyre",
+                        "is",
+                        "a financial Trojan"
+                    ]
+                ],
+                [
+                    [
+                        "Dyre",
+                        "is configured to defraud",
+                        "customers of more than 1,000 banks and other companies worldwide"
+                    ],
+                    [
+                        "Dyre",
+                        "is configured to defraud",
+                        "the customers of more than 1,000 banks and other companies worldwide"
+                    ]
+                ],
+                [
+                    [
+                        "Dyre",
+                        "has taken place of",
+                        "Gameover Zeus, Shylock, and Ramnit"
+                    ],
+                    [
+                        "Dyre",
+                        "took place of",
+                        "Gameover Zeus, Shylock, and Ramnit as a main threat"
+                    ]
+                ],
+                [
+                    [
+                        "Dyre",
+                        "detected by",
+                        "Symantec as Infostealer.Dyre"
+                    ],
+                    [
+                        "Symantec",
+                        "detected",
+                        "Dyre as Infostealer.Dyre"
+                    ]
+                ],
+                [
+                    [
+                        "Dyre",
+                        "targets",
+                        "Windows computers"
+                    ],
+                    [
+                        "Dyre",
+                        "targets",
+                        "Windows computers"
+                    ]
+                ],
+                [
+                    [
+                        "Dyre",
+                        "can steal",
+                        "banking and other credentials"
+                    ],
+                    [
+                        "Dyre",
+                        "can steal",
+                        "banking and other credentials"
+                    ]
+                ],
+                [
+                    [
+                        "Dyre",
+                        "attacks",
+                        "Internet Explorer, Chrome, and Firefox"
+                    ],
+                    [
+                        "Dyre",
+                        "attacks",
+                        "Internet Explorer, Chrome, and Firefox"
+                    ]
+                ],
+                [
+                    [
+                        "Dyre",
+                        "used to infect victims with",
+                        "other types of malware"
+                    ],
+                    [
+                        "Dyre",
+                        "is used to infect victims with",
+                        "other types of malware"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Consumers in English-speaking countries",
+                    "are most at risk",
+                    "the US and UK"
+                ],
+                [
+                    "Dyre",
+                    "adds victims to",
+                    "spam botnets"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Consumers in English-speaking countries",
+                    "are most at risk by",
+                    "Dyre"
+                ],
+                [
+                    "English-speaking countries",
+                    "include",
+                    "the US and UK"
+                ],
+                [
+                    "Other types of malware",
+                    "include",
+                    "adding victims to spam botnets"
+                ]
+            ],
+            "thresh": 0.8
+        }
+    }
+}

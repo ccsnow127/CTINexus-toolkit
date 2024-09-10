@@ -1,0 +1,387 @@
+{
+    "CTI": {
+        "text": "Iranian espionage group Seedworm (aka Muddywater) has been targeting organizations operating in the telecommunications sector in Egypt, Sudan, and Tanzania. Seedworm has been active since at least 2017, and has targeted organizations in many countries, though it is most strongly associated with attacks on organizations in the Middle East. It has been publicly stated that Seedworm is a cyberespionage group that is believed to be a subordinate part of Iran's Ministry of Intelligence and Security (MOIS). The attackers used a variety of tools in this activity, which occurred in November 2023, including leveraging the MuddyC2Go infrastructure, which was recently discovered and documented by Deep Instinct. Researchers on Symantec's Threat Hunter Team, part of Broadcom, found a MuddyC2Go PowerShell launcher in the activity we investigated. The attackers also use the SimpleHelp remote access tool and Venom Proxy, which have previously been associated with Seedworm activity, as well as using a custom keylogging tool, and other publicly available and living-off-the-land tools.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/iran-apt-seedworm-africa-telecoms"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Seedworm",
+                "relation": "is also known as",
+                "object": "Muddywater"
+            },
+            {
+                "subject": "Seedworm",
+                "relation": "has been targeting",
+                "object": "organizations operating in the telecommunications sector in Egypt, Sudan, and Tanzania"
+            },
+            {
+                "subject": "Seedworm",
+                "relation": "has been active since at least",
+                "object": "2017"
+            },
+            {
+                "subject": "Seedworm",
+                "relation": "has targeted",
+                "object": "organizations in many countries"
+            },
+            {
+                "subject": "Seedworm",
+                "relation": "is most strongly associated with attacks on organizations in",
+                "object": "the Middle East"
+            },
+            {
+                "subject": "Seedworm",
+                "relation": "is believed to be",
+                "object": "a subordinate part of Iran's Ministry of Intelligence and Security (MOIS)"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used",
+                "object": "a variety of tools"
+            },
+            {
+                "subject": "activity",
+                "relation": "occurred in",
+                "object": "November 2023"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used",
+                "object": "MuddyC2Go infrastructure"
+            },
+            {
+                "subject": "Deep Instinct",
+                "relation": "discovered and documented",
+                "object": "MuddyC2Go infrastructure"
+            },
+            {
+                "subject": "Symantec's Threat Hunter Team, part of Broadcom",
+                "relation": "found",
+                "object": "a MuddyC2Go PowerShell launcher"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used",
+                "object": "SimpleHelp remote access tool"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used",
+                "object": "Venom Proxy"
+            },
+            {
+                "subject": "SimpleHelp remote access tool",
+                "relation": "has been associated with",
+                "object": "Seedworm activity"
+            },
+            {
+                "subject": "Venom Proxy",
+                "relation": "has been associated with",
+                "object": "Seedworm activity"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used",
+                "object": "custom keylogging tool"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used",
+                "object": "other publicly available and living-off-the-land tools"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1779,
+                "cost": 0.0008895
+            },
+            "output": {
+                "tokens": 474,
+                "cost": 0.000711
+            },
+            "total": {
+                "tokens": 2253,
+                "cost": 0.0016005
+            }
+        },
+        "time": 8.26810073852539,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/symantec/Seedworm-QD1-ulu.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "symantec: Budworm.json",
+                    0.20995644033808944
+                ],
+                [
+                    "AVERTIUM: muddywater.json",
+                    0.22967220956862217
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 5,
+                "fn": 5,
+                "precision": 0.7058823529411765,
+                "recall": 0.7058823529411765,
+                "f1": 0.7058823529411765
+            },
+            "matched_list": [
+                [
+                    [
+                        "Seedworm",
+                        "is also known as",
+                        "Muddywater"
+                    ],
+                    [
+                        "Seedworm",
+                        "is known as",
+                        "Muddywater"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Seedworm",
+                        "has been targeting",
+                        "organizations operating in the telecommunications sector in Egypt, Sudan, and Tanzania"
+                    ],
+                    [
+                        "Seedworm",
+                        "targeted",
+                        "organizations in the telecommunications sector"
+                    ],
+                    [
+                        1.0,
+                        0.6644056984789756
+                    ]
+                ],
+                [
+                    [
+                        "Seedworm",
+                        "has been active since at least",
+                        "2017"
+                    ],
+                    [
+                        "Seedworm",
+                        "has been active since",
+                        "at least 2017"
+                    ],
+                    [
+                        1.0,
+                        0.6601211120904841
+                    ]
+                ],
+                [
+                    [
+                        "Seedworm",
+                        "has targeted",
+                        "organizations in many countries"
+                    ],
+                    [
+                        "Seedworm",
+                        "targeted",
+                        "organizations in the telecommunications sector"
+                    ],
+                    [
+                        1.0,
+                        0.49763300735392724
+                    ]
+                ],
+                [
+                    [
+                        "Seedworm",
+                        "is most strongly associated with attacks on organizations in",
+                        "the Middle East"
+                    ],
+                    [
+                        "Seedworm",
+                        "is most strongly associated with",
+                        "attacks on organizations in the Middle East"
+                    ],
+                    [
+                        1.0,
+                        0.5375264095818251
+                    ]
+                ],
+                [
+                    [
+                        "Seedworm",
+                        "is believed to be",
+                        "a subordinate part of Iran's Ministry of Intelligence and Security (MOIS)"
+                    ],
+                    [
+                        "Seedworm",
+                        "is a subordinate part of",
+                        "Iran's Ministry of Intelligence and Security (MOIS)"
+                    ],
+                    [
+                        1.0,
+                        0.8360613963097996
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "used",
+                        "a variety of tools"
+                    ],
+                    [
+                        "The attackers",
+                        "use",
+                        "publicly available and living-off-the-land tools"
+                    ],
+                    [
+                        0.8279642986200957,
+                        0.47545655489370153
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "used",
+                        "MuddyC2Go infrastructure"
+                    ],
+                    [
+                        "The attackers",
+                        "used",
+                        "MuddyC2Go infrastructure"
+                    ],
+                    [
+                        0.8279642986200957,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "used",
+                        "SimpleHelp remote access tool"
+                    ],
+                    [
+                        "The attackers",
+                        "use",
+                        "the SimpleHelp remote access tool"
+                    ],
+                    [
+                        0.8279642986200957,
+                        0.8648005774456822
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "used",
+                        "Venom Proxy"
+                    ],
+                    [
+                        "The attackers",
+                        "use",
+                        "Venom Proxy"
+                    ],
+                    [
+                        0.8279642986200957,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "used",
+                        "custom keylogging tool"
+                    ],
+                    [
+                        "The attackers",
+                        "use",
+                        "a custom keylogging tool"
+                    ],
+                    [
+                        0.8279642986200957,
+                        0.9099132341264659
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "used",
+                        "other publicly available and living-off-the-land tools"
+                    ],
+                    [
+                        "The attackers",
+                        "use",
+                        "publicly available and living-off-the-land tools"
+                    ],
+                    [
+                        0.8279642986200957,
+                        0.9576524051064094
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "activity",
+                    "occurred in",
+                    "November 2023"
+                ],
+                [
+                    "Deep Instinct",
+                    "discovered and documented",
+                    "MuddyC2Go infrastructure"
+                ],
+                [
+                    "Symantec's Threat Hunter Team, part of Broadcom",
+                    "found",
+                    "a MuddyC2Go PowerShell launcher"
+                ],
+                [
+                    "SimpleHelp remote access tool",
+                    "has been associated with",
+                    "Seedworm activity"
+                ],
+                [
+                    "Venom Proxy",
+                    "has been associated with",
+                    "Seedworm activity"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "targeted organizations",
+                    "locate in",
+                    "Egypt"
+                ],
+                [
+                    "targeted organizations",
+                    "locate in",
+                    "Sudan"
+                ],
+                [
+                    "targeted organizations",
+                    "locate in",
+                    "Tanzania"
+                ],
+                [
+                    "Seedworm",
+                    "is",
+                    "a cyberespionage group"
+                ],
+                [
+                    "The attackers",
+                    "used",
+                    "a MuddyC2Go PowerShell launcher"
+                ]
+            ]
+        }
+    }
+}

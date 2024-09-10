@@ -1,0 +1,230 @@
+{
+    "CTI": {
+        "text": "Researchers this week disclosed details on two security vulnerabilities in Microsoft Outlook that, when chained together, give attackers a way to execute arbitrary code on affected systems without any user interaction. Unusually, both of them can be triggered using a sound file. One of the flaws, tracked as CVE-2023-35384, is actually the second patch bypass that researchers at Akamai have uncovered for a critical privilege escalation vulnerability in Outlook that Microsoft first patched in March. The second flaw that Akamai disclosed this week (CVE-2023-36710) is a remote code execution (RCE) vulnerability in a feature of Windows Media Foundation, and it has to do with how Windows parses sound files.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/researchers-release-details-on-two-patched-outlook-zero-click-flaws"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Researchers",
+                "relation": "disclosed",
+                "object": "security vulnerabilities in Microsoft Outlook"
+            },
+            {
+                "subject": "attackers",
+                "relation": "execute",
+                "object": "arbitrary code on affected systems without user interaction"
+            },
+            {
+                "subject": "vulnerabilities",
+                "relation": "triggered using",
+                "object": "a sound file"
+            },
+            {
+                "subject": "CVE-2023-35384",
+                "relation": "is a",
+                "object": "second patch bypass"
+            },
+            {
+                "subject": "researchers at Akamai",
+                "relation": "have uncovered",
+                "object": "CVE-2023-35384"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "first patched",
+                "object": "a critical privilege escalation vulnerability"
+            },
+            {
+                "subject": "Akamai",
+                "relation": "disclosed",
+                "object": "CVE-2023-36710"
+            },
+            {
+                "subject": "CVE-2023-36710",
+                "relation": "is a",
+                "object": "remote code execution vulnerability"
+            },
+            {
+                "subject": "CVE-2023-36710",
+                "relation": "in",
+                "object": "Windows Media Foundation"
+            },
+            {
+                "subject": "Windows",
+                "relation": "parses",
+                "object": "sound files"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 936,
+                "cost": 0.00936
+            },
+            "output": {
+                "tokens": 263,
+                "cost": 0.00789
+            },
+            "total": {
+                "tokens": 1199,
+                "cost": 0.01725
+            }
+        },
+        "time": 6.935963869094849,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/darkreading/Microsoft-Outlook-QD1-Jxm.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "symantec: Buckeye.json",
+                    0.15792402635456138
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9090909090909091,
+                "f1": 0.9523809523809523
+            },
+            "matched_list": [
+                [
+                    [
+                        "Researchers",
+                        "disclosed",
+                        "security vulnerabilities in Microsoft Outlook"
+                    ],
+                    [
+                        "two security vulnerabilities",
+                        "are in",
+                        "Microsoft Outlook"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "execute",
+                        "arbitrary code on affected systems without user interaction"
+                    ],
+                    [
+                        "attackers",
+                        "execute",
+                        "arbitrary code on affected systems"
+                    ]
+                ],
+                [
+                    [
+                        "vulnerabilities",
+                        "triggered using",
+                        "a sound file"
+                    ],
+                    [
+                        "both vulnerabilities",
+                        "can be triggered using",
+                        "a sound file"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-35384",
+                        "is a",
+                        "second patch bypass"
+                    ],
+                    [
+                        "CVE-2023-35384",
+                        "is a",
+                        "patch bypass for a critical privilege escalation vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "researchers at Akamai",
+                        "have uncovered",
+                        "CVE-2023-35384"
+                    ],
+                    [
+                        "CVE-2023-35384",
+                        "was uncovered by",
+                        "researchers at Akamai"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "first patched",
+                        "a critical privilege escalation vulnerability"
+                    ],
+                    [
+                        "Microsoft",
+                        "first patched",
+                        "a privilege escalation vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "Akamai",
+                        "disclosed",
+                        "CVE-2023-36710"
+                    ],
+                    [
+                        "CVE-2023-35384",
+                        "was uncovered by",
+                        "researchers at Akamai"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-36710",
+                        "is a",
+                        "remote code execution vulnerability"
+                    ],
+                    [
+                        "CVE-2023-36710",
+                        "is a",
+                        "remote code execution (RCE) vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-36710",
+                        "in",
+                        "Windows Media Foundation"
+                    ],
+                    [
+                        "CVE-2023-36710",
+                        "is in",
+                        "a feature of Windows Media Foundation"
+                    ]
+                ],
+                [
+                    [
+                        "Windows",
+                        "parses",
+                        "sound files"
+                    ],
+                    [
+                        "Windows",
+                        "parses",
+                        "sound files"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "execution",
+                    "does not require",
+                    "user interaction"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,195 @@
+{
+    "CTI": {
+        "text": "Follina (CVE-2022-30190) is a vulnerability in the Microsoft Support Diagnostic Tool (MSDT) that allows remote code execution on vulnerable systems through the ms-msdt protocol handler scheme. The bug is present in all supported versions of Windows. The vulnerability can be easily exploited by a specially crafted Word document that downloads and loads a malicious HTML file through Word's remote template feature. The HTML file ultimately allows the attacker to load and execute PowerShell code within Windows. The vulnerability can also be exploited through the RTF file format.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/follina-msdt-exploit-malware"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Follina",
+                "relation": "is a",
+                "object": "vulnerability in the Microsoft Support Diagnostic Tool (MSDT)"
+            },
+            {
+                "subject": "Follina",
+                "relation": "allows",
+                "object": "remote code execution on vulnerable systems"
+            },
+            {
+                "subject": "ms-msdt protocol handler scheme",
+                "relation": "is used for",
+                "object": "exploiting Follina"
+            },
+            {
+                "subject": "The bug",
+                "relation": "is present in",
+                "object": "all supported versions of Windows"
+            },
+            {
+                "subject": "A specially crafted Word document",
+                "relation": "can exploit",
+                "object": "the vulnerability"
+            },
+            {
+                "subject": "A specially crafted Word document",
+                "relation": "downloads and loads",
+                "object": "a malicious HTML file"
+            },
+            {
+                "subject": "A malicious HTML file",
+                "relation": "allows",
+                "object": "the attacker to load and execute PowerShell code within Windows"
+            },
+            {
+                "subject": "The vulnerability",
+                "relation": "can be exploited through",
+                "object": "the RTF file format"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1143,
+                "cost": 0.011430000000000001
+            },
+            "output": {
+                "tokens": 226,
+                "cost": 0.0067800000000000004
+            },
+            "total": {
+                "tokens": 1369,
+                "cost": 0.01821
+            }
+        },
+        "time": 13.171085596084595,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/symantec/Follina-QD1-V4e.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "threatPost: Microsoft.json",
+                    0.25782653597484195
+                ],
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.22362235183145157
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "Follina",
+                        "is a",
+                        "vulnerability in the Microsoft Support Diagnostic Tool (MSDT)"
+                    ],
+                    [
+                        "Follina",
+                        "is in",
+                        "the Microsoft Support Diagnostic Tool (MSDT)"
+                    ]
+                ],
+                [
+                    [
+                        "Follina",
+                        "allows",
+                        "remote code execution on vulnerable systems"
+                    ],
+                    [
+                        "Follina",
+                        "allows",
+                        "remote code execution on vulnerable systems"
+                    ]
+                ],
+                [
+                    [
+                        "ms-msdt protocol handler scheme",
+                        "is used for",
+                        "exploiting Follina"
+                    ],
+                    [
+                        "vulnerable systems",
+                        "through",
+                        "the ms-msdt protocol handler scheme"
+                    ]
+                ],
+                [
+                    [
+                        "The bug",
+                        "is present in",
+                        "all supported versions of Windows"
+                    ],
+                    [
+                        "The bug",
+                        "is present in",
+                        "all supported versions of Windows"
+                    ]
+                ],
+                [
+                    [
+                        "A specially crafted Word document",
+                        "can exploit",
+                        "the vulnerability"
+                    ],
+                    [
+                        "vulnerability",
+                        "can be exploited by",
+                        "a specially crafted Word document"
+                    ]
+                ],
+                [
+                    [
+                        "A specially crafted Word document",
+                        "downloads and loads",
+                        "a malicious HTML file"
+                    ],
+                    [
+                        "a specially crafted Word document",
+                        "downloads and loads",
+                        "a malicious HTML file"
+                    ]
+                ],
+                [
+                    [
+                        "A malicious HTML file",
+                        "allows",
+                        "the attacker to load and execute PowerShell code within Windows"
+                    ],
+                    [
+                        "The HTML file",
+                        "allows",
+                        "the attacker to load and execute PowerShell code within Windows"
+                    ]
+                ],
+                [
+                    [
+                        "The vulnerability",
+                        "can be exploited through",
+                        "the RTF file format"
+                    ],
+                    [
+                        "vulnerability",
+                        "can also be exploited through",
+                        "the RTF file format"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [],
+            "thresh": 0.7
+        }
+    }
+}

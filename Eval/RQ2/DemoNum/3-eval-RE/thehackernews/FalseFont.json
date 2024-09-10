@@ -1,0 +1,349 @@
+{
+    "CTI": {
+        "text": "Organizations in the Defense Industrial Base (DIB) sector are in the crosshairs of an Iranian threat actor as part of a campaign designed to deliver a never-before-seen backdoor called FalseFont. The findings come from Microsoft, which is tracking the activity under its weather-themed moniker Peach Sandstorm (formerly Holmium), which is also known as APT33, Elfin, and Refined Kitten. FalseFont is a custom backdoor with a wide range of functionalities that allow operators to remotely access an infected system, launch additional files, and send information to its [command-and-control] servers. In a report published in September 2023, Microsoft linked the group to password spray attacks carried out against thousands of organizations globally between February and July 2023. The intrusions primarily singled out satellite, defense, and pharmaceutical sectors. The end goal, the company said, is to facilitate intelligence collection in support of Iranian state interests. Peach Sandstorm is believed to have been active since at least 2013. The disclosure comes as the Israel National Cyber Directorate (INCD) accused Iran and Hezbollah of attempting to unsuccessfully target Ziv Hospital through hacking crews named Agrius and Lebanese Cedar.",
+        "link": "https://thehackernews.com/2023/12/microsoft-warns-of-new-falsefont.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "is also known as",
+                "object": "APT33"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "is also known as",
+                "object": "Elfin"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "is also known as",
+                "object": "Refined Kitten"
+            },
+            {
+                "subject": "Defense Industrial Base sector",
+                "relation": "is targeted by",
+                "object": "an Iranian threat actor"
+            },
+            {
+                "subject": "the campaign",
+                "relation": "designed to deliver",
+                "object": "FalseFont"
+            },
+            {
+                "subject": "FalseFont",
+                "relation": "is",
+                "object": "a custom backdoor"
+            },
+            {
+                "subject": "FalseFont",
+                "relation": "allows operators to",
+                "object": "remotely access an infected system"
+            },
+            {
+                "subject": "FalseFont",
+                "relation": "launches",
+                "object": "additional files"
+            },
+            {
+                "subject": "FalseFont",
+                "relation": "sends information to",
+                "object": "its command-and-control servers"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "track the activity under the moniker",
+                "object": "Peach Sandstorm"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "carried out",
+                "object": "password spray attacks against thousands of organizations"
+            },
+            {
+                "subject": "The intrusions",
+                "relation": "singled out sectors",
+                "object": "satellite, defense, and pharmaceutical"
+            },
+            {
+                "subject": "The end goal",
+                "relation": "is to facilitate",
+                "object": "intelligence collection in support of Iranian state interests"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "has been active since",
+                "object": "at least 2013"
+            },
+            {
+                "subject": "INCD",
+                "relation": "accused",
+                "object": "Iran and Hezbollah of attempting to target Ziv Hospital"
+            },
+            {
+                "subject": "hacking crews",
+                "relation": "named",
+                "object": "Agrius and Lebanese Cedar"
+            }
+        ],
+        "triples_count": 16,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2405,
+                "cost": 0.024050000000000002
+            },
+            "output": {
+                "tokens": 426,
+                "cost": 0.01278
+            },
+            "total": {
+                "tokens": 2831,
+                "cost": 0.03683
+            }
+        },
+        "time": 19.03395414352417,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/thehackernews/FalseFont-QD1-vDT.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM: muddywater.json",
+                    0.15771460843482657
+                ],
+                [
+                    "AVERTIUM: charming-kitten.json",
+                    0.16187326975950322
+                ],
+                [
+                    "Microsoft: peach-sandstorm.json",
+                    0.4241252689590431
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 1,
+                "fn": 4,
+                "precision": 0.9375,
+                "recall": 0.7894736842105263,
+                "f1": 0.8571428571428572
+            },
+            "matched_list": [
+                [
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "APT33"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "APT33"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "Elfin"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "Elfin"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "Refined Kitten"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "Refined Kitten"
+                    ]
+                ],
+                [
+                    [
+                        "Defense Industrial Base sector",
+                        "is targeted by",
+                        "an Iranian threat actor"
+                    ],
+                    [
+                        "Iranian threat actor",
+                        "targets",
+                        "Defense Industrial Base sector"
+                    ]
+                ],
+                [
+                    [
+                        "the campaign",
+                        "designed to deliver",
+                        "FalseFont"
+                    ],
+                    [
+                        "campaign",
+                        "designed to deliver",
+                        "FalseFont"
+                    ]
+                ],
+                [
+                    [
+                        "FalseFont",
+                        "is",
+                        "a custom backdoor"
+                    ],
+                    [
+                        "FalseFont",
+                        "is",
+                        "a custom backdoor"
+                    ]
+                ],
+                [
+                    [
+                        "FalseFont",
+                        "allows operators to",
+                        "remotely access an infected system"
+                    ],
+                    [
+                        "operators",
+                        "can remotely access",
+                        "infected system"
+                    ]
+                ],
+                [
+                    [
+                        "FalseFont",
+                        "launches",
+                        "additional files"
+                    ],
+                    [
+                        "FalseFont",
+                        "launch",
+                        "additional files"
+                    ]
+                ],
+                [
+                    [
+                        "FalseFont",
+                        "sends information to",
+                        "its command-and-control servers"
+                    ],
+                    [
+                        "FalseFont",
+                        "send information to",
+                        "[command-and-control] servers"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "track the activity under the moniker",
+                        "Peach Sandstorm"
+                    ],
+                    [
+                        "Microsoft",
+                        "linked",
+                        "the group to password spray attacks"
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "carried out",
+                        "password spray attacks against thousands of organizations"
+                    ],
+                    [
+                        "password spray attacks",
+                        "carried out against",
+                        "thousands of organizations globally"
+                    ]
+                ],
+                [
+                    [
+                        "The intrusions",
+                        "singled out sectors",
+                        "satellite, defense, and pharmaceutical"
+                    ],
+                    [
+                        "intrusions",
+                        "singled out",
+                        "satellite sector"
+                    ]
+                ],
+                [
+                    [
+                        "The end goal",
+                        "is to facilitate",
+                        "intelligence collection in support of Iranian state interests"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "facilitate",
+                        "intelligence collection"
+                    ]
+                ],
+                [
+                    [
+                        "INCD",
+                        "accused",
+                        "Iran and Hezbollah of attempting to target Ziv Hospital"
+                    ],
+                    [
+                        "Israel National Cyber Directorate (INCD)",
+                        "accused",
+                        "Iran and Hezbollah"
+                    ]
+                ],
+                [
+                    [
+                        "hacking crews",
+                        "named",
+                        "Agrius and Lebanese Cedar"
+                    ],
+                    [
+                        "hacking crews",
+                        "named",
+                        "Agrius"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Peach Sandstorm",
+                    "has been active since",
+                    "at least 2013"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "intrusions",
+                    "singled out",
+                    "defense sector"
+                ],
+                [
+                    "intrusions",
+                    "singled out",
+                    "pharmaceutical sector"
+                ],
+                [
+                    "Iran and Hezbollah",
+                    "attempted to target",
+                    "Ziv Hospital"
+                ],
+                [
+                    "hacking crews",
+                    "named",
+                    "Lebanese Cedar"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,113 @@
+{
+    "CTI": {
+        "text": "Microsoft security researchers recently identified a campaign where attackers attempted to move laterally to a cloud environment through a SQL Server instance. This attack technique demonstrates an approach we've seen in other cloud services such as VMs and Kubernetes cluster, but not in SQL Server. The attackers initially exploited a SQL injection vulnerability in an application within the target's environment. This allowed the attacker to gain access and elevated permissions on a Microsoft SQL Server instance deployed in Azure Virtual Machine (VM). The attackers then used the acquired elevated permission to attempt to move laterally to additional cloud resources by abusing the server's cloud identity. Cloud identities are commonly used in cloud services including SQL Server and may possess elevated permissions to carry out actions in the cloud. This attack highlights the need to properly secure cloud identities to defend SQL Server instances and cloud resources from unauthorized access.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/10/03/defending-new-vectors-threat-actors-attempt-sql-server-to-cloud-lateral-movement/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "attackers",
+                "relation": "attempted to move laterally to",
+                "object": "a cloud environment"
+            },
+            {
+                "subject": "a cloud environment",
+                "relation": "through",
+                "object": "a SQL Server instance"
+            },
+            {
+                "subject": "attackers",
+                "relation": "exploited",
+                "object": "a SQL injection vulnerability"
+            },
+            {
+                "subject": "a SQL injection vulnerability",
+                "relation": "in",
+                "object": "an application"
+            },
+            {
+                "subject": "attackers",
+                "relation": "gain access and elevated permissions on",
+                "object": "a Microsoft SQL Server instance"
+            },
+            {
+                "subject": "a Microsoft SQL Server instance",
+                "relation": "deployed in",
+                "object": "Azure Virtual Machine (VM)"
+            },
+            {
+                "subject": "attackers",
+                "relation": "used",
+                "object": "the acquired elevated permission"
+            },
+            {
+                "subject": "the acquired elevated permission",
+                "relation": "to attempt to move laterally to",
+                "object": "additional cloud resources"
+            },
+            {
+                "subject": "additional cloud resources",
+                "relation": "by abusing",
+                "object": "the server's cloud identity"
+            },
+            {
+                "subject": "Cloud identities",
+                "relation": "are used in",
+                "object": "cloud services"
+            },
+            {
+                "subject": "cloud services",
+                "relation": "include",
+                "object": "SQL Server"
+            },
+            {
+                "subject": "Cloud identities",
+                "relation": "may possess",
+                "object": "elevated permissions"
+            },
+            {
+                "subject": "elevated permissions",
+                "relation": "to carry out actions in",
+                "object": "the cloud"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2701,
+                "cost": 0.027010000000000003
+            },
+            "output": {
+                "tokens": 341,
+                "cost": 0.01023
+            },
+            "total": {
+                "tokens": 3042,
+                "cost": 0.03724
+            }
+        },
+        "time": 7.98140811920166,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Microsoft/defending-new-vectors-QD1-0Zn.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-github.json",
+                    0.09780069722199901
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.10272382286791101
+                ],
+                [
+                    "AVERTIUM-fargo.json",
+                    0.1257529493699985
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

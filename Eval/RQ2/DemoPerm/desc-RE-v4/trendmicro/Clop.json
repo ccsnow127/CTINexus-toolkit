@@ -1,0 +1,286 @@
+{
+    "CTI": {
+        "text": "In November 2021, security researchers detected malicious activity by Clop operators that exploited a SolarWinds Serv-U vulnerability to breach corporate networks and deliver the Clop ransomware as a payload. The Serv-U Managed File Transfer and Serv-U Secure FTP remote code execution (RCE) vulnerability, tracked as CVE-2021-35211, allowed RCE on the vulnerable server with elevated privileges. A maritime services giant with headquarters in Singapore also fell prey to Clop. In November 2021, it was reported that Clop breached its IT systems to steal classified proprietary commercial information and employee data that included bank account details, payroll information, passports, email addresses, and internal correspondence, among others. In October 2022, Microsoft Security reported that DEV-0950, a ransomware group that appears to be associated with the cybercriminal group FIN11 (aka TA505), distributed Clop in a campaign that targeted one of the victims of the Raspberry Robin worm.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-clop"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Clop operators",
+                "relation": "exploited",
+                "object": "a SolarWinds Serv-U vulnerability"
+            },
+            {
+                "subject": "Clop operators",
+                "relation": "breached",
+                "object": "corporate networks"
+            },
+            {
+                "subject": "Clop operators",
+                "relation": "deliver",
+                "object": "the Clop ransomware as a payload"
+            },
+            {
+                "subject": "The Serv-U Managed File Transfer and Serv-U Secure FTP remote code execution (RCE) vulnerability",
+                "relation": "is tracked as",
+                "object": "CVE-2021-35211"
+            },
+            {
+                "subject": "The Serv-U Managed File Transfer and Serv-U Secure FTP remote code execution (RCE) vulnerability",
+                "relation": "allowed",
+                "object": "RCE on the vulnerable server with elevated privileges"
+            },
+            {
+                "subject": "A maritime services giant with headquarters in Singapore",
+                "relation": "fell prey to",
+                "object": "Clop"
+            },
+            {
+                "subject": "Clop",
+                "relation": "breached",
+                "object": "its IT systems"
+            },
+            {
+                "subject": "Clop",
+                "relation": "steal",
+                "object": "classified proprietary commercial information and employee data"
+            },
+            {
+                "subject": "employee data",
+                "relation": "included",
+                "object": "bank account details, payroll information, passports, email addresses, and internal correspondence"
+            },
+            {
+                "subject": "Microsoft Security",
+                "relation": "reported",
+                "object": "DEV-0950 distributed Clop in a campaign"
+            },
+            {
+                "subject": "DEV-0950",
+                "relation": "appears to be associated with",
+                "object": "the cybercriminal group FIN11"
+            },
+            {
+                "subject": "FIN11",
+                "relation": "aka",
+                "object": "TA505"
+            },
+            {
+                "subject": "campaign",
+                "relation": "targeted",
+                "object": "one of the victims of the Raspberry Robin worm"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1369,
+                "cost": 0.01369
+            },
+            "output": {
+                "tokens": 388,
+                "cost": 0.011640000000000001
+            },
+            "total": {
+                "tokens": 1757,
+                "cost": 0.025330000000000002
+            }
+        },
+        "time": 17.151991844177246,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/trendmicro/Clop-QD1-dJN.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "BleepingComputer: fortra.json",
+                    0.2013785136122777
+                ],
+                [
+                    "BleepingComputer: microsoft.json",
+                    0.11507684242326306
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 13,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9285714285714286,
+                "f1": 0.962962962962963
+            },
+            "matched_list": [
+                [
+                    [
+                        "Clop operators",
+                        "exploited",
+                        "a SolarWinds Serv-U vulnerability"
+                    ],
+                    [
+                        "Clop operators",
+                        "exploited",
+                        "a SolarWinds Serv-U vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "Clop operators",
+                        "breached",
+                        "corporate networks"
+                    ],
+                    [
+                        "Clop",
+                        "breached",
+                        "IT systems"
+                    ]
+                ],
+                [
+                    [
+                        "Clop operators",
+                        "deliver",
+                        "the Clop ransomware as a payload"
+                    ],
+                    [
+                        "Clop operators",
+                        "deliver",
+                        "the Clop ransomware"
+                    ]
+                ],
+                [
+                    [
+                        "The Serv-U Managed File Transfer and Serv-U Secure FTP remote code execution (RCE) vulnerability",
+                        "is tracked as",
+                        "CVE-2021-35211"
+                    ],
+                    [
+                        "The Serv-U vulnerability",
+                        "tracked as",
+                        "CVE-2021-35211"
+                    ]
+                ],
+                [
+                    [
+                        "The Serv-U Managed File Transfer and Serv-U Secure FTP remote code execution (RCE) vulnerability",
+                        "allowed",
+                        "RCE on the vulnerable server with elevated privileges"
+                    ],
+                    [
+                        "The Serv-U Managed File Transfer and Serv-U Secure FTP",
+                        "is a",
+                        "remote code execution (RCE) vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "A maritime services giant with headquarters in Singapore",
+                        "fell prey to",
+                        "Clop"
+                    ],
+                    [
+                        "A maritime services giant with headquarters in Singapore",
+                        "fell prey to",
+                        "Clop"
+                    ]
+                ],
+                [
+                    [
+                        "Clop",
+                        "breached",
+                        "its IT systems"
+                    ],
+                    [
+                        "Clop",
+                        "breached",
+                        "IT systems"
+                    ]
+                ],
+                [
+                    [
+                        "Clop",
+                        "steal",
+                        "classified proprietary commercial information and employee data"
+                    ],
+                    [
+                        "Clop",
+                        "steal",
+                        "classified proprietary commercial information"
+                    ]
+                ],
+                [
+                    [
+                        "employee data",
+                        "included",
+                        "bank account details, payroll information, passports, email addresses, and internal correspondence"
+                    ],
+                    [
+                        "employee data",
+                        "included",
+                        "bank account details"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft Security",
+                        "reported",
+                        "DEV-0950 distributed Clop in a campaign"
+                    ],
+                    [
+                        "Microsoft Security",
+                        "reported",
+                        "DEV-0950 distributed Clop in a campaign"
+                    ]
+                ],
+                [
+                    [
+                        "DEV-0950",
+                        "appears to be associated with",
+                        "the cybercriminal group FIN11"
+                    ],
+                    [
+                        "DEV-0950",
+                        "appears to be associated with",
+                        "FIN11 (aka TA505)"
+                    ]
+                ],
+                [
+                    [
+                        "FIN11",
+                        "aka",
+                        "TA505"
+                    ],
+                    [
+                        "DEV-0950",
+                        "appears to be associated with",
+                        "FIN11 (aka TA505)"
+                    ]
+                ],
+                [
+                    [
+                        "campaign",
+                        "targeted",
+                        "one of the victims of the Raspberry Robin worm"
+                    ],
+                    [
+                        "Clop",
+                        "targeted",
+                        "victims of the Raspberry Robin worm"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "DEV-0950",
+                    "distributed",
+                    "Clop"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

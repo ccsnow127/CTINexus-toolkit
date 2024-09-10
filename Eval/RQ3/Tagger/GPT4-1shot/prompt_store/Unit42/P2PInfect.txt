@@ -1,0 +1,110 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Unit 42 cloud researchers', 'relation': 'discovered', 'object': 'P2PInfect'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'P2PInfect', 'relation': 'is written in', 'object': 'Rust'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'P2PInfect', 'relation': 'is capable of', 'object': 'cross-platform infections'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'P2PInfect', 'relation': 'targets', 'object': 'Redis'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Redis', 'relation': 'is', 'object': 'a popular open-source database application'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Redis', 'relation': 'is used within', 'object': 'cloud environments'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Redis instances', 'relation': 'can be run on', 'object': 'Linux and Windows operating systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Unit 42 researchers', 'relation': 'have identified', 'object': 'over 307,000 unique Redis systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': '934 Redis systems', 'relation': 'may be vulnerable to', 'object': 'P2PInfect worm variant'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'P2PInfect', 'relation': 'infects', 'object': 'vulnerable Redis instances'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'P2PInfect', 'relation': 'exploits', 'object': 'the Lua sandbox escape vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the Lua sandbox escape vulnerability', 'relation': 'is', 'object': 'CVE-2022-0543'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2022-0543', 'relation': 'is rated in the NIST National Vulnerability Database with', 'object': 'a Critical CVSS score of 10.0'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'P2PInfect', 'relation': 'exploits Redis servers running on', 'object': 'Linux and Windows operating systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'P2PInfect worm', 'relation': 'serves as', 'object': 'an example of a serious attack threat'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

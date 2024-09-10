@@ -1,0 +1,105 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Action",
+    "Attacker",
+    "Campaign",
+    "Event",
+    "Exploit Target Object",
+    "Host",
+    {
+        "Indicator":[
+            "Adress",
+            "Email",
+            "File",
+            "Hash"
+        ]
+    },
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic",
+    "Malware Family",
+    "Organization",
+    "Software",
+    "System",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "is", "object": "a relatively new player in the ransomware market"} 
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "is", "object": {"text": "a relatively new player in the ransomware market", "class": "This entity cannot be classified into any of the existing types"}} 
+---------------------
+Example 2:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "claimed responsibility for", "object": "three recent attacks"}
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "claimed responsibility for", "object": {"text": "three recent attacks", "class": "Event"}} 
+---------------------
+Example 3:
+
+"triple": {"subject": "The victims", "relation": "include", "object": "4LEAF"}
+
+"tagged_triple": {"subject": {"text": "The victims", "class": "Exploit Target Object"}, "relation": "include", "object": {"text": "4LEAF", "class": "Exploit Target Object"}} 
+---------------------
+
+
+"triple":: {'subject': 'APT35', 'relation': 'is also known as', 'object': 'Charming Kitten'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'APT35', 'relation': 'is also known as', 'object': 'Phosphorus'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'APT35', 'relation': 'launched', 'object': 'one of the most sophisticated internet based spying campaigns'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'this campaign', 'relation': 'was conducted via', 'object': 'social media'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'APT35', 'relation': 'targeted', 'object': 'several academic institutions in the U.S, France, and the Middle East region'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'APT35', 'relation': 'targeted', 'object': 'medical research organizations in Israel and in the U.S'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'APT35', 'relation': 'abused', 'object': 'Microsoft Exchange Server vulnerabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Microsoft Exchange Server vulnerabilities', 'relation': 'were chained together', 'object': 'ProxyShell'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'APT35', 'relation': 'has been observed using', 'object': 'new tactics to attack a wide range of targets'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'APT35', 'relation': 'used', 'object': 'a new strain of malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the new strain of malware', 'relation': 'was used for', 'object': 'intelligence collection'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'APT35', 'relation': 'has been seen using', 'object': 'Hyperscrape'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Hyperscrape', 'relation': 'is used to', 'object': "quietly extract emails from victim's mailboxes"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

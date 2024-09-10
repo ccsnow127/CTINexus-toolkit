@@ -1,0 +1,301 @@
+{
+    "CTI": {
+        "text": "In May 2023, Kroll Cyber Threat Intelligence analysts published their discoveries of a new ransomware variant referred to as CACTUS, which has been actively targeting large commercial entities since March 2023. The name CACTUS is derived from the filename found within the ransom note, cAcTuS.readme.txt, and is also self-declared within the note. Encrypted files carry the extension .cts1, although variations in the appended number have been observed across different incidents and victims. CACTUS uses a unique tactic by requiring a key for decrypting the binary, likely implemented to evade antivirus detection. This key is embedded within a file named ntuser.dat, loaded through a scheduled task. Kroll's research noted instances of data exfiltration and victim extortion over Tox, a peer-to-peer messaging service, but no known victim leak site was identified.In its operations, CACTUS demonstrates a consistent set of tactics, techniques, and procedures (TTPs). The initial exploit involves the exploitation of vulnerable VPN appliances, a prevalent method observed across multiple CACTUS incidents. Once inside the network, the threat actor conducts internal scouting using tools like SoftPerfect Network Scanner and PowerShell commands to enumerate endpoints, identify user accounts, and ping remote endpoints. To maintain persistence, CACTUS deploys various remote access methods, including legitimate tools like Splashtop, AnyDesk, and SuperOps RMM, along with malicious tools like Cobalt Strike and Chisel. The threat actor attempts to disable security software using custom scripts, such as TotalExec, and uninstall common antivirus software.",
+        "link": "https://explore.avertium.com/resource/new-ransomware-strains-cactus-and-3am"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Kroll Cyber Threat Intelligence analysts",
+                "relation": "published",
+                "object": "discoveries of a new ransomware variant referred to as CACTUS"
+            },
+            {
+                "subject": "CACTUS",
+                "relation": "actively targeting",
+                "object": "large commercial entities since March 2023"
+            },
+            {
+                "subject": "Ransomware variant",
+                "relation": "derived from",
+                "object": "the filename found within the ransom note"
+            },
+            {
+                "subject": "Encrypted files",
+                "relation": "carry",
+                "object": "the extension .cts1"
+            },
+            {
+                "subject": "CACTUS",
+                "relation": "requires a key for decrypting the binary",
+                "object": "likely implemented to evade antivirus detection"
+            },
+            {
+                "subject": "Key",
+                "relation": "embedded within",
+                "object": "a file named ntuser.dat, loaded through a scheduled task"
+            },
+            {
+                "subject": "Kroll's research",
+                "relation": "noted",
+                "object": "instances of data exfiltration and victim extortion over Tox"
+            },
+            {
+                "subject": "CACTUS",
+                "relation": "demonstrates",
+                "object": "a consistent set of tactics, techniques, and procedures (TTPs)"
+            },
+            {
+                "subject": "Initial exploit",
+                "relation": "involves",
+                "object": "the exploitation of vulnerable VPN appliances"
+            },
+            {
+                "subject": "Threat actor",
+                "relation": "conducts",
+                "object": "internal scouting using tools like SoftPerfect Network Scanner and PowerShell commands"
+            },
+            {
+                "subject": "CACTUS",
+                "relation": "deploys",
+                "object": "various remote access methods, including legitimate tools like Splashtop, AnyDesk, and SuperOps RMM, along with malicious tools like Cobalt Strike and Chisel"
+            },
+            {
+                "subject": "Threat actor",
+                "relation": "attempts to disable",
+                "object": "security software using custom scripts like TotalExec"
+            },
+            {
+                "subject": "Threat actor",
+                "relation": "attempts to uninstall",
+                "object": "common antivirus software"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 2223,
+                "cost": 0.0011114999999999999
+            },
+            "output": {
+                "tokens": 516,
+                "cost": 0.0007740000000000001
+            },
+            "total": {
+                "tokens": 2739,
+                "cost": 0.0018855
+            }
+        },
+        "time": 9.391851663589478,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/AVERTIUM/cactus-QD1-ATv.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "AVERTIUM: rhysida.json",
+                    0.11190327922491919
+                ],
+                [
+                    "AVERTIUM: fivehands.json",
+                    0.11865635308595339
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 3,
+                "fn": 8,
+                "precision": 0.7692307692307693,
+                "recall": 0.5555555555555556,
+                "f1": 0.6451612903225806
+            },
+            "matched_list": [
+                [
+                    [
+                        "Kroll Cyber Threat Intelligence analysts",
+                        "published",
+                        "discoveries of a new ransomware variant referred to as CACTUS"
+                    ],
+                    [
+                        "CACTUS ransomware",
+                        "is a variant targeting",
+                        "large commercial entities"
+                    ]
+                ],
+                [
+                    [
+                        "CACTUS",
+                        "actively targeting",
+                        "large commercial entities since March 2023"
+                    ],
+                    [
+                        "CACTUS ransomware",
+                        "is a variant targeting",
+                        "large commercial entities"
+                    ]
+                ],
+                [
+                    [
+                        "CACTUS",
+                        "requires a key for decrypting the binary",
+                        "likely implemented to evade antivirus detection"
+                    ],
+                    [
+                        "CACTUS ransomware",
+                        "uses a unique tactic by requiring",
+                        "a key for decrypting the binary"
+                    ]
+                ],
+                [
+                    [
+                        "Key",
+                        "embedded within",
+                        "a file named ntuser.dat, loaded through a scheduled task"
+                    ],
+                    [
+                        "The key",
+                        "is embedded within",
+                        "ntuser.dat"
+                    ]
+                ],
+                [
+                    [
+                        "Kroll's research",
+                        "noted",
+                        "instances of data exfiltration and victim extortion over Tox"
+                    ],
+                    [
+                        "CACTUS ransomware",
+                        "conducts",
+                        "victim extortion over Tox"
+                    ]
+                ],
+                [
+                    [
+                        "Initial exploit",
+                        "involves",
+                        "the exploitation of vulnerable VPN appliances"
+                    ],
+                    [
+                        "CACTUS ransomware",
+                        "exploits",
+                        "vulnerable VPN appliances"
+                    ]
+                ],
+                [
+                    [
+                        "Threat actor",
+                        "conducts",
+                        "internal scouting using tools like SoftPerfect Network Scanner and PowerShell commands"
+                    ],
+                    [
+                        "The threat actor",
+                        "uses",
+                        "SoftPerfect Network Scanner"
+                    ]
+                ],
+                [
+                    [
+                        "CACTUS",
+                        "deploys",
+                        "various remote access methods, including legitimate tools like Splashtop, AnyDesk, and SuperOps RMM, along with malicious tools like Cobalt Strike and Chisel"
+                    ],
+                    [
+                        "CACTUS ransomware",
+                        "deploys",
+                        "remote access methods"
+                    ]
+                ],
+                [
+                    [
+                        "Threat actor",
+                        "attempts to disable",
+                        "security software using custom scripts like TotalExec"
+                    ],
+                    [
+                        "The threat actor",
+                        "attempts to disable",
+                        "security software using custom scripts"
+                    ]
+                ],
+                [
+                    [
+                        "Threat actor",
+                        "attempts to uninstall",
+                        "common antivirus software"
+                    ],
+                    [
+                        "The threat actor",
+                        "uninstalls",
+                        "common antivirus software"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Ransomware variant",
+                    "derived from",
+                    "the filename found within the ransom note"
+                ],
+                [
+                    "Encrypted files",
+                    "carry",
+                    "the extension .cts1"
+                ],
+                [
+                    "CACTUS",
+                    "demonstrates",
+                    "a consistent set of tactics, techniques, and procedures (TTPs)"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "CACTUS ransomware",
+                    "conducts",
+                    "data exfiltration"
+                ],
+                [
+                    "The threat actor",
+                    "uses",
+                    "PowerShell commands"
+                ],
+                [
+                    "legitimate tools",
+                    "include",
+                    "Splashtop"
+                ],
+                [
+                    "legitimate tools",
+                    "include",
+                    "AnyDesk"
+                ],
+                [
+                    "legitimate tools",
+                    "include",
+                    "SuperOps RMM"
+                ],
+                [
+                    "malicious tools",
+                    "include",
+                    "Cobalt Strike"
+                ],
+                [
+                    "malicious tools",
+                    "include",
+                    "Chisel"
+                ],
+                [
+                    "The custom scripts",
+                    "include",
+                    "TotalExec"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "CTI": {
+        "text": "We discovered a recent WhatsApp phishing campaign through our telemetry that led to banking trojan activity. In this campaign, the attacker shares a malicious APK file through WhatsApp with a message asking users to enter sensitive information in the app. The widely circulated fake banking message states \u201cYour [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You.\u201d and includes a APK file named [redacted]-BANK[.]apk. Upon investigation, we discovered that the APK file was malicious and interacting with it installs a fraudulent application on the victim device. The installed app impersonates a legitimate bank located in India and disguises itself as the bank's official Know Your Customer (KYC) application to trick users into submitting their sensitive information, despite this particular banking organization not being affiliated with an official KYC-related app. This information is then sent to a command and control (C2) server, as well as to the attacker's hard-coded phone number used in SMS functionality.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/11/20/social-engineering-attacks-lure-indian-users-to-install-android-banking-trojans/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "the attacker",
+                "relation": "shares",
+                "object": "a malicious APK file through WhatsApp"
+            },
+            {
+                "subject": "the attacker",
+                "relation": "asks",
+                "object": "users to enter sensitive information in the app"
+            },
+            {
+                "subject": "the malicious APK file",
+                "relation": "leads to",
+                "object": "banking trojan activity"
+            },
+            {
+                "subject": "the fake banking message",
+                "relation": "states",
+                "object": "Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You."
+            },
+            {
+                "subject": "[redacted]-BANK[.]apk",
+                "relation": "is",
+                "object": "malicious"
+            },
+            {
+                "subject": "the fraudulent application",
+                "relation": "impersonates",
+                "object": "a legitimate bank located in India"
+            },
+            {
+                "subject": "the fraudulent application",
+                "relation": "disguises itself as",
+                "object": "the bank's official Know Your Customer (KYC) application"
+            },
+            {
+                "subject": "users",
+                "relation": "submit",
+                "object": "their sensitive information"
+            },
+            {
+                "subject": "the information",
+                "relation": "is sent to",
+                "object": "a command and control (C2) server"
+            },
+            {
+                "subject": "the information",
+                "relation": "is sent to",
+                "object": "the attacker's hard-coded phone number"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2587,
+                "cost": 0.02587
+            },
+            "output": {
+                "tokens": 303,
+                "cost": 0.00909
+            },
+            "total": {
+                "tokens": 2890,
+                "cost": 0.034960000000000005
+            }
+        },
+        "time": 9.222443103790283,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Microsoft/lure-indian-users-QD1-m88.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.049848395510178105
+                ],
+                [
+                    "BleepingComputer-purplefox.json",
+                    0.0502164571787873
+                ],
+                [
+                    "BleepingComputer-goanywhere.json",
+                    0.05052360854683935
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

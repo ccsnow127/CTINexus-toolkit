@@ -1,0 +1,98 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'A suspicious NuGet package', 'relation': 'is designed to', 'object': 'harvest data from industrial systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'A suspicious NuGet package', 'relation': 'appears to be targeting', 'object': 'developers who use technology from Chinese company Bozhon'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SqzrFramework480', 'relation': 'is published on', 'object': 'the NuGet repository'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SqzrFramework480', 'relation': 'is responsible for', 'object': 'calibrating robotic movement settings, managing and creating GUIs, initializing and configuring machine vision libraries'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SqzrFramework480', 'relation': 'can harvest', 'object': 'various types of information from different types of industrial systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SqzrFramework480', 'relation': 'can take', 'object': 'screenshots'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SqzrFramework480', 'relation': 'can send', 'object': 'ping packets'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SqzrFramework480', 'relation': 'can open', 'object': 'sockets for data transfer'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The function that takes screenshots', 'relation': 'operates in', 'object': 'a continuous loop'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The function', 'relation': 'is not explicitly declared in', 'object': 'the code'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The function', 'relation': 'captures', 'object': 'the primary screen every minute'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The information', 'relation': 'is sent to', 'object': 'a remote IP address'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

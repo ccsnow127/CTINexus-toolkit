@@ -1,0 +1,93 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Action",
+    "Attacker",
+    "Campaign",
+    "Event",
+    "Exploit Target Object",
+    "Host",
+    {
+        "Indicator":[
+            "Adress",
+            "Email",
+            "File",
+            "Hash"
+        ]
+    },
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic",
+    "Malware Family",
+    "Organization",
+    "Software",
+    "System",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "is", "object": "a relatively new player in the ransomware market"} 
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "is", "object": {"text": "a relatively new player in the ransomware market", "class": "This entity cannot be classified into any of the existing types"}} 
+---------------------
+Example 2:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "claimed responsibility for", "object": "three recent attacks"}
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "claimed responsibility for", "object": {"text": "three recent attacks", "class": "Event"}} 
+---------------------
+Example 3:
+
+"triple": {"subject": "The victims", "relation": "include", "object": "4LEAF"}
+
+"tagged_triple": {"subject": {"text": "The victims", "class": "Exploit Target Object"}, "relation": "include", "object": {"text": "4LEAF", "class": "Exploit Target Object"}} 
+---------------------
+
+
+"triple":: {'subject': 'Cuba ransomware', 'relation': 'first appeared', 'object': 'in 2019'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cuba ransomware', 'relation': 'remained relatively unnoticed until', 'object': 'November 2021'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cuba ransomware', 'relation': 'targeted', 'object': 'a minimum of 49 organizations across various sectors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The sectors', 'relation': 'included', 'object': 'government, healthcare, information technology, manufacturing, and finance'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cuba ransomware operators', 'relation': 'were infiltrating networks by', 'object': "encrypting files using the '.cuba' extension"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The ransom demands from Cuba', 'relation': 'totals at least', 'object': '$145 million'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The group', 'relation': 'has successfully collected', 'object': 'at least $60 million in ransom payments'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The threat actors', 'relation': 'had expanded', 'object': 'their tactics, techniques, and procedures (TTPs) by 2022'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Security researchers', 'relation': 'suggest a potential connection between', 'object': 'Cuba ransomware actors, RomCom Remote Access Trojan (RAT) actors, and Industrial Spy ransomware actors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Cuba', 'relation': 'garnered attention when they took responsibility for', 'object': 'a cyberattack on The Philadelphia Inquirer'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

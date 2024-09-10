@@ -1,0 +1,139 @@
+{
+    "CTI": {
+        "text": "The CL0P ransomware group recently began using torrents to distribute victim data after a successful campaign stealing data from thousands of companies. We'll cover the reason for this shift in methodology and what this means for visibility to the outside world. CL0P has been one of the ransomware groups most actively posting data about their victims on leak sites tracked by Unit 42 (second only to LockBit in 2023). Unit 42 consultants have recently observed CL0P in about 10 incident response cases.",
+        "link": "https://unit42.paloaltonetworks.com/cl0p-group-distributes-ransomware-data-with-torrents/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "CL0P ransomware group",
+                "relation": "began using",
+                "object": "torrents to distribute victim data"
+            },
+            {
+                "subject": "CL0P ransomware group",
+                "relation": "stealing data from",
+                "object": "thousands of companies"
+            },
+            {
+                "subject": "CL0P ransomware group",
+                "relation": "posting data about victims on",
+                "object": "leak sites"
+            },
+            {
+                "subject": "CL0P ransomware group",
+                "relation": "observed in",
+                "object": "about 10 incident response cases"
+            }
+        ],
+        "triples_count": 4,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1211,
+                "cost": 0.012110000000000001
+            },
+            "output": {
+                "tokens": 123,
+                "cost": 0.00369
+            },
+            "total": {
+                "tokens": 1334,
+                "cost": 0.0158
+            }
+        },
+        "time": 4.1964380741119385,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/Unit42/CL0P-Seeds-QD1-da3.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "AVERTIUM: mallox.json",
+                    0.1596234859880811
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 3,
+                "fp": 1,
+                "precision": 0.75,
+                "recall": 0.6,
+                "f1": 0.6666666666666665,
+                "fn": 2
+            },
+            "matched_list": [
+                [
+                    [
+                        "CL0P ransomware group",
+                        "began using",
+                        "torrents to distribute victim data"
+                    ],
+                    [
+                        "The CL0P ransomware group",
+                        "began using",
+                        "torrents to distribute victim data"
+                    ],
+                    [
+                        0.9411124401508507,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CL0P ransomware group",
+                        "stealing data from",
+                        "thousands of companies"
+                    ],
+                    [
+                        "The CL0P ransomware group",
+                        "stealing data from",
+                        "thousands of companies"
+                    ],
+                    [
+                        0.9411124401508507,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CL0P ransomware group",
+                        "posting data about victims on",
+                        "leak sites"
+                    ],
+                    [
+                        "The CL0P ransomware group",
+                        "posting data about",
+                        "their victims on leak sites"
+                    ],
+                    [
+                        0.9411124401508507,
+                        0.6563112681249892
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "CL0P ransomware group",
+                    "observed in",
+                    "about 10 incident response cases"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Unit 42",
+                    "tracked",
+                    "leak sites"
+                ],
+                [
+                    "Unit 42",
+                    "observed CL0P in",
+                    "incident response cases"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,258 @@
+{
+    "CTI": {
+        "text": "ChromeLoader may seem on the surface like a run-of-the-mill browser hijacker that merely redirects victims to advertisement websites. However, its use of PowerShell could pose a greater risk by leading to further and advanced malicious activity, such as the propagation of ransomware or spyware or theft of browser-session data. Researchers are warning of the potential for ChromeLoader-which has seen a resurgence in activity recently-to pose a more sophisticated threat than typical malvertisers do, according to two separate blog posts by Malwarebytes Labs and Red Canary. ChromeLoader is a pervasive and persistent browser hijacker that eventually manifests as a browser extension, modifying victims\u2019 Chrome settings and redirecting user traffic to advertisement websites. On Windows machines, victims become infected with the malware through ISO files that poses as a cracked video game or pirated films or TV programs.",
+        "link": "https://threatpost.com/chromeloader-hijacker-threats/179761/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "ChromeLoader",
+                "relation": "is described as",
+                "object": "browser hijacker"
+            },
+            {
+                "subject": "ChromeLoader",
+                "relation": "uses",
+                "object": "PowerShell"
+            },
+            {
+                "subject": "ChromeLoader",
+                "relation": "leads to",
+                "object": "ransomware or spyware propagation, theft of browser-session data"
+            },
+            {
+                "subject": "ChromeLoader",
+                "relation": "manifests as",
+                "object": "a browser extension"
+            },
+            {
+                "subject": "ChromeLoader",
+                "relation": "modifies",
+                "object": "victims\u2019 Chrome settings"
+            },
+            {
+                "subject": "ChromeLoader",
+                "relation": "redirects",
+                "object": "user traffic to advertisement websites"
+            },
+            {
+                "subject": "Victims",
+                "relation": "become infected through",
+                "object": "ISO files"
+            },
+            {
+                "subject": "ISO files",
+                "relation": "poses as",
+                "object": "cracked video game or pirated films or TV programs"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1277,
+                "cost": 0.012770000000000002
+            },
+            "output": {
+                "tokens": 266,
+                "cost": 0.007980000000000001
+            },
+            "total": {
+                "tokens": 1543,
+                "cost": 0.020750000000000005
+            }
+        },
+        "time": 9.868539333343506,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/threatPost/Hijacker-QD1-cd8.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "AVERTIUM: mallox.json",
+                    0.08232756219052127
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 1,
+                "precision": 0.875,
+                "recall": 0.4375,
+                "f1": 0.5833333333333334,
+                "fn": 9
+            },
+            "matched_list": [
+                [
+                    [
+                        "ChromeLoader",
+                        "is described as",
+                        "browser hijacker"
+                    ],
+                    [
+                        "ChromeLoader",
+                        "is classified as",
+                        "browser hijacker"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "ChromeLoader",
+                        "uses",
+                        "PowerShell"
+                    ],
+                    [
+                        "ChromeLoader",
+                        "uses",
+                        "PowerShell"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "ChromeLoader",
+                        "leads to",
+                        "ransomware or spyware propagation, theft of browser-session data"
+                    ],
+                    [
+                        "ChromeLoader",
+                        "is classified as",
+                        "browser hijacker"
+                    ],
+                    [
+                        1.0,
+                        0.5164456052626788
+                    ]
+                ],
+                [
+                    [
+                        "ChromeLoader",
+                        "manifests as",
+                        "a browser extension"
+                    ],
+                    [
+                        "ChromeLoader",
+                        "is classified as",
+                        "browser hijacker"
+                    ],
+                    [
+                        1.0,
+                        0.5408318504112095
+                    ]
+                ],
+                [
+                    [
+                        "ChromeLoader",
+                        "modifies",
+                        "victims\u2019 Chrome settings"
+                    ],
+                    [
+                        "ChromeLoader",
+                        "is classified as",
+                        "browser hijacker"
+                    ],
+                    [
+                        1.0,
+                        0.5043646619627328
+                    ]
+                ],
+                [
+                    [
+                        "ChromeLoader",
+                        "redirects",
+                        "user traffic to advertisement websites"
+                    ],
+                    [
+                        "ChromeLoader",
+                        "redirects victims to",
+                        "advertisement websites"
+                    ],
+                    [
+                        1.0,
+                        0.627537573632758
+                    ]
+                ],
+                [
+                    [
+                        "ISO files",
+                        "poses as",
+                        "cracked video game or pirated films or TV programs"
+                    ],
+                    [
+                        "ISO files",
+                        "poses as",
+                        "cracked video game or pirated films or TV programs"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Victims",
+                    "become infected through",
+                    "ISO files"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "PowerShell",
+                    "could lead to",
+                    "further and advanced malicious activity"
+                ],
+                [
+                    "further and advanced malicious activity",
+                    "includes",
+                    "propagation of ransomware"
+                ],
+                [
+                    "further and advanced malicious activity",
+                    "includes",
+                    "spyware"
+                ],
+                [
+                    "further and advanced malicious activity",
+                    "includes",
+                    "theft of browser-session data"
+                ],
+                [
+                    "ChromeLoader",
+                    "manifests as",
+                    "browser extension"
+                ],
+                [
+                    "browser extension",
+                    "modifies",
+                    "Chrome settings"
+                ],
+                [
+                    "browser extension",
+                    "redirects",
+                    "user traffic to advertisement websites"
+                ],
+                [
+                    "victims",
+                    "become infected with",
+                    "ChromeLoader"
+                ],
+                [
+                    "ChromeLoader",
+                    "is distributed through",
+                    "ISO files"
+                ]
+            ]
+        }
+    }
+}

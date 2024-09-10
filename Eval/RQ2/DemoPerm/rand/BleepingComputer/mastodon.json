@@ -1,0 +1,199 @@
+{
+    "CTI": {
+        "text": "Mastodon, the free and open-source decentralized social networking platform, has fixed a critical vulnerability that allows attackers to impersonate and take over any remote account. The newly fixed flaw is tracked as CVE-2024-23832 and stems from insufficient origin validation in Mastodon, allowing attackers to impersonate users and take over their accounts. In July 2023, the Mastodon team fixed another critical bug tracked as CVE-2023-36460 and dubbed 'TootRoot,' which allowed attackers to send 'toots' (the equivalent of tweets) that would create web shells on target instances. Attackers could leverage this flaw to completely compromise Mastodon servers, allowing them to access sensitive user information, communications, and plant backdoors.",
+        "link": "computer.com/news/security/mastodon-vulnerability-allows-attackers-to-take-over-accounts/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "a critical vulnerability",
+                "relation": "is in",
+                "object": "Mastodon"
+            },
+            {
+                "subject": "attackers",
+                "relation": "impersonate and take over",
+                "object": "any remote account"
+            },
+            {
+                "subject": "CVE-2024-23832",
+                "relation": "stems from",
+                "object": "insufficient origin validation in Mastodon"
+            },
+            {
+                "subject": "attackers",
+                "relation": "impersonate users and take over",
+                "object": "their accounts"
+            },
+            {
+                "subject": "the Mastodon team",
+                "relation": "fixed",
+                "object": "another critical bug"
+            },
+            {
+                "subject": "CVE-2023-36460",
+                "relation": "allowed attackers to send",
+                "object": "'toots' that create web shells on target instances"
+            },
+            {
+                "subject": "attackers",
+                "relation": "could leverage",
+                "object": "the flaw to compromise Mastodon servers"
+            },
+            {
+                "subject": "compromised Mastodon servers",
+                "relation": "allow access to",
+                "object": "sensitive user information, communications, and plant backdoors"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1151,
+                "cost": 0.011510000000000001
+            },
+            "output": {
+                "tokens": 235,
+                "cost": 0.00705
+            },
+            "total": {
+                "tokens": 1386,
+                "cost": 0.01856
+            }
+        },
+        "time": 12.440809965133667,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/BleepingComputer/mastodon-QD1-ngh.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Microsoft-Outlook.json",
+                    "random"
+                ],
+                [
+                    "egypt.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 1,
+                "fn": 2,
+                "precision": 0.875,
+                "recall": 0.7777777777777778,
+                "f1": 0.823529411764706
+            },
+            "matched_list": [
+                [
+                    [
+                        "a critical vulnerability",
+                        "is in",
+                        "Mastodon"
+                    ],
+                    [
+                        "Mastodon",
+                        "has fixed",
+                        "a critical vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "impersonate and take over",
+                        "any remote account"
+                    ],
+                    [
+                        "the critical vulnerability",
+                        "allows",
+                        "attackers to impersonate and take over any remote account"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-23832",
+                        "stems from",
+                        "insufficient origin validation in Mastodon"
+                    ],
+                    [
+                        "CVE-2024-23832",
+                        "stems from",
+                        "insufficient origin validation in Mastodon"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "impersonate users and take over",
+                        "their accounts"
+                    ],
+                    [
+                        "the critical vulnerability",
+                        "allows",
+                        "attackers to impersonate and take over any remote account"
+                    ]
+                ],
+                [
+                    [
+                        "the Mastodon team",
+                        "fixed",
+                        "another critical bug"
+                    ],
+                    [
+                        "Mastodon team",
+                        "fixed",
+                        "another critical bug tracked as CVE-2023-36460"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-36460",
+                        "allowed attackers to send",
+                        "'toots' that create web shells on target instances"
+                    ],
+                    [
+                        "CVE-2023-36460",
+                        "allowed",
+                        "attackers to send 'toots' that would create web shells on target instances"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "could leverage",
+                        "the flaw to compromise Mastodon servers"
+                    ],
+                    [
+                        "attackers",
+                        "could leverage",
+                        "this flaw to completely compromise Mastodon servers"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "compromised Mastodon servers",
+                    "allow access to",
+                    "sensitive user information, communications, and plant backdoors"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "the newly fixed flaw",
+                    "is tracked as",
+                    "CVE-2024-23832"
+                ],
+                [
+                    "this flaw",
+                    "allows",
+                    "attackers to access sensitive user information, communications, and plant backdoors"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

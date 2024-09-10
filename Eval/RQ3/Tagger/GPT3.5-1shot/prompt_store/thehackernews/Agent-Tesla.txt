@@ -1,0 +1,130 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Attackers', 'relation': 'are weaponizing', 'object': 'an old Microsoft Office vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Microsoft Office vulnerability', 'relation': 'used in', 'object': 'phishing campaigns'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'phishing campaigns', 'relation': 'to distribute', 'object': 'Agent Tesla'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Agent Tesla', 'relation': 'is a', 'object': 'strain of malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'infection chains', 'relation': 'leverage', 'object': 'decoy Excel documents'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'decoy Excel documents', 'relation': 'attached in', 'object': 'invoice-themed messages'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2017-11882', 'relation': 'is exploited by', 'object': 'infection chains'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2017-11882', 'relation': 'is a', 'object': 'memory corruption vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'memory corruption vulnerability', 'relation': 'in', 'object': "Office's Equation Editor"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2017-11882', 'relation': 'could result in', 'object': 'code execution'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Zscaler ThreatLabz', 'relation': 'builds on', 'object': 'prior reports'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fortinet FortiGuard Labs', 'relation': 'detailed', 'object': 'a similar phishing campaign'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a similar phishing campaign', 'relation': 'exploited', 'object': 'the security flaw'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the security flaw', 'relation': 'to deliver', 'object': 'the malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'user', 'relation': 'downloads and opens', 'object': 'a malicious attachment'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Excel file', 'relation': 'initiates communication with', 'object': 'a malicious destination'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Excel file', 'relation': 'downloads', 'object': 'additional files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'first payload', 'relation': 'is', 'object': 'an obfuscated Visual Basic Script'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'an obfuscated Visual Basic Script', 'relation': 'initiates the download of', 'object': 'a malicious JPG file'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'a malicious JPG file', 'relation': 'comes embedded with', 'object': 'a Base64-encoded DLL file'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

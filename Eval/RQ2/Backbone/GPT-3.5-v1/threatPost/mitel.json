@@ -1,0 +1,166 @@
+{
+    "CTI": {
+        "text": "Ransomware groups are abusing unpatched versions of a Linux-based Mitel VoIP (Voice over Internet Protocol) application and using it as a springboard plant malware on targeted systems. The critical remote code execution (RCE) flaw, tracked as CVE-2022-29499, was first report by Crowdstrike in April as a zero-day vulnerability and is now patched. Mitel is popularly known for providing business phone systems and unified communication as a service (UCaaS) to all forms of organizations. The Mitel focuses on VoIP technology allowing users to make phone calls using an internet connection instead of regular telephone lines.",
+        "link": "https://threatpost.com/mitel-voip-bug-exploited/180079/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Ransomware groups",
+                "relation": "are abusing",
+                "object": "unpatched versions of a Linux-based Mitel VoIP application"
+            },
+            {
+                "subject": "Ransomware groups",
+                "relation": "are using",
+                "object": "it as a springboard to plant malware on targeted systems"
+            },
+            {
+                "subject": "The critical remote code execution (RCE) flaw",
+                "relation": "is tracked as",
+                "object": "CVE-2022-29499"
+            },
+            {
+                "subject": "Crowdstrike",
+                "relation": "reported",
+                "object": "it in April as a zero-day vulnerability"
+            },
+            {
+                "subject": "Mitel",
+                "relation": "is popularly known for providing",
+                "object": "business phone systems and unified communication as a service (UCaaS) to all forms of organizations"
+            },
+            {
+                "subject": "Mitel",
+                "relation": "focuses on",
+                "object": "VoIP technology allowing users to make phone calls using an internet connection instead of regular telephone lines"
+            }
+        ],
+        "triples_count": 6,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1515,
+                "cost": 0.0007574999999999999
+            },
+            "output": {
+                "tokens": 259,
+                "cost": 0.0003885
+            },
+            "total": {
+                "tokens": 1774,
+                "cost": 0.0011459999999999999
+            }
+        },
+        "time": 4.810621500015259,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/threatPost/mitel-QD1-mxG.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "darkreading: apache-activemq.json",
+                    0.10361658999554035
+                ],
+                [
+                    "threatPost: Microsoft.json",
+                    0.10411083405762926
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 5,
+                "fp": 1,
+                "fn": 2,
+                "precision": 0.8333333333333334,
+                "recall": 0.7142857142857143,
+                "f1": 0.7692307692307692
+            },
+            "matched_list": [
+                [
+                    [
+                        "Ransomware groups",
+                        "are abusing",
+                        "unpatched versions of a Linux-based Mitel VoIP application"
+                    ],
+                    [
+                        "Ransomware groups",
+                        "are abusing",
+                        "unpatched versions of a Linux-based Mitel VoIP application"
+                    ]
+                ],
+                [
+                    [
+                        "Ransomware groups",
+                        "are using",
+                        "it as a springboard to plant malware on targeted systems"
+                    ],
+                    [
+                        "Ransomware groups",
+                        "using",
+                        "it as a springboard plant malware on targeted systems"
+                    ]
+                ],
+                [
+                    [
+                        "The critical remote code execution (RCE) flaw",
+                        "is tracked as",
+                        "CVE-2022-29499"
+                    ],
+                    [
+                        "The critical remote code execution (RCE) flaw",
+                        "is tracked as",
+                        "CVE-2022-29499"
+                    ]
+                ],
+                [
+                    [
+                        "Mitel",
+                        "is popularly known for providing",
+                        "business phone systems and unified communication as a service (UCaaS) to all forms of organizations"
+                    ],
+                    [
+                        "Mitel",
+                        "is known for",
+                        "unified communication as a service (UCaaS)"
+                    ]
+                ],
+                [
+                    [
+                        "Mitel",
+                        "focuses on",
+                        "VoIP technology allowing users to make phone calls using an internet connection instead of regular telephone lines"
+                    ],
+                    [
+                        "Mitel",
+                        "focuses on",
+                        "VoIP technology"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Crowdstrike",
+                    "reported",
+                    "it in April as a zero-day vulnerability"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Crowdstrike",
+                    "report",
+                    "CVE-2022-29499"
+                ],
+                [
+                    "CVE-2022-29499",
+                    "is now",
+                    "patched"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

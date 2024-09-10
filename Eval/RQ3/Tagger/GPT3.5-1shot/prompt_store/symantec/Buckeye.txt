@@ -1,0 +1,118 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Buckeye', 'relation': 'began using', 'object': 'DoublePulsar'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'DoublePulsar', 'relation': 'is a variant of', 'object': 'Backdoor.Doublepulsar'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'DoublePulsar', 'relation': 'was released by', 'object': 'the Shadow Brokers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'DoublePulsar', 'relation': 'was delivered using', 'object': 'Trojan.Bemstour'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Trojan.Bemstour', 'relation': 'is designed to install', 'object': 'DoublePulsar'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Bemstour', 'relation': 'exploits', 'object': 'Windows vulnerabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Bemstour', 'relation': 'achieves', 'object': 'remote kernel code execution'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'remote kernel code execution', 'relation': 'is on', 'object': 'targeted computers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'One vulnerability', 'relation': 'is a', 'object': 'Windows zero-day vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Windows zero-day vulnerability', 'relation': 'is', 'object': 'CVE-2019-0703'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2019-0703', 'relation': 'discovered by', 'object': 'Symantec'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The second Windows vulnerability', 'relation': 'is', 'object': 'CVE-2017-0143'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2017-0143', 'relation': 'was patched in', 'object': 'March 2017'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2017-0143', 'relation': 'used by', 'object': 'EternalRomance'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2017-0143', 'relation': 'used by', 'object': 'EternalSynergy'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EternalRomance', 'relation': 'released as part of', 'object': 'the Shadow Brokers leak'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'EternalSynergy', 'relation': 'released as part of', 'object': 'the Shadow Brokers leak'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

@@ -1,0 +1,221 @@
+{
+    "CTI": {
+        "text": "Starting this year, Ryuk began using another dropper called BazarLoader (also known as BazarBackdoor). Like Trickbot, BazarLoader is also primarily distributed via phishing emails that contain either malicious attachments or links to websites (typically free, online file-hosting solutions) that host malware. These phishing emails use normal social engineering techniques: For example, they are usually disguised as business correspondence or other important messages. Once the payload is distributed, a command-and-control (C&C) server is used to deploy and install the backdoor. According to the advisory, the threat actor behind TrickBot is also connected to BazarLoader.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/ryuk-2020-distributing-ransomware-via-trickbot-and-bazarloader"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Ryuk",
+                "relation": "began using",
+                "object": "BazarLoader"
+            },
+            {
+                "subject": "BazarLoader",
+                "relation": "is also known as",
+                "object": "BazarBackdoor"
+            },
+            {
+                "subject": "BazarLoader",
+                "relation": "is primarily distributed via",
+                "object": "phishing emails"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "contain",
+                "object": "malicious attachments or links to websites"
+            },
+            {
+                "subject": "websites",
+                "relation": "host",
+                "object": "malware"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "use",
+                "object": "normal social engineering techniques"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "disguised as",
+                "object": "business correspondence or other important messages"
+            },
+            {
+                "subject": "command-and-control server",
+                "relation": "is used to",
+                "object": "deploy and install the backdoor"
+            },
+            {
+                "subject": "threat actor behind TrickBot",
+                "relation": "is also connected to",
+                "object": "BazarLoader"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2165,
+                "cost": 0.021650000000000003
+            },
+            "output": {
+                "tokens": 235,
+                "cost": 0.00705
+            },
+            "total": {
+                "tokens": 2400,
+                "cost": 0.028700000000000003
+            }
+        },
+        "time": 11.520319938659668,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/trendmicro/Ryuk-QD1-ZPr.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "darkreading: SpectralBlur.json",
+                    0.09311586296088446
+                ],
+                [
+                    "trendmicro: Conti.json",
+                    0.10507443504245148
+                ],
+                [
+                    "trendmicro: Comm-Apps.json",
+                    0.13932311086193927
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 0,
+                "fn": 1,
+                "precision": 1.0,
+                "recall": 0.9,
+                "f1": 0.9473684210526316
+            },
+            "matched_list": [
+                [
+                    [
+                        "Ryuk",
+                        "began using",
+                        "BazarLoader"
+                    ],
+                    [
+                        "Ryuk",
+                        "began using",
+                        "BazarLoader"
+                    ]
+                ],
+                [
+                    [
+                        "BazarLoader",
+                        "is also known as",
+                        "BazarBackdoor"
+                    ],
+                    [
+                        "BazarLoader",
+                        "is known as",
+                        "BazarBackdoor"
+                    ]
+                ],
+                [
+                    [
+                        "BazarLoader",
+                        "is primarily distributed via",
+                        "phishing emails"
+                    ],
+                    [
+                        "BazarLoader",
+                        "is primarily distributed via",
+                        "phishing emails"
+                    ]
+                ],
+                [
+                    [
+                        "phishing emails",
+                        "contain",
+                        "malicious attachments or links to websites"
+                    ],
+                    [
+                        "phishing emails",
+                        "contain",
+                        "malicious attachments"
+                    ]
+                ],
+                [
+                    [
+                        "websites",
+                        "host",
+                        "malware"
+                    ],
+                    [
+                        "phishing emails",
+                        "contain",
+                        "links to websites"
+                    ]
+                ],
+                [
+                    [
+                        "phishing emails",
+                        "use",
+                        "normal social engineering techniques"
+                    ],
+                    [
+                        "phishing emails",
+                        "use",
+                        "social engineering techniques"
+                    ]
+                ],
+                [
+                    [
+                        "phishing emails",
+                        "disguised as",
+                        "business correspondence or other important messages"
+                    ],
+                    [
+                        "phishing emails",
+                        "disguised as",
+                        "business correspondence"
+                    ]
+                ],
+                [
+                    [
+                        "command-and-control server",
+                        "is used to",
+                        "deploy and install the backdoor"
+                    ],
+                    [
+                        "payload",
+                        "is distributed, a command-and-control (C&C) server is used to",
+                        "deploy and install the backdoor"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor behind TrickBot",
+                        "is also connected to",
+                        "BazarLoader"
+                    ],
+                    [
+                        "Trickbot",
+                        "connected to",
+                        "BazarLoader"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "websites",
+                    "host",
+                    "malware"
+                ]
+            ]
+        }
+    }
+}

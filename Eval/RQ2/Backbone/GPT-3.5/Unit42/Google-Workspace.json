@@ -1,0 +1,210 @@
+{
+    "CTI": {
+        "text": "Unit 42 researchers discovered a security risk in the Google Workspace (formerly known as G Suite) domain-wide delegation feature. We exposed an unexpected way to gain access to the Google Workspace domain data from Google Cloud Platform (GCP). We found that a GCP identity with the necessary permission can generate an access token to a delegated user. A malicious insider or an external attacker with stolen credentials can use this access token to impersonate Google Workspace users, granting unauthorized access to their data or to perform operations on their behalf.",
+        "link": "https://unit42.paloaltonetworks.com/critical-risk-in-google-workspace-delegation-feature/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unit 42 researchers",
+                "relation": "discovered",
+                "object": "a security risk"
+            },
+            {
+                "subject": "a security risk",
+                "relation": "is in",
+                "object": "the Google Workspace"
+            },
+            {
+                "subject": "the Google Workspace",
+                "relation": "formerly known as",
+                "object": "G Suite"
+            },
+            {
+                "subject": "security risk",
+                "relation": "is in",
+                "object": "the domain-wide delegation feature"
+            },
+            {
+                "subject": "a GCP identity",
+                "relation": "can generate",
+                "object": "an access token to a delegated user"
+            },
+            {
+                "subject": "a malicious insider or an external attacker",
+                "relation": "can use",
+                "object": "the access token"
+            },
+            {
+                "subject": "the access token",
+                "relation": "to impersonate",
+                "object": "Google Workspace users"
+            },
+            {
+                "subject": "the access token",
+                "relation": "to grant unauthorized access to",
+                "object": "data"
+            },
+            {
+                "subject": "the access token",
+                "relation": "to perform operations on behalf of",
+                "object": "Google Workspace users"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1236,
+                "cost": 0.000618
+            },
+            "output": {
+                "tokens": 297,
+                "cost": 0.0004455
+            },
+            "total": {
+                "tokens": 1533,
+                "cost": 0.0010635
+            }
+        },
+        "time": 4.447108745574951,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/Unit42/Google-Workspace-QD1-TXs.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Microsoft: defending-new-vectors.json",
+                    0.11006169068863647
+                ],
+                [
+                    "darkreading: Google-Patches.json",
+                    0.1296532233359793
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 2,
+                "fn": 2,
+                "precision": 0.7777777777777778,
+                "recall": 0.7777777777777778,
+                "f1": 0.7777777777777778
+            },
+            "matched_list": [
+                [
+                    [
+                        "Unit 42 researchers",
+                        "discovered",
+                        "a security risk"
+                    ],
+                    [
+                        "Unit 42 researchers",
+                        "discovered",
+                        "a security risk"
+                    ]
+                ],
+                [
+                    [
+                        "a security risk",
+                        "is in",
+                        "the Google Workspace"
+                    ],
+                    [
+                        "a security risk",
+                        "is in",
+                        "the Google Workspace domain-wide delegation feature"
+                    ]
+                ],
+                [
+                    [
+                        "security risk",
+                        "is in",
+                        "the domain-wide delegation feature"
+                    ],
+                    [
+                        "a security risk",
+                        "is in",
+                        "the Google Workspace domain-wide delegation feature"
+                    ]
+                ],
+                [
+                    [
+                        "a GCP identity",
+                        "can generate",
+                        "an access token to a delegated user"
+                    ],
+                    [
+                        "A GCP identity",
+                        "can generate",
+                        "an access token"
+                    ]
+                ],
+                [
+                    [
+                        "a malicious insider or an external attacker",
+                        "can use",
+                        "the access token"
+                    ],
+                    [
+                        "A malicious insider or an external attacker",
+                        "use",
+                        "this access token"
+                    ]
+                ],
+                [
+                    [
+                        "the access token",
+                        "to impersonate",
+                        "Google Workspace users"
+                    ],
+                    [
+                        "this access token",
+                        "to impersonate",
+                        "Google Workspace users"
+                    ]
+                ],
+                [
+                    [
+                        "the access token",
+                        "to perform operations on behalf of",
+                        "Google Workspace users"
+                    ],
+                    [
+                        "this access token",
+                        "to impersonate",
+                        "Google Workspace users"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "the Google Workspace",
+                    "formerly known as",
+                    "G Suite"
+                ],
+                [
+                    "the access token",
+                    "to grant unauthorized access to",
+                    "data"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "unauthorized access",
+                    "to",
+                    "their data"
+                ],
+                [
+                    "A malicious insider or an external attacker",
+                    "perform operations on",
+                    "their behalf"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

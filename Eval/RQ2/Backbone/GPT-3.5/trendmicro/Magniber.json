@@ -1,0 +1,263 @@
+{
+    "CTI": {
+        "text": "Despite first being detected six years ago, malicious attackers continue to use the Magniber ransomware to compromise organizations. In October 2022, phishing attacks were reported to distribute the Magniber ransomware using standalone JavaScript files digitally signed with a malformed key, exploiting the zero-day vulnerability CVE-2022-44698 to bypass Mark-of-the-Web (MOTW) security warnings, and allowing malicious files to be executed without raising alerts. Microsoft later patched this vulnerability in December 2022. Formerly known as a successor of Cerber, the Magniber ransomware was primarily distributed via the Magnitude exploit kit and exclusively targeted South Korea in 2017. In 2018, it expanded its targets across Asia using CVE-2018-8174 for initial access.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-magniber"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "malicious attackers",
+                "relation": "continue to use",
+                "object": "Magniber ransomware"
+            },
+            {
+                "subject": "phishing attacks",
+                "relation": "were reported to distribute",
+                "object": "Magniber ransomware"
+            },
+            {
+                "subject": "Magniber ransomware",
+                "relation": "was digitally signed with",
+                "object": "a malformed key"
+            },
+            {
+                "subject": "malicious files",
+                "relation": "executed without",
+                "object": "raising alerts"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "patched",
+                "object": "vulnerability CVE-2022-44698"
+            },
+            {
+                "subject": "Magniber ransomware",
+                "relation": "was distributed via",
+                "object": "Magnitude exploit kit"
+            },
+            {
+                "subject": "Magniber ransomware",
+                "relation": "targeted",
+                "object": "South Korea"
+            },
+            {
+                "subject": "Magniber ransomware",
+                "relation": "expanded targets across",
+                "object": "Asia"
+            },
+            {
+                "subject": "Magniber ransomware",
+                "relation": "used",
+                "object": "CVE-2018-8174 for initial access"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1328,
+                "cost": 0.000664
+            },
+            "output": {
+                "tokens": 248,
+                "cost": 0.000372
+            },
+            "total": {
+                "tokens": 1576,
+                "cost": 0.001036
+            }
+        },
+        "time": 3.6061365604400635,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/trendmicro/Magniber-QD1-wqh.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "BleepingComputer: chrome.json",
+                    0.12161731138913238
+                ],
+                [
+                    "AVERTIUM: CVE-2023-36884.json",
+                    0.15697386979334613
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 2,
+                "fn": 7,
+                "precision": 0.7777777777777778,
+                "recall": 0.5,
+                "f1": 0.6086956521739131
+            },
+            "matched_list": [
+                [
+                    [
+                        "malicious attackers",
+                        "continue to use",
+                        "Magniber ransomware"
+                    ],
+                    [
+                        "malicious attackers",
+                        "use",
+                        "the Magniber ransomware"
+                    ],
+                    [
+                        1.0,
+                        0.8578678658388209
+                    ]
+                ],
+                [
+                    [
+                        "phishing attacks",
+                        "were reported to distribute",
+                        "Magniber ransomware"
+                    ],
+                    [
+                        "malicious attackers",
+                        "use",
+                        "the Magniber ransomware"
+                    ],
+                    [
+                        0.5601308417934022,
+                        0.8578678658388209
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "patched",
+                        "vulnerability CVE-2022-44698"
+                    ],
+                    [
+                        "Microsoft",
+                        "patched",
+                        "CVE-2022-44698"
+                    ],
+                    [
+                        1.0,
+                        0.8806059725385287
+                    ]
+                ],
+                [
+                    [
+                        "Magniber ransomware",
+                        "was distributed via",
+                        "Magnitude exploit kit"
+                    ],
+                    [
+                        "Magnitude exploit kit",
+                        "distributed",
+                        "the Magniber ransomware"
+                    ],
+                    [
+                        0.8578678658388209,
+                        1.0,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "Magniber ransomware",
+                        "targeted",
+                        "South Korea"
+                    ],
+                    [
+                        "Magniber ransomware",
+                        "targeted",
+                        "South Korea"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Magniber ransomware",
+                        "expanded targets across",
+                        "Asia"
+                    ],
+                    [
+                        "Magniber ransomware",
+                        "expanded targets",
+                        "across Asia"
+                    ],
+                    [
+                        1.0,
+                        0.5692867280853346
+                    ]
+                ],
+                [
+                    [
+                        "Magniber ransomware",
+                        "used",
+                        "CVE-2018-8174 for initial access"
+                    ],
+                    [
+                        "the Magniber ransomware",
+                        "exploits",
+                        "CVE-2022-44698"
+                    ],
+                    [
+                        0.8578678658388209,
+                        0.575375077733702
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Magniber ransomware",
+                    "was digitally signed with",
+                    "a malformed key"
+                ],
+                [
+                    "malicious files",
+                    "executed without",
+                    "raising alerts"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Magniber ransomware",
+                    "targets",
+                    "organizations"
+                ],
+                [
+                    "phishing attacks",
+                    "distribute",
+                    "the Magniber ransomware"
+                ],
+                [
+                    "the Magniber ransomware",
+                    "uses",
+                    "standalone JavaScript files"
+                ],
+                [
+                    "standalone JavaScript files",
+                    "digitally signed with",
+                    "a malformed key"
+                ],
+                [
+                    "CVE-2022-44698",
+                    "bypass",
+                    "Mark-of-the-Web (MOTW) security warnings"
+                ],
+                [
+                    "Magniber ransomware",
+                    "was known as",
+                    "a successor of Cerber"
+                ],
+                [
+                    "Magniber ransomware",
+                    "uses",
+                    "CVE-2018-8174 for initial access"
+                ]
+            ]
+        }
+    }
+}

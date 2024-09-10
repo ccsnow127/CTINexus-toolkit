@@ -1,0 +1,133 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Action",
+    "Attacker",
+    "Campaign",
+    "Event",
+    "Exploit Target Object",
+    "Host",
+    {
+        "Indicator":[
+            "Adress",
+            "Email",
+            "File",
+            "Hash"
+        ]
+    },
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic",
+    "Malware Family",
+    "Organization",
+    "Software",
+    "System",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "is", "object": "a relatively new player in the ransomware market"} 
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "is", "object": {"text": "a relatively new player in the ransomware market", "class": "This entity cannot be classified into any of the existing types"}} 
+---------------------
+Example 2:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "claimed responsibility for", "object": "three recent attacks"}
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "claimed responsibility for", "object": {"text": "three recent attacks", "class": "Event"}} 
+---------------------
+Example 3:
+
+"triple": {"subject": "The victims", "relation": "include", "object": "4LEAF"}
+
+"tagged_triple": {"subject": {"text": "The victims", "class": "Exploit Target Object"}, "relation": "include", "object": {"text": "4LEAF", "class": "Exploit Target Object"}} 
+---------------------
+
+
+"triple":: {'subject': 'Fancy Bear', 'relation': 'is also known as', 'object': 'APT 28'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'is also known as', 'object': 'Sofacy'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'is also known as', 'object': 'Swallowtail'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'is', 'object': 'a cyberespionage group linked to the Russian government'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'has been in operation since', 'object': '2008'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'targets', 'object': 'the energy, government, media, aerospace, and defense sectors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'uses', 'object': 'phishing campaigns and credential harvesting'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'targets', 'object': 'both computers and mobile devices'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'attacked', 'object': 'the Democratic National Committee (DNC)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'attacked', 'object': 'the World Anti-Doping Agency (WADA)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'took credit for', 'object': 'the attack and leaked the stolen information on a site named Fancy Bears'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'became', 'object': 'clandestine'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'targeted', 'object': 'European military'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'targeted', 'object': 'European government'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'targeted', 'object': "A South American country's government"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'targeted', 'object': 'An Eastern European embassy'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'targeted', 'object': 'A prominent international organization'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'became', 'object': 'more discreet'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Researchers from Malwarebytes', 'relation': 'observed malicious activity from', 'object': 'Fancy Bear'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fancy Bear', 'relation': 'was sending', 'object': 'malicious documents that contained an exploit for the Microsoft zero-day, Follina (CVE-2022-30190)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

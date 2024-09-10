@@ -1,0 +1,136 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Graphican', 'relation': 'is an evolution of', 'object': 'Flea backdoor Ketrican'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Ketrican', 'relation': 'is based on', 'object': 'BS2005'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'BS2005', 'relation': 'used by', 'object': 'Flea'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Graphican', 'relation': 'has basic functionality as', 'object': 'Ketrican'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Graphican', 'relation': 'uses', 'object': 'the Microsoft Graph API and OneDrive'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Graphican', 'relation': 'to obtain', 'object': 'command-and-control (C&C) infrastructure'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Swallowtail', 'relation': 'delivered', 'object': 'the Graphite malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Swallowtail', 'relation': 'is known as', 'object': 'APT28'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Swallowtail', 'relation': 'is known as', 'object': 'Fancy Bear'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Swallowtail', 'relation': 'is known as', 'object': 'Sofacy'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Swallowtail', 'relation': 'is known as', 'object': 'Strontium'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The Graphite malware', 'relation': 'used', 'object': 'the Microsoft Graph API and OneDrive as a C&C server'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Graphican samples', 'relation': 'connected to', 'object': 'OneDrive via the Microsoft Graph API'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Graphican', 'relation': 'obtain', 'object': 'the encrypted C&C server address'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The malware', 'relation': 'decoded', 'object': 'the folder name'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The malware', 'relation': 'used', 'object': 'it as a C&C server'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'All instances of this variant', 'relation': 'used the same parameters to', 'object': 'authenticate to the Microsoft Graph API'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

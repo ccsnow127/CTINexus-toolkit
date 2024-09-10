@@ -1,0 +1,197 @@
+{
+    "CTI": {
+        "text": "RansomExx is a ransomware variant that debuted as Defray777 in 2018. It made a name for itself in 2020, after it was used in widely reported attacks on government agencies, manufacturers, and other such high-profile only months apart. By then, it was dubbed RansomEXX after the string \u201cransom.exx\u201d was found in its binary. In 2020, the group also started a leak site for publishing stolen data.Today, RansomEXX remains an active name among other ransomware variants like LockBit and Conti. Like other groups, the one running RansomEXX appears to have no qualms about publishing data stolen from its targets. It has also published information stolen from government agencies \u2014 a recent case was an attack on a Scottish mental health charity in March 2022, where they published 12GB worth of data that included the personal information and even credit card details of the charity's volunteers.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-ransomexx"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "RansomExx",
+                "relation": "debuted as",
+                "object": "Defray777 in 2018"
+            },
+            {
+                "subject": "RansomExx",
+                "relation": "used in attacks on",
+                "object": "government agencies, manufacturers"
+            },
+            {
+                "subject": "RansomExx",
+                "relation": "dubbed",
+                "object": "RansomEXX after 'ransom.exx' found in its binary"
+            },
+            {
+                "subject": "The group running RansomEXX",
+                "relation": "started",
+                "object": "a leak site for publishing stolen data"
+            },
+            {
+                "subject": "RansomEXX",
+                "relation": "publishes data stolen from",
+                "object": "its targets"
+            },
+            {
+                "subject": "RansomEXX",
+                "relation": "published information stolen from",
+                "object": "government agencies"
+            },
+            {
+                "subject": "An attack on a Scottish mental health charity by RansomEXX",
+                "relation": "published",
+                "object": "12GB worth of data including personal and credit card details"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2325,
+                "cost": 0.023250000000000003
+            },
+            "output": {
+                "tokens": 273,
+                "cost": 0.00819
+            },
+            "total": {
+                "tokens": 2598,
+                "cost": 0.03144
+            }
+        },
+        "time": 12.81982707977295,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/trendmicro/RansomEXX-QD1-SlG.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "darkreading: apache-activemq.json",
+                    0.10002303947774283
+                ],
+                [
+                    "AVERTIUM: ragnar.json",
+                    0.1053101986358048
+                ],
+                [
+                    "trendmicro: TargetCompany.json",
+                    0.12930545131469628
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 0,
+                "fn": 3,
+                "precision": 1.0,
+                "recall": 0.7,
+                "f1": 0.8235294117647058
+            },
+            "matched_list": [
+                [
+                    [
+                        "RansomExx",
+                        "debuted as",
+                        "Defray777 in 2018"
+                    ],
+                    [
+                        "RansomExx",
+                        "debuted as",
+                        "Defray777"
+                    ]
+                ],
+                [
+                    [
+                        "RansomExx",
+                        "used in attacks on",
+                        "government agencies, manufacturers"
+                    ],
+                    [
+                        "RansomExx",
+                        "was used in attacks on",
+                        "government agencies"
+                    ]
+                ],
+                [
+                    [
+                        "RansomExx",
+                        "dubbed",
+                        "RansomEXX after 'ransom.exx' found in its binary"
+                    ],
+                    [
+                        "RansomExx",
+                        "was used in attacks on",
+                        "manufacturers"
+                    ]
+                ],
+                [
+                    [
+                        "The group running RansomEXX",
+                        "started",
+                        "a leak site for publishing stolen data"
+                    ],
+                    [
+                        "RansomExx",
+                        "was dubbed",
+                        "after the string \u201cransom.exx\u201d was found in its binary"
+                    ]
+                ],
+                [
+                    [
+                        "RansomEXX",
+                        "publishes data stolen from",
+                        "its targets"
+                    ],
+                    [
+                        "The group",
+                        "started a leak site for",
+                        "publishing stolen data"
+                    ]
+                ],
+                [
+                    [
+                        "RansomEXX",
+                        "published information stolen from",
+                        "government agencies"
+                    ],
+                    [
+                        "RansomExx",
+                        "is an active name among",
+                        "other ransomware variants like LockBit and Conti"
+                    ]
+                ],
+                [
+                    [
+                        "An attack on a Scottish mental health charity by RansomEXX",
+                        "published",
+                        "12GB worth of data including personal and credit card details"
+                    ],
+                    [
+                        "The group running RansomEXX",
+                        "publishes data stolen from",
+                        "its targets"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "The group running RansomEXX",
+                    "published information stolen from",
+                    "government agencies"
+                ],
+                [
+                    "An attack on a Scottish mental health charity",
+                    "resulted in publishing",
+                    "12GB worth of data"
+                ],
+                [
+                    "The published data",
+                    "included",
+                    "the personal information and credit card details of the charity's volunteers"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,352 @@
+{
+    "CTI": {
+        "text": "A new variant of the infamous Gh0st RAT malware has been identified in recent attacks targeting South Koreans and the Ministry of Foreign Affairs in Uzbekistan. The Chinese group C.Rufus Security Team first released Gh0st RAT on the open Web in March 2008. Remarkably, it's still in use today, particularly in and around China, albeit in modified forms. Since late August, for instance, a group with strong Chinese links has been distributing a modified Gh0st RAT deemed SugarGh0st RAT. According to research from Cisco Talos, this threat actor drops the variant via JavaScript-laced Windows shortcuts, while distracting targets with customized decoy documents. The four samples of SugarGh0st, likely delivered via phishing, arrive on targeted machines as archives embedded with Windows LNK shortcut files. The LNKs hide malicious JavaScript which, upon opening, drops a decoy document - targeted for Korean or Uzbek government audiences - and the payload. Like its progenitor - the Chinese origin remote access Trojan, first released to the public in March 2008 - SugarGh0st is a clean, multitooled espionage machine. A 32-bit dynamic link library (DLL) written in C++, it begins by collecting system data, then opens up the door to full remote access capabilities. Attackers can use SugarGh0st to retrieve any information they might desire about their compromised machine, or start, terminate, or delete the processes it's running. They can use it to find, exfiltrate, and delete files, and erase any event logs to mask the resulting forensic evidence. The backdoor comes fitted with a keylogger, a screenshotter, a means of accessing the device's camera, and plenty of other useful functions for manipulating the mouse, performing native Windows operation, or simply running arbitrary commands.",
+        "link": "https://www.darkreading.com/threat-intelligence/new-spookier-gh0st-rat-uzbekistan-south-korea"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Gh0st RAT",
+                "relation": "has variant",
+                "object": "SugarGh0st RAT"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "identified in attacks targeting",
+                "object": "South Koreans"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "identified in attacks targeting",
+                "object": "the Ministry of Foreign Affairs in Uzbekistan"
+            },
+            {
+                "subject": "C.Rufus Security Team",
+                "relation": "first released",
+                "object": "Gh0st RAT"
+            },
+            {
+                "subject": "Gh0st RAT",
+                "relation": "still in use in",
+                "object": "China"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "is a modified form of",
+                "object": "Gh0st RAT"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "deemed by",
+                "object": "a group with strong Chinese links"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "dropped via",
+                "object": "JavaScript-laced Windows shortcuts"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "uses decoy",
+                "object": "customized decoy documents"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "delivered via",
+                "object": "phishing"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "is a",
+                "object": "32-bit dynamic link library written in C++"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "collects",
+                "object": "system data"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "allows",
+                "object": "full remote access capabilities"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "can retrieve",
+                "object": "any information about compromised machine"
+            },
+            {
+                "subject": "SugarGh0st RAT",
+                "relation": "comes fitted with",
+                "object": "keylogger, screenshotter, camera access"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 933,
+                "cost": 0.009330000000000001
+            },
+            "output": {
+                "tokens": 544,
+                "cost": 0.01632
+            },
+            "total": {
+                "tokens": 1477,
+                "cost": 0.025650000000000003
+            }
+        },
+        "time": 16.313781261444092,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/darkreading/Gh0st-RAT-QD1-983.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "trendmicro: Earth-Berberoka.json",
+                    0.16724584268878895
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 7,
+                "precision": 0.5625,
+                "recall": 0.5294117647058824,
+                "f1": 0.5454545454545455,
+                "fn": 8
+            },
+            "matched_list": [
+                [
+                    [
+                        "Gh0st RAT",
+                        "has variant",
+                        "SugarGh0st RAT"
+                    ],
+                    [
+                        "SugarGh0st RAT",
+                        "is deemed",
+                        "a modified Gh0st RAT"
+                    ],
+                    [
+                        0.8321343111629909,
+                        0.7420093559135293
+                    ]
+                ],
+                [
+                    [
+                        "SugarGh0st RAT",
+                        "identified in attacks targeting",
+                        "South Koreans"
+                    ],
+                    [
+                        "A new variant of Gh0st RAT",
+                        "targets",
+                        "South Koreans"
+                    ],
+                    [
+                        0.7007193783701503,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "SugarGh0st RAT",
+                        "identified in attacks targeting",
+                        "the Ministry of Foreign Affairs in Uzbekistan"
+                    ],
+                    [
+                        "A new variant of Gh0st RAT",
+                        "targets",
+                        "the Ministry of Foreign Affairs in Uzbekistan"
+                    ],
+                    [
+                        0.7007193783701503,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "C.Rufus Security Team",
+                        "first released",
+                        "Gh0st RAT"
+                    ],
+                    [
+                        "The Chinese group C.Rufus Security Team",
+                        "released",
+                        "Gh0st RAT"
+                    ],
+                    [
+                        0.7249650831029599,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "SugarGh0st RAT",
+                        "is a modified form of",
+                        "Gh0st RAT"
+                    ],
+                    [
+                        "SugarGh0st RAT",
+                        "is deemed",
+                        "a modified Gh0st RAT"
+                    ],
+                    [
+                        1.0,
+                        0.8438941228691368
+                    ]
+                ],
+                [
+                    [
+                        "SugarGh0st RAT",
+                        "deemed by",
+                        "a group with strong Chinese links"
+                    ],
+                    [
+                        "The Chinese group C.Rufus Security Team",
+                        "released",
+                        "Gh0st RAT"
+                    ],
+                    [
+                        0.8321343111629909,
+                        0.5290344454630849,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "SugarGh0st RAT",
+                        "deemed by",
+                        "a group with strong Chinese links"
+                    ],
+                    [
+                        "A group with strong Chinese links",
+                        "has been distributing",
+                        "SugarGh0st RAT"
+                    ],
+                    [
+                        1.0,
+                        0.9623346552639707,
+                        "passive form"
+                    ]
+                ],
+                [
+                    [
+                        "SugarGh0st RAT",
+                        "is a",
+                        "32-bit dynamic link library written in C++"
+                    ],
+                    [
+                        "SugarGh0st",
+                        "is",
+                        "a 32-bit dynamic link library (DLL) written in C++"
+                    ],
+                    [
+                        0.712368476382852,
+                        0.8931859911797952
+                    ]
+                ],
+                [
+                    [
+                        "SugarGh0st RAT",
+                        "collects",
+                        "system data"
+                    ],
+                    [
+                        "SugarGh0st",
+                        "begins by collecting",
+                        "system data"
+                    ],
+                    [
+                        0.712368476382852,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Gh0st RAT",
+                    "still in use in",
+                    "China"
+                ],
+                [
+                    "SugarGh0st RAT",
+                    "dropped via",
+                    "JavaScript-laced Windows shortcuts"
+                ],
+                [
+                    "SugarGh0st RAT",
+                    "uses decoy",
+                    "customized decoy documents"
+                ],
+                [
+                    "SugarGh0st RAT",
+                    "delivered via",
+                    "phishing"
+                ],
+                [
+                    "SugarGh0st RAT",
+                    "allows",
+                    "full remote access capabilities"
+                ],
+                [
+                    "SugarGh0st RAT",
+                    "can retrieve",
+                    "any information about compromised machine"
+                ],
+                [
+                    "SugarGh0st RAT",
+                    "comes fitted with",
+                    "keylogger, screenshotter, camera access"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "This threat actor",
+                    "drops",
+                    "the variant via JavaScript-laced Windows shortcuts"
+                ],
+                [
+                    "The variant",
+                    "arrives on",
+                    "targeted machines as archives embedded with Windows LNK shortcut files"
+                ],
+                [
+                    "The LNKs",
+                    "hide",
+                    "malicious JavaScript"
+                ],
+                [
+                    "Attackers",
+                    "can use",
+                    "SugarGh0st to retrieve any information"
+                ],
+                [
+                    "Attackers",
+                    "can use",
+                    "SugarGh0st for full remote access capabilities"
+                ],
+                [
+                    "Backdoor",
+                    "comes fitted with",
+                    "a keylogger"
+                ],
+                [
+                    "Backdoor",
+                    "comes fitted with",
+                    "a screenshotter"
+                ],
+                [
+                    "Backdoor",
+                    "comes fitted with",
+                    "a means of accessing the device's camera"
+                ]
+            ]
+        }
+    }
+}

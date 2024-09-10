@@ -1,0 +1,184 @@
+{
+    "CTI": {
+        "text": "Unknown groups have launched probes against a zero-day vulnerability identified in Apache's OfBiz enterprise resource planning (ERP) framework - an increasingly popular strategy of analyzing patches for ways to bypass software fixes. The 0-day vulnerability (CVE-2023-51467) in Apache OFBiz, disclosed on Dec. 26, allows an attacker to access sensitive information and remotely execute code against applications using the ERP framework, according to an analysis by cybersecurity firm SonicWall. The Apache Software Foundation had originally released a patch for a related issue, CVE-2023-49070, but the fix failed to protect against other variations of the attack.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/apache-erp-0day-underscores-dangers-of-incomplete-patches"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unknown groups",
+                "relation": "have launched probes against",
+                "object": "a zero-day vulnerability identified in Apache's OfBiz enterprise resource planning (ERP) framework"
+            },
+            {
+                "subject": "The 0-day vulnerability",
+                "relation": "is",
+                "object": "CVE-2023-51467"
+            },
+            {
+                "subject": "CVE-2023-51467",
+                "relation": "in Apache OFBiz",
+                "object": "allows an attacker to access sensitive information"
+            },
+            {
+                "subject": "CVE-2023-51467",
+                "relation": "in Apache OFBiz",
+                "object": "allows an attacker to remotely execute code"
+            },
+            {
+                "subject": "CVE-2023-51467",
+                "relation": "disclosed on",
+                "object": "Dec. 26"
+            },
+            {
+                "subject": "The Apache Software Foundation",
+                "relation": "had originally released a patch for",
+                "object": "a related issue, CVE-2023-49070"
+            },
+            {
+                "subject": "The fix",
+                "relation": "failed to protect against",
+                "object": "other variations of the attack"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 959,
+                "cost": 0.009590000000000001
+            },
+            "output": {
+                "tokens": 231,
+                "cost": 0.00693
+            },
+            "total": {
+                "tokens": 1190,
+                "cost": 0.01652
+            }
+        },
+        "time": 5.857546806335449,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/darkreading/Apache-ERP-QD1-3Ne.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "thehackernews: OfBiz.json",
+                    0.29762249741746144
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 0,
+                "fn": 2,
+                "precision": 1.0,
+                "recall": 0.7777777777777778,
+                "f1": 0.8750000000000001
+            },
+            "matched_list": [
+                [
+                    [
+                        "Unknown groups",
+                        "have launched probes against",
+                        "a zero-day vulnerability identified in Apache's OfBiz enterprise resource planning (ERP) framework"
+                    ],
+                    [
+                        "zero-day vulnerability",
+                        "identified in",
+                        "Apache's OfBiz ERP framework"
+                    ]
+                ],
+                [
+                    [
+                        "The 0-day vulnerability",
+                        "is",
+                        "CVE-2023-51467"
+                    ],
+                    [
+                        "zero-day vulnerability",
+                        "is",
+                        "CVE-2023-51467"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-51467",
+                        "in Apache OFBiz",
+                        "allows an attacker to access sensitive information"
+                    ],
+                    [
+                        "CVE-2023-51467",
+                        "allows",
+                        "access to sensitive information"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-51467",
+                        "in Apache OFBiz",
+                        "allows an attacker to remotely execute code"
+                    ],
+                    [
+                        "CVE-2023-51467",
+                        "allows",
+                        "remote code execution"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-51467",
+                        "disclosed on",
+                        "Dec. 26"
+                    ],
+                    [
+                        "zero-day vulnerability",
+                        "is",
+                        "CVE-2023-51467"
+                    ]
+                ],
+                [
+                    [
+                        "The Apache Software Foundation",
+                        "had originally released a patch for",
+                        "a related issue, CVE-2023-49070"
+                    ],
+                    [
+                        "Apache Software Foundation",
+                        "released",
+                        "a patch"
+                    ]
+                ],
+                [
+                    [
+                        "The fix",
+                        "failed to protect against",
+                        "other variations of the attack"
+                    ],
+                    [
+                        "CVE-2023-49070",
+                        "failed to protect against",
+                        "other variations of the attack"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Unknown groups",
+                    "launched",
+                    "probes"
+                ],
+                [
+                    "remote code execution",
+                    "is against",
+                    "applications using the ERP framework"
+                ]
+            ]
+        }
+    }
+}

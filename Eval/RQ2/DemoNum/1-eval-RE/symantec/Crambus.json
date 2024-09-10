@@ -1,0 +1,317 @@
+{
+    "CTI": {
+        "text": "The Iranian Crambus espionage group (aka OilRig, APT34) staged an eight-month-long intrusion against a government in the Middle East between February and September 2023. During the compromise, the attackers stole files and passwords and, in one case, installed a PowerShell backdoor (dubbed PowerExchange) that was used to monitor incoming mails sent from an Exchange Server in order to execute commands sent by the attackers in the form of emails, and surreptitiously forwarded results  to the attackers. Malicious activity occurred on at least 12 computers and there is evidence that the attackers deployed backdoors and keyloggers on dozens more. In addition to deploying malware, the attackers made frequent use of the publicly available network administration tool Plink to configure port-forwarding rules on compromised machines, enabling remote access via the Remote Desktop Protocol (RDP). There is also evidence the attackers modified Windows firewall rules in order to enable remote access.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/crambus-middle-east-government"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Crambus",
+                "relation": "is known as",
+                "object": "OilRig"
+            },
+            {
+                "subject": "Crambus",
+                "relation": "is known as",
+                "object": "APT34"
+            },
+            {
+                "subject": "Crambus",
+                "relation": "targeted",
+                "object": "a government in the Middle East"
+            },
+            {
+                "subject": "Crambus",
+                "relation": "staged intrusion during",
+                "object": "February to September 2023"
+            },
+            {
+                "subject": "The attackers",
+                "relation": "stole",
+                "object": "files and passwords"
+            },
+            {
+                "subject": "The attackers",
+                "relation": "installed",
+                "object": "a PowerShell backdoor dubbed PowerExchange"
+            },
+            {
+                "subject": "PowerExchange",
+                "relation": "was used to",
+                "object": "monitor incoming mails from an Exchange Server"
+            },
+            {
+                "subject": "PowerExchange",
+                "relation": "used to",
+                "object": "execute commands sent by the attackers in emails"
+            },
+            {
+                "subject": "PowerExchange",
+                "relation": "forwarded",
+                "object": "results to the attackers"
+            },
+            {
+                "subject": "Malicious activity",
+                "relation": "occurred on",
+                "object": "at least 12 computers"
+            },
+            {
+                "subject": "The attackers",
+                "relation": "deployed",
+                "object": "backdoors and keyloggers on dozens of computers"
+            },
+            {
+                "subject": "The attackers",
+                "relation": "used",
+                "object": "Plink for port-forwarding rules"
+            },
+            {
+                "subject": "Plink",
+                "relation": "enables",
+                "object": "remote access via Remote Desktop Protocol"
+            },
+            {
+                "subject": "The attackers",
+                "relation": "modified",
+                "object": "Windows firewall rules for remote access"
+            }
+        ],
+        "triples_count": 14,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 943,
+                "cost": 0.009430000000000001
+            },
+            "output": {
+                "tokens": 378,
+                "cost": 0.011340000000000001
+            },
+            "total": {
+                "tokens": 1321,
+                "cost": 0.020770000000000004
+            }
+        },
+        "time": 8.790856838226318,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/symantec/Crambus-QD1-E3s.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "symantec: Seedworm.json",
+                    0.15037958606867594
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 13,
+                "fp": 1,
+                "fn": 6,
+                "precision": 0.9285714285714286,
+                "recall": 0.6842105263157895,
+                "f1": 0.7878787878787878
+            },
+            "matched_list": [
+                [
+                    [
+                        "Crambus",
+                        "is known as",
+                        "OilRig"
+                    ],
+                    [
+                        "The Iranian Crambus espionage group",
+                        "is known as",
+                        "OilRig"
+                    ]
+                ],
+                [
+                    [
+                        "Crambus",
+                        "is known as",
+                        "APT34"
+                    ],
+                    [
+                        "The Iranian Crambus espionage group",
+                        "is known as",
+                        "APT34"
+                    ]
+                ],
+                [
+                    [
+                        "Crambus",
+                        "targeted",
+                        "a government in the Middle East"
+                    ],
+                    [
+                        "The Iranian Crambus espionage group",
+                        "staged",
+                        "an eight-month-long intrusion"
+                    ]
+                ],
+                [
+                    [
+                        "The attackers",
+                        "stole",
+                        "files and passwords"
+                    ],
+                    [
+                        "attackers",
+                        "stole",
+                        "files"
+                    ]
+                ],
+                [
+                    [
+                        "The attackers",
+                        "installed",
+                        "a PowerShell backdoor dubbed PowerExchange"
+                    ],
+                    [
+                        "The intrusion",
+                        "targeted",
+                        "a government in the Middle East"
+                    ]
+                ],
+                [
+                    [
+                        "PowerExchange",
+                        "was used to",
+                        "monitor incoming mails from an Exchange Server"
+                    ],
+                    [
+                        "The PowerShell backdoor",
+                        "is dubbed",
+                        "PowerExchange"
+                    ]
+                ],
+                [
+                    [
+                        "PowerExchange",
+                        "used to",
+                        "execute commands sent by the attackers in emails"
+                    ],
+                    [
+                        "attackers",
+                        "installed",
+                        "a PowerShell backdoor"
+                    ]
+                ],
+                [
+                    [
+                        "PowerExchange",
+                        "forwarded",
+                        "results to the attackers"
+                    ],
+                    [
+                        "attackers",
+                        "stole",
+                        "passwords"
+                    ]
+                ],
+                [
+                    [
+                        "Malicious activity",
+                        "occurred on",
+                        "at least 12 computers"
+                    ],
+                    [
+                        "Malicious activity",
+                        "occurred on",
+                        "at least 12 computers"
+                    ]
+                ],
+                [
+                    [
+                        "The attackers",
+                        "deployed",
+                        "backdoors and keyloggers on dozens of computers"
+                    ],
+                    [
+                        "PowerExchange",
+                        "executed",
+                        "commands sent by the attackers"
+                    ]
+                ],
+                [
+                    [
+                        "The attackers",
+                        "used",
+                        "Plink for port-forwarding rules"
+                    ],
+                    [
+                        "PowerExchange",
+                        "forwarded",
+                        "results to the attackers"
+                    ]
+                ],
+                [
+                    [
+                        "Plink",
+                        "enables",
+                        "remote access via Remote Desktop Protocol"
+                    ],
+                    [
+                        "The attackers",
+                        "made use of",
+                        "Plink"
+                    ]
+                ],
+                [
+                    [
+                        "The attackers",
+                        "modified",
+                        "Windows firewall rules for remote access"
+                    ],
+                    [
+                        "attackers",
+                        "deployed",
+                        "backdoors"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Crambus",
+                    "staged intrusion during",
+                    "February to September 2023"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "PowerExchange",
+                    "was used to monitor",
+                    "incoming mails"
+                ],
+                [
+                    "attackers",
+                    "deployed",
+                    "keyloggers"
+                ],
+                [
+                    "Plink",
+                    "to configure",
+                    "port-forwarding rules"
+                ],
+                [
+                    "port-forwarding rules",
+                    "enable",
+                    "remote access via RDP"
+                ],
+                [
+                    "attackers",
+                    "modified",
+                    "Windows firewall rules"
+                ],
+                [
+                    "Windows firewall rules",
+                    "enable",
+                    "remote access"
+                ]
+            ]
+        }
+    }
+}

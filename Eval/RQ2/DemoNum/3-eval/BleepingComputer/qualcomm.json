@@ -1,0 +1,456 @@
+{
+    "CTI": {
+        "text": "A new vulnerability dubbed 'LeftoverLocals' affecting graphics processing units from AMD, Apple, Qualcomm, and Imagination Technologies allows retrieving data from the local memory space. Tracked as CVE-2023-4969, the security issue enables data recovery from vulnerable GPUs, especially in the context of large language models (LLMs) and machine learning (ML) processes. LeftoverLocals lets attackers launch a 'listener' - a GPU kernel that reads from uninitialized local memory and can dump the data in a persistent location, such as the global memory. If the local memory is not cleared, the attacker can use the listener to read values left behind by the 'writer' - a program that stores values to local memory. The recovered data can reveal sensitive information about the victim's computations, including model inputs, outputs, weights, and intermediate computations.",
+        "link": "https://www.bleepingcomputer.com/news/security/amd-apple-qualcomm-gpus-leak-ai-data-in-leftoverlocals-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "LeftoverLocals",
+                "relation": "affecting",
+                "object": "graphics processing units"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "AMD"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Apple"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Qualcomm"
+            },
+            {
+                "subject": "graphics processing units",
+                "relation": "from",
+                "object": "Imagination Technologies"
+            },
+            {
+                "subject": "LeftoverLocals",
+                "relation": "is tracked as",
+                "object": "CVE-2023-4969"
+            },
+            {
+                "subject": "CVE-2023-4969",
+                "relation": "enables",
+                "object": "data recovery from vulnerable GPUs"
+            },
+            {
+                "subject": "data recovery",
+                "relation": "in context of",
+                "object": "large language models (LLMs)"
+            },
+            {
+                "subject": "data recovery",
+                "relation": "in context of",
+                "object": "machine learning (ML) processes"
+            },
+            {
+                "subject": "LeftoverLocals",
+                "relation": "lets",
+                "object": "attackers launch a listener"
+            },
+            {
+                "subject": "a listener",
+                "relation": "reads from",
+                "object": "uninitialized local memory"
+            },
+            {
+                "subject": "a listener",
+                "relation": "can dump the data in",
+                "object": "a persistent location"
+            },
+            {
+                "subject": "persistent location",
+                "relation": "such as",
+                "object": "the global memory"
+            },
+            {
+                "subject": "the listener",
+                "relation": "reads values",
+                "object": "left behind by the writer"
+            },
+            {
+                "subject": "the writer",
+                "relation": "stores values to",
+                "object": "local memory"
+            },
+            {
+                "subject": "recovered data",
+                "relation": "can reveal",
+                "object": "sensitive information"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "about",
+                "object": "victim's computations"
+            },
+            {
+                "subject": "victim's computations",
+                "relation": "includes",
+                "object": "model inputs"
+            },
+            {
+                "subject": "victim's computations",
+                "relation": "includes",
+                "object": "outputs"
+            },
+            {
+                "subject": "victim's computations",
+                "relation": "includes",
+                "object": "weights"
+            },
+            {
+                "subject": "victim's computations",
+                "relation": "includes",
+                "object": "intermediate computations"
+            }
+        ],
+        "triples_count": 21,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1848,
+                "cost": 0.01848
+            },
+            "output": {
+                "tokens": 495,
+                "cost": 0.01485
+            },
+            "total": {
+                "tokens": 2343,
+                "cost": 0.03333
+            }
+        },
+        "time": 29.180363416671753,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/BleepingComputer/qualcomm-QD1-1ZU.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer: apple.json",
+                    0.06409617903871719
+                ],
+                [
+                    "Unit42: Citrix-Bleed.json",
+                    0.06575835955700361
+                ],
+                [
+                    "BleepingComputer: chrome.json",
+                    0.1774117489956562
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 9,
+                "fn": 10,
+                "precision": 0.5714285714285714,
+                "recall": 0.5454545454545454,
+                "f1": 0.5581395348837208
+            },
+            "matched_list": [
+                [
+                    [
+                        "LeftoverLocals",
+                        "affecting",
+                        "graphics processing units"
+                    ],
+                    [
+                        "LeftoverLocals",
+                        "affects",
+                        "graphics processing units"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "graphics processing units",
+                        "from",
+                        "AMD"
+                    ],
+                    [
+                        "graphics processing units",
+                        "from",
+                        "AMD"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "graphics processing units",
+                        "from",
+                        "Apple"
+                    ],
+                    [
+                        "graphics processing units",
+                        "from",
+                        "Apple"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "graphics processing units",
+                        "from",
+                        "Qualcomm"
+                    ],
+                    [
+                        "graphics processing units",
+                        "from",
+                        "Qualcomm"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "graphics processing units",
+                        "from",
+                        "Imagination Technologies"
+                    ],
+                    [
+                        "graphics processing units",
+                        "from",
+                        "Imagination Technologies"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-4969",
+                        "enables",
+                        "data recovery from vulnerable GPUs"
+                    ],
+                    [
+                        "The vulnerability",
+                        "enables",
+                        "data recovery from vulnerable GPUs"
+                    ],
+                    [
+                        0.5331834654301026,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "a listener",
+                        "reads from",
+                        "uninitialized local memory"
+                    ],
+                    [
+                        "'listener'",
+                        "is a",
+                        "GPU kernel that reads from uninitialized local memory"
+                    ],
+                    [
+                        0.7345361202834233,
+                        0.6700937886159681
+                    ]
+                ],
+                [
+                    [
+                        "a listener",
+                        "can dump the data in",
+                        "a persistent location"
+                    ],
+                    [
+                        "'listener'",
+                        "can dump data in",
+                        "persistent location"
+                    ],
+                    [
+                        0.7345361202834233,
+                        0.7386790077503644
+                    ]
+                ],
+                [
+                    [
+                        "persistent location",
+                        "such as",
+                        "the global memory"
+                    ],
+                    [
+                        "persistent location",
+                        "such as",
+                        "the global memory"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "the writer",
+                        "stores values to",
+                        "local memory"
+                    ],
+                    [
+                        "'writer'",
+                        "is a",
+                        "program that stores values to local memory"
+                    ],
+                    [
+                        0.7241205471782302,
+                        0.6430581218539628
+                    ]
+                ],
+                [
+                    [
+                        "recovered data",
+                        "can reveal",
+                        "sensitive information"
+                    ],
+                    [
+                        "recovered data",
+                        "can reveal",
+                        "sensitive information about victim's computations"
+                    ],
+                    [
+                        1.0,
+                        0.6492396832558377
+                    ]
+                ],
+                [
+                    [
+                        "sensitive information",
+                        "about",
+                        "victim's computations"
+                    ],
+                    [
+                        "sensitive information",
+                        "includes",
+                        "intermediate computations"
+                    ],
+                    [
+                        1.0,
+                        0.5135091744672311
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "LeftoverLocals",
+                    "is tracked as",
+                    "CVE-2023-4969"
+                ],
+                [
+                    "data recovery",
+                    "in context of",
+                    "large language models (LLMs)"
+                ],
+                [
+                    "data recovery",
+                    "in context of",
+                    "machine learning (ML) processes"
+                ],
+                [
+                    "LeftoverLocals",
+                    "lets",
+                    "attackers launch a listener"
+                ],
+                [
+                    "the listener",
+                    "reads values",
+                    "left behind by the writer"
+                ],
+                [
+                    "victim's computations",
+                    "includes",
+                    "model inputs"
+                ],
+                [
+                    "victim's computations",
+                    "includes",
+                    "outputs"
+                ],
+                [
+                    "victim's computations",
+                    "includes",
+                    "weights"
+                ],
+                [
+                    "victim's computations",
+                    "includes",
+                    "intermediate computations"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "LeftoverLocals",
+                    "allows",
+                    "retrieving data from local memory space"
+                ],
+                [
+                    "The vulnerability",
+                    "is tracked as",
+                    "CVE-2023-4969"
+                ],
+                [
+                    "vulnerable GPUs",
+                    "especially in context of",
+                    "large language models processes"
+                ],
+                [
+                    "vulnerable GPUs",
+                    "especially in context of",
+                    "machine learning processes"
+                ],
+                [
+                    "attackers",
+                    "launch",
+                    "'listener'"
+                ],
+                [
+                    "attacker",
+                    "use",
+                    "listener to read values"
+                ],
+                [
+                    "values",
+                    "left behind by",
+                    "'writer'"
+                ],
+                [
+                    "sensitive information",
+                    "includes",
+                    "model inputs"
+                ],
+                [
+                    "sensitive information",
+                    "includes",
+                    "outputs"
+                ],
+                [
+                    "sensitive information",
+                    "includes",
+                    "weights"
+                ]
+            ]
+        }
+    }
+}

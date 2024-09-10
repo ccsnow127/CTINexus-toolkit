@@ -1,0 +1,216 @@
+{
+    "CTI": {
+        "text": "A threat actor known for repeatedly targeting organizations in Ukraine with the RemcosRAT remote surveillance and control tool is back at it again, this time with a new tactic for transferring data without triggering endpoint detection and response systems. The adversary, tracked as UNC-0050, is focused on Ukrainian government entities in its latest campaign. Researchers at Uptycs who spotted it said the attacks may be politically motivated, with the goal of collecting specific intelligence from Ukrainian government agencies. While the possibility of state sponsorship remains speculative, the group's activities pose an undeniable risk, especially to government sectors reliant on Windows systems,",
+        "link": "https://www.darkreading.com/cyberattacks-data-breaches/threat-group-using-rare-data-transfer-tactic-in-new-remcosrat-campaign"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "threat actor",
+                "relation": "known for",
+                "object": "targeting organizations in Ukraine"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "uses",
+                "object": "RemcosRAT remote surveillance and control tool"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "is back with",
+                "object": "a new tactic for transferring data without triggering endpoint detection and response systems"
+            },
+            {
+                "subject": "adversary",
+                "relation": "tracked as",
+                "object": "UNC-0050"
+            },
+            {
+                "subject": "adversary",
+                "relation": "focused on",
+                "object": "Ukrainian government entities"
+            },
+            {
+                "subject": "campaign",
+                "relation": "is",
+                "object": "latest"
+            },
+            {
+                "subject": "attacks",
+                "relation": "may be",
+                "object": "politically motivated"
+            },
+            {
+                "subject": "goal",
+                "relation": "of collecting",
+                "object": "specific intelligence from Ukrainian government agencies"
+            },
+            {
+                "subject": "group's activities",
+                "relation": "pose risk to",
+                "object": "government sectors reliant on Windows systems"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1346,
+                "cost": 0.013460000000000001
+            },
+            "output": {
+                "tokens": 232,
+                "cost": 0.00696
+            },
+            "total": {
+                "tokens": 1578,
+                "cost": 0.02042
+            }
+        },
+        "time": 11.479664087295532,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/darkreading/RemcosRAT-QD1-JPV.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Follina.json",
+                    "random"
+                ],
+                [
+                    "wallescape.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 1,
+                "fn": 2,
+                "precision": 0.8888888888888888,
+                "recall": 0.8,
+                "f1": 0.8421052631578948
+            },
+            "matched_list": [
+                [
+                    [
+                        "threat actor",
+                        "known for",
+                        "targeting organizations in Ukraine"
+                    ],
+                    [
+                        "a threat actor",
+                        "known for",
+                        "targeting organizations in Ukraine"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor",
+                        "uses",
+                        "RemcosRAT remote surveillance and control tool"
+                    ],
+                    [
+                        "a threat actor",
+                        "uses",
+                        "the RemcosRAT remote surveillance and control tool"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor",
+                        "is back with",
+                        "a new tactic for transferring data without triggering endpoint detection and response systems"
+                    ],
+                    [
+                        "a threat actor",
+                        "employs a new tactic for",
+                        "transferring data without triggering endpoint detection and response systems"
+                    ]
+                ],
+                [
+                    [
+                        "adversary",
+                        "tracked as",
+                        "UNC-0050"
+                    ],
+                    [
+                        "UNC-0050",
+                        "is being tracked as",
+                        "UNC-0050"
+                    ]
+                ],
+                [
+                    [
+                        "adversary",
+                        "focused on",
+                        "Ukrainian government entities"
+                    ],
+                    [
+                        "UNC-0050",
+                        "is focused on",
+                        "Ukrainian government entities"
+                    ]
+                ],
+                [
+                    [
+                        "attacks",
+                        "may be",
+                        "politically motivated"
+                    ],
+                    [
+                        "The attacks",
+                        "may be",
+                        "politically motivated"
+                    ]
+                ],
+                [
+                    [
+                        "goal",
+                        "of collecting",
+                        "specific intelligence from Ukrainian government agencies"
+                    ],
+                    [
+                        "The attacks",
+                        "have the goal of",
+                        "collecting specific intelligence from Ukrainian government agencies"
+                    ]
+                ],
+                [
+                    [
+                        "group's activities",
+                        "pose risk to",
+                        "government sectors reliant on Windows systems"
+                    ],
+                    [
+                        "the risk",
+                        "is especially to",
+                        "government sectors reliant on Windows systems"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "campaign",
+                    "is",
+                    "latest"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Researchers at Uptycs",
+                    "spotted",
+                    "the attacks"
+                ],
+                [
+                    "the group's activities",
+                    "pose",
+                    "an undeniable risk"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

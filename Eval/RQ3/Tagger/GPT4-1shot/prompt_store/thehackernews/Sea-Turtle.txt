@@ -1,0 +1,110 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Sea Turtle', 'relation': 'is also known as', 'object': 'Cosmic Wolf'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Sea Turtle', 'relation': 'is also known as', 'object': 'Marbled Dust'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Sea Turtle', 'relation': 'is also known as', 'object': 'formerly Silicon'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Sea Turtle', 'relation': 'is also known as', 'object': 'Teal Kurma'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Sea Turtle', 'relation': 'is also known as', 'object': 'UNC1326'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Sea Turtle', 'relation': 'targeted', 'object': 'public entities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Sea Turtle', 'relation': 'targeted', 'object': 'private entities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'targeted entities', 'relation': 'locate in', 'object': 'the Middle East and North Africa'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Sea Turtle', 'relation': 'used', 'object': 'DNS hijacking'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'DNS hijacking', 'relation': 'redirects', 'object': 'to actor-controlled server'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'actor-controlled server', 'relation': 'is capable of', 'object': 'harvesting credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Sea Turtle', 'relation': 'used', 'object': 'SnappyTCP'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SnappyTCP', 'relation': 'is', 'object': 'a simple reverse TCP shell for Linux/Unix'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SnappyTCP', 'relation': 'has', 'object': '[command-and-control] capabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SnappyTCP', 'relation': 'is used for', 'object': 'establishing persistence'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

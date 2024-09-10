@@ -1,0 +1,210 @@
+{
+    "CTI": {
+        "text": "Microsoft researchers have linked an emerging ransomware threat that already has compromised a number of small-to-mid-sized businesses to financially motivated North Korean state-sponsored actors that have been active since last year. A group tracked by researchers from Microsoft Threat Intelligence Center (MSTIC) as DEV-0530 but that calls itself H0lyGh0st has been developing and using ransomware in attacks since June 2021. H0lyGh0st\u2019s standard modus operandi is to use a namesake ransomware to encrypt all files on the target device using the file extension .h0lyenc, then send the victim a sample of the files as proof. The group interacts with victims on a .onion site that it maintains and on which it provides a contact form for victims to get in touch, researchers said.",
+        "link": "https://threatpost.com/h0lygh0st-ransomware-north-korea/180232/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Microsoft researchers",
+                "relation": "linked",
+                "object": "emerging ransomware threat to financially motivated North Korean state-sponsored actors"
+            },
+            {
+                "subject": "DEV-0530",
+                "relation": "calls itself",
+                "object": "H0lyGh0st"
+            },
+            {
+                "subject": "H0lyGh0st",
+                "relation": "has been developing and using",
+                "object": "ransomware in attacks"
+            },
+            {
+                "subject": "H0lyGh0st\u2019s ransomware",
+                "relation": "encrypts",
+                "object": "all files on the target device with .h0lyenc"
+            },
+            {
+                "subject": "The group",
+                "relation": "interacts with victims on",
+                "object": "a .onion site"
+            },
+            {
+                "subject": "The .onion site",
+                "relation": "provides",
+                "object": "a contact form for victims"
+            }
+        ],
+        "triples_count": 6,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 924,
+                "cost": 0.00924
+            },
+            "output": {
+                "tokens": 192,
+                "cost": 0.00576
+            },
+            "total": {
+                "tokens": 1116,
+                "cost": 0.015
+            }
+        },
+        "time": 4.696129083633423,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/threatPost/H0lyGh0st-QD1-kbS.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "trendmicro: TargetCompany.json",
+                    0.15266660824411118
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 4,
+                "fp": 2,
+                "precision": 0.6666666666666666,
+                "recall": 0.2857142857142857,
+                "f1": 0.4,
+                "fn": 10
+            },
+            "matched_list": [
+                [
+                    [
+                        "H0lyGh0st",
+                        "has been developing and using",
+                        "ransomware in attacks"
+                    ],
+                    [
+                        "H0lyGh0st",
+                        "developing",
+                        "ransomware"
+                    ],
+                    [
+                        1.0,
+                        0.7802312983103691
+                    ]
+                ],
+                [
+                    [
+                        "H0lyGh0st\u2019s ransomware",
+                        "encrypts",
+                        "all files on the target device with .h0lyenc"
+                    ],
+                    [
+                        "namesake ransomware",
+                        "encrypts",
+                        "all files on the target device"
+                    ],
+                    [
+                        0.6172498648159515,
+                        0.6535746517074104
+                    ]
+                ],
+                [
+                    [
+                        "The group",
+                        "interacts with victims on",
+                        "a .onion site"
+                    ],
+                    [
+                        "group",
+                        "interacts with victims on",
+                        "a .onion site"
+                    ],
+                    [
+                        0.7259796680798258,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "The .onion site",
+                        "provides",
+                        "a contact form for victims"
+                    ],
+                    [
+                        "a .onion site",
+                        "provides",
+                        "a contact form for victims"
+                    ],
+                    [
+                        0.9132042199142374,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Microsoft researchers",
+                    "linked",
+                    "emerging ransomware threat to financially motivated North Korean state-sponsored actors"
+                ],
+                [
+                    "DEV-0530",
+                    "calls itself",
+                    "H0lyGh0st"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "an emerging ransomware threat",
+                    "compromised",
+                    "small-to-mid-sized businesses"
+                ],
+                [
+                    "an emerging ransomware threat",
+                    "linked to",
+                    "North Korean state-sponsored actors"
+                ],
+                [
+                    "North Korean state-sponsored actors",
+                    "have been active since",
+                    "last year"
+                ],
+                [
+                    "a group",
+                    "tracked as",
+                    "DEV-0530"
+                ],
+                [
+                    "a group",
+                    "calls itself",
+                    "H0lyGh0st"
+                ],
+                [
+                    "H0lyGh0st",
+                    "using",
+                    "ransomware in attacks"
+                ],
+                [
+                    "H0lyGh0st\u2019s modus operandi",
+                    "is to use",
+                    "namesake ransomware"
+                ],
+                [
+                    "the file extension",
+                    "is",
+                    ".h0lyenc"
+                ],
+                [
+                    "H0lyGh0st",
+                    "sends",
+                    "the victim a sample of the files"
+                ],
+                [
+                    "a .onion site",
+                    "maintained by",
+                    "H0lyGh0st"
+                ]
+            ]
+        }
+    }
+}

@@ -1,0 +1,136 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'PurpleFox', 'relation': 'is also known as', 'object': 'DirtyMoe'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PurpleFox', 'relation': 'is', 'object': 'a modular Windows botnet malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PurpleFox', 'relation': 'comes with', 'object': 'a rootkit module'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The rootkit module', 'relation': 'allows', 'object': 'to hide and persist between device reboots'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PurpleFox', 'relation': 'can be used as', 'object': 'a downloader'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PurpleFox', 'relation': 'introduces', 'object': 'second-stage payloads on compromised systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PurpleFox', 'relation': 'offers', 'object': 'backdoor capabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PurpleFox', 'relation': 'can act as', 'object': 'a DDoS bot'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'New versions of PurpleFox', 'relation': 'switched to using', 'object': 'WebSocket for command and control (C2) communications'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'A campaign', 'relation': 'spread', 'object': 'the malware under the guise of a Telegram desktop app'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CERT-UA', 'relation': 'used IoCs shared by', 'object': 'Avast and TrendMicro'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CERT-UA', 'relation': 'to identify', 'object': 'PurpleFox malware infections'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PurpleFox malware infections', 'relation': 'are on', 'object': 'Ukrainian computers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PurpleFox', 'relation': 'infects systems when victims launch', 'object': 'laced MSI installers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'PurpleFox', 'relation': 'highlights', 'object': 'its self-propagation capabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The self-propagation capabilities', 'relation': 'use', 'object': 'exploits for known flaws'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The self-propagation capabilities', 'relation': 'use', 'object': 'password brute-forcing'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

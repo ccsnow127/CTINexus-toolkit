@@ -1,0 +1,286 @@
+{
+    "CTI": {
+        "text": "In August 2023, RARLabs released an updated version of WinRAR that included fixes for several security-related bugs. One of those bugs, later assigned CVE-2023-38831, is a logical vulnerability within WinRAR causing extraneous temporary file expansion when processing crafted archives, combined with a quirk in the implementation of Windows\u2019 ShellExecute when attempting to open a file with an extension containing spaces. The vulnerability allows attackers to execute arbitrary code when a user attempts to view a benign file (such as an ordinary PNG file) within a ZIP archive. As detailed in a blog post from Group-IB, the vulnerability had been exploited as 0-day by cybercrime actors in-the-wild since at least April 2023 for campaigns targeting financial traders to deliver various commodity malware families. Hours after the blog post was released, proof of concepts and exploit generators were uploaded to public GitHub repositories. ",
+        "link": "https://blog.google/threat-analysis-group/government-backed-actors-exploiting-winrar-vulnerability/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "RARLabs",
+                "relation": "released",
+                "object": "an updated version of WinRAR"
+            },
+            {
+                "subject": "WinRAR",
+                "relation": "included fixes for",
+                "object": "several security-related bugs"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "is a",
+                "object": "logical vulnerability within WinRAR"
+            },
+            {
+                "subject": "logical vulnerability",
+                "relation": "causing",
+                "object": "extraneous temporary file expansion when processing crafted archives"
+            },
+            {
+                "subject": "logical vulnerability",
+                "relation": "combined with",
+                "object": "a quirk in the implementation of Windows\u2019 ShellExecute"
+            },
+            {
+                "subject": "Windows\u2019 ShellExecute",
+                "relation": "when attempting to open",
+                "object": "a file with an extension containing spaces"
+            },
+            {
+                "subject": "The vulnerability",
+                "relation": "allows",
+                "object": "attackers to execute arbitrary code"
+            },
+            {
+                "subject": "user",
+                "relation": "attempts to view",
+                "object": "a benign file within a ZIP archive"
+            },
+            {
+                "subject": "Group-IB",
+                "relation": "detailed in",
+                "object": "a blog post"
+            },
+            {
+                "subject": "The vulnerability",
+                "relation": "had been exploited as",
+                "object": "0-day by cybercrime actors"
+            },
+            {
+                "subject": "cybercrime actors",
+                "relation": "since at least",
+                "object": "April 2023"
+            },
+            {
+                "subject": "campaigns",
+                "relation": "targeting",
+                "object": "financial traders"
+            },
+            {
+                "subject": "campaigns",
+                "relation": "to deliver",
+                "object": "various commodity malware families"
+            },
+            {
+                "subject": "proof of concepts and exploit generators",
+                "relation": "were uploaded to",
+                "object": "public GitHub repositories"
+            }
+        ],
+        "triples_count": 14,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 724,
+                "cost": 0.007240000000000001
+            },
+            "output": {
+                "tokens": 375,
+                "cost": 0.01125
+            },
+            "total": {
+                "tokens": 1099,
+                "cost": 0.01849
+            }
+        },
+        "time": 10.411420106887817,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/Google_TAG/winrar-QD1-wV1.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "symantec: Follina.json",
+                    0.16801457428136113
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 13,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.9285714285714286,
+                "recall": 1.0,
+                "f1": 0.962962962962963
+            },
+            "matched_list": [
+                [
+                    [
+                        "RARLabs",
+                        "released",
+                        "an updated version of WinRAR"
+                    ],
+                    [
+                        "RARLabs",
+                        "released",
+                        "an updated version of WinRAR"
+                    ]
+                ],
+                [
+                    [
+                        "WinRAR",
+                        "included fixes for",
+                        "several security-related bugs"
+                    ],
+                    [
+                        "an updated version of WinRAR",
+                        "included",
+                        "fixes for security-related bugs"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-38831",
+                        "is a",
+                        "logical vulnerability within WinRAR"
+                    ],
+                    [
+                        "One of those bugs",
+                        "is",
+                        "CVE-2023-38831"
+                    ]
+                ],
+                [
+                    [
+                        "logical vulnerability",
+                        "causing",
+                        "extraneous temporary file expansion when processing crafted archives"
+                    ],
+                    [
+                        "CVE-2023-38831",
+                        "is a",
+                        "logical vulnerability within WinRAR"
+                    ]
+                ],
+                [
+                    [
+                        "logical vulnerability",
+                        "combined with",
+                        "a quirk in the implementation of Windows\u2019 ShellExecute"
+                    ],
+                    [
+                        "logical vulnerability within WinRAR",
+                        "causing",
+                        "extraneous temporary file expansion"
+                    ]
+                ],
+                [
+                    [
+                        "Windows\u2019 ShellExecute",
+                        "when attempting to open",
+                        "a file with an extension containing spaces"
+                    ],
+                    [
+                        "Windows\u2019 ShellExecute",
+                        "has a quirk when attempting to open",
+                        "a file with an extension containing spaces"
+                    ]
+                ],
+                [
+                    [
+                        "The vulnerability",
+                        "allows",
+                        "attackers to execute arbitrary code"
+                    ],
+                    [
+                        "The vulnerability",
+                        "allows attackers to execute",
+                        "arbitrary code"
+                    ]
+                ],
+                [
+                    [
+                        "Group-IB",
+                        "detailed in",
+                        "a blog post"
+                    ],
+                    [
+                        "Group-IB",
+                        "detailed",
+                        "a blog post"
+                    ]
+                ],
+                [
+                    [
+                        "The vulnerability",
+                        "had been exploited as",
+                        "0-day by cybercrime actors"
+                    ],
+                    [
+                        "The vulnerability",
+                        "had been exploited as",
+                        "0-day"
+                    ]
+                ],
+                [
+                    [
+                        "cybercrime actors",
+                        "since at least",
+                        "April 2023"
+                    ],
+                    [
+                        "cybercrime actors",
+                        "exploited",
+                        "The vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "campaigns",
+                        "targeting",
+                        "financial traders"
+                    ],
+                    [
+                        "campaigns",
+                        "targeting",
+                        "financial traders"
+                    ]
+                ],
+                [
+                    [
+                        "campaigns",
+                        "to deliver",
+                        "various commodity malware families"
+                    ],
+                    [
+                        "campaigns",
+                        "to deliver",
+                        "various commodity malware families"
+                    ]
+                ],
+                [
+                    [
+                        "proof of concepts and exploit generators",
+                        "were uploaded to",
+                        "public GitHub repositories"
+                    ],
+                    [
+                        "proof of concepts and exploit generators",
+                        "were uploaded to",
+                        "public GitHub repositories"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "user",
+                    "attempts to view",
+                    "a benign file within a ZIP archive"
+                ]
+            ],
+            "not_recall_list": []
+        }
+    }
+}

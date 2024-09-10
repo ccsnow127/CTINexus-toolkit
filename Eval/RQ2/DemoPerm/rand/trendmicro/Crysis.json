@@ -1,0 +1,171 @@
+{
+    "CTI": {
+        "text": "Crysis/Dharma ransomware (detected by Trend Micro as Ransom.Win32.CRYSIS.TIBGGS) has released a hacking toolkit named Toolbox, Sophos reports. Toolbox contains Mimikatz to harvest passwords, NirSoft Remote Desktop PassView to steal remote desktop protocol (RDP) passwords, Hash Suite Tools Free to dump hashes, and other tools to help find target computers and deploy the ransomware payload. With this kit, even rookie hackers can infiltrate networks easily. Crysis operates under a ransomware-as-a-service (RaaS) model, and this hacking tool only makes it easier for affiliates to spread the ransomware to more targets.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/threat-recap-darkside-crysis-negasteal-coinminer"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Crysis/Dharma ransomware",
+                "relation": "released",
+                "object": "a hacking toolkit named Toolbox"
+            },
+            {
+                "subject": "Toolbox",
+                "relation": "contains",
+                "object": "Mimikatz to harvest passwords"
+            },
+            {
+                "subject": "Toolbox",
+                "relation": "contains",
+                "object": "NirSoft Remote Desktop PassView to steal RDP passwords"
+            },
+            {
+                "subject": "Toolbox",
+                "relation": "contains",
+                "object": "Hash Suite Tools Free to dump hashes"
+            },
+            {
+                "subject": "Toolbox",
+                "relation": "helps",
+                "object": "find target computers and deploy ransomware payload"
+            },
+            {
+                "subject": "Crysis",
+                "relation": "operates under",
+                "object": "ransomware-as-a-service (RaaS) model"
+            },
+            {
+                "subject": "hacking tool",
+                "relation": "makes it easier for",
+                "object": "affiliates to spread the ransomware"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1285,
+                "cost": 0.01285
+            },
+            "output": {
+                "tokens": 205,
+                "cost": 0.00615
+            },
+            "total": {
+                "tokens": 1490,
+                "cost": 0.019
+            }
+        },
+        "time": 9.21903920173645,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/trendmicro/Crysis-QD1-bsj.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "CryptoClippy.json",
+                    "random"
+                ],
+                [
+                    "UAC-0050.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.8571428571428571,
+                "recall": 1.0,
+                "f1": 0.923076923076923
+            },
+            "matched_list": [
+                [
+                    [
+                        "Crysis/Dharma ransomware",
+                        "released",
+                        "a hacking toolkit named Toolbox"
+                    ],
+                    [
+                        "Crysis/Dharma ransomware",
+                        "released",
+                        "a hacking toolkit named Toolbox"
+                    ]
+                ],
+                [
+                    [
+                        "Toolbox",
+                        "contains",
+                        "Mimikatz to harvest passwords"
+                    ],
+                    [
+                        "Toolbox",
+                        "contains",
+                        "Mimikatz"
+                    ]
+                ],
+                [
+                    [
+                        "Toolbox",
+                        "contains",
+                        "NirSoft Remote Desktop PassView to steal RDP passwords"
+                    ],
+                    [
+                        "Toolbox",
+                        "contains",
+                        "NirSoft Remote Desktop PassView"
+                    ]
+                ],
+                [
+                    [
+                        "Toolbox",
+                        "contains",
+                        "Hash Suite Tools Free to dump hashes"
+                    ],
+                    [
+                        "Toolbox",
+                        "contains",
+                        "Hash Suite Tools Free"
+                    ]
+                ],
+                [
+                    [
+                        "Toolbox",
+                        "helps",
+                        "find target computers and deploy ransomware payload"
+                    ],
+                    [
+                        "Toolbox",
+                        "helps to",
+                        "deploy the ransomware payload"
+                    ]
+                ],
+                [
+                    [
+                        "Crysis",
+                        "operates under",
+                        "ransomware-as-a-service (RaaS) model"
+                    ],
+                    [
+                        "Crysis/Dharma ransomware",
+                        "operates under",
+                        "ransomware-as-a-service (RaaS) model"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "hacking tool",
+                    "makes it easier for",
+                    "affiliates to spread the ransomware"
+                ]
+            ],
+            "not_recall_list": [],
+            "thresh": 0.7
+        }
+    }
+}

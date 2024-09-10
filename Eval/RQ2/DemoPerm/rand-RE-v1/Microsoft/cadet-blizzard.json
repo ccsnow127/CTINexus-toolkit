@@ -1,0 +1,226 @@
+{
+    "CTI": {
+        "text": "Today, Microsoft Threat Intelligence is sharing updated details about techniques of a threat actor formerly tracked as DEV-0586\u2014a distinct Russian state-sponsored threat actor that has now been elevated to the name Cadet Blizzard. Microsoft assesses that Cadet Blizzard operations are associated with the Russian General Staff Main Intelligence Directorate (GRU) but are separate from other known and more established GRU-affiliated groups such as Forest Blizzard (STRONTIUM) and Seashell Blizzard (IRIDIUM). While Microsoft constantly tracks a number of activity groups with varying degrees of Russian government affiliation, the emergence of a novel GRU affiliated actor, particularly one which has conducted destructive cyber operations likely supporting broader military objectives in Ukraine, is a notable development in the Russian cyber threat landscape. A month before Russia invaded Ukraine, Cadet Blizzard foreshadowed future destructive activity when it created and deployed WhisperGate, a destructive capability that wipes Master Boot Records (MBRs), against Ukrainian government organizations. Cadet Blizzard is also linked to the defacements of several Ukrainian organization websites, as well as multiple operations, including the hack-and-leak forum known as \u201cFree Civilian\u201d.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/06/14/cadet-blizzard-emerges-as-a-novel-and-distinct-russian-threat-actor/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Cadet Blizzard",
+                "relation": "formerly tracked as",
+                "object": "DEV-0586"
+            },
+            {
+                "subject": "Cadet Blizzard",
+                "relation": "is",
+                "object": "a Russian state-sponsored threat actor"
+            },
+            {
+                "subject": "Cadet Blizzard operations",
+                "relation": "are associated with",
+                "object": "the Russian General Staff Main Intelligence Directorate (GRU)"
+            },
+            {
+                "subject": "Forest Blizzard (STRONTIUM)",
+                "relation": "is affiliated with",
+                "object": "GRU"
+            },
+            {
+                "subject": "Seashell Blizzard (IRIDIUM)",
+                "relation": "is affiliated with",
+                "object": "GRU"
+            },
+            {
+                "subject": "Cadet Blizzard",
+                "relation": "created and deployed",
+                "object": "WhisperGate"
+            },
+            {
+                "subject": "WhisperGate",
+                "relation": "is a",
+                "object": "destructive capability that wipes Master Boot Records (MBRs)"
+            },
+            {
+                "subject": "Cadet Blizzard",
+                "relation": "linked to",
+                "object": "the defacements of several Ukrainian organization websites"
+            },
+            {
+                "subject": "Cadet Blizzard",
+                "relation": "is involved in",
+                "object": "multiple operations"
+            },
+            {
+                "subject": "hack-and-leak forum known as \u201cFree Civilian\u201d",
+                "relation": "is associated with",
+                "object": "Cadet Blizzard"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1597,
+                "cost": 0.01597
+            },
+            "output": {
+                "tokens": 356,
+                "cost": 0.01068
+            },
+            "total": {
+                "tokens": 1953,
+                "cost": 0.02665
+            }
+        },
+        "time": 15.74164867401123,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/Microsoft/cadet-blizzard-QD1-2cp.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Microsoft.json",
+                    "random"
+                ],
+                [
+                    "screenconnect.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 2,
+                "fn": 2,
+                "precision": 0.8,
+                "recall": 0.8,
+                "f1": 0.8000000000000002
+            },
+            "matched_list": [
+                [
+                    [
+                        "Cadet Blizzard",
+                        "formerly tracked as",
+                        "DEV-0586"
+                    ],
+                    [
+                        "Cadet Blizzard",
+                        "formerly tracked as",
+                        "DEV-0586"
+                    ]
+                ],
+                [
+                    [
+                        "Cadet Blizzard",
+                        "is",
+                        "a Russian state-sponsored threat actor"
+                    ],
+                    [
+                        "Cadet Blizzard",
+                        "is a",
+                        "Russian state-sponsored threat actor"
+                    ]
+                ],
+                [
+                    [
+                        "Cadet Blizzard operations",
+                        "are associated with",
+                        "the Russian General Staff Main Intelligence Directorate (GRU)"
+                    ],
+                    [
+                        "Cadet Blizzard operations",
+                        "are associated with",
+                        "the Russian General Staff Main Intelligence Directorate (GRU)"
+                    ]
+                ],
+                [
+                    [
+                        "Cadet Blizzard",
+                        "created and deployed",
+                        "WhisperGate"
+                    ],
+                    [
+                        "Cadet Blizzard",
+                        "created and deployed",
+                        "WhisperGate"
+                    ]
+                ],
+                [
+                    [
+                        "WhisperGate",
+                        "is a",
+                        "destructive capability that wipes Master Boot Records (MBRs)"
+                    ],
+                    [
+                        "WhisperGate",
+                        "wipes",
+                        "Master Boot Records (MBRs)"
+                    ]
+                ],
+                [
+                    [
+                        "Cadet Blizzard",
+                        "linked to",
+                        "the defacements of several Ukrainian organization websites"
+                    ],
+                    [
+                        "Cadet Blizzard",
+                        "linked to",
+                        "the defacements of Ukrainian organization websites"
+                    ]
+                ],
+                [
+                    [
+                        "Cadet Blizzard",
+                        "is involved in",
+                        "multiple operations"
+                    ],
+                    [
+                        "Cadet Blizzard",
+                        "linked to",
+                        "multiple operations"
+                    ]
+                ],
+                [
+                    [
+                        "hack-and-leak forum known as \u201cFree Civilian\u201d",
+                        "is associated with",
+                        "Cadet Blizzard"
+                    ],
+                    [
+                        "Free Civilian",
+                        "is a",
+                        "hack-and-leak forum"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Forest Blizzard (STRONTIUM)",
+                    "is affiliated with",
+                    "GRU"
+                ],
+                [
+                    "Seashell Blizzard (IRIDIUM)",
+                    "is affiliated with",
+                    "GRU"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Cadet Blizzard",
+                    "is separate from",
+                    "Forest Blizzard (STRONTIUM)"
+                ],
+                [
+                    "Cadet Blizzard",
+                    "is separate from",
+                    "Seashell Blizzard (IRIDIUM)"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

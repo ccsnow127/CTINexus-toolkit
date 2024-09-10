@@ -1,0 +1,336 @@
+{
+    "CTI": {
+        "text": "In May 2023, Kroll Cyber Threat Intelligence analysts published their discoveries of a new ransomware variant referred to as CACTUS, which has been actively targeting large commercial entities since March 2023. The name CACTUS is derived from the filename found within the ransom note, cAcTuS.readme.txt, and is also self-declared within the note. Encrypted files carry the extension .cts1, although variations in the appended number have been observed across different incidents and victims. CACTUS uses a unique tactic by requiring a key for decrypting the binary, likely implemented to evade antivirus detection. This key is embedded within a file named ntuser.dat, loaded through a scheduled task. Kroll's research noted instances of data exfiltration and victim extortion over Tox, a peer-to-peer messaging service, but no known victim leak site was identified.In its operations, CACTUS demonstrates a consistent set of tactics, techniques, and procedures (TTPs). The initial exploit involves the exploitation of vulnerable VPN appliances, a prevalent method observed across multiple CACTUS incidents. Once inside the network, the threat actor conducts internal scouting using tools like SoftPerfect Network Scanner and PowerShell commands to enumerate endpoints, identify user accounts, and ping remote endpoints. To maintain persistence, CACTUS deploys various remote access methods, including legitimate tools like Splashtop, AnyDesk, and SuperOps RMM, along with malicious tools like Cobalt Strike and Chisel. The threat actor attempts to disable security software using custom scripts, such as TotalExec, and uninstall common antivirus software.",
+        "link": "https://explore.avertium.com/resource/new-ransomware-strains-cactus-and-3am"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "CACTUS",
+                "relation": "referred to as",
+                "object": "new ransomware variant"
+            },
+            {
+                "subject": "CACTUS",
+                "relation": "targeting",
+                "object": "large commercial entities"
+            },
+            {
+                "subject": "CACTUS",
+                "relation": "uses a unique tactic by",
+                "object": "requiring a key for decrypting the binary"
+            },
+            {
+                "subject": "Key",
+                "relation": "is embedded within",
+                "object": "ntuser.dat"
+            },
+            {
+                "subject": "CACTUS",
+                "relation": "demonstrates",
+                "object": "a consistent set of tactics, techniques, and procedures (TTPs)"
+            },
+            {
+                "subject": "Initial exploit",
+                "relation": "involves",
+                "object": "the exploitation of vulnerable VPN appliances"
+            },
+            {
+                "subject": "Threat actor",
+                "relation": "conducts internal scouting using",
+                "object": "SoftPerfect Network Scanner"
+            },
+            {
+                "subject": "Threat actor",
+                "relation": "conducts internal scouting using",
+                "object": "PowerShell commands"
+            },
+            {
+                "subject": "CACTUS",
+                "relation": "deploys",
+                "object": "various remote access methods"
+            },
+            {
+                "subject": "Remote access methods",
+                "relation": "include",
+                "object": "Splashtop"
+            },
+            {
+                "subject": "Remote access methods",
+                "relation": "include",
+                "object": "AnyDesk"
+            },
+            {
+                "subject": "Remote access methods",
+                "relation": "include",
+                "object": "SuperOps RMM"
+            },
+            {
+                "subject": "Remote access methods",
+                "relation": "include",
+                "object": "Cobalt Strike"
+            },
+            {
+                "subject": "Remote access methods",
+                "relation": "include",
+                "object": "Chisel"
+            },
+            {
+                "subject": "Threat actor",
+                "relation": "attempts to disable",
+                "object": "security software using custom scripts"
+            },
+            {
+                "subject": "Custom scripts",
+                "relation": "include",
+                "object": "TotalExec"
+            },
+            {
+                "subject": "Threat actor",
+                "relation": "uninstall",
+                "object": "common antivirus software"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1370,
+                "cost": 0.0137
+            },
+            "output": {
+                "tokens": 451,
+                "cost": 0.01353
+            },
+            "total": {
+                "tokens": 1821,
+                "cost": 0.02723
+            }
+        },
+        "time": 11.95879602432251,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/AVERTIUM/cactus-QD1-I27.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "AVERTIUM: fivehands.json",
+                    0.11865635308595339
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 7,
+                "fn": 8,
+                "precision": 0.5882352941176471,
+                "recall": 0.5555555555555556,
+                "f1": 0.5714285714285715
+            },
+            "matched_list": [
+                [
+                    [
+                        "CACTUS",
+                        "referred to as",
+                        "new ransomware variant"
+                    ],
+                    [
+                        "CACTUS ransomware",
+                        "is a variant targeting",
+                        "large commercial entities"
+                    ]
+                ],
+                [
+                    [
+                        "CACTUS",
+                        "targeting",
+                        "large commercial entities"
+                    ],
+                    [
+                        "CACTUS ransomware",
+                        "is a variant targeting",
+                        "large commercial entities"
+                    ]
+                ],
+                [
+                    [
+                        "CACTUS",
+                        "uses a unique tactic by",
+                        "requiring a key for decrypting the binary"
+                    ],
+                    [
+                        "CACTUS ransomware",
+                        "uses a unique tactic by requiring",
+                        "a key for decrypting the binary"
+                    ]
+                ],
+                [
+                    [
+                        "Key",
+                        "is embedded within",
+                        "ntuser.dat"
+                    ],
+                    [
+                        "The key",
+                        "is embedded within",
+                        "ntuser.dat"
+                    ]
+                ],
+                [
+                    [
+                        "Threat actor",
+                        "conducts internal scouting using",
+                        "SoftPerfect Network Scanner"
+                    ],
+                    [
+                        "The threat actor",
+                        "uses",
+                        "SoftPerfect Network Scanner"
+                    ]
+                ],
+                [
+                    [
+                        "Threat actor",
+                        "conducts internal scouting using",
+                        "PowerShell commands"
+                    ],
+                    [
+                        "The threat actor",
+                        "uses",
+                        "PowerShell commands"
+                    ]
+                ],
+                [
+                    [
+                        "CACTUS",
+                        "deploys",
+                        "various remote access methods"
+                    ],
+                    [
+                        "CACTUS ransomware",
+                        "deploys",
+                        "remote access methods"
+                    ]
+                ],
+                [
+                    [
+                        "Threat actor",
+                        "attempts to disable",
+                        "security software using custom scripts"
+                    ],
+                    [
+                        "The threat actor",
+                        "attempts to disable",
+                        "security software using custom scripts"
+                    ]
+                ],
+                [
+                    [
+                        "Custom scripts",
+                        "include",
+                        "TotalExec"
+                    ],
+                    [
+                        "The custom scripts",
+                        "include",
+                        "TotalExec"
+                    ]
+                ],
+                [
+                    [
+                        "Threat actor",
+                        "uninstall",
+                        "common antivirus software"
+                    ],
+                    [
+                        "The threat actor",
+                        "uninstalls",
+                        "common antivirus software"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "CACTUS",
+                    "demonstrates",
+                    "a consistent set of tactics, techniques, and procedures (TTPs)"
+                ],
+                [
+                    "Initial exploit",
+                    "involves",
+                    "the exploitation of vulnerable VPN appliances"
+                ],
+                [
+                    "Remote access methods",
+                    "include",
+                    "Splashtop"
+                ],
+                [
+                    "Remote access methods",
+                    "include",
+                    "AnyDesk"
+                ],
+                [
+                    "Remote access methods",
+                    "include",
+                    "SuperOps RMM"
+                ],
+                [
+                    "Remote access methods",
+                    "include",
+                    "Cobalt Strike"
+                ],
+                [
+                    "Remote access methods",
+                    "include",
+                    "Chisel"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "CACTUS ransomware",
+                    "conducts",
+                    "data exfiltration"
+                ],
+                [
+                    "CACTUS ransomware",
+                    "conducts",
+                    "victim extortion over Tox"
+                ],
+                [
+                    "CACTUS ransomware",
+                    "exploits",
+                    "vulnerable VPN appliances"
+                ],
+                [
+                    "legitimate tools",
+                    "include",
+                    "Splashtop"
+                ],
+                [
+                    "legitimate tools",
+                    "include",
+                    "AnyDesk"
+                ],
+                [
+                    "legitimate tools",
+                    "include",
+                    "SuperOps RMM"
+                ],
+                [
+                    "malicious tools",
+                    "include",
+                    "Cobalt Strike"
+                ],
+                [
+                    "malicious tools",
+                    "include",
+                    "Chisel"
+                ]
+            ]
+        }
+    }
+}

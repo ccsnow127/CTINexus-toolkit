@@ -1,0 +1,378 @@
+{
+    "CTI": {
+        "text": "Grayfly (aka GREF and Wicked Panda) is a targeted attack group that has been active since at least March 2017 using a custom backdoor known as Backdoor.Motnug (aka TOMMYGUN/CROSSWALK), a custom loader called Trojan.Chattak, Cobalt Strike (aka Trojan.Agentemis), and ancillary tools in its attacks. Grayfly has been observed targeting a number of countries in Asia, Europe, and North America across a variety of industries, including food, financial, healthcare, hospitality, manufacturing, and telecommunications. In more recent activity, Grayfly has continued with its focus on telecommunications but has also been observed targeting organizations operating within the media, finance, and IT service provider sectors. Typically Grayfly targets publicly facing web servers to install web shells for initial intrusion, before spreading further within the network. Once a network has been compromised, Grayfly may install its custom backdoors onto additional systems. These tools allow the attackers to have comprehensive remote access to the network and proxy connections allowing them to access hard-to-reach segments of a target's network. Although sometimes labeled APT41, we consider Grayfly the espionage arm of APT41. Similarly, Symantec tracks other sub-groups of APT41 separately, such as Blackfly, its cyber-crime arm.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/grayfly-china-sidewalk-malware"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Grayfly",
+                "relation": "is also known as",
+                "object": "GREF"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "is also known as",
+                "object": "Wicked Panda"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "has been active since",
+                "object": "at least March 2017"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "used",
+                "object": "a custom backdoor known as Backdoor.Motnug"
+            },
+            {
+                "subject": "Backdoor.Motnug",
+                "relation": "is also known as",
+                "object": "TOMMYGUN/CROSSWALK"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "used",
+                "object": "a custom loader called Trojan.Chattak"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "used",
+                "object": "Cobalt Strike"
+            },
+            {
+                "subject": "Cobalt Strike",
+                "relation": "is also known as",
+                "object": "Trojan.Agentemis"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "targeted",
+                "object": "countries in Asia, Europe, and North America"
+            },
+            {
+                "subject": "targeted industries",
+                "relation": "include",
+                "object": "food, financial, healthcare, hospitality, manufacturing, telecommunications"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "continues focus on",
+                "object": "telecommunications"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "observed targeting",
+                "object": "organizations within media, finance, and IT service provider sectors"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "targets",
+                "object": "publicly facing web servers"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "installs",
+                "object": "web shells for initial intrusion"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "may install",
+                "object": "custom backdoors onto additional systems"
+            },
+            {
+                "subject": "custom backdoors",
+                "relation": "allow",
+                "object": "comprehensive remote access to the network"
+            },
+            {
+                "subject": "Grayfly",
+                "relation": "considered",
+                "object": "the espionage arm of APT41"
+            },
+            {
+                "subject": "Symantec",
+                "relation": "tracks",
+                "object": "Blackfly as cyber-crime arm of APT41"
+            }
+        ],
+        "triples_count": 18,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2433,
+                "cost": 0.02433
+            },
+            "output": {
+                "tokens": 488,
+                "cost": 0.01464
+            },
+            "total": {
+                "tokens": 2921,
+                "cost": 0.038970000000000005
+            }
+        },
+        "time": 23.27010941505432,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/symantec/Grayfly-QD1-7PF.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM: muddywater.json",
+                    0.12377972809486798
+                ],
+                [
+                    "symantec: Budworm.json",
+                    0.12458109733839273
+                ],
+                [
+                    "symantec: Seedworm.json",
+                    0.14091394584449432
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 17,
+                "fp": 1,
+                "fn": 3,
+                "precision": 0.9444444444444444,
+                "recall": 0.85,
+                "f1": 0.8947368421052632
+            },
+            "matched_list": [
+                [
+                    [
+                        "Grayfly",
+                        "is also known as",
+                        "GREF"
+                    ],
+                    [
+                        "Grayfly",
+                        "also known as",
+                        "GREF"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "is also known as",
+                        "Wicked Panda"
+                    ],
+                    [
+                        "Grayfly",
+                        "also known as",
+                        "Wicked Panda"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "has been active since",
+                        "at least March 2017"
+                    ],
+                    [
+                        "Grayfly",
+                        "targeted",
+                        "Europe"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "used",
+                        "a custom backdoor known as Backdoor.Motnug"
+                    ],
+                    [
+                        "Grayfly",
+                        "uses",
+                        "Backdoor.Motnug"
+                    ]
+                ],
+                [
+                    [
+                        "Backdoor.Motnug",
+                        "is also known as",
+                        "TOMMYGUN/CROSSWALK"
+                    ],
+                    [
+                        "Backdoor.Motnug",
+                        "is also known as",
+                        "TOMMYGUN/CROSSWALK"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "used",
+                        "a custom loader called Trojan.Chattak"
+                    ],
+                    [
+                        "Grayfly",
+                        "uses",
+                        "Trojan.Chattak"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "used",
+                        "Cobalt Strike"
+                    ],
+                    [
+                        "Grayfly",
+                        "uses",
+                        "Cobalt Strike"
+                    ]
+                ],
+                [
+                    [
+                        "Cobalt Strike",
+                        "is also known as",
+                        "Trojan.Agentemis"
+                    ],
+                    [
+                        "Cobalt Strike",
+                        "is also known as",
+                        "Trojan.Agentemis"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "targeted",
+                        "countries in Asia, Europe, and North America"
+                    ],
+                    [
+                        "Grayfly",
+                        "targeted",
+                        "Asia"
+                    ]
+                ],
+                [
+                    [
+                        "targeted industries",
+                        "include",
+                        "food, financial, healthcare, hospitality, manufacturing, telecommunications"
+                    ],
+                    [
+                        "targeted industries",
+                        "include",
+                        "telecommunications"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "continues focus on",
+                        "telecommunications"
+                    ],
+                    [
+                        "Grayfly",
+                        "targeted",
+                        "Asia"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "observed targeting",
+                        "organizations within media, finance, and IT service provider sectors"
+                    ],
+                    [
+                        "Grayfly",
+                        "considered",
+                        "the espionage arm of APT41"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "targets",
+                        "publicly facing web servers"
+                    ],
+                    [
+                        "Grayfly",
+                        "targets",
+                        "publicly facing web servers"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "installs",
+                        "web shells for initial intrusion"
+                    ],
+                    [
+                        "Grayfly",
+                        "installs",
+                        "web shells"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "may install",
+                        "custom backdoors onto additional systems"
+                    ],
+                    [
+                        "Grayfly",
+                        "installs",
+                        "custom backdoors"
+                    ]
+                ],
+                [
+                    [
+                        "Grayfly",
+                        "considered",
+                        "the espionage arm of APT41"
+                    ],
+                    [
+                        "Grayfly",
+                        "considered",
+                        "the espionage arm of APT41"
+                    ]
+                ],
+                [
+                    [
+                        "Symantec",
+                        "tracks",
+                        "Blackfly as cyber-crime arm of APT41"
+                    ],
+                    [
+                        "APT41",
+                        "has sub-group",
+                        "Blackfly"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "custom backdoors",
+                    "allow",
+                    "comprehensive remote access to the network"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "recent activity focus",
+                    "includes",
+                    "media"
+                ],
+                [
+                    "recent activity focus",
+                    "includes",
+                    "finance"
+                ],
+                [
+                    "recent activity focus",
+                    "includes",
+                    "IT service provider sectors"
+                ]
+            ]
+        }
+    }
+}

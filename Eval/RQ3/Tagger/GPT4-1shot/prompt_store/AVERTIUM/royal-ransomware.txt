@@ -1,0 +1,90 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Royal ransomware', 'relation': 'is distributed by', 'object': 'ransomware threat actors from previous operations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Royal ransomware', 'relation': 'was attributed to', 'object': 'DEV-0569'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'threat actors behind Royal ransomware', 'relation': 'branded themselves with', 'object': 'the name Royal'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Royal ransomware', 'relation': 'targets', 'object': 'entities within the U.S.'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Royal ransomware campaigns', 'relation': 'distribute the malware via', 'object': 'malicious attachments'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Royal ransomware campaigns', 'relation': 'distribute the malware via', 'object': 'malicious advertisements'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'threat actors behind Royal ransomware', 'relation': 'are considered', 'object': 'very experienced'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'operators behind Royal ransomware', 'relation': 'utilized', 'object': 'BlackCat encryptors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Royal', 'relation': 'took responsibility for a ransomware attack on', 'object': 'Silverstone Circuit'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': "Royal's ransomware", 'relation': 'uses', 'object': 'the .Royal extension for encrypted files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

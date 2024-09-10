@@ -1,0 +1,112 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": { "subject": "The key", "relation": "is embedded within", "object": "ntuser.dat"}
+
+"tagged_triple": {"subject": {"text": "The key", "class": "Credential"}, "relation": "is embedded within", "object": {"text": "ntuser.dat", "class": "Indicator:File"}}
+---------------------
+Example 2:
+
+"triple": {"subject": "CVE-2023-36884", "relation": "allowed attackers to craft", "object": "Microsoft Office documents"}
+
+"tagged_triple": {"subject": {"text": "CVE-2023-36884", "class": "Vulnerability"}, "relation": "allowed attackers to craft", "object": {"text": "Microsoft Office documents", "class": "Indicator:File"}}
+---------------------
+Example 3:
+
+"triple": {"subject": "Fancy Bear", "relation": "is linked to", "object": "the Russian government"}
+
+"tagged_triple": {"subject": {"text": "Fancy Bear", "class": "Attacker"}, "relation": "is linked to", "object": {"text": "the Russian government","class": "Organization"}}
+---------------------
+Example 4:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'state-sponsored hackers', 'relation': 'added to', 'object': 'list of adversaries attempting to exploit Follina vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'state-sponsored hackers', 'relation': 'attempted to abuse', 'object': 'the Follina vulnerability in Microsoft Office'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'state-sponsored hackers', 'relation': 'aimed exploit at', 'object': 'U.S. and E.U. government targets'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the attacks', 'relation': 'used', 'object': 'email-based exploit'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Proofpoint researchers', 'relation': 'spotted', 'object': 'the attacks'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'adversaries', 'relation': 'have ties to', 'object': 'a government'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attacks', 'relation': 'consist of', 'object': 'campaigns targeting U.S. and E.U. government workers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Malicious emails', 'relation': 'contain', 'object': 'fake recruitment pitches'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Fake recruitment pitches', 'relation': 'promise', 'object': 'a 20 percent boost in salaries'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'recipients', 'relation': 'enticed to download', 'object': 'an accompanying attachment'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The malicious attachment', 'relation': 'targets', 'object': 'the remote code execution bug CVE-2022-30190, dubbed Follina'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

@@ -1,0 +1,370 @@
+{
+    "CTI": {
+        "text": "This report is an overview of the FiveHands Ransomware variant that successfully attacked an organization (CISA release date May 6, 2021). CISA reports that the variant used publicly-available pen test and exploitation tools, plus FiveHands ransomware and SombRAT remote access trojan (RAT), to steal information, obfuscate files, accomplish network discovery, accomplish credential access, and demand ransom from the victim. Tools used include SoftPerfect Network Scanner, FiveHands ransomware, PsExec.exe, ServeManager.exe, SombRAT, RouterScan.exe, grabff.exe, rclone.exe, and s3browser-9-5-3.exe. The initial access vector was a zero-day vulnerability in a VPN product. What followed is that the bad actor used SoftPerfect Network Scanner for the discovery of hostnames and network services. PsExec was then used to execute ServeManager.exe (what CISA calls FiveHands ransomware). FiveHands is a novel ransomware variant that uses a public key encryption scheme called NTRUEncrypt. Note: the NTRUEncrypt public key cryptosystem encryption algorithm (NTRU), is a lattice-based alternative to Rivest-Shamir-Adleman, known as RSA, and Elliptic-curve cryptography, or ECC, and is based on the shortest vector problem in a lattice. To prevent data recovery, FiveHands uses WMI to first enumerate then delete Volume Shadow copies. The malware also encrypts files in the recovery folder. After the files are encrypted, the program will write a ransom note to each folder and directory on the system.",
+        "link": "https://explore.avertium.com/resource/fivehands-ransomware-overview"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "FiveHands Ransomware variant",
+                "relation": "successfully attacked",
+                "object": "an organization"
+            },
+            {
+                "subject": "FiveHands Ransomware variant",
+                "relation": "used",
+                "object": "publicly-available pen test and exploitation tools"
+            },
+            {
+                "subject": "FiveHands Ransomware variant",
+                "relation": "used",
+                "object": "FiveHands ransomware"
+            },
+            {
+                "subject": "FiveHands Ransomware variant",
+                "relation": "used",
+                "object": "SombRAT remote access trojan (RAT)"
+            },
+            {
+                "subject": "FiveHands Ransomware variant",
+                "relation": "stole",
+                "object": "information"
+            },
+            {
+                "subject": "FiveHands Ransomware variant",
+                "relation": "accomplished",
+                "object": "network discovery"
+            },
+            {
+                "subject": "FiveHands Ransomware variant",
+                "relation": "accomplished",
+                "object": "credential access"
+            },
+            {
+                "subject": "FiveHands Ransomware variant",
+                "relation": "demand ransom from",
+                "object": "victim"
+            },
+            {
+                "subject": "FiveHands Ransomware variant",
+                "relation": "initial access vector was",
+                "object": "zero-day vulnerability in a VPN product"
+            },
+            {
+                "subject": "bad actor",
+                "relation": "used",
+                "object": "SoftPerfect Network Scanner for discovery of hostnames and network services"
+            },
+            {
+                "subject": "bad actor",
+                "relation": "used",
+                "object": "PsExec to execute ServeManager.exe (FiveHands ransomware)"
+            },
+            {
+                "subject": "FiveHands ransomware",
+                "relation": "uses",
+                "object": "public key encryption scheme called NTRUEncrypt"
+            },
+            {
+                "subject": "FiveHands ransomware",
+                "relation": "uses",
+                "object": "WMI to enumerate and delete Volume Shadow copies"
+            },
+            {
+                "subject": "FiveHands ransomware",
+                "relation": "encrypts files in",
+                "object": "recovery folder"
+            },
+            {
+                "subject": "FiveHands ransomware",
+                "relation": "writes a ransom note to",
+                "object": "each folder and directory on the system"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 2137,
+                "cost": 0.0010685
+            },
+            "output": {
+                "tokens": 445,
+                "cost": 0.0006675
+            },
+            "total": {
+                "tokens": 2582,
+                "cost": 0.0017360000000000001
+            }
+        },
+        "time": 8.529038190841675,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/AVERTIUM/fivehands-QD1-9N8.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "AVERTIUM: fargo.json",
+                    0.12997667496974388
+                ],
+                [
+                    "AVERTIUM: yanluowang.json",
+                    0.1459535246980436
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 0,
+                "fn": 11,
+                "precision": 1.0,
+                "recall": 0.5769230769230769,
+                "f1": 0.7317073170731707
+            },
+            "matched_list": [
+                [
+                    [
+                        "FiveHands Ransomware variant",
+                        "successfully attacked",
+                        "an organization"
+                    ],
+                    [
+                        "FiveHands Ransomware variant",
+                        "attacked",
+                        "an organization"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands Ransomware variant",
+                        "used",
+                        "publicly-available pen test and exploitation tools"
+                    ],
+                    [
+                        "Variant",
+                        "used",
+                        "publicly-available pen test and exploitation tools"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands Ransomware variant",
+                        "used",
+                        "FiveHands ransomware"
+                    ],
+                    [
+                        "Variant",
+                        "used",
+                        "FiveHands ransomware"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands Ransomware variant",
+                        "used",
+                        "SombRAT remote access trojan (RAT)"
+                    ],
+                    [
+                        "SombRAT",
+                        "is a",
+                        "remote access trojan (RAT)"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands Ransomware variant",
+                        "stole",
+                        "information"
+                    ],
+                    [
+                        "FiveHands Ransomware variant",
+                        "attacked",
+                        "an organization"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands Ransomware variant",
+                        "accomplished",
+                        "network discovery"
+                    ],
+                    [
+                        "FiveHands Ransomware variant",
+                        "attacked",
+                        "an organization"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands Ransomware variant",
+                        "accomplished",
+                        "credential access"
+                    ],
+                    [
+                        "FiveHands Ransomware variant",
+                        "attacked",
+                        "an organization"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands Ransomware variant",
+                        "demand ransom from",
+                        "victim"
+                    ],
+                    [
+                        "FiveHands Ransomware variant",
+                        "attacked",
+                        "an organization"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands Ransomware variant",
+                        "initial access vector was",
+                        "zero-day vulnerability in a VPN product"
+                    ],
+                    [
+                        "Initial access vector",
+                        "was",
+                        "a zero-day vulnerability in a VPN product"
+                    ]
+                ],
+                [
+                    [
+                        "bad actor",
+                        "used",
+                        "SoftPerfect Network Scanner for discovery of hostnames and network services"
+                    ],
+                    [
+                        "Bad actor",
+                        "used",
+                        "SoftPerfect Network Scanner"
+                    ]
+                ],
+                [
+                    [
+                        "bad actor",
+                        "used",
+                        "PsExec to execute ServeManager.exe (FiveHands ransomware)"
+                    ],
+                    [
+                        "ServeManager.exe",
+                        "is called",
+                        "FiveHands ransomware"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands ransomware",
+                        "uses",
+                        "public key encryption scheme called NTRUEncrypt"
+                    ],
+                    [
+                        "FiveHands",
+                        "uses",
+                        "NTRUEncrypt"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands ransomware",
+                        "uses",
+                        "WMI to enumerate and delete Volume Shadow copies"
+                    ],
+                    [
+                        "FiveHands",
+                        "uses WMI to",
+                        "enumerate then delete Volume Shadow copies"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands ransomware",
+                        "encrypts files in",
+                        "recovery folder"
+                    ],
+                    [
+                        "Malware",
+                        "encrypts files in",
+                        "the recovery folder"
+                    ]
+                ],
+                [
+                    [
+                        "FiveHands ransomware",
+                        "writes a ransom note to",
+                        "each folder and directory on the system"
+                    ],
+                    [
+                        "Program",
+                        "writes a ransom note to",
+                        "each folder and directory on the system"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "Variant",
+                    "used",
+                    "SombRAT"
+                ],
+                [
+                    "Tools used",
+                    "include",
+                    "SoftPerfect Network Scanner"
+                ],
+                [
+                    "Tools used",
+                    "include",
+                    "PsExec.exe"
+                ],
+                [
+                    "Tools used",
+                    "include",
+                    "ServeManager.exe"
+                ],
+                [
+                    "Tools used",
+                    "include",
+                    "RouterScan.exe"
+                ],
+                [
+                    "Tools used",
+                    "include",
+                    "grabff.exe"
+                ],
+                [
+                    "Tools used",
+                    "include",
+                    "rclone.exe"
+                ],
+                [
+                    "Tools used",
+                    "include",
+                    "s3browser-9-5-3.exe"
+                ],
+                [
+                    "NTRUEncrypt",
+                    "is",
+                    "a public key encryption scheme"
+                ],
+                [
+                    "NTRUEncrypt",
+                    "is an alternative to",
+                    "RSA"
+                ],
+                [
+                    "NTRUEncrypt",
+                    "is based on",
+                    "the shortest vector problem in a lattice"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

@@ -1,0 +1,224 @@
+{
+    "CTI": {
+        "text": "Over 5,300 internet-exposed GitLab instances are vulnerable to CVE-2023-7028, a zero-click account takeover flaw GitLab warned about earlier this month. The critical (CVSS score: 10.0) flaw allows attackers to send password reset emails for a targeted account to an attacker-controlled email address, allowing the threat actor to change the password and take over the account. Based on GitLab's role as a software development and project planning platform and the type and severity of the flaw, these servers are at risk of supply chain attacks, proprietary code disclosure, API key leaks, and other malicious activity.",
+        "link": "https://www.bleepingcomputer.com/news/security/over-5-300-gitlab-servers-exposed-to-zero-click-account-takeover-attacks/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Over 5,300 internet-exposed GitLab instances",
+                "relation": "are vulnerable to",
+                "object": "CVE-2023-7028"
+            },
+            {
+                "subject": "CVE-2023-7028",
+                "relation": "is a",
+                "object": "zero-click account takeover flaw"
+            },
+            {
+                "subject": "GitLab",
+                "relation": "warned about",
+                "object": "CVE-2023-7028 earlier this month"
+            },
+            {
+                "subject": "The critical flaw",
+                "relation": "has",
+                "object": "a CVSS score: 10.0"
+            },
+            {
+                "subject": "The critical flaw",
+                "relation": "allows",
+                "object": "attackers to send password reset emails for a targeted account to an attacker-controlled email address"
+            },
+            {
+                "subject": "The threat actor",
+                "relation": "to change",
+                "object": "the password and take over the account"
+            },
+            {
+                "subject": "GitLab",
+                "relation": "role as",
+                "object": "a software development and project planning platform"
+            },
+            {
+                "subject": "these servers",
+                "relation": "are at risk of",
+                "object": "supply chain attacks, proprietary code disclosure, API key leaks, and other malicious activity"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2406,
+                "cost": 0.02406
+            },
+            "output": {
+                "tokens": 257,
+                "cost": 0.00771
+            },
+            "total": {
+                "tokens": 2663,
+                "cost": 0.03177
+            }
+        },
+        "time": 12.24752402305603,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/BleepingComputer/gitlab-QD1-Vgy.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "BleepingComputer: atlassian.json",
+                    0.1265078310130077
+                ],
+                [
+                    "threatPost: Atlassian.json",
+                    0.1276327048510048
+                ],
+                [
+                    "thehackernews: OfBiz.json",
+                    0.13134964424774867
+                ],
+                [
+                    "BleepingComputer: mastodon.json",
+                    0.16461216551656177
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 5,
+                "fp": 3,
+                "fn": 8,
+                "precision": 0.625,
+                "recall": 0.38461538461538464,
+                "f1": 0.4761904761904762
+            },
+            "matched_list": [
+                [
+                    [
+                        "Over 5,300 internet-exposed GitLab instances",
+                        "are vulnerable to",
+                        "CVE-2023-7028"
+                    ],
+                    [
+                        "5,300 internet-exposed GitLab instances",
+                        "are vulnerable to",
+                        "CVE-2023-7028"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-7028",
+                        "is a",
+                        "zero-click account takeover flaw"
+                    ],
+                    [
+                        "CVE-2023-7028",
+                        "is a",
+                        "zero-click account takeover flaw"
+                    ]
+                ],
+                [
+                    [
+                        "GitLab",
+                        "warned about",
+                        "CVE-2023-7028 earlier this month"
+                    ],
+                    [
+                        "GitLab",
+                        "warned about",
+                        "CVE-2023-7028"
+                    ]
+                ],
+                [
+                    [
+                        "GitLab",
+                        "role as",
+                        "a software development and project planning platform"
+                    ],
+                    [
+                        "GitLab",
+                        "is",
+                        "software development and project planning platform"
+                    ]
+                ],
+                [
+                    [
+                        "these servers",
+                        "are at risk of",
+                        "supply chain attacks, proprietary code disclosure, API key leaks, and other malicious activity"
+                    ],
+                    [
+                        "servers",
+                        "are at risk of",
+                        "supply chain attacks"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "The critical flaw",
+                    "has",
+                    "a CVSS score: 10.0"
+                ],
+                [
+                    "The critical flaw",
+                    "allows",
+                    "attackers to send password reset emails for a targeted account to an attacker-controlled email address"
+                ],
+                [
+                    "The threat actor",
+                    "to change",
+                    "the password and take over the account"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "CVE-2023-7028",
+                    "allows attackers to send",
+                    "password reset emails"
+                ],
+                [
+                    "password reset emails",
+                    "for",
+                    "a targeted account"
+                ],
+                [
+                    "password reset emails",
+                    "to",
+                    "an attacker-controlled email address"
+                ],
+                [
+                    "threat actor",
+                    "change",
+                    "the password"
+                ],
+                [
+                    "threat actor",
+                    "take over",
+                    "the account"
+                ],
+                [
+                    "servers",
+                    "are at risk of",
+                    "proprietary code disclosure"
+                ],
+                [
+                    "servers",
+                    "are at risk of",
+                    "API key leaks"
+                ],
+                [
+                    "servers",
+                    "are at risk of",
+                    "other malicious activity"
+                ]
+            ],
+            "thresh": 0.8
+        }
+    }
+}

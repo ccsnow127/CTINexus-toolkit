@@ -1,0 +1,232 @@
+{
+    "CTI": {
+        "text": "Researchers this week disclosed details on two security vulnerabilities in Microsoft Outlook that, when chained together, give attackers a way to execute arbitrary code on affected systems without any user interaction. Unusually, both of them can be triggered using a sound file. One of the flaws, tracked as CVE-2023-35384, is actually the second patch bypass that researchers at Akamai have uncovered for a critical privilege escalation vulnerability in Outlook that Microsoft first patched in March. The second flaw that Akamai disclosed this week (CVE-2023-36710) is a remote code execution (RCE) vulnerability in a feature of Windows Media Foundation, and it has to do with how Windows parses sound files.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/researchers-release-details-on-two-patched-outlook-zero-click-flaws"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "security vulnerabilities",
+                "relation": "are in",
+                "object": "Microsoft Outlook"
+            },
+            {
+                "subject": "attackers",
+                "relation": "execute",
+                "object": "arbitrary code on affected systems"
+            },
+            {
+                "subject": "attackers",
+                "relation": "use",
+                "object": "a sound file"
+            },
+            {
+                "subject": "CVE-2023-35384",
+                "relation": "is a patch bypass for",
+                "object": "a critical privilege escalation vulnerability in Outlook"
+            },
+            {
+                "subject": "CVE-2023-35384",
+                "relation": "was first patched in",
+                "object": "March"
+            },
+            {
+                "subject": "critical privilege escalation vulnerability",
+                "relation": "in",
+                "object": "Outlook"
+            },
+            {
+                "subject": "CVE-2023-36710",
+                "relation": "is a",
+                "object": "remote code execution (RCE) vulnerability"
+            },
+            {
+                "subject": "CVE-2023-36710",
+                "relation": "in",
+                "object": "Windows Media Foundation"
+            },
+            {
+                "subject": "Windows",
+                "relation": "parses",
+                "object": "sound files"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1255,
+                "cost": 0.01255
+            },
+            "output": {
+                "tokens": 235,
+                "cost": 0.00705
+            },
+            "total": {
+                "tokens": 1490,
+                "cost": 0.0196
+            }
+        },
+        "time": 9.374000787734985,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/darkreading/Microsoft-Outlook-QD1-s5Q.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "zuorat.json",
+                    "random"
+                ],
+                [
+                    "VenomRAT.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 0,
+                "fn": 4,
+                "precision": 1.0,
+                "recall": 0.6923076923076923,
+                "f1": 0.8181818181818181
+            },
+            "matched_list": [
+                [
+                    [
+                        "security vulnerabilities",
+                        "are in",
+                        "Microsoft Outlook"
+                    ],
+                    [
+                        "two security vulnerabilities",
+                        "are in",
+                        "Microsoft Outlook"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "execute",
+                        "arbitrary code on affected systems"
+                    ],
+                    [
+                        "attackers",
+                        "execute",
+                        "arbitrary code on affected systems"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "use",
+                        "a sound file"
+                    ],
+                    [
+                        "both vulnerabilities",
+                        "can be triggered using",
+                        "a sound file"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-35384",
+                        "is a patch bypass for",
+                        "a critical privilege escalation vulnerability in Outlook"
+                    ],
+                    [
+                        "CVE-2023-35384",
+                        "is a",
+                        "patch bypass for a critical privilege escalation vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-35384",
+                        "was first patched in",
+                        "March"
+                    ],
+                    [
+                        "CVE-2023-35384",
+                        "is a",
+                        "patch bypass for a critical privilege escalation vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "critical privilege escalation vulnerability",
+                        "in",
+                        "Outlook"
+                    ],
+                    [
+                        "two security vulnerabilities",
+                        "are in",
+                        "Microsoft Outlook"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-36710",
+                        "is a",
+                        "remote code execution (RCE) vulnerability"
+                    ],
+                    [
+                        "CVE-2023-36710",
+                        "is a",
+                        "remote code execution (RCE) vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-36710",
+                        "in",
+                        "Windows Media Foundation"
+                    ],
+                    [
+                        "CVE-2023-36710",
+                        "is in",
+                        "a feature of Windows Media Foundation"
+                    ]
+                ],
+                [
+                    [
+                        "Windows",
+                        "parses",
+                        "sound files"
+                    ],
+                    [
+                        "Windows",
+                        "parses",
+                        "sound files"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "execution",
+                    "does not require",
+                    "user interaction"
+                ],
+                [
+                    "CVE-2023-35384",
+                    "was uncovered by",
+                    "researchers at Akamai"
+                ],
+                [
+                    "Microsoft",
+                    "first patched",
+                    "a privilege escalation vulnerability"
+                ],
+                [
+                    "The second flaw",
+                    "was disclosed by",
+                    "Akamai"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

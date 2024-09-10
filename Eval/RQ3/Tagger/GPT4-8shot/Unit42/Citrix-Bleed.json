@@ -1,0 +1,385 @@
+{
+    "CTI": {
+        "text": "On Oct. 10, 2023, Citrix published a patch for their Netscaler ADC and Netscaler Gateway products. One particular vulnerability that this patch is meant to mitigate has come to be known as Citrix Bleed (CVE-2023-4966).This nickname was given because the vulnerability can leak sensitive information from the device's memory, which can include session tokens. Attackers can then use these credentials to gain a foothold into systems via session hijacking. At the time of the patch, Citrix was unaware of ongoing attacks using this vulnerability but has since stated that they have observed threat actors using it. The Unit 42 Incident Response and Managed Threat Hunting teams have observed ransomware groups exploiting Citrix Bleed. The Managed Threat Hunting team has also observed what appeared to be remote executions from Netscaler gateways in association with exploitation of this vulnerability.",
+        "link": "https://unit42.paloaltonetworks.com/threat-brief-cve-2023-4966-netscaler-citrix-bleed/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Citrix",
+                "relation": "published",
+                "object": "a patch"
+            },
+            {
+                "subject": "the patch",
+                "relation": "is for",
+                "object": "Netscaler ADC and Netscaler Gateway products"
+            },
+            {
+                "subject": "Citrix Bleed",
+                "relation": "is tracked as",
+                "object": "CVE-2023-4966"
+            },
+            {
+                "subject": "Citrix Bleed",
+                "relation": "can leak",
+                "object": "sensitive information"
+            },
+            {
+                "subject": "sensitive information",
+                "relation": "can include",
+                "object": "session tokens"
+            },
+            {
+                "subject": "attackers",
+                "relation": "use",
+                "object": "credentials"
+            },
+            {
+                "subject": "credentials",
+                "relation": "to gain",
+                "object": "a foothold into systems"
+            },
+            {
+                "subject": "systems",
+                "relation": "are accessed via",
+                "object": "session hijacking"
+            },
+            {
+                "subject": "Citrix",
+                "relation": "was unaware of",
+                "object": "ongoing attacks"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "using",
+                "object": "Citrix Bleed"
+            },
+            {
+                "subject": "Unit 42 Incident Response and Managed Threat Hunting teams",
+                "relation": "observed",
+                "object": "ransomware groups exploiting Citrix Bleed"
+            },
+            {
+                "subject": "Managed Threat Hunting team",
+                "relation": "observed",
+                "object": "remote executions from Netscaler gateways"
+            },
+            {
+                "subject": "remote executions from Netscaler gateways",
+                "relation": "in association with",
+                "object": "exploitation of Citrix Bleed"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2698,
+                "cost": 0.02698
+            },
+            "output": {
+                "tokens": 336,
+                "cost": 0.01008
+            },
+            "total": {
+                "tokens": 3034,
+                "cost": 0.03706
+            }
+        },
+        "time": 8.126796245574951,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Unit42/Citrix-Bleed-QD1-j8g.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-github.json",
+                    0.0962363283674411
+                ],
+                [
+                    "AVERTIUM-mallox.json",
+                    0.11637122993132508
+                ],
+                [
+                    "BleepingComputer-citrix.json",
+                    0.3273224104129149
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Citrix",
+                    "class": "Organization"
+                },
+                "relation": "published",
+                "object": {
+                    "text": "a patch",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the patch",
+                    "class": "Tool"
+                },
+                "relation": "is for",
+                "object": {
+                    "text": "Netscaler ADC and Netscaler Gateway products",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Citrix Bleed",
+                    "class": "Vulnerability"
+                },
+                "relation": "is tracked as",
+                "object": {
+                    "text": "CVE-2023-4966",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Citrix Bleed",
+                    "class": "Vulnerability"
+                },
+                "relation": "can leak",
+                "object": {
+                    "text": "sensitive information",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "sensitive information",
+                    "class": "Information"
+                },
+                "relation": "can include",
+                "object": {
+                    "text": "session tokens",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "use",
+                "object": {
+                    "text": "credentials",
+                    "class": "Credential"
+                }
+            },
+            {
+                "subject": {
+                    "text": "credentials",
+                    "class": "Credential"
+                },
+                "relation": "to gain",
+                "object": {
+                    "text": "a foothold into systems",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "systems",
+                    "class": "Infrastructure"
+                },
+                "relation": "are accessed via",
+                "object": {
+                    "text": "session hijacking",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Citrix",
+                    "class": "Organization"
+                },
+                "relation": "was unaware of",
+                "object": {
+                    "text": "ongoing attacks",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "threat actors",
+                    "class": "Attacker"
+                },
+                "relation": "using",
+                "object": {
+                    "text": "Citrix Bleed",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Unit 42 Incident Response and Managed Threat Hunting teams",
+                    "class": "Organization"
+                },
+                "relation": "observed",
+                "object": {
+                    "text": "ransomware groups exploiting Citrix Bleed",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Managed Threat Hunting team",
+                    "class": "Organization"
+                },
+                "relation": "observed",
+                "object": {
+                    "text": "remote executions from Netscaler gateways",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "remote executions from Netscaler gateways",
+                    "class": "Event"
+                },
+                "relation": "in association with",
+                "object": {
+                    "text": "exploitation of Citrix Bleed",
+                    "class": "Event"
+                }
+            }
+        ],
+        "response_time": 20.75159454345703,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-8shot/prompt_store/Unit42/Citrix-Bleed.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1512,
+                "cost": 0.015120000000000001
+            },
+            "output": {
+                "tokens": 690,
+                "cost": 0.0207
+            },
+            "total": {
+                "tokens": 2202,
+                "cost": 0.035820000000000005
+            }
+        },
+        "Eval": {
+            "correct": 21,
+            "incorrect": 5,
+            "TP": 21,
+            "TN": 0,
+            "FP": 4,
+            "FN": 1,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 2,
+                    "TN": 23,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Tool": {
+                    "TP": 2,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 2,
+                    "TN": 24,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 4,
+                    "TN": 20,
+                    "FP": 1,
+                    "FN": 1
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 3,
+                    "TN": 20,
+                    "FP": 1,
+                    "FN": 2
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 0,
+                    "TN": 25,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 4,
+                    "TN": 22,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 25,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 26,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 4,
+                    "TN": 21,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 25,
+                    "FP": 1,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 10
+        }
+    }
+}

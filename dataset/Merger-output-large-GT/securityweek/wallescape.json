@@ -1,0 +1,750 @@
+{
+    "CTI": {
+        "text": "Security researchers are documenting a new vulnerability found in the util-linux core utilities package in Linux systems, warnign that it allows attackers to leak user passwords and modify the clipboard. The security defect, tracked as CVE-2024-28085 and dubbed \u2018WallEscape\u2019, impacts the \u2018wall\u2019 command of util-linux that fails to filter escape sequences from command line arguments. An attacker could embed escape sequences into crafted messages and send them via the \u2018wall\u2019 command, allowing them to leak passwords and modify commands, if specific conditions are met. \u201cThis allows unprivileged users to put arbitrary text on other users\u2019 terminals, if mesg is set to y and wall is setgid,\u201d said security researcher Skyler Ferrante.Ferrante, who is credited with discovering the flaw, said the bug can be exploited to leak user passwords on Ubuntu 22.04 with default configurations, where \u2018wall\u2019 is installed with the special setgid permissions and mesg is set to y. Debian Bookworm is also affected, but CentOS and Red Hat products are not. According to Ferrante, the flaw can also leak an unknown command on Ubuntu 22.0 \u201cif a system runs a command when commands are not found, with the unknown command as an argument.\u201d In addition, it can be exploited to change the output of any command.",
+        "link": "https://www.securityweek.com/wallescape-linux-vulnerability-leaks-user-passwords/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "vulnerability",
+                "relation": "found in",
+                "object": "the util-linux core utilities package in Linux systems"
+            },
+            {
+                "subject": "attackers",
+                "relation": "leak",
+                "object": "user passwords"
+            },
+            {
+                "subject": "attackers",
+                "relation": "modify",
+                "object": "the clipboard"
+            },
+            {
+                "subject": "The security defect",
+                "relation": "is tracked as",
+                "object": "CVE-2024-28085"
+            },
+            {
+                "subject": "CVE-2024-28085",
+                "relation": "is dubbed",
+                "object": "\u2018WallEscape\u2019"
+            },
+            {
+                "subject": "\u2018wall\u2019 command",
+                "relation": "fails to filter",
+                "object": "escape sequences from command line arguments"
+            },
+            {
+                "subject": "An attacker",
+                "relation": "embed",
+                "object": "escape sequences into crafted messages"
+            },
+            {
+                "subject": "crafted messages",
+                "relation": "are sent via",
+                "object": "the \u2018wall\u2019 command"
+            },
+            {
+                "subject": "crafted messages",
+                "relation": "allow to leak",
+                "object": "passwords"
+            },
+            {
+                "subject": "crafted messages",
+                "relation": "allow to modify",
+                "object": "commands"
+            },
+            {
+                "subject": "Skyler Ferrante",
+                "relation": "credited with",
+                "object": "discovering the flaw"
+            },
+            {
+                "subject": "the flaw",
+                "relation": "can be exploited to leak",
+                "object": "user passwords on Ubuntu 22.04"
+            },
+            {
+                "subject": "the flaw",
+                "relation": "affects",
+                "object": "Debian Bookworm"
+            },
+            {
+                "subject": "the flaw",
+                "relation": "does not affect",
+                "object": "CentOS and Red Hat products"
+            },
+            {
+                "subject": "the flaw",
+                "relation": "can leak",
+                "object": "an unknown command on Ubuntu 22.0"
+            },
+            {
+                "subject": "the flaw",
+                "relation": "can be exploited to change",
+                "object": "the output of any command"
+            }
+        ],
+        "triples_count": 16,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1749,
+                "cost": 0.017490000000000002
+            },
+            "output": {
+                "tokens": 430,
+                "cost": 0.0129
+            },
+            "total": {
+                "tokens": 2179,
+                "cost": 0.03039
+            }
+        },
+        "time": 10.793460369110107,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/securityweek/wallescape-QD1-5LB.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-github.json",
+                    0.08044386310332145
+                ],
+                [
+                    "BleepingComputer-atlassian.json",
+                    0.08652523834825601
+                ],
+                [
+                    "BleepingComputer-mastodon.json",
+                    0.09446828232811616
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "vulnerability",
+                    "class": "Vulnerability"
+                },
+                "relation": "found in",
+                "object": {
+                    "text": "the util-linux core utilities package in Linux systems",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "leak",
+                "object": {
+                    "text": "user passwords",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "attackers",
+                    "class": "Attacker"
+                },
+                "relation": "modify",
+                "object": {
+                    "text": "the clipboard",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The security defect",
+                    "class": "Vulnerability"
+                },
+                "relation": "is tracked as",
+                "object": {
+                    "text": "CVE-2024-28085",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "CVE-2024-28085",
+                    "class": "Vulnerability"
+                },
+                "relation": "is dubbed",
+                "object": {
+                    "text": "\u2018WallEscape\u2019",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "\u2018wall\u2019 command",
+                    "class": "Tool"
+                },
+                "relation": "fails to filter",
+                "object": {
+                    "text": "escape sequences from command line arguments",
+                    "class": "Malware Characteristic:Feature"
+                }
+            },
+            {
+                "subject": {
+                    "text": "An attacker",
+                    "class": "Attacker"
+                },
+                "relation": "embed",
+                "object": {
+                    "text": "escape sequences into crafted messages",
+                    "class": "Malware Characteristic:Payload"
+                }
+            },
+            {
+                "subject": {
+                    "text": "crafted messages",
+                    "class": "Malware"
+                },
+                "relation": "are sent via",
+                "object": {
+                    "text": "the \u2018wall\u2019 command",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "crafted messages",
+                    "class": "Malware"
+                },
+                "relation": "allow to leak",
+                "object": {
+                    "text": "passwords",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "crafted messages",
+                    "class": "Malware"
+                },
+                "relation": "allow to modify",
+                "object": {
+                    "text": "commands",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Skyler Ferrante",
+                    "class": "This entity cannot be classified into any of the existing types"
+                },
+                "relation": "credited with",
+                "object": {
+                    "text": "discovering the flaw",
+                    "class": "Vulnerability"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the flaw",
+                    "class": "Vulnerability"
+                },
+                "relation": "can be exploited to leak",
+                "object": {
+                    "text": "user passwords on Ubuntu 22.04",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the flaw",
+                    "class": "Vulnerability"
+                },
+                "relation": "affects",
+                "object": {
+                    "text": "Debian Bookworm",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the flaw",
+                    "class": "Vulnerability"
+                },
+                "relation": "does not affect",
+                "object": {
+                    "text": "CentOS and Red Hat products",
+                    "class": "This entity cannot be classified into any of the existing types"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the flaw",
+                    "class": "Vulnerability"
+                },
+                "relation": "can leak",
+                "object": {
+                    "text": "an unknown command on Ubuntu 22.0",
+                    "class": "Exploit Target"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the flaw",
+                    "class": "Vulnerability"
+                },
+                "relation": "can be exploited to change",
+                "object": {
+                    "text": "the output of any command",
+                    "class": "Exploit Target"
+                }
+            }
+        ],
+        "response_time": 31.125728368759155,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/securityweek/wallescape.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1645,
+                "cost": 0.016450000000000003
+            },
+            "output": {
+                "tokens": 786,
+                "cost": 0.02358
+            },
+            "total": {
+                "tokens": 2431,
+                "cost": 0.04003
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "vulnerability",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "vulnerability"
+                    ],
+                    "entity_text": "vulnerability"
+                },
+                "relation": "found in",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "the util-linux core utilities package in Linux systems",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "the util-linux core utilities package in Linux systems"
+                    ],
+                    "entity_text": "the util-linux core utilities package in Linux systems"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "attackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "attackers",
+                        "attackers",
+                        "An attacker"
+                    ],
+                    "entity_text": "attackers"
+                },
+                "relation": "leak",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "user passwords",
+                    "mention_class": "Information",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "passwords",
+                        "user passwords"
+                    ],
+                    "entity_text": "passwords"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "attackers",
+                    "mention_class": "Attacker",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "attackers",
+                        "attackers",
+                        "An attacker"
+                    ],
+                    "entity_text": "attackers"
+                },
+                "relation": "modify",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "the clipboard",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "the clipboard"
+                    ],
+                    "entity_text": "the clipboard"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "The security defect",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "The security defect"
+                    ],
+                    "entity_text": "The security defect"
+                },
+                "relation": "is tracked as",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "CVE-2024-28085",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "CVE-2024-28085",
+                        "CVE-2024-28085"
+                    ],
+                    "entity_text": "CVE-2024-28085"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "CVE-2024-28085",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "CVE-2024-28085",
+                        "CVE-2024-28085"
+                    ],
+                    "entity_text": "CVE-2024-28085"
+                },
+                "relation": "is dubbed",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "\u2018WallEscape\u2019",
+                    "mention_class": "Information",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "\u2018WallEscape\u2019"
+                    ],
+                    "entity_text": "\u2018WallEscape\u2019"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "\u2018wall\u2019 command",
+                    "mention_class": "Tool",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "\u2018wall\u2019 command",
+                        "the \u2018wall\u2019 command"
+                    ],
+                    "entity_text": "\u2018wall\u2019 command"
+                },
+                "relation": "fails to filter",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "escape sequences from command line arguments",
+                    "mention_class": "Malware Characteristic:Feature",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "escape sequences from command line arguments"
+                    ],
+                    "entity_text": "escape sequences from command line arguments"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "An attacker",
+                    "mention_class": "Attacker",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "attackers",
+                        "attackers",
+                        "An attacker"
+                    ],
+                    "entity_text": "attackers"
+                },
+                "relation": "embed",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "escape sequences into crafted messages",
+                    "mention_class": "Malware Characteristic:Payload",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "escape sequences into crafted messages"
+                    ],
+                    "entity_text": "escape sequences into crafted messages"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "crafted messages",
+                    "mention_class": "Malware",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "crafted messages",
+                        "crafted messages",
+                        "crafted messages"
+                    ],
+                    "entity_text": "crafted messages"
+                },
+                "relation": "are sent via",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "the \u2018wall\u2019 command",
+                    "mention_class": "Tool",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "\u2018wall\u2019 command",
+                        "the \u2018wall\u2019 command"
+                    ],
+                    "entity_text": "\u2018wall\u2019 command"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "crafted messages",
+                    "mention_class": "Malware",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "crafted messages",
+                        "crafted messages",
+                        "crafted messages"
+                    ],
+                    "entity_text": "crafted messages"
+                },
+                "relation": "allow to leak",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "passwords",
+                    "mention_class": "Information",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "passwords",
+                        "user passwords"
+                    ],
+                    "entity_text": "passwords"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "crafted messages",
+                    "mention_class": "Malware",
+                    "entity_id": 17,
+                    "mentions_merged": [
+                        "crafted messages",
+                        "crafted messages",
+                        "crafted messages"
+                    ],
+                    "entity_text": "crafted messages"
+                },
+                "relation": "allow to modify",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "commands",
+                    "mention_class": "Information",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "commands"
+                    ],
+                    "entity_text": "commands"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "Skyler Ferrante",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 18,
+                    "mentions_merged": [
+                        "Skyler Ferrante"
+                    ],
+                    "entity_text": "Skyler Ferrante"
+                },
+                "relation": "credited with",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "discovering the flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "discovering the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw"
+                    ],
+                    "entity_text": "the flaw"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "the flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "discovering the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw"
+                    ],
+                    "entity_text": "the flaw"
+                },
+                "relation": "can be exploited to leak",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "user passwords on Ubuntu 22.04",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "user passwords on Ubuntu 22.04"
+                    ],
+                    "entity_text": "user passwords on Ubuntu 22.04"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "the flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "discovering the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw"
+                    ],
+                    "entity_text": "the flaw"
+                },
+                "relation": "affects",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "Debian Bookworm",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Debian Bookworm"
+                    ],
+                    "entity_text": "Debian Bookworm"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 26,
+                    "mention_text": "the flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "discovering the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw"
+                    ],
+                    "entity_text": "the flaw"
+                },
+                "relation": "does not affect",
+                "object": {
+                    "mention_id": 27,
+                    "mention_text": "CentOS and Red Hat products",
+                    "mention_class": "This entity cannot be classified into any of the existing types",
+                    "entity_id": 19,
+                    "mentions_merged": [
+                        "CentOS and Red Hat products"
+                    ],
+                    "entity_text": "CentOS and Red Hat products"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 28,
+                    "mention_text": "the flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "discovering the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw"
+                    ],
+                    "entity_text": "the flaw"
+                },
+                "relation": "can leak",
+                "object": {
+                    "mention_id": 29,
+                    "mention_text": "an unknown command on Ubuntu 22.0",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "an unknown command on Ubuntu 22.0"
+                    ],
+                    "entity_text": "an unknown command on Ubuntu 22.0"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 30,
+                    "mention_text": "the flaw",
+                    "mention_class": "Vulnerability",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "discovering the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw",
+                        "the flaw"
+                    ],
+                    "entity_text": "the flaw"
+                },
+                "relation": "can be exploited to change",
+                "object": {
+                    "mention_id": 31,
+                    "mention_text": "the output of any command",
+                    "mention_class": "Exploit Target",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "the output of any command"
+                    ],
+                    "entity_text": "the output of any command"
+                }
+            }
+        ],
+        "mentions_num": 32,
+        "response_time": 6.5317542552948,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 20
+    }
+}

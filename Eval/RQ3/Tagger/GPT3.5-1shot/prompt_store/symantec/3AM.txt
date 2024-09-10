@@ -1,0 +1,90 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': '3AM', 'relation': 'is', 'object': 'a ransomware family'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': '3AM', 'relation': 'was used in', 'object': 'a single attack'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ransomware affiliate', 'relation': 'attempted to deploy', 'object': 'LockBit'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'ransomware affiliate', 'relation': 'switched to', 'object': '3AM'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': '3AM', 'relation': 'is written in', 'object': 'Rust'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': '3AM', 'relation': 'is', 'object': 'a completely new malware family'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': '3AM', 'relation': 'attempts to stop', 'object': 'multiple services'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': '3AM', 'relation': 'begins encrypting', 'object': 'files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': '3AM', 'relation': 'attempts to delete', 'object': 'Volume Shadow (VSS) copies'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'its authors', 'relation': 'have links to', 'object': 'unknown cybercrime organizations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

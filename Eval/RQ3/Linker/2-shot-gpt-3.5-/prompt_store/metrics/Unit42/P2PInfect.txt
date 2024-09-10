@@ -1,0 +1,25 @@
+"Example 1:
+
+"Context": "Cuba ransomware first appeared in 2019 but remained relatively unnoticed until November 2021, when they reportedly targeted a minimum of 49 organizations across various sectors. The sectors included government, healthcare, information technology, manufacturing, and finance. During this time, Cuba ransomware operators were infiltrating networks by encrypting files using the '.cuba' extension. Over the years, the ransom demands from Cuba totals at least $145 million, and the group has successfully collected at least $60 million in ransom payments. By 2022, the threat actors had expanded their tactics, techniques, and procedures (TTPs), leading security researchers to suggest a potential connection between Cuba ransomware actors, RomCom Remote Access Trojan (RAT) actors, and Industrial Spy ransomware actors. This month, Cuba garnered attention when they took responsibility for a cyberattack on The Philadelphia Inquirer."
+
+"Question": What do you think is the relationship between entity "Cuba ransomware actors" and entity "Cuba ransomware"?
+
+"predicted_triple": {"subject": "Cuba ransomware actors", "relation": "are associated with", "object": "Cuba ransomware"}
+---------------------
+Example 2:
+
+"Context": "CVE-2023-36884 is a remote code execution vulnerability that was previously patched. The vulnerability allowed attackers to craft Microsoft Office documents in a way that circumvented the Mark of the Web (MoTW) security feature. This allowed the files to be opened without triggering a security warning, ultimately enabling remote code execution. To counteract a previously mitigated but actively exploited CVE-2023-36884 flaw, Microsoft has introduced an Office Defense in Depth update. The Russian threat actor Storm-0978/RomCom is responsible for actively exploiting this vulnerability. This group, previously recognized for deploying the Industrial Spy ransomware in their attacks, has now rebranded as 'Underground' and extorts victims through their ransomware operations."
+
+"Question": What do you think is the relationship between entity "Storm-0978/RomCom" and entity "CVE-2023-36884"
+
+"predicted_triple": {"subject": "Storm-0978/RomCom", "relation": "actively exploited", "object": "CVE-2023-36884"}
+---------------------
+Target task:
+
+"Context": On July 11, 2023, Unit 42 cloud researchers discovered a new peer-to-peer (P2P) worm we call P2PInfect. Written in Rust, a highly scalable and cloud-friendly programming language, this worm is capable of cross-platform infections and targets Redis, a popular open-source database application that is heavily used within cloud environments. Redis instances can be run on both Linux and Windows operating systems. Unit 42 researchers have identified over 307,000 unique Redis systems communicating publicly over the last two weeks, of which 934 may be vulnerable to this P2P worm variant. While not all of the 307,000 Redis instances will be vulnerable, the worm will still target these systems and attempt the compromise. The P2PInfect worm infects vulnerable Redis instances by exploiting the Lua sandbox escape vulnerability, CVE-2022-0543. While the vulnerability was disclosed in 2022, its scope is not fully known at this point. However, it is rated in the NIST National Vulnerability Database with a Critical CVSS score of 10.0. Additionally, the fact that P2PInfect exploits Redis servers running on both Linux and Windows operating systems makes it more scalable and potent than other worms. The P2P worm observed by Unit 42 researchers serves as an example of a serious attack threat actors could conduct using this vulnerability.
+
+"Question": What do you think is the relationship between entity "Redis" and entity "P2PInfect"?
+
+"predicted_triple": """insert your answer here"""
+
+Your response must be JSON and nothing else. predicted_subject and predicted_object should be chosen from entity "Redis" and entity "P2PInfect", do not come up with new entity."

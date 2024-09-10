@@ -1,0 +1,102 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Citrix', 'relation': 'published', 'object': 'a patch'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'the patch', 'relation': 'is for', 'object': 'Netscaler ADC and Netscaler Gateway products'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Citrix Bleed', 'relation': 'is tracked as', 'object': 'CVE-2023-4966'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Citrix Bleed', 'relation': 'can leak', 'object': 'sensitive information'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'sensitive information', 'relation': 'can include', 'object': 'session tokens'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'use', 'object': 'credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'credentials', 'relation': 'to gain', 'object': 'a foothold into systems'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'systems', 'relation': 'are accessed via', 'object': 'session hijacking'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Citrix', 'relation': 'was unaware of', 'object': 'ongoing attacks'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'threat actors', 'relation': 'using', 'object': 'Citrix Bleed'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Unit 42 Incident Response and Managed Threat Hunting teams', 'relation': 'observed', 'object': 'ransomware groups exploiting Citrix Bleed'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Managed Threat Hunting team', 'relation': 'observed', 'object': 'remote executions from Netscaler gateways'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'remote executions from Netscaler gateways', 'relation': 'in association with', 'object': 'exploitation of Citrix Bleed'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

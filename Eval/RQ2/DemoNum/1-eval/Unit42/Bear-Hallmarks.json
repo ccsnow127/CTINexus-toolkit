@@ -1,0 +1,232 @@
+{
+    "CTI": {
+        "text": "Unit 42 researchers recently discovered two separate campaigns targeting job-seeking activities linked to state-sponsored threat actors associated with the Democratic People's Republic of Korea (DPRK), commonly known as North Korea. We call the first campaign \u201cContagious Interview,\u201d where threat actors pose as employers (often anonymously or with vague identities) to lure software developers into installing malware through the interview process. This malware creates the potential for various types of theft. We attribute with moderate confidence that Contagious Interview is run by a North Korea state-sponsored threat actor. We call the second campaign \u201cWagemole,\u201d where threat actors seek unauthorized employment with organizations based in the US and other parts of the world, with potential for both financial gain and espionage. We attribute with high confidence that Wagemole is a North Korea state-sponsored threat. Activity from both campaigns remains an ongoing active threat.",
+        "link": "https://unit42.paloaltonetworks.com/two-campaigns-by-north-korea-bad-actors-target-job-hunters/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unit 42 researchers",
+                "relation": "discovered",
+                "object": "two separate campaigns targeting job-seeking activities"
+            },
+            {
+                "subject": "state-sponsored threat actors associated with DPRK",
+                "relation": "pose as",
+                "object": "employers"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "lure",
+                "object": "software developers"
+            },
+            {
+                "subject": "malware",
+                "relation": "creates",
+                "object": "the potential for various types of theft"
+            },
+            {
+                "subject": "Contagious Interview",
+                "relation": "is run by",
+                "object": "a North Korea state-sponsored threat actor"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "seek unauthorized employment with",
+                "object": "organizations based in the US and other parts of the world"
+            },
+            {
+                "subject": "Wagemole",
+                "relation": "has potential for",
+                "object": "both financial gain and espionage"
+            },
+            {
+                "subject": "Wagemole",
+                "relation": "is a",
+                "object": "North Korea state-sponsored threat"
+            },
+            {
+                "subject": "Activity from both campaigns",
+                "relation": "remains",
+                "object": "an ongoing active threat"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 926,
+                "cost": 0.009260000000000001
+            },
+            "output": {
+                "tokens": 246,
+                "cost": 0.00738
+            },
+            "total": {
+                "tokens": 1172,
+                "cost": 0.016640000000000002
+            }
+        },
+        "time": 6.575201988220215,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/Unit42/Bear-Hallmarks-QD1-abW.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "thehackernews: Kimsuky.json",
+                    0.2369702586120681
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 3,
+                "precision": 0.6666666666666666,
+                "recall": 0.6,
+                "f1": 0.631578947368421,
+                "fn": 4
+            },
+            "matched_list": [
+                [
+                    [
+                        "Unit 42 researchers",
+                        "discovered",
+                        "two separate campaigns targeting job-seeking activities"
+                    ],
+                    [
+                        "Unit 42 researchers",
+                        "discovered",
+                        "campaigns targeting job-seeking activities"
+                    ],
+                    [
+                        1.0,
+                        0.8435885649695901
+                    ]
+                ],
+                [
+                    [
+                        "malware",
+                        "creates",
+                        "the potential for various types of theft"
+                    ],
+                    [
+                        "malware",
+                        "creates potential for",
+                        "various types of theft"
+                    ],
+                    [
+                        1.0,
+                        0.7689228380564621
+                    ]
+                ],
+                [
+                    [
+                        "Contagious Interview",
+                        "is run by",
+                        "a North Korea state-sponsored threat actor"
+                    ],
+                    [
+                        "Contagious Interview",
+                        "is run by",
+                        "a North Korea state-sponsored threat actor"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Wagemole",
+                        "has potential for",
+                        "both financial gain and espionage"
+                    ],
+                    [
+                        "Wagemole",
+                        "has potential for",
+                        "financial gain and espionage"
+                    ],
+                    [
+                        1.0,
+                        0.933189994086045
+                    ]
+                ],
+                [
+                    [
+                        "Wagemole",
+                        "is a",
+                        "North Korea state-sponsored threat"
+                    ],
+                    [
+                        "Wagemole",
+                        "is a",
+                        "North Korea state-sponsored threat"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Activity from both campaigns",
+                        "remains",
+                        "an ongoing active threat"
+                    ],
+                    [
+                        "Activity from both campaigns",
+                        "remains",
+                        "an ongoing active threat"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "state-sponsored threat actors associated with DPRK",
+                    "pose as",
+                    "employers"
+                ],
+                [
+                    "threat actors",
+                    "lure",
+                    "software developers"
+                ],
+                [
+                    "threat actors",
+                    "seek unauthorized employment with",
+                    "organizations based in the US and other parts of the world"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "campaigns",
+                    "linked to",
+                    "state-sponsored threat actors associated with DPRK"
+                ],
+                [
+                    "Contagious Interview",
+                    "posed by threat actors as",
+                    "employers"
+                ],
+                [
+                    "Contagious Interview",
+                    "lures software developers into installing",
+                    "malware"
+                ],
+                [
+                    "Wagemole",
+                    "seeks unauthorized employment in",
+                    "organizations based in the US and other parts of the world"
+                ]
+            ]
+        }
+    }
+}

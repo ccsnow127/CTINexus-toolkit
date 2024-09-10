@@ -1,0 +1,125 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Action",
+    "Attacker",
+    "Campaign",
+    "Event",
+    "Exploit Target Object",
+    "Host",
+    {
+        "Indicator":[
+            "Adress",
+            "Email",
+            "File",
+            "Hash"
+        ]
+    },
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic",
+    "Malware Family",
+    "Organization",
+    "Software",
+    "System",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example 1:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "is", "object": "a relatively new player in the ransomware market"} 
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "is", "object": {"text": "a relatively new player in the ransomware market", "class": "This entity cannot be classified into any of the existing types"}} 
+---------------------
+Example 2:
+
+"triple": {"subject": "The Akira ransomware group", "relation": "claimed responsibility for", "object": "three recent attacks"}
+
+"tagged_triple": {"subject": {"text": "The Akira ransomware group", "class": "Attacker"}, "relation": "claimed responsibility for", "object": {"text": "three recent attacks", "class": "Event"}} 
+---------------------
+Example 3:
+
+"triple": {"subject": "The victims", "relation": "include", "object": "4LEAF"}
+
+"tagged_triple": {"subject": {"text": "The victims", "class": "Exploit Target Object"}, "relation": "include", "object": {"text": "4LEAF", "class": "Exploit Target Object"}} 
+---------------------
+
+
+"triple":: {'subject': 'Vulnerable Microsoft SQL servers', 'relation': 'being targeted by', 'object': 'threat actors'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Vulnerable Microsoft SQL servers', 'relation': 'infected with', 'object': 'FARGO ransomware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FARGO ransomware', 'relation': 'also known as', 'object': 'Mallox'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FARGO ransomware', 'relation': 'also known as', 'object': 'TargetCompany'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat actors', 'relation': 'dropped', 'object': 'Cobalt Strike beacons'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat actors', 'relation': 'hijacking', 'object': 'vulnerable Microsoft SQL servers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat actors', 'relation': 'steal', 'object': 'bandwidth for their own proxy services'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FARGO attacks', 'relation': 'blackmail', 'object': 'database owners'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FARGO ransomware', 'relation': 'focuses on', 'object': 'Microsoft SQL servers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Ransomware infection', 'relation': 'starts by using', 'object': 'powershell.exe and cmd.exe'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Ransomware infection', 'relation': 'downloads', 'object': '.NET file'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FARGO ransomware', 'relation': 'executes', 'object': 'recovery deactivation command'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FARGO ransomware', 'relation': 'kills processes', 'object': 'prior to initiating encryption'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FARGO ransomware', 'relation': 'renames locked files using', 'object': "'.Fargo3' extension"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FARGO ransomware', 'relation': 'generates', 'object': "ransom note titled 'RECOVERY FILES.txt'"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Ransom', 'relation': 'expected to be paid in', 'object': 'Bitcoin'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Database servers', 'relation': 'compromised via', 'object': 'brute-force'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Threat actor', 'relation': 'may attack by exploiting', 'object': 'well-known and unpatched vulnerabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

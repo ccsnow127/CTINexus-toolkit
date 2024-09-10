@@ -1,0 +1,86 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'Operation Earth Kitsune', 'relation': 'using', 'object': 'five C&C servers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Operation Earth Kitsune', 'relation': 'using', 'object': 'seven samples'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Operation Earth Kitsune', 'relation': 'using', 'object': 'four new bugs'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Operation Earth Kitsune', 'relation': 'aims to', 'object': 'compromise websites'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Operation Earth Kitsune', 'relation': 'host', 'object': 'malware'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Korean American National Coordinating Council website', 'relation': 'redirecting visitors to', 'object': 'Hanseattle website'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Hanseattle website', 'relation': 'redirected users to', 'object': 'a weaponized version of a proof of concept for CVE-2019-5782'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2019-5782', 'relation': 'is a', 'object': 'Google Chrome vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'weaponized version of the mentioned Chrome exploit', 'relation': 'infecting', 'object': 'victim machine with three separate malware samples'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

@@ -1,0 +1,337 @@
+{
+    "CTI": {
+        "text": "Starting this year, Ryuk began using another dropper called BazarLoader (also known as BazarBackdoor). Like Trickbot, BazarLoader is also primarily distributed via phishing emails that contain either malicious attachments or links to websites (typically free, online file-hosting solutions) that host malware. These phishing emails use normal social engineering techniques: For example, they are usually disguised as business correspondence or other important messages. Once the payload is distributed, a command-and-control (C&C) server is used to deploy and install the backdoor. According to the advisory, the threat actor behind TrickBot is also connected to BazarLoader.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/ryuk-2020-distributing-ransomware-via-trickbot-and-bazarloader"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Ryuk",
+                "relation": "began using",
+                "object": "BazarLoader"
+            },
+            {
+                "subject": "BazarLoader",
+                "relation": "is known as",
+                "object": "BazarBackdoor"
+            },
+            {
+                "subject": "BazarLoader",
+                "relation": "is primarily distributed via",
+                "object": "phishing emails"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "contain",
+                "object": "malicious attachments"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "contain",
+                "object": "links to websites"
+            },
+            {
+                "subject": "websites",
+                "relation": "host",
+                "object": "malware"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "use",
+                "object": "social engineering techniques"
+            },
+            {
+                "subject": "phishing emails",
+                "relation": "disguised as",
+                "object": "business correspondence"
+            },
+            {
+                "subject": "payload",
+                "relation": "is distributed, a command-and-control (C&C) server is used to",
+                "object": "deploy and install the backdoor"
+            },
+            {
+                "subject": "Trickbot",
+                "relation": "connected to",
+                "object": "BazarLoader"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2772,
+                "cost": 0.02772
+            },
+            "output": {
+                "tokens": 252,
+                "cost": 0.00756
+            },
+            "total": {
+                "tokens": 3024,
+                "cost": 0.03528
+            }
+        },
+        "time": 7.232931137084961,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/trendmicro/Ryuk-QD1-Y2c.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-purplefox.json",
+                    0.08719161099727128
+                ],
+                [
+                    "AVERTIUM-charming-kitten.json",
+                    0.09142067730844404
+                ],
+                [
+                    "AVERTIUM-mallox.json",
+                    0.09425733057019965
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Ryuk",
+                    "class": "Malware"
+                },
+                "relation": "began using",
+                "object": {
+                    "text": "BazarLoader",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "BazarLoader",
+                    "class": "Malware"
+                },
+                "relation": "is known as",
+                "object": {
+                    "text": "BazarBackdoor",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "BazarLoader",
+                    "class": "Malware"
+                },
+                "relation": "is primarily distributed via",
+                "object": {
+                    "text": "phishing emails",
+                    "class": "Indicator:Email"
+                }
+            },
+            {
+                "subject": {
+                    "text": "phishing emails",
+                    "class": "Indicator:Email"
+                },
+                "relation": "contain",
+                "object": {
+                    "text": "malicious attachments",
+                    "class": "Malware Characteristic:Payload"
+                }
+            },
+            {
+                "subject": {
+                    "text": "phishing emails",
+                    "class": "Indicator:Email"
+                },
+                "relation": "contain",
+                "object": {
+                    "text": "links to websites",
+                    "class": "Indicator:URL"
+                }
+            },
+            {
+                "subject": {
+                    "text": "websites",
+                    "class": "Infrastructure"
+                },
+                "relation": "host",
+                "object": {
+                    "text": "malware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "phishing emails",
+                    "class": "Indicator:Email"
+                },
+                "relation": "use",
+                "object": {
+                    "text": "social engineering techniques",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "phishing emails",
+                    "class": "Indicator:Email"
+                },
+                "relation": "disguised as",
+                "object": {
+                    "text": "business correspondence",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "payload",
+                    "class": "Malware Characteristic:Payload"
+                },
+                "relation": "is distributed, a command-and-control (C&C) server is used to",
+                "object": {
+                    "text": "deploy and install the backdoor",
+                    "class": "Event"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Trickbot",
+                    "class": "Malware"
+                },
+                "relation": "connected to",
+                "object": {
+                    "text": "BazarLoader",
+                    "class": "Malware"
+                }
+            }
+        ],
+        "response_time": 13.415416955947876,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT4-8shot/prompt_store/trendmicro/Ryuk.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1371,
+                "cost": 0.013710000000000002
+            },
+            "output": {
+                "tokens": 480,
+                "cost": 0.0144
+            },
+            "total": {
+                "tokens": 1851,
+                "cost": 0.028110000000000003
+            }
+        },
+        "Eval": {
+            "correct": 19,
+            "incorrect": 1,
+            "TP": 19,
+            "TN": 0,
+            "FP": 1,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 1,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 6,
+                    "TN": 13,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Information": {
+                    "TP": 1,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 8,
+                    "TN": 12,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 3,
+                    "TN": 17,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 0,
+                    "TN": 19,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                }
+            },
+            "Num_of_classes": 6
+        }
+    }
+}

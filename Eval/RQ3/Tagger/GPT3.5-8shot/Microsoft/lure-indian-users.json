@@ -1,0 +1,337 @@
+{
+    "CTI": {
+        "text": "We discovered a recent WhatsApp phishing campaign through our telemetry that led to banking trojan activity. In this campaign, the attacker shares a malicious APK file through WhatsApp with a message asking users to enter sensitive information in the app. The widely circulated fake banking message states \u201cYour [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You.\u201d and includes a APK file named [redacted]-BANK[.]apk. Upon investigation, we discovered that the APK file was malicious and interacting with it installs a fraudulent application on the victim device. The installed app impersonates a legitimate bank located in India and disguises itself as the bank's official Know Your Customer (KYC) application to trick users into submitting their sensitive information, despite this particular banking organization not being affiliated with an official KYC-related app. This information is then sent to a command and control (C2) server, as well as to the attacker's hard-coded phone number used in SMS functionality.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/11/20/social-engineering-attacks-lure-indian-users-to-install-android-banking-trojans/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "the attacker",
+                "relation": "shares",
+                "object": "a malicious APK file through WhatsApp"
+            },
+            {
+                "subject": "the attacker",
+                "relation": "asks",
+                "object": "users to enter sensitive information in the app"
+            },
+            {
+                "subject": "the malicious APK file",
+                "relation": "leads to",
+                "object": "banking trojan activity"
+            },
+            {
+                "subject": "the fake banking message",
+                "relation": "states",
+                "object": "Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You."
+            },
+            {
+                "subject": "[redacted]-BANK[.]apk",
+                "relation": "is",
+                "object": "malicious"
+            },
+            {
+                "subject": "the fraudulent application",
+                "relation": "impersonates",
+                "object": "a legitimate bank located in India"
+            },
+            {
+                "subject": "the fraudulent application",
+                "relation": "disguises itself as",
+                "object": "the bank's official Know Your Customer (KYC) application"
+            },
+            {
+                "subject": "users",
+                "relation": "submit",
+                "object": "their sensitive information"
+            },
+            {
+                "subject": "the information",
+                "relation": "is sent to",
+                "object": "a command and control (C2) server"
+            },
+            {
+                "subject": "the information",
+                "relation": "is sent to",
+                "object": "the attacker's hard-coded phone number"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2587,
+                "cost": 0.02587
+            },
+            "output": {
+                "tokens": 303,
+                "cost": 0.00909
+            },
+            "total": {
+                "tokens": 2890,
+                "cost": 0.034960000000000005
+            }
+        },
+        "time": 9.222443103790283,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/Microsoft/lure-indian-users-QD1-m88.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.049848395510178105
+                ],
+                [
+                    "BleepingComputer-purplefox.json",
+                    0.0502164571787873
+                ],
+                [
+                    "BleepingComputer-goanywhere.json",
+                    0.05052360854683935
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "the attacker",
+                    "class": "Attacker"
+                },
+                "relation": "shares",
+                "object": {
+                    "text": "a malicious APK file through WhatsApp",
+                    "class": "Indicator:File"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the attacker",
+                    "class": "Attacker"
+                },
+                "relation": "asks",
+                "object": {
+                    "text": "users to enter sensitive information in the app",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the malicious APK file",
+                    "class": "Indicator:File"
+                },
+                "relation": "leads to",
+                "object": {
+                    "text": "banking trojan activity",
+                    "class": "Malware Characteristic:Behavior"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the fake banking message",
+                    "class": "Information"
+                },
+                "relation": "states",
+                "object": {
+                    "text": "Your [redacted] BANK Account will be Blocked Today please update your PANCARD immediately open [redacted]-Bank.apk for update your PANCARD. Thank You.",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "[redacted]-BANK[.]apk",
+                    "class": "Indicator:File"
+                },
+                "relation": "is",
+                "object": {
+                    "text": "malicious",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the fraudulent application",
+                    "class": "Malware"
+                },
+                "relation": "impersonates",
+                "object": {
+                    "text": "a legitimate bank located in India",
+                    "class": "Organization"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the fraudulent application",
+                    "class": "Malware"
+                },
+                "relation": "disguises itself as",
+                "object": {
+                    "text": "the bank's official Know Your Customer (KYC) application",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "users",
+                    "class": "Account"
+                },
+                "relation": "submit",
+                "object": {
+                    "text": "their sensitive information",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the information",
+                    "class": "Information"
+                },
+                "relation": "is sent to",
+                "object": {
+                    "text": "a command and control (C2) server",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "the information",
+                    "class": "Information"
+                },
+                "relation": "is sent to",
+                "object": {
+                    "text": "the attacker's hard-coded phone number",
+                    "class": "Indicator:URL"
+                }
+            }
+        ],
+        "response_time": 7.5870890617370605,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/Eval/RQ3/Tagger/GPT3.5-8shot/prompt_store/Microsoft/lure-indian-users.txt",
+        "model_usage": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1423,
+                "cost": 0.0007115
+            },
+            "output": {
+                "tokens": 502,
+                "cost": 0.000753
+            },
+            "total": {
+                "tokens": 1925,
+                "cost": 0.0014645
+            }
+        },
+        "Eval": {
+            "correct": 17,
+            "incorrect": 3,
+            "TP": 17,
+            "TN": 1,
+            "FP": 3,
+            "FN": 0,
+            "Macro-counters": {
+                "Account": {
+                    "TP": 0,
+                    "TN": 19,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Credential": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Tool": {
+                    "TP": 1,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Attacker": {
+                    "TP": 2,
+                    "TN": 18,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Event": {
+                    "TP": 0,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 1
+                },
+                "Exploit Target": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Indicator": {
+                    "TP": 3,
+                    "TN": 16,
+                    "FP": 1,
+                    "FN": 0
+                },
+                "Information": {
+                    "TP": 5,
+                    "TN": 13,
+                    "FP": 1,
+                    "FN": 1
+                },
+                "Location": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware": {
+                    "TP": 3,
+                    "TN": 17,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Malware Characteristic": {
+                    "TP": 1,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Organization": {
+                    "TP": 1,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Infrastructure": {
+                    "TP": 1,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Time": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "Vulnerability": {
+                    "TP": 0,
+                    "TN": 20,
+                    "FP": 0,
+                    "FN": 0
+                },
+                "This entity cannot be classified into any of the existing types": {
+                    "TP": 0,
+                    "TN": 19,
+                    "FP": 0,
+                    "FN": 1
+                }
+            },
+            "Num_of_classes": 9
+        }
+    }
+}

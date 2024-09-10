@@ -1,0 +1,225 @@
+{
+    "CTI": {
+        "text": "Unit 42 researchers have identified an active campaign we are calling EleKtra-Leak, which performs automated targeting of exposed identity and access management (IAM) credentials within public GitHub repositories. AWS detects and auto-remediates much of the threat of exposed credentials in popular source code repositories by applying a special quarantine policy \u2014 but by manually removing that automatic protection, we were able to develop deeper insights into the activities that the actor would carry out in the case where compromised credentials are obtained in some other way. In those cases, the threat actor associated with the campaign was able to create multiple AWS Elastic Compute (EC2) instances that they used for wide-ranging and long-lasting cryptojacking operations. We believe these operations have been active for at least two years and are still active today.",
+        "link": ""
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Unit 42 researchers",
+                "relation": "have identified",
+                "object": "an active campaign EleKtra-Leak"
+            },
+            {
+                "subject": "EleKtra-Leak",
+                "relation": "performs",
+                "object": "automated targeting of exposed IAM credentials"
+            },
+            {
+                "subject": "exposed IAM credentials",
+                "relation": "in",
+                "object": "public GitHub repositories"
+            },
+            {
+                "subject": "AWS",
+                "relation": "detects and auto-remediates",
+                "object": "the threat of exposed credentials in popular source code repositories"
+            },
+            {
+                "subject": "AWS",
+                "relation": "applying",
+                "object": "a special quarantine policy"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "associated with",
+                "object": "the campaign"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "was able to create",
+                "object": "multiple AWS EC2 instances"
+            },
+            {
+                "subject": "AWS EC2 instances",
+                "relation": "used for",
+                "object": "wide-ranging and long-lasting cryptojacking operations"
+            },
+            {
+                "subject": "operations",
+                "relation": "have been active for",
+                "object": "at least two years"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2389,
+                "cost": 0.02389
+            },
+            "output": {
+                "tokens": 246,
+                "cost": 0.00738
+            },
+            "total": {
+                "tokens": 2635,
+                "cost": 0.03127
+            }
+        },
+        "time": 10.409220695495605,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/4/prompt_store/Unit42/Exposed-IAM-Keys-QD1-XBr.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 4,
+            "demos": [
+                [
+                    "Microsoft: volt-typhoon.json",
+                    0.0829431530937346
+                ],
+                [
+                    "BleepingComputer: androxgh0st.json",
+                    0.09133565485027599
+                ],
+                [
+                    "Unit42: Google-Workspace.json",
+                    0.10059211325108613
+                ],
+                [
+                    "BleepingComputer: github.json",
+                    0.11066901626136644
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 1,
+                "fn": 2,
+                "precision": 0.8888888888888888,
+                "recall": 0.8,
+                "f1": 0.8421052631578948
+            },
+            "matched_list": [
+                [
+                    [
+                        "Unit 42 researchers",
+                        "have identified",
+                        "an active campaign EleKtra-Leak"
+                    ],
+                    [
+                        "Unit 42 researchers",
+                        "have identified",
+                        "an active campaign"
+                    ]
+                ],
+                [
+                    [
+                        "EleKtra-Leak",
+                        "performs",
+                        "automated targeting of exposed IAM credentials"
+                    ],
+                    [
+                        "EleKtra-Leak",
+                        "performs",
+                        "automated targeting of exposed IAM credentials"
+                    ]
+                ],
+                [
+                    [
+                        "exposed IAM credentials",
+                        "in",
+                        "public GitHub repositories"
+                    ],
+                    [
+                        "IAM credentials",
+                        "are within",
+                        "public GitHub repositories"
+                    ]
+                ],
+                [
+                    [
+                        "AWS",
+                        "detects and auto-remediates",
+                        "the threat of exposed credentials in popular source code repositories"
+                    ],
+                    [
+                        "AWS",
+                        "detects and auto-remediates",
+                        "the threat of exposed credentials"
+                    ]
+                ],
+                [
+                    [
+                        "AWS",
+                        "applying",
+                        "a special quarantine policy"
+                    ],
+                    [
+                        "AWS",
+                        "applies",
+                        "a special quarantine policy"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor",
+                        "associated with",
+                        "the campaign"
+                    ],
+                    [
+                        "the threat actor",
+                        "is associated with",
+                        "the campaign"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor",
+                        "was able to create",
+                        "multiple AWS EC2 instances"
+                    ],
+                    [
+                        "the threat actor",
+                        "was able to create",
+                        "multiple AWS EC2 instances"
+                    ]
+                ],
+                [
+                    [
+                        "AWS EC2 instances",
+                        "used for",
+                        "wide-ranging and long-lasting cryptojacking operations"
+                    ],
+                    [
+                        "AWS EC2 instances",
+                        "are used for",
+                        "cryptojacking operations"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "operations",
+                    "have been active for",
+                    "at least two years"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Unit 42 researchers",
+                    "were able to develop",
+                    "deeper insights"
+                ],
+                [
+                    "cryptojacking operations",
+                    "have been active for",
+                    "at least two years"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

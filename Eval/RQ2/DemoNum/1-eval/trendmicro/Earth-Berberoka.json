@@ -1,0 +1,237 @@
+{
+    "CTI": {
+        "text": "We have discovered an advanced persistent threat (APT) group that primarily targets online gambling sites. This group, which we have dubbed Earth Berberoka (aka GamblingPuppet), uses old yet upgraded malware families that have been attributed to Chinese-speaking actors, including PlugX and Gh0st RAT. It also uses a brand-new multistage malware family, which we have dubbed PuppetLoader. The malware families used by Earth Berberoka are multiplatform, targeting the Windows, Linux, and macOS operating systems.",
+        "link": ""
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Earth Berberoka (aka GamblingPuppet)",
+                "relation": "targets",
+                "object": "online gambling sites"
+            },
+            {
+                "subject": "Earth Berberoka",
+                "relation": "uses",
+                "object": "old yet upgraded malware families"
+            },
+            {
+                "subject": "old yet upgraded malware families",
+                "relation": "attributed to",
+                "object": "Chinese-speaking actors"
+            },
+            {
+                "subject": "Earth Berberoka",
+                "relation": "uses",
+                "object": "PlugX"
+            },
+            {
+                "subject": "Earth Berberoka",
+                "relation": "uses",
+                "object": "Gh0st RAT"
+            },
+            {
+                "subject": "Earth Berberoka",
+                "relation": "uses",
+                "object": "PuppetLoader"
+            },
+            {
+                "subject": "The malware families used by Earth Berberoka",
+                "relation": "are",
+                "object": "multiplatform"
+            },
+            {
+                "subject": "The malware families",
+                "relation": "target",
+                "object": "the Windows, Linux, and macOS operating systems"
+            }
+        ],
+        "triples_count": 8,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1061,
+                "cost": 0.010610000000000001
+            },
+            "output": {
+                "tokens": 212,
+                "cost": 0.00636
+            },
+            "total": {
+                "tokens": 1273,
+                "cost": 0.016970000000000002
+            }
+        },
+        "time": 5.738916873931885,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/trendmicro/Earth-Berberoka-QD1-gFg.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "darkreading: Gh0st-RAT.json",
+                    0.16724584268878895
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 2,
+                "precision": 0.75,
+                "recall": 0.46153846153846156,
+                "f1": 0.5714285714285714,
+                "fn": 7
+            },
+            "matched_list": [
+                [
+                    [
+                        "Earth Berberoka (aka GamblingPuppet)",
+                        "targets",
+                        "online gambling sites"
+                    ],
+                    [
+                        "Earth Berberoka",
+                        "also known as",
+                        "GamblingPuppet"
+                    ],
+                    [
+                        0.689731379703224,
+                        0.45953068783017836
+                    ]
+                ],
+                [
+                    [
+                        "Earth Berberoka",
+                        "uses",
+                        "old yet upgraded malware families"
+                    ],
+                    [
+                        "Earth Berberoka",
+                        "uses",
+                        "old yet upgraded malware families"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "old yet upgraded malware families",
+                        "attributed to",
+                        "Chinese-speaking actors"
+                    ],
+                    [
+                        "malware families",
+                        "attributed to",
+                        "Chinese-speaking actors"
+                    ],
+                    [
+                        0.7953740791201453,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Earth Berberoka",
+                        "uses",
+                        "PuppetLoader"
+                    ],
+                    [
+                        "Earth Berberoka",
+                        "also known as",
+                        "GamblingPuppet"
+                    ],
+                    [
+                        1.0,
+                        0.47039955848182435
+                    ]
+                ],
+                [
+                    [
+                        "The malware families used by Earth Berberoka",
+                        "are",
+                        "multiplatform"
+                    ],
+                    [
+                        "malware families used by Earth Berberoka",
+                        "are",
+                        "multiplatform"
+                    ],
+                    [
+                        0.9474833210172098,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "The malware families",
+                        "target",
+                        "the Windows, Linux, and macOS operating systems"
+                    ],
+                    [
+                        "malware families",
+                        "target",
+                        "the Windows operating system"
+                    ],
+                    [
+                        0.9258485839013828,
+                        0.76173544200414
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Earth Berberoka",
+                    "uses",
+                    "PlugX"
+                ],
+                [
+                    "Earth Berberoka",
+                    "uses",
+                    "Gh0st RAT"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Earth Berberoka",
+                    "primarily targets",
+                    "online gambling sites"
+                ],
+                [
+                    "malware families",
+                    "include",
+                    "PlugX"
+                ],
+                [
+                    "malware families",
+                    "include",
+                    "Gh0st RAT"
+                ],
+                [
+                    "Earth Berberoka",
+                    "uses",
+                    "PuppetLoader"
+                ],
+                [
+                    "PuppetLoader",
+                    "is dubbed as",
+                    "a brand-new multistage malware family"
+                ],
+                [
+                    "malware families",
+                    "target",
+                    "the Linux operating system"
+                ],
+                [
+                    "malware families",
+                    "target",
+                    "the macOS operating system"
+                ]
+            ]
+        }
+    }
+}

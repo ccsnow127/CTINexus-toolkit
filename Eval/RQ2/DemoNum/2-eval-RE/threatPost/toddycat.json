@@ -1,0 +1,238 @@
+{
+    "CTI": {
+        "text": "An advanced persistent threat (APT) group, dubbed ToddyCat, is believed behind a series of attacks targeting Microsoft Exchange servers of high-profile government and military installations in Asia and Europe. The campaigns, according to researchers, began in December 2020, and have been largely poorly understood in their complexity until now. The first wave of attacks exclusively targeted Microsoft Exchange Servers, which were compromised with Samurai, a sophisticated passive backdoor that usually works on ports 80 and 443. The APT leverages two passive backdoors within the Exchange Server environment with malware called Samurai and Ninja, which researchers say are used by the adversaries to take complete control of the victim\u2019s hardware and network.",
+        "link": "https://threatpost.com/elusive-toddycat-apt-targets-microsoft-exchange-servers/180031/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "ToddyCat",
+                "relation": "is",
+                "object": "an advanced persistent threat group"
+            },
+            {
+                "subject": "ToddyCat",
+                "relation": "is believed behind",
+                "object": "a series of attacks targeting Microsoft Exchange servers of high-profile government and military installations in Asia and Europe"
+            },
+            {
+                "subject": "The campaigns",
+                "relation": "began in",
+                "object": "December 2020"
+            },
+            {
+                "subject": "The first wave of attacks",
+                "relation": "targeted",
+                "object": "Microsoft Exchange Servers"
+            },
+            {
+                "subject": "Microsoft Exchange Servers",
+                "relation": "were compromised with",
+                "object": "Samurai"
+            },
+            {
+                "subject": "Samurai",
+                "relation": "is",
+                "object": "a sophisticated passive backdoor"
+            },
+            {
+                "subject": "Samurai",
+                "relation": "works on",
+                "object": "ports 80 and 443"
+            },
+            {
+                "subject": "The APT",
+                "relation": "leverages",
+                "object": "two passive backdoors within the Exchange Server environment"
+            },
+            {
+                "subject": "backdoors",
+                "relation": "called",
+                "object": "Samurai and Ninja"
+            },
+            {
+                "subject": "Samurai and Ninja",
+                "relation": "are used by",
+                "object": "the adversaries to take complete control of the victim\u2019s hardware and network"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1211,
+                "cost": 0.012110000000000001
+            },
+            "output": {
+                "tokens": 280,
+                "cost": 0.0084
+            },
+            "total": {
+                "tokens": 1491,
+                "cost": 0.02051
+            }
+        },
+        "time": 12.788105249404907,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/threatPost/toddycat-QD1-dli.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "symantec: Follina.json",
+                    0.1288551566056639
+                ],
+                [
+                    "AVERTIUM: charming-kitten.json",
+                    0.17443035928508321
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 1,
+                "fn": 3,
+                "precision": 0.9,
+                "recall": 0.75,
+                "f1": 0.8181818181818182
+            },
+            "matched_list": [
+                [
+                    [
+                        "ToddyCat",
+                        "is",
+                        "an advanced persistent threat group"
+                    ],
+                    [
+                        "ToddyCat",
+                        "is",
+                        "an advanced persistent threat (APT) group"
+                    ]
+                ],
+                [
+                    [
+                        "ToddyCat",
+                        "is believed behind",
+                        "a series of attacks targeting Microsoft Exchange servers of high-profile government and military installations in Asia and Europe"
+                    ],
+                    [
+                        "ToddyCat",
+                        "is believed behind",
+                        "a series of attacks targeting Microsoft Exchange servers"
+                    ]
+                ],
+                [
+                    [
+                        "The first wave of attacks",
+                        "targeted",
+                        "Microsoft Exchange Servers"
+                    ],
+                    [
+                        "the series of attacks",
+                        "target",
+                        "high-profile government and military installations"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft Exchange Servers",
+                        "were compromised with",
+                        "Samurai"
+                    ],
+                    [
+                        "The first wave of attacks",
+                        "targeted",
+                        "Microsoft Exchange Servers"
+                    ]
+                ],
+                [
+                    [
+                        "Samurai",
+                        "is",
+                        "a sophisticated passive backdoor"
+                    ],
+                    [
+                        "Microsoft Exchange Servers",
+                        "were compromised with",
+                        "Samurai"
+                    ]
+                ],
+                [
+                    [
+                        "Samurai",
+                        "works on",
+                        "ports 80 and 443"
+                    ],
+                    [
+                        "Samurai",
+                        "is",
+                        "a sophisticated passive backdoor"
+                    ]
+                ],
+                [
+                    [
+                        "The APT",
+                        "leverages",
+                        "two passive backdoors within the Exchange Server environment"
+                    ],
+                    [
+                        "The APT",
+                        "leverages",
+                        "two passive backdoors within the Exchange Server environment"
+                    ]
+                ],
+                [
+                    [
+                        "backdoors",
+                        "called",
+                        "Samurai and Ninja"
+                    ],
+                    [
+                        "Samurai",
+                        "works on",
+                        "ports 80 and 443"
+                    ]
+                ],
+                [
+                    [
+                        "Samurai and Ninja",
+                        "are used by",
+                        "the adversaries to take complete control of the victim\u2019s hardware and network"
+                    ],
+                    [
+                        "The APT",
+                        "leverages",
+                        "malware called Samurai and Ninja"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "The campaigns",
+                    "began in",
+                    "December 2020"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "the series of attacks",
+                    "locate in",
+                    "Asia"
+                ],
+                [
+                    "the series of attacks",
+                    "locate in",
+                    "Europe"
+                ],
+                [
+                    "Samurai and Ninja",
+                    "are used by",
+                    "the adversaries to take complete control of the victim\u2019s hardware and network"
+                ]
+            ]
+        }
+    }
+}

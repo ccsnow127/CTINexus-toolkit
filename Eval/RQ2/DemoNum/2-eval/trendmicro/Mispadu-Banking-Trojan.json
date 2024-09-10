@@ -1,0 +1,180 @@
+{
+    "CTI": {
+        "text": "Recent spam campaigns leading to URSA/Mispadu banking trojan (detected by Trend Micro as TrojanSpy.Win32.MISPADU.THIADBO) have been uncovered, as reported by malware analyst Pedro Tavares in a Twitter post and by Seguranca Informatica in a blog post. Mispadu malware steals credentials from users' systems. This attack targets systems with Spanish and Portuguese as system languages. It is also likely that they have targets similar to previous Mispadu attacks where users from Mexico, Spain, Portugal, and other nearby regions were targeted. This behavior is in line with past Mispadu schemes, such as the one where spam emails for fake discount coupons were used as bait.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/mispadu-banking-trojan-resurfaces"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "URSA/Mispadu banking trojan",
+                "relation": "detected by",
+                "object": "Trend Micro as TrojanSpy.Win32.MISPADU.THIADBO"
+            },
+            {
+                "subject": "Mispadu malware",
+                "relation": "steals",
+                "object": "credentials"
+            },
+            {
+                "subject": "This attack",
+                "relation": "targets systems with",
+                "object": "Spanish and Portuguese as system languages"
+            },
+            {
+                "subject": "Mispadu attacks",
+                "relation": "target",
+                "object": "users from Mexico, Spain, Portugal, and other nearby regions"
+            },
+            {
+                "subject": "Spam emails for fake discount coupons",
+                "relation": "used as",
+                "object": "bait for Mispadu schemes"
+            }
+        ],
+        "triples_count": 5,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1477,
+                "cost": 0.014770000000000002
+            },
+            "output": {
+                "tokens": 165,
+                "cost": 0.00495
+            },
+            "total": {
+                "tokens": 1642,
+                "cost": 0.01972
+            }
+        },
+        "time": 20.062192916870117,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/trendmicro/Mispadu-Banking-Trojan-QD1-GZ5.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "securityweek: strelastealer.json",
+                    0.08583095799327192
+                ],
+                [
+                    "darkreading: Microsoft-Office-Bug.json",
+                    0.09046520246010883
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 5,
+                "fp": 0,
+                "fn": 3,
+                "precision": 1.0,
+                "recall": 0.625,
+                "f1": 0.7692307692307693
+            },
+            "matched_list": [
+                [
+                    [
+                        "URSA/Mispadu banking trojan",
+                        "detected by",
+                        "Trend Micro as TrojanSpy.Win32.MISPADU.THIADBO"
+                    ],
+                    [
+                        "URSA/Mispadu banking trojan",
+                        "is detected by",
+                        "Trend Micro as TrojanSpy.Win32.MISPADU.THIADBO"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Mispadu malware",
+                        "steals",
+                        "credentials"
+                    ],
+                    [
+                        "Mispadu malware",
+                        "steals",
+                        "credentials"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "This attack",
+                        "targets systems with",
+                        "Spanish and Portuguese as system languages"
+                    ],
+                    [
+                        "This attack",
+                        "targets systems with",
+                        "Spanish and Portuguese as system languages"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Mispadu attacks",
+                        "target",
+                        "users from Mexico, Spain, Portugal, and other nearby regions"
+                    ],
+                    [
+                        "This attack",
+                        "targets systems with",
+                        "Spanish and Portuguese as system languages"
+                    ],
+                    [
+                        0.5139055359231303,
+                        0.4743391605771856
+                    ]
+                ],
+                [
+                    [
+                        "Spam emails for fake discount coupons",
+                        "used as",
+                        "bait for Mispadu schemes"
+                    ],
+                    [
+                        "Mispadu schemes",
+                        "use",
+                        "spam emails for fake discount coupons as bait"
+                    ],
+                    [
+                        0.8807591983463388,
+                        0.7107039688443691,
+                        "passive form"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "spam campaigns",
+                    "lead to",
+                    "URSA/Mispadu banking trojan"
+                ],
+                [
+                    "targets",
+                    "are likely similar to",
+                    "previous Mispadu attacks"
+                ],
+                [
+                    "previous Mispadu attacks",
+                    "target users from",
+                    "Mexico, Spain, Portugal, and other nearby regions"
+                ]
+            ]
+        }
+    }
+}

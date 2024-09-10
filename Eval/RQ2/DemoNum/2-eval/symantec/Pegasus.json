@@ -1,0 +1,287 @@
+{
+    "CTI": {
+        "text": "The recent iOS 14.8 update fixes a zero-day, zero-click exploit for a vulnerability affecting every mobile iOS device. The flaw, dubbed FORCEDENTRY (CVE-2021-30860), resided in Apple's iMessage and, according to a report by The Citizen Lab, was used to push NSO Group's Pegasus spyware to mobile iOS devices dating back to as far as February 2021. Pegasus has been around for some years now but has been back in the spotlight recently following reports from both The Citizen Lab and Amnesty International about the spyware targeting journalists, activists, and others. One of the main concerns with FORCEDENTRY is that it can be used in what is called a zero-click attack, meaning it requires no user interaction. An attacker exploiting the flaw only needs the Apple ID of a device in order to silently compromise it",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/pegasus-forcedentry-protection"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "iOS 14.8 update",
+                "relation": "fixes",
+                "object": "a zero-day, zero-click exploit"
+            },
+            {
+                "subject": "a zero-day, zero-click exploit",
+                "relation": "for",
+                "object": "a vulnerability"
+            },
+            {
+                "subject": "a vulnerability",
+                "relation": "affecting",
+                "object": "every mobile iOS device"
+            },
+            {
+                "subject": "The flaw",
+                "relation": "dubbed",
+                "object": "FORCEDENTRY (CVE-2021-30860)"
+            },
+            {
+                "subject": "FORCEDENTRY (CVE-2021-30860)",
+                "relation": "resided in",
+                "object": "Apple's iMessage"
+            },
+            {
+                "subject": "FORCEDENTRY (CVE-2021-30860)",
+                "relation": "was used to push",
+                "object": "NSO Group's Pegasus spyware"
+            },
+            {
+                "subject": "NSO Group's Pegasus spyware",
+                "relation": "targeting",
+                "object": "journalists, activists, and others"
+            },
+            {
+                "subject": "FORCEDENTRY",
+                "relation": "can be used in",
+                "object": "a zero-click attack"
+            },
+            {
+                "subject": "a zero-click attack",
+                "relation": "requires",
+                "object": "no user interaction"
+            },
+            {
+                "subject": "An attacker",
+                "relation": "exploiting the flaw",
+                "object": "only needs the Apple ID of a device"
+            },
+            {
+                "subject": "An attacker",
+                "relation": "to silently compromise",
+                "object": "it"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1383,
+                "cost": 0.01383
+            },
+            "output": {
+                "tokens": 320,
+                "cost": 0.009600000000000001
+            },
+            "total": {
+                "tokens": 1703,
+                "cost": 0.02343
+            }
+        },
+        "time": 15.846406936645508,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/symantec/Pegasus-QD1-E1a.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "threatPost: iPhone-Users.json",
+                    0.20754156317864192
+                ],
+                [
+                    "Google_TAG: egypt.json",
+                    0.28013082439129466
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 4,
+                "fn": 8,
+                "precision": 0.6363636363636364,
+                "recall": 0.4666666666666667,
+                "f1": 0.5384615384615385
+            },
+            "matched_list": [
+                [
+                    [
+                        "iOS 14.8 update",
+                        "fixes",
+                        "a zero-day, zero-click exploit"
+                    ],
+                    [
+                        "iOS 14.8 update",
+                        "fixes",
+                        "a zero-day, zero-click exploit"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "a zero-day, zero-click exploit",
+                        "for",
+                        "a vulnerability"
+                    ],
+                    [
+                        "a zero-day, zero-click exploit",
+                        "is for",
+                        "a vulnerability affecting every mobile iOS device"
+                    ],
+                    [
+                        1.0,
+                        0.6195591824190309
+                    ]
+                ],
+                [
+                    [
+                        "a vulnerability",
+                        "affecting",
+                        "every mobile iOS device"
+                    ],
+                    [
+                        "a zero-day, zero-click exploit",
+                        "is for",
+                        "a vulnerability affecting every mobile iOS device"
+                    ],
+                    [
+                        0.5169998146066318,
+                        0.6590569446165679
+                    ]
+                ],
+                [
+                    [
+                        "The flaw",
+                        "dubbed",
+                        "FORCEDENTRY (CVE-2021-30860)"
+                    ],
+                    [
+                        "The flaw",
+                        "is dubbed",
+                        "FORCEDENTRY"
+                    ],
+                    [
+                        1.0,
+                        0.733354727426124
+                    ]
+                ],
+                [
+                    [
+                        "NSO Group's Pegasus spyware",
+                        "targeting",
+                        "journalists, activists, and others"
+                    ],
+                    [
+                        "Pegasus spyware",
+                        "targeting",
+                        "journalists"
+                    ],
+                    [
+                        0.7976480587723044,
+                        0.7183567203537473
+                    ]
+                ],
+                [
+                    [
+                        "FORCEDENTRY",
+                        "can be used in",
+                        "a zero-click attack"
+                    ],
+                    [
+                        "FORCEDENTRY",
+                        "can be used in",
+                        "a zero-click attack"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "a zero-click attack",
+                        "requires",
+                        "no user interaction"
+                    ],
+                    [
+                        "a zero-click attack",
+                        "requires",
+                        "no user interaction"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "FORCEDENTRY (CVE-2021-30860)",
+                    "resided in",
+                    "Apple's iMessage"
+                ],
+                [
+                    "FORCEDENTRY (CVE-2021-30860)",
+                    "was used to push",
+                    "NSO Group's Pegasus spyware"
+                ],
+                [
+                    "An attacker",
+                    "exploiting the flaw",
+                    "only needs the Apple ID of a device"
+                ],
+                [
+                    "An attacker",
+                    "to silently compromise",
+                    "it"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "The flaw",
+                    "resided in",
+                    "Apple's iMessage"
+                ],
+                [
+                    "FORCEDENTRY",
+                    "is",
+                    "CVE-2021-30860"
+                ],
+                [
+                    "The Citizen Lab",
+                    "reported",
+                    "FORCEDENTRY was used to push NSO Group's Pegasus spyware to mobile iOS devices"
+                ],
+                [
+                    "NSO Group's Pegasus spyware",
+                    "has been around for",
+                    "some years"
+                ],
+                [
+                    "Pegasus spyware",
+                    "targeting",
+                    "activists"
+                ],
+                [
+                    "An attacker",
+                    "exploiting",
+                    "the flaw"
+                ],
+                [
+                    "the flaw",
+                    "only needs",
+                    "the Apple ID of a device"
+                ],
+                [
+                    "the flaw",
+                    "to silently compromise",
+                    "a device"
+                ]
+            ]
+        }
+    }
+}

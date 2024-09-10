@@ -1,0 +1,215 @@
+{
+    "CTI": {
+        "text": "Last week Google\u2019s Threat Analysis Group (TAG), in partnership with The Citizen Lab, discovered an in-the-wild 0-day exploit chain for iPhones. Developed by the commercial surveillance vendor, Intellexa, this exploit chain is used to install its Predator spyware surreptitiously onto a device. In response, yesterday, Apple patched the bugs in iOS 16.7 and iOS 17.0.1 as CVE-2023-41991, CVE-2023-41992, CVE-2023-41993. This quick patching from Apple helps to better protect users and we encourage all iOS users to install them as soon as possible.",
+        "link": "https://blog.google/threat-analysis-group/0-days-exploited-by-commercial-surveillance-vendor-in-egypt/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Google\u2019s Threat Analysis Group (TAG) in partnership with The Citizen Lab",
+                "relation": "discovered",
+                "object": "an in-the-wild 0-day exploit chain for iPhones"
+            },
+            {
+                "subject": "Intellexa",
+                "relation": "developed",
+                "object": "the exploit chain"
+            },
+            {
+                "subject": "the exploit chain",
+                "relation": "is used to install",
+                "object": "its Predator spyware"
+            },
+            {
+                "subject": "the exploit chain",
+                "relation": "is used to install",
+                "object": "surreptitiously onto a device"
+            },
+            {
+                "subject": "Apple",
+                "relation": "patched",
+                "object": "the bugs"
+            },
+            {
+                "subject": "the bugs",
+                "relation": "in",
+                "object": "iOS 16.7 and iOS 17.0.1"
+            },
+            {
+                "subject": "the bugs",
+                "relation": "are",
+                "object": "CVE-2023-41991, CVE-2023-41992, CVE-2023-41993"
+            },
+            {
+                "subject": "Apple",
+                "relation": "helps to better protect",
+                "object": "users"
+            },
+            {
+                "subject": "Apple",
+                "relation": "encourage",
+                "object": "all iOS users to install patches"
+            }
+        ],
+        "triples_count": 9,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2104,
+                "cost": 0.021040000000000003
+            },
+            "output": {
+                "tokens": 268,
+                "cost": 0.00804
+            },
+            "total": {
+                "tokens": 2372,
+                "cost": 0.02908
+            }
+        },
+        "time": 12.001417636871338,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/Google_TAG/egypt-QD1-ra4.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "Google_TAG: apt37.json",
+                    0.18696161443239828
+                ],
+                [
+                    "threatPost: iPhone-Users.json",
+                    0.23654332601359448
+                ],
+                [
+                    "symantec: Pegasus.json",
+                    0.28013082439129466
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 8,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.8888888888888888,
+                "recall": 0.8888888888888888,
+                "f1": 0.8888888888888888
+            },
+            "matched_list": [
+                [
+                    [
+                        "Google\u2019s Threat Analysis Group (TAG) in partnership with The Citizen Lab",
+                        "discovered",
+                        "an in-the-wild 0-day exploit chain for iPhones"
+                    ],
+                    [
+                        "Google\u2019s Threat Analysis Group (TAG)",
+                        "discovered",
+                        "an in-the-wild 0-day exploit chain for iPhones"
+                    ]
+                ],
+                [
+                    [
+                        "Intellexa",
+                        "developed",
+                        "the exploit chain"
+                    ],
+                    [
+                        "Intellexa",
+                        "developed",
+                        "the exploit chain"
+                    ]
+                ],
+                [
+                    [
+                        "the exploit chain",
+                        "is used to install",
+                        "its Predator spyware"
+                    ],
+                    [
+                        "the exploit chain",
+                        "is used to install",
+                        "Predator spyware"
+                    ]
+                ],
+                [
+                    [
+                        "the exploit chain",
+                        "is used to install",
+                        "surreptitiously onto a device"
+                    ],
+                    [
+                        "Predator spyware",
+                        "is installed surreptitiously onto",
+                        "a device"
+                    ]
+                ],
+                [
+                    [
+                        "Apple",
+                        "patched",
+                        "the bugs"
+                    ],
+                    [
+                        "Apple",
+                        "patched",
+                        "the bugs"
+                    ]
+                ],
+                [
+                    [
+                        "the bugs",
+                        "in",
+                        "iOS 16.7 and iOS 17.0.1"
+                    ],
+                    [
+                        "The bugs",
+                        "are in",
+                        "iOS 16.7 and iOS 17.0.1"
+                    ]
+                ],
+                [
+                    [
+                        "the bugs",
+                        "are",
+                        "CVE-2023-41991, CVE-2023-41992, CVE-2023-41993"
+                    ],
+                    [
+                        "The bugs",
+                        "are tracked as",
+                        "CVE-2023-41991, CVE-2023-41992, CVE-2023-41993"
+                    ]
+                ],
+                [
+                    [
+                        "Apple",
+                        "helps to better protect",
+                        "users"
+                    ],
+                    [
+                        "The patching from Apple",
+                        "helps to",
+                        "protect users"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Apple",
+                    "encourage",
+                    "all iOS users to install patches"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "The Citizen Lab",
+                    "partnered with",
+                    "Google\u2019s Threat Analysis Group (TAG)"
+                ]
+            ]
+        }
+    }
+}

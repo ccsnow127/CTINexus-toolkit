@@ -1,0 +1,110 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'A new variant of Gh0st RAT', 'relation': 'targets', 'object': 'South Koreans'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'A new variant of Gh0st RAT', 'relation': 'targets', 'object': 'the Ministry of Foreign Affairs in Uzbekistan'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The Chinese group C.Rufus Security Team', 'relation': 'released', 'object': 'Gh0st RAT'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'A group with strong Chinese links', 'relation': 'has been distributing', 'object': 'SugarGh0st RAT'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SugarGh0st RAT', 'relation': 'is deemed', 'object': 'a modified Gh0st RAT'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'This threat actor', 'relation': 'drops', 'object': 'the variant via JavaScript-laced Windows shortcuts'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The variant', 'relation': 'arrives on', 'object': 'targeted machines as archives embedded with Windows LNK shortcut files'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The LNKs', 'relation': 'hide', 'object': 'malicious JavaScript'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SugarGh0st', 'relation': 'is', 'object': 'a 32-bit dynamic link library (DLL) written in C++'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'SugarGh0st', 'relation': 'begins by collecting', 'object': 'system data'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Attackers', 'relation': 'can use', 'object': 'SugarGh0st to retrieve any information'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Attackers', 'relation': 'can use', 'object': 'SugarGh0st for full remote access capabilities'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Backdoor', 'relation': 'comes fitted with', 'object': 'a keylogger'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Backdoor', 'relation': 'comes fitted with', 'object': 'a screenshotter'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Backdoor', 'relation': 'comes fitted with', 'object': "a means of accessing the device's camera"}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

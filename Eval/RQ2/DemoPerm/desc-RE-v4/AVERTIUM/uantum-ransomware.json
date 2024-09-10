@@ -1,0 +1,278 @@
+{
+    "CTI": {
+        "text": "Discovered in August 2021, Quantum ransomware is linked to the Quantum Locker operation. Quantum Locker has had a few rebrands (AstroLocker, MountLocker, and XingLocker). Our technology partner, AdvIntel, confirmed that Quantum is a splinter group from Conti and that the ransomware operation was taken over by Conti Team Two in April 2022 - keeping Quantum's original name. In June 2022, Quantum was observed employing their version of BazarCall, called Jormungandr, and hiring people who specialized in OSINT, spamming, design, and call center operations. BazarCall is a method that is also known as call-back phishing. This tactic emerged in early 2021 as an attack vector used by Ryuk ransomware (later evolving into Conti). BazarCall is used to gain initial access into a victim's network and involves emailing victims. The emails allege that a paid subscription is up for automatic renewal, but the renewal can be cancelled if the victim calls a specific number. Once the victim calls the number, the threat actor on the other end of the line convinces the victim via social engineering to start a remote access session by the use of legitimate software controlled by a network intruder. While the victim is distracted on the call, the intruder tries to figure out how to compromise the victim's network without triggering alarms. These kinds of attacks are highly targeted and make it difficult for cyber security professionals to detect due to the social engineering aspect of the attack. AdvIntel believes that the switch to social engineering is more than likely due to the predictability of ransomware attacks, causing profits to decline for adversaries. If threat actors like Quantum are able to trick people, they can have a more flexible approach to their attacks - making them difficult to defend. Quantum's BazarCall campaigns have grown more sophisticated in just two months' time. They've impersonated a large number of brands, including: Gobble, Luchechko Mortgage Team, CrowdStrike, HelloFresh, Oracle, Ginyard International US Equal Opportunity Employment Commission",
+        "link": "https://explore.avertium.com/resource/an-in-depth-look-at-quantum-ransomware"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Quantum ransomware",
+                "relation": "is linked to",
+                "object": "Quantum Locker operation"
+            },
+            {
+                "subject": "Quantum Locker",
+                "relation": "has had rebrands",
+                "object": "AstroLocker, MountLocker, XingLocker"
+            },
+            {
+                "subject": "Quantum",
+                "relation": "is a splinter group from",
+                "object": "Conti"
+            },
+            {
+                "subject": "Ransomware operation",
+                "relation": "was taken over by",
+                "object": "Conti Team Two"
+            },
+            {
+                "subject": "Quantum",
+                "relation": "employed",
+                "object": "Jormungandr"
+            },
+            {
+                "subject": "Jormungandr",
+                "relation": "is a version of",
+                "object": "BazarCall"
+            },
+            {
+                "subject": "Quantum",
+                "relation": "hiring people specialized in",
+                "object": "OSINT, spamming, design, call center operations"
+            },
+            {
+                "subject": "BazarCall",
+                "relation": "is known as",
+                "object": "call-back phishing"
+            },
+            {
+                "subject": "BazarCall",
+                "relation": "used by",
+                "object": "Ryuk ransomware"
+            },
+            {
+                "subject": "BazarCall",
+                "relation": "is used to gain",
+                "object": "initial access into a victim's network"
+            },
+            {
+                "subject": "Quantum",
+                "relation": "uses social engineering for",
+                "object": "attacks"
+            },
+            {
+                "subject": "Quantum's BazarCall campaigns",
+                "relation": "have grown",
+                "object": "more sophisticated"
+            },
+            {
+                "subject": "Quantum",
+                "relation": "impersonated brands including",
+                "object": "Gobble, Luchechko Mortgage Team, CrowdStrike, HelloFresh, Oracle, Ginyard International, US Equal Opportunity Employment Commission"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1950,
+                "cost": 0.0195
+            },
+            "output": {
+                "tokens": 390,
+                "cost": 0.0117
+            },
+            "total": {
+                "tokens": 2340,
+                "cost": 0.0312
+            }
+        },
+        "time": 15.353763103485107,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/AVERTIUM/uantum-ransomware-QD1-ZND.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "AVERTIUM: ragnar.json",
+                    0.11491010776787566
+                ],
+                [
+                    "AVERTIUM: yanluowang.json",
+                    0.10762312766188815
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 11,
+                "fp": 2,
+                "fn": 2,
+                "precision": 0.8461538461538461,
+                "recall": 0.8461538461538461,
+                "f1": 0.8461538461538461
+            },
+            "matched_list": [
+                [
+                    [
+                        "Quantum ransomware",
+                        "is linked to",
+                        "Quantum Locker operation"
+                    ],
+                    [
+                        "Quantum ransomware",
+                        "is linked to",
+                        "Quantum Locker operation"
+                    ]
+                ],
+                [
+                    [
+                        "Quantum Locker",
+                        "has had rebrands",
+                        "AstroLocker, MountLocker, XingLocker"
+                    ],
+                    [
+                        "Quantum Locker",
+                        "has rebrands",
+                        "AstroLocker, MountLocker, and XingLocker"
+                    ]
+                ],
+                [
+                    [
+                        "Quantum",
+                        "is a splinter group from",
+                        "Conti"
+                    ],
+                    [
+                        "Quantum",
+                        "is a splinter group from",
+                        "Conti"
+                    ]
+                ],
+                [
+                    [
+                        "Quantum",
+                        "employed",
+                        "Jormungandr"
+                    ],
+                    [
+                        "Quantum",
+                        "employs",
+                        "version of BazarCall, called Jormungandr"
+                    ]
+                ],
+                [
+                    [
+                        "Jormungandr",
+                        "is a version of",
+                        "BazarCall"
+                    ],
+                    [
+                        "Quantum",
+                        "employs",
+                        "version of BazarCall, called Jormungandr"
+                    ]
+                ],
+                [
+                    [
+                        "Quantum",
+                        "hiring people specialized in",
+                        "OSINT, spamming, design, call center operations"
+                    ],
+                    [
+                        "Quantum",
+                        "hires people specialized in",
+                        "OSINT, spamming, design, and call center operations"
+                    ]
+                ],
+                [
+                    [
+                        "BazarCall",
+                        "is known as",
+                        "call-back phishing"
+                    ],
+                    [
+                        "BazarCall",
+                        "is also known as",
+                        "call-back phishing"
+                    ]
+                ],
+                [
+                    [
+                        "BazarCall",
+                        "used by",
+                        "Ryuk ransomware"
+                    ],
+                    [
+                        "BazarCall",
+                        "is used by",
+                        "Ryuk ransomware"
+                    ]
+                ],
+                [
+                    [
+                        "BazarCall",
+                        "is used to gain",
+                        "initial access into a victim's network"
+                    ],
+                    [
+                        "BazarCall",
+                        "is used for",
+                        "gaining initial access into a victim's network"
+                    ]
+                ],
+                [
+                    [
+                        "Quantum's BazarCall campaigns",
+                        "have grown",
+                        "more sophisticated"
+                    ],
+                    [
+                        "Quantum's BazarCall campaigns",
+                        "have grown more sophisticated",
+                        "in just two months' time"
+                    ]
+                ],
+                [
+                    [
+                        "Quantum",
+                        "impersonated brands including",
+                        "Gobble, Luchechko Mortgage Team, CrowdStrike, HelloFresh, Oracle, Ginyard International, US Equal Opportunity Employment Commission"
+                    ],
+                    [
+                        "Quantum",
+                        "impersonated brands",
+                        "Gobble, Luchechko Mortgage Team, CrowdStrike, HelloFresh, Oracle, Ginyard International US Equal Opportunity Employment Commission"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Ransomware operation",
+                    "was taken over by",
+                    "Conti Team Two"
+                ],
+                [
+                    "Quantum",
+                    "uses social engineering for",
+                    "attacks"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Threat actor",
+                    "convinces victim to start",
+                    "a remote access session"
+                ],
+                [
+                    "Network intruder",
+                    "tries to compromise",
+                    "the victim's network"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

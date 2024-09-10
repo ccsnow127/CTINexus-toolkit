@@ -1,0 +1,817 @@
+{
+    "CTI": {
+        "text": "Graphican is an evolution of the known Flea backdoor Ketrican, which itself was based on a previous malware \u2014 BS2005 \u2014 also used by Flea. Graphican has the same basic functionality as Ketrican, with the difference between them being Graphican's use of the Microsoft Graph API and OneDrive to obtain its command-and-control (C&C) infrastructure. This technique was used in a similar way by the Russian state-sponsored APT group Swallowtail (aka APT28, Fancy Bear, Sofacy, Strontium) in a campaign in 2022 in which it delivered the Graphite malware. In that campaign, the Graphite malware used the Microsoft Graph API and OneDrive as a C&C server. The observed Graphican samples did not have a hardcoded C&C server, rather they connected to OneDrive via the Microsoft Graph API to get the encrypted C&C server address from a child folder inside the Person folder. The malware then decoded the folder name and used it as a C&C server for the malware. All instances of this variant used the same parameters to authenticate to the Microsoft Graph API.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/flea-backdoor-microsoft-graph-apt15"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Graphican",
+                "relation": "is an evolution of",
+                "object": "Flea backdoor Ketrican"
+            },
+            {
+                "subject": "Ketrican",
+                "relation": "is based on",
+                "object": "BS2005"
+            },
+            {
+                "subject": "BS2005",
+                "relation": "used by",
+                "object": "Flea"
+            },
+            {
+                "subject": "Graphican",
+                "relation": "has basic functionality as",
+                "object": "Ketrican"
+            },
+            {
+                "subject": "Graphican",
+                "relation": "uses",
+                "object": "the Microsoft Graph API and OneDrive"
+            },
+            {
+                "subject": "Graphican",
+                "relation": "to obtain",
+                "object": "command-and-control (C&C) infrastructure"
+            },
+            {
+                "subject": "Swallowtail",
+                "relation": "delivered",
+                "object": "the Graphite malware"
+            },
+            {
+                "subject": "Swallowtail",
+                "relation": "is known as",
+                "object": "APT28"
+            },
+            {
+                "subject": "Swallowtail",
+                "relation": "is known as",
+                "object": "Fancy Bear"
+            },
+            {
+                "subject": "Swallowtail",
+                "relation": "is known as",
+                "object": "Sofacy"
+            },
+            {
+                "subject": "Swallowtail",
+                "relation": "is known as",
+                "object": "Strontium"
+            },
+            {
+                "subject": "The Graphite malware",
+                "relation": "used",
+                "object": "the Microsoft Graph API and OneDrive as a C&C server"
+            },
+            {
+                "subject": "Graphican samples",
+                "relation": "connected to",
+                "object": "OneDrive via the Microsoft Graph API"
+            },
+            {
+                "subject": "Graphican",
+                "relation": "obtain",
+                "object": "the encrypted C&C server address"
+            },
+            {
+                "subject": "The malware",
+                "relation": "decoded",
+                "object": "the folder name"
+            },
+            {
+                "subject": "The malware",
+                "relation": "used",
+                "object": "it as a C&C server"
+            },
+            {
+                "subject": "All instances of this variant",
+                "relation": "used the same parameters to",
+                "object": "authenticate to the Microsoft Graph API"
+            }
+        ],
+        "triples_count": 17,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2484,
+                "cost": 0.02484
+            },
+            "output": {
+                "tokens": 456,
+                "cost": 0.013680000000000001
+            },
+            "total": {
+                "tokens": 2940,
+                "cost": 0.03852
+            }
+        },
+        "time": 12.984430313110352,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/symantec/Graphican-QD1-CkR.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer-microsoft.json",
+                    0.10644501037136084
+                ],
+                [
+                    "AVERTIUM-fancy-bear.json",
+                    0.11770581434345584
+                ],
+                [
+                    "AVERTIUM-charming-kitten.json",
+                    0.1281791418906232
+                ]
+            ],
+            "permutation": "asc"
+        }
+    },
+    "ET": {
+        "typed_triplets": [
+            {
+                "subject": {
+                    "text": "Graphican",
+                    "class": "Malware"
+                },
+                "relation": "is an evolution of",
+                "object": {
+                    "text": "Flea backdoor Ketrican",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Ketrican",
+                    "class": "Malware"
+                },
+                "relation": "is based on",
+                "object": {
+                    "text": "BS2005",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "BS2005",
+                    "class": "Malware"
+                },
+                "relation": "used by",
+                "object": {
+                    "text": "Flea",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Graphican",
+                    "class": "Malware"
+                },
+                "relation": "has basic functionality as",
+                "object": {
+                    "text": "Ketrican",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Graphican",
+                    "class": "Malware"
+                },
+                "relation": "uses",
+                "object": {
+                    "text": "the Microsoft Graph API and OneDrive",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Graphican",
+                    "class": "Malware"
+                },
+                "relation": "to obtain",
+                "object": {
+                    "text": "command-and-control (C&C) infrastructure",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Swallowtail",
+                    "class": "Attacker"
+                },
+                "relation": "delivered",
+                "object": {
+                    "text": "the Graphite malware",
+                    "class": "Malware"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Swallowtail",
+                    "class": "Attacker"
+                },
+                "relation": "is known as",
+                "object": {
+                    "text": "APT28",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Swallowtail",
+                    "class": "Attacker"
+                },
+                "relation": "is known as",
+                "object": {
+                    "text": "Fancy Bear",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Swallowtail",
+                    "class": "Attacker"
+                },
+                "relation": "is known as",
+                "object": {
+                    "text": "Sofacy",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Swallowtail",
+                    "class": "Attacker"
+                },
+                "relation": "is known as",
+                "object": {
+                    "text": "Strontium",
+                    "class": "Attacker"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The Graphite malware",
+                    "class": "Malware"
+                },
+                "relation": "used",
+                "object": {
+                    "text": "the Microsoft Graph API and OneDrive as a C&C server",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Graphican samples",
+                    "class": "Malware"
+                },
+                "relation": "connected to",
+                "object": {
+                    "text": "OneDrive via the Microsoft Graph API",
+                    "class": "Tool"
+                }
+            },
+            {
+                "subject": {
+                    "text": "Graphican",
+                    "class": "Malware"
+                },
+                "relation": "obtain",
+                "object": {
+                    "text": "the encrypted C&C server address",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The malware",
+                    "class": "Malware"
+                },
+                "relation": "decoded",
+                "object": {
+                    "text": "the folder name",
+                    "class": "Information"
+                }
+            },
+            {
+                "subject": {
+                    "text": "The malware",
+                    "class": "Malware"
+                },
+                "relation": "used",
+                "object": {
+                    "text": "it as a C&C server",
+                    "class": "Infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "text": "All instances of this variant",
+                    "class": "Malware Characteristic:Variants"
+                },
+                "relation": "used the same parameters to",
+                "object": {
+                    "text": "authenticate to the Microsoft Graph API",
+                    "class": "Tool"
+                }
+            }
+        ],
+        "response_time": 72.898188829422,
+        "Demo_num": 8,
+        "tag_prompt": "/home/yutong/CTINexus/dataset/Tagger-output-gpt4-8-v2/prompt_store/symantec/Graphican.txt",
+        "model_usage": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1689,
+                "cost": 0.016890000000000002
+            },
+            "output": {
+                "tokens": 1067,
+                "cost": 0.032010000000000004
+            },
+            "total": {
+                "tokens": 2756,
+                "cost": 0.048900000000000006
+            }
+        }
+    },
+    "EA": {
+        "aligned_triplets": [
+            {
+                "subject": {
+                    "mention_id": 0,
+                    "mention_text": "Graphican",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican samples",
+                        "Graphican"
+                    ],
+                    "entity_text": "Graphican"
+                },
+                "relation": "is an evolution of",
+                "object": {
+                    "mention_id": 1,
+                    "mention_text": "Flea backdoor Ketrican",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "Flea backdoor Ketrican",
+                        "Ketrican",
+                        "Ketrican"
+                    ],
+                    "entity_text": "Ketrican"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 2,
+                    "mention_text": "Ketrican",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "Flea backdoor Ketrican",
+                        "Ketrican",
+                        "Ketrican"
+                    ],
+                    "entity_text": "Ketrican"
+                },
+                "relation": "is based on",
+                "object": {
+                    "mention_id": 3,
+                    "mention_text": "BS2005",
+                    "mention_class": "Malware",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "BS2005",
+                        "BS2005"
+                    ],
+                    "entity_text": "BS2005"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 4,
+                    "mention_text": "BS2005",
+                    "mention_class": "Malware",
+                    "entity_id": 2,
+                    "mentions_merged": [
+                        "BS2005",
+                        "BS2005"
+                    ],
+                    "entity_text": "BS2005"
+                },
+                "relation": "used by",
+                "object": {
+                    "mention_id": 5,
+                    "mention_text": "Flea",
+                    "mention_class": "Attacker",
+                    "entity_id": 5,
+                    "mentions_merged": [
+                        "Flea"
+                    ],
+                    "entity_text": "Flea"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 6,
+                    "mention_text": "Graphican",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican samples",
+                        "Graphican"
+                    ],
+                    "entity_text": "Graphican"
+                },
+                "relation": "has basic functionality as",
+                "object": {
+                    "mention_id": 7,
+                    "mention_text": "Ketrican",
+                    "mention_class": "Malware",
+                    "entity_id": 1,
+                    "mentions_merged": [
+                        "Flea backdoor Ketrican",
+                        "Ketrican",
+                        "Ketrican"
+                    ],
+                    "entity_text": "Ketrican"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 8,
+                    "mention_text": "Graphican",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican samples",
+                        "Graphican"
+                    ],
+                    "entity_text": "Graphican"
+                },
+                "relation": "uses",
+                "object": {
+                    "mention_id": 9,
+                    "mention_text": "the Microsoft Graph API and OneDrive",
+                    "mention_class": "Tool",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "the Microsoft Graph API and OneDrive",
+                        "OneDrive via the Microsoft Graph API",
+                        "the Microsoft Graph API and OneDrive as a C&C server"
+                    ],
+                    "entity_text": "the Microsoft Graph API and OneDrive"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 10,
+                    "mention_text": "Graphican",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican samples",
+                        "Graphican"
+                    ],
+                    "entity_text": "Graphican"
+                },
+                "relation": "to obtain",
+                "object": {
+                    "mention_id": 11,
+                    "mention_text": "command-and-control (C&C) infrastructure",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 12,
+                    "mentions_merged": [
+                        "command-and-control (C&C) infrastructure"
+                    ],
+                    "entity_text": "command-and-control (C&C) infrastructure"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 12,
+                    "mention_text": "Swallowtail",
+                    "mention_class": "Attacker",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail"
+                    ],
+                    "entity_text": "Swallowtail"
+                },
+                "relation": "delivered",
+                "object": {
+                    "mention_id": 13,
+                    "mention_text": "the Graphite malware",
+                    "mention_class": "Malware",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "The malware",
+                        "the Graphite malware",
+                        "The Graphite malware",
+                        "The malware"
+                    ],
+                    "entity_text": "The malware"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 14,
+                    "mention_text": "Swallowtail",
+                    "mention_class": "Attacker",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail"
+                    ],
+                    "entity_text": "Swallowtail"
+                },
+                "relation": "is known as",
+                "object": {
+                    "mention_id": 15,
+                    "mention_text": "APT28",
+                    "mention_class": "Attacker",
+                    "entity_id": 6,
+                    "mentions_merged": [
+                        "APT28"
+                    ],
+                    "entity_text": "APT28"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 16,
+                    "mention_text": "Swallowtail",
+                    "mention_class": "Attacker",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail"
+                    ],
+                    "entity_text": "Swallowtail"
+                },
+                "relation": "is known as",
+                "object": {
+                    "mention_id": 17,
+                    "mention_text": "Fancy Bear",
+                    "mention_class": "Attacker",
+                    "entity_id": 7,
+                    "mentions_merged": [
+                        "Fancy Bear"
+                    ],
+                    "entity_text": "Fancy Bear"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 18,
+                    "mention_text": "Swallowtail",
+                    "mention_class": "Attacker",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail"
+                    ],
+                    "entity_text": "Swallowtail"
+                },
+                "relation": "is known as",
+                "object": {
+                    "mention_id": 19,
+                    "mention_text": "Sofacy",
+                    "mention_class": "Attacker",
+                    "entity_id": 8,
+                    "mentions_merged": [
+                        "Sofacy"
+                    ],
+                    "entity_text": "Sofacy"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 20,
+                    "mention_text": "Swallowtail",
+                    "mention_class": "Attacker",
+                    "entity_id": 4,
+                    "mentions_merged": [
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail",
+                        "Swallowtail"
+                    ],
+                    "entity_text": "Swallowtail"
+                },
+                "relation": "is known as",
+                "object": {
+                    "mention_id": 21,
+                    "mention_text": "Strontium",
+                    "mention_class": "Attacker",
+                    "entity_id": 9,
+                    "mentions_merged": [
+                        "Strontium"
+                    ],
+                    "entity_text": "Strontium"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 22,
+                    "mention_text": "The Graphite malware",
+                    "mention_class": "Malware",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "The malware",
+                        "the Graphite malware",
+                        "The Graphite malware",
+                        "The malware"
+                    ],
+                    "entity_text": "The malware"
+                },
+                "relation": "used",
+                "object": {
+                    "mention_id": 23,
+                    "mention_text": "the Microsoft Graph API and OneDrive as a C&C server",
+                    "mention_class": "Tool",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "the Microsoft Graph API and OneDrive",
+                        "OneDrive via the Microsoft Graph API",
+                        "the Microsoft Graph API and OneDrive as a C&C server"
+                    ],
+                    "entity_text": "the Microsoft Graph API and OneDrive"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 24,
+                    "mention_text": "Graphican samples",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican samples",
+                        "Graphican"
+                    ],
+                    "entity_text": "Graphican"
+                },
+                "relation": "connected to",
+                "object": {
+                    "mention_id": 25,
+                    "mention_text": "OneDrive via the Microsoft Graph API",
+                    "mention_class": "Tool",
+                    "entity_id": 10,
+                    "mentions_merged": [
+                        "the Microsoft Graph API and OneDrive",
+                        "OneDrive via the Microsoft Graph API",
+                        "the Microsoft Graph API and OneDrive as a C&C server"
+                    ],
+                    "entity_text": "the Microsoft Graph API and OneDrive"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 26,
+                    "mention_text": "Graphican",
+                    "mention_class": "Malware",
+                    "entity_id": 0,
+                    "mentions_merged": [
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican",
+                        "Graphican samples",
+                        "Graphican"
+                    ],
+                    "entity_text": "Graphican"
+                },
+                "relation": "obtain",
+                "object": {
+                    "mention_id": 27,
+                    "mention_text": "the encrypted C&C server address",
+                    "mention_class": "Information",
+                    "entity_id": 14,
+                    "mentions_merged": [
+                        "the encrypted C&C server address"
+                    ],
+                    "entity_text": "the encrypted C&C server address"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 28,
+                    "mention_text": "The malware",
+                    "mention_class": "Malware",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "The malware",
+                        "the Graphite malware",
+                        "The Graphite malware",
+                        "The malware"
+                    ],
+                    "entity_text": "The malware"
+                },
+                "relation": "decoded",
+                "object": {
+                    "mention_id": 29,
+                    "mention_text": "the folder name",
+                    "mention_class": "Information",
+                    "entity_id": 15,
+                    "mentions_merged": [
+                        "the folder name"
+                    ],
+                    "entity_text": "the folder name"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 30,
+                    "mention_text": "The malware",
+                    "mention_class": "Malware",
+                    "entity_id": 3,
+                    "mentions_merged": [
+                        "The malware",
+                        "the Graphite malware",
+                        "The Graphite malware",
+                        "The malware"
+                    ],
+                    "entity_text": "The malware"
+                },
+                "relation": "used",
+                "object": {
+                    "mention_id": 31,
+                    "mention_text": "it as a C&C server",
+                    "mention_class": "Infrastructure",
+                    "entity_id": 13,
+                    "mentions_merged": [
+                        "it as a C&C server"
+                    ],
+                    "entity_text": "it as a C&C server"
+                }
+            },
+            {
+                "subject": {
+                    "mention_id": 32,
+                    "mention_text": "All instances of this variant",
+                    "mention_class": "Malware Characteristic:Variants",
+                    "entity_id": 16,
+                    "mentions_merged": [
+                        "All instances of this variant"
+                    ],
+                    "entity_text": "All instances of this variant"
+                },
+                "relation": "used the same parameters to",
+                "object": {
+                    "mention_id": 33,
+                    "mention_text": "authenticate to the Microsoft Graph API",
+                    "mention_class": "Tool",
+                    "entity_id": 11,
+                    "mentions_merged": [
+                        "authenticate to the Microsoft Graph API"
+                    ],
+                    "entity_text": "authenticate to the Microsoft Graph API"
+                }
+            }
+        ],
+        "mentions_num": 34,
+        "response_time": 6.904173135757446,
+        "embedding_model": "text-embedding-3-large",
+        "entity_num": 17
+    }
+}

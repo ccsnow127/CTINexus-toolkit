@@ -1,0 +1,322 @@
+{
+    "CTI": {
+        "text": "A new Android backdoor has been discovered with potent capabilities to carry out a range of malicious actions on infected devices. Dubbed Xamalicious by the McAfee Mobile Research Team, the malware is so named for the fact that it's developed using an open-source mobile app framework called Xamarin and abuses the operating system's accessibility permissions to fulfill its objectives. It's also capable of gathering metadata about the compromised device and contacting a command-and-control (C2) server to fetch a second-stage payload, but only after determining if it fits the bill. The second stage is dynamically injected as an assembly DLL at runtime level to take full control of the device and potentially perform fraudulent actions such as clicking on ads, installing apps, among other actions financially motivated without user consent. The cybersecurity firm said it identified 25 apps that come with this active threat, some of which were distributed on the official Google Play Store since mid-2020. The apps are estimated to have been installed at least 327,000 times.",
+        "link": "https://thehackernews.com/2023/12/new-sneaky-xamalicious-android-malware.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Xamalicious",
+                "relation": "is a",
+                "object": "Android backdoor"
+            },
+            {
+                "subject": "Xamalicious",
+                "relation": "developed using",
+                "object": "Xamarin"
+            },
+            {
+                "subject": "Xamalicious",
+                "relation": "abuses",
+                "object": "operating system's accessibility permissions"
+            },
+            {
+                "subject": "Xamalicious",
+                "relation": "capable of",
+                "object": "gathering metadata about the compromised device"
+            },
+            {
+                "subject": "Xamalicious",
+                "relation": "contacts",
+                "object": "command-and-control (C2) server"
+            },
+            {
+                "subject": "command-and-control (C2) server",
+                "relation": "to fetch",
+                "object": "second-stage payload"
+            },
+            {
+                "subject": "second-stage payload",
+                "relation": "is injected as",
+                "object": "an assembly DLL at runtime level"
+            },
+            {
+                "subject": "second-stage payload",
+                "relation": "to take full control of",
+                "object": "the device"
+            },
+            {
+                "subject": "Xamalicious",
+                "relation": "performs",
+                "object": "fraudulent actions"
+            },
+            {
+                "subject": "fraudulent actions",
+                "relation": "include",
+                "object": "clicking on ads"
+            },
+            {
+                "subject": "fraudulent actions",
+                "relation": "include",
+                "object": "installing apps"
+            },
+            {
+                "subject": "fraudulent actions",
+                "relation": "motivated by",
+                "object": "financial gain without user consent"
+            },
+            {
+                "subject": "McAfee Mobile Research Team",
+                "relation": "identified",
+                "object": "25 apps with active threat"
+            },
+            {
+                "subject": "25 apps",
+                "relation": "distributed on",
+                "object": "the official Google Play Store"
+            },
+            {
+                "subject": "25 apps",
+                "relation": "installed",
+                "object": "at least 327,000 times"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1745,
+                "cost": 0.01745
+            },
+            "output": {
+                "tokens": 412,
+                "cost": 0.01236
+            },
+            "total": {
+                "tokens": 2157,
+                "cost": 0.02981
+            }
+        },
+        "time": 14.704820156097412,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/thehackernews/Xamalicious-QD1-JQx.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "securityweek: vultur.json",
+                    0.1103052357067199
+                ],
+                [
+                    "darkreading: SpectralBlur.json",
+                    0.10474514583352194
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 13,
+                "fp": 2,
+                "fn": 4,
+                "precision": 0.8666666666666667,
+                "recall": 0.7647058823529411,
+                "f1": 0.8125
+            },
+            "matched_list": [
+                [
+                    [
+                        "Xamalicious",
+                        "is a",
+                        "Android backdoor"
+                    ],
+                    [
+                        "The new Android backdoor",
+                        "is dubbed",
+                        "Xamalicious"
+                    ]
+                ],
+                [
+                    [
+                        "Xamalicious",
+                        "developed using",
+                        "Xamarin"
+                    ],
+                    [
+                        "Xamalicious",
+                        "is developed using",
+                        "an open-source mobile app framework called Xamarin"
+                    ]
+                ],
+                [
+                    [
+                        "Xamalicious",
+                        "abuses",
+                        "operating system's accessibility permissions"
+                    ],
+                    [
+                        "Xamalicious",
+                        "abuses",
+                        "the operating system's accessibility permissions"
+                    ]
+                ],
+                [
+                    [
+                        "Xamalicious",
+                        "capable of",
+                        "gathering metadata about the compromised device"
+                    ],
+                    [
+                        "Xamalicious",
+                        "is capable of",
+                        "gathering metadata about the compromised device"
+                    ]
+                ],
+                [
+                    [
+                        "Xamalicious",
+                        "contacts",
+                        "command-and-control (C2) server"
+                    ],
+                    [
+                        "Xamalicious",
+                        "contacts",
+                        "a command-and-control (C2) server"
+                    ]
+                ],
+                [
+                    [
+                        "second-stage payload",
+                        "is injected as",
+                        "an assembly DLL at runtime level"
+                    ],
+                    [
+                        "The second stage",
+                        "is injected as",
+                        "an assembly DLL at runtime level"
+                    ]
+                ],
+                [
+                    [
+                        "second-stage payload",
+                        "to take full control of",
+                        "the device"
+                    ],
+                    [
+                        "The second stage",
+                        "takes full control of",
+                        "the device"
+                    ]
+                ],
+                [
+                    [
+                        "Xamalicious",
+                        "performs",
+                        "fraudulent actions"
+                    ],
+                    [
+                        "Xamalicious",
+                        "abuses",
+                        "the operating system's accessibility permissions"
+                    ]
+                ],
+                [
+                    [
+                        "fraudulent actions",
+                        "include",
+                        "clicking on ads"
+                    ],
+                    [
+                        "Fraudulent actions",
+                        "include",
+                        "clicking on ads, installing apps"
+                    ]
+                ],
+                [
+                    [
+                        "fraudulent actions",
+                        "include",
+                        "installing apps"
+                    ],
+                    [
+                        "Fraudulent actions",
+                        "include",
+                        "clicking on ads, installing apps"
+                    ]
+                ],
+                [
+                    [
+                        "fraudulent actions",
+                        "motivated by",
+                        "financial gain without user consent"
+                    ],
+                    [
+                        "Fraudulent actions",
+                        "are without",
+                        "user consent"
+                    ]
+                ],
+                [
+                    [
+                        "McAfee Mobile Research Team",
+                        "identified",
+                        "25 apps with active threat"
+                    ],
+                    [
+                        "The cybersecurity firm",
+                        "identified",
+                        "25 apps with Xamalicious"
+                    ]
+                ],
+                [
+                    [
+                        "25 apps",
+                        "installed",
+                        "at least 327,000 times"
+                    ],
+                    [
+                        "The apps",
+                        "are estimated to have been installed",
+                        "at least 327,000 times"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "command-and-control (C2) server",
+                    "to fetch",
+                    "second-stage payload"
+                ],
+                [
+                    "25 apps",
+                    "distributed on",
+                    "the official Google Play Store"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "A new Android backdoor",
+                    "is discovered with",
+                    "potent capabilities to carry out a range of malicious actions"
+                ],
+                [
+                    "Xamalicious",
+                    "fetches",
+                    "a second-stage payload"
+                ],
+                [
+                    "The actions",
+                    "are",
+                    "potentially fraudulent"
+                ],
+                [
+                    "Some apps",
+                    "were distributed on",
+                    "the official Google Play Store since mid-2020"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

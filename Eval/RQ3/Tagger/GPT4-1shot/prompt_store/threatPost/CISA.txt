@@ -1,0 +1,94 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'A Windows 11 vulnerability', 'relation': 'is being exploited', 'object': 'in the wild'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'U.S. Cybersecurity and Infrastructure Security Agency (CISA)', 'relation': 'advise', 'object': 'patching of the elevation of privileges flaw'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The recommendation', 'relation': 'is directed at', 'object': 'federal agencies'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2022-22047', 'relation': 'is a', 'object': 'vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2022-22047', 'relation': 'carries', 'object': 'a CVSS score of high (7.8)'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Windows Client Server Runtime Subsystem (CSRSS)', 'relation': 'is used in', 'object': 'Windows 11'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Windows Client Server Runtime Subsystem (CSRSS)', 'relation': 'is used in', 'object': 'Windows Server 2022'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The CSRSS bug', 'relation': 'is an', 'object': 'elevation of privileges vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'adversaries', 'relation': 'execute code as', 'object': 'an unprivileged user'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'The bug', 'relation': 'was classified as', 'object': 'a zero-day'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'Microsoft\u2019s own security team', 'relation': 'reported', 'object': 'the bug'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

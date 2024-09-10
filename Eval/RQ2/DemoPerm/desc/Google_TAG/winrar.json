@@ -1,0 +1,254 @@
+{
+    "CTI": {
+        "text": "In August 2023, RARLabs released an updated version of WinRAR that included fixes for several security-related bugs. One of those bugs, later assigned CVE-2023-38831, is a logical vulnerability within WinRAR causing extraneous temporary file expansion when processing crafted archives, combined with a quirk in the implementation of Windows\u2019 ShellExecute when attempting to open a file with an extension containing spaces. The vulnerability allows attackers to execute arbitrary code when a user attempts to view a benign file (such as an ordinary PNG file) within a ZIP archive. As detailed in a blog post from Group-IB, the vulnerability had been exploited as 0-day by cybercrime actors in-the-wild since at least April 2023 for campaigns targeting financial traders to deliver various commodity malware families. Hours after the blog post was released, proof of concepts and exploit generators were uploaded to public GitHub repositories. ",
+        "link": "https://blog.google/threat-analysis-group/government-backed-actors-exploiting-winrar-vulnerability/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "WinRAR",
+                "relation": "included fixes for",
+                "object": "several security-related bugs"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "is a",
+                "object": "logical vulnerability within WinRAR"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "causes",
+                "object": "extraneous temporary file expansion when processing crafted archives"
+            },
+            {
+                "subject": "CVE-2023-38831",
+                "relation": "combined with",
+                "object": "a quirk in the implementation of Windows\u2019 ShellExecute"
+            },
+            {
+                "subject": "quirk",
+                "relation": "when attempting to open a file with",
+                "object": "an extension containing spaces"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "allows",
+                "object": "attackers to execute arbitrary code"
+            },
+            {
+                "subject": "user",
+                "relation": "attempts to view",
+                "object": "a benign file within a ZIP archive"
+            },
+            {
+                "subject": "Group-IB",
+                "relation": "detailed in a blog post",
+                "object": "the vulnerability had been exploited as 0-day by cybercrime actors"
+            },
+            {
+                "subject": "cybercrime actors",
+                "relation": "exploited the vulnerability as 0-day",
+                "object": "for campaigns targeting financial traders"
+            },
+            {
+                "subject": "campaigns",
+                "relation": "to deliver",
+                "object": "various commodity malware families"
+            },
+            {
+                "subject": "proof of concepts and exploit generators",
+                "relation": "were uploaded to",
+                "object": "public GitHub repositories"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1111,
+                "cost": 0.01111
+            },
+            "output": {
+                "tokens": 330,
+                "cost": 0.0099
+            },
+            "total": {
+                "tokens": 1441,
+                "cost": 0.02101
+            }
+        },
+        "time": 13.333583116531372,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/Google_TAG/winrar-QD1-yt5.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "symantec: Follina.json",
+                    0.16801457428136113
+                ],
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.14453002323757944
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 2,
+                "fn": 4,
+                "precision": 0.8181818181818182,
+                "recall": 0.6923076923076923,
+                "f1": 0.7500000000000001
+            },
+            "matched_list": [
+                [
+                    [
+                        "WinRAR",
+                        "included fixes for",
+                        "several security-related bugs"
+                    ],
+                    [
+                        "an updated version of WinRAR",
+                        "included",
+                        "fixes for security-related bugs"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-38831",
+                        "is a",
+                        "logical vulnerability within WinRAR"
+                    ],
+                    [
+                        "CVE-2023-38831",
+                        "is a",
+                        "logical vulnerability within WinRAR"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-38831",
+                        "causes",
+                        "extraneous temporary file expansion when processing crafted archives"
+                    ],
+                    [
+                        "logical vulnerability within WinRAR",
+                        "causing",
+                        "extraneous temporary file expansion"
+                    ]
+                ],
+                [
+                    [
+                        "quirk",
+                        "when attempting to open a file with",
+                        "an extension containing spaces"
+                    ],
+                    [
+                        "Windows\u2019 ShellExecute",
+                        "has a quirk when attempting to open",
+                        "a file with an extension containing spaces"
+                    ]
+                ],
+                [
+                    [
+                        "vulnerability",
+                        "allows",
+                        "attackers to execute arbitrary code"
+                    ],
+                    [
+                        "The vulnerability",
+                        "allows attackers to execute",
+                        "arbitrary code"
+                    ]
+                ],
+                [
+                    [
+                        "Group-IB",
+                        "detailed in a blog post",
+                        "the vulnerability had been exploited as 0-day by cybercrime actors"
+                    ],
+                    [
+                        "The vulnerability",
+                        "had been exploited as",
+                        "0-day"
+                    ]
+                ],
+                [
+                    [
+                        "cybercrime actors",
+                        "exploited the vulnerability as 0-day",
+                        "for campaigns targeting financial traders"
+                    ],
+                    [
+                        "cybercrime actors",
+                        "exploited",
+                        "The vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "campaigns",
+                        "to deliver",
+                        "various commodity malware families"
+                    ],
+                    [
+                        "campaigns",
+                        "to deliver",
+                        "various commodity malware families"
+                    ]
+                ],
+                [
+                    [
+                        "proof of concepts and exploit generators",
+                        "were uploaded to",
+                        "public GitHub repositories"
+                    ],
+                    [
+                        "proof of concepts and exploit generators",
+                        "were uploaded to",
+                        "public GitHub repositories"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "CVE-2023-38831",
+                    "combined with",
+                    "a quirk in the implementation of Windows\u2019 ShellExecute"
+                ],
+                [
+                    "user",
+                    "attempts to view",
+                    "a benign file within a ZIP archive"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "RARLabs",
+                    "released",
+                    "an updated version of WinRAR"
+                ],
+                [
+                    "One of those bugs",
+                    "is",
+                    "CVE-2023-38831"
+                ],
+                [
+                    "Group-IB",
+                    "detailed",
+                    "a blog post"
+                ],
+                [
+                    "campaigns",
+                    "targeting",
+                    "financial traders"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

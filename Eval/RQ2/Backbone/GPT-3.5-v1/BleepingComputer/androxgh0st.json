@@ -1,0 +1,288 @@
+{
+    "CTI": {
+        "text": "CISA and the FBI warned today that threat actors using Androxgh0st malware are building a botnet focused on cloud credential theft and using the stolen information to deliver additional malicious payloads. It scans for websites and servers vulnerable to the following remote code execution (RCE) vulnerabilities: CVE-2017-9841 (PHPUnit unit testing framework), CVE-2021-41773 (Apache HTTP Server), and CVE-2018-15133 (Laravel PHP web framework). Androxgh0st is a Python-scripted malware primarily used to target .env files that contain confidential information, such as credentials for various high profile applications, i.e., Amazon Web Services [AWS], Microsoft Office 365, SendGrid, and Twilio from the Laravel web application framework. Androxgh0st malware also supports numerous functions capable of abusing the Simple Mail Transfer Protocol (SMTP), such as scanning and exploiting exposed credentials and application programming interfaces (APIs), and web shell deployment. Stolen Twilio and SendGrid credentials can be used by the threat actors to conduct spam campaigns impersonating the breached companies.",
+        "link": "https://www.bleepingcomputer.com/news/security/fbi-androxgh0st-malware-botnet-steals-aws-microsoft-credentials/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "CISA and the FBI",
+                "relation": "warned",
+                "object": "today"
+            },
+            {
+                "subject": "threat actors",
+                "relation": "using",
+                "object": "Androxgh0st malware"
+            },
+            {
+                "subject": "Androxgh0st malware",
+                "relation": "building",
+                "object": "a botnet focused on cloud credential theft"
+            },
+            {
+                "subject": "Androxgh0st malware",
+                "relation": "using",
+                "object": "stolen information to deliver additional malicious payloads"
+            },
+            {
+                "subject": "Androxgh0st malware",
+                "relation": "scans for",
+                "object": "websites and servers vulnerable to remote code execution (RCE) vulnerabilities"
+            },
+            {
+                "subject": "RCE vulnerabilities",
+                "relation": "include",
+                "object": "CVE-2017-9841 (PHPUnit unit testing framework)"
+            },
+            {
+                "subject": "RCE vulnerabilities",
+                "relation": "include",
+                "object": "CVE-2021-41773 (Apache HTTP Server)"
+            },
+            {
+                "subject": "RCE vulnerabilities",
+                "relation": "include",
+                "object": "CVE-2018-15133 (Laravel PHP web framework)"
+            },
+            {
+                "subject": "Androxgh0st malware",
+                "relation": "primarily used",
+                "object": "to target .env files that contain confidential information"
+            },
+            {
+                "subject": "confidential information",
+                "relation": "can include",
+                "object": "credentials for various high profile applications"
+            },
+            {
+                "subject": "high profile applications",
+                "relation": "include",
+                "object": "Amazon Web Services [AWS], Microsoft Office 365, SendGrid, and Twilio from the Laravel web application framework"
+            },
+            {
+                "subject": "Androxgh0st malware",
+                "relation": "supports",
+                "object": "numerous functions capable of abusing the Simple Mail Transfer Protocol (SMTP)"
+            },
+            {
+                "subject": "Androxgh0st malware",
+                "relation": "can be used",
+                "object": "by threat actors to conduct spam campaigns impersonating breached companies using stolen Twilio and SendGrid credentials"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1573,
+                "cost": 0.0007865
+            },
+            "output": {
+                "tokens": 518,
+                "cost": 0.000777
+            },
+            "total": {
+                "tokens": 2091,
+                "cost": 0.0015635
+            }
+        },
+        "time": 9.661622285842896,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/BleepingComputer/androxgh0st-QD1-FT1.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "darkreading: Apache-ERP.json",
+                    0.12316303677642915
+                ],
+                [
+                    "darkreading: Gh0st-RAT.json",
+                    0.14381270836555277
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 11,
+                "fp": 2,
+                "fn": 4,
+                "precision": 0.8461538461538461,
+                "recall": 0.7333333333333333,
+                "f1": 0.7857142857142856
+            },
+            "matched_list": [
+                [
+                    [
+                        "CISA and the FBI",
+                        "warned",
+                        "today"
+                    ],
+                    [
+                        "CISA and the FBI",
+                        "warned",
+                        "that threat actors using Androxgh0st malware"
+                    ]
+                ],
+                [
+                    [
+                        "threat actors",
+                        "using",
+                        "Androxgh0st malware"
+                    ],
+                    [
+                        "Androxgh0st",
+                        "is a",
+                        "Python-scripted malware"
+                    ]
+                ],
+                [
+                    [
+                        "Androxgh0st malware",
+                        "building",
+                        "a botnet focused on cloud credential theft"
+                    ],
+                    [
+                        "botnet",
+                        "focused on",
+                        "cloud credential theft"
+                    ]
+                ],
+                [
+                    [
+                        "Androxgh0st malware",
+                        "using",
+                        "stolen information to deliver additional malicious payloads"
+                    ],
+                    [
+                        "threat actors",
+                        "using",
+                        "stolen information to deliver additional malicious payloads"
+                    ]
+                ],
+                [
+                    [
+                        "Androxgh0st malware",
+                        "scans for",
+                        "websites and servers vulnerable to remote code execution (RCE) vulnerabilities"
+                    ],
+                    [
+                        "Androxgh0st malware",
+                        "scans for",
+                        "websites and servers vulnerable to RCE vulnerabilities"
+                    ]
+                ],
+                [
+                    [
+                        "RCE vulnerabilities",
+                        "include",
+                        "CVE-2017-9841 (PHPUnit unit testing framework)"
+                    ],
+                    [
+                        "CVE-2017-9841",
+                        "is vulnerable in",
+                        "PHPUnit unit testing framework"
+                    ]
+                ],
+                [
+                    [
+                        "RCE vulnerabilities",
+                        "include",
+                        "CVE-2021-41773 (Apache HTTP Server)"
+                    ],
+                    [
+                        "CVE-2021-41773",
+                        "is vulnerable in",
+                        "Apache HTTP Server"
+                    ]
+                ],
+                [
+                    [
+                        "RCE vulnerabilities",
+                        "include",
+                        "CVE-2018-15133 (Laravel PHP web framework)"
+                    ],
+                    [
+                        "CVE-2018-15133",
+                        "is vulnerable in",
+                        "Laravel PHP web framework"
+                    ]
+                ],
+                [
+                    [
+                        "Androxgh0st malware",
+                        "primarily used",
+                        "to target .env files that contain confidential information"
+                    ],
+                    [
+                        "Androxgh0st",
+                        "targets",
+                        ".env files"
+                    ]
+                ],
+                [
+                    [
+                        "Androxgh0st malware",
+                        "supports",
+                        "numerous functions capable of abusing the Simple Mail Transfer Protocol (SMTP)"
+                    ],
+                    [
+                        "Androxgh0st malware",
+                        "supports",
+                        "functions abusing SMTP"
+                    ]
+                ],
+                [
+                    [
+                        "Androxgh0st malware",
+                        "can be used",
+                        "by threat actors to conduct spam campaigns impersonating breached companies using stolen Twilio and SendGrid credentials"
+                    ],
+                    [
+                        "threat actors",
+                        "use",
+                        "stolen Twilio and SendGrid credentials"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "confidential information",
+                    "can include",
+                    "credentials for various high profile applications"
+                ],
+                [
+                    "high profile applications",
+                    "include",
+                    "Amazon Web Services [AWS], Microsoft Office 365, SendGrid, and Twilio from the Laravel web application framework"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "threat actors",
+                    "building",
+                    "a botnet"
+                ],
+                [
+                    ".env files",
+                    "contain",
+                    "credentials for AWS, Microsoft Office 365, SendGrid, Twilio"
+                ],
+                [
+                    "stolen credentials",
+                    "conduct",
+                    "spam campaigns"
+                ],
+                [
+                    "spam campaigns",
+                    "impersonating",
+                    "the breached companies"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

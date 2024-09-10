@@ -1,0 +1,243 @@
+{
+    "CTI": {
+        "text": "Attackers can exploit a critical Bluetooth security vulnerability that's been lurking largely unnoticed for years on macOS, iOS, Android, and Linux device platforms. The keystroke injection vulnerability allows an attacker to control the targeted device as if they were attached by a Bluetooth keyboard, performing various functions remotely depending on the endpoint. Tracked as CVE-2023-45866, the flaw exists in how in the Bluetooth protocol is implemented on various platforms. It works by tricking the Bluetooth host state-machine into pairing with a fake keyboard without user confirmation. The vulnerability enables an attacker to pair an emulated Bluetooth keyboard with a victim's phone or computer, implementing the keyboard as a Python script that runs on a Linux computer. The attacker can then inject keystrokes, typing on the target device as if they were a Bluetooth keyboard legitimately attached to the target.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/critical-bluetooth-flaw-exposes-android-apple-and-linux-devices-to-keystroke-injection-attack"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "critical Bluetooth security vulnerability",
+                "relation": "is on",
+                "object": "macOS, iOS, Android, and Linux device platforms"
+            },
+            {
+                "subject": "keystroke injection vulnerability",
+                "relation": "allows",
+                "object": "an attacker to control the targeted device"
+            },
+            {
+                "subject": "attacker",
+                "relation": "perform",
+                "object": "various functions remotely"
+            },
+            {
+                "subject": "critical Bluetooth security vulnerability",
+                "relation": "is tracked as",
+                "object": "CVE-2023-45866"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "exists in",
+                "object": "how the Bluetooth protocol is implemented on various platforms"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "works by",
+                "object": "tricking the Bluetooth host state-machine"
+            },
+            {
+                "subject": "tricking the Bluetooth host state-machine",
+                "relation": "into pairing with",
+                "object": "a fake keyboard without user confirmation"
+            },
+            {
+                "subject": "attacker",
+                "relation": "to pair",
+                "object": "an emulated Bluetooth keyboard with a victim's phone or computer"
+            },
+            {
+                "subject": "emulated Bluetooth keyboard",
+                "relation": "implementing",
+                "object": "as a Python script that runs on a Linux computer"
+            },
+            {
+                "subject": "attacker",
+                "relation": "can inject keystrokes",
+                "object": "typing on the target device"
+            },
+            {
+                "subject": "target device",
+                "relation": "as if they were",
+                "object": "a Bluetooth keyboard legitimately attached"
+            }
+        ],
+        "triples_count": 11,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1651,
+                "cost": 0.01651
+            },
+            "output": {
+                "tokens": 320,
+                "cost": 0.009600000000000001
+            },
+            "total": {
+                "tokens": 1971,
+                "cost": 0.02611
+            }
+        },
+        "time": 25.87996530532837,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/darkreading/Bluetooth-Flaw-QD1-GxT.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "symantec: Pegasus.json",
+                    0.08178811913190394
+                ],
+                [
+                    "Microsoft: migraine-could.json",
+                    0.09193039233554853
+                ],
+                [
+                    "symantec: Windows-Zero-Day.json",
+                    0.10536304873461713
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 1,
+                "fn": 0,
+                "precision": 0.9090909090909091,
+                "recall": 1.0,
+                "f1": 0.9523809523809523
+            },
+            "matched_list": [
+                [
+                    [
+                        "critical Bluetooth security vulnerability",
+                        "is on",
+                        "macOS, iOS, Android, and Linux device platforms"
+                    ],
+                    [
+                        "The critical Bluetooth security vulnerability",
+                        "is on",
+                        "macOS, iOS, Android, and Linux device platforms"
+                    ]
+                ],
+                [
+                    [
+                        "keystroke injection vulnerability",
+                        "allows",
+                        "an attacker to control the targeted device"
+                    ],
+                    [
+                        "keystroke injection vulnerability",
+                        "allows",
+                        "an attacker to control the targeted device"
+                    ]
+                ],
+                [
+                    [
+                        "critical Bluetooth security vulnerability",
+                        "is tracked as",
+                        "CVE-2023-45866"
+                    ],
+                    [
+                        "CVE-2023-45866",
+                        "exists in",
+                        "how the Bluetooth protocol is implemented"
+                    ]
+                ],
+                [
+                    [
+                        "vulnerability",
+                        "exists in",
+                        "how the Bluetooth protocol is implemented on various platforms"
+                    ],
+                    [
+                        "CVE-2023-45866",
+                        "exists in",
+                        "how the Bluetooth protocol is implemented"
+                    ]
+                ],
+                [
+                    [
+                        "vulnerability",
+                        "works by",
+                        "tricking the Bluetooth host state-machine"
+                    ],
+                    [
+                        "The flaw",
+                        "works by",
+                        "tricking the Bluetooth host state-machine"
+                    ]
+                ],
+                [
+                    [
+                        "tricking the Bluetooth host state-machine",
+                        "into pairing with",
+                        "a fake keyboard without user confirmation"
+                    ],
+                    [
+                        "The flaw",
+                        "works by",
+                        "tricking the Bluetooth host state-machine"
+                    ]
+                ],
+                [
+                    [
+                        "attacker",
+                        "to pair",
+                        "an emulated Bluetooth keyboard with a victim's phone or computer"
+                    ],
+                    [
+                        "The attacker",
+                        "pair",
+                        "an emulated Bluetooth keyboard with a victim's phone or computer"
+                    ]
+                ],
+                [
+                    [
+                        "emulated Bluetooth keyboard",
+                        "implementing",
+                        "as a Python script that runs on a Linux computer"
+                    ],
+                    [
+                        "The emulated Bluetooth keyboard",
+                        "is implemented as",
+                        "a Python script that runs on a Linux computer"
+                    ]
+                ],
+                [
+                    [
+                        "attacker",
+                        "can inject keystrokes",
+                        "typing on the target device"
+                    ],
+                    [
+                        "The attacker",
+                        "inject keystrokes",
+                        "typing on the target device"
+                    ]
+                ],
+                [
+                    [
+                        "target device",
+                        "as if they were",
+                        "a Bluetooth keyboard legitimately attached"
+                    ],
+                    [
+                        "The attacker",
+                        "pair",
+                        "an emulated Bluetooth keyboard with a victim's phone or computer"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "attacker",
+                    "perform",
+                    "various functions remotely"
+                ]
+            ],
+            "not_recall_list": []
+        }
+    }
+}

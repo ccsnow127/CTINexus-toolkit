@@ -1,0 +1,173 @@
+{
+    "CTI": {
+        "text": "A longtime threat group identified as TA558 has ramped up efforts to target the travel and hospitality industries. After a lull in activity, believed tied to COVID-related travel restrictions, the threat group has ramped up campaigns to exploit an uptick in travel and related airline and hotel bookings. Warnings come from security researchers who say TA558 cybercriminals have revamped their 2018 campaigns with fake reservation emails that contain links \u2013 that if clicked \u2013 deliver a malicious malware payload containing a potpourri of malware variants. What makes this most recent campaign unique, according to a report by Proofpoint, is the use of RAR and ISO file attachments linked to messages. ISO and RAR are single compressed files, that if executed, decompress the file and folder data inside of them.",
+        "link": "https://threatpost.com/reservation-links-prey-on-travelers/180462/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "TA558",
+                "relation": "targets",
+                "object": "travel and hospitality industries"
+            },
+            {
+                "subject": "TA558",
+                "relation": "ramped up",
+                "object": "campaigns"
+            },
+            {
+                "subject": "Campaigns",
+                "relation": "exploit",
+                "object": "uptick in travel and related bookings"
+            },
+            {
+                "subject": "TA558",
+                "relation": "revamped",
+                "object": "2018 campaigns with fake reservation emails"
+            },
+            {
+                "subject": "Fake reservation emails",
+                "relation": "contain links delivering",
+                "object": "malicious malware payload"
+            },
+            {
+                "subject": "Malware payload",
+                "relation": "contains",
+                "object": "potpourri of malware variants"
+            },
+            {
+                "subject": "Campaign",
+                "relation": "uses",
+                "object": "RAR and ISO file attachments"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 982,
+                "cost": 0.00982
+            },
+            "output": {
+                "tokens": 185,
+                "cost": 0.00555
+            },
+            "total": {
+                "tokens": 1167,
+                "cost": 0.015370000000000002
+            }
+        },
+        "time": 5.263459920883179,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/threatPost/TA558-QD1-ok3.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "securityweek: strelastealer.json",
+                    0.11061976715685343
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "TA558",
+                        "targets",
+                        "travel and hospitality industries"
+                    ],
+                    [
+                        "TA558",
+                        "targets",
+                        "travel and hospitality industries"
+                    ]
+                ],
+                [
+                    [
+                        "TA558",
+                        "ramped up",
+                        "campaigns"
+                    ],
+                    [
+                        "TA558 cybercriminals",
+                        "revamped",
+                        "their 2018 campaigns"
+                    ]
+                ],
+                [
+                    [
+                        "Campaigns",
+                        "exploit",
+                        "uptick in travel and related bookings"
+                    ],
+                    [
+                        "TA558",
+                        "exploits",
+                        "uptick in travel and related airline and hotel bookings"
+                    ]
+                ],
+                [
+                    [
+                        "TA558",
+                        "revamped",
+                        "2018 campaigns with fake reservation emails"
+                    ],
+                    [
+                        "TA558 cybercriminals",
+                        "revamped",
+                        "their 2018 campaigns"
+                    ]
+                ],
+                [
+                    [
+                        "Fake reservation emails",
+                        "contain links delivering",
+                        "malicious malware payload"
+                    ],
+                    [
+                        "fake reservation emails",
+                        "contain",
+                        "links"
+                    ]
+                ],
+                [
+                    [
+                        "Malware payload",
+                        "contains",
+                        "potpourri of malware variants"
+                    ],
+                    [
+                        "malicious malware payload",
+                        "contains",
+                        "a potpourri of malware variants"
+                    ]
+                ],
+                [
+                    [
+                        "Campaign",
+                        "uses",
+                        "RAR and ISO file attachments"
+                    ],
+                    [
+                        "RAR and ISO file attachments",
+                        "linked to",
+                        "messages"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": []
+        }
+    }
+}

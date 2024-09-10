@@ -1,0 +1,118 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'is also known as', 'object': 'Sandworm'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'is attributed to', 'object': 'Russian Armed Forces\u2019 Main Directorate of the General Staff (GRU) Unit 74455'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'focuses on', 'object': 'the war in Ukraine'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'conducts campaigns spanning', 'object': 'intelligence collection'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'conducts campaigns spanning', 'object': 'IO'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'conducts campaigns spanning', 'object': 'leaking hacked data through Telegram'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'targets sectors including', 'object': 'government'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'targets sectors including', 'object': 'defense'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'targets sectors including', 'object': 'energy'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'targets sectors including', 'object': 'transportation/logistics'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'targets sectors including', 'object': 'education'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'targets sectors including', 'object': 'humanitarian organizations'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'FROZENBARENTS', 'relation': 'continues to exploit', 'object': 'EXIM mail servers globally'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'compromised hosts', 'relation': 'access', 'object': 'victim networks'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'compromised hosts', 'relation': 'interact with', 'object': 'victim accounts'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'compromised hosts', 'relation': 'send', 'object': 'malicious emails'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'compromised hosts', 'relation': 'engaged in', 'object': 'information operations (IO) activity'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

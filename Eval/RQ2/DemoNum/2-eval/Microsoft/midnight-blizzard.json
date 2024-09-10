@@ -1,0 +1,272 @@
+{
+    "CTI": {
+        "text": "Microsoft Threat Intelligence has identified highly targeted social engineering attacks using credential theft phishing lures sent as Microsoft Teams chats by the threat actor that Microsoft tracks as Midnight Blizzard (previously tracked as NOBELIUM). This latest attack, combined with past activity, further demonstrates Midnight Blizzard's ongoing execution of their objectives using both new and common techniques. In this latest activity, the threat actor uses previously compromised Microsoft 365 tenants owned by small businesses to create new domains that appear as technical support entities. Using these domains from compromised tenants, Midnight Blizzard leverages Teams messages to send lures that attempt to steal credentials from a targeted organization by engaging a user and eliciting approval of multifactor authentication (MFA) prompts. As with any social engineering lures, we encourage organizations to reinforce security best practices to all users and reinforce that any authentication requests not initiated by the user should be treated as malicious.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/08/02/midnight-blizzard-conducts-targeted-social-engineering-over-microsoft-teams/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "is tracked by",
+                "object": "Microsoft"
+            },
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "formerly tracked as",
+                "object": "NOBELIUM"
+            },
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "uses",
+                "object": "credential theft phishing lures"
+            },
+            {
+                "subject": "credential theft phishing lures",
+                "relation": "sent as",
+                "object": "Microsoft Teams chats"
+            },
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "uses previously compromised",
+                "object": "Microsoft 365 tenants owned by small businesses"
+            },
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "creates",
+                "object": "new domains"
+            },
+            {
+                "subject": "new domains",
+                "relation": "appear as",
+                "object": "technical support entities"
+            },
+            {
+                "subject": "Midnight Blizzard",
+                "relation": "leverages Teams messages to send",
+                "object": "lures"
+            },
+            {
+                "subject": "lures",
+                "relation": "attempt to steal",
+                "object": "credentials"
+            },
+            {
+                "subject": "lures",
+                "relation": "engage a user and elicit approval of",
+                "object": "multifactor authentication (MFA) prompts"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1573,
+                "cost": 0.01573
+            },
+            "output": {
+                "tokens": 329,
+                "cost": 0.00987
+            },
+            "total": {
+                "tokens": 1902,
+                "cost": 0.0256
+            }
+        },
+        "time": 14.876517295837402,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/Microsoft/midnight-blizzard-QD1-Y2T.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Microsoft: cadet-blizzard.json",
+                    0.1640188881545538
+                ],
+                [
+                    "Microsoft: malware-distributor.json",
+                    0.21976578100979077
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 3,
+                "fn": 7,
+                "precision": 0.7,
+                "recall": 0.5,
+                "f1": 0.5833333333333334
+            },
+            "matched_list": [
+                [
+                    [
+                        "Midnight Blizzard",
+                        "formerly tracked as",
+                        "NOBELIUM"
+                    ],
+                    [
+                        "Midnight Blizzard",
+                        "previously tracked as",
+                        "NOBELIUM"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "credential theft phishing lures",
+                        "sent as",
+                        "Microsoft Teams chats"
+                    ],
+                    [
+                        "credential theft phishing lures",
+                        "sent as",
+                        "Microsoft Teams chats"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Midnight Blizzard",
+                        "uses previously compromised",
+                        "Microsoft 365 tenants owned by small businesses"
+                    ],
+                    [
+                        "Midnight Blizzard",
+                        "uses",
+                        "compromised Microsoft 365 tenants"
+                    ],
+                    [
+                        1.0,
+                        0.6412670927547706
+                    ]
+                ],
+                [
+                    [
+                        "Midnight Blizzard",
+                        "creates",
+                        "new domains"
+                    ],
+                    [
+                        "Midnight Blizzard",
+                        "creates",
+                        "new domains"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "new domains",
+                        "appear as",
+                        "technical support entities"
+                    ],
+                    [
+                        "new domains",
+                        "appear as",
+                        "technical support entities"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "lures",
+                        "attempt to steal",
+                        "credentials"
+                    ],
+                    [
+                        "lures",
+                        "attempt to steal",
+                        "credentials"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "lures",
+                        "engage a user and elicit approval of",
+                        "multifactor authentication (MFA) prompts"
+                    ],
+                    [
+                        "lures",
+                        "elicit",
+                        "approval of multifactor authentication (MFA) prompts"
+                    ],
+                    [
+                        1.0,
+                        0.8350796802051635
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Midnight Blizzard",
+                    "is tracked by",
+                    "Microsoft"
+                ],
+                [
+                    "Midnight Blizzard",
+                    "uses",
+                    "credential theft phishing lures"
+                ],
+                [
+                    "Midnight Blizzard",
+                    "leverages Teams messages to send",
+                    "lures"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Microsoft Threat Intelligence",
+                    "identified",
+                    "social engineering attacks"
+                ],
+                [
+                    "social engineering attacks",
+                    "use",
+                    "credential theft phishing lures"
+                ],
+                [
+                    "the threat actor",
+                    "tracks as",
+                    "Midnight Blizzard"
+                ],
+                [
+                    "compromised Microsoft 365 tenants",
+                    "owned by",
+                    "small businesses"
+                ],
+                [
+                    "Midnight Blizzard",
+                    "leverages",
+                    "Teams messages"
+                ],
+                [
+                    "Teams messages",
+                    "send",
+                    "lures"
+                ],
+                [
+                    "lures",
+                    "engage",
+                    "a user"
+                ]
+            ]
+        }
+    }
+}

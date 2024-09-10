@@ -1,0 +1,98 @@
+"Classify the given triple's subject and object into one of the following categories:
+[
+    "Account",
+    "Credential",
+    "Tool",
+    "Attacker",
+    "Event",
+    "Exploit Target",
+    "Indicator": {
+        "File",
+        "IP",
+        "URL",
+        "Domain",
+        "Registry Key",
+        "Hash",
+        "Mutex",
+        "User Agent",
+        "Email",
+        "Yara Rule",
+        "SSL Certificate",
+    }
+    "Information",
+    "Location",
+    "Malware",
+    "Malware Characteristic": {
+        "Behavior",
+        "Capability",
+        "Feature",
+        "Payload",
+        "Variants",
+    }
+    "Organization",
+    "Infrastructure",
+    "Time",
+    "Vulnerability",
+    "This entity cannot be classified into any of the existing types"
+]
+Your response must be JSON and nothing else.
+---------------------
+Example:
+
+"triple": {"subject": "Tools", "relation": "include", "object": "PsExec.exe"}
+
+"tagged_triple": {"subject": {"text": "Tools", "class": "Tool"}, "relation": "include", "object": {"text": "PsExec.exe","class": "Indicator:File"}}
+---------------------
+Target Triples:
+
+
+"triple":: {'subject': 'GitHub', 'relation': 'rotated', 'object': 'keys'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'vulnerability', 'relation': 'patched in', 'object': 'December'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'access', 'object': 'credentials'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'credentials', 'relation': 'in', 'object': 'production containers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'credentials', 'relation': 'via', 'object': 'environment variables'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'unsafe reflection vulnerability', 'relation': 'tracked as', 'object': 'CVE-2024-0200'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-0200', 'relation': 'allow', 'object': 'remote code execution'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-0200', 'relation': 'on', 'object': 'unpatched servers'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'GitHub', 'relation': 'fixed', 'object': 'a second high-severity Enterprise Server command injection vulnerability'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'second high-severity Enterprise Server command injection vulnerability', 'relation': 'is', 'object': 'CVE-2024-0507'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'CVE-2024-0507', 'relation': 'allow', 'object': 'attackers to escalate privileges'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+"triple":: {'subject': 'attackers', 'relation': 'using', 'object': 'a Management Console user account with an editor role'}
+
+"tagged_triple": """insert your answer here"""
+---------------------
+
+You response should follow the format: {"tagged_triples": [`tagged_triple_1`, `tagged_triple_2`, ..., `tagged_triple_n`]}"

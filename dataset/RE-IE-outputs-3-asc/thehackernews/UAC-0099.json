@@ -1,0 +1,158 @@
+{
+    "CTI": {
+        "text": "The threat actor known as UAC-0099 has been linked to continued attacks aimed at Ukraine, some of which leverage a high-severity flaw in the WinRAR software to deliver a malware strain called LONEPAGE. The threat actor targets Ukrainian employees working for companies outside of Ukraine. UAC-0099 was first documented by the Computer Emergency Response Team of Ukraine (CERT-UA) in June 2023, detailing its attacks against state organizations and media entities for espionage motives. The attack chains leveraged phishing messages containing HTA, RAR, and LNK file attachments that led to the deployment of LONEPAGE, a Visual Basic Script (VBS) malware that's capable of contacting a command-and-control (C2) server to retrieve additional payloads such as keyloggers, stealers, and screenshot malware. The latest analysis from Deep Instinct reveals that the use of HTA attachments is just one of three different infection chains, the other two of which leverage self-extracting (SFX) archives and booby-trapped ZIP files. The ZIP files exploit the WinRAR vulnerability (CVE-2023-38831, CVSS score: 7.8) to distribute LONEPAGE.",
+        "link": "https://thehackernews.com/2023/12/uac-0099-using-winrar-exploit-to-target.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "UAC-0099",
+                "relation": "linked to",
+                "object": "attacks aimed at Ukraine"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "leverage",
+                "object": "flaw in the WinRAR software"
+            },
+            {
+                "subject": "flaw in the WinRAR software",
+                "relation": "to deliver",
+                "object": "LONEPAGE malware"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "targets",
+                "object": "Ukrainian employees"
+            },
+            {
+                "subject": "Ukrainian employees",
+                "relation": "working for",
+                "object": "companies outside of Ukraine"
+            },
+            {
+                "subject": "CERT-UA",
+                "relation": "documented",
+                "object": "UAC-0099"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "attacks",
+                "object": "state organizations"
+            },
+            {
+                "subject": "UAC-0099",
+                "relation": "attacks",
+                "object": "media entities"
+            },
+            {
+                "subject": "attacks",
+                "relation": "for",
+                "object": "espionage motives"
+            },
+            {
+                "subject": "attack chains",
+                "relation": "leveraged",
+                "object": "phishing messages"
+            },
+            {
+                "subject": "phishing messages",
+                "relation": "contain",
+                "object": "HTA, RAR, and LNK file attachments"
+            },
+            {
+                "subject": "HTA, RAR, and LNK file attachments",
+                "relation": "lead to",
+                "object": "deployment of LONEPAGE"
+            },
+            {
+                "subject": "LONEPAGE",
+                "relation": "is",
+                "object": "VBS malware"
+            },
+            {
+                "subject": "LONEPAGE",
+                "relation": "capable of contacting",
+                "object": "command-and-control (C2) server"
+            },
+            {
+                "subject": "command-and-control (C2) server",
+                "relation": "to retrieve",
+                "object": "additional payloads"
+            },
+            {
+                "subject": "additional payloads",
+                "relation": "such as",
+                "object": "keyloggers, stealers, and screenshot malware"
+            },
+            {
+                "subject": "Deep Instinct",
+                "relation": "reveals",
+                "object": "use of HTA attachments"
+            },
+            {
+                "subject": "use of HTA attachments",
+                "relation": "is",
+                "object": "one of three different infection chains"
+            },
+            {
+                "subject": "other infection chains",
+                "relation": "leverage",
+                "object": "self-extracting (SFX) archives"
+            },
+            {
+                "subject": "other infection chains",
+                "relation": "leverage",
+                "object": "booby-trapped ZIP files"
+            },
+            {
+                "subject": "ZIP files",
+                "relation": "exploit",
+                "object": "the WinRAR vulnerability"
+            },
+            {
+                "subject": "the WinRAR vulnerability",
+                "relation": "is",
+                "object": "CVE-2023-38831, CVSS score: 7.8"
+            }
+        ],
+        "triples_count": 22,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 2741,
+                "cost": 0.027410000000000004
+            },
+            "output": {
+                "tokens": 592,
+                "cost": 0.01776
+            },
+            "total": {
+                "tokens": 3333,
+                "cost": 0.04517
+            }
+        },
+        "time": 16.244689226150513,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/dataset/RE-IE-outputs-3-asc/prompt_store/thehackernews/UAC-0099-QD1-vNM.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "AVERTIUM-charming-kitten.json",
+                    0.08456268192216736
+                ],
+                [
+                    "BleepingComputer-androxgh0st.json",
+                    0.08470229604847443
+                ],
+                [
+                    "BleepingComputer-purplefox.json",
+                    0.11113614262640702
+                ]
+            ],
+            "permutation": "asc"
+        }
+    }
+}

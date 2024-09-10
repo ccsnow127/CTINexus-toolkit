@@ -1,0 +1,362 @@
+{
+    "CTI": {
+        "text": "Apple is urging macOS, iPhone and iPad users immediately to install respective updates this week that includes fixes for two zero-days under active attack. The patches are for vulnerabilities that allow attackers to execute arbitrary code and ultimately take over devices. Patches are available for effected devices running iOS 15.6.1 and macOS Monterey 12.5.1. Patches address two flaws, which basically impact any Apple device that can run either iOS 15 or the Monterey version of its desktop OS, according to security updates released by Apple Wednesday. One of the flaws is a kernel bug (CVE-2022-32894), which is present both in iOS and macOS. According to Apple it is an \u201cout-of-bounds write issue [that] was addressed with improved bounds checking.\u201d The vulnerability allows an application to execute arbitrary code with kernel privileges, according to Apple, which, in usual vague fashion, said there is a report that it \u201cmay have been actively exploited.\u201d",
+        "link": "https://threatpost.com/iphone-users-urged-to-update-to-patch-2-zero-days-under-attack/180448/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Apple",
+                "relation": "is urging",
+                "object": "macOS, iPhone and iPad users to install respective updates"
+            },
+            {
+                "subject": "updates",
+                "relation": "includes",
+                "object": "fixes for two zero-days under active attack"
+            },
+            {
+                "subject": "zero-days",
+                "relation": "allow",
+                "object": "attackers to execute arbitrary code"
+            },
+            {
+                "subject": "attackers",
+                "relation": "take over",
+                "object": "devices"
+            },
+            {
+                "subject": "patches",
+                "relation": "are available for",
+                "object": "effected devices running iOS 15.6.1 and macOS Monterey 12.5.1"
+            },
+            {
+                "subject": "patches",
+                "relation": "address",
+                "object": "two flaws"
+            },
+            {
+                "subject": "flaws",
+                "relation": "impact",
+                "object": "any Apple device running iOS 15 or macOS Monterey version"
+            },
+            {
+                "subject": "flaws",
+                "relation": "are present in",
+                "object": "iOS and macOS"
+            },
+            {
+                "subject": "kernel bug",
+                "relation": "is",
+                "object": "CVE-2022-32894"
+            },
+            {
+                "subject": "kernel bug",
+                "relation": "is",
+                "object": "out-of-bounds write issue"
+            },
+            {
+                "subject": "out-of-bounds write issue",
+                "relation": "was addressed with",
+                "object": "improved bounds checking"
+            },
+            {
+                "subject": "vulnerability",
+                "relation": "allows",
+                "object": "an application to execute arbitrary code with kernel privileges"
+            },
+            {
+                "subject": "Apple",
+                "relation": "said",
+                "object": "there is a report that the vulnerability may have been actively exploited"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1197,
+                "cost": 0.0005985
+            },
+            "output": {
+                "tokens": 366,
+                "cost": 0.000549
+            },
+            "total": {
+                "tokens": 1563,
+                "cost": 0.0011475
+            }
+        },
+        "time": 5.6974828243255615,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/threatPost/iPhone-Users-QD1-diX.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "Microsoft: migraine-could.json",
+                    0.25535146642838846
+                ],
+                [
+                    "BleepingComputer: apple.json",
+                    0.3598200735347914
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 1,
+                "fn": 8,
+                "precision": 0.9230769230769231,
+                "recall": 0.6,
+                "f1": 0.7272727272727274
+            },
+            "matched_list": [
+                [
+                    [
+                        "Apple",
+                        "is urging",
+                        "macOS, iPhone and iPad users to install respective updates"
+                    ],
+                    [
+                        "Apple",
+                        "is urging",
+                        "macOS, iPhone and iPad users"
+                    ],
+                    [
+                        1.0,
+                        0.7484631340833124
+                    ]
+                ],
+                [
+                    [
+                        "updates",
+                        "includes",
+                        "fixes for two zero-days under active attack"
+                    ],
+                    [
+                        "updates",
+                        "includes fixes for",
+                        "two zero-days"
+                    ],
+                    [
+                        1.0,
+                        0.708652928970983
+                    ]
+                ],
+                [
+                    [
+                        "zero-days",
+                        "allow",
+                        "attackers to execute arbitrary code"
+                    ],
+                    [
+                        "vulnerabilities",
+                        "allow",
+                        "attackers to execute arbitrary code"
+                    ],
+                    [
+                        0.5310238356923476,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "take over",
+                        "devices"
+                    ],
+                    [
+                        "attackers",
+                        "execute arbitrary code to",
+                        "take over devices"
+                    ],
+                    [
+                        1.0,
+                        0.4673961579869954
+                    ]
+                ],
+                [
+                    [
+                        "patches",
+                        "are available for",
+                        "effected devices running iOS 15.6.1 and macOS Monterey 12.5.1"
+                    ],
+                    [
+                        "patches",
+                        "are available for",
+                        "effected devices running iOS 15.6.1 and macOS Monterey 12.5.1"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "patches",
+                        "address",
+                        "two flaws"
+                    ],
+                    [
+                        "patches",
+                        "are for",
+                        "vulnerabilities"
+                    ],
+                    [
+                        1.0,
+                        0.4563897266999575
+                    ]
+                ],
+                [
+                    [
+                        "flaws",
+                        "impact",
+                        "any Apple device running iOS 15 or macOS Monterey version"
+                    ],
+                    [
+                        "two flaws",
+                        "impact",
+                        "any Apple device that can run either iOS 15 or the Monterey version of its desktop OS"
+                    ],
+                    [
+                        0.7930582230115502,
+                        0.8860720378011335
+                    ]
+                ],
+                [
+                    [
+                        "flaws",
+                        "are present in",
+                        "iOS and macOS"
+                    ],
+                    [
+                        "two flaws",
+                        "impact",
+                        "any Apple device that can run either iOS 15 or the Monterey version of its desktop OS"
+                    ],
+                    [
+                        0.7930582230115502,
+                        0.5646580799875458
+                    ]
+                ],
+                [
+                    [
+                        "kernel bug",
+                        "is",
+                        "CVE-2022-32894"
+                    ],
+                    [
+                        "a kernel bug",
+                        "is",
+                        "CVE-2022-32894"
+                    ],
+                    [
+                        0.8430272692620293,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "kernel bug",
+                        "is",
+                        "out-of-bounds write issue"
+                    ],
+                    [
+                        "a kernel bug",
+                        "is",
+                        "CVE-2022-32894"
+                    ],
+                    [
+                        0.8430272692620293,
+                        0.4572793802970778
+                    ]
+                ],
+                [
+                    [
+                        "out-of-bounds write issue",
+                        "was addressed with",
+                        "improved bounds checking"
+                    ],
+                    [
+                        "CVE-2022-32894",
+                        "is",
+                        "an out-of-bounds write issue"
+                    ],
+                    [
+                        0.4572793802970778,
+                        0.4752012944434081
+                    ]
+                ],
+                [
+                    [
+                        "vulnerability",
+                        "allows",
+                        "an application to execute arbitrary code with kernel privileges"
+                    ],
+                    [
+                        "vulnerabilities",
+                        "allow",
+                        "attackers to execute arbitrary code"
+                    ],
+                    [
+                        0.826642819618284,
+                        0.5712688969578027
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Apple",
+                    "said",
+                    "there is a report that the vulnerability may have been actively exploited"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "users",
+                    "install",
+                    "updates"
+                ],
+                [
+                    "two zero-days",
+                    "under",
+                    "active attack"
+                ],
+                [
+                    "patches",
+                    "address",
+                    "two flaws"
+                ],
+                [
+                    "One of the flaws",
+                    "is",
+                    "a kernel bug"
+                ],
+                [
+                    "CVE-2022-32894",
+                    "is present in",
+                    "iOS and macOS"
+                ],
+                [
+                    "out-of-bounds write issue",
+                    "was addressed with",
+                    "improved bounds checking"
+                ],
+                [
+                    "The vulnerability",
+                    "allows",
+                    "an application to execute arbitrary code with kernel privileges"
+                ],
+                [
+                    "The vulnerability",
+                    "may have been",
+                    "actively exploited"
+                ]
+            ]
+        }
+    }
+}

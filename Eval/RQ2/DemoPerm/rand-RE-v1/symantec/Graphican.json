@@ -1,0 +1,292 @@
+{
+    "CTI": {
+        "text": "Graphican is an evolution of the known Flea backdoor Ketrican, which itself was based on a previous malware \u2014 BS2005 \u2014 also used by Flea. Graphican has the same basic functionality as Ketrican, with the difference between them being Graphican's use of the Microsoft Graph API and OneDrive to obtain its command-and-control (C&C) infrastructure. This technique was used in a similar way by the Russian state-sponsored APT group Swallowtail (aka APT28, Fancy Bear, Sofacy, Strontium) in a campaign in 2022 in which it delivered the Graphite malware. In that campaign, the Graphite malware used the Microsoft Graph API and OneDrive as a C&C server. The observed Graphican samples did not have a hardcoded C&C server, rather they connected to OneDrive via the Microsoft Graph API to get the encrypted C&C server address from a child folder inside the Person folder. The malware then decoded the folder name and used it as a C&C server for the malware. All instances of this variant used the same parameters to authenticate to the Microsoft Graph API.",
+        "link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/flea-backdoor-microsoft-graph-apt15"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Graphican",
+                "relation": "is an evolution of",
+                "object": "Flea backdoor Ketrican"
+            },
+            {
+                "subject": "Flea backdoor Ketrican",
+                "relation": "was based on",
+                "object": "a previous malware \u2014 BS2005"
+            },
+            {
+                "subject": "BS2005",
+                "relation": "was used by",
+                "object": "Flea"
+            },
+            {
+                "subject": "Graphican",
+                "relation": "has the same basic functionality as",
+                "object": "Ketrican"
+            },
+            {
+                "subject": "Graphican",
+                "relation": "uses",
+                "object": "the Microsoft Graph API and OneDrive to obtain its C&C infrastructure"
+            },
+            {
+                "subject": "Swallowtail",
+                "relation": "used",
+                "object": "similar technique"
+            },
+            {
+                "subject": "Swallowtail",
+                "relation": "delivered",
+                "object": "the Graphite malware"
+            },
+            {
+                "subject": "Graphite malware",
+                "relation": "used",
+                "object": "the Microsoft Graph API and OneDrive as a C&C server"
+            },
+            {
+                "subject": "Graphican samples",
+                "relation": "connected to",
+                "object": "OneDrive via the Microsoft Graph API"
+            },
+            {
+                "subject": "Graphican samples",
+                "relation": "get",
+                "object": "the encrypted C&C server address"
+            },
+            {
+                "subject": "malware",
+                "relation": "decoded",
+                "object": "the folder name"
+            },
+            {
+                "subject": "malware",
+                "relation": "used",
+                "object": "it as a C&C server"
+            },
+            {
+                "subject": "All instances of this variant",
+                "relation": "used the same parameters to authenticate to",
+                "object": "the Microsoft Graph API"
+            }
+        ],
+        "triples_count": 13,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1392,
+                "cost": 0.013920000000000002
+            },
+            "output": {
+                "tokens": 352,
+                "cost": 0.01056
+            },
+            "total": {
+                "tokens": 1744,
+                "cost": 0.024480000000000002
+            }
+        },
+        "time": 14.392838716506958,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/rand/prompt_store/symantec/Graphican-QD1-dKi.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "rand",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "iPhone-Users.json",
+                    "random"
+                ],
+                [
+                    "CitrixBleed.json",
+                    "random"
+                ]
+            ]
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 11,
+                "fp": 2,
+                "fn": 5,
+                "precision": 0.8461538461538461,
+                "recall": 0.6875,
+                "f1": 0.7586206896551724
+            },
+            "matched_list": [
+                [
+                    [
+                        "Graphican",
+                        "is an evolution of",
+                        "Flea backdoor Ketrican"
+                    ],
+                    [
+                        "Graphican",
+                        "is an evolution of",
+                        "Flea backdoor Ketrican"
+                    ]
+                ],
+                [
+                    [
+                        "BS2005",
+                        "was used by",
+                        "Flea"
+                    ],
+                    [
+                        "BS2005",
+                        "used by",
+                        "Flea"
+                    ]
+                ],
+                [
+                    [
+                        "Graphican",
+                        "has the same basic functionality as",
+                        "Ketrican"
+                    ],
+                    [
+                        "Graphican",
+                        "has basic functionality as",
+                        "Ketrican"
+                    ]
+                ],
+                [
+                    [
+                        "Graphican",
+                        "uses",
+                        "the Microsoft Graph API and OneDrive to obtain its C&C infrastructure"
+                    ],
+                    [
+                        "Graphican",
+                        "uses",
+                        "the Microsoft Graph API and OneDrive"
+                    ]
+                ],
+                [
+                    [
+                        "Swallowtail",
+                        "delivered",
+                        "the Graphite malware"
+                    ],
+                    [
+                        "Swallowtail",
+                        "delivered",
+                        "the Graphite malware"
+                    ]
+                ],
+                [
+                    [
+                        "Graphite malware",
+                        "used",
+                        "the Microsoft Graph API and OneDrive as a C&C server"
+                    ],
+                    [
+                        "The Graphite malware",
+                        "used",
+                        "the Microsoft Graph API and OneDrive as a C&C server"
+                    ]
+                ],
+                [
+                    [
+                        "Graphican samples",
+                        "connected to",
+                        "OneDrive via the Microsoft Graph API"
+                    ],
+                    [
+                        "Graphican samples",
+                        "connected to",
+                        "OneDrive via the Microsoft Graph API"
+                    ]
+                ],
+                [
+                    [
+                        "Graphican samples",
+                        "get",
+                        "the encrypted C&C server address"
+                    ],
+                    [
+                        "Graphican",
+                        "obtain",
+                        "the encrypted C&C server address"
+                    ]
+                ],
+                [
+                    [
+                        "malware",
+                        "decoded",
+                        "the folder name"
+                    ],
+                    [
+                        "The malware",
+                        "decoded",
+                        "the folder name"
+                    ]
+                ],
+                [
+                    [
+                        "malware",
+                        "used",
+                        "it as a C&C server"
+                    ],
+                    [
+                        "The malware",
+                        "used",
+                        "it as a C&C server"
+                    ]
+                ],
+                [
+                    [
+                        "All instances of this variant",
+                        "used the same parameters to authenticate to",
+                        "the Microsoft Graph API"
+                    ],
+                    [
+                        "All instances of this variant",
+                        "used the same parameters to",
+                        "authenticate to the Microsoft Graph API"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Flea backdoor Ketrican",
+                    "was based on",
+                    "a previous malware \u2014 BS2005"
+                ],
+                [
+                    "Swallowtail",
+                    "used",
+                    "similar technique"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Ketrican",
+                    "is based on",
+                    "BS2005"
+                ],
+                [
+                    "Swallowtail",
+                    "is known as",
+                    "APT28"
+                ],
+                [
+                    "Swallowtail",
+                    "is known as",
+                    "Fancy Bear"
+                ],
+                [
+                    "Swallowtail",
+                    "is known as",
+                    "Sofacy"
+                ],
+                [
+                    "Swallowtail",
+                    "is known as",
+                    "Strontium"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

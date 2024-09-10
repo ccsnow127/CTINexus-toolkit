@@ -1,0 +1,318 @@
+{
+    "CTI": {
+        "text": "Organizations in the Defense Industrial Base (DIB) sector are in the crosshairs of an Iranian threat actor as part of a campaign designed to deliver a never-before-seen backdoor called FalseFont. The findings come from Microsoft, which is tracking the activity under its weather-themed moniker Peach Sandstorm (formerly Holmium), which is also known as APT33, Elfin, and Refined Kitten. FalseFont is a custom backdoor with a wide range of functionalities that allow operators to remotely access an infected system, launch additional files, and send information to its [command-and-control] servers. In a report published in September 2023, Microsoft linked the group to password spray attacks carried out against thousands of organizations globally between February and July 2023. The intrusions primarily singled out satellite, defense, and pharmaceutical sectors. The end goal, the company said, is to facilitate intelligence collection in support of Iranian state interests. Peach Sandstorm is believed to have been active since at least 2013. The disclosure comes as the Israel National Cyber Directorate (INCD) accused Iran and Hezbollah of attempting to unsuccessfully target Ziv Hospital through hacking crews named Agrius and Lebanese Cedar.",
+        "link": "https://thehackernews.com/2023/12/microsoft-warns-of-new-falsefont.html"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "is tracked as",
+                "object": "Holmium"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "is also known as",
+                "object": "APT33"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "is also known as",
+                "object": "Elfin"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "is also known as",
+                "object": "Refined Kitten"
+            },
+            {
+                "subject": "FalseFont",
+                "relation": "is",
+                "object": "a custom backdoor with a wide range of functionalities"
+            },
+            {
+                "subject": "operators",
+                "relation": "can remotely access",
+                "object": "an infected system"
+            },
+            {
+                "subject": "operators",
+                "relation": "can launch",
+                "object": "additional files"
+            },
+            {
+                "subject": "operators",
+                "relation": "can send information to",
+                "object": "command-and-control servers"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "linked the group to",
+                "object": "password spray attacks"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "published",
+                "object": "a report in September 2023"
+            },
+            {
+                "subject": "Peach Sandstorm",
+                "relation": "denied access to",
+                "object": "Ziv Hospital"
+            },
+            {
+                "subject": "Ziv Hospital",
+                "relation": "was targeted by",
+                "object": "Iran and Hezbollah"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-3.5-turbo-0125",
+            "input": {
+                "tokens": 1515,
+                "cost": 0.0007574999999999999
+            },
+            "output": {
+                "tokens": 393,
+                "cost": 0.0005895
+            },
+            "total": {
+                "tokens": 1908,
+                "cost": 0.0013469999999999999
+            }
+        },
+        "time": 6.89064359664917,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/Backbone/GPT-3.5/prompt_store/thehackernews/FalseFont-QD1-lSu.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "AVERTIUM: charming-kitten.json",
+                    0.16187326975950322
+                ],
+                [
+                    "Microsoft: peach-sandstorm.json",
+                    0.4241252689590431
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 7,
+                "fp": 5,
+                "fn": 12,
+                "precision": 0.5833333333333334,
+                "recall": 0.3684210526315789,
+                "f1": 0.4516129032258065
+            },
+            "matched_list": [
+                [
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "APT33"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "APT33"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "Elfin"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "Elfin"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "Refined Kitten"
+                    ],
+                    [
+                        "Peach Sandstorm",
+                        "is also known as",
+                        "Refined Kitten"
+                    ],
+                    [
+                        1.0,
+                        1.0
+                    ]
+                ],
+                [
+                    [
+                        "FalseFont",
+                        "is",
+                        "a custom backdoor with a wide range of functionalities"
+                    ],
+                    [
+                        "FalseFont",
+                        "is",
+                        "a custom backdoor"
+                    ],
+                    [
+                        1.0,
+                        0.8342994014828365
+                    ]
+                ],
+                [
+                    [
+                        "operators",
+                        "can remotely access",
+                        "an infected system"
+                    ],
+                    [
+                        "operators",
+                        "can remotely access",
+                        "infected system"
+                    ],
+                    [
+                        1.0,
+                        0.9441357275589759
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "linked the group to",
+                        "password spray attacks"
+                    ],
+                    [
+                        "Microsoft",
+                        "linked",
+                        "the group to password spray attacks"
+                    ],
+                    [
+                        1.0,
+                        0.7867385138183446
+                    ]
+                ],
+                [
+                    [
+                        "Ziv Hospital",
+                        "was targeted by",
+                        "Iran and Hezbollah"
+                    ],
+                    [
+                        "Iran and Hezbollah",
+                        "attempted to target",
+                        "Ziv Hospital"
+                    ],
+                    [
+                        1.0,
+                        1.0,
+                        "passive form"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Peach Sandstorm",
+                    "is tracked as",
+                    "Holmium"
+                ],
+                [
+                    "operators",
+                    "can launch",
+                    "additional files"
+                ],
+                [
+                    "operators",
+                    "can send information to",
+                    "command-and-control servers"
+                ],
+                [
+                    "Microsoft",
+                    "published",
+                    "a report in September 2023"
+                ],
+                [
+                    "Peach Sandstorm",
+                    "denied access to",
+                    "Ziv Hospital"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Iranian threat actor",
+                    "targets",
+                    "Defense Industrial Base sector"
+                ],
+                [
+                    "campaign",
+                    "designed to deliver",
+                    "FalseFont"
+                ],
+                [
+                    "FalseFont",
+                    "launch",
+                    "additional files"
+                ],
+                [
+                    "FalseFont",
+                    "send information to",
+                    "[command-and-control] servers"
+                ],
+                [
+                    "password spray attacks",
+                    "carried out against",
+                    "thousands of organizations globally"
+                ],
+                [
+                    "intrusions",
+                    "singled out",
+                    "satellite sector"
+                ],
+                [
+                    "intrusions",
+                    "singled out",
+                    "defense sector"
+                ],
+                [
+                    "intrusions",
+                    "singled out",
+                    "pharmaceutical sector"
+                ],
+                [
+                    "Peach Sandstorm",
+                    "facilitate",
+                    "intelligence collection"
+                ],
+                [
+                    "Israel National Cyber Directorate (INCD)",
+                    "accused",
+                    "Iran and Hezbollah"
+                ],
+                [
+                    "hacking crews",
+                    "named",
+                    "Agrius"
+                ],
+                [
+                    "hacking crews",
+                    "named",
+                    "Lebanese Cedar"
+                ]
+            ]
+        }
+    }
+}

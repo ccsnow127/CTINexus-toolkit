@@ -1,0 +1,160 @@
+{
+    "CTI": {
+        "text": "Google has patched the fifth actively exploited zero-day vulnerability discovered in Chrome this year as one in a series of fixes included in a stable channel update released Wednesday. The bug, tracked as CVE-2022-2856 and rated as high on the Common Vulnerability Scoring System (CVSS), is associated with \u201cinsufficient validation of untrusted input in Intents,\u201d according to the advisory posted by Google. Google credits Ashley Shen and Christian Resell of its Google Threat Analysis Group (TAG) for reporting the zero-day bug, which could allow for arbitrary code execution, on July 19. The advisory also unveiled 10 other patches for various other Chrome issues.",
+        "link": "https://threatpost.com/google-patches-chromes-fifth-zero-day-of-the-year/180432/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Google",
+                "relation": "has patched",
+                "object": "the fifth actively exploited zero-day vulnerability in Chrome this year"
+            },
+            {
+                "subject": "CVE-2022-2856",
+                "relation": "is rated as",
+                "object": "high on the Common Vulnerability Scoring System (CVSS)"
+            },
+            {
+                "subject": "CVE-2022-2856",
+                "relation": "is associated with",
+                "object": "insufficient validation of untrusted input in Intents"
+            },
+            {
+                "subject": "Google",
+                "relation": "credits",
+                "object": "Ashley Shen and Christian Resell of its Google Threat Analysis Group (TAG)"
+            },
+            {
+                "subject": "the zero-day bug",
+                "relation": "could allow for",
+                "object": "arbitrary code execution"
+            },
+            {
+                "subject": "the advisory",
+                "relation": "unveiled",
+                "object": "10 other patches for various other Chrome issues"
+            }
+        ],
+        "triples_count": 6,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1375,
+                "cost": 0.013750000000000002
+            },
+            "output": {
+                "tokens": 195,
+                "cost": 0.00585
+            },
+            "total": {
+                "tokens": 1570,
+                "cost": 0.019600000000000003
+            }
+        },
+        "time": 14.162758827209473,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/2/prompt_store/threatPost/Google-Patches-QD1-2vI.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "BleepingComputer: chrome.json",
+                    0.1792159270133271
+                ],
+                [
+                    "thehackernews: chrome-zero-day.json",
+                    0.25877626806933307
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 6,
+                "fp": 0,
+                "fn": 0,
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0
+            },
+            "matched_list": [
+                [
+                    [
+                        "Google",
+                        "has patched",
+                        "the fifth actively exploited zero-day vulnerability in Chrome this year"
+                    ],
+                    [
+                        "Google",
+                        "has patched",
+                        "the fifth actively exploited zero-day vulnerability"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-2856",
+                        "is rated as",
+                        "high on the Common Vulnerability Scoring System (CVSS)"
+                    ],
+                    [
+                        "CVE-2022-2856",
+                        "rated as",
+                        "high on the Common Vulnerability Scoring System (CVSS)"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2022-2856",
+                        "is associated with",
+                        "insufficient validation of untrusted input in Intents"
+                    ],
+                    [
+                        "CVE-2022-2856",
+                        "is associated with",
+                        "insufficient validation of untrusted input in Intents"
+                    ]
+                ],
+                [
+                    [
+                        "Google",
+                        "credits",
+                        "Ashley Shen and Christian Resell of its Google Threat Analysis Group (TAG)"
+                    ],
+                    [
+                        "Ashley Shen and Christian Resell",
+                        "are of",
+                        "Google Threat Analysis Group (TAG)"
+                    ]
+                ],
+                [
+                    [
+                        "the zero-day bug",
+                        "could allow for",
+                        "arbitrary code execution"
+                    ],
+                    [
+                        "zero-day bug",
+                        "could allow for",
+                        "arbitrary code execution"
+                    ]
+                ],
+                [
+                    [
+                        "the advisory",
+                        "unveiled",
+                        "10 other patches for various other Chrome issues"
+                    ],
+                    [
+                        "advisory",
+                        "unveiled",
+                        "10 other patches"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": []
+        }
+    }
+}

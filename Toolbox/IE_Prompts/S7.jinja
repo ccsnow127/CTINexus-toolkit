@@ -1,0 +1,33 @@
+Please read the text carefully and identify entities, classifying them into these specific types: [threat actor, attack pattern, campaign, identity, indicator, infrastructure, location, tool, vulnerability, malware]. For each identified entity, provide a clear label indicating its type. Next, analyze the relationships between these entities. Use the following relationship categories as a guide: [use, target, is a, are, exploit, in, observe, generate, have, known as, be associated with, conduct, is likely a, are likely, include, be attributed to]. If a relationship doesn't neatly fit into these categories, feel free to summarize the relationship in your own words, ensuring it is clearly defined and relevant to the context. Your analysis should succinctly map out these entities and their interconnections, focusing exclusively on the specified entity and relationship types.
+---------------------
+"CTI": This malware family uses the .NET framework and leverages the domain name service (DNS) protocol to create a covert channel and provide different backdoor functionalities. Early this year, Ukrainian cybersecurity researchers found Fighting Ursa leveraging a zero-day exploit in Microsoft Outlook (now known as CVE-2023-23397). This vulnerability is especially concerning since it does not require user interaction to exploit. Unit 42 researchers have observed this group using CVE-2023-23397 over the past 20 months to target at least 30 organizations within 14 nations that are of likely strategic intelligence value to the Russian government and its military. 
+---------------------
+"annotator": [
+    {"subject": {"value": "malware family", "class": "malware"}, "relation": {"class": "use"}, "object": {"value": ".NET framework", "class": "tool"}}, 
+    {"subject": {"value": "malware family", "class": "malware"}, "relation": {"class": "use"}, "object": {"value": "domain name service (DNS) protocol", "class": "tool"}}, 
+    {"subject": {"value": "malware family", "class": "malware"}, "relation": {"class": "use"}, "object": {"value": "<create a covert channel and provide different backdoor functionalities>", "class": "attack pattern"}}, 
+    {"subject": {"value": "Ukrainian cybersecurity researchers", "class": "identity"}, "relation": {"class": "observe"}, "object": {"value": "Fighting Ursa", "class": "threat actor"}}, 
+    {"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "leverage"}, "object": {"value": "zero-day exploit in Microsoft Outlook", "class": "vulnerability"}}, 
+    {"subject": {"value": "zero-day exploit in Microsoft Outlook", "class": "vulnerability"}, "relation": {"class": "known as"}, "object": {"value": "CVE-2023-23397", "class": "vulnerability"}},
+    {"subject": {"value": "Unit 42 researchers", "class": "identity"}, "relation": {"class": "observe"}, "object": {"value": "Fighting Ursa", "class": "threat actor"}}, 
+    {"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "target"}, "object": {"value": "30 organizations within 14 nations", "class": "identity"}}, 
+    {"subject": {"value": "Russian government and its military", "class": "identity"}, "relation": {"class": "be associated with"}, "object": {"value": "30 organizations within 14 nations", "class": "identity"}}
+    ]
+---------------------
+"CTI": Fighting Ursa (aka APT28, Fancy Bear, Strontium/Forest Blizzard, Pawn Storm, Sofacy, or Sednit) is a group associated with Russia"s military intelligence, and they are well known for their focus on targets of Russian interest – especially those of military interest. Fighting Ursa has been attributed to Russia"s General Staff Main Intelligence Directorate (GRU) 85th Special Service Centre (GTsSS) military intelligence Unit 26165.
+---------------------
+"annotator": [
+    {"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "APT28", "class": "threat actor"}}, 
+    {"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "Fancy Bear", "class": "threat actor"}}, 
+    {"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "Strontium/Forest Blizzard", "class": "threat actor"}}, 
+    {"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "Pawn Storm", "class": "threat actor"}}, 
+    {"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "Sofacy", "class": "threat actor"}}, 
+    {"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "known as"}, "object": {"value": "Sednit", "class": "threat actor"}}, 
+    {"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "be associated with"}, "object": {"value": "Russia"s military intelligence", "class": "identity"}}, 
+    {"subject": {"value": "Fighting Ursa", "class": "threat actor"}, "relation": {"class": "be attributed to"}, "object": {"value": "Russia"s General Staff Main Intelligence Directorate (GRU) 85th Special Service Centre (GTsSS) military intelligence Unit 26165", "class": "identity"}}
+    ]
+---------------------
+"CTI": SilverRAT shows that the region"s cybercriminal groups are becoming more sophisticated, according to Cyfirma"s analysis. The first version of SilverRAT, whose source code was leaked by unknown actors in October, consists of a builder that allows the user to construct a remote access Trojan with specific features. The more interesting features, according to Cyfirma"s analysis, include using either an IP address or webpage for command and control, bypasses for antivirus software, the ability to erase system restore points, and the delayed execution of payloads. At least two threat actors - one using the handle "Dangerous silver" and a second using "Monstermc" - are the developers behind both SilverRAT and a previous program, S500 RAT, according to Cyfirma"s analysis. The hackers operate on Telegram and through online forums where they sell malware-as-a-service, distribute cracked RATs from other developers, and offer a variety of other services. In addition, they have a blog and website called Anonymous Arabic.
+---------------------
+"annotator": 
+""" insert your annotation here """

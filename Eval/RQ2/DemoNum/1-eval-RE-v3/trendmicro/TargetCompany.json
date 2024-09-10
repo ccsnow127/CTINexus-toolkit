@@ -1,0 +1,269 @@
+{
+    "CTI": {
+        "text": "In an interview in January 2023, threat actors behind TargetCompany clarified that each major update of the ransomware entailed a change in the encryption algorithm and different decryptor characteristics. These are accompanied by a change in file name extensions, hence the evolution of names by which the ransomware group is known. We will discuss this evolution further in our blog entry. TargetCompany's earlier variants provided a \u201c.onion\u201d contact site for negotiations and dropped ransom notes named How to decrypt files.txt. Meanwhile, later variants of the TargetCompany ransomware no longer use the name of the targeted enterprise as file name extensions. In mid- to late 2022, the group was given the name\u202fFargo due to the extension that it added to its encrypted files in that period. Other extensions used by the ransomware group include \u201c.mallox,\u201d and \u201c.xollam.\u201d These later variants were observed using a combination of Chacha20, Curve 25519, and AES-128 algorithms to encrypt the victim's files. The ransomware group eventually established a data leak site under the name Mallox, and later variants dropped ransom notes as HOW TO RECOVER!!.txt.",
+        "link": "https://www.trendmicro.com/vinfo/us/security/news/ransomware-spotlight/ransomware-spotlight-targetcompany"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "TargetCompany ransomware",
+                "relation": "update entails",
+                "object": "change in encryption algorithm"
+            },
+            {
+                "subject": "TargetCompany ransomware",
+                "relation": "update entails",
+                "object": "different decryptor characteristics"
+            },
+            {
+                "subject": "TargetCompany ransomware",
+                "relation": "change entails",
+                "object": "change in file name extensions"
+            },
+            {
+                "subject": "TargetCompany ransomware",
+                "relation": "evolution known by",
+                "object": "change in ransomware group names"
+            },
+            {
+                "subject": "TargetCompany ransomware earlier variants",
+                "relation": "provide",
+                "object": ".onion contact site for negotiations"
+            },
+            {
+                "subject": "TargetCompany ransomware earlier variants",
+                "relation": "drop ransom notes named",
+                "object": "How to decrypt files.txt"
+            },
+            {
+                "subject": "TargetCompany ransomware later variants",
+                "relation": "no longer use",
+                "object": "name of targeted enterprise as file name extensions"
+            },
+            {
+                "subject": "TargetCompany ransomware",
+                "relation": "given name",
+                "object": "Fargo"
+            },
+            {
+                "subject": "TargetCompany ransomware",
+                "relation": "used extensions",
+                "object": ".mallox, .xollam"
+            },
+            {
+                "subject": "TargetCompany ransomware later variants",
+                "relation": "observed using",
+                "object": "combination of Chacha20, Curve 25519, and AES-128 algorithms"
+            },
+            {
+                "subject": "TargetCompany ransomware",
+                "relation": "established",
+                "object": "data leak site under the name Mallox"
+            },
+            {
+                "subject": "TargetCompany ransomware later variants",
+                "relation": "dropped ransom notes as",
+                "object": "HOW TO RECOVER!!.txt"
+            }
+        ],
+        "triples_count": 12,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1348,
+                "cost": 0.01348
+            },
+            "output": {
+                "tokens": 355,
+                "cost": 0.01065
+            },
+            "total": {
+                "tokens": 1703,
+                "cost": 0.02413
+            }
+        },
+        "time": 8.60408353805542,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/trendmicro/TargetCompany-QD1-2ps.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "AVERTIUM: mallox.json",
+                    0.22542608852131804
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 12,
+                "fp": 0,
+                "fn": 2,
+                "precision": 1.0,
+                "recall": 0.8571428571428571,
+                "f1": 0.923076923076923
+            },
+            "matched_list": [
+                [
+                    [
+                        "TargetCompany ransomware",
+                        "update entails",
+                        "change in encryption algorithm"
+                    ],
+                    [
+                        "TargetCompany ransomware",
+                        "entailed a change in",
+                        "the encryption algorithm"
+                    ]
+                ],
+                [
+                    [
+                        "TargetCompany ransomware",
+                        "update entails",
+                        "different decryptor characteristics"
+                    ],
+                    [
+                        "TargetCompany ransomware",
+                        "entailed a change in",
+                        "decryptor characteristics"
+                    ]
+                ],
+                [
+                    [
+                        "TargetCompany ransomware",
+                        "change entails",
+                        "change in file name extensions"
+                    ],
+                    [
+                        "TargetCompany ransomware",
+                        "change in file name extensions",
+                        "evolution of names"
+                    ]
+                ],
+                [
+                    [
+                        "TargetCompany ransomware",
+                        "evolution known by",
+                        "change in ransomware group names"
+                    ],
+                    [
+                        "TargetCompany ransomware",
+                        "change in file name extensions",
+                        "evolution of names"
+                    ]
+                ],
+                [
+                    [
+                        "TargetCompany ransomware earlier variants",
+                        "provide",
+                        ".onion contact site for negotiations"
+                    ],
+                    [
+                        "TargetCompany's earlier variants",
+                        "provided",
+                        "'.onion' contact site"
+                    ]
+                ],
+                [
+                    [
+                        "TargetCompany ransomware earlier variants",
+                        "drop ransom notes named",
+                        "How to decrypt files.txt"
+                    ],
+                    [
+                        "TargetCompany's earlier variants",
+                        "dropped",
+                        "ransom notes named How to decrypt files.txt"
+                    ]
+                ],
+                [
+                    [
+                        "TargetCompany ransomware later variants",
+                        "no longer use",
+                        "name of targeted enterprise as file name extensions"
+                    ],
+                    [
+                        "later variants of the TargetCompany ransomware",
+                        "no longer use",
+                        "the name of the targeted enterprise as file name extensions"
+                    ]
+                ],
+                [
+                    [
+                        "TargetCompany ransomware",
+                        "given name",
+                        "Fargo"
+                    ],
+                    [
+                        "TargetCompany ransomware",
+                        "change in file name extensions",
+                        "evolution of names"
+                    ]
+                ],
+                [
+                    [
+                        "TargetCompany ransomware",
+                        "used extensions",
+                        ".mallox, .xollam"
+                    ],
+                    [
+                        "The ransomware group",
+                        "use",
+                        "extensions such as '.mallox', and '.xollam'"
+                    ]
+                ],
+                [
+                    [
+                        "TargetCompany ransomware later variants",
+                        "observed using",
+                        "combination of Chacha20, Curve 25519, and AES-128 algorithms"
+                    ],
+                    [
+                        "later variants",
+                        "were observed using",
+                        "a combination of Chacha20, Curve 25519, and AES-128 algorithms"
+                    ]
+                ],
+                [
+                    [
+                        "TargetCompany ransomware",
+                        "established",
+                        "data leak site under the name Mallox"
+                    ],
+                    [
+                        "The ransomware group",
+                        "established",
+                        "a data leak site under the name Mallox"
+                    ]
+                ],
+                [
+                    [
+                        "TargetCompany ransomware later variants",
+                        "dropped ransom notes as",
+                        "HOW TO RECOVER!!.txt"
+                    ],
+                    [
+                        "TargetCompany's earlier variants",
+                        "dropped",
+                        "ransom notes named How to decrypt files.txt"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "The group",
+                    "was given the name",
+                    "Fargo"
+                ],
+                [
+                    "Fargo",
+                    "added",
+                    "extension to its encrypted files"
+                ]
+            ]
+        }
+    }
+}

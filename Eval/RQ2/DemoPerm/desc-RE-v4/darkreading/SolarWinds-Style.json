@@ -1,0 +1,240 @@
+{
+    "CTI": {
+        "text": "APT29, the notorious Russian advanced persistent threat behind the 2020 SolarWinds hack, is actively exploiting a critical security vulnerability in JetBrains TeamCity that could open the door to rampant software supply chain attacks.That's the word from CISA, the FBI, the NSA, and a host of international partners, who said in a joint alert today that APT29 (aka CozyBear, the Dukes, Midnight Blizzard, or Nobelium) is hammering servers hosting TeamCity software at a large scale using the unauthenticated remote code execution (RCE) bug. According to the feds, the exploitation of the issue, tracked as CVE-2023-42793 (CVSS score of 9.8), started in September after JetBrains patched the flaw and Rapid7 released a public proof-of-concept (PoC) exploit for it; but now, it has grown to be a worrying global phenomenon that could result in widespread damage.",
+        "link": "https://www.darkreading.com/vulnerabilities-threats/global-teamcity-exploitation-opens-door-to-solarwinds-style-nightmare"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "APT29",
+                "relation": "is actively exploiting",
+                "object": "a critical security vulnerability in JetBrains TeamCity"
+            },
+            {
+                "subject": "APT29",
+                "relation": "behind",
+                "object": "the 2020 SolarWinds hack"
+            },
+            {
+                "subject": "a critical security vulnerability in JetBrains TeamCity",
+                "relation": "could open the door to",
+                "object": "rampant software supply chain attacks"
+            },
+            {
+                "subject": "CISA, the FBI, the NSA, and a host of international partners",
+                "relation": "said",
+                "object": "APT29 is hammering servers hosting TeamCity software"
+            },
+            {
+                "subject": "CVE-2023-42793",
+                "relation": "is exploited by",
+                "object": "APT29"
+            },
+            {
+                "subject": "CVE-2023-42793",
+                "relation": "is a",
+                "object": "unauthenticated remote code execution (RCE) bug"
+            },
+            {
+                "subject": "the exploitation",
+                "relation": "started in",
+                "object": "September"
+            },
+            {
+                "subject": "CVE-2023-42793",
+                "relation": "has a CVSS score of",
+                "object": "9.8"
+            },
+            {
+                "subject": "Rapid7",
+                "relation": "released",
+                "object": "a public proof-of-concept (PoC) exploit"
+            },
+            {
+                "subject": "the exploitation",
+                "relation": "has grown to be",
+                "object": "a worrying global phenomenon"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1443,
+                "cost": 0.014430000000000002
+            },
+            "output": {
+                "tokens": 306,
+                "cost": 0.00918
+            },
+            "total": {
+                "tokens": 1749,
+                "cost": 0.023610000000000003
+            }
+        },
+        "time": 14.066298484802246,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/darkreading/SolarWinds-Style-QD1-R4p.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "securityweek: teamcity.json",
+                    0.19641684554664254
+                ],
+                [
+                    "Microsoft: teamcity-cve.json",
+                    0.16984519199824197
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 10,
+                "fp": 0,
+                "fn": 2,
+                "precision": 1.0,
+                "recall": 0.8333333333333334,
+                "f1": 0.9090909090909091
+            },
+            "matched_list": [
+                [
+                    [
+                        "APT29",
+                        "is actively exploiting",
+                        "a critical security vulnerability in JetBrains TeamCity"
+                    ],
+                    [
+                        "APT29",
+                        "is exploiting",
+                        "a critical security vulnerability in JetBrains TeamCity"
+                    ]
+                ],
+                [
+                    [
+                        "APT29",
+                        "behind",
+                        "the 2020 SolarWinds hack"
+                    ],
+                    [
+                        "APT29",
+                        "is behind",
+                        "the 2020 SolarWinds hack"
+                    ]
+                ],
+                [
+                    [
+                        "a critical security vulnerability in JetBrains TeamCity",
+                        "could open the door to",
+                        "rampant software supply chain attacks"
+                    ],
+                    [
+                        "the critical security vulnerability",
+                        "could open the door to",
+                        "software supply chain attacks"
+                    ]
+                ],
+                [
+                    [
+                        "CISA, the FBI, the NSA, and a host of international partners",
+                        "said",
+                        "APT29 is hammering servers hosting TeamCity software"
+                    ],
+                    [
+                        "CISA, the FBI, the NSA, and international partners",
+                        "said",
+                        "APT29 is hammering servers hosting TeamCity software"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-42793",
+                        "is exploited by",
+                        "APT29"
+                    ],
+                    [
+                        "APT29",
+                        "is exploiting",
+                        "a critical security vulnerability in JetBrains TeamCity"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-42793",
+                        "is a",
+                        "unauthenticated remote code execution (RCE) bug"
+                    ],
+                    [
+                        "CVE-2023-42793",
+                        "has",
+                        "CVSS score of 9.8"
+                    ]
+                ],
+                [
+                    [
+                        "the exploitation",
+                        "started in",
+                        "September"
+                    ],
+                    [
+                        "the exploitation",
+                        "started in",
+                        "September"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2023-42793",
+                        "has a CVSS score of",
+                        "9.8"
+                    ],
+                    [
+                        "CVE-2023-42793",
+                        "has",
+                        "CVSS score of 9.8"
+                    ]
+                ],
+                [
+                    [
+                        "Rapid7",
+                        "released",
+                        "a public proof-of-concept (PoC) exploit"
+                    ],
+                    [
+                        "Rapid7",
+                        "released",
+                        "a public proof-of-concept exploit"
+                    ]
+                ],
+                [
+                    [
+                        "the exploitation",
+                        "has grown to be",
+                        "a worrying global phenomenon"
+                    ],
+                    [
+                        "the exploitation",
+                        "has grown to be",
+                        "a worrying global phenomenon"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "JetBrains",
+                    "patched",
+                    "the flaw"
+                ],
+                [
+                    "the exploitation",
+                    "could result in",
+                    "widespread damage"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

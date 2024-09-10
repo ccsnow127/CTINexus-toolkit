@@ -1,0 +1,229 @@
+{
+    "CTI": {
+        "text": "Security researchers are observing exploitation attempts for the CVE-2023-22527 remote code execution flaw vulnerability that affects outdated versions of Atlassian Confluence servers. The flaw has a critical severity score and is described as a template injection weakness that allows unauthenticated remote attackers to execute code on vulnerable Confluence Data Center and Confluence Server endpoints. The service says that attackers are trying out callbacks by executing the 'whoami' command to gather information about the level of access and privileges on the system.",
+        "link": "https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-atlassian-confluence-rce-flaw/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Security researchers",
+                "relation": "are observing",
+                "object": "exploitation attempts"
+            },
+            {
+                "subject": "exploitation attempts",
+                "relation": "for",
+                "object": "the CVE-2023-22527 remote code execution flaw vulnerability"
+            },
+            {
+                "subject": "the CVE-2023-22527 remote code execution flaw vulnerability",
+                "relation": "affects",
+                "object": "outdated versions of Atlassian Confluence servers"
+            },
+            {
+                "subject": "the flaw",
+                "relation": "has",
+                "object": "a critical severity score"
+            },
+            {
+                "subject": "the flaw",
+                "relation": "is described as",
+                "object": "a template injection weakness"
+            },
+            {
+                "subject": "a template injection weakness",
+                "relation": "allows",
+                "object": "unauthenticated remote attackers to execute code"
+            },
+            {
+                "subject": "unauthenticated remote attackers",
+                "relation": "execute code on",
+                "object": "vulnerable Confluence Data Center and Confluence Server endpoints"
+            },
+            {
+                "subject": "attackers",
+                "relation": "are trying out",
+                "object": "callbacks"
+            },
+            {
+                "subject": "attackers",
+                "relation": "executing",
+                "object": "the 'whoami' command"
+            },
+            {
+                "subject": "the 'whoami' command",
+                "relation": "to gather information about",
+                "object": "the level of access and privileges on the system"
+            }
+        ],
+        "triples_count": 10,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1220,
+                "cost": 0.0122
+            },
+            "output": {
+                "tokens": 287,
+                "cost": 0.00861
+            },
+            "total": {
+                "tokens": 1507,
+                "cost": 0.020810000000000002
+            }
+        },
+        "time": 15.662932395935059,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoPerm/desc/prompt_store/BleepingComputer/atlassian-QD1-tOh.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 2,
+            "demos": [
+                [
+                    "threatPost: Atlassian.json",
+                    0.3393723065054859
+                ],
+                [
+                    "BleepingComputer: github.json",
+                    0.1597628684436567
+                ]
+            ],
+            "permutation": "desc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 9,
+                "fp": 1,
+                "fn": 1,
+                "precision": 0.9,
+                "recall": 0.9,
+                "f1": 0.9
+            },
+            "matched_list": [
+                [
+                    [
+                        "Security researchers",
+                        "are observing",
+                        "exploitation attempts"
+                    ],
+                    [
+                        "Security researchers",
+                        "are observing",
+                        "exploitation attempts"
+                    ]
+                ],
+                [
+                    [
+                        "exploitation attempts",
+                        "for",
+                        "the CVE-2023-22527 remote code execution flaw vulnerability"
+                    ],
+                    [
+                        "exploitation attempts",
+                        "are for",
+                        "CVE-2023-22527"
+                    ]
+                ],
+                [
+                    [
+                        "the CVE-2023-22527 remote code execution flaw vulnerability",
+                        "affects",
+                        "outdated versions of Atlassian Confluence servers"
+                    ],
+                    [
+                        "CVE-2023-22527",
+                        "affects",
+                        "outdated versions of Atlassian Confluence servers"
+                    ]
+                ],
+                [
+                    [
+                        "the flaw",
+                        "has",
+                        "a critical severity score"
+                    ],
+                    [
+                        "CVE-2023-22527",
+                        "has",
+                        "a critical severity score"
+                    ]
+                ],
+                [
+                    [
+                        "the flaw",
+                        "is described as",
+                        "a template injection weakness"
+                    ],
+                    [
+                        "CVE-2023-22527",
+                        "is described as",
+                        "a template injection weakness"
+                    ]
+                ],
+                [
+                    [
+                        "a template injection weakness",
+                        "allows",
+                        "unauthenticated remote attackers to execute code"
+                    ],
+                    [
+                        "a template injection weakness",
+                        "allows",
+                        "unauthenticated remote attackers to execute code"
+                    ]
+                ],
+                [
+                    [
+                        "unauthenticated remote attackers",
+                        "execute code on",
+                        "vulnerable Confluence Data Center and Confluence Server endpoints"
+                    ],
+                    [
+                        "code",
+                        "is executed on",
+                        "vulnerable Confluence Data Center and Confluence Server endpoints"
+                    ]
+                ],
+                [
+                    [
+                        "attackers",
+                        "are trying out",
+                        "callbacks"
+                    ],
+                    [
+                        "attackers",
+                        "are trying out",
+                        "callbacks"
+                    ]
+                ],
+                [
+                    [
+                        "the 'whoami' command",
+                        "to gather information about",
+                        "the level of access and privileges on the system"
+                    ],
+                    [
+                        "the 'whoami' command",
+                        "gathers information about",
+                        "the level of access and privileges on the system"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "attackers",
+                    "executing",
+                    "the 'whoami' command"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "callbacks",
+                    "are executed by",
+                    "the 'whoami' command"
+                ]
+            ],
+            "thresh": 0.7
+        }
+    }
+}

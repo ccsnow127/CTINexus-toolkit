@@ -1,0 +1,205 @@
+{
+    "CTI": {
+        "text": "Google has released security updates to fix the first Chrome zero-day vulnerability exploited in the wild since the start of the year. \u200bThe high-severity zero-day vulnerability (CVE-2024-0519) is due to a high-severity out-of-bounds memory access weakness in the Chrome V8 JavaScript engine, which remote attackers can exploit via a crafted HTML page to gain access to data beyond the memory buffer through heap corruption, providing them access to sensitive information or triggering a crash. Besides unauthorized access to out-of-bounds memory, CVE-2024-0519 could also be exploited to bypass protection mechanisms such as ASLR to make it easier to achieve code execution via another weakness.",
+        "link": "https://www.bleepingcomputer.com/news/security/google-fixes-first-actively-exploited-chrome-zero-day-of-2024/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Google",
+                "relation": "has released",
+                "object": "security updates to fix the first Chrome zero-day vulnerability exploited in the wild since the start of the year"
+            },
+            {
+                "subject": "The high-severity zero-day vulnerability",
+                "relation": "is",
+                "object": "CVE-2024-0519"
+            },
+            {
+                "subject": "CVE-2024-0519",
+                "relation": "is due to",
+                "object": "a high-severity out-of-bounds memory access weakness in the Chrome V8 JavaScript engine"
+            },
+            {
+                "subject": "remote attackers",
+                "relation": "can exploit",
+                "object": "CVE-2024-0519 via a crafted HTML page to gain access to data beyond the memory buffer through heap corruption"
+            },
+            {
+                "subject": "heap corruption",
+                "relation": "provides",
+                "object": "access to sensitive information or triggering a crash"
+            },
+            {
+                "subject": "CVE-2024-0519",
+                "relation": "could be exploited to",
+                "object": "bypass protection mechanisms such as ASLR"
+            },
+            {
+                "subject": "bypassing protection mechanisms such as ASLR",
+                "relation": "makes it easier to",
+                "object": "achieve code execution via another weakness"
+            }
+        ],
+        "triples_count": 7,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 835,
+                "cost": 0.008350000000000002
+            },
+            "output": {
+                "tokens": 258,
+                "cost": 0.00774
+            },
+            "total": {
+                "tokens": 1093,
+                "cost": 0.01609
+            }
+        },
+        "time": 8.134784460067749,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/1/prompt_store/BleepingComputer/chrome-QD1-VrD.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 1,
+            "demos": [
+                [
+                    "thehackernews: chrome-zero-day.json",
+                    0.23245930935029666
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 2,
+                "fp": 5,
+                "fn": 13,
+                "precision": 0.2857142857142857,
+                "recall": 0.13333333333333333,
+                "f1": 0.18181818181818182
+            },
+            "matched_list": [
+                [
+                    [
+                        "CVE-2024-0519",
+                        "is due to",
+                        "a high-severity out-of-bounds memory access weakness in the Chrome V8 JavaScript engine"
+                    ],
+                    [
+                        "CVE-2024-0519",
+                        "is in",
+                        "the Chrome V8 JavaScript engine"
+                    ]
+                ],
+                [
+                    [
+                        "CVE-2024-0519",
+                        "could be exploited to",
+                        "bypass protection mechanisms such as ASLR"
+                    ],
+                    [
+                        "CVE-2024-0519",
+                        "could be exploited to",
+                        "bypass protection mechanisms"
+                    ]
+                ]
+            ],
+            "not_matched_list": [
+                [
+                    "Google",
+                    "has released",
+                    "security updates to fix the first Chrome zero-day vulnerability exploited in the wild since the start of the year"
+                ],
+                [
+                    "The high-severity zero-day vulnerability",
+                    "is",
+                    "CVE-2024-0519"
+                ],
+                [
+                    "remote attackers",
+                    "can exploit",
+                    "CVE-2024-0519 via a crafted HTML page to gain access to data beyond the memory buffer through heap corruption"
+                ],
+                [
+                    "heap corruption",
+                    "provides",
+                    "access to sensitive information or triggering a crash"
+                ],
+                [
+                    "bypassing protection mechanisms such as ASLR",
+                    "makes it easier to",
+                    "achieve code execution via another weakness"
+                ]
+            ],
+            "not_recall_list": [
+                [
+                    "Google",
+                    "has released",
+                    "security updates"
+                ],
+                [
+                    "security updates",
+                    "fix",
+                    "Chrome zero-day vulnerability"
+                ],
+                [
+                    "Chrome zero-day vulnerability",
+                    "exploited in",
+                    "the wild"
+                ],
+                [
+                    "Chrome zero-day vulnerability",
+                    "is tracked as",
+                    "CVE-2024-0519"
+                ],
+                [
+                    "CVE-2024-0519",
+                    "is due to",
+                    "a high-severity out-of-bounds memory access weakness"
+                ],
+                [
+                    "remote attackers",
+                    "can exploit",
+                    "CVE-2024-0519"
+                ],
+                [
+                    "remote attackers",
+                    "exploit via",
+                    "a crafted HTML page"
+                ],
+                [
+                    "remote attackers",
+                    "gain access to",
+                    "data beyond the memory buffer"
+                ],
+                [
+                    "data access",
+                    "is through",
+                    "heap corruption"
+                ],
+                [
+                    "remote attackers",
+                    "gain access to",
+                    "sensitive information"
+                ],
+                [
+                    "CVE-2024-0519",
+                    "could be exploited to",
+                    "trigger a crash"
+                ],
+                [
+                    "Protection mechanisms",
+                    "include",
+                    "ASLR"
+                ],
+                [
+                    "CVE-2024-0519",
+                    "makes it easier to",
+                    "achieve code execution via another weakness"
+                ]
+            ]
+        }
+    }
+}

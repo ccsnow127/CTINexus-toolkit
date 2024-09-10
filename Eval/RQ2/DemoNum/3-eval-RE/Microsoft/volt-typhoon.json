@@ -1,0 +1,343 @@
+{
+    "CTI": {
+        "text": "Volt Typhoon achieves initial access to targeted organizations through internet-facing Fortinet FortiGuard devices. Microsoft continues to investigate Volt Typhoon's methods for gaining access to these devices. The threat actor attempts to leverage any privileges afforded by the Fortinet device, extracts credentials to an Active Directory account used by the device, and then attempts to authenticate to other devices on the network with those credentials. Volt Typhoon proxies all its network traffic to its targets through compromised SOHO network edge devices (including routers). Microsoft has confirmed that many of the devices, which include those manufactured by ASUS, Cisco, D-Link, NETGEAR, and Zyxel, allow the owner to expose HTTP or SSH management interfaces to the internet. Owners of network edge devices should ensure that management interfaces are not exposed to the public internet in order to reduce their attack surface. By proxying through these devices, Volt Typhoon enhances the stealth of their operations and lowers overhead costs for acquiring infrastructure.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2023/05/24/volt-typhoon-targets-us-critical-infrastructure-with-living-off-the-land-techniques/"
+    },
+    "IE": {
+        "triplets": [
+            {
+                "subject": "Volt Typhoon",
+                "relation": "achieves initial access to",
+                "object": "targeted organizations through internet-facing Fortinet FortiGuard devices"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "investigates",
+                "object": "Volt Typhoon's methods for gaining access"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "attempts to leverage",
+                "object": "privileges afforded by the Fortinet device"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "extracts",
+                "object": "credentials to an Active Directory account used by the device"
+            },
+            {
+                "subject": "threat actor",
+                "relation": "attempts to authenticate to",
+                "object": "other devices on the network with those credentials"
+            },
+            {
+                "subject": "Volt Typhoon",
+                "relation": "proxies all its network traffic to",
+                "object": "its targets through compromised SOHO network edge devices"
+            },
+            {
+                "subject": "Microsoft",
+                "relation": "has confirmed",
+                "object": "many of the devices allow the owner to expose HTTP or SSH management interfaces to the internet"
+            },
+            {
+                "subject": "devices",
+                "relation": "manufactured by",
+                "object": "ASUS"
+            },
+            {
+                "subject": "devices",
+                "relation": "manufactured by",
+                "object": "Cisco"
+            },
+            {
+                "subject": "devices",
+                "relation": "manufactured by",
+                "object": "D-Link"
+            },
+            {
+                "subject": "devices",
+                "relation": "manufactured by",
+                "object": "NETGEAR"
+            },
+            {
+                "subject": "devices",
+                "relation": "manufactured by",
+                "object": "Zyxel"
+            },
+            {
+                "subject": "Owners of network edge devices",
+                "relation": "should ensure",
+                "object": "management interfaces are not exposed to the public internet"
+            },
+            {
+                "subject": "Volt Typhoon",
+                "relation": "enhances",
+                "object": "the stealth of their operations by proxying through these devices"
+            },
+            {
+                "subject": "Volt Typhoon",
+                "relation": "lowers",
+                "object": "overhead costs for acquiring infrastructure by proxying through these devices"
+            }
+        ],
+        "triples_count": 15,
+        "cost": {
+            "model": "gpt-4-0125-preview",
+            "input": {
+                "tokens": 1998,
+                "cost": 0.01998
+            },
+            "output": {
+                "tokens": 535,
+                "cost": 0.016050000000000002
+            },
+            "total": {
+                "tokens": 2533,
+                "cost": 0.036030000000000006
+            }
+        },
+        "time": 25.25031876564026,
+        "Prompt": {
+            "constructed_prompt": "/home/yutong/CTINexus/Eval/RQ2/DemoNum/3/prompt_store/Microsoft/volt-typhoon-QD1-ulC.jinja",
+            "prompt_template": "QD1.jinja",
+            "demo_retriever": "kNN",
+            "demo_number": 3,
+            "demos": [
+                [
+                    "BleepingComputer: apple.json",
+                    0.10803193344931551
+                ],
+                [
+                    "Microsoft: taiwanese.json",
+                    0.14944872063442746
+                ],
+                [
+                    "Microsoft: flax-typhoon.json",
+                    0.2326856949491666
+                ]
+            ],
+            "permutation": "asc"
+        },
+        "Eval": {
+            "metrics": {
+                "tp": 15,
+                "fp": 0,
+                "fn": 5,
+                "precision": 1.0,
+                "recall": 0.75,
+                "f1": 0.8571428571428571
+            },
+            "matched_list": [
+                [
+                    [
+                        "Volt Typhoon",
+                        "achieves initial access to",
+                        "targeted organizations through internet-facing Fortinet FortiGuard devices"
+                    ],
+                    [
+                        "Volt Typhoon",
+                        "achieves initial access to",
+                        "targeted organizations"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "investigates",
+                        "Volt Typhoon's methods for gaining access"
+                    ],
+                    [
+                        "Microsoft",
+                        "investigates",
+                        "Volt Typhoon's methods"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor",
+                        "attempts to leverage",
+                        "privileges afforded by the Fortinet device"
+                    ],
+                    [
+                        "initial access",
+                        "is through",
+                        "internet-facing Fortinet FortiGuard devices"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor",
+                        "extracts",
+                        "credentials to an Active Directory account used by the device"
+                    ],
+                    [
+                        "Volt Typhoon",
+                        "extracts",
+                        "credentials"
+                    ]
+                ],
+                [
+                    [
+                        "threat actor",
+                        "attempts to authenticate to",
+                        "other devices on the network with those credentials"
+                    ],
+                    [
+                        "credentials",
+                        "are to an",
+                        "Active Directory account"
+                    ]
+                ],
+                [
+                    [
+                        "Volt Typhoon",
+                        "proxies all its network traffic to",
+                        "its targets through compromised SOHO network edge devices"
+                    ],
+                    [
+                        "Volt Typhoon",
+                        "attempts to leverage",
+                        "privileges"
+                    ]
+                ],
+                [
+                    [
+                        "Microsoft",
+                        "has confirmed",
+                        "many of the devices allow the owner to expose HTTP or SSH management interfaces to the internet"
+                    ],
+                    [
+                        "network traffic",
+                        "through",
+                        "compromised SOHO network edge devices"
+                    ]
+                ],
+                [
+                    [
+                        "devices",
+                        "manufactured by",
+                        "ASUS"
+                    ],
+                    [
+                        "compromised devices",
+                        "include those manufactured by",
+                        "ASUS"
+                    ]
+                ],
+                [
+                    [
+                        "devices",
+                        "manufactured by",
+                        "Cisco"
+                    ],
+                    [
+                        "compromised devices",
+                        "include those manufactured by",
+                        "Cisco"
+                    ]
+                ],
+                [
+                    [
+                        "devices",
+                        "manufactured by",
+                        "D-Link"
+                    ],
+                    [
+                        "compromised devices",
+                        "include those manufactured by",
+                        "D-Link"
+                    ]
+                ],
+                [
+                    [
+                        "devices",
+                        "manufactured by",
+                        "NETGEAR"
+                    ],
+                    [
+                        "compromised devices",
+                        "include those manufactured by",
+                        "NETGEAR"
+                    ]
+                ],
+                [
+                    [
+                        "devices",
+                        "manufactured by",
+                        "Zyxel"
+                    ],
+                    [
+                        "compromised devices",
+                        "include those manufactured by",
+                        "Zyxel"
+                    ]
+                ],
+                [
+                    [
+                        "Owners of network edge devices",
+                        "should ensure",
+                        "management interfaces are not exposed to the public internet"
+                    ],
+                    [
+                        "Owners of network edge devices",
+                        "should ensure",
+                        "management interfaces are not exposed to the public internet"
+                    ]
+                ],
+                [
+                    [
+                        "Volt Typhoon",
+                        "enhances",
+                        "the stealth of their operations by proxying through these devices"
+                    ],
+                    [
+                        "Volt Typhoon",
+                        "attempts to authenticate to",
+                        "other devices on the network"
+                    ]
+                ],
+                [
+                    [
+                        "Volt Typhoon",
+                        "lowers",
+                        "overhead costs for acquiring infrastructure by proxying through these devices"
+                    ],
+                    [
+                        "Volt Typhoon",
+                        "proxies",
+                        "all its network traffic"
+                    ]
+                ]
+            ],
+            "not_matched_list": [],
+            "not_recall_list": [
+                [
+                    "privileges",
+                    "are afforded by",
+                    "the Fortinet device"
+                ],
+                [
+                    "Active Directory account",
+                    "used by",
+                    "the device"
+                ],
+                [
+                    "network traffic",
+                    "is to",
+                    "its targets"
+                ],
+                [
+                    "Volt Typhoon",
+                    "enhances",
+                    "the stealth of their operations"
+                ],
+                [
+                    "Volt Typhoon",
+                    "lowers",
+                    "overhead costs for acquiring infrastructure"
+                ]
+            ]
+        }
+    }
+}
