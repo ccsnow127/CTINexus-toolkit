@@ -1,7 +1,7 @@
 # CTINexus
 <p align="center">
     <br>
-    <img src=".Knowledge-Graph.webp" width="700"/>
+    <img src="Knowledge-Graph.webp" width="700"/>
     <br>
 </p>
 LLM-empowered CTI information extraction (IE) and knowledge graph construction (KGC) framework.
